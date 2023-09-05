@@ -59,6 +59,7 @@ build/Brautomat32.ino.elf
 build/Brautomat32.ino.map
 build/Brautomat32.ino.partitions.bin
 build/Brautomat32.ino.bootloader.bin
+build/Brautomat32.mklittlefs.bin
 build/file_opts
 build/includes.cache
 build/partitions.csv
@@ -78,5 +79,4 @@ FSBrowser/
 *.h
 *.cpp
 *.hintrc
-README.md
 PINMAP.txtInfos.txt
