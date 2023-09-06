@@ -33,26 +33,26 @@ GPIO Zuordnung:
 
 (Grafiken &copy; [AZ-Delivery](https://cdn.shopify.com/s/files/1/1509/1638/files/D1_Mini_ESP32_Datenblatt_AZ-Delivery_Vertriebs_GmbH.pdf?v=1604068666) - Anpassungen für Pinbelegung mit D-Bezeichnern)
 
-Bezeichner |   GPIO   | Beschreibung
----------- | -------- | -------- |
-    D0     |  GPIO026 |
-    D1     |  GPIO022 |
-    D2     |  GPIO021 |
-    D3     |  GPIO017 |
-    D4     |  GPIO016 |
-    D5     |  GPIO018 |
-    D6     |  GPIO019 |
-    D7     |  GPIO023 |
-    D8     |  GPIO005 |
-    D9     |  GPIO027 |
-    D10    |  GPIO025 |
-    D11    |  GPIO032 |
-    D12    |  GPIO012 | TDI
-    D13    |  GPIO004 |
-    D14    |  GPIO000 |
-    D15    |  GPIO002 |
-    D16    |  GPIO033 |
-    D17    |  GPIO014 | TMS
-    D18    |  GPIO015 |
-    D19    |  GPIO013 |
-    D20    |  GPIO010 |
+| Bezeichner |   GPIO   | Beschreibung |
+| ---------- | -------- | ------------ |
+|     D0     |  GPIO026 |           |
+|     D1     |  GPIO022 |           |
+|     D2     |  GPIO021 |           |
+|     D3     |  GPIO017 |           |
+|     D4     |  GPIO016 |           |
+|     D5     |  GPIO018 |           |
+|     D6     |  GPIO019 |           |
+|     D7     |  GPIO023 |           |
+|     D8     |  GPIO005 |           |
+|     D9     |  GPIO027 |           |
+|     D10    |  GPIO025 |           |
+|     D11    |  GPIO032 |           |
+|     D12    |  GPIO012 | TDI       |
+|     D13    |  GPIO004 |           |
+|     D14    |  GPIO000 |           |
+|     D15    |  GPIO002 |           |
+|     D16    |  GPIO033 |           |
+|     D17    |  GPIO014 | TMS       |
+|     D18    |  GPIO015 |           |
+|     D19    |  GPIO013 |           |
+|     D20    |  GPIO010 |           |
