@@ -65,6 +65,7 @@ build/partitions.csv
 build/libraries.cache
 
 data/config.txt
+tools/boot_app0.bin
 tools/Brautomat32.ino.bin
 tools/Brautomat32.mklittlefs.bin
 tools/Brautomat32.ino.partitions.bin
