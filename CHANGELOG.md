@@ -10,4 +10,5 @@ Server Sent Events (8 SSE channels)
 
 Version 1.29
 
+* Fix:          Fehler bei der Erkennung Aktor ein/ausschalten im Maischeplan behoben
 * Update:       ESP32 2.0.13
