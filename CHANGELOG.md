@@ -10,5 +10,13 @@ Server Sent Events (8 SSE channels)
 
 Version 1.29
 
+* Geändert:     SSEkeepAlive 60s - WebIf checkAliveSSE 90s
+* Neu:          Watchdog Task timeout 10s (Test)
+* Neu:          Autostart Maischeprozess, wenn nach dem Neustart im Eeprom ein Maische Tracking gefunden wird (Reset oder Absturz)
+                Maische Tracking wird entweder automatisch gelöscht (Maischeschritt beendet)
+                oder Maische Tracking manuell durch Power Button (Start/Stop) zurücksetzen
+* Neu:          Tracking aktueller Maischeschritt und Zeit im Eeprom
+* Fix:          Fehler Board config behoben (cores)
+* Fix:          Fehler WiFi Client behoben
 * Fix:          Fehler bei der Erkennung Aktor ein/ausschalten im Maischeplan behoben
 * Update:       ESP32 2.0.13
