@@ -10,6 +10,7 @@ Server Sent Events (8 SSE channels)
 
 Version 1.29
 
+* Fix:          Watchdog nach WLAN AP Mode starten
 * Geändert:     SSEkeepAlive 60s - WebIf checkAliveSSE 90s
 * Neu:          Watchdog Task timeout 10s (Test)
 * Neu:          Autostart Maischeprozess, wenn nach dem Neustart im Eeprom ein Maische Tracking gefunden wird (Reset oder Absturz)
