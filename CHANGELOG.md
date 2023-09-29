@@ -10,6 +10,7 @@ Server Sent Events (8 SSE channels)
 
 Version 1.29
 
+* Fix:          Fehler Laden Web Interface behoben (request handler not found)
 * Fix:          Profile können nicht gespeichert werden - Wenn das Verzeichnis Profile nicht existiert, wird es erstellt
 * Neu:          Aktor und Nachguss Tracking im Eeprom
 * Fix:          Exception WiFiClient.flush
