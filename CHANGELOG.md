@@ -10,6 +10,10 @@ Server Sent Events (8 SSE channels)
 
 Version 1.29
 
+* Geändert:     Sensorkalibrierung auf 15 Messwerte reduziert
+* Fix:          Watchdog Reset während Sensorkalibrierung
+* Geändert:     WiFi.Events angepasst (Timeouts)
+* Geändert:     Aktoren shortcut entfernt
 * Fix:          Fehler Laden Web Interface behoben (request handler not found)
 * Fix:          Profile können nicht gespeichert werden - Wenn das Verzeichnis Profile nicht existiert, wird es erstellt
 * Neu:          Aktor und Nachguss Tracking im Eeprom
