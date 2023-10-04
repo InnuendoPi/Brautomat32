@@ -10,6 +10,8 @@ Server Sent Events (8 SSE channels)
 
 Version 1.29
 
+* Fix:          Anzeigefehler Timer nach Button Prev/Next Rast Aktor schalten behoben
+* Fix:          Fehler Button Prev und Button Next auf Maischeschritt Aktor schalten springen behoben
 * Fix:          Anzeigefehler Timer nächste Rast ("6046:00") behoben
 * Fix:          Zeitgesteuerter Braustart: DateTimePicker im WebIf
 * Fix:          Zeitgesteuerter Braustart: Aktor einschalten als erster Schritt wurde nicht erkannt
