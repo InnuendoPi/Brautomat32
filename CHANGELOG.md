@@ -10,6 +10,9 @@ Server Sent Events (8 SSE channels)
 
 Version 1.29
 
+* Fix:          Anzeigefehler Timer nächste Rast ("6046:00") behoben
+* Fix:          Zeitgesteuerter Braustart: DateTimePicker im WebIf
+* Fix:          Zeitgesteuerter Braustart: Aktor einschalten als erster Schritt wurde nicht erkannt
 * Geändert:     Sensorkalibrierung auf 15 Messwerte reduziert
 * Fix:          Watchdog Reset während Sensorkalibrierung
 * Geändert:     WiFi.Events angepasst (Timeouts)
