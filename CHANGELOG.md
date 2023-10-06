@@ -11,8 +11,8 @@ Server Sent Events (8 SSE channels)
 Version 1.29
 
 * Fix:          WebUpdate dev branch
-* Fix:          WebUpdate Protokoll
-* Fix:          Lösche KBH2 Datei nach Rezeptimport
+* Fix:          WebUpdate Protokoll unvollständig
+* Fix:          KBH2 Datei wurde nach Rezeptimport nicht gelöscht (debug)
 * Update:       ESP32 2.0.14
 * Geändert:     Anzeigedauer Toast-Nachrichten reduziert: info, success 10s, warning 20s
 * Fix:          Anzeigefehler Leistung IDS im Status statePlay (Play Button rot) nach Miascheschritt mit deaktiviertem autonext
