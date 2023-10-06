@@ -1,6 +1,6 @@
 # Changelog
 
-ESP32 Arduino 2.0.13\
+ESP32 Arduino 2.0.14\
 VSCode 1.83 Arduino 0.6\
 VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
@@ -10,9 +10,10 @@ Server Sent Events (8 SSE channels)
 
 Version 1.29
 
+* Update:       ESP32 2.0.14
 * Geändert:     Anzeigedauer Toast-Nachrichten reduziert: info, success 10s, warning 20s
 * Fix:          Anzeigefehler Leistung IDS im Status statePlay (Play Button rot) nach Miascheschritt mit deaktiviertem autonext
-* Fix:          WiFiClient - Properly initialize and check _rxBuffer #8699
+* Fix:          WiFiClient.flush - Properly initialize and check _rxBuffer #8699
 * Fix:          Anzeigefehler Timer nach Button Prev/Next auf Maischeschritt Aktor schalten behoben
 * Fix:          Fehler Button Prev und Button Next auf Maischeschritt Aktor schalten springen behoben
 * Fix:          Anzeigefehler Timer nächste Rast ("6046:00") behoben
