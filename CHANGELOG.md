@@ -8,6 +8,12 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
+Version 1.30
+
+* Fix:          Bootreihenfolge Treiber Display
+* Fix:          Bootreihenfolge Treiber DS18B20
+* Geändert:     Ticker Display entfernt
+
 Version 1.29
 
 * Fix:          WebUpdate dev branch
