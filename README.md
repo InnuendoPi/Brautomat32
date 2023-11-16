@@ -2,12 +2,16 @@
 
 Portierung auf ESP32 D1
 
+_Hinweis: ein WebUpdate von Version 1.30 oder älter auf Version 1.31 und neuer ist nicht möglich!_
+
 ## Erste Installation
+
+Hardware Treiber CP210x USB to UART Bridge Virtual COM Port (VCP) für div. Betriebssysteme: [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
 * Download [Firmeware.zip](https://github.com/InnuendoPi/Brautomat32/blob/main/tools/Firmware.zip)
 * Firmware.zip entpacken
 * Flashen.cmd editieren:
-* "COM3" in Zeile 6  und Zeile 8"esptool.exe -p COM3" anpassen
+* "COM3" in Zeile 6  und Zeile 8 "esptool.exe -p COM3" anpassen
 * Eingabeaufforderung (cmd.exe) öffnen und in das Verzeichnis von firmware.zip wechseln
 * Firmware auf ESP32 ladeen mit "flashen.cmd"
 
@@ -44,13 +48,13 @@ GPIO Zuordnung:
 |     D6     |  GPIO019 |           |
 |     D7     |  GPIO023 |           |
 |     D8     |  GPIO005 |           |
-|     D9     |  GPIO027 |           |
-|     D10    |  GPIO025 |           |
-|     D11    |  GPIO032 |           |
+|     D9     |  GPIO027 | CS 2      |
+|     D10    |  GPIO025 | CS 1      |
+|     D11    |  GPIO032 | CS 0      |
 |     D12    |  GPIO012 | TDI       |
-|     D13    |  GPIO004 |           |
-|     D14    |  GPIO000 |           |
-|     D15    |  GPIO002 |           |
+|     D13    |  GPIO004 | MOSI      |
+|     D14    |  GPIO000 | MISO      |
+|     D15    |  GPIO002 | CLK       |
 |     D16    |  GPIO033 |           |
 |     D17    |  GPIO014 | TMS       |
 |     D18    |  GPIO015 |           |
