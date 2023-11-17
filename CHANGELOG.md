@@ -8,7 +8,7 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.31c
+Version 1.31
 
 * Neu:          Unterstützung für PC100 und PT1000
 * Neu:          Unterstützung für Max31865 Amplifier implementiert (PT100/PT1000)
