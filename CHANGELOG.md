@@ -8,9 +8,13 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.31
+Version 1.31e
 
-* Neu:          Unterstützung für PC100 und PT1000
+* Fix:          Korrektur PT Sensor ID
+* Fix:          Variablentyp mismatch korrigiert
+* Fix:          Treiber Start Max31865 korrigiert
+* Fix:          Startmodus Max31865 PT100 und PT1000 vertauscht
+* Neu:          Unterstützung für PT100 und PT1000
 * Neu:          Unterstützung für Max31865 Amplifier implementiert (PT100/PT1000)
 * Neu:          NTP Server konfigurierbar
 * Fix:          Initialisierung Piezo
