@@ -8,8 +8,16 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.31e
+Version 1.31h
 
+* Fix:          Fehler WebIf behoben (Webseite wurde teilweise geladen)
+* Fix:          Fehler WebIf behoben howler.js entfernt
+* Geändert:     Auf html5audio umgestellt
+* Geändert:     Anschluss Max31865 geändert. Siehe Readme
+* Neu:          Fehlerprüfung PT100x Sensoren
+* Neu:          GGM IDS Pin Interrupt kann deaktiviert werden: Errorcodes der IDS werden nicht ausgelesen
+* Neu:          GPIO Pin "Aus" eingefügt. Die Auswahl deaktiviert einen Aktor und gibt den GPIO frei
+* Fix:          D20 (GPIO10) aus der Liste entfernt. GPIO10 wird intern verwendet (SD3 Flash)
 * Fix:          Korrektur PT Sensor ID
 * Fix:          Variablentyp mismatch korrigiert
 * Fix:          Treiber Start Max31865 korrigiert
