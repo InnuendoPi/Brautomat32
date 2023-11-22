@@ -1,14 +1,13 @@
 @font-face {
   font-family: 'brautomat';
   src:  url('/brautomat.ttf') format('truetype');
-    
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'brautomat' !important;
+  font-family: "brautomat" !important;
   /* speak: never; */
   font-style: normal;
   font-weight: normal;
@@ -20,7 +19,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .icon-map2:before {
   content: "\e94c";
 }
@@ -232,7 +230,10 @@
   width: 80px;
 }
 .myLabel-30 {
-  width: 30%;
+  width: 50%;
+}
+.input-group>.input-group-append {
+  width: 35%;
 }
 .input[readonly]{
   position: relative;
