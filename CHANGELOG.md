@@ -8,8 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.32
+Version 1.32a
 
+* Geändert:     debug Ausgaben entfernt
+* Fix:          Button Neustart debug code entfernt
 * Geändert:     Toasts vom Typ error um einen ok-Button zum Schließen erweitert
 * Geändert:     mDNS Anzeige im Display, auf der Konsole und in der Anleitung angepasst
 * Fix:          Fehler WebIf behoben (Webseite wurde teilweise geladen)
