@@ -1,10 +1,57 @@
-# Der Brautomat
+# Der Brautomat32
 
-Portierung auf ESP32 D1
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/README.en.md)
+
+Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
+
+Hauptfunktionen:
+
+* Steuerung der Induktionskochfelder GGM IDS1 und IDS2
+* PID-Controller integriert
+* PID-AutoTune
+* Verwaltung von Maischeplänen
+* Maischepläne mit bis zu 20 Teilschritten
+* Steuerung für einen Nachguss Kessel (HLT)
+* Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
+* PWM für Aktoren
+* Temperaturverlauf im Maischeprozess als Grafik (line chart)
+* Rezept Import aus dem kleinen Brauhelfer2
+* Rezept Import aus Maische Malz und Mehr
+* Rezept Import aus BrewFather
+* Rezept Export
+* Optionale Unterstützung für 3,5" HMI Touchdisplay Nextion
 
 _Hinweis: ein WebUpdate von Version 1.30 oder älter auf Version 1.31 und neuer ist nicht möglich!_
 
-## Erste Installation
+## 📚 Dokumentation
+
+Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat\_de/](https://innuendopi.gitbook.io/brautomat\_de/)
+
+Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
+
+Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](CHANGELOG.md)
+
+## 📰 WebInterface
+
+Der Brautomat wird über einen WebBrowser gesteuert.
+
+![Startseite](/docs/img/brautomat.jpg)
+
+![Startseite](/docs/img/IDS-AutoTune-Ziel.jpg)
+
+![Startseite](/docs/img/brautomat-2.jpg)
+
+## 💻 Nextion HMI Touchdisplay
+
+* Kesselübersicht
+* MaischeSud
+* Manuelle Steuerung Kochen
+
+![Kesselübersicht](/docs/img/kettlepage-sm.jpg) ![MaischeSud](/docs/img/brewpage-sm.jpg) ![Manuelle Steueung](/docs/img/induction-mode-sm.jpg)
+
+_"Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
+
+## ▶️ Installation
 
 Hardware Treiber CP210x USB to UART Bridge Virtual COM Port (VCP) für div. Betriebssysteme: [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
@@ -17,14 +64,47 @@ Hardware Treiber CP210x USB to UART Bridge Virtual COM Port (VCP) für div. Betr
 
 Das Script flashen.cmd verwendet [esptool](https://github.com/espressif/esptool) (im ZIP Archiv enthalten).
 
-## Firmware Update
+## 🗺️ Multilingual
 
-* WebUpdate
-* DateiUpdate
+Der Brautomat32 unterstützt (nahezu) beliebig viele Sprachen. Jede Sprache hat eine eigene Sprachdatei. Die Sprachdateien im JSON Format sind im Ordner data/language hinterlegt.
 
-## 📚 Dokumentation
+_Unterstützte das Projekt und übersetze den Brautomat32 in eine neue Sprache bzw. korrigiere vorhandene Sprachdateien!_
 
-Beschreibung & Anleitung: [gitbook](https://innuendopi.gitbook.io/brautomat\_de/)
+### Erstelle eine neue Sprachdatei
+
+Erstelle eine Kopie der Sprachdatei data/language/de.json und benenne die Datei mit zwei Zeichen in eine neue Sprachdatei:
+
+Spanisch:       es.json\
+Französisch:    fr.json\
+Dänisch:        dk.json\
+Niederländisch: nl.json\
+etc.
+
+Übersetze in jeder Zeile alle Wörter ab dem Doppelpunkt:
+
+```bash
+ {
+   "SPEICHERN": " archivo",
+   "SCHLIESSEN": " cerca",
+   ...
+ }
+```
+
+Öffne im Web Interface vom Brautomat den Explorer. Kopiere die neue Sprachdatei auf Deinen Brautomat in den Ordner /language. Abschließend muss die neue Sprachdatei dem Brautomat bekannt gemacht werden: editiere die Datei /lang.js
+
+```bash
+const supportedLocales = ["de", "en"];  // language files 
+```
+
+Wenn Du bspw. eine spanische Sprachdatei es.json hinzugefügt hast, dann editiere die Datei /lang.js wie folgt:
+
+```bash
+const supportedLocales = ["de", "en", "es"];  // language files 
+```
+
+Speichere die Datei mit der Tastenkombination Strg-S und starte den Brautomat neu. Nun kannst Du die neue Sprache im WebInterface auswählen.
+
+_Teile eine neue Sprachdatei mit anderen Usern! Sende mir Deine Sprachdatei oder Deine Korrektur._
 
 ## Pin-Belegung
 

@@ -8,6 +8,12 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
+Version 1.33a
+
+* Neu:          Auswahl Sprache (de, en)
+* Neu:          Verzeichnis /language
+* Neu:          offenes Format (JSON) für Sprachdateien
+
 Version 1.32b
 
 * Fix:          die Rasttemeraturen beim Rezeptimport wurden nicht korrekt gerundet
