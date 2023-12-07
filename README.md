@@ -2,7 +2,7 @@
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/README.en.md)
 
-Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP8266 Wemos D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
+Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP32 D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
 Hauptfunktionen:
 
@@ -14,6 +14,8 @@ Hauptfunktionen:
 * Steuerung für einen Nachguss Kessel (HLT)
 * Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
 * PWM für Aktoren
+* MP3 Alarme
+* Toasts Nachrichten
 * Temperaturverlauf im Maischeprozess als Grafik (line chart)
 * Rezept Import aus dem kleinen Brauhelfer2
 * Rezept Import aus Maische Malz und Mehr
