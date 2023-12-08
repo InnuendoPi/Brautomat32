@@ -8,7 +8,7 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.33a
+Version 1.33b
 
 * Neu:          Auswahl Sprache (de, en)
 * Neu:          Verzeichnis /language
