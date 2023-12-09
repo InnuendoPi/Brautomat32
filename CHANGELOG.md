@@ -8,8 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.33c
+Version 1.33e
 
+* Neu:          Toast Nachrichten an Sprachfiles angepasst
+* Fix:          Sprachfiles Auswahl Toasts und MP3 falsche Reihenfolge (on/off vertauscht)
 * Neu:          Auswahl Sprache (de, en)
 * Neu:          Verzeichnis /language
 * Neu:          offenes Format (JSON) für Sprachdateien und ToolTipps erstellt
