@@ -8,8 +8,11 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.33e
+Version 1.33f
 
+* Geändert:     Auswahlliste Sensor-Typ (DS18B20, PT100x) und Sensor-Pin (2-, 3-, 4-Leiter) in Sprachfiles verschoben
+* Geändert:     Auswahlliste PID Regeln in Sprachfiles verschoben
+* Geändert:     Auswahlliste Typ IDS in Sprachfiles verschoben
 * Neu:          Toast Nachrichten an Sprachfiles angepasst
 * Fix:          Sprachfiles Auswahl Toasts und MP3 falsche Reihenfolge (on/off vertauscht)
 * Neu:          Auswahl Sprache (de, en)
