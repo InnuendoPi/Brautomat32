@@ -148,7 +148,7 @@
     "IDS_TEXT4": "All parameters on gitbook",
     "IDS_KU": "Ultimate gain Ku",
     "IDS_PU": "Ultimate period Pu",
-    "IDS_SAMPLE": "SampleTime [3000ms]",
+    "IDS_SAMPLE": "SampleTime [1000ms]",
     "IDS_RULE": "PID algorithmus",
     "IDS_RULE_LIST": ["manual Kp Ki KD mode", "ATUNE IDS PID mode"],
     "IDS_KP": "PID Kp",
