@@ -8,8 +8,11 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.33g
+Version 1.33h
 
+* Fix:          Fehler maximale Anzahl an Sensoren
+* Fix:          Fehler beim reload WebIf nach Neustart
+* Fix:          Nach Wiederherstellung der Konfiguration wurde das Fenster nicht geschlossen
 * Fix:          Datei lang.js in WebUpdate hinzugefügt (keine Sprachauswahl nach Update auf 1.33f)
 * Geändert:     Auswahlliste Sensor-Typ (DS18B20, PT100x) und Sensor-Pin (2-, 3-, 4-Leiter) in Sprachfiles verschoben
 * Geändert:     Auswahlliste PID Regeln in Sprachfiles verschoben
