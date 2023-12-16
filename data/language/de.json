@@ -148,7 +148,7 @@
     "IDS_TEXT4": "Alle Parameter auf gitbook",
     "IDS_KU": "Verstärkungsfaktor Ku (gain)",
     "IDS_PU": "Periodendauer Pu (period)",
-    "IDS_SAMPLE": "Intervall (SampleTime) [3000ms]",
+    "IDS_SAMPLE": "Intervall (SampleTime) [1000ms]",
     "IDS_RULE": "PID Algorithmus",
     "IDS_RULE_LIST": ["manueller Kp Ki KD Modus", "AutoTune PID Modus"],
     "IDS_KP": "PID Kp",

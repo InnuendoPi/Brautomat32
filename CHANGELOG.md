@@ -8,8 +8,11 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.33h
+Version 1.33i
 
+* Geändert:     Zurücksetzen in Werkseinstellung angepasst (WLAN und Konfig löschen aktiviert)
+* Fix:          Standard PID Regel MaischeSud korrigiert
+* Geändert:     Standard SampleTime MaischeSud angepasst
 * Fix:          Fehler maximale Anzahl an Sensoren
 * Fix:          Fehler beim reload WebIf nach Neustart
 * Fix:          Nach Wiederherstellung der Konfiguration wurde das Fenster nicht geschlossen
