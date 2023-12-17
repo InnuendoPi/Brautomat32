@@ -33,7 +33,7 @@ Brautomat is a stand alone brewing device and offers :
 
 ## 📚 Documentation
 
-Manual: [https://innuendopi.gitbook.io/brautomat\_de/](https://innuendopi.gitbook.io/brautomat\_de/)
+Manual: [https://innuendopi.gitbook.io/brautomat32en/](https://innuendopi.gitbook.io/brautomat32en/)
 
 Discussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
 

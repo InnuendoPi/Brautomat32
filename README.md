@@ -31,7 +31,7 @@ _Hinweis: ein WebUpdate von Version 1.30 oder älter auf Version 1.31 und neuer 
 
 ## 📚 Dokumentation
 
-Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat\_de/](https://innuendopi.gitbook.io/brautomat\_de/)
+Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat32/](https://innuendopi.gitbook.io/brautomat32/)
 
 Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
 
