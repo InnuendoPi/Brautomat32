@@ -1,4 +1,4 @@
-# Der Brautomat
+# Brautomat - en
 
 Brautomat is a brewing control for induction hobs GGM IDS with an ESP32 Wemos D1 mini. Brautomat is used in the brewhouse by hobby brewers and offers intuitive, easy-to-use controls. During mashing, rest temperatures are reached automatically and the rest times are adhered to. Brautomat also supports the hobby brewer when boiling the wort and adding hops. In the ascending infusion process, the brautomat can fully automate the mashing process.
 
