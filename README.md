@@ -4,11 +4,15 @@
 
 Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP32 D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
-Hauptfunktionen:
+---
+
+## Hauptfunktionen
 
 * Steuerung der Induktionskochfelder GGM IDS1 und IDS2
-* PID-Controller integriert
+* integrierter PID-Controller
 * PID-AutoTune
+* digitales Sensoren DS18B20
+* analoge Sensoren PT100x (MAX31865)
 * Verwaltung von Maischeplänen
 * Maischepläne mit bis zu 20 Teilschritten
 * Steuerung für einen Nachguss Kessel (HLT)
@@ -21,7 +25,7 @@ Hauptfunktionen:
 * Rezept Import aus Maische Malz und Mehr
 * Rezept Import aus BrewFather
 * Rezept Export
-* Optionale Unterstützung für 3,5" HMI Touchdisplay Nextion
+* Unterstützung für 3,5" HMI Touchdisplay Nextion
 
 _Hinweis: ein WebUpdate von Version 1.30 oder älter auf Version 1.31 und neuer ist nicht möglich!_
 

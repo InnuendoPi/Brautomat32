@@ -1,7 +1,7 @@
 # Changelog
 
 ESP32 Arduino 2.0.14\
-VSCode 1.84 Arduino 0.6\
+VSCode 1.85 Arduino 0.6\
 VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
