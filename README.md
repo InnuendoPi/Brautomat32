@@ -1,148 +1,100 @@
-# Der Brautomat32
+# Changelog
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/README.en.md)
+ESP32 Arduino 2.0.14\
+VSCode 1.85 Arduino 0.6\
+VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
+InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
+InnuTicker task scheduler lib\
+InnuFramework CSS/JS bootstrap 4.6.2\
+Server Sent Events (8 SSE channels)
 
-Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP32 D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
+Version 1.33i
 
----
+* Geändert:     Zurücksetzen in Werkseinstellung angepasst (WLAN und Konfig löschen aktiviert)
+* Fix:          Standard PID Regel MaischeSud korrigiert
+* Geändert:     Standard SampleTime MaischeSud angepasst
+* Fix:          Fehler maximale Anzahl an Sensoren
+* Fix:          Fehler beim reload WebIf nach Neustart
+* Fix:          Nach Wiederherstellung der Konfiguration wurde das Fenster nicht geschlossen
+* Fix:          Datei lang.js in WebUpdate hinzugefügt (keine Sprachauswahl nach Update auf 1.33f)
+* Geändert:     Auswahlliste Sensor-Typ (DS18B20, PT100x) und Sensor-Pin (2-, 3-, 4-Leiter) in Sprachfiles verschoben
+* Geändert:     Auswahlliste PID Regeln in Sprachfiles verschoben
+* Geändert:     Auswahlliste Typ IDS in Sprachfiles verschoben
+* Neu:          Toast Nachrichten an Sprachfiles angepasst
+* Fix:          Sprachfiles Auswahl Toasts und MP3 falsche Reihenfolge (on/off vertauscht)
+* Neu:          Auswahl Sprache (de, en)
+* Neu:          Verzeichnis /language
+* Neu:          offenes Format (JSON) für Sprachdateien und ToolTipps erstellt
 
-## Hauptfunktionen
+Version 1.32b
 
-* Steuerung der Induktionskochfelder GGM IDS1 und IDS2
-* integrierter PID-Controller
-* PID-AutoTune
-* digitales Sensoren DS18B20
-* analoge Sensoren PT100x (MAX31865)
-* Verwaltung von Maischeplänen
-* Maischepläne mit bis zu 20 Teilschritten
-* Steuerung für einen Nachguss Kessel (HLT)
-* Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
-* PWM für Aktoren
-* MP3 Alarme
-* Toasts Nachrichten
-* Temperaturverlauf im Maischeprozess als Grafik (line chart)
-* Rezept Import aus dem kleinen Brauhelfer2
-* Rezept Import aus Maische Malz und Mehr
-* Rezept Import aus BrewFather
-* Rezept Export
-* Unterstützung für 3,5" HMI Touchdisplay Nextion
+* Fix:          die Rasttemeraturen beim Rezeptimport wurden nicht korrekt gerundet
+* Fix:          Wenn fehlendes Abmaischen im Rezeptimport kbh2 ausgewählt war, wurde die MaischeSud Abmaischtemperatur nicht übernommen
+* Geändert:     debug Ausgaben entfernt
+* Fix:          Button Neustart debug code entfernt
+* Geändert:     Toasts vom Typ error um einen ok-Button zum Schließen erweitert
+* Geändert:     mDNS Anzeige im Display, auf der Konsole und in der Anleitung angepasst
+* Fix:          Fehler WebIf behoben (Webseite wurde teilweise geladen)
+* Fix:          Fehler WebIf behoben howler.js entfernt
+* Geändert:     Auf html5audio umgestellt
+* Geändert:     Anschluss Max31865 geändert. Siehe Readme
+* Neu:          Fehlerprüfung PT100x Sensoren
+* Neu:          GGM IDS Pin Interrupt kann deaktiviert werden: Errorcodes der IDS werden nicht ausgelesen
+* Neu:          GPIO Pin "Aus" eingefügt. Die Auswahl deaktiviert einen Aktor und gibt den GPIO frei
+* Fix:          D20 (GPIO10) aus der Liste entfernt. GPIO10 wird intern verwendet (SD3 Flash)
+* Fix:          Korrektur PT Sensor ID
+* Fix:          Variablentyp mismatch korrigiert
+* Fix:          Treiber Start Max31865 korrigiert
+* Fix:          Startmodus Max31865 PT100 und PT1000 vertauscht
+* Neu:          Unterstützung für PT100 und PT1000
+* Neu:          Unterstützung für Max31865 Amplifier implementiert (PT100/PT1000)
 
-_Hinweis: ein WebUpdate von Version 1.30 oder älter auf Version 1.31 und neuer ist nicht möglich!_
+Version 1.31
 
-## 📚 Dokumentation
+* Neu:          NTP Server konfigurierbar
+* Fix:          Initialisierung Piezo
+* Update:       jQuery 3.7.1
+* Update:       Howler 2.2.4 (play audio files)
+* Optimiert:    InnuFramework CSS (purge)
+* Geändert:     Partionen angepasst - manuelles flashen erforderlich!
+* Geändert:     Display MaischeSud angepasst
 
-Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat\_de/](https://innuendopi.gitbook.io/brautomat\_de/)
+Version 1.30
 
-Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
+* Fix:          Bootreihenfolge Treiber Display
+* Fix:          Bootreihenfolge Treiber DS18B20
+* Geändert:     Ticker Display entfernt
 
-Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](CHANGELOG.md)
+Version 1.29
 
-## 📰 WebInterface
-
-Der Brautomat wird über einen WebBrowser gesteuert.
-
-![Startseite](/docs/img/brautomat.jpg)
-
-![Startseite](/docs/img/IDS-AutoTune-Ziel.jpg)
-
-![Startseite](/docs/img/brautomat-2.jpg)
-
-## 💻 Nextion HMI Touchdisplay
-
-* Kesselübersicht
-* MaischeSud
-* Manuelle Steuerung Kochen
-
-![Kesselübersicht](/docs/img/kettlepage-sm.jpg) ![MaischeSud](/docs/img/brewpage-sm.jpg) ![Manuelle Steueung](/docs/img/induction-mode-sm.jpg)
-
-_"Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
-
-## ▶️ Installation
-
-Hardware Treiber CP210x USB to UART Bridge Virtual COM Port (VCP) für div. Betriebssysteme: [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
-
-* Download [Firmeware.zip](https://github.com/InnuendoPi/Brautomat32/blob/main/tools/Firmware.zip)
-* Firmware.zip entpacken
-* Flashen.cmd editieren:
-* "COM3" in Zeile 6  und Zeile 8 "esptool.exe -p COM3" anpassen
-* Eingabeaufforderung (cmd.exe) öffnen und in das Verzeichnis von firmware.zip wechseln
-* Firmware auf ESP32 ladeen mit "flashen.cmd"
-
-Das Script flashen.cmd verwendet [esptool](https://github.com/espressif/esptool) (im ZIP Archiv enthalten).
-
-## 🗺️ Multilingual
-
-Der Brautomat32 unterstützt (nahezu) beliebig viele Sprachen. Jede Sprache hat eine eigene Sprachdatei. Die Sprachdateien im JSON Format sind im Ordner data/language hinterlegt.
-
-_Unterstützte das Projekt und übersetze den Brautomat32 in eine neue Sprache bzw. korrigiere vorhandene Sprachdateien!_
-
-### Erstelle eine neue Sprachdatei
-
-Erstelle eine Kopie der Sprachdatei data/language/de.json und benenne die Datei mit zwei Zeichen in eine neue Sprachdatei:
-
-Spanisch:       es.json\
-Französisch:    fr.json\
-Dänisch:        dk.json\
-Niederländisch: nl.json\
-etc.
-
-Übersetze in jeder Zeile alle Wörter ab dem Doppelpunkt:
-
-```bash
- {
-   "SPEICHERN": " archivo",
-   "SCHLIESSEN": " cerca",
-   ...
- }
-```
-
-Öffne im Web Interface vom Brautomat den Explorer. Kopiere die neue Sprachdatei auf Deinen Brautomat in den Ordner /language. Abschließend muss die neue Sprachdatei dem Brautomat bekannt gemacht werden: editiere die Datei /lang.js
-
-```bash
-const supportedLocales = ["de", "en"];  // language files 
-```
-
-Wenn Du bspw. eine spanische Sprachdatei es.json hinzugefügt hast, dann editiere die Datei /lang.js wie folgt:
-
-```bash
-const supportedLocales = ["de", "en", "es"];  // language files 
-```
-
-Speichere die Datei mit der Tastenkombination Strg-S und starte den Brautomat neu. Nun kannst Du die neue Sprache im WebInterface auswählen.
-
-_Teile eine neue Sprachdatei mit anderen Usern! Sende mir Deine Sprachdatei oder Deine Korrektur._
-
-## Pin-Belegung
-
-Der ESP32 D1 bietet ein Pinout passend zum ESP8266 (GPIO D0 bis D8). Die dargestellte Pinbelegung basiert auf dem Modul ESP32 D1 Mini NodeMCU von [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
-
-GPIO Zuordnung:
-
-![ESP32 D1 Pinout-1](/docs/img/ESP32-D1.pinout-1.jpg)
-![ESP32 D1 Pinout-2](/docs/img/ESP32-D1.pinout-2.jpg)
-
-| Bezeichner |   GPIO   |  Input  |  Output  | Beschreibung |
-| ---------- | -------- | ------- | -------- | ------------ |
-|     D0     |  GPIO026 |   ok    |   ok     |              |
-|     D1     |  GPIO022 |   ok    |   ok     |              |
-|     D2     |  GPIO021 |   ok    |   ok     |              |
-|     D3     |  GPIO017 |   ok    |   ok     |              |
-|     D4     |  GPIO016 |   ok    |   ok     |              |
-|     D5     |  GPIO018 |   ok    |   ok     |              |
-|     D6     |  GPIO019 |   ok    |   ok     |              |
-|     D7     |  GPIO023 |   ok    |   ok     |              |
-|     D8     |  GPIO005 |   ok    |   ok     |              |
-|     D9     |  GPIO027 |   ok    |   ok     | SCLK         |
-|     D10    |  GPIO025 |   ok    |   ok     | MISO         |
-|     D11    |  GPIO032 |   ok    |   ok     | MOSI         |
-|     D12    |  GPIO012 |  (ok)   |   ok     | TDI, boot fails if pulled high, strapping pin |
-|     D13    |  GPIO004 |   ok    |   ok     | CS0         |
-|     D14    |  GPIO000 | pullUp  |  (ok)    | must be low to enter flash mode |
-|     D15    |  GPIO002 |   ok    |   ok     | onboard LED, must be low to enter flash mode |
-|     D16    |  GPIO033 |   ok    |   ok     | CS1          |
-|     D17    |  GPIO014 |   ok    |   ok     | CS2          |
-|     D18    |  GPIO015 |   ok    |   ok     |              |
-|     D19    |  GPIO013 |   ok    |   ok     |              |
-
-Pins connected to onboard flash and not recommended for GPIO use:
-CMD (IO11), CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9) and SD3 (IO10)
+* Fix:          WebUpdate dev branch
+* Fix:          WebUpdate Protokoll unvollständig
+* Fix:          KBH2 Datei wurde nach Rezeptimport nicht gelöscht (debug)
+* Update:       ESP32 2.0.14
+* Geändert:     Anzeigedauer Toast-Nachrichten reduziert: info, success 10s, warning 20s
+* Fix:          Anzeigefehler Leistung IDS im Status statePlay (Play Button rot) nach Miascheschritt mit deaktiviertem autonext
+* Fix:          WiFiClient.flush - Properly initialize and check _rxBuffer #8699
+* Fix:          Anzeigefehler Timer nach Button Prev/Next auf Maischeschritt Aktor schalten behoben
+* Fix:          Fehler Button Prev und Button Next auf Maischeschritt Aktor schalten springen behoben
+* Fix:          Anzeigefehler Timer nächste Rast ("6046:00") behoben
+* Fix:          Zeitgesteuerter Braustart: DateTimePicker im WebIf
+* Fix:          Zeitgesteuerter Braustart: Aktor einschalten als erster Schritt wurde nicht erkannt
+* Geändert:     Sensorkalibrierung auf 15 Messwerte reduziert
+* Fix:          Watchdog Reset während Sensorkalibrierung
+* Geändert:     WiFi.Events angepasst (Timeouts)
+* Geändert:     Aktoren shortcut entfernt
+* Fix:          Fehler Laden Web Interface behoben (request handler not found)
+* Fix:          Profile können nicht gespeichert werden - Wenn das Verzeichnis Profile nicht existiert, wird es erstellt
+* Neu:          Aktor und Nachguss Tracking im Eeprom
+* Fix:          Exception WiFiClient.flush
+* Fix:          Watchdog nach WLAN AP Mode und WebUpdate starten
+* Geändert:     SSEkeepAlive 60s - WebIf checkAliveSSE 90s
+* Neu:          Watchdog Task timeout 10s (Test)
+* Neu:          Autostart Maischeprozess, wenn nach dem Neustart im Eeprom ein Maische Tracking gefunden wird (Reset oder Absturz)
+                Maische Tracking wird entweder automatisch gelöscht (Maischeschritt beendet)
+                oder Maische Tracking manuell durch Power Button (Start/Stop) zurücksetzen
+* Neu:          Tracking aktueller Maischeschritt und Zeit im Eeprom
+* Fix:          Fehler Board config behoben (cores)
+* Fix:          Fehler WiFi Client behoben
+* Fix:          Fehler bei der Erkennung Aktor ein/ausschalten im Maischeplan behoben
+* Update:       ESP32 2.0.13
