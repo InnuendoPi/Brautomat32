@@ -89,6 +89,7 @@
     "MISC_TT_RESET": "Vorsicht: die WLAN Konfiguration muss neu eigegeben werden",
     "MISC_TT_CLEAR": "Vorsicht: die gesamte Konfiguration muss neu eigegeben werden",
     "MISC_TT_DEV": "Vorsicht: Testversionen sind häufig nicht zum Brauen geeignet",
+    "MISC_TT_BUZZER": "Aktiviere Piezo-Buzzer [D8]",
     "UP_TEXT1": "Firmware Update",
     "UP_TEXT2": "Der Brautomat startet automatisch mehrfach neu",
     "UP_WEB": "WebUpdate",
