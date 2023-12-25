@@ -89,6 +89,7 @@
     "MISC_TT_RESET": "Attention: WLAN configuration will be wiped (reboot in AP mode)",
     "MISC_TT_CLEAR": "Attention: device configuration will be wiped to factory defaults",
     "MISC_TT_DEV": "Attention: dev versions are not always suitable for brewing",
+    "MISC_TT_BUZZER": "Enabled Piezo-Buzzer [D8]",
     "UP_TEXT1": "Firmware Update",
     "UP_TEXT2": "device automatically restarts several times",
     "UP_WEB": "WebUpdate",

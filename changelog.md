@@ -8,8 +8,9 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.33i
+Version 1.33j
 
+* Geändert:     GPIO Auswahl für Buzzer
 * Geändert:     Zurücksetzen in Werkseinstellung angepasst (WLAN und Konfig löschen aktiviert)
 * Fix:          Standard PID Regel MaischeSud korrigiert
 * Geändert:     Standard SampleTime MaischeSud angepasst
