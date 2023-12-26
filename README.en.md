@@ -80,42 +80,6 @@ Brautomat32 supports (almost) any number of languages. Each language has its own
 
 _Supported the project and translated the Brautomat into a new language or corrected existing language files!_
 
-### Create a new language file
-
-Make a copy of the language file data/language/de.json and rename the file with two characters to a new language file:
-
-spanish: es.json\
-french: fr.json\
-danish: dk.json\
-dutch: nl.json\
-etc.
-
-Translate all words starting from the colon on each line:
-
-```bash
- {
-   "SPEICHERN": " archivo",
-   "SCHLIESSEN": " cerca",
-   ...
- }
-```
-
-Open Explorer in the Brautomat's web interface. Copy the new language file to the /language folder on your Brautomat. Finally, the new language file must be made known to the Brautomat: edit the file /lang.js
-
-```bash
-const supportedLocales = ["de", "en"];  // language files 
-```
-
-For example, if you added a Spanish language file es.json, then edit the /lang.js file as follows:
-
-```bash
-const supportedLocales = ["de", "en", "es"];  // language files 
-```
-
-Use Ctrl-S to save the file and restart the Brautomat. Now you can select the new language in the web interface.
-
-_Share a new language file with other users! Send me your language file or your correction._
-
 ## Pin-Belegung
 
 The ESP32 D1 offers a pinout suitable for the ESP8266 (GPIO D0 to D8). The pin assignment shown is based on the ESP32 D1 Mini NodeMCU module from [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)

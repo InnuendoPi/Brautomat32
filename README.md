@@ -8,33 +8,39 @@ Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und 
 
 ## Hauptfunktionen
 
-* Steuerung der Induktionskochfelder GGM IDS1 und IDS2
+* Steuerung der Induktionskochfelder GGM
+  * GGM IDS1
+  * GGM IDS2
 * integrierter PID-Controller
 * PID-AutoTune
-* digitales Sensoren DS18B20
-* analoge Sensoren PT100x (MAX31865)
+* Temperatursensoren
+  * Dallas DS18B20
+  * PT100 und PT1000 (MAX31865)
+* Maischeplan
+  * Automatisches Anfahren und halten der Rasttemperaturen
+  * Würzekochen
+  * Alarmierung für Hopfengaben
+  * Bis zu 20 Teilschritte
 * Verwaltung von Maischeplänen
-* Maischepläne mit bis zu 20 Teilschritten
 * Steuerung für einen Nachguss Kessel (HLT)
 * Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
 * PWM für Aktoren
-* MP3 Alarme
+* Audio Alarme
+  * MP3 Alarme
+  * Akkustische Signale (Piezo Buzzer)
 * Toasts Nachrichten
 * Temperaturverlauf im Maischeprozess als Grafik (line chart)
-* Rezept Import aus dem kleinen Brauhelfer2
-* Rezept Import aus Maische Malz und Mehr
-* Rezept Import aus BrewFather
+* Rezept Import
+  * kleinen Brauhelfer2
+  * Maische Malz und Mehr
+  * BrewFather
 * Rezept Export
 * Unterstützung für 3,5" HMI Touchdisplay Nextion
 
-_Hinweis: ein WebUpdate von Version 1.30 oder älter auf Version 1.31 und neuer ist nicht möglich!_
-
 ## 📚 Dokumentation
 
-Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat32/](https://innuendopi.gitbook.io/brautomat32/)
-
-Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
-
+Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat32/](https://innuendopi.gitbook.io/brautomat32/)\
+Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
 Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](./)
 
 ## 📰 WebInterface
@@ -75,42 +81,6 @@ Das Script flashen.cmd verwendet [esptool](https://github.com/espressif/esptool)
 Der Brautomat32 unterstützt (nahezu) beliebig viele Sprachen. Jede Sprache hat eine eigene Sprachdatei. Die Sprachdateien im JSON Format sind im Ordner data/language hinterlegt.
 
 _Unterstützte das Projekt und übersetze den Brautomat32 in eine neue Sprache bzw. korrigiere vorhandene Sprachdateien!_
-
-### Erstelle eine neue Sprachdatei
-
-Erstelle eine Kopie der Sprachdatei data/language/de.json und benenne die Datei mit zwei Zeichen in eine neue Sprachdatei:
-
-Spanisch: es.json\
-Französisch: fr.json\
-Dänisch: dk.json\
-Niederländisch: nl.json\
-etc.
-
-Übersetze in jeder Zeile alle Wörter ab dem Doppelpunkt:
-
-```bash
- {
-   "SPEICHERN": " archivo",
-   "SCHLIESSEN": " cerca",
-   ...
- }
-```
-
-Öffne im Web Interface vom Brautomat den Explorer. Kopiere die neue Sprachdatei auf Deinen Brautomat in den Ordner /language. Abschließend muss die neue Sprachdatei dem Brautomat bekannt gemacht werden: editiere die Datei /lang.js
-
-```bash
-const supportedLocales = ["de", "en"];  // language files 
-```
-
-Wenn Du bspw. eine spanische Sprachdatei es.json hinzugefügt hast, dann editiere die Datei /lang.js wie folgt:
-
-```bash
-const supportedLocales = ["de", "en", "es"];  // language files 
-```
-
-Speichere die Datei mit der Tastenkombination Strg-S und starte den Brautomat neu. Nun kannst Du die neue Sprache im WebInterface auswählen.
-
-_Teile eine neue Sprachdatei mit anderen Usern! Sende mir Deine Sprachdatei oder Deine Korrektur._
 
 ## Pin-Belegung
 

@@ -26,4 +26,5 @@
 * [Hardware](Hardware/hw.md)
 * [KleinerBrauhelfer2](KBH2/kleinerbrauhelfer2.md)
 * [MQTTDevice](MQTTDeivce/mqtt.md)
+* [Übersetze den Brautomat](FAQ/sprache.md)
 * [Troubleshooting](FAQ/troubleshooting.md)
