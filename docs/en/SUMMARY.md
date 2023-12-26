@@ -27,3 +27,4 @@
 * [KleinerBrauhelfer2](KBH2/kleinerbrauhelfer2.md)
 * [MQTTDevice](MQTTDeivce/mqtt.md)
 * [Troubleshooting](FAQ/troubleshooting.md)
+* [Translate Brautomat](FAQ/sprache.md)

@@ -51,17 +51,21 @@ Wenn die Funktion _autonext_ aktiviert ist, überprüft der Brautomat forlaufend
 _Tipp: mit "Temperatur delta zum Ziel" wird ein Temperaturbereich um die Rast-Temperatur angegeben, innerhalb dem der Timer einer Rast gestartet wird._
 
 **Sonderfunktionen**\
-Eine Sonderfunktion hat die Rast-Temperatur 0°C bei aktivertem autonext: wenn die Rast-Temperatur auf 0°C gesetzt und autonext aktiviert ist, wird der nachfolgende Maischeschritt ohne Temperaturüberprüfung automatisch gestartet. Diese Sonderfunktion kann bspw. nach dem Kochen der Würze nützlich sein, wenn einer Timer für die Nachisomerisierung gestartet und die GGM IDS ausgeschaltet werden soll. Wäre die Rasttemperatur vom Schritt Nachisomerisierung nicht auf 0°C sondern bspw. auf 95°C eingestellt, würde der Rasttimer für den Schritt Nachisomerisierung erst starten, wenn die Temperatur im MaischeSud Kessel von Kochen 100°C auf 95°C abgekühlt ist.
+Eine Sonderfunktion hat die Rast-Temperatur 0°C bei aktivertem autonext: wenn die Rast-Temperatur auf 0°C gesetzt und autonext aktiviert ist, wird der nachfolgende Maischeschritt ohne Temperaturüberprüfung automatisch gestartet. Im folgenden Bild ist die Situation unmittelbar nach dem Würzekochen dargestellt. Die Würze hat zu deisem Zeitpunkt eine Temperatur von ca. 100°C. Das Induktionskochfeld soll abgeschaltet werden und der Timer für die Nachisomerisierung muss gestartet werden:
+
+![Sonderfunktion 0°C](/docs/img/Maischeplan-Sonderfunktion.jpg)
+
+Die Sonderfunktion "0°C Rasttemperatur mit aktiviertem autonext" erfüllt genau dieses Anforderung: Ist- und Soll-Temperatur werden ignoriert und der Rast-Timer wird gestartet. Wäre die Rasttemperatur vom Schritt Nachisomerisierung nicht auf 0°C sondern bspw. auf 95°C eingestellt, würde der Rasttimer für den Schritt Nachisomerisierung erst starten, wenn die Temperatur im MaischeSud Kessel von Kochen 100°C auf 95°C abgekühlt ist.
 
 Eine Zweite Sonderfunktion ist das Ein- und Ausschalten von Aktoren. Die Syntax für den Maischeschritt lautet Aktorname Doppelpunkt Aktorstatus. Dabei kann der Aktorstatus entweder ON oder OFF sein. Die Rasttemperatur und die Rastdauer müssen für diese Sonderfunktion auf 0 gesetzt sein. Der Nachguss hat als festen Aktornamen Nachguss.
 
-![Maischeplan](/docs/img/Maischeplan-Aktoren.jpg)
+![Sonderfunktion Aktoren schalten](/docs/img/Maischeplan-Aktoren.jpg)
 
 Der Maischeplan im Bild schaltet an drei Stellen Aktoren. Direkt zu Beginn wird das Rührwerk eingeschaltet: Ruehrwerk:ON
-Kurz vor dem Ende des Maischeplans wird das Rührwerk mit dem Befehl Ruehrwerk:OFF ausgeschaltet und der Nachguss mit Nachuss:ON eingeschaltet. Aktornamen sollen keine Sonderzeichen, Umlaute oder Leerzeichen enthalten. Aktornamen müssen eindeutig sein. Die Firmware ersetzt bei der Neuanlage von Aktoren automatisch Umlaute.
+Kurz vor dem Ende des Maischeplans wird das Rührwerk mit dem Befehl Ruehrwerk:OFF ausgeschaltet und der Nachguss mit Nachuss:ON eingeschaltet. Aktornamen sollen keine Sonderzeichen, Umlaute oder Leerzeichen enthalten. Aktornamen müssen eindeutig sein. Die Firmware ersetzt bei der Neuanlage von Aktoren automatisch Umlaute und Leerzeichen.
 
 Durch die Tabellenform ist das Grundprinzip vom Brautomat die aufsteigende Infusion. Das schließt Varianten wie bspw. das Earlsche Kochmaischverfahren ein. Mit Hilfe der Eigenschaft "autonext" können auch andere Brauverfahren umgesetzt werden. Es gilt aber zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "halber Automatik" unterstützen kann. Ein auslösender Trigger für eine Aktion wie bspw. das Ziehen von Teilmaischen, muss durch den Anwender manuell erfolgen. Eine Rast mit einer Minute Dauer und deaktiviertem autonext kann ein Auslöser sein.
 
 _Tipp: Hopfengaben und Zusätze - Im Bild ist ein Maischeplan dargestellt, der aus dem Programm kleinerBrauhelfer2 importiert wurde. Zusätze- und Hopfennamen, Mengen, Alphasäure und Zeitpunkt der Gaben werden aus dem kbh2 Export übernommen. Auch bei Zusätze und Hopfengaben erscheinen Toast Nachrichten mit Klang. Wenn ein Piezo Buzzer aktiviert wurde, ertönt mit jedem Schritt ein Signalton._
 
-_Tipp: Zubrühen - Im Bild Maischeplan ist ein Schritt Zubrühen dargestellt. Auch dieser Schritt ist inklusive der Angaben zur Menge und Temperatur aus dem kleinenBrauhelfer2 importiert worden._
+_Tipp: Zubrühen - Im Bild Maischeplan ist ein Schritt Zubrühen dargestellt. Auch dieser Schritt wurde inklusive der Angaben zur Menge und Temperatur aus dem kleinenBrauhelfer2 importiert._
