@@ -54,7 +54,7 @@ Wenn die Funktion _autonext_ aktiviert ist, überprüft der Brautomat forlaufend
 
 _Tipp: mit "Temperatur delta zum Ziel" wird ein Temperaturbereich um die Rast-Temperatur angegeben, innerhalb dem der Timer einer Rast gestartet wird._
 
-## Sonderfunktionen 0°C Rasttemperatur mit aktiviertem autonext
+## Sonderfunktion 0°C Rast bei aktiviertem autonext
 
 Eine Sonderfunktion hat die Rast-Temperatur 0°C bei aktivertem autonext: wenn die Rast-Temperatur auf 0°C gesetzt und autonext aktiviert ist, wird der nachfolgende Maischeschritt ohne Temperaturüberprüfung automatisch gestartet. Im folgenden Bild ist die Situation unmittelbar nach dem Würzekochen dargestellt. Die Würze hat zu diesem Zeitpunkt eine Temperatur von ca. 100°C. Das Induktionskochfeld soll abgeschaltet werden und der Timer für die Nachisomerisierung soll direkt gestartet werden:
 
