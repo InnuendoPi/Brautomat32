@@ -1,4 +1,4 @@
-# Der Brautomat32
+# Brautomat32
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/README.en.md)
 
