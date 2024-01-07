@@ -1,4 +1,4 @@
-# Brautomat
+# Brautomat32
 
 [![de](https://img.shields.io/badge/lang-de-green.svg)](https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/README.md)
 
@@ -17,7 +17,9 @@ Brautomat is a stand alone brewing device and offers :
 * digital sensors DS18B20
 * analog sensors PT100x with MAX31865 Amplifier
 * PID-AutoTune
-* Mash plan management
+* mash plan management
+  * full automated rest temperature reach & hold
+  * full automated rest duration timer function
 * Mash plans with up to 20 steps
 * Hot liquid tank controller (HLT)
 * Controlling actors like agitator, pumps etc.
@@ -25,41 +27,42 @@ Brautomat is a stand alone brewing device and offers :
 * Temperature progression in the mashing process (line chart)
 * MP3 alerts
 * Toasts messages
-* Recipe import kleinen Brauhelfer2
-* Recipe import Maische Malz und Mehr
-* Recipe import BrewFather
+* Recipe import
+  * kleinerBrauhelfer2
+  * Maische Malz und Mehr
+  * BrewFather
 * Recipe export
 * Nextion 3,5" HMI Touchdisplay (optional)
+* WebUpdate for easy firmware updates
+* Support for different languages
 
 ## 📚 Documentation
 
-Manual: [https://innuendopi.gitbook.io/brautomat32en/](https://innuendopi.gitbook.io/brautomat32en/)
-
-Discussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
-
+Manual: [https://innuendopi.gitbook.io/brautomat32en/](https://innuendopi.gitbook.io/brautomat32en/)\
+Discussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
 Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](./)
 
 ## 📰 WebInterface
 
-The Brautomat is controlled via a web browser. A browser with support for CSS3, HTML5, Javascript and Server Sent Events (SSE) is required.\\
+The Brautomat is web browser controlled. A web browser with support for CSS3, HTML5, Javascript and Server Sent Events (SSE) is required.\\
 
 Compatible browser list [Browser](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent\_events/Using\_server-sent\_events#browser\_compatibility)
 
-![Startseite](docs/img/brautomat.jpg)
-
-![Startseite](docs/img/IDS-AutoTune-Ziel.jpg)
-
+![Startseite](docs/img/brautomat.jpg)\
+![Startseite](docs/img/IDS-AutoTune-Ziel.jpg)\
 ![Startseite](docs/img/brautomat-2.jpg)
 
 ## 💻 Nextion HMI Touchdisplay
 
-Note: the display is an optional extension. Only Nextion ITEAD HMI 3.5" Touchdisplays are supported.
+Brautomat offers three different displays:
 
 * Overview
 * Mash tun
 * Manual control cooking
 
 ![Overview](docs/img/kettlepage-sm.jpg) ![Mash tun](docs/img/brewpage-sm.jpg) ![Manual control](docs/img/induction-mode-sm.jpg)
+
+_Note: the display is an optional extension. Only Nextion ITEAD HMI 3.5" Touchdisplays are supported._
 
 ## ▶️ Installation
 

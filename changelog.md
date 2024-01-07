@@ -8,6 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
+Version 1.34
+
+* Geändert:     Neues Format Maische Malz und mehr Rezeptimport
+
 Version 1.33j
 
 * Geändert:     GPIO Auswahl für Buzzer
