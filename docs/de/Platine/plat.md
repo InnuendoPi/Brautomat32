@@ -1,10 +1,12 @@
-# Die Platine
+# Platine mit Levelshifter
 
-![Platine](/docs/img/Platine.jpg)
+Es gibt zwei Versionen der Platinen: mit LevelShifter und ohne LevelShifter.
 
-Die Platine zum Projekt Brautomat macht den Aufbau und die Verwendung sehr einfach. Dabei ist die Platine völlig unabhängig vom Projekt Brautomat. Mit einem ESP8266 Wemos D1 mini kann die Platine universell eingesetzt werden. An die Schraubklemmblöcke werden beim Brautomat die GGM IDS, die Sensoren, die Aktoren und das Display angeschlossen.
+![Platine mit LevelShifter](/docs/img/Platine.jpg)
 
-## Jumperpositionen
+Die Platine zum Projekt Brautomat macht den Aufbau und die Verwendung sehr einfach. Dabei ist die Platine völlig unabhängig vom Projekt Brautomat. Mit einem ESP8266 D1 mini oder ESP32 D1 kann die Platine universell eingesetzt werden. An die Schraubklemmblöcke werden beim Brautomat die GGM IDS, die Sensoren, die Aktoren und das Display angeschlossen.
+
+## Jumperpositionen - Platine mit Levelshifter
 
 Die Platine hat 4 Jumper. Die Jumper J1, J2 und J3 müssen mindestens auf _2-3_ gesetzt werden.
 
@@ -51,3 +53,35 @@ _Tipp:_ _der ESP8266 sollte gesockelt werden. Mit Sockel (im Link oben enthalten
 Die Anschlüsse vom LevelShifter 8 Kanal müssen zur Anordnung auf der Platine identisch sein. Der Levelshifter aus dem Link hat diese Anordnung der Anschlüsse.
 
 ![Levelshifter](/docs/img/Levelshifter.jpg)
+
+## Platine ohne Levelshifter
+
+![Platine ohne LevelShifter](/docs/img/Platine20.jpg)
+
+Die Platine ohne LevelShifter kommt ohne Jumper und ohne Extra-Port für das Display. Dafür bietet die Version für den ESP32 alle GPIOs an Schraubklemmblöcken.
+
+## Teileliste 2
+
+Die Position JST-HX Buchse ist eine Alternative zum 5 Pol Schraubklemmblock. Das Kabel vom Bedienteil der GGM IDS2 hat den passenden Stecker für eine JST-HX Buchse. Wir statt den Orignalkabel ein Ersatzkabel eingesetzt, ist die Verbindung mit einem 5er Schraubklemmblockj einfacher.
+
+| Anzahl                                                | Artikelname                    | Link zum Artikel                  |
+| ----------------------------------------------------- | ------------------------------ | --------------------------------- |
+| 3                                                     | Schraubklemmblock 3pol 2,54    | (eg voelkner )                    |
+| 1                                                     | Schraubklemmblock 5pol 2,54    | (eg voelkner )                    |
+| 1 alternativ zum Schraubklemmblock 5pol               | JST-HX Buchse 90° 2,54         | (eg voelkner )                    |
+| 2                                                     | Schraubklemmblock 8pol 2,54    | (eg voelkner )                    |
+| 2                                                     | Schraubklemmblock 12pol 2,54   | (eg voelkner )                    |
+| 2                                                     | JST-HX Buchse 90° 2,54         | (eg voelkner )                    |
+| 1                                                     | Stiftleiste 2,54               | (amazon)                          |
+| 1                                                     | Widerstand 4,7kOhm             | (amazon)                          |
+| 1                                                     | Passiver Buzzer 12mm 3V        | (amazon)                          |
+| 1                                                     | ESP32 D1 mini                  | (amazon)                          |
+
+Anschluss Display:
+
+| Kabel         | Nextion Display | Anschlussklemme Platine  |
+| ------------- | --------------- | ------------------------ |
+|     rot       | Strom + | Vcc |
+|   schwarz     | Strom - | GND |
+|    blau       | TX      | D1 |
+|    gelb       | RX      | D2 |
