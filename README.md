@@ -71,7 +71,7 @@ _Unterstützte das Projekt und übersetze den Brautomat32 in eine neue Sprache b
 
 ![Platine](docs/img/Platine20.jpg)
 
-Passend zu den Projekten Brautomat und MQTTDevice ist eine Platine für den Arduino ESP Controller verfügbar. Die Gerber Datei ist im Ordner Tools gespeichert. Die Platine 2.0 kann sowohl mit dem ESP8266, als auch mit dem ESP32 betrieben werden.
+Eine Platine für den Arduino ESP Controller ist verfügbar. Die Platine bietet neben den Schraubklemmblöcken für die GPIOs auch einen separaten Anschluss für das Induktionskochfeld sowie drei Anschlüsse für Temperatursensoren. Die Gerber Datei ist im Ordner Tools gespeichert. Die Platine 2.0 kann sowohl mit dem ESP8266, als auch mit dem ESP32 betrieben werden.
 
 ## 📗 Gehäuse
 
