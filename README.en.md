@@ -1,6 +1,6 @@
 # Brautomat32
 
-[![de](https://img.shields.io/badge/lang-de-green.svg)](https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/README.md)
+[![de](https://img.shields.io/badge/lang-de-green.svg)](https://github.com/InnuendoPi/Brautomat32)
 
 Brautomat is a brewing controller for GGM IDS induction hobs with an ESP32 Wemos D1 mini. Brautomat is used in the brewery by hobby brewers and offers intuitive, easy-to-use controls. During mashing, rest temperatures are reached automatically and the rest times are adhered too. Brautomat also supports the the boiling process of the wort and adding hops. In an ascending infusion mash process, the brautomat can fully automate the mashing process.
 
@@ -10,7 +10,7 @@ _Note: induction hobs from other manufacturers than GGM IDS are not supported._
 
 ## Features
 
-Brautomat is a stand alone brewing device and offers :
+Brautomat is a stand alone brewing device and offers:
 
 * induction hob controller GGM IDS
 * integrated PID-Controller
