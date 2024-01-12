@@ -44,7 +44,7 @@ Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](./)
 
 ## 📰 WebInterface
 
-The Brautomat is web browser controlled. A web browser with support for CSS3, HTML5, Javascript and Server Sent Events (SSE) is required.\\
+The Brautomat is web browser controlled. A web browser with support for CSS3, HTML5, Javascript and Server Sent Events (SSE) is required.\
 
 Compatible browser list [Browser](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent\_events/Using\_server-sent\_events#browser\_compatibility)
 
