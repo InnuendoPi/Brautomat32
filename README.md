@@ -1,4 +1,4 @@
-# Brautomat32
+# Der Brautomat32
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/README.en.md)
 
@@ -61,28 +61,24 @@ Der Brautomat wird über einen WebBrowser gesteuert.
 
 ![Kesselübersicht](docs/img/kettlepage-sm.jpg) ![MaischeSud](docs/img/brewpage-sm.jpg) ![Manuelle Steueung](docs/img/induction-mode-sm.jpg)
 
-_"Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
-
-## ▶️ Installation
-
-Hardware Treiber CP210x USB to UART Bridge Virtual COM Port (VCP) für div. Betriebssysteme: [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
-
-* Download [Firmeware.zip](tools/Firmware.zip)
-* Firmware.zip entpacken
-* Flashen.cmd editieren:
-* "COM3" in Zeile 6 und Zeile 8 "esptool.exe -p COM3" anpassen
-* Eingabeaufforderung (cmd.exe) öffnen und in das Verzeichnis von firmware.zip wechseln
-* Firmware auf ESP32 ladeen mit "flashen.cmd"
-
-Das Script flashen.cmd verwendet [esptool](https://github.com/espressif/esptool) (im ZIP Archiv enthalten).
-
 ## 🗺️ Multilingual
 
 Der Brautomat32 unterstützt (nahezu) beliebig viele Sprachen. Jede Sprache hat eine eigene Sprachdatei. Die Sprachdateien im JSON Format sind im Ordner data/language hinterlegt.
 
 _Unterstützte das Projekt und übersetze den Brautomat32 in eine neue Sprache bzw. korrigiere vorhandene Sprachdateien!_
 
-## Pin-Belegung
+## 📙 Platine 2.0
+
+![Platine](docs/img/Platine20.jpg)
+
+Passend zu den Projekten Brautomat und MQTTDevice ist eine Platine für den Arduino ESP Controller verfügbar. Die Gerber Datei ist im Ordner Tools gespeichert. Die Platine 2.0 kann sowohl mit dem ESP8266, als auch mit dem ESP32 betrieben werden.
+
+## 📗 Gehäuse
+
+![Gehäuse](docs/img/brautomat_01.jpg)
+![Platine](docs/img/brautomat_02.jpg)
+
+## 📘 Pin-Belegung
 
 Der ESP32 D1 bietet ein Pinout passend zum ESP8266 (GPIO D0 bis D8). Die dargestellte Pinbelegung basiert auf dem Modul ESP32 D1 Mini NodeMCU von [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
 
@@ -114,3 +110,7 @@ GPIO Zuordnung:
 | D19        | GPIO013 | ok     | ok     |                                               |
 
 Pins connected to onboard flash and not recommended for GPIO use: CMD (IO11), CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9) and SD3 (IO10)
+
+## 🔉MP3 Dateien
+
+_Legal note: "Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
