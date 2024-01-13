@@ -104,4 +104,4 @@ Nun wird der ESP aufgelegt und mit einem Lötpunkt auf jeder Seite fixiert. Jetz
 
 ![ESP32](/docs/img/Aufbau15.jpg)
 
-Abschließend sollten alle Lötpunkte mit einer Lupe oder dem Smartphone begutachtet werden. Wenn alle Lötpunkte verschlossen sind, ist der Brautomat fertig.
+Abschließend sollten alle Lötpunkte überprüft werden. Wenn alle Lötpunkte verschlossen sind, ist der Brautomat fertig.
