@@ -108,6 +108,7 @@ GPIO Zuordnung:
 | D17        | GPIO014 | ok     | ok     | CS2                                           |
 | D18        | GPIO015 | ok     | ok     |                                               |
 | D19        | GPIO013 | ok     | ok     |                                               |
+||||||
 
 Pins connected to onboard flash and not recommended for GPIO use: CMD (IO11), CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9) and SD3 (IO10)
 
