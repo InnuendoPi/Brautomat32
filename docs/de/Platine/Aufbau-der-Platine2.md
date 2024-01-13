@@ -83,8 +83,24 @@ Die Beinchen am Widerstand werden um 90° gebogen (bspw. um einen Schlitzschraub
 
 Die Beinchen vom Widerstand werden auf der Rückseite leicht nach außen gebogen und verlötet. Mit einem Seitenschneider werden die Beinchen über dem Lötauge abgeschnitten.
 
-## Den ESP einsetzen
+## Den ESP32 aufsockeln
 
-Es wird das Aufsockeln vom ESP8266 empfohlen. Eine neue ESP8266 Variante oder ein defekter ESP kann gesockelt sehr einfach ausgetauscht bzw. ersetzt werden.
+Durch das Aufsockeln lässt sich der ESP Mikrocontroller jederzeit von der Platine abnehmen. So kann wahlweise ein ESP8266 oder ein ESP32 eingesetzt werden. Das Aufsockeln ist auch bei einer Fehlersuche nützlich.
+
+![Aufsockeln](/docs/img/Aufbau14.jpg)
+
+Zum Lieferumfang der ESP Mikrocontroller gehören die Adapter Nummer 1. Zusätzlich wird eine Stiftleisten Nummer 2 im Rastermaß 2.54mm benötigt.
+
+![Teileliste](/docs/img/Aufbau11.jpg)
+
+Adapter und Stiftleisten werden für das Aufsockeln benötigt. Die Stiftleiste wird zunächst in den Adapter eingesteckt, wie in Nummer 3 dargestellt. Anschließend werden Adpapter mit Stiftleiste in die Platine eingesetzt, jeweils zwei Stück links und 2 Stück rechts
+
+_Tipp: die Stiftleiste wird als 40 Pin Leiste geliefert. Die Stiftleiste wird in voller Länge in die Adapter gesteckt. Der Überhang über den Adapter wird am Ende abgeknickt._
+
+![Sockel](/docs/img/Aufbau12.jpg)
+
+Nun wird der ESP aufgelegt und mit einem Lötpunkt auf jeder Seite fixiert. Jetzt wird der Sitz der Sockel kontrolliert. Anschließend werden ale Lötpunkt verlötet.
+
+![ESP32](/docs/img/Aufbau15.jpg)
 
 Abschließend sollten alle Lötpunkte mit einer Lupe oder dem Smartphone begutachtet werden. Wenn alle Lötpunkte verschlossen sind, ist der Brautomat fertig.
