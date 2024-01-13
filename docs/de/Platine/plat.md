@@ -77,7 +77,7 @@ Die Position JST-HX Buchse ist eine Alternative zum 5 Pol Schraubklemmblock. Das
 | 1 alternativ zum Schraubklemmblock 5pol               | JST-HX Buchse 90° RM 2.54      | (voelkner D17526) |
 | 2                                                     | Schraubklemmblock 8pol RM 2.54 | (voelkner S84611) |
 | 2                                                     | Schraubklemmblock 12pol RM 2.54| (voelkner S84031) |
-| 1 (siehe unten)                                       | Stiftleiste RM 2.54            | (voelkner D19990) |
+| 1                                                     | Stiftleiste RM 2.54            | (voelkner D19990) |
 | 1                                                     | Widerstand 4,7kOhm             |                           |
 | 1 optional                                            | Passiver Buzzer 12mm 3V        |                           |
 | 1 ESP32                                               | ESP32 D1 mini                  | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
@@ -86,8 +86,6 @@ Die Position JST-HX Buchse ist eine Alternative zum 5 Pol Schraubklemmblock. Das
 |                                                       |                                |                                   |
 
 _Hinweis: die aufgeführten Links oder Artikelnummern sind rein informativ und nicht mit Affiliate/Marketing Programmen verknüpft._
-
-Die Stiftleiste Rastermaß 2.54mm gehört bei einigen Anbietern bei. Die Stiftleiste wird zum Aufsockeln benötigt.
 
 Das Display Nextion 3.5 Zoll ist als Basic, Discovery oder Enhanced verfügbar. Für den Brautomat kann das aktuell günstigste Modell gewählt werden. Displays mit 2.8 Zoll oder kleiner sowie 4 Zoll und größer haben eine andere Pixel-Auflösung und werden vom Brautomat nicht unterstützt!
 
