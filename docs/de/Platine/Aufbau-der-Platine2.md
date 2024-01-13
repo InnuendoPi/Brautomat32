@@ -33,25 +33,25 @@ Zwei Hinweise zum Einsetzen der Schraubklemmblöcke:
 2. Die Schraubklemmblöcke werden mit einem Lötpunkt fixiert. Dann wird der korrekten Sitz kontrolliert. Anschließend werden alle Lötpunkte verlötet.
 
 Im Folgenden werden nun Step by Step die Schraubklemmblöcke eingesetzt und verlötet.\
-Schritt Nummer 1 sind die zwei 12 Pol Schraubklemmblöcke. An den 12er Schraubklemmblöcken liegen die GPIOs D9 bis D19 vom ESP32 an.
+Im Schritt Nummer 1 werden die zwei 12 Pol Schraubklemmblöcke eingesetzt. An den 12er Schraubklemmblöcken liegen die GPIOs D9 bis D19 vom ESP32 an.
 
 ![Schraubklemmblock](/docs/img/Aufbau2.jpg)
 
 Die Platine nun umdrehen und jeden Schraubklemmblock mit einem Lötpunkt fixieren. Jetzt den korrekten Sitz der Schraubklemmblöcke kontrollieren. Alle Pins müssen korrekt durch die Lötpunkte durchgesteckt sein. Anschließend werden alle Pins verlötet.
 
-Schritt Nummer 2 sind die zwei 8 Pol Schraubklemmblöcke. An den 8er Schraubklemmblöcken liegen die GPIOs D0 bis D8 vom ESP32 und ESP8266 an.
+In Schritt Nummer 2 werden die zwei 8 Pol Schraubklemmblöcke eingesetzt. An den 8er Schraubklemmblöcken liegen die GPIOs D0 bis D8 vom ESP32 und ESP8266 an.
 
 ![Schraubklemmblöcke](/docs/img/Aufbau3.jpg)
 
-Die Platine schaut in diesem Status so aus:
+Die Platine schaut in diesem Status nun so aus:
 
 ![Schraubklemmblöcke](/docs/img/Aufbau4.jpg)
 
-In Schritt Nummer 3 werden die drei 3er Schraubklemmblöcke eingesetzt und verlötet. 
+In Schritt Nummer 3 werden die drei 3er Schraubklemmblöcke eingesetzt und verlötet.
 
 ![Schraubklemmblock für Sensoren](/docs/img/Aufbau5.jpg)
 
-An diese drei Anschlüssen werden Temperatursensoren DS18B20 angeschlossen. Es gibt keine Reihenfolge oder Rangordnung.
+An die drei Anschlüssen werden Temperatursensoren DS18B20 angeschlossen. Es gibt keine Reihenfolge oder Rangordnung für diese drei Anschlüsse. Werden nur analoge PT100x Sensoren eingesetzt, können die drei Schraubklemmblöcke weggelassen werden.
 
 In Schritt Nummer 4 wird entweder die JST-HX Buchse für das Originalkabel oder ein 5er Schraubklemmblock für das Ersatzkabel eingesetzt und verlötet: (siehe Überlegungen vor dem Aufbau).
 
@@ -64,13 +64,13 @@ Der Piezo Buzzer hat einen Plus- und einen Minuspol
 
 ![Buzzer Plus Minus](/docs/img/Aufbau8.jpg)
 
-In Schritt Nummer 5 wird der Pizo Buzzer eingesetzt. Der Pluspol wird in die Markierung D8 und dementsprechend der Minuspol in die Markierung GND eingesetzt.
+Der Pluspol wird in die Markierung D8 und dementsprechend der Minuspol in die Markierung GND eingesetzt.
 
 ![Buzzer](/docs/img/Aufbau7.jpg)
 
 ## Der 4.7kOhm Widerstand
 
-Der Widerstand 4.7kOhm ist für die Temperatursensoren Dallas DS18B20 zwingend erforderlich.
+Der Widerstand 4.7kOhm ist für die Temperatursensoren Dallas DS18B20 zwingend erforderlich. Werden nur analoge PT100x Sensoren eingesetzt, kann der Widerstand weggelassen werden.
 
 ![Widerstand](/docs/img/Aufbau9.jpg)
 
