@@ -17,13 +17,13 @@ Die Voreinstellung für das Induktionskochfeld lautet:
 
 Auf der Platinenabbildung sind die 5 Anschlüsse für das Induktionskochfeld mit "GGM" markiert. Das GGM Anschlusskabel vom Bedienfeld hat ein blaues Kabel, während das Ersatzkabel ein grünes Kabel hat.
 
-Der Brautomat kann inklusive Display mit Spannungsversorgung von der GGM IDS betrieben werden. Hierzu müssen lediglich das rote und das schwarze Kabel in die markierten Schraubklemmen eingesetzt werden. Eine weitere zus. Spannungsversorgung darf in dem Fall nicht angeschlossen werden.
+Der Brautomat kann inklusive Display mit der Spannungsversorgung von der GGM IDS betrieben werden. Hierzu müssen lediglich das rote und das schwarze Kabel in die markierten Schraubklemmen eingesetzt werden. Eine weitere zus. Spannungsversorgung darf in dem Fall nicht an den ESP Mikrocontroller angeschlossen werden.
 
 Alternativ kann der Brautomat mit einem 5V DC Netzteil betrieben werden. In diesem Fall wird das rote Kabel von der GGM IDS nicht angeschlossen.
 
 ## Temperatursensoren Dallas DS18B20 anschließen
 
-Der Brautomat unterstützt bis zu drei Temperatursensoren DS18B20. Der Anschluss ist auf der Platinenabbildung mit DS18B20-1 bis DS18B20-3 markiert. Die Farben der Sensorkabel ist unterschiedlich. Häufig gibt es eine Beschriftung. Bei den sehr günstigen Sensoren ohne Beschriftung oder Beschreibung ist die Farbgebung schwarz - rot - gelb.
+Der Brautomat unterstützt bis zu drei Temperatursensoren DS18B20. Der Anschluss ist auf der Platinenabbildung mit DS18B20-1 bis DS18B20-3 markiert. Die Farben der Sensorkabel sind unterschiedlich. Bei sehr günstigen Sensoren ohne Beschriftung oder Beschreibung ist die Farbgebung meist schwarz - rot - gelb.
 
 | Typ         | Farbe | Anschluss  |
 | ------------- | --------------- | ------------------------ |
