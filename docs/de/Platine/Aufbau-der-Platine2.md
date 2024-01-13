@@ -7,7 +7,7 @@ Die Stückliste der Platine:
 ![Stückliste](/docs/img/Aufbau1.jpg)
 
 Nummer 1: Widerstand 4.7kOhm\
-Nummer 2: JST-HX Buchse (weiß) und 5 Pol Schraubklemmblock. Siehe "Überlegungen vor dem Aufbau"\
+Nummer 2: JST-HX Buchse (weiß) und 5 Pol Schraubklemmblock\
 Nummer 3: passiver Piezo Buzzer. Siehe "Der Piezo Buzzer"\
 Nummer 4: Schraubklemmblöcke mit dem Rastermaß 2.54mm
 
@@ -67,7 +67,7 @@ In Schritt Nummer 5 wird der Pizo Buzzer eingesetzt. Der Pluspol wird in die Mar
 
 ![Schraubklemmblock](/docs/img/Aufbau7.jpg)
 
-## De4 4.7kOhm Widerstand
+## Der 4.7kOhm Widerstand
 
 Der Widerstand 4.7kOhm ist für die Temperatursensoren Dallas DS18B20 zwingend erforderlich.
 
