@@ -22,7 +22,7 @@
   * [Funktionen der Buttons](Parameter/funktionen-der-buttons.md)
 * [Die Platine](Platine/plat.md)
   * [Aufbau der Platine](Platine/Aufbau-der-Platine.md)
-  * [Aufbau der Platine II](Platine/Aufbau-der-Platine2.md)
+  * [Aufbau der neuen Platine ESP32](Platine/Aufbau-der-Platine2.md)
   * [Anschlüsse](Platine/Anschluesse.md)
 * [Display](Display/dis.md)
 * [Hardware](Hardware/hw.md)
