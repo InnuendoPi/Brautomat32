@@ -23,6 +23,7 @@
 * [Die Platine](Platine/plat.md)
   * [Aufbau der Platine](Platine/Aufbau-der-Platine.md)
   * [Aufbau der Platine II](Platine/Aufbau-der-Platine2.md)
+  * [Anschlüsse](Platine/Anschluesse.md)
 * [Display](Display/dis.md)
 * [Hardware](Hardware/hw.md)
 * [KleinerBrauhelfer2](KBH2/kleinerbrauhelfer2.md)
