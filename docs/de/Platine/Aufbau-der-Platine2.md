@@ -6,13 +6,18 @@ Die Stückliste der Platine:
 
 ![Stückliste](/docs/img/Aufbau1.jpg)
 
+Nummer 1: Widerstand 4.7kOhm\
+Nummer 2: JST-HX Buchse (weiß) und 5 Pol Schraubklemmblock. Siehe "Überlegungen vor dem Aufbau"\
+Nummer 3: passiver Piezo Buzzer. Siehe "Der Piezo Buzzer"\
+Nummer 4: Schraubklemmblöcke mit dem Rastermaß 2.54mm
+
 ## Überlegungen vor dem Aufbau
 
 Die Platine kann an einer Stelle, abhängig von der späteren Nutzung, unterschiedlich bestückt werden:
 
 1.1 der direkten Anschluss vom Originalkabel GGM IDS
 
-In diesem Fall wird die weiße JST-HX Buchse benötigt (im Bild Nummer 1). Der 5er Schraubklemmblock auf dem Bild direkt neben der JST-HX Buchse wird dann nicht verwendet.
+In diesem Fall wird die weiße JST-HX Buchse benötigt (im Bild Nummer 2). Der 5er Schraubklemmblock auf dem Bild direkt neben der JST-HX Buchse wird dann nicht verwendet.
 
 1.2 der Anschluss mit dem Ersatzkabel
 
@@ -45,7 +50,9 @@ In Schritt Nummer 3 werden die drei 3er Schraubklemmblöcke eingesetzt und verl�
 
 ![Schraubklemmblock](/docs/img/Aufbau5.jpg)
 
-In Schritt Nummer 4 wird entweder die JST-HX Buchse für das Originalkabel oder ein 5er Schraubklemmblock für das Ersatzkabel eingesetzt und verlötet:
+An diese drei Anschlüssen werden Temperatursensoren DS18B20 angeschlossen. Es gibt keine Reihenfolge oder Rangordnung.
+
+In Schritt Nummer 4 wird entweder die JST-HX Buchse für das Originalkabel oder ein 5er Schraubklemmblock für das Ersatzkabel eingesetzt und verlötet: (siehe Überlegungen vor dem Aufbau)
 
 ![Schraubklemmblock](/docs/img/Aufbau6.jpg)
 
