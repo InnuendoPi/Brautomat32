@@ -50,7 +50,7 @@ Als Power Schalter eignet sich u.a. ein [LED Druckschalter](https://www.amazon.d
 
 ## Gehäuse Verschraubung
 
-Das Gehäuse hat für eine Verschraubung Pads für die Aufnahme von [Gewindeeinsätzen](https://www.amazon.de/dp/B0BZVGQ91H/?coliid=I1EM9CS796PWGZ&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_64ER38VQR1H02DJ4WZ4A). Die Bohrungen in den Pads haben einen Durchmesser von 4mm. Die Gewindeeinsätze werden mit einem [Lötkolben](https://www.amazon.de/gp/product/B0CDBSGSXY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1) in das Gehäuse eingeschmolzen. Verlinkt sind Gewindeeinsätze M3.
+Das Gehäuse hat für eine Verschraubung mehrere Pads für die Aufnahme von [Gewindeeinsätzen](https://www.amazon.de/dp/B0BZVGQ91H/?coliid=I1EM9CS796PWGZ&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_64ER38VQR1H02DJ4WZ4A). Die Bohrungen in den Pads haben einen Durchmesser von 4.6mm. Die Gewindeeinsätze werden mit einem [Lötkolben](https://www.amazon.de/gp/product/B0CDBSGSXY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1) in die Pads-Bohrung eingeschmolzen. Verlinkt sind Gewindeeinsätze M3.
 
 ![Gewindeeinsätze](/docs/img/Gewindeeinsätze.jpg)
 
@@ -64,6 +64,8 @@ In der Abbildung sind 2 Platinenträger dargestellt:
 
 * die untere kleinere Trägerplatte ist für Brautomaten mit DS18B20 Sensoren
 * die obere größere Trägerplatte ist für Brautomaten mit PT100x Sensoren (zus. Bohrungen für die Aufnahme von 2 MAX31865 Platinen)
+
+Die Trägerplatte ermöglicht eine vollständige Montage im Gehäuse. Der Gehäusedeckel werden keine Brautomat-Bauteile oder Kabel befestigt.
 
 ## Halterung
 
