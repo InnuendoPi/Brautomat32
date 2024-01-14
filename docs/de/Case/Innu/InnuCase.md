@@ -7,10 +7,17 @@ Das InnuCase ist in zwei Größen verfügbar.
 * InnuCase #1
     > ein größeres Gehäuse mit Display, zwei PWM Modulen und Power Schalter\
     > Power Schalter für eine externe Stromversorgung ESP Mikrocontroller\
+    > 1x M12 Front LED Druckschalter rastend
+    > 2x M12 Front für Aktoren\
+    > 2x M12 Unterseite für Aktoren\
+    > 3x M12 Unterseite für Sensoren\
     > Gehäusemaße BxH 26x9cm\
     > Dateinamen: InnuCase-1\
     ![InnuCase #1](/docs/img/Case-1_Display_2PWM_Power.jpg)\
     > gleiches Gehäuse mit Display und zwei PWM Modulen ohne Power Schalter\
+    > 2x M12 Front für Aktoren\
+    > 2x M12 Unterseite für Aktoren\
+    > 3x M12 Unterseite für Sensoren\
     > Stromversorgung ESP Mikrocontroller über GGM IDS\
     > Gehäusemaße BxH 26x9cm\
     > Dateinamen: InnuCase-1\
@@ -18,11 +25,15 @@ Das InnuCase ist in zwei Größen verfügbar.
 
 * InnuCase #2
     > ein kleineres Gehäuse mit Display\
+    > 1x M12 Unterseite für Sensor\
     > Gehäusemaße BxH 20x9cm\
     > Dateinamen: InnuCase-2\
     ![InnuCase #1](/docs/img/Case-2_Display.jpg)
 
 Das InnuCase #2 ist für einen Brautomaten mit Display und einem Sensor vorgesehen. Wenn kein Display verwendet wird, kann die Display Öffnung mit einem Blinddeckel geschlossen werden.
+
+Als Steckverbindung eignen sich für M12 Bohrungen u.a. [GX12 Aviation Stecker](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_6Z58FR08HC6VACCZPY83). Die GX12 Aviation Sets sind als 2-Pin (Aktoren), 3-Pin (DS18B20) und 4-Pin (PT100x) verfügbar.
+Als Power Schalter eignet sich u.a. ein [LED Druckschalter](https://www.amazon.de/dp/B09WXPJQN3?psc=1&ref=ppx_yo2ov_dt_b_product_details) rastend.
 
 ## Gehäusedeckel
 
