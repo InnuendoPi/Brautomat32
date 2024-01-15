@@ -9,9 +9,9 @@ Das Gehäuse ist unterteilt in die zwei Baugruppen Gehäuseunterteil und Gehäus
 * nur Display
 * ohne Auschnitte (kein Display, kein PWM, kein Hauptschalter)
 
-![FreggaCase](/docs/img/Fregga_Deckel_voll.jpg)
-![FreggaCase](/docs/img/FreggaCase_Deckel_Display.jpg)
-![FreggaCase](/docs/img/FreggaCase_Deckel_ohne.jpg)
+![Deckel mit Display und PWM](/docs/img/Fregga_Deckel_voll.jpg)
+![Deckel mit Display](/docs/img/FreggaCase_Deckel_Display.jpg)
+![geschlossener Deckel](/docs/img/FreggaCase_Deckel_ohne.jpg)
 
 ## Optionen für das Gehäuseunterteil
 
@@ -20,14 +20,15 @@ Das Gehäuse ist unterteilt in die zwei Baugruppen Gehäuseunterteil und Gehäus
 * mit 2 Anschlüssen
 * ohne Anschlüsse
 
-![FreggaCase](/docs/img/FreggaCase_Unterteil_voll.jpg)
-![FreggaCase](/docs/img/FreggaCase_Unterteil_drei.jpg)\
-![FreggaCase](/docs/img/FreggaCase_Unterteil_zwei.jpg)
-![FreggaCase](/docs/img/FreggaCase_Unterteil_ohne.jpg)
+![Unterteil mit 4 Anschlüssen](/docs/img/FreggaCase_Unterteil_voll.jpg)
+![Unterteil mit  Anschlüssen](/docs/img/FreggaCase_Unterteil_drei.jpg)\
+
+![Unterteil mit 2 Anschlüssen](/docs/img/FreggaCase_Unterteil_zwei.jpg)
+![Unterteil ohne Anschlüssen](/docs/img/FreggaCase_Unterteil_ohne.jpg)
 
 ## Wandhalterung für das FreggaCase
 
-![FreggaCase](/docs/img/FreggaCase_Wandhalterung.jpg)
+![Wandhalterung](/docs/img/FreggaCase_Wandhalterung.jpg)
 
 ## Verwendete Materialien für den Gehäuseaufbau
 
