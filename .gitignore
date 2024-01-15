@@ -73,6 +73,7 @@ tools/Brautomat32.ino.bootloader.bin
 tools/esptool.exe
 tools/Flashen.cmd
 tools/buildFirm.cmd
+tools/FreggaCase/*.stl
 web/
 FSBrowser/
 *.ino
