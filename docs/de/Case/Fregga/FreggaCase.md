@@ -20,11 +20,9 @@ Das Gehäuse ist unterteilt in die zwei Baugruppen Gehäuseunterteil und Gehäus
 * mit 2 Anschlüssen
 * ohne Anschlüsse
 
-![Unterteil mit 4 Anschlüssen](/docs/img/FreggaCase_Unterteil_voll.jpg)
-![Unterteil mit  Anschlüssen](/docs/img/FreggaCase_Unterteil_drei.jpg)\
+![Unterteil mit 4 Anschlüssen](/docs/img/FreggaCase_Unterteil_voll.jpg) ![Unterteil mit  Anschlüssen](/docs/img/FreggaCase_Unterteil_drei.jpg)
 
-![Unterteil mit 2 Anschlüssen](/docs/img/FreggaCase_Unterteil_zwei.jpg)
-![Unterteil ohne Anschlüssen](/docs/img/FreggaCase_Unterteil_ohne.jpg)
+![Unterteil mit 2 Anschlüssen](/docs/img/FreggaCase_Unterteil_zwei.jpg) ![Unterteil ohne Anschlüssen](/docs/img/FreggaCase_Unterteil_ohne.jpg)
 
 ## Wandhalterung für das FreggaCase
 
