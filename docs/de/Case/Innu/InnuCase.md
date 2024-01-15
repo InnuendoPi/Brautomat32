@@ -58,7 +58,7 @@ Das Gehäuse hat für eine Verschraubung mehrere Pads für die Aufnahme von [Gew
 
 Die Platine wird auf eine Trägerplatte aufgeschraubt. Die Trägerplatte wird mit [Distanzhülsen](https://www.reichelt.de/distanzhuelsen-metall-6-kant-m3-15mm-da-15mm-p7018.html?CCOUNTRY=445&LANGUAGE=de&trstct=pos_0&nbc=1&&r=1) hinter das Display montiert. Verlinkt sind Distanzhülsen 6-Kant M3 mit 15mm Länge.
 
-![Platinenträger](/docs/img/Platinenträger.jpg)
+![Platinenträger](/docs/img/Platinenträger-1.jpg) ![Platinenträger MAX31865](/docs/img/Platinenträger-2.jpg)
 
 In der Abbildung sind 2 Platinenträger dargestellt:
 
