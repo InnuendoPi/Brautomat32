@@ -78,3 +78,8 @@ Zur Befestigung des Gehäuse sind einfache Halter verfügbar. Die Halterung wird
 Der Blinddeckel schließt die Displayöffnung im Gehäuse, wenn kein Display eingesetzt wird.
 
 ![Blinddeckel](/docs/img/Blinddeckel.jpg)
+
+## Bilder
+
+![InnuCase](/docs/img/brautomat_01.jpg)
+![InnuCase](/docs/img/brautomat_02.jpg)
