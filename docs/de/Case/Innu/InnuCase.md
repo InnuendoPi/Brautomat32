@@ -2,7 +2,7 @@
 
 ## Gehäuseform
 
-Das InnuCase ist in zwei Größen verfügbar.
+Das InnuCase ist in zwei Größen verfügbar. Die Druckdateien sind im Ordner tolls/InnuCase hinterlegt.
 
 * InnuCase #1
     > ein größeres Gehäuse mit Display, zwei PWM Modulen und Power Schalter\

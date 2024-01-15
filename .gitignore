@@ -74,6 +74,7 @@ tools/esptool.exe
 tools/Flashen.cmd
 tools/buildFirm.cmd
 tools/FreggaCase/*.stl
+tools/InnuCase/*.stl
 web/
 FSBrowser/
 *.ino
