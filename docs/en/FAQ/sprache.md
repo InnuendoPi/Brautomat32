@@ -1,14 +1,14 @@
-# Create a new language file
+# Erstelle eine neue Sprachdatei
 
-Make a copy of the language file data/language/de.json and rename the file with two characters to a new language file:
+Erstelle eine Kopie der Sprachdatei data/language/de.json und benenne die Datei mit zwei Zeichen in eine neue Sprachdatei:
 
-spanish: es.json\
-french: fr.json\
-danish: dk.json\
-dutch: nl.json\
+Spanisch: es.json\
+Französisch: fr.json\
+Dänisch: dk.json\
+Niederländisch: nl.json\
 etc.
 
-Translate all words starting from the colon on each line:
+Übersetze in jeder Zeile alle Wörter ab dem Doppelpunkt:
 
 ```bash
  {
@@ -18,18 +18,18 @@ Translate all words starting from the colon on each line:
  }
 ```
 
-Open Explorer in the Brautomat's web interface. Copy the new language file to the /language folder on your Brautomat. Finally, the new language file must be made known to the Brautomat: edit the file /lang.js
+Öffne im Web Interface vom Brautomat den Explorer. Kopiere die neue Sprachdatei auf Deinen Brautomat in den Ordner /language. Abschließend muss die neue Sprachdatei dem Brautomat bekannt gemacht werden: editiere die Datei /lang.js
 
 ```bash
 const supportedLocales = ["de", "en"];  // language files 
 ```
 
-For example, if you added a Spanish language file es.json, then edit the /lang.js file as follows:
+Wenn Du bspw. eine spanische Sprachdatei es.json hinzugefügt hast, dann editiere die Datei /lang.js wie folgt:
 
 ```bash
 const supportedLocales = ["de", "en", "es"];  // language files 
 ```
 
-Use Ctrl-S to save the file and restart the Brautomat. Now you can select the new language in the web interface.
+Speichere die Datei mit der Tastenkombination Strg-S und starte den Brautomat neu. Nun kannst Du die neue Sprache im WebInterface auswählen.
 
-_Share a new language file with other users! Send me your language file or your correction._
+_Teile eine neue Sprachdatei mit anderen Usern! Sende mir Deine Sprachdatei oder Deine Korrektur._
