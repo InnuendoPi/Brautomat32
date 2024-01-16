@@ -1,6 +1,6 @@
 # Parameter GGM IDS
 
-## Temoeratursteuerung
+## Temperatursteuerung
 
 ### Max. Leistung IDS
 
