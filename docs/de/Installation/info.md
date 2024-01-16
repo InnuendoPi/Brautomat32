@@ -58,7 +58,7 @@ Mit macOS unterteilt sich das Flashen der Firmware in zwei Schritte. Im ersten S
 ![macOS](/docs/img/flashen_macos.png)
 
 Anschließend muss der Brautomat mit dem WLAN verbunden werden. Sobald der Brautomat mit dem WLAN verbunden ist, muss das Dateisystem aufgespielt werden.\
-Im Browser öffnen: <http://brautomat/update>
+Im Browser öffnen: <http://brautomat.local/update>
 
 Nach einem Klick auf den Button "Filesystem" wird die Datei brautomat.mklittlefs.bin ausgewählt und mit Klick auf Update Filesystem aufgespielt.
 
@@ -72,7 +72,7 @@ Nach dem Flashen der Firmware startet der Brautomat im AccessPoint Mode. Ein off
 
 ![IDS](/docs/img/wlan2.jpg)
 
-Hier muss das WLAN (SSID) und das Password konfiguriert werden. Mit Speichern startet der Brautomat neu und verbindet sich mit dem WLAN. Das Web Interface vom Brautomat ist über <http://brautomat> erreichbar.
+Hier muss das WLAN (SSID) und das Password konfiguriert werden. Mit Speichern startet der Brautomat neu und verbindet sich mit dem WLAN. Das Web Interface vom Brautomat ist über <http://brautomat.local> erreichbar.
 
 ## Updates
 

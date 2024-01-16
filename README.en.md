@@ -6,6 +6,8 @@ Brautomat is a brewing controller for GGM IDS induction hobs with an ESP32 Wemos
 
 _Note: induction hobs from other manufacturers than GGM IDS are not supported._
 
+_Note: please use german manual with browser translation._
+
 ***
 
 ## Features

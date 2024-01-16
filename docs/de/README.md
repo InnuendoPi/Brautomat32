@@ -26,36 +26,8 @@ Diese Anleitung unterteilt sich in drei Themenbereich:
   * der kleineBrauhelfer2
   * das MQTTDevice
 
+Der Themenbereich Software wird mit einer Zusammenfassung _Parameter im Überblick_ abgeschlossen. Zu vielen Parametern werden Details und Informationen gegeben, um die Konfiguration und Anwendung zu vereinfachen.
+
 Diese Anleitung hat keine Reihenfolge und muss nicht von oben nach unten durchgelesen werden.
-
-## Funktionsübersicht
-
-* Steuerung der Induktionskochfelder GGM
-  * GGM IDS1
-  * GGM IDS2
-* integrierter PID-Controller
-* PID-AutoTune
-* Temperatursensoren
-  * Dallas DS18B20
-  * PT100 und PT1000 (MAX31865)
-* Maischeplan
-  * Automatisches Anfahren und halten der Rasttemperaturen
-  * Würzekochen
-  * Alarmierung für Hopfengaben
-* Verwaltung von Maischeplänen
-* Steuerung für einen Nachguss Kessel (HLT)
-* Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
-* PWM für Aktoren
-* Audio Alarme
-  * MP3 Alarme
-  * Akkustische Signale (Piezo Buzzer)
-* Toasts Nachrichten
-* Temperaturverlauf im Maischeprozess als Grafik (line chart)
-* Rezept Import
-  * kleinen Brauhelfer2
-  * Maische Malz und Mehr
-  * BrewFather
-* Rezept Export
-* Unterstützung für 3,5" HMI Touchdisplay Nextion
 
 _"Legal note: Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._

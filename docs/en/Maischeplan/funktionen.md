@@ -2,6 +2,8 @@
 
 Die folgende Beschreibung hat nicht das zugrunde liegende Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat. Deshalb zeigen die Maischeplan Bilder in dieser Erläuterung verschiedene Maischepläne. Der Maischeplan Ablauf ist jedoch bei allen identisch: der Maischeplan hat eine Tabellenform. Diese Tabelle wird beim Maischen von oben nach unten abgearbeitet. Im ersten Beispiel ist die Zeile "Einmaischen 50°C" der erste Maische-Schritt und "WHP Hallertauer Tradition" der letzte Maische-Schritt. Eine sehr wichtige Funktion im Maischeplan hat die Eigenschaft _autonext_.
 
+## Grundfunktionen
+
 ![Maischeplan](/docs/img/brautomat.jpg)
 
 Zur Orientierung wird zunächst der Aufbau der Tabellenzeilen beschrieben. Jede Zeile der Tabelle hat diese Spalten:
@@ -28,10 +30,12 @@ Zusammen mit den Steuerelementen Power, Play, Pause, Forward und Backward ergibt
 
 Zusätze wie im Bild dargestellt Hefenahrung werden mit Zeitpunkt der Gabe und Menge in den Maischeplan importiert.
 
+## Funktion und Verwendung von autonext
+
 ![Maischeplan](/docs/img/Maischeplan-autonext.jpg)
 
 Der erste Schritt im Maischeplan mit dem Namen _Einmaischen 50°C_ hat eine Rastdauer von 10 Minuten und ein deaktiviertes _autonext_. Ein deaktiviertes _autonext_ hat folgende Bedeutung: im Bild dargestellt ist die Situation, wenn der Rasttimer die 10 Minuten erreicht hat. Der Play Button wechselt automatisch auf rot. Unten rechts erscheint eine Toast Nachricht "Klicke play Button". Das Induktionskochfeld wird ausgeschaltet. Der Brauprozess wartet auf einen Klick auf den Button Play.
-Der zweite Schritt im Maischeplan mit dem Namen _Maltoserast 63°C_ hat als Rast-Temperatur 63°C und eine Rast-Dauer von 25 Minuten. Der Brautmoat steuert in diesem Schritt das Induktionskochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Rast-Timer ist eine Stoppuhr. Wenn diese Stoppuhr die Rast-Dauer von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft _autonext_. Wenn _autonext_ aktiviert ist, springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Bespiel zum Schritt _Zwischenrast_. Die Zwischenrast hat eine Rasttemperatur von 67°C. Automatisch erhöht der Brautomat die Leistung vom Induktionskochfeld, um die Rast-Temperatur zu erreichen. Der Masicheprozess verläuft bei aktiviertem autonext automatisch.
+Der zweite Schritt im Maischeplan mit dem Namen _Maltoserast 63°C_ hat als Rast-Temperatur 63°C und eine Rast-Dauer von 25 Minuten. Der Brautomat steuert in diesem Schritt das Induktionskochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Rast-Timer ist eine Stoppuhr. Wenn diese Stoppuhr die Rast-Dauer von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft _autonext_. Wenn _autonext_ aktiviert ist, springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Bespiel zum Schritt _Zwischenrast_. Die Zwischenrast hat eine Rasttemperatur von 67°C. Automatisch erhöht der Brautomat die Leistung vom Induktionskochfeld, um die Rast-Temperatur zu erreichen. Der Maischeprozess verläuft bei aktiviertem autonext automatisch.
 
 ![Maischeplan](/docs/img/Maischeplan-autonext2.jpg)
 
@@ -50,18 +54,25 @@ Wenn die Funktion _autonext_ aktiviert ist, überprüft der Brautomat forlaufend
 
 _Tipp: mit "Temperatur delta zum Ziel" wird ein Temperaturbereich um die Rast-Temperatur angegeben, innerhalb dem der Timer einer Rast gestartet wird._
 
-**Sonderfunktionen**\
-Eine Sonderfunktion hat die Rast-Temperatur 0°C bei aktivertem autonext: wenn die Rast-Temperatur auf 0°C gesetzt und autonext aktiviert ist, wird der nachfolgende Maischeschritt ohne Temperaturüberprüfung automatisch gestartet. Diese Sonderfunktion kann bspw. nach dem Kochen der Würze nützlich sein, wenn einer Timer für die Nachisomerisierung gestartet und die GGM IDS ausgeschaltet werden soll. Wäre die Rasttemperatur vom Schritt Nachisomerisierung nicht auf 0°C sondern bspw. auf 95°C eingestellt, würde der Rasttimer für den Schritt Nachisomerisierung erst starten, wenn die Temperatur im MaischeSud Kessel von Kochen 100°C auf 95°C abgekühlt ist.
+## Sonderfunktion 0°C Rast bei aktiviertem autonext
+
+Eine Sonderfunktion hat die Rast-Temperatur 0°C bei aktivertem autonext: wenn die Rast-Temperatur auf 0°C gesetzt und autonext aktiviert ist, wird der nachfolgende Maischeschritt ohne Temperaturüberprüfung automatisch gestartet. Im folgenden Bild ist die Situation unmittelbar nach dem Würzekochen dargestellt. Die Würze hat zu diesem Zeitpunkt eine Temperatur von ca. 100°C. Das Induktionskochfeld soll abgeschaltet werden und der Timer für die Nachisomerisierung soll direkt gestartet werden:
+
+![Sonderfunktion 0°C](/docs/img/Maischeplan-Sonderfunktion.jpg)
+
+Die Sonderfunktion "0°C Rasttemperatur mit aktiviertem autonext" erfüllt genau dieses Anforderung: Ist- und Soll-Temperatur werden ignoriert und der Rast-Timer wird gestartet. Wäre die Rasttemperatur vom Schritt Nachisomerisierung nicht auf 0°C sondern bspw. auf 95°C eingestellt, würde der Rasttimer für den Schritt Nachisomerisierung erst starten, wenn die Temperatur im MaischeSud Kessel von Kochen 100°C auf 95°C abgekühlt ist. Während der Nachisomerisierung sinkt die Temperatur in der Würze. Ggfs. wird auch aktiv gekühlt. Die Sonderfunktion "0°C Rasttemperatur mit aktiviertem autonext" bewirkt, dass das Induktionskochfeld ausgeschaltet bleibt.
+
+## Sonderfunktion Aktoren Schalten
 
 Eine Zweite Sonderfunktion ist das Ein- und Ausschalten von Aktoren. Die Syntax für den Maischeschritt lautet Aktorname Doppelpunkt Aktorstatus. Dabei kann der Aktorstatus entweder ON oder OFF sein. Die Rasttemperatur und die Rastdauer müssen für diese Sonderfunktion auf 0 gesetzt sein. Der Nachguss hat als festen Aktornamen Nachguss.
 
-![Maischeplan](/docs/img/Maischeplan-Aktoren.jpg)
+![Sonderfunktion Aktoren schalten](/docs/img/Maischeplan-Aktoren.jpg)
 
 Der Maischeplan im Bild schaltet an drei Stellen Aktoren. Direkt zu Beginn wird das Rührwerk eingeschaltet: Ruehrwerk:ON
-Kurz vor dem Ende des Maischeplans wird das Rührwerk mit dem Befehl Ruehrwerk:OFF ausgeschaltet und der Nachguss mit Nachuss:ON eingeschaltet. Aktornamen sollen keine Sonderzeichen, Umlaute oder Leerzeichen enthalten. Aktornamen müssen eindeutig sein. Die Firmware ersetzt bei der Neuanlage von Aktoren automatisch Umlaute.
+Kurz vor dem Ende des Maischeplans wird das Rührwerk mit dem Befehl Ruehrwerk:OFF ausgeschaltet und der Nachguss mit Nachuss:ON eingeschaltet. Aktornamen sollen keine Sonderzeichen, Umlaute oder Leerzeichen enthalten. Aktornamen müssen eindeutig sein. Die Firmware ersetzt bei der Neuanlage von Aktoren automatisch Umlaute und Leerzeichen.
 
 Durch die Tabellenform ist das Grundprinzip vom Brautomat die aufsteigende Infusion. Das schließt Varianten wie bspw. das Earlsche Kochmaischverfahren ein. Mit Hilfe der Eigenschaft "autonext" können auch andere Brauverfahren umgesetzt werden. Es gilt aber zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "halber Automatik" unterstützen kann. Ein auslösender Trigger für eine Aktion wie bspw. das Ziehen von Teilmaischen, muss durch den Anwender manuell erfolgen. Eine Rast mit einer Minute Dauer und deaktiviertem autonext kann ein Auslöser sein.
 
 _Tipp: Hopfengaben und Zusätze - Im Bild ist ein Maischeplan dargestellt, der aus dem Programm kleinerBrauhelfer2 importiert wurde. Zusätze- und Hopfennamen, Mengen, Alphasäure und Zeitpunkt der Gaben werden aus dem kbh2 Export übernommen. Auch bei Zusätze und Hopfengaben erscheinen Toast Nachrichten mit Klang. Wenn ein Piezo Buzzer aktiviert wurde, ertönt mit jedem Schritt ein Signalton._
 
-_Tipp: Zubrühen - Im Bild Maischeplan ist ein Schritt Zubrühen dargestellt. Auch dieser Schritt ist inklusive der Angaben zur Menge und Temperatur aus dem kleinenBrauhelfer2 importiert worden._
+_Tipp: Zubrühen - Im Bild Maischeplan ist ein Schritt Zubrühen dargestellt. Auch dieser Schritt wurde inklusive der Angaben zur Menge und Temperatur aus dem kleinenBrauhelfer2 importiert._
