@@ -8,8 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.34
+Version 1.34a
 
+* Fix:          Übersetzung
+* Fix:          Links zu gitbook Parameter
 * Geändert:     Quellcode ESP8266 und ESP32 zusammengefügt.
 * Geändert:     Neues Format Maische Malz und mehr Rezeptimport
 
