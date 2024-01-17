@@ -4,7 +4,7 @@ Das InnuCase ist in zwei Größen verfügbar. Die Druckdateien sind im Ordner to
 
 ## Gehäuseform
 
-* InnuCase #1 
+* InnuCase #1
     > ein größeres Gehäuse mit Display, zwei PWM Modulen und Power Schalter\
     > Power Schalter für eine externe Stromversorgung ESP Mikrocontroller\
     > 1x M12 Front LED Druckschalter rastend
