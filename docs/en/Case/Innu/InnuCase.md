@@ -23,7 +23,7 @@ Das InnuCase ist in zwei Größen verfügbar. Die Druckdateien sind im Ordner to
     > Dateinamen: InnuCase-1_Display_2PWM.stl\
     ![InnuCase #1](/docs/img/Case-1_Display_2PWM.jpg)
 
-    Beide Versionen von Case-1 sind auch mit einem PWM Modul im ZIP Archiv einthalten.
+    Beide Versionen von Case-1 sind auch mit einem PWM Modul im ZIP Archiv einthalten.\
     > InnuCase-1_Display_1PWM_Power.stl\
     ![InnuCase #1](/docs/img/Case-1_Display_1PWM_Power.jpg)\
     > InnuCase-1_Display_1PWM.stl\
