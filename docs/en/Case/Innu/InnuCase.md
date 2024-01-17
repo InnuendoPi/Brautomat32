@@ -1,10 +1,10 @@
 # Das InnuCase
 
+Das InnuCase ist in zwei Größen verfügbar. Die Druckdateien sind im Ordner tools/InnuCase hinterlegt.
+
 ## Gehäuseform
 
-Das InnuCase ist in zwei Größen verfügbar. Die Druckdateien sind im Ordner tolls/InnuCase hinterlegt.
-
-* InnuCase #1
+* InnuCase #1 
     > ein größeres Gehäuse mit Display, zwei PWM Modulen und Power Schalter\
     > Power Schalter für eine externe Stromversorgung ESP Mikrocontroller\
     > 1x M12 Front LED Druckschalter rastend
@@ -23,7 +23,7 @@ Das InnuCase ist in zwei Größen verfügbar. Die Druckdateien sind im Ordner to
     > Dateinamen: InnuCase-1_Display_2PWM.stl\
     ![InnuCase #1](/docs/img/Case-1_Display_2PWM.jpg)
 
-    Beide Versionen von Case-1 sind auch mit einem PWM Modul im ZIP Archiv einthalten.\
+* InnuCase #1 mit einem PWM Modul
     > InnuCase-1_Display_1PWM_Power.stl\
     ![InnuCase #1](/docs/img/Case-1_Display_1PWM_Power.jpg)\
     > InnuCase-1_Display_1PWM.stl\
