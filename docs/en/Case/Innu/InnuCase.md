@@ -12,7 +12,7 @@ Das InnuCase ist in zwei Größen verfügbar. Die Druckdateien sind im Ordner to
     > 2x M12 Unterseite für Aktoren\
     > 3x M12 Unterseite für Sensoren\
     > Gehäusemaße BxH 26x9cm\
-    > Dateinamen: InnuCase-1\
+    > Dateinamen: InnuCase-1_Display_2PWM_Power.stl\
     ![InnuCase #1](/docs/img/Case-1_Display_2PWM_Power.jpg)\
     > gleiches Gehäuse mit Display und zwei PWM Modulen ohne Power Schalter\
     > 2x M12 Front für Aktoren\
@@ -20,8 +20,10 @@ Das InnuCase ist in zwei Größen verfügbar. Die Druckdateien sind im Ordner to
     > 3x M12 Unterseite für Sensoren\
     > Stromversorgung ESP Mikrocontroller über GGM IDS\
     > Gehäusemaße BxH 26x9cm\
-    > Dateinamen: InnuCase-1\
+    > Dateinamen: InnuCase-1_Display_2PWM.stl\
     ![InnuCase #1](/docs/img/Case-1_Display_2PWM.jpg)
+
+Beide Versionen von Case-1 sind auch mit einem PWM Modul im ZIP Archiv einthalten. Die Dateinamen lauten > InnuCase-1_Display_1PWM_Power.stl bzw. InnuCase-1_Display_1PWM.stl\
 
 * InnuCase #2
     > ein kleineres Gehäuse mit Display\
