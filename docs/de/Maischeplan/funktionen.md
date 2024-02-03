@@ -57,7 +57,7 @@ Die Buttons zum Editieren werden ausgeblendet. Um diese wieder sichtbar zu mache
 
 Wenn der Maischeprozess pausiert ist, wird der Button Pause in der Steuerung rot dargestellt und die Funktionen zum Editieren werden eingelendet. Das Induktionskochfeld wird nicht ausgeschaltet. Es wird weiterhin die Rasttemperatur gehalten. Der Rasttimer wird angehalten.
 
-Anwendungsbeispiel: gegen Ende der 2. Verzuckerung wird über eine Jodprobe festgestellt, dass die Maische noch nicht jodnormal ist und noch Restextrakt vorhanden ist. Die oben beschriebene Funktion sehr nützlich:
+Anwendungsbeispiel: gegen Ende der 2. Verzuckerung wird über eine Jodprobe festgestellt, dass die Maische noch nicht jodnormal ist und noch Stärke vorhanden ist. Die oben beschriebene Funktion sehr nützlich:
 
 * Maischeprozess pausieren
 * Rastdauer der 2. Verzuckerung um 5 Minuten vergrößern
