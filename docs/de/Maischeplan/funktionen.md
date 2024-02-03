@@ -56,7 +56,7 @@ _Tipp: mit "Temperatur delta zum Ziel" wird ein Temperaturbereich um die Rast-Te
 
 ## Sonderfunktion 0°C Rast bei aktiviertem autonext
 
-Eine Sonderfunktion hat die Rast-Temperatur 0°C bei aktivertem autonext: wenn die Rast-Temperatur auf 0°C gesetzt und autonext aktiviert ist, wird der nachfolgende Maischeschritt ohne Temperaturüberprüfung automatisch gestartet. Im folgenden Bild ist die Situation unmittelbar nach dem Würzekochen dargestellt. Die Würze hat zu diesem Zeitpunkt eine Temperatur von ca. 100°C. Das Induktionskochfeld soll abgeschaltet werden und der Timer für die Nachisomerisierung soll direkt gestartet werden:
+Eine Sonderfunktion hat die Rast-Temperatur 0°C bei aktivertem autonext: wenn die Rast-Temperatur auf 0°C gesetzt und autonext aktiviert ist, wird der Maischeschritt ohne Temperaturüberprüfung automatisch gestartet. Im folgenden Bild ist die Situation unmittelbar nach dem Würzekochen dargestellt. Die Würze hat zu diesem Zeitpunkt eine Temperatur von ca. 100°C. Das Induktionskochfeld soll abgeschaltet werden und der Timer für die Nachisomerisierung soll direkt gestartet werden:
 
 ![Sonderfunktion 0°C](/docs/img/Maischeplan-Sonderfunktion.jpg)
 
@@ -64,15 +64,41 @@ Die Sonderfunktion "0°C Rasttemperatur mit aktiviertem autonext" erfüllt genau
 
 ## Sonderfunktion Aktoren Schalten
 
-Eine Zweite Sonderfunktion ist das Ein- und Ausschalten von Aktoren. Die Syntax für den Maischeschritt lautet Aktorname Doppelpunkt Aktorstatus. Dabei kann der Aktorstatus entweder ON oder OFF sein. Die Rasttemperatur und die Rastdauer müssen für diese Sonderfunktion auf 0 gesetzt sein. Der Nachguss hat als festen Aktornamen Nachguss.
+Eine zweite Sonderfunktion Steuerbefehle für das Induktionskochfeld, den Nachguss und die Aktoren. Die Syntax für den Maischeschritt lautet Aktorname Doppelpunkt Leistung. Dabei kann die entweder ON oder OFF sein oder eine Zahl zweichen 0.100%. Dabei entspricht der Status OFF dem Wert 0% und ON dem Wert 100%. Die Rasttemperatur und die Rastdauer müssen für diese Sonderfunktion auf 0 gesetzt sein. Der Steuerbefehl für das Induktionskochfeld lautet IDS. Der Steuerbefehl für den Nachguss lautet HLT. Für den Nachguss ist zusätzlich der Steuerbefehl Nachguss nutzbar. Der Steuerbefehl für einen Aktor ist der Aktorname.
 
-![Sonderfunktion Aktoren schalten](/docs/img/Maischeplan-Aktoren.jpg)
+![Sonderfunktion Steuerbefehl](/docs/img/Maischeplan-Aktoren.jpg)
 
 Der Maischeplan im Bild schaltet an drei Stellen Aktoren. Direkt zu Beginn wird das Rührwerk eingeschaltet: Ruehrwerk:ON
 Kurz vor dem Ende des Maischeplans wird das Rührwerk mit dem Befehl Ruehrwerk:OFF ausgeschaltet und der Nachguss mit Nachuss:ON eingeschaltet. Aktornamen sollen keine Sonderzeichen, Umlaute oder Leerzeichen enthalten. Aktornamen müssen eindeutig sein. Die Firmware ersetzt bei der Neuanlage von Aktoren automatisch Umlaute und Leerzeichen.
 
-Durch die Tabellenform ist das Grundprinzip vom Brautomat die aufsteigende Infusion. Das schließt Varianten wie bspw. das Earlsche Kochmaischverfahren ein. Mit Hilfe der Eigenschaft "autonext" können auch andere Brauverfahren umgesetzt werden. Es gilt aber zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "halber Automatik" unterstützen kann. Ein auslösender Trigger für eine Aktion wie bspw. das Ziehen von Teilmaischen, muss durch den Anwender manuell erfolgen. Eine Rast mit einer Minute Dauer und deaktiviertem autonext kann ein Auslöser sein.
+Der Steuerbefehl für einen Aktor kann mit einer Leistung angegeben werden, bspw. PUMPE:60. Der Aktor Pumpe würde nun mit 60% eingeschaltet werden. Das setzt voraus, dass dieser Aktor für PWM aktiviert wurde. Wir der Steuerbefehl für einen Aktor ohne PWM ausgeführt, dann wird die Leistung 60% ersetzt durch ON bzw. 100%.
 
-_Tipp: Hopfengaben und Zusätze - Im Bild ist ein Maischeplan dargestellt, der aus dem Programm kleinerBrauhelfer2 importiert wurde. Zusätze- und Hopfennamen, Mengen, Alphasäure und Zeitpunkt der Gaben werden aus dem kbh2 Export übernommen. Auch bei Zusätze und Hopfengaben erscheinen Toast Nachrichten mit Klang. Wenn ein Piezo Buzzer aktiviert wurde, ertönt mit jedem Schritt ein Signalton._
+Der Steuerbefehl IDS:50 setzt die maximale Ausgangsleistung vom Induktionskochfeld auf 50%. Ebenso kann der Nachguss mit HLT:75 auf 75% Leistung gesetzt werden.
 
-_Tipp: Zubrühen - Im Bild Maischeplan ist ein Schritt Zubrühen dargestellt. Auch dieser Schritt wurde inklusive der Angaben zur Menge und Temperatur aus dem kleinenBrauhelfer2 importiert._
+### Beispiel Steuerbefehl IDS
+
+Für das Beispiel sei folgende Konfiguration für die GGM IDS bzw. den MasicheSud Kessel gegeben:
+
+![Sonderfunktion Steuerbefehl](/docs/img/aktoren_schalten4.jpg)
+
+Die maximale Ausgangsleistung ist mit 100% auf dem Standardwert konfiguriert. Die Temperatur "Übergang zum Kochen" beträgt 95°C. Ab dieser Temepratur beträgt die maximale Ausgangsleistung der GGM IDS nur noch 80%.
+
+Der Maischeplan in der Abbildung startet mit dem Schritt "Hauptguss aufheizen". Das Induktionskochfeld GGM IDS würde mit der Leistung "Max. Leistung IDS" (Parameter im Tab Temperatursteuerung) das Wasser erhitzen. In diesem Beispiel soll der Parameter "Max. Leistung IDS" den Wert 100% haben.
+
+![Sonderfunktion Steuerbefehl](/docs/img/aktoren_schalten2.jpg)
+
+Bei 59°C startet der Rasttimer. Die Rastdauer beträgt null Minuten. Der Brautomat springt in die nächste Zeile zum Schritt 2.
+Der Steuerbefehl IDS:65 versetzt die maximale Leistung der IDS auf 65%. Der Brautomat springt in die nächste Zeile zum Schritt 3.
+Nun wird von 59°C auf die Zieltemperatur im Schritt "Einmaischen" aufgeheitzt. Die Leistung der IDS beträgt 65%
+
+Die maximale Ausgangsleistung von 65% wird in den folgenden Maischeschritten beibehalten. Bis der Brautomat nach dem Schritt "Abmaischen" auf en Steuerbefehl IDS:100 trifft
+
+![Sonderfunktion Steuerbefehl](/docs/img/aktoren_schalten3.jpg)
+
+Der Steuerbefehl ändert die maximale Ausgangsleistung der IDS auf 100%. Nun wird die Würze bis zur Temperatur "Übergang zum Kochen" bei 95°C (siehe oben) mit 100% Leistung erhitzt. Ab 95°C schaltet die GGM IDS auf 80% Leistung.
+
+Mit den Steuerbefehlen für die IDS kann ein Anbrennen der Maische oder ein Überkochen der WÜrze verhindert werden.
+
+## Braufverfahren
+
+Durch die Tabellenform ist das Grundprinzip vom Brautomat die aufsteigende Infusion. Das schließt Varianten wie bspw. das Earlsche Kochmaischverfahren ein. Mit Hilfe der Eigenschaft "autonext" können auch andere Brauverfahren umgesetzt werden. Es gilt aber zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "halber Automatik" unterstützen kann. Ein auslösender Trigger für eine Aktion wie bspw. das Ziehen von Teilmaischen, muss durch den Anwender manuell erfolgen. Manuell bedeuet beim Brautomat durch das klicken vom Play Button. Eine Rast mit einer Minute Dauer und deaktiviertem autonext kann ein Auslöser sein.

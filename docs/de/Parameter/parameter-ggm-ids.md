@@ -22,6 +22,18 @@ Dieser Parameter beschreibt die Ausgangsleistung der IDS ab der Temperatur Koche
 
 Dieser Parameter beschreibt die Temperatur, ab der die Würze wallend kocht. Der Standardwert ist 98°C und entspricht etwa einem Standort in 500m Höhe über NN. Mit diesem Parameter wird der Start einer Rast Kochen beeinflusst. Für den Rezeptimport wird dieser Parameter als Temperatur Kochen verwendet.
 
+### Leistung bei Sensorfehler [0-100%]
+
+Tritt ein Sensorfehler auf, bspw. ein Sensor ist nicht verbunden oder ein Defekt, kann die Leistung der IDS für diesen Fehlerfall angepasst werden. Ein Wert von 100% ignoriert den Sensorfehler.
+
+Wird die Leistung bei Sensorfehler auf 0% eingestellt, dann pausiert der Brautomat den Maischeprozess. Die GGM IDS wird abgeschaltet. Ist der Rasttimer gestartet, wird der Timer angehalten.
+
+Der Brautomat startet nach 5 aufeinanderfolgenden fehlerhaften Sensorwerten (-127.0°C) die Fehlerbehandlung. Die Sensoren werden ca. alle 1000ms abgefragt. D.h. es vergehen zwischen Toast Nachricht Sensorfehler und Start der Fehlerbehandlung ca. 5 Sekunden.
+
+Meldet ein fehlerhafter Sensor wieder korrekte Sensorwerte, führt der Brautomat den Maischeprozess automatisch fort.
+
+_Hinweis: der Parameter Max. Leistung IDS wird durch den Parameter Leistung bei Sensorfehler nicht überschritten. Wurde bspw. Max. Leistung IDS auf 75% und Leistung bei Sensorfehler auf 100% konfiguriert, dann ist die effektive maximale Ausgangsleistung der IDS auch bei einem Sensorfehler 75%._
+
 ### Temperatur Einmaischen [°C]
 
 Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für das Einmaischen. Dieser Parameter wird nur dann verwendet, wenn beim Rezeptimport keine Einmaisch-Temperatur angegeben ist.

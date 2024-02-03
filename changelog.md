@@ -1,12 +1,34 @@
 # Changelog
 
 ESP32 Arduino 2.0.14\
-VSCode 1.85 Arduino 0.6\
+VSCode 1.86 Arduino 0.6\
 VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
+
+Version 1.35
+
+* Geändert:     Steuerbefehle für IDS, HLT und Aktoren
+* Fix:          Im manuellen Modus war die Anzeige Leistung nach dem Abschalten nicht korrekt (progress bar)
+* Fix:          Inkonsistenz Anzeige Dashboard und tatsächlichem Maischeplan (Verwirrung um Buttons zum Speichern)
+* Fix:          Es war möglich, mehr als eine Zeile im Maischeplan zeitgleich in den Editormodus zu versetzen
+* Fix:          Die Eigenschaft autonext konnte ohne Editormodus in allen Zeilen der Tabelle verändert werden
+* Fix:          Fehler Rastdauer in watchdog Eeprom write behoben, wenn PREV oder NEXT Button ausgeführt wurden
+* Geändert:     Das Übernehmen einer Zeilenänderung wird nun direkt in die Maischeplan Datei geschrieben (kein doppeltes Speichern klicken)
+* Geändert:     Der Button Speichern je Tabellenzeile im Editormodus wurde entfernt
+* Geändert:     Der Button Maischeplan neu laden ändert Icon und Funktion im Editormodus
+* Neu:          Button Editormodus ohne speichern verlassen als zweite Funktion auf Button Maischeplan neu laden
+* Neu:          watchdog Eeprom write speichert zusätzlich den Status Pause Button
+* Neu:          watchdog Eeprom write speichert zusätzlich den Status Play
+* Neu:          watchdog Eeprom read setzt nach nach boot den Status Pause
+* Neu:          watchdog Eeprom read setzt nach nach boot den Status Play Button
+* Fix:          Korrektur Übersetzung SEN_PIN (Sensor PIN (CS))
+* Neu:          Button Collapse Masicheplan wird im Editormodus ausgeblendet
+* Geändert:     fault Behandlung PT100x Sensoren (not yet ready)
+* Fix:          Bei Brauende blieb der Power Button im Status ON (grün)
+* Neu:          Neuer Parameter Maximale Leistung GGM IDS bei Sensorfehler (0-100%)
 
 Version 1.34a
 
