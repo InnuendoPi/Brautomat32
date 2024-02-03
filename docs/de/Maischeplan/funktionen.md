@@ -19,16 +19,49 @@ Nach diesen vier Angaben zum Maische-Schritt hat jede Zeile Buttons zum Editiere
 * verschiebe diese Zeile eine Position nach unten
 * editiere diese Zeile
 * lösche diese Zeile
-* speichere die Zeile in die Tabelle
 
-Die Symbole zum Editieren der Maischeschritte werden ausgeblendet, sobald der Brauprozess gestartet wird.\
-Zusammen mit den Steuerelementen Power, Play, Pause, Forward und Backward ergibt sich eine einfache intuitiv zu bedienende Brausteuerung. Der hier dargestellte Maischeplan ist ein Import aus dem kleinenBrauhelfer2. Der Import fügt automatisch die Rasttemperaturen und Rastdauer ein. Bei den Hopfengaben werden automatisch Alphasäure und Menge in Gramm an den Hopfennamen angefügt. Außerdem werden diese Kurzbezeichnungen vorangestellt:
+Im Tabellenkopf befinden sich folgende Buttons (von links nach rechts)
+
+* füge einen neuen Maischeschritt an das Ende der Tabelle an
+* lösche die gesammte Tabelle (leerer Maischeplan)
+* lese das Rezept neu ein und befülle die Tabelle UND verlassen den Editor ohne Speichern
+* Rezeptauswahl und Zeitplaner
+* Maischeplan speichern
+* Tabelle ein/ausklappen
+
+Die Symbole zum Editieren der Maischeschritte werden ausgeblendet, sobald der Brauprozess gestartet wird. Wird eine Maischeplanzeile editiert, wird automatisch er Button zum Ein- und Ausklappen der Tabelle ausgeblendet.\
+Zusammen mit den Steuerelementen Power, Play, Pause, Prev und Next ergibt sich eine intuitiv zu bedienende Brausteuerung. Der hier dargestellte Maischeplan ist ein Import aus dem kleinenBrauhelfer2. Der Import fügt automatisch die Rasttemperaturen und Rastdauer ein. Bei den Hopfengaben werden automatisch Alphasäure und Menge in Gramm an den Hopfennamen angefügt. Außerdem werden diese Kurzbezeichnungen vorangestellt:
 
 * VWH: Vorderwürzenhopfung
-* Kochen
+* Kochen (ohne Gaben)
 * WPH: Whirlpool Hopfung
 
-Zusätze wie im Bild dargestellt Hefenahrung werden mit Zeitpunkt der Gabe und Menge in den Maischeplan importiert.
+Zusätze wie im Bild dargestellt _Kochen Hefenahrung 1gr_ werden mit Zeitpunkt der Gabe und Menge in den Maischeplan aus dem kleinenBrauherlfer2 importiert.
+
+## Tabelle Maischeplan editieren
+
+Zunächst wird das Editieren vom Maischeplan vor dem Braustart beschrieben.\
+Mit dem Stiftsymbol kann eine Zeile der Tabelle Maischeplan in den Editormodus versetzt werden.
+
+![Maischeplan editieren](/docs/img/brautomat-3.jpg)
+
+In der Abbildung wird deutlich, dass nur die Zeile im Editormodus verändert werden kann. Das gilt nicht nur für die Werte Rastname, Rastdauer und Rasttemperatur, sondern insbesondere auch für die Eigenschaft _autonext_. Der Editormodus einer Zeile kann mit dem Button _Speichern_ zum Abspeichern der Änderung oder mit dem Button _Exit_ zum Beenden ohne speichern verlassen werden. Sobald der Editormodus mit einem der zwei Möglichkeiten verlassen wird, wechselt der Button _Exit_ in die Funktion _Reload_. Hier wird die Doppelfunktion vom Button _Reload_ und _Exit_ deutlich.
+
+Wenn der Maischeprozess bereits gestartet wurde, ändert sich das Verhalten.
+
+![Maischeplan editieren](/docs/img/brautomat-4.jpg)
+
+Die Buttons zum Editieren werden ausgeblendet. Um diese wieder sichtbar zu machen, muss der Masicheprozess mit dem Button Pause aus der Steuerung angehalten werden:
+
+![Maischeplan editieren](/docs/img/brautomat-5.jpg)
+
+Wenn der Maischeprozess pausiert ist, wird der Button Pause in der Steuerung rot dargestellt und die Funktionen zum Editieren werden eingelendet. Das Induktionskochfeld wird nicht ausgeschaltet. Es wird weiterhin die Rasttemperatur gehalten. Der Rasttimer wird angehalten.
+
+Anwendungsbeispiel: gegen Ende der 2. Verzuckerung wird über eine Jodprobe festgestellt, dass die Maische noch nicht jodnormal ist und noch Restextrakt vorhanden ist. Die oben beschriebene Funktion sehr nützlich:
+
+* Maischeprozess pausieren
+* Rastdauer der 2. Verzuckerung um 5 Minuten vergrößern
+* Maischeprozess fortsetzen
 
 ## Funktion und Verwendung von autonext
 
@@ -75,6 +108,18 @@ Der Steuerbefehl für einen Aktor kann mit einer Leistung angegeben werden, bspw
 
 Der Steuerbefehl IDS:50 setzt die maximale Ausgangsleistung vom Induktionskochfeld auf 50%. Ebenso kann der Nachguss mit HLT:75 auf 75% Leistung gesetzt werden.
 
+Beispiele:
+
+* Ruehrwerk:ON
+* Ruehrwerk:OFF
+* RHE:40
+* IDS:80
+* IDS:OFF
+* HLT:100
+* HLT:OFF
+
+_RHE ist ein Aktorname für ein Ringheizelement als Beispiel für einen Aktor mit PWM._
+
 ### Beispiel Steuerbefehl IDS
 
 Für das Beispiel sei folgende Konfiguration für die GGM IDS bzw. den MasicheSud Kessel gegeben:
@@ -99,6 +144,6 @@ Der Steuerbefehl ändert die maximale Ausgangsleistung der IDS auf 100%. Nun wir
 
 Mit den Steuerbefehlen für die IDS kann ein Anbrennen der Maische oder ein Überkochen der WÜrze verhindert werden.
 
-## Braufverfahren
+## Brauverfahren
 
 Durch die Tabellenform ist das Grundprinzip vom Brautomat die aufsteigende Infusion. Das schließt Varianten wie bspw. das Earlsche Kochmaischverfahren ein. Mit Hilfe der Eigenschaft "autonext" können auch andere Brauverfahren umgesetzt werden. Es gilt aber zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "halber Automatik" unterstützen kann. Ein auslösender Trigger für eine Aktion wie bspw. das Ziehen von Teilmaischen, muss durch den Anwender manuell erfolgen. Manuell bedeuet beim Brautomat durch das klicken vom Play Button. Eine Rast mit einer Minute Dauer und deaktiviertem autonext kann ein Auslöser sein.
