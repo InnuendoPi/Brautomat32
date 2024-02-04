@@ -4,11 +4,13 @@ Die Installation unterteilt sich in Firmware flashen und WLAN Konfiguration.
 
 ## Firmware flashen mit MS Windows
 
-Download: <https://github.com/InnuendoPi/Brautomat/releases/download/Release/Firmware.zip>
+Download ESP8266: <https://github.com/InnuendoPi/Brautomat/releases/download/Release/Firmware.zip>
 
-Die Installation der Firmware wird über das mitgeliferte Script "Flashen.cmd" durchgeführt. Hierzu wird das Archiv Firmware.zip in einem beliebigen Ordner entpackt. Der Wemos D1 mini wird mit per USB Kabel mit dem PC/Notebook verbunden. Ein Doppelklick auf das Script Flashen.cmd startet das Flashen der Firmware.
+Download ESP32: <https://github.com/InnuendoPi/Brautomat32/releases/download/Release/Firmware.zip>
 
-Das Betriebssystem MS Windows erstellt beim Anschluss vom Wemos D1 mini automatisch einen seriellen COM Port. Abhängig vom System kann das COM3, COM4 oder höher sein. Das Script Flashen.cmd ist voreingestellt auf den seriellen Anschluss COM3. Sollte der Wemos D1 Mini nicht mit COM3 verbunden sein, muss im Script Flashen.cmd in den Zeilen 6 und 8 "COM3" durch den korrekten COM Port ersetzt werden.
+Die Installation der Firmware wird über das im ZIP Archiv enthaltene Script "Flashen.cmd" durchgeführt. Das Archiv Firmware.zip wird in einem beliebigen Ordner entpackt. Der ESP Microcontroller wird mit per USB Kabel mit dem PC/Notebook verbunden. Ein Doppelklick auf das Script Flashen.cmd startet das Flashen der Firmware.
+
+Das Betriebssystem MS Windows erstellt beim Anschluss vom ESP Microcontroller automatisch einen seriellen COM Port. Abhängig vom System kann das COM3, COM4 oder höher sein. Das Script Flashen.cmd ist voreingestellt auf den seriellen Anschluss COM3. Sollte der ESP Microcontroller nicht mit COM3 verbunden sein, muss im Script Flashen.cmd in den Zeilen 6 und 8 "COM3" durch den korrekten COM Port ersetzt werden. Die Datei Flashen.cmd ist eine Textdatei und kann mit einem Editor (bspw. notepad) bearbeitet werden.
 
 ```bash
 1: @ECHO OFF
@@ -35,7 +37,7 @@ ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This co
 
 ## Manuelles Flashen MS Windows und Linux
 
-Falls das Script nicht genutzt werden kann, muss die Firmware manuell auf den Wemos D1 mini übertragen werden.
+Falls das Script nicht genutzt werden kann, muss die Firmware manuell auf den ESP Microcontroller übertragen werden.
 
 Step 1 Flash löschen:
 
@@ -47,20 +49,20 @@ Step 2 Firmware flashen:
 
 COM3 ist durch den tatsächlichen seriellen Anschluss zu ersetzen. Die Befehlszeilen Step 1 und 2 setzen voraus, dass die Dateien esptool, brautomat.ino.bin und Brautomat.mklittlefs.bin im gleichen Verzeichnis liegen.
 
-In seltenen Fällen wird unter MS Windows kein USB Port automatisch bereitgestellt. EIn USB Treiber ist hier verfügbar: <http://www.wch.cn/download/CH341SER_ZIP.html>
+In seltenen Fällen wird unter MS Windows kein USB Port automatisch bereitgestellt. Ein USB Treiber ist hier verfügbar: <http://www.wch.cn/download/CH341SER_ZIP.html>
 
 ## Firmware flashen mit macOS
 
 Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 
-Mit macOS unterteilt sich das Flashen der Firmware in zwei Schritte. Im ersten Schritt wird mit dem Tool pyflasher die Firmware brautomat.ino.bin auf den Wemos aufgespielt.
+Mit macOS unterteilt sich das Flashen der Firmware in zwei Schritte. Im ersten Schritt wird mit dem Tool pyflasher die Firmware brautomat.ino.bin für den ESP8266 bzw. brautomat32.ino.bin für den ESP32 auf den ESP Microcontroller aufgespielt.
 
 ![macOS](/docs/img/flashen_macos.png)
 
 Anschließend muss der Brautomat mit dem WLAN verbunden werden. Sobald der Brautomat mit dem WLAN verbunden ist, muss das Dateisystem aufgespielt werden.\
 Im Browser öffnen: <http://brautomat.local/update>
 
-Nach einem Klick auf den Button "Filesystem" wird die Datei brautomat.mklittlefs.bin ausgewählt und mit Klick auf Update Filesystem aufgespielt.
+Nach einem Klick auf den Button "Filesystem" wird die Datei brautomat.mklittlefs.bin für den ESP8266 bzw. brautomat32.mklittlefs.bin für den ESP32 ausgewählt und mit Klick auf Update Filesystem aufgespielt.
 
 ## WLAN Konfiguration
 
@@ -86,12 +88,12 @@ Wenn die Option _WebUpdate mit Testversion_ aktiviert ist, wird das WebUpdate mi
 
 Ein Update der Firmware über die Auswahl DateiUpdate erfolgt über wenige Schritte:
 
-Zunächst muss die aktuelle Firmware [hier](https://github.com/InnuendoPi/Brautomat/blob/main/tools/Firmware.zip) heruntergeladen werden. Das ZIP Archiv wird anschließend entpacken.\
+Zunächst muss die aktuelle Firmware [ESP8266](https://github.com/InnuendoPi/Brautomat/blob/main/tools/Firmware.zip) bzw. [ESP32](https://github.com/InnuendoPi/Brautomat32/blob/main/tools/Firmware.zip) heruntergeladen werden. Das ZIP Archiv wird anschließend entpacken.\
 Im WebInterface Brautomat den Menüpunkt Update und anschließend DateiUpdate auswählen. Es wird eine einfache Update Webseite (im Bild 1) angezeigt:
 
 ![DateiUpdate](/docs/img/dateiupdate2.jpg)
 
-Unter Firmware mit dem Button "Datei auswählen" muss nun aus dem Archiv Firmware.ZIP die Datei _Brautomat.ino.bin_ ausgewählt werden (im Bild 2). Ein Klick auf Update Firmware startet das Update.
+Unter Firmware mit dem Button "Datei auswählen" muss nun aus dem Archiv Firmware.ZIP die Datei _Brautomat.ino.bin_ bzw. _Brautomat32.ino.bin_ ausgewählt werden (im Bild 2). Ein Klick auf Update Firmware startet das Update.
 
 Auch das Dateisystem vom Brautomat kann aktualisiert werden.
 
