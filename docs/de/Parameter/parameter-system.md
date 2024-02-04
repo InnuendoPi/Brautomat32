@@ -4,11 +4,11 @@
 
 ### Aktiviere Alarm-Buzzer
 
-Mit diesem parameter kann ein Piezo Buzzer aktiviert werden. Zu beachten gilt, dass der Buzzer an GPIO D8 angeschlossen sein muss. Buzzer Alarme unterstützen den Maischeprozess durch Signaltöne.
+Mit diesem parameter kann ein Piezo Buzzer aktiviert werden. In der Standardeinstellung ist der Buzzer an GPIO D8 angeschlossen. Das entspricht dem Layout der Platine 2.0. Buzzer Alarme unterstützen den Maischeprozess durch Signaltöne.
 
 ### Aktiviere Toasts und mp3 Alarme
 
-Toasts sind kleine Push Nachrichten. Die Nachrichten erscheinen als Kachel unten rechts im Browser. Nach ca. 10sek verschwinden die Toasts wieder. Es gibt Toast Nachrichten zum Maischeprozess, Toast Nachrichten vom System und textlose mp3 Alarme. Dazu passend hat die Eigenschaft Toasts 3 Optionen: Aus, Ein und Fehler. Die Auswahl "Aus" schaltet Toast Nachrichten ab. Die Option "Ein" sendet alle Toasts Nachrichten und mp3-Alarme. Die Option "Fehler" sendet nur Toast Nachrichten bei Systemfehler, aber keine Nachrichten zum Maischeprozess.
+Toasts sind kleine Push Nachrichten. Die Nachrichten erscheinen als Kachel unten rechts im Browser. Mit Ausnahme von Fehler-Benachrichtigungn werden Toasts nach wenigen Sekunden ausgeblendet. Es gibt Toast Nachrichten zum Maischeprozess, Toast Nachrichten vom System und textlose mp3 Alarme. Dazu passend hat die Eigenschaft Toasts 3 Optionen: Aus, Ein und Fehler. Die Auswahl "Aus" schaltet Toast Nachrichten ab. Die Option "Ein" sendet alle Toasts Nachrichten und mp3-Alarme. Die Option "Fehler" sendet nur Toast Nachrichten bei Systemfehler, aber keine Nachrichten zum Maischeprozess.
 
 Toasts unterstützen eine Audio Ausgabe. So werden Toasts im Maischeprozess nicht nur zu einer visuelle, sondern auch einer akkustischen Erinnerung. Die Firmware beinhaltet die Audio Dateien info.mp3, success.mp3, warning.mp3 und error.mp3. Die Audio Dateien (mp3) können ausgetauscht werden. Lediglich die Benennung muss gleich bleiben. Im Browser sollte Autoplay Audio für die IP-Adresse des Brautomaten erlaubt sein.
 
@@ -18,7 +18,7 @@ _Tipp: automatische Medienwiedergabe -_ _Alle gängigen Browser wie MS Edge, Chr
 
 ![media](/docs/img/autoplay-media.jpg)
 
-Mit dieser Einstellung können mp3 Alarme einen Piezo Buzzer ersetzen. Treten beim Systemstart Fehler auf, werden mp3 Audio Signale auf iOS Geräte blockiert. Erst nach einem Klick oder Touch werden mp3 Audio Dateien wiedergegeben. Als workaround für iOS Geräte kann nach dem ersten Start direkt ein Neustart initiert werden. Der Neustart muss als Klick bzw. Touch über System -> Neustart durchgeführt werden. Durch diese "user gesture" werden mp3 Medien automatisch wiedergegeben.
+Mit dieser Einstellung können mp3 Alarme einen Piezo Buzzer ersetzen.
 
 ### Aktiviere Touchdisplay
 
@@ -56,7 +56,7 @@ Zu beachten gilt, dass SDA, SCL an den PINs D1, D2 betrieben werden müssen.
 
 ### Aktviere MAX31865 Amplifier
 
-Wenn analoge Sensoren vom Typ PT100x eingesetzt werden, muss dieser Schalter aktiviert werden. Ein analoger Sensor PT100x benötigt für den Anschluss an einen ESP Mikrocontroller einen RTD in digital Wandler. Ein  Ein MAX31865 Amplifier ist ein RTD in digital Wandler in Form einer kleinen Zusatzplatine.\
+Wenn analoge Sensoren vom Typ PT100x eingesetzt werden, muss dieser Schalter aktiviert werden. Ein analoger Sensor PT100x benötigt für den Anschluss an einen ESP Mikrocontroller einen RTD digital Wandler. Ein MAX31865 Amplifier ist ein RTD digital Wandler in Form einer kleinen Zusatzplatine.\
 
 ### Aktiviere mDNS
 
@@ -66,7 +66,7 @@ _Tipp: der mDNS Name wird ohne Protokoll (http://) und ohne top-level Domain (.l
 
 ### NTP Zeitserver
 
-Das Network Time Protokoll (NTP) synchronisiert die Uhrzeit alle 60 Minuten mit einem Zeitserver. Der Standard Zeitserver lautet europe.pool.ntp.org und ist ein Zeitgeber im Internet. Wenn im lokalem Netzwerk ein Zeitgeber vorhanden ist, kann dieser Zeitgeber genutzt werden. Wenm bspw. ist eine Fritz.box (c) im Einsatz ist, kann als Zeitserver fritz.box eingetragen werden. Wenn ein lokaler Zeitgeber konfiguriert st, benötigt der Brautomat keinen Zugriff auf das Internet. Die Funktion WebUpdate nutzt für die SSL Verschlüsselung immer den Zeitserver ntp.org.
+Das Network Time Protokoll (NTP) synchronisiert die Uhrzeit alle 60 Minuten mit einem Zeitserver. Der Standard Zeitserver lautet europe.pool.ntp.org und ist ein Zeitgeber im Internet. Wenn im lokalem Netzwerk ein Zeitgeber vorhanden ist, kann dieser Zeitgeber genutzt werden. Wenm bspw. ist eine Fritz.box (c) im Einsatz ist, kann als Zeitserver fritz.box eingetragen werden. Wenn ein lokaler Zeitgeber konfiguriert st, benötigt der Brautomat keinen Zugriff auf das Internet. Die Funktion WebUpdate benötigt für die SSL Verschlüsselung zwingend einen Zeitserver.
 
 ### Dashboard
 
