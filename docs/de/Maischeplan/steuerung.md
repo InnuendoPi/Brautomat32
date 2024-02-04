@@ -1,6 +1,6 @@
 # Die Steuerung
 
-Direkt unterhalb vom Maischeplan befindet sich die Steuerung. Mithilfe der 5 Buttons Power, Play, Pause Backward und Forward wird der Maischeprozess gesteuert.
+Direkt unterhalb vom Maischeplan befindet sich die Steuerung. Mithilfe der 5 Buttons Power, Play, Pause, Previous und Next wird der Maischeprozess gesteuert.
 
 ![Maischeplan](/docs/img/Buttons.jpg)
 
@@ -35,13 +35,13 @@ Während einer Rast wird mit dem Pause Button zusätzlich der Rast-Timer im Mais
 
 *Der Unterschied zwischen "Pause" und "autonext": bei deaktiviertem autonext wird die GGM IDS ausgeschaltet.*
 
-## Der Backward Button
+## Der Previous Button
 
-Mit dem Backward Button wird zum vorherigem Schritt im Maischeplan gesprungen. War der Maischeprozess pausiert, wird der Rast-Timer der aktuellen Rast zurückgesetzt und neu gestartet.
+Mit dem Prev Button wird zum vorherigem Schritt im Maischeplan gesprungen. War der Maischeprozess pausiert, wird der Rast-Timer der aktuellen Rast zurückgesetzt und neu gestartet.
 
-## Der Forward Button
+## Der Next Button
 
-Mit dem Forward Button wird zum nächsten Schritt im Maischeplan gesprungen oder falls es der letzte Schritt im Plan war der Maischeprozess beendet.
+Mit dem Next Button wird zum nächsten Schritt im Maischeplan gesprungen oder falls es der letzte Schritt im Plan war der Maischeprozess beendet.
 
 ## Der Maischeplan anzeigen Button
 

@@ -1,15 +1,15 @@
 # Funktionen
 
-Die folgende Beschreibung hat nicht das zugrunde liegende Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat. Deshalb zeigen die Maischeplan Bilder in dieser Erläuterung verschiedene Maischepläne. Der Maischeplan Ablauf ist jedoch bei allen identisch: der Maischeplan hat eine Tabellenform. Diese Tabelle wird beim Maischen von oben nach unten abgearbeitet. Im ersten Beispiel ist die Zeile "Einmaischen 50°C" der erste Maische-Schritt und "WHP Hallertauer Tradition" der letzte Maische-Schritt. Eine sehr wichtige Funktion im Maischeplan hat die Eigenschaft _autonext_.
+Die folgende Beschreibung hat nicht das zugrunde liegende Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat. Der Maischeplan hat eine Tabellenform. Diese Tabelle wird an einem Brautag von oben nach unten vom Brautomat abgearbeitet. Im ersten Beispiel ist die Zeile "Einmaischen 50°C" der erste Maische-Schritt und "WHP Hallertauer Tradition" der letzte Maische-Schritt. Eine sehr wichtige Funktion im Maischeplan hat die Eigenschaft _autonext_.
 
 ## Grundfunktionen
 
 ![Maischeplan](/docs/img/brautomat.jpg)
 
-Zur Orientierung wird zunächst der Aufbau der Tabellenzeilen beschrieben. Jede Zeile der Tabelle hat diese Spalten:
+Zur Orientierung wird zunächst der Aufbau der Tabellenzeilen beschrieben. Eine Zeile im Maischeplan stellt einen Schritt im Maischeplan dar. Jede Zeile der Tabelle hat diese Spalten:
 
 * Die Spalte "Rast" zeigt einen Namen für diesen Maische-Schritt
-* Die Spalte "Temperatur" zeigt die Rast-Temperatur (auch Ziel- oder Soll-Temperatur genannt)
+* Die Spalte "Temperatur" zeigt die Rast-Temperatur (in dieser Anleitung auch Ziel- oder Soll-Temperatur genannt)
 * Die Spalte "Dauer" ist die Rast-Dauer (Timer), wie lange der Brautomat die Rast-Temperatur halten soll
 * Die Spalte "autonext" besagt, ob automatisch zum nächsten Schritt gwechselt wird, wenn die Rast-Dauer (Timer) erfüllt ist
 
@@ -22,14 +22,16 @@ Nach diesen vier Angaben zum Maische-Schritt hat jede Zeile Buttons zum Editiere
 
 Im Tabellenkopf befinden sich folgende Buttons (von links nach rechts)
 
-* füge einen neuen Maischeschritt an das Ende der Tabelle an
-* lösche die gesammte Tabelle (leerer Maischeplan)
-* lese das Rezept neu ein und befülle die Tabelle UND verlassen den Editor ohne Speichern
-* Rezeptauswahl und Zeitplaner
-* Maischeplan speichern
-* Tabelle ein/ausklappen
+* neue Zeile: füge einen neuen Maischeschritt an das Ende der Tabelle an
+* Löschen: lösche die gesammte Tabelle (leerer Maischeplan)
+* Neu laden und Exit: dieser Button hat zwei Funktionen
+  * Reload: lese das Rezept aus der Datei neu. Änderungen werden nicht gespeichert
+  * Exit: verlassen den Editor ohne Speichern
+* Speicher: Maischeplan speichern
+* Einstellungen: Maischeplan Auswahl, IMport, Export und Zeitplaner
+* Collapse: Tabelle ein/ausklappen
 
-Die Symbole zum Editieren der Maischeschritte werden ausgeblendet, sobald der Brauprozess gestartet wird. Wird eine Maischeplanzeile editiert, wird automatisch er Button zum Ein- und Ausklappen der Tabelle ausgeblendet.\
+Alle Buttons zum Editieren des Maischeplans werden ausgeblendet, sobald der Brauprozess gestartet wird. Der Collapse-Button zum ein- und ausklappen der Tabelle wird ausgeblendet, sobald der Maischeplan editiert wird.\
 Zusammen mit den Steuerelementen Power, Play, Pause, Prev und Next ergibt sich eine intuitiv zu bedienende Brausteuerung. Der hier dargestellte Maischeplan ist ein Import aus dem kleinenBrauhelfer2. Der Import fügt automatisch die Rasttemperaturen und Rastdauer ein. Bei den Hopfengaben werden automatisch Alphasäure und Menge in Gramm an den Hopfennamen angefügt. Außerdem werden diese Kurzbezeichnungen vorangestellt:
 
 * VWH: Vorderwürzenhopfung
@@ -40,12 +42,11 @@ Zusätze wie im Bild dargestellt _Kochen Hefenahrung 1gr_ werden mit Zeitpunkt d
 
 ## Tabelle Maischeplan editieren
 
-Zunächst wird das Editieren vom Maischeplan vor dem Braustart beschrieben.\
-Mit dem Stiftsymbol kann eine Zeile der Tabelle Maischeplan in den Editormodus versetzt werden.
+Ein Maischeplan kann im Brautomat verändert oder auch vollständig neu erstellt werden. Die wichtigste Funktione ist das Anpassen von einem Maischeschritt. Mit dem Stiftsymbol wird eine Zeile der Tabelle Maischeplan in den Editormodus versetzt werden. Im Editormodus wechselt der _Reload_ Button zum _Exit_ Button.
 
 ![Maischeplan editieren](/docs/img/brautomat-3.jpg)
 
-In der Abbildung wird deutlich, dass nur die Zeile im Editormodus verändert werden kann. Das gilt nicht nur für die Werte Rastname, Rastdauer und Rasttemperatur, sondern insbesondere auch für die Eigenschaft _autonext_. Der Editormodus einer Zeile kann mit dem Button _Speichern_ zum Abspeichern der Änderung oder mit dem Button _Exit_ zum Beenden ohne speichern verlassen werden. Sobald der Editormodus mit einem der zwei Möglichkeiten verlassen wird, wechselt der Button _Exit_ in die Funktion _Reload_. Hier wird die Doppelfunktion vom Button _Reload_ und _Exit_ deutlich.
+In der Abbildung wird deutlich, dass immer nur eine Zeile im Editormodus verändert werden kann. Das gilt nicht nur für die Werte Rastname, Rastdauer und Rasttemperatur, sondern auch für die Eigenschaft _autonext_. Der Editormodus einer Zeile kann mit dem Button _Speichern_ zum Abspeichern der Änderung oder mit dem Button _Exit_ zum Beenden ohne speichern verlassen werden. Sobald der Editormodus mit einem der zwei Möglichkeiten verlassen wird, wechselt der Button _Exit_ in die Funktion _Reload_. Hier wird die Doppelfunktion vom Button _Reload_ und _Exit_ deutlich.
 
 Wenn der Maischeprozess bereits gestartet wurde, ändert sich das Verhalten.
 
