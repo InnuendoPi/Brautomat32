@@ -4,7 +4,7 @@ Der Brautomat bietet eine einfache Verwaltung der Maischepläne. Neben importier
 
 ## Einstellungen
 
-In den Einstellungen kann der Maischeplan Name festgelegt werden. Aus dem Maischeplan Namen wird der Dateiname abgeleitet. Die Parameter *Gesamte Kochdauer* und *Nachisomerisierungszeit* werden angezeigt, sind aber nicht editierbar. Diese parameter werden beim Rezept Import eingelesen.
+In den Einstellungen kann der Maischeplan Name festgelegt werden. Aus dem Maischeplan Namen wird der Dateiname abgeleitet. Die Parameter *Gesamte Kochdauer* und *Nachisomerisierungszeit* werden rein informativ angezeigt und sind nicht editierbar. Diese Parameter werden beim Rezept Import eingelesen. Wird ein Maischeplan manuell angelegt, sind die Werte Kochdauer und Nachisomerisierung ohne Bedeutung, weil der Brautomat keine Bittereinheiten berechnet.
 
 ## Zeitsteuerung
 
@@ -12,8 +12,7 @@ Mit Hilfe der Zeitsteuerung kann ein Brautag geplant und automatisch gestartet w
 
 ![Zeitsteuerung](/docs/img/Zeitsteuerung.jpg)
 
-Über das Element DateTimer Picker kann sehr einfach ein Datum und eine Uhrzeit ausgewählt werden.\
-Im Dashboard wird auf der rechten Seite das Kalender Icon grün dargestellt. Der Rezeptname wird temporär ersetzt durch den angegebenen Startzeitpunkt
+Über das Element DateTimer Picker kann sehr einfach ein Datum und eine Uhrzeit ausgewählt werden. Der Rezeptname wird temporär ersetzt durch den angegebenen Startzeitpunkt.
 
 ![Zeitsteuerung](/docs/img/Zeitsteuerung2.jpg)
 
@@ -26,9 +25,9 @@ Der Brautomat kann Braurezepte aus folgenden Quellen importieren:
 * BrewFather
 * Brautomat
 
-Aus einem importiertem Braurezept wird ein Brautomat Maischeplan. Empfohlen wird die Rezeptverwaltung und -entwicklung mit dem kbh2. Der Exportfilter "Brautomat" beinhaltet alle Daten, die zum Brauen benötigt werden.
+Aus einem importiertem Braurezept wird ein Brautomat Maischeplan. Empfohlen wird die Rezeptverwaltung und -entwicklung mit dem kbh2. Der Exportfilter "Brautomat" beinhaltet alle Daten in optimierter Form, die zum Brauen mit dem Brautomat benötigt werden.
 
-Rezepte aus MaischeMalzundMehr sollten ebenfalls zunächst im kleinenBrauhelfer2 importiert und auf die individuellen Anlagenwerte, Rohstoffe etc. angepasst werden.
+Rezepte aus MaischeMalzundMehr sollten ebenfalls zunächst im kleinenBrauhelfer2 importiert und auf die individuellen Anlagenwerte, Rohstoffe etc. angepasst werden. Weil MMum keine Rastnamen vergibt, empfiehlt sich eine Bearbeitung im KBH2 Maischplan.
 
 Rezepte aus BrewFather müssen die Eigenschaft boilTime (Kochdauer) mit einem ganzzahligen Wert belegt haben. Empfohlen wird auch ein Wert für den Parameter Equipment -> whirlpoolTime. Rastnamen können bei BrewFather einen (nahezu beliebig) langen Fließtext enthalten. Der Text wird auf maximal 50 Buchstaben gekürzt. Brewfather erlaubt Fließkommazahlen und Text als Rastdauer. Die Parameter werden in ganzzahlige Werte gewandelt oder auf 0 gesetzt.
 
