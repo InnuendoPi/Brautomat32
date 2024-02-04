@@ -16,18 +16,17 @@ Diese Anleitung unterteilt sich in drei Themenbereich:
   * Der Maischeplan
   * AutoTune PID
   * Sensoren, Aktoren und Nachguss
-  * Rezepte
 * Die Hardware: die Platine und passende Erweiterungen
   * Die Platine Aufbau und Anschlüsse
   * Das Display
   * 3D Gehäuse
   * zus. Hardware
 * Infos, FAQs & co
-  * der kleineBrauhelfer2
+  * kleinerBrauhelfer2
   * das MQTTDevice
 
 Der Themenbereich Software wird mit einer Zusammenfassung _Parameter im Überblick_ abgeschlossen. Zu vielen Parametern werden Details und Informationen gegeben, um die Konfiguration und Anwendung zu vereinfachen.
 
-Diese Anleitung hat keine Reihenfolge und muss nicht von oben nach unten durchgelesen werden.
+Diese Anleitung hat keine Reihenfolge und muss nicht von oben nach unten durchgelesen werden. Der Themenbereich Software, insbesondere das Kapitel _Der Maischeplan_, ist für den Einstieg in den Brautomat empfohlen.
 
 _"Legal note: Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
