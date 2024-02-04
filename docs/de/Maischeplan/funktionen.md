@@ -1,6 +1,6 @@
 # Funktionen
 
-Die folgende Beschreibung hat nicht das zugrunde liegende Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat. Der Maischeplan hat eine Tabellenform. Diese Tabelle wird an einem Brautag von oben nach unten vom Brautomat abgearbeitet. Im ersten Beispiel ist die Zeile "Einmaischen 50°C" der erste Maische-Schritt und "WHP Hallertauer Tradition" der letzte Maische-Schritt. Eine sehr wichtige Funktion im Maischeplan hat die Eigenschaft _autonext_.
+Die folgende Beschreibung hat nicht das zugrunde liegende Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat. Der Maischeplan hat eine Tabellenform. Diese Tabelle wird an einem Brautag von oben nach unten vom Brautomat abgearbeitet. Im ersten Beispiel ist die Zeile "Einmaischen 50°C" der erste Maische-Schritt und "WHP Hallertauer Tradition" der letzte Maische-Schritt. Eine sehr wichtige Funktion im Maischeplan ist die Eigenschaft _autonext_.
 
 ## Grundfunktionen
 
@@ -11,7 +11,7 @@ Zur Orientierung wird zunächst der Aufbau der Tabellenzeilen beschrieben. Eine 
 * Die Spalte "Rast" zeigt einen Namen für diesen Maische-Schritt
 * Die Spalte "Temperatur" zeigt die Rast-Temperatur (in dieser Anleitung auch Ziel- oder Soll-Temperatur genannt)
 * Die Spalte "Dauer" ist die Rast-Dauer (Timer), wie lange der Brautomat die Rast-Temperatur halten soll
-* Die Spalte "autonext" besagt, ob automatisch zum nächsten Schritt gwechselt wird, wenn die Rast-Dauer (Timer) erfüllt ist
+* Die Spalte "autonext" besagt, ob automatisch zum nächsten Schritt gewchselt wird, wenn die Rast-Dauer (Timer) erfüllt ist
 
 Nach diesen vier Angaben zum Maische-Schritt hat jede Zeile Buttons zum Editieren mit den folgenden Funktionen: (von links nach rechts)
 
@@ -30,7 +30,7 @@ Im Tabellenkopf befinden sich folgende Buttons (von links nach rechts)
 * Löschen: lösche die gesammte Tabelle (leerer Maischeplan)
 * Neu laden und Exit: dieser Button hat zwei Funktionen
   * Reload: lese das Rezept aus der Datei neu. Änderungen werden nicht gespeichert
-  * Exit: verlassen den Editor ohne Speichern
+  * Exit: verlasse den Zeileneditor ohne Speichern
 * Speicher: Maischeplan speichern
 * Database: Maischeplan Auswahl, Import, Export und Maischeplan Zeitplaner
 * Collapse: Maischeplan Tabelle ein- und ausklappen
@@ -48,7 +48,7 @@ Zusätze wie im Bild dargestellt _Kochen Hefenahrung 1gr_ werden mit Zeitpunkt d
 
 ## Tabelle Maischeplan editieren
 
-Ein Maischeplan kann im Brautomat verändert oder auch vollständig neu erstellt werden. Die wichtigste Funktione ist das Anpassen von einem Maischeschritt. Mit dem Stiftsymbol wird eine Zeile der Tabelle Maischeplan in den Editormodus versetzt werden. Im Editormodus wechselt der _Reload_ Button zum _Exit_ Button.
+Ein Maischeplan kann im Brautomat verändert oder auch vollständig neu erstellt werden. Die wichtigste Funktion ist das Anpassen von einem Maischeschritt. Mit dem Stiftsymbol wird eine Zeile der Tabelle Maischeplan in den Editormodus versetzt. Im Editormodus wechselt der _Reload_ Button zum _Exit_ Button.
 
 ![Maischeplan editieren](/docs/img/brautomat-3.jpg)
 
@@ -58,7 +58,7 @@ Wenn der Maischeprozess bereits gestartet wurde, ändert sich das Verhalten.
 
 ![Maischeplan editieren](/docs/img/brautomat-4.jpg)
 
-Die Buttons zum Editieren werden ausgeblendet. Um diese wieder sichtbar zu machen, muss der Masicheprozess mit dem Button Pause aus der Steuerung angehalten werden:
+Die Buttons zum Editieren werden ausgeblendet. Um diese wieder sichtbar zu machen, muss der Maischeprozess mit dem Button Pause aus der Steuerung angehalten werden:
 
 ![Maischeplan editieren](/docs/img/brautomat-5.jpg)
 
@@ -68,10 +68,10 @@ Anwendungsbeispiel:\
 Am Ende vom Maischeprozess wird über eine Jodprobe festgestellt, dass die Maische noch nicht jodnormal ist und noch Stärke vorhanden ist. Die Rast Verzuckerung 72°C soll verlängert werden:
 
 * Maischeprozess pausieren
-* Das Stiftsymbbol in der Zeite Verzuckerung 72°C anklicken
+* Das Stiftsymbol in der Zeile Verzuckerung 72°C anklicken
 * Rastdauer der 2. Verzuckerung um 5 Minuten verlängern
 * Speichern
-* Pause Button klicken und der Maischeprozess wird mit angepasster Verzuckerung fortgesetzt
+* Pause Button klicken und der Maischeprozess wird mit angepasster Rastdauer fortgesetzt.
 
 ## Funktion und Verwendung von autonext
 
@@ -81,15 +81,15 @@ Der erste Schritt im Maischeplan mit dem Namen _Einmaischen 50°C_ hat eine Rast
 
 * am Ende einer Rast mit deaktiviertem _autonext_ wird der Maischeprozess angehalten und die GGM IDS wird ausgeschaltet
 
-Der zweite Schritt im Maischeplan mit dem Namen _Maltoserast 63°C_ hat als Rast-Temperatur 63°C und eine Rast-Dauer von 25 Minuten. Der Brautomat steuert in diesem Schritt das Induktionskochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Rast-Timer ist eine Stoppuhr. Wenn diese Stoppuhr die Rast-Dauer von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft _autonext_. Wenn _autonext_ aktiviert ist, springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Bespiel zum Schritt _Zwischenrast_. Die Zwischenrast hat eine Rasttemperatur von 67°C. Automatisch erhöht der Brautomat die Leistung vom Induktionskochfeld, um die Rast-Temperatur zu erreichen.
+Der zweite Schritt im Maischeplan mit dem Namen _Maltoserast 63°C_ hat als Rast-Temperatur 63°C und eine Rast-Dauer von 25 Minuten. Der Brautomat steuert in diesem Schritt das Induktionskochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Rast-Timer ist eine Stoppuhr. Wenn diese Stoppuhr die Rast-Dauer von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft _autonext_. Wenn _autonext_ aktiviert ist, springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Bespiel zum Schritt _Verzuckerung 72°C_. Die Rast Verzuckerung hat eine Rasttemperatur von 72°C. Automatisch erhöht der Brautomat die Leistung vom Induktionskochfeld, um die Rast-Temperatur zu erreichen.
 
-* am Ende einer Rast mit aktiviertem _autonext wird der Maischeprozess automatisch fortgesetzt und die GGM IDS bleint eingeschaltet
+* am Ende einer Rast mit aktiviertem _autonext_ wird der Maischeprozess automatisch fortgesetzt und die GGM IDS bleibt eingeschaltet.
 
 ![Maischeplan autonext](/docs/img/Maischeplan-autonext2.jpg)
 
 Die Eigenschaft _autonext_ im siebten Schritt _Abmaischen 78°C_ ist nicht aktiviert. Wenn der Brautomat auf ein deaktivertes autonext trifft, beendet der Brautomat die aktuelle Rast nach Ablauf der Rast-Dauer und setzt die Leistung vom Induktionskochfeld auf 0% (aus). In diesem Status wird der "Play Button" rot angezeigt. Zum Fortsetzen des Brauvorgangs muss auf den Play Button geklickt werden.
 
-Als aktive Rast wird auf diesem Bild "Kochen" angezeigt. Die aktuelle Leistung wird mit 0% angezeigt und der Play Button ist rot. Dieser Status ist genau dann erreicht, wenn die Rast _Abmaischen 78°C_ beendet ist und der Brautomat auf das Fortsetzen durch eine Aktivität durch den Anwender wartet.
+Als aktive Rast wird auf diesem Bild "Kochen", die aktuelle Leistung der GGM IDS wird mit 0% angezeigt und der Play Button ist rot. Dieser Status ist genau dann erreicht, wenn die Rast _Abmaischen 78°C_ beendet ist und der Brautomat auf das Fortsetzen durch eine Aktivität durch den Anwender wartet.
 
 Während im ersten Beispiel von _autonext_ im Schritt Einmaischen meist direkt der Play Button zum Fortsetzen angeklickt wird, kann im zweiten Beispiel Abmaischen eine längere Zeit für das Läutern und die Läuterruhe vergehen. Der Brautomat wird in dem Zustand "Klicke Play Button" stehen gelassen. Es können in diesem Zustand alle Aktoren verwendet werden.
 
@@ -107,7 +107,7 @@ _Hintergrund: Wenn die Funktion autonext aktiviert ist, vergleicht der Brautomat
 
 ## Sonderfunktion Aktoren Schalten
 
-Eine zweite Sonderfunktion sind Steuerbefehle für das Induktionskochfeld, den Nachguss und die Aktoren. Die Syntax für den Maischeschritt lautet Aktorname Doppelpunkt Leistung. Dabei kann die entweder ON oder OFF sein oder eine Zahl zweichen 0.100%. Dabei entspricht der Status OFF dem Wert 0% und ON dem Wert 100%. Die Rasttemperatur und die Rastdauer müssen für diese Sonderfunktion auf 0 gesetzt sein. Der Steuerbefehl für das Induktionskochfeld lautet IDS. Der Steuerbefehl für den Nachguss lautet HLT. Für den Nachguss ist zusätzlich der Steuerbefehl Nachguss nutzbar. Der Steuerbefehl für einen Aktor ist der Aktorname.
+Eine zweite Sonderfunktion sind Steuerbefehle für das Induktionskochfeld, den Nachguss und die Aktoren. Die Syntax für den Maischeschritt lautet Aktorname Doppelpunkt Leistung. Dabei kann die Leistung entweder ON oder OFF oder eine Zahl zwischen 0 und 100% sein. Dabei entspricht der Status OFF dem Wert 0% und ON dem Wert 100%. Die Rasttemperatur und die Rastdauer müssen für diese Sonderfunktion auf 0 gesetzt sein. Der Steuerbefehl für das Induktionskochfeld lautet IDS. Der Steuerbefehl für den Nachguss lautet HLT. Für den Nachguss ist zusätzlich der Steuerbefehl Nachguss nutzbar. Der Steuerbefehl für einen Aktor ist der Aktorname.
 
 ![Sonderfunktion Steuerbefehl](/docs/img/Maischeplan-Aktoren.jpg)
 
@@ -138,22 +138,22 @@ Für das Beispiel sei folgende Konfiguration für die GGM IDS bzw. den MasicheSu
 
 Die maximale Ausgangsleistung ist mit 100% auf dem Standardwert konfiguriert. Die Temperatur "Übergang zum Kochen" beträgt 95°C. Ab dieser Temepratur beträgt die maximale Ausgangsleistung der GGM IDS nur noch 80%.
 
-Der Maischeplan in der Abbildung startet mit dem Schritt "Hauptguss aufheizen". Das Induktionskochfeld GGM IDS würde mit der Leistung "Max. Leistung IDS" (Parameter im Tab Temperatursteuerung) das Wasser erhitzen. In diesem Beispiel soll der Parameter "Max. Leistung IDS" den Wert 100% haben.
+Der Maischeplan in der Abbildung startet mit dem Schritt "Hauptguss aufheizen". Das Induktionskochfeld GGM IDS würde mit der Leistung "Max. Leistung IDS" (Parameter im Tab Temperatursteuerung) das Wasser erhitzen, also mit 100%.
 
 ![Sonderfunktion Steuerbefehl](/docs/img/aktoren_schalten2.jpg)
 
-Bei 59°C startet der Rasttimer. Die Rastdauer beträgt null Minuten. Der Brautomat springt in die nächste Zeile zum Schritt 2.
-Der Steuerbefehl IDS:65 versetzt die maximale Leistung der IDS auf 65%. Der Brautomat springt in die nächste Zeile zum Schritt 3.
-Nun wird von 59°C auf die Zieltemperatur im Schritt "Einmaischen" aufgeheitzt. Die Leistung der IDS beträgt 65%
+Bei 59°C startet der Rasttimer. Die Rastdauer beträgt null Minuten. Der Brautomat springt in die nächste Zeile zu Schritt 2.
+Der Steuerbefehl IDS:65 setzt die maximale Leistung der IDS auf 65%. Der Brautomat springt in die nächste Zeile zu Schritt 3.
+Nun wird von 59°C auf die Zieltemperatur im Schritt "Einmaischen" aufgeheitzt. Die maximale Leistung der IDS beträgt 65%.
 
 Die maximale Ausgangsleistung von 65% wird in den folgenden Maischeschritten beibehalten. Bis der Brautomat nach dem Schritt "Abmaischen" auf en Steuerbefehl IDS:100 trifft
 
 ![Sonderfunktion Steuerbefehl](/docs/img/aktoren_schalten3.jpg)
 
-Der Steuerbefehl ändert die maximale Ausgangsleistung der IDS auf 100%. Nun wird die Würze bis zur Temperatur "Übergang zum Kochen" bei 95°C (siehe oben) mit 100% Leistung erhitzt. Ab 95°C schaltet die GGM IDS auf 80% Leistung.
+Der Steuerbefehl ändert die maximale Ausgangsleistung der IDS auf 100%. Nun wird die Würze bis zur Temperatur "Übergang zum Kochen" bei 95°C (siehe oben) mit 100% Leistung erhitzt. Ab 95°C schaltet die GGM IDS auf 80% Leistung. 80% entspricht dem Parameter "Leistung ab Übergang".
 
-Mit den Steuerbefehlen für die IDS kann ein Anbrennen der Maische oder ein Überkochen der WÜrze verhindert werden.
+Mit den Steuerbefehlen für die IDS kann ein Anbrennen der Maische oder ein Überkochen der Würze verhindert werden, insbesondere bei kleineren Kesselvolumen.
 
 ## Brauverfahren
 
-Durch die Tabellenform ist das Grundprinzip vom Brautomat die aufsteigende Infusion. Das schließt Varianten wie bspw. das Earlsche Kochmaischverfahren ein. Mit Hilfe der Eigenschaft "autonext" können auch andere Brauverfahren umgesetzt werden. Es gilt aber zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "halber Automatik" unterstützen kann. Ein auslösender Trigger für eine Aktion wie bspw. das Ziehen von Teilmaischen, muss durch den Anwender manuell erfolgen. Manuell bedeuet beim Brautomat durch das klicken vom Play Button. Eine Rast mit einer Minute Dauer und deaktiviertem autonext kann ein Auslöser sein.
+Durch die Tabellenform ist das Grundprinzip vom Brautomat die aufsteigende Infusion. Das schließt Varianten wie bspw. das Earlsche Kochmaischverfahren ein. Mit Hilfe der Eigenschaft "autonext" können auch andere Brauverfahren umgesetzt werden. Es gilt aber zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "halber Automatik" unterstützen kann. Ein auslösender Trigger für eine Aktion wie bspw. das Ziehen von Teilmaischen, muss durch den Anwender manuell erfolgen. Manuell bedeuet beim Brautomat das Anklicken vom Play Button. Eine Rast mit null Minuten Dauer und deaktiviertem autonext kann als Auslöser für eine manuelle Aktion genutzt werden.
