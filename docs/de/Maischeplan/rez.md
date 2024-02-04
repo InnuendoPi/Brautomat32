@@ -1,8 +1,10 @@
 # Einstellungen Maischeplan
 
+Der Brautomat bietet eine einfache Verwaltung der Maischepläne. Neben importieren und exportieren kann zwischen gespeicherten Maischeplänen gewechselt werden. Ebenso ist eine Zeitsteuerung möglich.
+
 ## Einstellungen
 
-In den Einstellungen kann der Maischeplan Name festgelegt werden. Aus dem Maischeplan Namen wird der Dateiname abgeleitet. Die Parameter *Gesamte Kochdauer* und *Nachisomerisierungszeit* werden angezeigt, sind aber nciht editierbar. Diese parameter werden beim Rezept Import eingelesen.
+In den Einstellungen kann der Maischeplan Name festgelegt werden. Aus dem Maischeplan Namen wird der Dateiname abgeleitet. Die Parameter *Gesamte Kochdauer* und *Nachisomerisierungszeit* werden angezeigt, sind aber nicht editierbar. Diese parameter werden beim Rezept Import eingelesen.
 
 ## Zeitsteuerung
 
@@ -24,19 +26,19 @@ Der Brautomat kann Braurezepte aus folgenden Quellen importieren:
 * BrewFather
 * Brautomat
 
-Aus einem importiertem Braurezept wird ein Brautomat Maischeplan. Empfohlen wird die Rezeptverwaltung und -entwicklung mit dem kbh2. Der Exportfilter "Brautomat" beinhaltet alle Daten, die zum Brauen benötigt werden. Nur mit dem kbh2 sind Mengenangaben wie bspw. bei Hopfengaben in Gramm oder beim Zubrühen in Liter und erforderlicher Temperatur möglich.
+Aus einem importiertem Braurezept wird ein Brautomat Maischeplan. Empfohlen wird die Rezeptverwaltung und -entwicklung mit dem kbh2. Der Exportfilter "Brautomat" beinhaltet alle Daten, die zum Brauen benötigt werden.
 
 Rezepte aus MaischeMalzundMehr sollten ebenfalls zunächst im kleinenBrauhelfer2 importiert und auf die individuellen Anlagenwerte, Rohstoffe etc. angepasst werden.
 
 Rezepte aus BrewFather müssen die Eigenschaft boilTime (Kochdauer) mit einem ganzzahligen Wert belegt haben. Empfohlen wird auch ein Wert für den Parameter Equipment -> whirlpoolTime. Rastnamen können bei BrewFather einen (nahezu beliebig) langen Fließtext enthalten. Der Text wird auf maximal 50 Buchstaben gekürzt. Brewfather erlaubt Fließkommazahlen und Text als Rastdauer. Die Parameter werden in ganzzahlige Werte gewandelt oder auf 0 gesetzt.
 
-*Hinweis: der ESP8266 hat nur einen kleinen RAM Speicher. Rezepte mit sehr lange Texten, Bildern oder anderen Anhängen können ggfs. nicht eingelesen werden.*
+*Hinweis: die ESP Microcontroller haben einen kleinen RAM Speicher. Rezepte mit sehr lange Texten, Bildern oder anderen Anhängen können ggfs. nicht eingelesen werden. Vor dem Import sollten Bilder und sehr lange Beschreibungen entfernt werden.*
 
 Importierte Rezepte werden im Ordner /Rezepte gespeichtert. Als Dateinamen wird der Rezpetnamen verwendet. Die maximale Dateinamenlänge im Arduino Dateisystem beträgt 31 Zeichen. Leerzeichen und Umlaute werden bei der Speicherung ersetzt.
 
 ## Optionen für den Import
 
-Der Brautomat benötigt einen Step Einmaischen (optional) und einen Step Abmaischen. Insbesondere der Schritt Abmaischen dient mit deaktivertem "autonext" als Trennschritt zwischen Maischen und Kochen. Beim Import kann der Brautomat fehlende Einmaisch- und Abmaischschritte einfügen.
+Der Brautomat benötigt einen Step Einmaischen (optional) und einen Step Abmaischen. Insbesondere der Schritt Abmaischen dient mit deaktivertem "autonext" als Trennschritt zwischen Maischen und Kochen. Beim Import kann der Brautomat fehlende Einmaisch- und Abmaischschritte einfügen. Zusätzlich können fehlende Temperaturen mit Vorgaben belegt werden.
 
 ## Maischeplan Wechseln
 
@@ -44,4 +46,8 @@ Der Brautomat verwaltet Maischepläne im Flash Speicher. Über die Auswahl *Mais
 
 ## Maischeplan Export
 
-Ein Masicheplan kann im JSON Format exportiert werden und jederzeit wiederverwendet werden.
+Ein Maischeplan kann im JSON Format exportiert werden. Zum Wiedereinlesen ist der Import im Format Brautomat zu verwenden.
+
+## Maischeplan löschen
+
+Der ausgewählte Maischeplan wird aus dem Flash Speicher entfernt.

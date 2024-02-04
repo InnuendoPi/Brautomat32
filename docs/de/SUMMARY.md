@@ -8,7 +8,7 @@
 * [Der Maischeplan](Maischeplan/info.md)
   * [Die Steuerung](Maischeplan/steuerung.md)
   * [Funktionen](Maischeplan/funktionen.md)
-  * [Rezept](Rezept/rez.md)
+  * [Rezept](Maischeplan/rez.md)
 * [AutoTune PID](Autotune-pid/info.md)
   * [AutoTune Prozess](Autotune-pid/atune.md)
   * [AutoTune Schritt für Schritt](Autotune-pid/steps.md)
