@@ -8,7 +8,13 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.35
+Version 1.35a
+
+* Fix:          WebServer: use MD5Builder instead of mbedtls (#9123)
+* Geändert:     Temperaturvorgaben Import in die Maischeplaneinstellungen Tab Voreinstellung Import verschoben
+* Geändert:     Maischeplan Wechsel, Import, Export und Löschen in Tab Verwaltung verschoben
+* Geändert:     Reihenfolge JS Dateien beim Start (lang.js vor brautomat.min.js)
+* Erweitert:    Anleitung auf gitbook
 
 * Geändert:     Steuerbefehle für IDS, HLT und Aktoren
 * Fix:          Im manuellen Modus war die Anzeige Leistung nach dem Abschalten nicht korrekt (progress bar)
