@@ -8,7 +8,11 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.35b
+Version 1.35c
+
+* Fix:          Löschen der aller Einstellungen und WLAN Einstellungen löschen
+* Update:       ESPTool 4.7.0
+* Geändert:     Flashen.cmd
 
 * Fix:          Fehler beenden Zeileneditor behoben, wenn eine neue hinzugefügt wurde
 * Geändert:     Zeileneditor wird nun mit Klick auf ein beliebiges Symbol zum Editieren beendet
