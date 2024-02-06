@@ -29,8 +29,8 @@ Im Tabellenkopf befinden sich folgende Buttons (von links nach rechts)
 * neue Zeile: füge einen neuen Maischeschritt an das Ende der Tabelle an
 * Löschen: lösche die gesammte Tabelle (leerer Maischeplan)
 * Neu laden und Exit: dieser Button hat zwei Funktionen
-  * Reload: lese das Rezept aus der Datei neu. Änderungen werden nicht gespeichert
-  * Exit: verlasse den Zeileneditor ohne Speichern
+  * Reload: lese das Rezept aus der Datei neu. Änderungen werden nicht gespeichert. Der Button wird blau angezeigt
+  * Exit: verlasse den Zeileneditor ohne Speichern. Der Button wird grau angezeigt
 * Speicher: Maischeplan speichern
 * Database: Maischeplan Auswahl, Import, Export und Maischeplan Zeitplaner
 * Collapse: Maischeplan Tabelle ein- und ausklappen
@@ -52,7 +52,11 @@ Ein Maischeplan kann im Brautomat verändert oder auch vollständig neu erstellt
 
 ![Maischeplan editieren](/docs/img/brautomat-3.jpg)
 
-In der Abbildung wird deutlich, dass immer nur eine Zeile im Editormodus verändert werden kann. Das gilt nicht nur für die Werte Rastname, Rastdauer und Rasttemperatur, sondern auch für die Eigenschaft _autonext_. Der Editormodus einer Zeile kann mit dem Button _Speichern_ zum Abspeichern der Änderung oder mit dem Button _Exit_ zum Beenden ohne speichern verlassen werden. Sobald der Editormodus mit einem der zwei Möglichkeiten verlassen wird, wechselt der Button _Exit_ in die Funktion _Reload_. Hier wird die Doppelfunktion vom Button _Reload_ und _Exit_ deutlich.
+Es können nun nacheinander beliebig viele Tabellenzeilen verändert werden. Sobald ein Symbol zum Editieren des Maischeplans angeklickt wurde, wechselt der Button _Speichern_ von grün in rot. Sind alle Änderungen durchgeführt, muss der Maischeplan mit dem Button _Speichern_ abgespeichert werden. Alternativ können alle Änderungen mit dem Button _Exit_ zum Beenden ohne speichern verworfen werden. Sobald der Editormodus mit einem der zwei Möglichkeiten verlassen wird, wechselt der Button _Exit_ in die Funktion _Reload_ und der Speichern Button wird grün dargestellt.
+
+* _der grüne Button Speichern wird rot dargestellt, wenn Änderungen am Maischeplan noch nicht gespeichert wurden._
+* _der blaue Button Reload wird mit einem grauen Exit Symbol dargestellt, wenn Änderungen am Maischeplan verworfen werden können._
+* _der Power Button Braustart ist deaktiviert und wird grau dargestellt, solange Änderungen im Maischeplan nicht gespeichert oder verworfen wurden_
 
 Wenn der Maischeprozess bereits gestartet wurde, ändert sich das Verhalten.
 
@@ -62,7 +66,7 @@ Die Buttons zum Editieren werden ausgeblendet. Um diese wieder sichtbar zu mache
 
 ![Maischeplan editieren](/docs/img/brautomat-5.jpg)
 
-Wenn der Maischeprozess pausiert ist, wird der Button Pause in der Steuerung rot dargestellt und die Funktionen zum Editieren werden eingelendet. Das Induktionskochfeld wird nicht ausgeschaltet. Es wird weiterhin die Rasttemperatur gehalten. Der Rasttimer wird angehalten.
+Wenn der Maischeprozess pausiert ist, wird der Button Pause in der Steuerung rot dargestellt und die Funktionen zum Editieren werden eingelendet. Das Induktionskochfeld wird nicht ausgeschaltet. Es wird weiterhin die Rasttemperatur gehalten. Der Rasttimer wird angehalten. Wird der Maischeplan verändert, wird der Pause Button zum Fortsetzen vom Maischeprozess deaktiviert und grau dargestellt, bis die Änderungen im Maischeplan entweder gespeichert oder verworfen wurden.
 
 Anwendungsbeispiel:\
 Am Ende vom Maischeprozess wird über eine Jodprobe festgestellt, dass die Maische noch nicht jodnormal ist und noch Stärke vorhanden ist. Die Rast Verzuckerung 72°C soll verlängert werden:

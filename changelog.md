@@ -8,7 +8,14 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.35a
+Version 1.35b
+
+* Fix:          Fehler beenden Zeileneditor behoben, wenn eine neue hinzugefügt wurde
+* Geändert:     Zeileneditor wird nun mit Klick auf ein beliebiges Symbol zum Editieren beendet
+* Geändert:     der Speichern Button wird bei Änderung Maischeplan rot angezeigt. Nach Speichern oder verlassen grün
+* Geändert:     der Button Zeileneditor verlassen ohne speichern wird bei Änderung im Maischeplan grau dargestellt
+* Geändert:     Der Fokus wird mit Klick auf Tabellenzeile editieren oder Tabellenzeile hinzufügen auf das Element Name (erste Spalte) gesetzt
+* Geändert:     Der Button Database (Zeitplaner, Maischeplan wechseln, importieren, exportieren oder löschen) wird bei Änderungen am Maischeplan ausgeblendet
 
 * Fix:          WebServer: use MD5Builder instead of mbedtls (#9123)
 * Geändert:     Temperaturvorgaben Import in die Maischeplaneinstellungen Tab Voreinstellung Import verschoben
