@@ -8,35 +8,15 @@ Die Installation unterteilt sich in Firmware flashen und WLAN Konfiguration.
 
 Die Installation der Firmware wird über das im ZIP Archiv enthaltene Script "Flashen.cmd" durchgeführt. Das Archiv Firmware.zip wird in einem beliebigen Ordner entpackt. Der ESP Microcontroller wird mit per USB Kabel mit dem PC/Notebook verbunden. Ein Doppelklick auf das Script Flashen.cmd startet das Flashen der Firmware.
 
-An dieser Stelle kann es je nach System etwas komplizierter werden:\
-Das Betriebssystem MS Windows erstellt beim Verbinden vom ESP Microcontroller mit einem USB Anschluss am PC oder Notebook automatisch einen seriellen COM Port. Abhängig vom System kann das COM3, COM4 oder höher sein. Das Script Flashen.cmd ist voreingestellt auf den seriellen Anschluss COM3. Sollte der ESP Microcontroller nicht mit COM3 verbunden sein, muss im Script Flashen.cmd in den Zeilen 6 und 8 "COM3" durch den korrekten COM Port ersetzt werden. Die Datei Flashen.cmd ist eine Textdatei und kann mit einem Editor (bspw. notepad) bearbeitet werden.
-
-```bash
-1: @ECHO OFF
-2: CLS
-3: SET SCRIPT_LOCATION=%~dp0
-4: cd %SCRIPT_LOCATION%
-5: echo erase flash
-6: esptool.exe -cp COM3 -cd nodemcu -ce
-7: echo Flash firmware and LittleFS
-8: esptool.exe -cp COM3 -cd nodemcu -ca 0x000000 -cf Brautomat.ino.bin -ca 0x200000 -cf Brautomat.mklittlefs.bin
-9: echo ESC to quit
-10: pause
-11: exit
-```
-
-In den Zeilen Nummer 6: und 8: nur COM3 verändern. Alles andere nicht verändern. Die Zeilennummern sind nur in dieser Anleitung als Hilfe angegeben.
-Der COM Port kann auf Windows Systemen über den MS Windows Geräte-Manager herausgefunden werden:
+Das Betriebssystem MS Windows erstellt beim Verbinden vom ESP Microcontroller mit einem USB Anschluss am PC oder Notebook automatisch einen seriellen COM Port.
 
 ![COM Port](/docs/img/com.jpg)
 
-Im Bild wurde ein ESP Device auf COM7 gefunden. In den Zeilen 6 und 8 muss COM3 durch COM7 ersetzt werden.
+Im Bild wurde ein ESP Device auf COM7 gefunden. In seltenen Fällen wird unter MS Windows kein serieller COM Port automatisch bereitgestellt. Ein USB Treiber für ESP Microcontroller ist auf der Wemos Webseite verfügbar: <http://www.wch.cn/download/CH341SER_ZIP.html>
 
 Sollte gar kein ESP Microcontroller gefunden werden, ist zunächst das USB Kabel zu ersetzen. Ein schlechtes USB Kabel wird u.a. im Hobbybrauer Forum sehr häufig als Ursache für fehlerhaftes Erkennen oder Flashen genannt.
 
-In seltenen Fällen wird unter MS Windows kein serieller COM Port automatisch bereitgestellt. Ein USB Treiber für ESP Microcontroller ist auf der Wemos Webseite verfügbar: <http://www.wch.cn/download/CH341SER_ZIP.html>
-
-Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/igrr/esptool-ck/releases>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme. Die Windows-Version ist im ZIP Archiv enthalten. ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This code is licensed under GPL v2.
+Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/espressif/esptool>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme. Die Windows-Version 64bit ist im ZIP Archiv enthalten. ESPTool is licensed under GPL v2.
 
 ## Manuelles Flashen MS Windows und Linux
 
@@ -44,21 +24,19 @@ Falls das Script nicht genutzt werden kann, kann die Firmware manuell auf den ES
 
 ESP8266 Step 1 Flash löschen:
 
-- `esptool.exe -cp COM3 -cd nodemcu -ce\`
+- `esptool.exe --chip esp8266 erase_flash`
 
 ESP8266 Step 2 Firmware flashen:
 
-- `esptool.exe -cp COM3 -cd nodemcu -ca 0x000000 -cf Brautomat.ino.bin -ca 0x200000 -cf Brautomat.mklittlefs.bin\`
+- `esptool.exe --chip esp8266 write_flash 0x000000 Brautomat.ino.bin 0x200000 Brautomat.mklittlefs.bin`
 
 ESP32 Step 1 Flash löschen:
 
-- `esptool.exe -p COM3  --chip esp32 erase_flash`
+- `esptool.exe --chip esp32 erase_flash`
 
 ESP32 Step 2 Firmware flashen:
 
-- `esptool.exe --chip esp32 --port COM3 --baud 921600  --before default_reset --after hard_reset write_flash  -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 Brautomat32.ino.bootloader.bin 0x8000 Brautomat32.ino.partitions.bin 0xe000 boot_app0.bin 0x10000 Brautomat32.ino.bin 0x2d0000 Brautomat32.mklittlefs.bin`
-
-COM3 ist durch den tatsächlichen seriellen Anschluss zu ersetzen. Die Befehlszeilen Step 1 und 2 setzen voraus, dass die Dateien esptool und die Firmware Dateien im gleichen Verzeichnis liegen.
+- `esptool.exe --chip esp32 --before default_reset --after hard_reset write_flash 0x1000 Brautomat32.ino.bootloader.bin 0x8000 Brautomat32.ino.partitions.bin 0xe000 boot_app0.bin 0x10000 Brautomat32.ino.bin 0x2d0000 Brautomat32.mklittlefs.bin`
 
 ## Firmware flashen mit macOS
 
