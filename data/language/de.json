@@ -153,7 +153,7 @@
     "IDS_PU": "Periodendauer Pu (period)",
     "IDS_SAMPLE": "Intervall (SampleTime) [1000ms]",
     "IDS_RULE": "PID Algorithmus",
-    "IDS_RULE_LIST": ["manueller Kp Ki KD Modus", "AutoTune PID Modus"],
+    "IDS_RULE_LIST": ["manueller PID Modus", "AutoTune PID Modus"],
     "IDS_KP": "PID Kp",
     "IDS_KI": "PID Ki",
     "IDS_KD": "PID Kd",

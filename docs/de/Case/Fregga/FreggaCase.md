@@ -6,10 +6,12 @@ Das Gehäuse ist unterteilt in die zwei Baugruppen Gehäuseunterteil und Gehäus
 ## Optionen für den Gehäusedeckel
 
 * mit Display, PWM Modul und Hauptschalter
+* mit Display, zwei PWM Modulen und Hauptschalter
 * nur Display
 * ohne Auschnitte (kein Display, kein PWM, kein Hauptschalter)
 
 ![Deckel mit Display und PWM](/docs/img/Fregga_Deckel_voll.jpg)
+![Deckel mit Display und zwei PWM](/docs/img/Fregga_Deckel_Aktoren.jpg) \
 ![Deckel mit Display](/docs/img/FreggaCase_Deckel_Display.jpg)
 ![geschlossener Deckel](/docs/img/FreggaCase_Deckel_ohne.jpg)
 
