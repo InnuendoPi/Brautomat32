@@ -8,7 +8,13 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.35c
+Version 1.35d
+
+* Geändert:     wenn ein neuer Maischeschritt leer bleibt (ohne Name, Dauer, Temperatur), wird die Zeile beim Speichern ignoriert
+* Update:       ArduinoJSON Version 7 (alloc heap / stack). Alle JSON Verarbeitungen auf API V 7 angepasst
+* Geändert:     Überarbeitung aller ArduinoJSON arrays und objects
+* Geändert:     default Leistung bei Sensorfehler auf 0% angepasst (greetz@lowPerformer)
+* Fix:          Webserver: simplifying webserver file uploads via form POST (#9211)
 
 * Fix:          Löschen der aller Einstellungen und WLAN Einstellungen löschen
 * Update:       ESPTool 4.7.0

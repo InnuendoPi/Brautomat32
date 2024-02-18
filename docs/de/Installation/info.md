@@ -4,7 +4,7 @@ Die Installation unterteilt sich in Firmware flashen und WLAN Konfiguration.
 
 ## Firmware flashen mit MS Windows
 
-[![Download ESP8266](https://img.shields.io/badge/Download-ESP8266-green.svg)](https://github.com/InnuendoPi/Brautomat/releases/download/Release/Firmware.zip) [![Download ESP32](https://img.shields.io/badge/Download-ESP32-blue.svg)](https://github.com/InnuendoPi/Brautomat32/releases/download/Release/Firmware.zip)
+[![Download ESP8266](https://img.shields.io/badge/Firmware-ESP8266-green.svg)](https://github.com/InnuendoPi/Brautomat/releases/download/Release/Firmware.zip) [![Download ESP32](https://img.shields.io/badge/Firmware-ESP32-blue.svg)](https://github.com/InnuendoPi/Brautomat32/releases/download/Release/Firmware.zip)
 
 Die Installation der Firmware wird über das im ZIP Archiv enthaltene Script "Flashen.cmd" durchgeführt. Das Archiv Firmware.zip wird in einem beliebigen Ordner entpackt. Der ESP Microcontroller wird mit per USB Kabel mit dem PC/Notebook verbunden. Ein Doppelklick auf das Script Flashen.cmd startet das Flashen der Firmware.
 
@@ -12,11 +12,13 @@ Das Betriebssystem MS Windows erstellt beim Verbinden vom ESP Microcontroller mi
 
 ![COM Port](/docs/img/com.jpg)
 
-Im Bild wurde ein ESP Device auf COM7 gefunden. In seltenen Fällen wird unter MS Windows kein serieller COM Port automatisch bereitgestellt. Ein USB Treiber für ESP Microcontroller ist auf der Wemos Webseite verfügbar: <http://www.wch.cn/download/CH341SER_ZIP.html>
+Im Bild wurde ein ESP Device auf COM7 gefunden. In seltenen Fällen wird unter MS Windows kein serieller COM Port automatisch bereitgestellt. USB Treiber für ESP Microcontroller sind auf folgenden Webseiten verfügbar: (MS Win und macOS)
 
-Sollte gar kein ESP Microcontroller gefunden werden, ist zunächst das USB Kabel zu ersetzen. Ein schlechtes USB Kabel wird u.a. im Hobbybrauer Forum sehr häufig als Ursache für fehlerhaftes Erkennen oder Flashen genannt.
+[![ESP8266 Treiber](https://img.shields.io/static/v1?label=Treiber&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://www.wch-ic.com/search?t=all&q=ch341) [![ESP32 Treiber](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/espressif/esptool>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme. Die Windows-Version 64bit ist im ZIP Archiv enthalten. ESPTool is licensed under GPL v2.
+Sollte gar kein ESP Microcontroller gefunden werden, ist zunächst das USB Kabel zu ersetzen. Ein schlechtes USB Kabel wird u.a. im Hobbybrauerforum sehr häufig als Ursache für fehlerhaftes Erkennen oder Flashen genannt.
+
+Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/espressif/esptool>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme (macOS, Linux). Die Windows-Version 64bit ist im ZIP Archiv enthalten. ESPTool is licensed under GPL v2.
 
 ## Manuelles Flashen MS Windows und Linux
 

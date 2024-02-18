@@ -153,7 +153,7 @@
     "IDS_PU": "Ultimate period Pu",
     "IDS_SAMPLE": "SampleTime [1000ms]",
     "IDS_RULE": "PID algorithmus",
-    "IDS_RULE_LIST": ["manual Kp Ki KD mode", "ATUNE IDS PID mode"],
+    "IDS_RULE_LIST": ["manual PID mode", "AutoTune PID mode"],
     "IDS_KP": "PID Kp",
     "IDS_KI": "PID Ki",
     "IDS_KD": "PID Kd",
