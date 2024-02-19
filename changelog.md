@@ -10,6 +10,8 @@ Server Sent Events (8 SSE channels)
 
 Version 1.35d
 
+* Geändert:     Wird vor dem Hinzufügen einer neuen Zeile zum Maischeplan eine vorhandene Zeile angeklickt, wird die neue Zeile nach der angeklcikten Tabellenzeile eingefügt.
+* Fix:          Script Flashen.cmd Parameter --baud eingefügt
 * Geändert:     wenn ein neuer Maischeschritt leer bleibt (ohne Name, Dauer, Temperatur), wird die Zeile beim Speichern ignoriert
 * Update:       ArduinoJSON Version 7 (alloc heap / stack). Alle JSON Verarbeitungen auf API V 7 angepasst
 * Geändert:     Überarbeitung aller ArduinoJSON arrays und objects
