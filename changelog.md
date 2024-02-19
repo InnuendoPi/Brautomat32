@@ -8,9 +8,12 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.35d
+Version 1.35e
 
-* Geändert:     Wird vor dem Hinzufügen einer neuen Zeile zum Maischeplan eine vorhandene Zeile angeklickt, wird die neue Zeile nach der angeklcikten Tabellenzeile eingefügt.
+* Geändert:     Wenn ein Maischeprozess gestartet wird, werden die Buttons manueller Modus deaktiviert
+* Geändert:     der Button Maischeplan speichern wird nur noch angezeigt, wenn eine Änderung vorgenommen wurde (der grüne Speichern Button entfällt)
+
+* Geändert:     Wird vor dem Hinzufügen einer neuen Zeile zum Maischeplan eine vorhandene Zeile angeklickt, wird die neue Zeile nach der angeklickten Tabellenzeile eingefügt.
 * Fix:          Script Flashen.cmd Parameter --baud eingefügt
 * Geändert:     wenn ein neuer Maischeschritt leer bleibt (ohne Name, Dauer, Temperatur), wird die Zeile beim Speichern ignoriert
 * Update:       ArduinoJSON Version 7 (alloc heap / stack). Alle JSON Verarbeitungen auf API V 7 angepasst
