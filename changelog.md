@@ -8,7 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.35e
+Version 1.35f
+
+* Geändert:     eine Tabellenzeile wird nach einem Klick mit Markierung angezeigt
+* Geändert:     Wird eine Zeile zum Maischeplan hinzugefügt, wird die Zeile mit Markierung angezeigt und der Fokus wird auf die erste Zelle (Rastname) gesetzt
 
 * Geändert:     Wenn ein Maischeprozess gestartet wird, werden die Buttons manueller Modus deaktiviert
 * Geändert:     der Button Maischeplan speichern wird nur noch angezeigt, wenn eine Änderung vorgenommen wurde (der grüne Speichern Button entfällt)

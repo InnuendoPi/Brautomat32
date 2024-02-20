@@ -44,18 +44,6 @@ Nicht alle Verbraucher benötigen ein leistungsstarkes SSR. Bspw. können Aktore
 
 Das Relaisboard kann per Jumpereinstellung auf High Trigger (es fließt Strom) und Low Trigger (es fließt kein Strom) eingestellt werden. Diese Möglichkeit macht das Relaisboard ideal für den Einsatz mit einem ESP8266 oder einer Port Erweiterung PCF8574.
 
-### Port Erweiterung PCF8574
-
-Wenn mehr Aktoren betrieben werden sollen, als der ESP8266 (nutzbare) GPIOs anbietet, ist die PCF8674 Porterweiterung eine gute Lösung
-
-![pcf8574](/docs/img/pcf8574.jpg)
-
-| Artikelname              | Link zum Artikel                  |
-| ------------------------ | --------------------------------- |
-| Port Erweiterung PCF8574 | [amazon](https://amzn.to/3YrVi02) |
-
-Die Porterweiterung muss an D6 und D7 vom ESP8266 angeschlossen werden. Mit dem Modul PCF8475 werden 6 zusätzliche Anschlüsse bereitgestellt. Der Brautomat unterstützt nur eine Porterweiterung!
-
 ### Ringheizelemente
 
 Ein Ringheizlement ist beim Kochen der Würze nützlich, wenn die Leistung der GGM IDS nicht mehr oder nur so eben ausreicht, um die Würze wallend zu kochen. Eine gute Auswahl an Ringheizelementen gibt es beim [Douglas von Crafthardware](https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel).

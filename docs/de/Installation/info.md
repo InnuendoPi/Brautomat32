@@ -1,6 +1,6 @@
 # Installation
 
-Die Installation unterteilt sich in Firmware flashen und WLAN Konfiguration.
+Um den Brautomat nutzen zu können, muss die Firmware geflasht werden und der ESP Microcontroller mit dem lokalen WLAN verbunden werden.
 
 ## Firmware flashen mit MS Windows
 
@@ -16,11 +16,11 @@ Im Bild wurde ein ESP Device auf COM7 gefunden. In seltenen Fällen wird unter M
 
 [![ESP8266 Treiber](https://img.shields.io/static/v1?label=Treiber&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://www.wch-ic.com/search?t=all&q=ch341) [![ESP32 Treiber](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-Sollte gar kein ESP Microcontroller gefunden werden, ist zunächst das USB Kabel zu ersetzen. Ein schlechtes USB Kabel wird u.a. im Hobbybrauerforum sehr häufig als Ursache für fehlerhaftes Erkennen oder Flashen genannt.
+Sollte gar kein ESP Microcontroller gefunden werden, ist zunächst das USB Kabel zu ersetzen. Ein schlechtes USB Kabel ist eine häufige Ursache für ein fehlerhaftes Erkennen oder Flashen.
 
 Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/espressif/esptool>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme (macOS, Linux). Die Windows-Version 64bit ist im ZIP Archiv enthalten. ESPTool is licensed under GPL v2.
 
-## Manuelles Flashen MS Windows und Linux
+## Manuelles Flashen MS Windows, macOS und Linux
 
 Falls das Script nicht genutzt werden kann, kann die Firmware manuell auf den ESP Microcontroller übertragen werden.
 
@@ -30,7 +30,7 @@ ESP8266 Step 1 Flash löschen:
 
 ESP8266 Step 2 Firmware flashen:
 
-- `esptool.exe --chip esp8266 write_flash 0x000000 Brautomat.ino.bin 0x200000 Brautomat.mklittlefs.bin`
+- `esptool.exe --chip esp8266 --baud 921600 write_flash 0x000000 Brautomat.ino.bin 0x200000 Brautomat.mklittlefs.bin`
 
 ESP32 Step 1 Flash löschen:
 
@@ -38,24 +38,11 @@ ESP32 Step 1 Flash löschen:
 
 ESP32 Step 2 Firmware flashen:
 
-- `esptool.exe --chip esp32 --before default_reset --after hard_reset write_flash 0x1000 Brautomat32.ino.bootloader.bin 0x8000 Brautomat32.ino.partitions.bin 0xe000 boot_app0.bin 0x10000 Brautomat32.ino.bin 0x2d0000 Brautomat32.mklittlefs.bin`
-
-## Firmware flashen mit macOS
-
-Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
-
-Mit macOS unterteilt sich das Flashen der Firmware in zwei Schritte. Im ersten Schritt wird mit dem Tool pyflasher die Firmware brautomat.ino.bin für den ESP8266 bzw. brautomat32.ino.bin für den ESP32 auf den ESP Microcontroller aufgespielt.
-
-![macOS](/docs/img/flashen_macos.png)
-
-Anschließend muss der Brautomat mit dem WLAN verbunden werden. Sobald der Brautomat mit dem WLAN verbunden ist, muss das Dateisystem aufgespielt werden.\
-Im Browser öffnen: <http://brautomat.local/update>
-
-Nach einem Klick auf den Button "Filesystem" wird die Datei brautomat.mklittlefs.bin für den ESP8266 bzw. brautomat32.mklittlefs.bin für den ESP32 ausgewählt und mit Klick auf Update Filesystem aufgespielt.
+- `esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 Brautomat32.ino.bootloader.bin 0x8000 Brautomat32.ino.partitions.bin 0xe000 boot_app0.bin 0x10000 Brautomat32.ino.bin 0x2d0000 Brautomat32.mklittlefs.bin`
 
 ## WLAN Konfiguration
 
-Nach dem Flashen der Firmware startet der Brautomat im AccessPoint Mode. Ein offenes WLAN mit dem Namen Brautomat wird sichtbar. Mit diesem WLAN muss eine Verbindung hergestellt werden. Sobald die Verbindung hergestellt ist, öffnet der Webbrowser das WLAN Konfigurationsportal. Sollte sich das Portal nicht automatisch öffnen, muss als Adresse <http://192.168.4.1> manuell eingegeben werden.
+Nach dem Flashen der Firmware startet der Brautomat im AccessPoint Mode. Ein offenes WLAN mit dem Namen _Brautomat_ wird sichtbar. Mit diesem WLAN muss eine Verbindung hergestellt werden. Das funktioniert sowohl vom PC oder Notebook, als auch mit dem Smartphone. Sobald die Verbindung hergestellt ist, öffnet der Webbrowser das WLAN Konfigurationsportal. Sollte sich das Portal nicht automatisch öffnen, muss als Adresse <http://192.168.4.1> manuell eingegeben werden.
 
 ![IDS](/docs/img/wlan1.jpg)
 
@@ -63,7 +50,9 @@ Nach dem Flashen der Firmware startet der Brautomat im AccessPoint Mode. Ein off
 
 ![IDS](/docs/img/wlan2.jpg)
 
-Hier muss das WLAN (SSID) und das Password konfiguriert werden. Mit Speichern startet der Brautomat neu und verbindet sich mit dem WLAN. Das Web Interface vom Brautomat ist über <http://brautomat.local> erreichbar.
+Hier muss das WLAN (SSID und das Password) konfiguriert werden. Mit Speichern startet der Brautomat neu und verbindet sich mit dem WLAN. Das Web Interface vom Brautomat ist über <http://brautomat.local> erreichbar.
+
+Damit ist die Grundinstallation bereits abgeschlossen. Der Vorgang Firmware flashen und WLAN Konfiguration ist nur einmal durchzuführen.
 
 ## Updates
 

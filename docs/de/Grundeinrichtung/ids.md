@@ -12,7 +12,7 @@ Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Eigenschaft
 
 Vorbelegt sind GPIOs (D5, D6 und D7) für das original Anschlusskabel GGM IDS (mit Anschluss an einer JST-HX Buchse). Als nächste Eigenschaft muss ein Temperatursensor angegeben werden, welcher dem MaischeSud Kessel zugewiesen wird. In der Auswahlliste erscheinen die Sensornamen der bereits eingerichteten Sensoren. In dieser Grundeinrichtung ist nur ein Sensor mit dem Namen "Sensor IDS2" vorhanden und wird ausgewählt.
 
-_Tipp_: _dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktuelle Temperatur genannt und wird im Maischeprozess immer wieder mit der Rast-Temperatur (Zieltemperatur) verglichen._
+_Tipp: dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktuelle Temperatur genannt und wird im Maischeprozess immer wieder mit der Rast-Temperatur (Zieltemperatur) verglichen._
 
 ![MaischeSud Kessel konfigurieren](/docs/img/IDS-konfigurieren.jpg)
 
@@ -22,7 +22,7 @@ Die Parameter auf dem Reiter "Temperatursteuerung" werden im Abschnitt "alle Par
 
 Nach der Grundkonfiguration muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID-Controller berechnet automatisch die benötigte Leistung der GGM IDS, um die Temperatur in der Maische (Ist-Temperatur) auf Rast-Temperatur zu bringen. Je besser der PID-Controller konfiguriert ist, desto genauer wird die Rast-Temperatur über die Rast-Dauer gehalten. Konfiguriert wird der PID-Controller über die zwei Parameter Ku und Pu, aus denen die Parameter P, I und D berechnet werden. Für eine anlagenbezogene Konfiguration wird der Prozess AutoTune im Abschnitt "AutoTune Schritt für Schritt" im Detail erläutert. Für diese erste Grundeinrichtung werden folgende Werte für den Verstärkungsfaktor Ku und die Periodendauer Pu eingetragen und dann die PID tuning Regel "IDS" ausgewählt:
 
-![IDS](/docs/img/IDS-AutoTune-erg.jpg)
+![IDS](/docs/img/IDS-pid-einrichten.jpg)
 
 Wenn die Werte für Ku und Pu eingetragen sind, ermittelt die Auswahl "PID Algorithmus" die drei Werte P, I und D automatisch. Eine Erläuterung aller Parameter erfolgt später.
 
@@ -41,3 +41,5 @@ Periodendauer Pu (ultimate period):         1500
 ```
 
 Mit dem Speichern der Konfiguration ist die Grundkonfiguration bereits abgeschlossen. Mit einem Temperatursensor und einem MaischeSud Kessel kann nun gebraut werden. Zum Brauen ist noch ein Maischeplan erforderlich.
+
+Die Tabs AutoTune und Profile werden in dieser Grundkonfiguration nicht betrachtet. Der AutoTune Prozess wird sehr detailliert in einem eigenem Abschnitt erläutert. Es wird dringend empfohlen, den AutoTune Prozess nach der Grundeinrichtung durchzuführen.
