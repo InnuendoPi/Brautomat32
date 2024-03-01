@@ -91,12 +91,12 @@ GPIO Zuordnung:
 | D0         | GPIO026 | ok     | ok     |                                               |
 | D1         | GPIO022 | ok     | ok     |                                               |
 | D2         | GPIO021 | ok     | ok     |                                               |
-| D3         | GPIO017 | ok     | ok     |                                               |
+| D3         | GPIO017 | ok     | ok     | DS18B20                                       |
 | D4         | GPIO016 | ok     | ok     |                                               |
-| D5         | GPIO018 | ok     | ok     |                                               |
-| D6         | GPIO019 | ok     | ok     |                                               |
-| D7         | GPIO023 | ok     | ok     |                                               |
-| D8         | GPIO005 | ok     | ok     |                                               |
+| D5         | GPIO018 | ok     | ok     | GGM IDS Interrupt blue/green                  |
+| D6         | GPIO019 | ok     | ok     | GGM IDS Command yellow                        |
+| D7         | GPIO023 | ok     | ok     | GGM IDS Relay white                           |
+| D8         | GPIO005 | ok     | ok     | Buzzer                                        |
 | D9         | GPIO027 | ok     | ok     | SCLK                                          |
 | D10        | GPIO025 | ok     | ok     | MISO                                          |
 | D11        | GPIO032 | ok     | ok     | MOSI                                          |
