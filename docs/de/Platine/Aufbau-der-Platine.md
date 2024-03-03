@@ -1,6 +1,8 @@
-# Aufbau der Platine
+# Aufbau der alten Platine
 
 Diese kurze Anleitung beschreibt den Aufbau der Platine. Der Platinenaufbau ist nicht anspruchsvoll. Diese Kurzbeschreibung ist als Hilfe für den ungeübten Bastler gedacht und richtet sich natürlich nicht an versierte Elektrotechniker. Informationen zum Löten, geeignete Lötkolben und Lötzin sind auf youtube oder ähnlichen Kanälen zu finden.
+
+_Hinweis: Die Platine mit LevelShifter kann nur mit dem ESP8266 betrieben werden._
 
 Die Stückliste der Platine:
 
