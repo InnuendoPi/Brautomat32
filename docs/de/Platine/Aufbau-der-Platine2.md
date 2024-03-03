@@ -1,8 +1,8 @@
-# Aufbau der neuen Platine ohne LevelShifter
+# Aufbau der Platine ESP8266/ESP32
 
 Diese kurze Anleitung beschreibt den Aufbau der Platine. Der Platinenaufbau ist nicht anspruchsvoll. Diese Kurzbeschreibung ist als Hilfe für den ungeübten Bastler gedacht und richtet sich natürlich nicht an versierte Elektrotechniker. Informationen zum Löten, geeignete Lötkolben und Lötzin sind auf youtube oder ähnlichen Kanälen zu finden.
 
-Die neue Platine ohne LevelShifter ist für den ESP8266 und den ESP32 Microcontroller geeignet. Die Platine mit LevelShifter ist nur mit dem ESP8266 einsetzbar.
+_Hinweis: Die neuere Platine (ohne LevelShifter) ist für den ESP8266 und den ESP32 Microcontroller geeignet._
 
 Die Stückliste der Platine:
 
