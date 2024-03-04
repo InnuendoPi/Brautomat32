@@ -8,8 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.37
+Version 1.37a
 
+* Fix:          ArduinoJSON Rezept Import
+* Update:       WiFiManager
 * Fix:          Rezeptimport KBH2 Dekoktion: Korrektur Volumen Dick- und Dünnmaische
 
 Version 1.36
