@@ -8,6 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
+Version 1.37
+
+* Fix:          Rezeptimport KBH2 Dekoktion: Korrektur Volumen Dick- und Dünnmaische
+
 Version 1.36
 
 * Geändert:     eine Tabellenzeile wird nach einem Klick mit Markierung angezeigt
