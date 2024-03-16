@@ -1,14 +1,70 @@
-# Aufbau der Platine ESP8266
+# Aufbau der Platine Version 1
 
 Diese kurze Anleitung beschreibt den Aufbau der Platine. Der Platinenaufbau ist nicht anspruchsvoll. Diese Kurzbeschreibung ist als Hilfe für den ungeübten Bastler gedacht und richtet sich natürlich nicht an versierte Elektrotechniker. Informationen zum Löten, geeignete Lötkolben und Lötzin sind auf youtube oder ähnlichen Kanälen zu finden.
 
-_Hinweis: Die Platine mit LevelShifter kann nur mit dem ESP8266 betrieben werden._
+## Platine Version 1
+
+Die Platine mit LevelShifter war die erste Version der Platine und stammt ursprünglich aus dem Projekt MQTTDevice. Die Platine Version 1 ist veraltet und wird nicht mehr weiterentwickelt.
+
+![Platine mit LevelShifter](/docs/img/Platine.jpg)
+
+## Jumperpositionen auf der Platine Version 1
+
+Die Platine hat 4 Jumper. Die Jumper J1, J2 und J3 müssen mindestens auf _2-3_ gesetzt werden.
+
+```Jumpereinstellung Kurzform
+- Wird ein Display eingesetzt, müssen J1 und J2 auf 1-2 gesteckt sein. 
+- Wir kein Display eingesetzt, müssen J1 und J2 auf 2-3 gesteckt sein. 
+- J3 wird immer auf 2-3 gesteckt.
+
+1. Jumper J1: Pin D1 
+    - In der Position 1-2 wird Pin D1 (GPIO 5) auf den Displayanschluss umgeleitet (SDL)
+    - in der Position 2-3 wird kein Display verwendet (default)
+2. Jumper J2: Pin D2
+    - In der Position 1-2 wird Pin D2 (GPIO 4) auf den Displayanschluss umgeleitet (SDA)
+    - in der Position 2-3 wird kein Display verwendet  (default)
+3. Jumper J3: Pin D4
+    - In der Position 1-2 wird Pin D4 (GPIO 2) auf den Displayanschluss umgeleitet.
+    - in der Position 2-3 wird Pin D4 nicht umgeleitet (default)
+
+4. Jumper J4: Stromzufuhr über GGM IDS
+    - wenn der Jumper J4 gesetzt ist, wird die Stromzufuhr von der GGM IDS für den Brautomat genutzt.
+    - wenn der Jumper J4 nicht gesetzt ist, wird die Stromzufuhr an den Anschluss *5V* und *GND* angeklemmt.
+```
+
+## Teileliste für die Platine Version 1
+
+| Anzahl                                                | Artikelname                    | Link zum Artikel                  |
+| ----------------------------------------------------- | ------------------------------ | --------------------------------- |
+| 1                                                     | Schraubklemmblock 2pol 2,54    | (voelkner S84366) |
+| 3                                                     | Schraubklemmblock 3pol 2,54    | (voelkner S84893) |
+| 2                                                     | Schraubklemmblock 5pol 2,54    | (voelkner S84806) |
+| 2                                                     | Schraubklemmblock 8pol 2,54    | (voelkner S84611) |
+| 1 alternativ ein zus. 5er Schraubklemmblock           | JST-HX Buchse 90° 2,54         | (voelkner D17526) |
+| 1                                                     | Stiftleiste 2,54               | (voelkner D19990) |
+| 4                                                     | Jumper 2,54                    | (voelkner S655251) |
+| 1                                                     | Widerstand 4,7kOhm             |  |
+| 1 ESP8266                                             | ESP8266 Wemos D1 mini          | [amazon](https://www.amazon.de/dp/B08BTYHJM1/?coliid=I3HCHU407TLWGX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_2FHXW05SH9AGJ9Z8WH2K) |
+| 1 ESP32 Alternative zum ESP8266                       | ESP32 D1 mini                  | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
+| 1                                                     | LevelShifter 8 Channel 5V 3.3V | [amazon](https://www.amazon.de/dp/B07HC5PB58/?coliid=I3T4KSZWWNYE26&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_YCVXDMRW8G4N4MVXQXC5) |
+| 1                                                     | Display Nextion 3.5" | [komputer.de](https://www.komputer.de/zen/index.php?main_page=product_info&cPath=30&products_id=617&zenid=l8eg2n29r5iai1l7ur8c8c5nu3) |
+|                                                       |                                |                                   |
+
+_Hinweis: die aufgeführten Links oder Artikelnummern sind rein informativ und nicht mit Affiliate/Marketing Programmen verknüpft._
+
+Die Position JST-HX Buchse ist für das original Anschlusskabel vorgesehen. Wird ein Ersatzkabel (ohne JST-HX Stecker) verwendet, kann an gleicher Stelle auf der Platine ein Schraubklemmblock 5pol im Rastermaß 2,54mm eingesetzt werden. Der Schaubklemmblock 2pol kann wahlweise unten rechts oder mittig links neben dem Wemos D1 mini eingesetzt werden.
+
+_Tipp:_ _der ESP8266 oder der ESP32 sollte gesockelt werden. Mit Sockel ist ausreichend Platz für den Widerstand unter dem ESP. Falls eine Fehlersuche erforderlich ist, kann ein gesockelter ESP von der Platine abgesteckt werden._
+
+Die Anschlüsse vom LevelShifter 8 Kanal müssen zur Anordnung auf der Platine identisch sein. Der Levelshifter aus dem Link hat diese Anordnung der Anschlüsse.
+
+![Levelshifter](/docs/img/Levelshifter.jpg)
+
+## Überlegungen vor dem Aufbau
 
 Die Stückliste der Platine:
 
 ![Stückliste](/docs/img/Stueckliste.jpg)
-
-## Überlegungen vor dem Aufbau
 
 Die Platine kann an zwei Stellen, abhängig von der späteren Nutzung, unterschiedlich bestückt werden:
 

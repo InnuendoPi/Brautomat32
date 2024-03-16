@@ -1,6 +1,6 @@
 # Anschlüsse
 
-![Platine](/docs/img/Anschluesse.jpg)
+![Platine 2](/docs/img/Anschluesse.jpg)
 
 ## Die GGM IDS anschließen
 
@@ -32,6 +32,8 @@ Der Brautomat unterstützt bis zu drei Temperatursensoren DS18B20. Der Anschluss
 | Spannung -   | braun oder schwarz  | GND |
 | |  | |
 
+Es gibt keine Reihenfolge bei den Anschlüssen für die digitalen Sensoren Dallas DS18B20.
+
 ## Temperatursensoren PT100x und MAX31865 anschließen
 
 | Typ         | Anschluss  |
@@ -45,3 +47,15 @@ Der Brautomat unterstützt bis zu drei Temperatursensoren DS18B20. Der Anschluss
 | Vin | 3V3 |
 | GND | GND |
 | | |
+
+Die Reihenfolge CS0 bis CS2 für den Anschluss von anlagogen Sensoren PT100x muss beachtet werden.
+
+## Display anschließen
+
+| Kabel         | Nextion Display | Anschluss |
+| ------------- | --------------- | ------------------------ |
+|     rot       | Strom + | Vcc |
+|   schwarz     | Strom - | GND |
+|    blau       | TX      | D1 |
+|    gelb       | RX      | D2 |
+|               |         |    |
