@@ -1,8 +1,8 @@
-# Aufbau der Platine ESP8266/ESP32
+# Aufbau der Platine Version 2 für ESP8266/ESP32
 
 Diese kurze Anleitung beschreibt den Aufbau der Platine. Der Platinenaufbau ist nicht anspruchsvoll. Diese Kurzbeschreibung ist als Hilfe für den ungeübten Bastler gedacht und richtet sich natürlich nicht an versierte Elektrotechniker. Informationen zum Löten, geeignete Lötkolben und Lötzin sind auf youtube oder ähnlichen Kanälen zu finden.
 
-_Hinweis: Die neuere Platine (ohne LevelShifter) ist für den ESP8266 und den ESP32 Microcontroller geeignet._
+_Hinweis: die Fehlerkorrektur für die Platine Version 2 mit ESP8266 beachten!_
 
 Die Stückliste der Platine:
 
@@ -12,6 +12,29 @@ Nummer 1: Widerstand 4.7kOhm\
 Nummer 2: JST-HX Buchse (weiß) und 5 Pol Schraubklemmblock\
 Nummer 3: passiver Piezo Buzzer\
 Nummer 4: Schraubklemmblöcke mit dem Rastermaß 2.54mm
+
+## Teileliste für die Platine Version 2
+
+Die Position JST-HX Buchse ist eine Alternative zum 5 Pol Schraubklemmblock. Das Kabel vom Bedienteil der GGM IDS2 hat den passenden Stecker für eine JST-HX Buchse. Wird statt dem Orignalkabel ein Ersatzkabel eingesetzt, ist die Verbindung mit einem 5er Schraubklemmblockj einfacher.
+
+| Anzahl                                                | Artikelname                    | Link zum Artikel                  |
+| ----------------------------------------------------- | ------------------------------ | --------------------------------- |
+| 3                                                     | Schraubklemmblock 3pol RM 2.54 | (voelkner S84893) |
+| 1                                                     | Schraubklemmblock 5pol RM 2.54 | (voelkner S84806) |
+| 1 alternativ zum Schraubklemmblock 5pol               | JST-HX Buchse 90° RM 2.54      | (voelkner D17526) |
+| 2                                                     | Schraubklemmblock 8pol RM 2.54 | (voelkner S84611) |
+| 2                                                     | Schraubklemmblock 12pol RM 2.54| (voelkner S84031) |
+| 1                                                     | Stiftleiste RM 2.54            | (voelkner D19990) |
+| 1                                                     | Widerstand 4,7kOhm             |                           |
+| 1 optional                                            | Passiver Buzzer 12mm 3V        |                           |
+| 1 ESP32                                               | ESP32 D1 mini                  | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
+| 1 ESP8266 alternative zum ESP32                       | ESP8266 Wemos D1 mini          | [amazon](https://www.amazon.de/dp/B08BTYHJM1/?coliid=I3HCHU407TLWGX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_2FHXW05SH9AGJ9Z8WH2K) |
+| 1 optional                                            | Display Nextion 3.5" | [komputer.de](https://www.komputer.de/zen/index.php?main_page=product_info&cPath=30&products_id=617&zenid=l8eg2n29r5iai1l7ur8c8c5nu3) |
+|                                                       |                                |                                   |
+
+_Hinweis: die aufgeführten Links oder Artikelnummern sind rein informativ und nicht mit Affiliate/Marketing Programmen verknüpft._
+
+Das Display Nextion 3.5 Zoll ist als Basic, Discovery oder Enhanced verfügbar. Für den Brautomat kann das aktuell günstigste Modell gewählt werden. Displays mit 2.8 Zoll oder kleiner sowie 4 Zoll und größer haben eine andere Pixel-Auflösung und werden vom Brautomat nicht unterstützt!
 
 ## Überlegungen vor dem Aufbau
 
@@ -55,6 +78,8 @@ In Schritt Nummer 3 werden die drei 3er Schraubklemmblöcke eingesetzt und verl�
 
 An die drei Anschlüssen werden Temperatursensoren DS18B20 angeschlossen. Es gibt keine Reihenfolge oder Rangordnung für diese drei Anschlüsse. Werden nur analoge PT100x Sensoren eingesetzt, können die drei Schraubklemmblöcke weggelassen werden.
 
+Mit der Version 2.1 der Platine kann ein optionaler 3er Schraubklemmblock an der Position GND neben den 3er Schraubklemmblöcken für Sensoren eingesetzt werden. Die zusätzlichen GND Anschlüsse sind nützlich, wenn Aktoren (Pumpen, Rührwerk, etc.) eingesetzt werden. Werden keine Aktoren eingesetzt, kann der Schraubklemmblock weggelassen werden.
+
 In Schritt Nummer 4 wird entweder die JST-HX Buchse für das Originalkabel oder ein 5er Schraubklemmblock für das Ersatzkabel eingesetzt und verlötet: (siehe Überlegungen vor dem Aufbau).
 
 ![JST-HX oder Schraubklemmblock](/docs/img/Aufbau6.jpg)
@@ -86,7 +111,7 @@ Die Beinchen am Widerstand werden um 90° gebogen (bspw. um einen Schlitzschraub
 
 Die Beinchen vom Widerstand werden auf der Rückseite leicht nach außen gebogen und verlötet. Mit einem Seitenschneider werden die Beinchen über dem Lötauge abgeschnitten.
 
-## Den ESP32 aufsockeln
+## Den ESP Microcontroller aufsockeln
 
 Durch das Aufsockeln lässt sich der ESP Mikrocontroller jederzeit von der Platine abnehmen. So kann wahlweise ein ESP8266 oder ein ESP32 eingesetzt werden. Das Aufsockeln ist auch bei einer Fehlersuche nützlich.
 
@@ -107,3 +132,25 @@ Nun wird der ESP aufgelegt und mit einem Lötpunkt auf jeder Seite fixiert. Jetz
 ![ESP32](/docs/img/Aufbau15.jpg)
 
 Abschließend sollten alle Lötpunkte überprüft werden. Wenn alle Lötpunkte verschlossen sind, ist der Brautomat fertig.
+
+## Den ESP8266 aufsockeln
+
+Wird ein ESP8266 verwendet, ist beim Einsetzen des ESP8266 auf den korrekten Sitz zu achten:
+
+![ESP8266](/docs/img/Platine_ESP8266.jpg)
+
+Die rote Linie kennzeichnet den Bereich für den korrekten Sitz des ESP8266: der ESP8266 wird in die innere Sockelreihe eingesteckt und es bleiben zum vorderen Platinenrand 2 Sockelreihen frei. Eine falsche Postion kann den ESP8266 zerstören!
+
+## Fehlerkorrektur Platine Version 2.0 ESP8266
+
+Bei der Platine 2.0 ohne LevelShifter hat sich ein Fehler eingeschlichen. Es fehlt eine Verbindung GND. Dieser Fehler tritt nur im Betrieb mit einem ESP8266 auf. 
+
+_Hinweis: Wird ein ESP32 eingesetzt, ist keine Fehlerkorrektur erforderlich._
+
+Zur Fehlerkorrektur muss ein Kabel vom Anschluss GND unten rechts zu einem beliebigen anderen GND Anschluss angeschlossen werden, bspw. an den Anschluss GND oben rechts.
+
+![Platine 2.0](/docs/img/Platine20_korr.jpg)
+
+Die fehlende Verbindung wurde mit der Platine Version 2.1 korrigiert. Die Version 2.1 unterscheidet sich von Version 2.0 durch den Aufdruck auf der Platine und die zusätzichen Anschlüsse GND oben rechts.
+
+![Platine 2.1](/docs/img/Platine21.jpg)
