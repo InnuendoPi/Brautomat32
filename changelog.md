@@ -8,8 +8,9 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.37f
+Version 1.37g
 
+* Geändert:     BrewFather Import Filter erweitert (tag recipe)
 * Fix:          BrewFather Import, Tests mit versch. Rezepten steht noch aus
 * Geändert:     Ticker handling optimiert
 * Geändert:     Standard SampleTime für Induktion auf 2000ms angepasst
