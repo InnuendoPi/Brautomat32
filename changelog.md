@@ -8,8 +8,11 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.37g
+Version 1.37h
 
+* Neu:          Funktion Erstelle neuen leeren Maischeplan
+* Neu:          Funktion Maischeplan umbenennen
+* Geändert:     Einstellung Maischeplan Anordnung angepasst
 * Geändert:     BrewFather Import Filter erweitert (tag recipe)
 * Fix:          BrewFather Import, Tests mit versch. Rezepten steht noch aus
 * Geändert:     Ticker handling optimiert

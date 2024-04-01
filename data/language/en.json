@@ -29,6 +29,7 @@
     "MAN_TT_INC": "increase power output",
     "SUD_NAME": "name",
     "SUD_NEW": "new mashplan",
+    "SUD_NEW_ERROR": "error mashplan already exists ",
     "SUD_REN": "rename mashplan",
     "SUD_KOCHDAUER": "boiling time [min]",
     "SUD_NACHISO": "post-isomerization time [min]",

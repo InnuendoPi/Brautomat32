@@ -29,6 +29,7 @@
     "MAN_TT_INC": "Leistung erhöhen",
     "SUD_NAME": "Name aktiver Maischeplan",
     "SUD_NEW": "Maischeplan erstellen",
+    "SUD_NEW_ERROR": "Fehler Maischeplan existiert bereits ",
     "SUD_REN": "Maischeplan umbenennen",
     "SUD_KOCHDAUER": "Gesamte Kochdauer [min]",
     "SUD_NACHISO": "Nachisomerisierungszeit [min]",
