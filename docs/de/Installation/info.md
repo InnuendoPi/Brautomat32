@@ -58,11 +58,13 @@ Damit ist die Grundinstallation bereits abgeschlossen. Der Vorgang Firmware flas
 
 Updates können im Brautomat über das Menü "Update" eingespielt werden. Eine neue Firmware kann über "WebUpdate" oder "Datei Update" eingespielt werden. Bei einer Aktualisierung der Firmware per WebUpdate lädt die Firmware die aktuelle Version aus dem Internet aus dem github Repository. Bei der Aktualisierung per Datei Update wird die Firmware per Upload vom lokalen PC geladen. Ein USB-Kabel oder das Script aus der Installation sind nicht erforderlich.
 
+### WebUpdate
+
 Das WebUpdate startet den Brautomat mehrfach neu. Als erstes wird die Firmware aktualisiert. Nach einem weiteren Neustart wird das Framework aktualisiert. Der Ablauf vom WebUpdate wird in der Datei webUpdateLog.txt protokolliert.
 
 Wenn die Option _WebUpdate mit Testversion_ aktiviert ist, wird das WebUpdate mit der aktuellen Entwicklerversion durchgeführt. Hierbei handelt es sich um Testversionen. Neue Funktionen in der Firmware werden (meistens) zunächst als Testversion im github Repository abgelegt. Für den produktiven Einsatz sind Testversionen nicht empfohlen.
 
-## DateiUpdate
+### DateiUpdate
 
 [![Download ESP8266](https://img.shields.io/badge/Download-ESP8266-green.svg)](https://github.com/InnuendoPi/Brautomat/blob/main/tools/Firmware.zip) [![Download ESP32](https://img.shields.io/badge/Download-ESP32-blue.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/tools/Firmware.zip)
 

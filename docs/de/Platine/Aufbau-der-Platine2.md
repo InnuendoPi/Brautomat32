@@ -19,17 +19,18 @@ Die Position JST-HX Buchse ist eine Alternative zum 5 Pol Schraubklemmblock. Das
 
 | Anzahl                                                | Artikelname                    | Link zum Artikel                  |
 | ----------------------------------------------------- | ------------------------------ | --------------------------------- |
-| 3                                                     | Schraubklemmblock 3pol RM 2.54 | (voelkner S84893) |
-| 1                                                     | Schraubklemmblock 5pol RM 2.54 | (voelkner S84806) |
+| 3                                                     | Schraubklemmblock 3pol RM 2.54 | [amazon](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 1 optional                                            | Schraubklemmblock 3pol RM 2.54 | |
+| 1                                                     | Schraubklemmblock 5pol RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 alternativ zum Schraubklemmblock 5pol               | JST-HX Buchse 90° RM 2.54      | (voelkner D17526) |
-| 2                                                     | Schraubklemmblock 8pol RM 2.54 | (voelkner S84611) |
-| 2                                                     | Schraubklemmblock 12pol RM 2.54| (voelkner S84031) |
-| 1                                                     | Stiftleiste RM 2.54            | (voelkner D19990) |
-| 1                                                     | Widerstand 4,7kOhm             |                           |
-| 1 optional                                            | Passiver Buzzer 12mm 3V        |                           |
+| 2                                                     | Schraubklemmblock 8pol RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 2                                                     | Schraubklemmblock 12pol RM 2.54| [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 1                                                     | Stiftleiste RM 2.54            | [amazon](https://www.amazon.de/dp/B01MQ5HJYQ?ref_=pe_27091401_487187591_302_E_DDE_dt_1) |
+| 1                                                     | Widerstand 4,7kOhm             | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
+| 1 optional                                            | Passiver Buzzer 12mm 3V        | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
 | 1 ESP32                                               | ESP32 D1 mini                  | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
 | 1 ESP8266 alternative zum ESP32                       | ESP8266 Wemos D1 mini          | [amazon](https://www.amazon.de/dp/B08BTYHJM1/?coliid=I3HCHU407TLWGX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_2FHXW05SH9AGJ9Z8WH2K) |
-| 1 optional                                            | Display Nextion 3.5" | [komputer.de](https://www.komputer.de/zen/index.php?main_page=product_info&cPath=30&products_id=617&zenid=l8eg2n29r5iai1l7ur8c8c5nu3) |
+| 1 optional                                            | Display Nextion 3.5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
 |                                                       |                                |                                   |
 
 _Hinweis: die aufgeführten Links oder Artikelnummern sind rein informativ und nicht mit Affiliate/Marketing Programmen verknüpft._
@@ -143,7 +144,7 @@ Die rote Linie kennzeichnet den Bereich für den korrekten Sitz des ESP8266: der
 
 ## Fehlerkorrektur Platine Version 2.0 ESP8266
 
-Bei der Platine 2.0 ohne LevelShifter hat sich ein Fehler eingeschlichen. Es fehlt eine Verbindung GND. Dieser Fehler tritt nur im Betrieb mit einem ESP8266 auf. 
+Bei der Platine 2.0 ohne LevelShifter hat sich ein Fehler eingeschlichen. Es fehlt eine Verbindung GND. Dieser Fehler tritt nur im Betrieb mit einem ESP8266 auf.
 
 _Hinweis: Wird ein ESP32 eingesetzt, ist keine Fehlerkorrektur erforderlich._
 
