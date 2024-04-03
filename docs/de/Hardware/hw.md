@@ -14,8 +14,7 @@ Eine Pumpe ist beim Läutern oder beim Transport in den Gärbehälter eine groß
 
 | Artikelname                                            | Link zum Artikel                  |
 | ------------------------------------------------------ | --------------------------------- |
-| Mini-Pumpe 12V DC                                      | [amazon](https://amzn.to/3E4iRUF) |
-| Mini-Pumpe 12V DC                                      | [amazon](https://amzn.to/3E4iRUF) |
+| Mini-Pumpe 12V DC                                      | [amazon](https://www.amazon.de/dp/B01NCKXJ92/?coliid=I1I94V063T6GE6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_SSRMRQS5W49WYA43JZ7Z) |
 | Pneumatische Steckverbinder 8mm x 1/2 Zoll 90° drehbar | [amazon](https://amzn.to/3XmH2nP) |
 
 Ebenfalls sehr gut und schnell sind Verbdinungen mit [Camlocks von Braubebo](https://www.braubebo.de/camlock/) wie auf dem ersten Bild dargestellt.
@@ -28,7 +27,7 @@ Mit dem Brautomat können sehr einfach SSRs geschaltet werden. SSR oder Solid St
 
 | Artikelname    | Link zum Artikel                  |
 | -------------- | --------------------------------- |
-| Fotek SSR 40DA | [amazon](https://amzn.to/3RSzKav) |
+| Fotek SSR 40DA | [amazon](https://www.amazon.de/dp/B09KTV425X/?coliid=I37LH2D7XQ7AYU&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_018F1S8N63CZYRB6XE54) |
 
 Anwenungsbeispiele für SSR: Wenn 220V an einem SSR Fotek über den Brautomat geschaltet wird, kann am "anderen Ende" der 220V Leitung eine Steckdose für einen beliebiges Gerät mit Stecker angebracht werden. Zum Beispiel für das Netzteil vom Rührwerk. Oder für einen Nachgusskocher. Oder für ein Ringheizlement. Auch das Netzteil der Rotek Pumpe kann über ein SSR ein- und ausgeschaltet werden.
 
@@ -40,10 +39,26 @@ Nicht alle Verbraucher benötigen ein leistungsstarkes SSR. Bspw. können Aktore
 
 | Artikelname        | Link zum Artikel                  |
 | ------------------ | --------------------------------- |
-| Relaisboard Keenso | [amazon](https://amzn.to/3K3gg11) |
+| Relaisboard Keenso 4 Kanal | [amazon](https://www.amazon.de/dp/B07QKHPBVP/?coliid=IW0L994AVYJSX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| Relaisboard Keenso 2 Kanal | [amazon](https://www.amazon.de/dp/B07PY7LF9Z/?coliid=IHJD818Z5259W&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 
 Das Relaisboard kann per Jumpereinstellung auf High Trigger (es fließt Strom) und Low Trigger (es fließt kein Strom) eingestellt werden. Diese Möglichkeit macht das Relaisboard ideal für den Einsatz mit einem ESP8266 oder einer Port Erweiterung PCF8574.
 
 ### Ringheizelemente
 
 Ein Ringheizlement ist beim Kochen der Würze nützlich, wenn die Leistung der GGM IDS nicht mehr oder nur so eben ausreicht, um die Würze wallend zu kochen. Eine gute Auswahl an Ringheizelementen gibt es beim [Douglas von Crafthardware](https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel).
+
+### PWM
+
+| Artikelname        | Link zum Artikel                  |
+| ------------------ | --------------------------------- |
+| Drehzahlregler | [amazon](https://www.amazon.de/dp/B09PV11JM8/?coliid=IC6BIVO4B18X9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| Drehzahlregler | [amazon](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+
+### Steckverbinder
+
+| Artikelname        | Link zum Artikel                  |
+| ------------------ | --------------------------------- |
+| GX 12 2 Pin | [amazon](https://www.amazon.de/dp/B07YSBQWSX/?coliid=IU2GESEA54974&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1PA754W9JYVNX4G9PMV0) |
+| GX 12 3 Pin | [amazon](https://www.amazon.de/dp/B07GBBNHM6/?coliid=I21Z8Z8ELJ9I5J&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |
+| GX 12 4 Pin | [amazon](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |
