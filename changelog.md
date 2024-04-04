@@ -8,7 +8,10 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.38
+Version 1.38a
+
+* Fix:          Debug code (breakpoint) entfernt
+* Fix:          Rezept umbenennen ohne Funktion (debug code breakpoint)
 
 * Update:       Anpassungen aus den Testversionen 1.37c bis 1.37j in Release 1.38 zusammengefasst
 * Update:       Profile WebIf überarbeitet
