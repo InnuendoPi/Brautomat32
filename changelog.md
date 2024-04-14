@@ -14,6 +14,7 @@ Version 1.39
 * Update:       ESPtool 4.7.0
 * Update:       VSCode 1.88
 * Fix:          Korrektur Maischeplan umbenennen
+* Fix:          Restore 2.x RX1/TX1 RX2/TX2 pins hardwareSerial #9502
 
 Version 1.38a
 
