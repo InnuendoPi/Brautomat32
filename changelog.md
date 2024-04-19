@@ -8,13 +8,19 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
+Version 1.40
+
+* Fix:          Status Play Button nach Reset/Abschalten wurde nicht korrekt ausgewertet
+* Fix:          Sonderfunktionen Aktoren (Temperatur 0°C und Dauer 0 Minuten) wurden bei Forward/Backward nicht ausgeführt.
+* Fix:          Restore UART1/2 pins as in 2.0.14 (#9502)
+
 Version 1.39
 
 * Update:       ESP32 core 2.0.15 ESP-IDF v4.4.7
 * Update:       ESPtool 4.7.0
 * Update:       VSCode 1.88
 * Fix:          Korrektur Maischeplan umbenennen
-* Fix:          Restore 2.x RX1/TX1 RX2/TX2 pins hardwareSerial #9502
+* Fix:          Restore 2.x RX1/TX1 RX2/TX2 pins hardwareSerial (#9502)
 
 Version 1.38a
 
