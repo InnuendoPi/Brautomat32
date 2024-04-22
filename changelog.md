@@ -10,6 +10,9 @@ Server Sent Events (8 SSE channels)
 
 Version 1.40
 
+* Fix:          MDNS typo
+* Fix:          ESP32 Fehler beim Lader WebIf (unvollständig, ESP32 reboot, keine Icons, leere Maischeplan)
+* Optimiert:    Laden WebIf ESP32
 * Fix:          Status Play Button nach Reset/Abschalten wurde nicht korrekt ausgewertet
 * Fix:          Sonderfunktionen Aktoren (Temperatur 0°C und Dauer 0 Minuten) wurden bei Forward/Backward nicht ausgeführt.
 * Fix:          Restore UART1/2 pins as in 2.0.14 (#9502)
