@@ -1,15 +1,19 @@
 # Changelog
 
-ESP32 Arduino 2.0.15 ESP-IDF v4.4.7\
-VSCode 1.88 Arduino 0.6\
+ESP32 Arduino 2.0.16 ESP-IDF v4.4.7\
+VSCode 1.89 Arduino 0.6\
 VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.40
+Version 1.40d
 
+* Update:       ESP32 core 2.0.16 ESP-IDF v4.4.7
+* Neu:          Logging Bibliothek erstellt: Ausgabe auf serial [Aus, Error, Info, Verbose]
+* Neu:          Logging je Module konfigurierbar [Konfiguration, Sensoren, Aktoren, Induktion, Nachguss, System]
+* Fix:          Fehler Maischeplan umbenennen behoben, wenn neuer Maischeplanname bereits existiert
 * Fix:          MDNS typo
 * Fix:          ESP32 Fehler beim Lader WebIf (unvollständig, ESP32 reboot, keine Icons, leere Maischeplan)
 * Optimiert:    Laden WebIf ESP32
