@@ -28,7 +28,7 @@ Tritt ein Sensorfehler auf, bspw. ein Sensor ist nicht verbunden oder ein Defekt
 
 Wird die Leistung bei Sensorfehler auf 0% eingestellt, dann pausiert der Brautomat den Maischeprozess. Die GGM IDS wird abgeschaltet. Ist der Rasttimer gestartet, wird der Timer angehalten.
 
-Der Brautomat startet nach 5 aufeinanderfolgenden fehlerhaften Sensorwerten (-127.0°C) die Fehlerbehandlung. Die Sensoren werden ca. alle 1000ms abgefragt. D.h. es vergehen zwischen Toast Nachricht Sensorfehler und Start der Fehlerbehandlung ca. 5 Sekunden.
+Der Brautomat startet nach 3 aufeinanderfolgenden fehlerhaften Sensorwerten die Fehlerbehandlung. Die Sensoren werden ca. alle 2000ms abgefragt. D.h. es vergehen zwischen Toast Nachricht Sensorfehler und Start der Fehlerbehandlung ca. 6 Sekunden.
 
 Meldet ein fehlerhafter Sensor wieder korrekte Sensorwerte, führt der Brautomat den Maischeprozess automatisch fort.
 

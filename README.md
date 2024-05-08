@@ -67,9 +67,9 @@ Der Brautomat32 unterstützt (nahezu) beliebig viele Sprachen. Jede Sprache hat 
 
 _Unterstützte das Projekt und übersetze den Brautomat32 in eine neue Sprache bzw. korrigiere vorhandene Sprachdateien!_
 
-## 📙 Platine 2.0
+## 📙 Platine 2.1
 
-![Platine](docs/img/Platine20.jpg)
+![Platine](docs/img/Platine21.jpg)
 
 Eine Platine für den Arduino ESP Controller ist verfügbar. Die Platine bietet neben den Schraubklemmblöcken für die GPIOs auch einen separaten Anschluss für das Induktionskochfeld sowie drei Anschlüsse für Temperatursensoren. Die Gerber Datei ist im Ordner Tools gespeichert. Die Platine 2.0 kann sowohl mit dem ESP8266, als auch mit dem ESP32 betrieben werden.
 
