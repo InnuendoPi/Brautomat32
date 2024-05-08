@@ -83,9 +83,9 @@ Brautomat32 supports (almost) any number of languages. Each language has its own
 
 _Supported the project and translated the Brautomat into a new language or corrected existing language files!_
 
-## 📙 Circuit board 2.0
+## 📙 Circuit board 2.1
 
-![Platine](docs/img/Platine20.jpg)
+![Platine](docs/img/Platine21.jpg)
 
 A board for the Arduino ESP controller is available. In addition to the screw terminal blocks for the GPIOs, the board also offers a separate connection for the induction hob and three connections for temperature sensors. The Gerber file is stored in the Tools folder. The board 2.0 can be operated with both the ESP8266 and the ESP32.
 
