@@ -71,3 +71,9 @@ Das Network Time Protokoll (NTP) synchronisiert die Uhrzeit alle 60 Minuten mit 
 ### Dashboard
 
 Über das Dashboard können sehr einfach Elemente ein- und ausgeblendet werden. Ist bspw. kein Nachguss im Einsatz, sollte das Element Nachguss für das Dashboard deaktiviert werden. Deaktivierte Elemente verringern den Datenverkehr.
+
+### Logging
+
+Im Tab Logging kann für der Module Konfiguration, Sensoren, Aktoren, Induktion, Nachguss und System eine serielle Protokollausgabe aktiviert werden. Zur Protokollierung stehen die Level Error, Info, Verbose und Aus zur Verfügung.
+
+Die serielle Protokollausgabe sollte nicht während des Brauens eingesetzt werden. Soll eine Fehlersuche durch die Protokollausgabe während des Brauens unterstützt werden, sollte der Interrupt vom Induktionskochefeld deaktiviert werden.

@@ -8,11 +8,12 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.40d
+Version 1.40e
 
 * Update:       ESP32 core 2.0.16 ESP-IDF v4.4.7
 * Neu:          Logging Bibliothek erstellt: Ausgabe auf serial [Aus, Error, Info, Verbose]
 * Neu:          Logging je Module konfigurierbar [Konfiguration, Sensoren, Aktoren, Induktion, Nachguss, System]
+* Fix:          Änderung InnuAPID Parameter im Modus Automatic korrigiert
 * Fix:          Fehler Maischeplan umbenennen behoben, wenn neuer Maischeplanname bereits existiert
 * Fix:          MDNS typo
 * Fix:          ESP32 Fehler beim Lader WebIf (unvollständig, ESP32 reboot, keine Icons, leere Maischeplan)
