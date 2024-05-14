@@ -8,7 +8,13 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.40e
+Version 1.41a
+
+* Neu:          Sonderfunktion Profilwechsel IDSPROFIL (Anwendung: IDSPROFIL:Profilname)
+* Fix:          Buttongröße für Smartphones korrigiert, Power, Pause, Play, Prev und Next
+* Fix:          Display Rahmen für Anzeige Restzeit für 6 Zeichen korrigiert (das 6. Zeichen wurde nur teilweise angezeigt)
+
+Version 1.40
 
 * Update:       ESP32 core 2.0.16 ESP-IDF v4.4.7
 * Neu:          Logging Bibliothek erstellt: Ausgabe auf serial [Aus, Error, Info, Verbose]
@@ -20,7 +26,6 @@ Version 1.40e
 * Optimiert:    Laden WebIf ESP32
 * Fix:          Status Play Button nach Reset/Abschalten wurde nicht korrekt ausgewertet
 * Fix:          Sonderfunktionen Aktoren (Temperatur 0°C und Dauer 0 Minuten) wurden bei Forward/Backward nicht ausgeführt.
-* Fix:          Restore UART1/2 pins as in 2.0.14 (#9502)
 
 Version 1.39
 
