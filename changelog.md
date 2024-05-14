@@ -8,7 +8,7 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.41a
+Version 1.40a
 
 * Neu:          Sonderfunktion Profilwechsel IDSPROFIL (Anwendung: IDSPROFIL:Profilname)
 * Fix:          Buttongröße für Smartphones korrigiert, Power, Pause, Play, Prev und Next
