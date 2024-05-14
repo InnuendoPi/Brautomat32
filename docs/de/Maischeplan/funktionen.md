@@ -134,6 +134,17 @@ Beispiele:
 
 _RHE ist ein Aktorname für ein Ringheizelement als Beispiel für einen Aktor mit PWM._
 
+## Sonderfunktion IDS Profilwechsel
+
+Eine weitere Sonderfunktion ist der PID Profilwechsel. Der Befehl lautet IDSPROFIL. Als Zahl wird die Profilnummer angegeben. Das erste Profil hat die Nummer 0 (null), das 2. Prodil die Nummer 1
+
+Beispiele:
+
+IDSPROFIL:0
+IDSPROFIL:1
+
+Der Profilwechsel ermöglicht die Verarbeitung von Teilmaischen mit angepassten PID Parametern.
+
 ### Beispiel Steuerbefehl IDS
 
 Für das Beispiel sei folgende Konfiguration für die GGM IDS bzw. den MasicheSud Kessel gegeben:
