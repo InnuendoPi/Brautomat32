@@ -6,6 +6,36 @@
 
 Dieser Parameter beschreibt die maximale Ausgangsleistung der GGM IDS. Der Standardwert ist 100%. Dieser Parameter kommt zum Einsatz, wenn ein kleiner Kessel mit bspw. 20l Volumen auf der GGM IDS genutzt wird. Durch Reduzierung der Leistung der IDS kann ein zu schnelles Aufheizen und ein Überkochen vermieden werden. Die Parameter "Max. Leistung IDS" und "Leistung kochen" sollten beim Einsatz von kleineren Braukesseln zusammen reduziert werden.
 
+Beim Maischen ist ein Anstieg der Maischetemperatzur von 1°C pro Minute erwünscht. Die benötigte Leistung P der GGM IDS kann berechnet werden:
+
+P = m[kg] * 75
+
+    P = m[kg] * c * T / (t * w)
+
+m := Masse Hauptguss + Schüttung\
+c := spezifische Wärmekapazität Maische = 3600 Joule/(kg * °C)\
+T := Temperaturdifferenz  = 1°C\
+t := Zeit = 60sek\
+w := Wirkungsrad Induktion (80-90%) = 0.8
+
+`c * T / (t * w) = 3600 * 1 / (60 * 0.8) = 75`
+
+Beispiel 1: Schüttung + HG = 9kg + 35l = 44\
+`P = 44 * 75 = 3300`
+
+Es sind näherungsweise 3300 W/min erforderlich, um ein Volumen von 44kg pro Minute um 1°C zu erhitzen. Die GGM IDS müsste mit ca. 94-95% Leistung betrieben werden (Sonderfunktion IDS:95).
+
+Beispiel 2: Schüttung + HG = 5,9kg + 26,5l = 32,4\
+P = 32,4 * 75 = 2430
+
+Es sind näherungsweise 2430 W/min erforderlich, um ein Volumen von 32,4kg pro Minute um 1°C zu erhitzen. Die GGM IDS müsste mit ca. 69-70% Leistung betrieben werden (Sonderfunktion IDS:70).
+
+Die hier verwendete spez. Wärmekapazität 3600 hat eine Fehlertoleranz von ca. 2% (Abhängig von Temperatur und Extrakt). Malzschrot hat eine Wärmekapazität von 1570 J/(kg*°C), Wasser hat im Temperaturbereich 50-80°C eine Wärmekapazität von 4190 J/(kg*°C). Unter der Annahme, der Wassergehalt im Malzschrot beträgt 6%: (Zahlen aus Beispiel 1)
+
+    9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 162194,8 / 44 = 3686,25 J pro kg und Grad Celsius
+
+Siehe auch [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+
 ### Temperatur delta zum Ziel
 
 Dieser Parameter beschreibt, ab welcher Differenz zur Rasttemperatur (Ziel) der Timer einer Rast starten soll. Der Standardwert ist 0.3°C. Im Maischeprozess ermöglicht der PID Controller eine sehr genaue Temperatursteuerung. Eine Rasttemperatur wird mit +-0.2°C genau erreicht, indem der PID Controller die Energiezufuhr vor dem Erreichen der Rasttemperatur kontrolliert reduziert. Die Reduzierung der Energiezufuhr hat als Nebeneffekt, dass der letzte Schritt zum Erreichen der Rasttemperatur länger dauert. Genau an dieser Stelle kommt der Parameter "delta zum Ziel" ins Spiel: soll bspw. eine Rasttemperatur von 63°C erreicht werden und ist die aktuelle Temperatur 62.7°C, dann würde mit einem Temperatur delta zum Ziel von 0.3°C der Rasttimer starten. Bezogen auf die individuelle Brauanlage kann mit delta zum Ziel eine ungewollte Verlängerung der Rastzeit vermieden werden.

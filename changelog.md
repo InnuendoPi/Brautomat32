@@ -1,15 +1,16 @@
 # Changelog
 
-ESP32 Arduino 2.0.16 ESP-IDF v4.4.7\
+ESP32 Arduino 2.0.17 ESP-IDF v4.4.7\
 VSCode 1.89 Arduino 0.6\
-VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
+VSCode plugin ESP8266Littlefs based on ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.40a
+Version 1.40b
 
+* Update:       ESP32 core 2.0.17 ESP-IDF v4.4.7
 * Neu:          Sonderfunktion Profilwechsel IDSPROFIL (Anwendung: IDSPROFIL:Profilname)
 * Fix:          Buttongröße für Smartphones korrigiert, Power, Pause, Play, Prev und Next
 * Fix:          Display Rahmen für Anzeige Restzeit für 6 Zeichen korrigiert (das 6. Zeichen wurde nur teilweise angezeigt)
