@@ -1,15 +1,16 @@
 # Changelog
 
 ESP32 Arduino 2.0.17 ESP-IDF v4.4.7\
-VSCode 1.89 Arduino 0.6\
+VSCode 1.90 Arduino 0.6\
 VSCode plugin ESP8266Littlefs based on ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.40b
+Version 1.41
 
+* Fix:          KBH2 Rezeptimport: Wassertemperatur bei Maischeschritt Typ Einmaischen korrigiert
 * Update:       ESP32 core 2.0.17 ESP-IDF v4.4.7
 * Neu:          Sonderfunktion Profilwechsel IDSPROFIL (Anwendung: IDSPROFIL:Profilname)
 * Fix:          Buttongröße für Smartphones korrigiert, Power, Pause, Play, Prev und Next
