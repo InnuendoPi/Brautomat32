@@ -1,19 +1,22 @@
 # Changelog
 
 ESP32 Arduino 2.0.17 ESP-IDF v4.4.8\
-VSCode 1.90 Arduino 0.6 Arduino CLI 1.0.2\
+VSCode 1.92 Arduino 0.6 Arduino CLI 1.0.3\
 VSCode plugin ESP8266LittleFS based on ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
-Version 1.42
+Version 1.43
 
 * Update:       ArduinoJSON 7.1.0
 * Fix:          Arduino core: set back Pin signal polarity (#9952)
+* Entfernt:     Arduino core: httpc fix data read was less than expected (#10019): Fix verursacht fehlheraftes Laden Webfrontend
+* Fix:          Arduino core: fix RMT mutex unlock using incorrect channel number in rmtDeinit (#10034)
 * Update:       ESP-IDF v4.4.8 final
-* Update:       Arduino CLI 1.0.2
+* Update:       Arduino CLI 1.0.3
+* Fix:          html setInduction Aufruf angepasst
 
 Version 1.41
 
