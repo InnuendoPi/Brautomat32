@@ -1,6 +1,8 @@
 # Funktionen
 
-Die folgende Beschreibung hat nicht das zugrunde liegende Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat. Der Maischeplan hat eine Tabellenform. Diese Tabelle wird an einem Brautag von oben nach unten vom Brautomat abgearbeitet. Im ersten Beispiel ist die Zeile "Einmaischen 50°C" der erste Maische-Schritt und "WHP Hallertauer Tradition" der letzte Maische-Schritt. Eine sehr wichtige Funktion im Maischeplan ist die Eigenschaft _autonext_.
+Die folgende Beschreibung wird ein _erfundenes Beispielrezpet_ verwendet. Diese Beschreibung hat nicht das Rezept als Inhalt, sondern das Vorgehen beim Maischen mit dem Brautomat.
+
+Der Maischeplan hat eine Tabellenform. Diese Tabelle wird an einem Brautag von oben nach unten vom Brautomat abgearbeitet. Im Beispielrezept ist die Zeile "Einmaischen 50°C" der erste Maische-Schritt und "WHP Hallertauer Tradition" der letzte Maische-Schritt. Eine sehr wichtige Funktion im Maischeplan ist die Eigenschaft in der Spalte _autonext_.
 
 ## Grundfunktionen
 
@@ -28,37 +30,35 @@ Im Tabellenkopf befinden sich folgende Buttons (von links nach rechts)
 
 * neue Zeile: füge einen neuen Maischeschritt an das Ende der Tabelle an
 * Löschen: lösche die gesammte Tabelle (leerer Maischeplan)
-* Neu laden und Exit: dieser Button hat zwei Funktionen
-  * Reload: lese das Rezept aus der Datei neu. Änderungen werden nicht gespeichert. Der Button wird blau angezeigt
-  * Exit: verlasse den Zeileneditor ohne Speichern. Der Button wird grau angezeigt
-* Speicher: Maischeplan speichern
+* Reload: lese das Rezept aus der Datei neu. Änderungen werden nicht gespeichert. Der Button wird blau angezeigt
 * Database: Maischeplan Auswahl, Import, Export und Maischeplan Zeitplaner
 * Collapse: Maischeplan Tabelle ein- und ausklappen
 
 ![Maischeplan editieren](/docs/img/brautomat-11.jpg)
 
+Wird eine Tabellenzeile editiert, verändern sich die Button.
+
+* Exit: verlasse den Zeileneditor ohne Speichern. Der Button wird grau angezeigt
+* Speicher: Änderung in der Tabellenzeile im Maischeplan speichern
+
 Alle Buttons zum Editieren des Maischeplans werden ausgeblendet, sobald der Brauprozess gestartet wird. Der Collapse-Button zum ein- und ausklappen der Tabelle wird ausgeblendet, sobald der Maischeplan editiert wird.\
 Zusammen mit den Steuerelementen Power, Play, Pause, Prev und Next ergibt sich eine intuitiv zu bedienende Brausteuerung. Der hier dargestellte Maischeplan ist ein Import aus dem kleinenBrauhelfer2. Der Import fügt automatisch die Rasttemperaturen und Rastdauer ein. Bei den Hopfengaben werden automatisch Alphasäure und Menge in Gramm an den Hopfennamen angefügt. Außerdem werden diese Kurzbezeichnungen vorangestellt:
 
 * VWH: Vorderwürzenhopfung
-* Kochen (ohne Gaben)
+* Kochen (ohne Hopfengaben)
 * WPH: Whirlpool Hopfung
 
 Zusätze wie im Bild dargestellt _Kochen Hefenahrung 1gr_ werden mit Zeitpunkt der Gabe und Menge in den Maischeplan aus dem kleinenBrauherlfer2 importiert.
 
 ## Tabelle Maischeplan editieren
 
-Ein Maischeplan kann im Brautomat verändert oder auch vollständig neu erstellt werden. Die wichtigste Funktion ist das Anpassen von einem Maischeschritt. Mit dem Stiftsymbol wird eine Zeile der Tabelle Maischeplan in den Editormodus versetzt. Im Editormodus wechselt der _Reload_ Button zum _Exit_ Button.
+Ein Maischeplan kann im Brautomat verändert oder auch vollständig neu erstellt werden. Die wichtigste Funktion ist das Anpassen von einem Maischeschritt. Mit dem Stiftsymbol wird eine Zeile der Tabelle Maischeplan in den Editormodus versetzt.
 
 ![Maischeplan editieren](/docs/img/brautomat-3.jpg)
 
-Es können nun nacheinander beliebig viele Tabellenzeilen verändert werden. Sobald ein Symbol zum Editieren des Maischeplans angeklickt wurde, wechselt der Button _Speichern_ von grün in rot. Sind alle Änderungen durchgeführt, muss der Maischeplan mit dem Button _Speichern_ abgespeichert werden. Alternativ können alle Änderungen mit dem Button _Exit_ zum Beenden ohne speichern verworfen werden. Sobald der Editormodus mit einem der zwei Möglichkeiten verlassen wird, wechselt der Button _Exit_ in die Funktion _Reload_ und der Speichern Button wird grün dargestellt.
+Es können nun nacheinander beliebig viele Tabellenzeilen verändert werden. Sobald ein Symbol zum Editieren des Maischeplans angeklickt wurde, wechselt der Button _Speichern_ von grün in rot. Sind alle Änderungen durchgeführt, muss der Maischeplan mit dem Button _Speichern_ abgespeichert werden. Alternativ können alle Änderungen mit dem Button _Exit_ zum Beenden ohne speichern verworfen werden.
 
-* _der grüne Button Speichern wird rot dargestellt, wenn Änderungen am Maischeplan noch nicht gespeichert wurden._
-* _der blaue Button Reload wird mit einem grauen Exit Symbol dargestellt, wenn Änderungen am Maischeplan verworfen werden können._
-* _der Power Button Braustart ist deaktiviert und wird grau dargestellt, solange Änderungen im Maischeplan nicht gespeichert oder verworfen wurden_
-
-Wenn der Maischeprozess bereits gestartet wurde, ändert sich das Verhalten.
+Sobald ein Maischeprozess über den Play Button gestartet wurde, ändert sich die Ansicht:
 
 ![Maischeplan editieren](/docs/img/brautomat-4.jpg)
 
@@ -66,7 +66,7 @@ Die Buttons zum Editieren werden ausgeblendet. Um diese wieder sichtbar zu mache
 
 ![Maischeplan editieren](/docs/img/brautomat-5.jpg)
 
-Wenn der Maischeprozess pausiert ist, wird der Button Pause in der Steuerung rot dargestellt und die Funktionen zum Editieren werden eingelendet. Das Induktionskochfeld wird nicht ausgeschaltet. Es wird weiterhin die Rasttemperatur gehalten. Der Rasttimer wird angehalten. Wird der Maischeplan verändert, wird der Pause Button zum Fortsetzen vom Maischeprozess deaktiviert und grau dargestellt, bis die Änderungen im Maischeplan entweder gespeichert oder verworfen wurden.
+Wenn der Maischeprozess pausiert ist, wird der Button Pause in der Steuerung rot dargestellt und die Funktionen zum Editieren werden eingelendet. Das Induktionskochfeld wird nicht ausgeschaltet. Es wird weiterhin die Rasttemperatur gehalten. Der Rasttimer wird angehalten. Wird der Maischeplan verändert (Editormodus), wird der Pause Button zum Fortsetzen vom Maischeprozess und der Button Power deaktiviert und grau dargestellt, bis die Änderungen im Maischeplan entweder gespeichert oder verworfen wurden.
 
 Anwendungsbeispiel:\
 Am Ende vom Maischeprozess wird über eine Jodprobe festgestellt, dass die Maische noch nicht jodnormal ist und noch Stärke vorhanden ist. Die Rast Verzuckerung 72°C soll verlängert werden:
@@ -81,11 +81,11 @@ Am Ende vom Maischeprozess wird über eine Jodprobe festgestellt, dass die Maisc
 
 ![Maischeplan autonext](/docs/img/Maischeplan-autonext.jpg)
 
-Der erste Schritt im Maischeplan mit dem Namen _Einmaischen 50°C_ hat eine Rastdauer von 10 Minuten und ein deaktiviertes _autonext_. Im Bild dargestellt ist die Situation, wenn der Rasttimer die 10 Minuten erreicht hat. Der Play Button wechselt automatisch auf rot. Unten rechts erscheint eine Toast Nachricht "Klicke play Button". Das Induktionskochfeld wird ausgeschaltet. Der Brauprozess wartet auf einen Klick auf den Button Play.
+Der erste Schritt im Maischeplan mit dem Namen _Einmaischen 50°C_ hat eine Rastdauer von 10 Minuten und ein deaktiviertes _autonext_. Im Bild dargestellt ist die Situation, wenn der Rasttimer die 10 Minuten erreicht hat: der Timer ist auf 00:00 Restzeit heruntergezählt. Der Play Button wechselt automatisch auf rot. Unten rechts erscheint eine Toast Nachricht "Klicke play Button". Das Induktionskochfeld wird ausgeschaltet. Der Brauprozess wartet auf einen Klick auf den Button Play.
 
 * am Ende einer Rast mit deaktiviertem _autonext_ wird der Maischeprozess angehalten und die GGM IDS wird ausgeschaltet
 
-Der zweite Schritt im Maischeplan mit dem Namen _Maltoserast 63°C_ hat als Rast-Temperatur 63°C und eine Rast-Dauer von 25 Minuten. Der Brautomat steuert in diesem Schritt das Induktionskochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Rast-Timer ist eine Stoppuhr. Wenn diese Stoppuhr die Rast-Dauer von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft _autonext_. Wenn _autonext_ aktiviert ist, springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Bespiel zum Schritt _Verzuckerung 72°C_. Die Rast Verzuckerung hat eine Rasttemperatur von 72°C. Automatisch erhöht der Brautomat die Leistung vom Induktionskochfeld, um die Rast-Temperatur zu erreichen.
+Der zweite Schritt im Maischeplan mit dem Namen _Maltoserast 63°C_ hat als Rast-Temperatur 63°C und eine Rast-Dauer von 25 Minuten. Der Brautomat steuert in diesem Schritt das Induktionskochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Rast-Timer ist eine Stoppuhr, die 00:00 (0 Minuten : 0 Sekunden) heruntergezählt wird. Wenn diese Stoppuhr die Rast-Dauer von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft _autonext_. Wenn _autonext_ aktiviert ist, springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Bespielrezept zum Schritt _Verzuckerung 72°C_. Die Rast Verzuckerung hat eine Rasttemperatur von 72°C. Automatisch erhöht der Brautomat die Leistung vom Induktionskochfeld, um die Rast-Temperatur zu erreichen.
 
 * am Ende einer Rast mit aktiviertem _autonext_ wird der Maischeprozess automatisch fortgesetzt und die GGM IDS bleibt eingeschaltet.
 
@@ -99,6 +99,8 @@ Während im ersten Beispiel von _autonext_ im Schritt Einmaischen meist direkt d
 
 _Unterschied autonext und Pause: bei einem deaktiviertem autonext am Rastende wird die GGM IDS abgeschaltet. Mit dem Pause Button wird die Rast-Timer angehalten, aber die GGM IDS bleibt eingeschaltet und der Brautomat regelt die benötigte Leistung der GGM IDS._
 
+In den folgenden Abschnitten werden optionale Sonderfunktionen beschrieben. Brautomat Einsteiger können die Beschreibung der Sonderfunktionen überspringen.
+
 ## Sonderfunktion 0°C Rast bei aktiviertem autonext
 
 Eine Sonderfunktion hat die Rast-Temperatur 0°C bei aktivertem autonext: wenn die Rast-Temperatur auf 0°C gesetzt und autonext aktiviert ist, wird der Maischeschritt ohne Temperaturüberprüfung automatisch gestartet. Im Maischeplan Beispiel ist diese Sonderfunktion nach dem Würzekochen im Schritt _Nachisomerisierung_ dargestellt. Die Würze hat zu diesem Zeitpunkt eine Temperatur von ca. 100°C. Das Induktionskochfeld soll abgeschaltet werden und der Timer für die Nachisomerisierung soll direkt gestartet werden:
@@ -111,7 +113,11 @@ _Hintergrund: Wenn die Funktion autonext aktiviert ist, vergleicht der Brautomat
 
 ## Sonderfunktion Aktoren Schalten
 
-Eine zweite Sonderfunktion sind Steuerbefehle für das Induktionskochfeld, den Nachguss und die Aktoren. Die Syntax für den Maischeschritt lautet Aktorname Doppelpunkt Leistung. Dabei kann die Leistung entweder ON oder OFF oder eine Zahl zwischen 0 und 100% sein. Dabei entspricht der Status OFF dem Wert 0% und ON dem Wert 100%. Die Rasttemperatur und die Rastdauer müssen für diese Sonderfunktion auf 0 gesetzt sein. Der Steuerbefehl für das Induktionskochfeld lautet IDS. Der Steuerbefehl für den Nachguss lautet HLT. Für den Nachguss ist zusätzlich der Steuerbefehl Nachguss nutzbar. Der Steuerbefehl für einen Aktor ist der Aktorname.
+Eine zweite Sonderfunktion sind Steuerbefehle für das Induktionskochfeld, den Nachguss und die Aktoren. Die Syntax für den Maischeschritt lautet:
+
+* Aktorname:Leistung
+
+Dabei kann die Leistung entweder ON oder OFF oder eine Zahl zwischen 0 und 100% sein. Dabei entspricht der Status OFF dem Wert 0% und ON dem Wert 100%. Die Rasttemperatur und die Rastdauer müssen für diese Sonderfunktion auf 0 gesetzt sein. Der Steuerbefehl für das Induktionskochfeld lautet IDS. Der Steuerbefehl für den Nachguss lautet HLT. Für den Nachguss ist zusätzlich der Steuerbefehl Nachguss nutzbar. Der Steuerbefehl für einen Aktor ist der Aktorname.
 
 ![Sonderfunktion Steuerbefehl](/docs/img/Maischeplan-Aktoren.jpg)
 

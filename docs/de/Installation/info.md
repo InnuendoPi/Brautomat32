@@ -50,9 +50,9 @@ Nach dem Flashen der Firmware startet der Brautomat im AccessPoint Mode. Ein off
 
 ![IDS](/docs/img/wlan2.jpg)
 
-Hier muss das WLAN (SSID und das Password) konfiguriert werden. Mit Speichern startet der Brautomat neu und verbindet sich mit dem WLAN. Das Web Interface vom Brautomat ist über <http://brautomat.local> erreichbar.
+Hier muss das WLAN (SSID und das Password) eigegeben werden. Mit _Save__ startet der Brautomat neu und verbindet sich mit dem WLAN. Das Web Interface vom Brautomat ist nun im lokalen WLAN über <http://brautomat.local> erreichbar.
 
-Damit ist die Grundinstallation bereits abgeschlossen. Der Vorgang Firmware flashen und WLAN Konfiguration ist nur einmal durchzuführen.
+Damit ist die Grundinstallation bereits abgeschlossen. Der Vorgang Firmware flashen und WLAN Konfiguration ist nur einmal durchzuführen. Der Brautomat muss nun konfiguriert werden. Die Konfiguration wird im Abschnitt _Grundeinrichtung_ beschrieben. Der folgende Abschnitt _Update_ kann zunächst übersprungen werden.
 
 ## Updates
 

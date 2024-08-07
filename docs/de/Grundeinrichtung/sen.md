@@ -8,7 +8,7 @@ Temperatursensoren vom Typ Dallas DS18B20 haben eine eindeutige Adresse. Über d
 
 ![Sensoren konfigurieren](/docs/img/Sensor-einstellungen.jpg)
 
-Die Eigenschaften Offset 1 und Offset 2 sind für die Sensorkalibrierung und werden im Abschnitt "Sensoren - Kalibrierung" erläutert. Für die Grundkonfiguration belassen wir beide Werte auf 0.00. Mit einem Klick auf "Sensor speichern" wird der Sensor angelegt und im Dashboard im Abschnitt Sensoren angezeigt:
+Die Eigenschaften Offset 1 und Offset 2 sind für die Sensorkalibrierung und werden im Abschnitt "Sensoren - Kalibrierung" erläutert. Für die Beschreibung dieser Grundkonfiguration werden beide Werte unverändert bei 0.00 belassen. Mit einem Klick auf "Sensor speichern" wird der Sensor angelegt und im Dashboard im Abschnitt Sensoren angezeigt:
 
 ![Sensoren Dashboard](/docs/img/Sensor-dashboard.jpg)
 

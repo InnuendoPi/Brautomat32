@@ -4,7 +4,7 @@
 
 Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP32 D1 mini oder ESP8266 Wemos D1 mini. Der Brautomat wird im Sudhaus von Hobbybrauern eingesetzt und bietet eine intuitiv einfach zu bedienende Steuerung. Beim Maischen werden Rast-Temperaturen automatisiert angefahren und die Rast-Zeiten eingehalten. Ebenso unterstützt der Brautomat den Hobbybrauer beim Kochen der Würze und bei den Hopfengaben. Im Verfahren aufsteigende Infusion kann der Brautomat den Maischeprozess vollständig automatisieren.
 
- _Hinweis: Induktionskochfelder anderer Hersteller werden nicht unterstützt._
+ _Hinweis: Der Brautomat kann ausschließlich an den Induktionskochfelder GGM IDS1 und GGM IDS2 betrieben werden._
 
 ---
 
