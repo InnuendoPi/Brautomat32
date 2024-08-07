@@ -6,7 +6,7 @@ Der Brautomat bietet eine einfache Verwaltung der Maischepläne. Neben importier
 
 In den Einstellungen kann der Maischeplan Name festgelegt werden. Aus dem Maischeplan Namen wird der Dateiname abgeleitet. Die Parameter *Gesamte Kochdauer* und *Nachisomerisierungszeit* werden rein informativ angezeigt und sind nicht editierbar. Diese Parameter werden beim Rezept Import eingelesen. Wird ein Maischeplan manuell angelegt, sind die Werte Kochdauer und Nachisomerisierung ohne Bedeutung, weil der Brautomat keine Bittereinheiten berechnet.
 
-## Zeitsteuerung
+### Zeitsteuerung
 
 Mit Hilfe der Zeitsteuerung kann ein Brautag geplant und automatisch gestartet werden.
 
@@ -54,7 +54,7 @@ Importierte Rezepte werden im Ordner /Rezepte gespeichtert. Als Dateinamen wird 
 
 Ein Maischeplan kann im JSON Format exportiert werden. Zum Wiedereinlesen ist der Import im Format Brautomat zu verwenden.
 
-## Maischeplan entfernen
+### Maischeplan entfernen
 
 Der ausgewählte Maischeplan wird aus dem Flash Speicher entfernt.
 
