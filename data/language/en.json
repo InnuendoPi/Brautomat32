@@ -136,7 +136,7 @@
     "SEN_TEXT4": "Calibration takes approx 60sec",
     "SEN_OFF1": "Temperature offset #1",
     "SEN_OFF2": "Temperature offset #2",
-    "SEN_OFF_START": "start calibration",
+    "SEN_OFF_START": "calibration",
     "SEN_LINK": "Sensor calibrierung on gitbook",
     "SEN_DEL": " delete sensor",
     "SEN_TT_KAL1": "Calibration offset 1",
