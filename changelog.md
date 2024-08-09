@@ -8,6 +8,17 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (8 SSE channels)
 
+Version 1.44
+
+* Fix:          SSE Sensoren JSON: Unexpected non-whitespace character after JSON
+* Fix:          verlorener Server Send Event verursacht durch unexpected non-whitespace character (line 2 column 1)
+* Fix:          Überlagerung Variablenname in html get request innerhalb EventListener system
+* Fix:          Fehler im Modul checkAliveSSE behoben
+* Optimiert:    String Klasse in allen SSE Boradcasts durch char arrays ersetzt
+* Optimiert:    dynamische char arrays für SSE broadcasts
+* geändert:     delays in Buzzer sendAlarm entfernt
+* Optimiert:    Strings handling im Flash Speicher
+
 Version 1.43
 
 * Update:       ArduinoJSON 7.1.0
