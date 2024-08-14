@@ -8,14 +8,15 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.44RC4
+Version 1.44RC5
 
 * Fix:          SSE Sensoren JSON: Unexpected non-whitespace character after JSON
 * Fix:          verlorener Server Send Event verursacht durch unexpected non-whitespace character (line 2 column 1)
 * Fix:          Überlagerung Variablenname in html get request innerhalb EventListener system
 * Fix:          Fehler im Modul checkAliveSSE behoben
 * Fix:          Fehler Sichtbarkeit von Toast Nachrichten mit Firefox behoben (toast visability not defined)
-* Fix:          unvollständiges Webfrontend (SSE) (Test: Edge, Firefox, Chrome, Safari)
+* Fix:          unvollständiges Webfrontend (SSE) durch Fehler unexpected non-whitespace char (Test: Edge, Firefox, Chrome, Safari)
+* Fix:          Arduino core: httpc fix data read was less than expected (#10019) (ESP-IDF 4.4.7)
 * Optimiert:    Logging (not yet ready)
 * Neu:          neue Option Logging Maischeprozess
 * Fix:          typo in den Module initialSSE und SSEKeepAlive
@@ -23,6 +24,7 @@ Version 1.44RC4
 * Update:       Arduino CLI 1.0.4
 * Neu:          InnuTicker setLastTime
 * Geändert:     ESP-IDF 4.4.7 backport
+* Neu:          last event id für SSE
 
 Version 1.43
 
