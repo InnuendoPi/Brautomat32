@@ -8,7 +8,7 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.44RC5
+Version 1.44RC6
 
 * Fix:          SSE Sensoren JSON: Unexpected non-whitespace character after JSON
 * Fix:          verlorener Server Send Event verursacht durch unexpected non-whitespace character (line 2 column 1)
@@ -24,7 +24,8 @@ Version 1.44RC5
 * Update:       Arduino CLI 1.0.4
 * Neu:          InnuTicker setLastTime
 * Geändert:     ESP-IDF 4.4.7 backport
-* Neu:          last event id für SSE
+* Neu:          last event id (millis) und retry für SSE
+* Optimiert:    Speicherverbrauch SSE Boradcasts und Web Interface request (avoid strings)
 
 Version 1.43
 
