@@ -8,7 +8,7 @@ InnuTicker task scheduler lib\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.44RC7
+Version 1.44
 
 * Fix:          SSE Sensoren JSON: Unexpected non-whitespace character after JSON
 * Fix:          verlorener Server Send Event verursacht durch unexpected non-whitespace character (line 2 column 1)
