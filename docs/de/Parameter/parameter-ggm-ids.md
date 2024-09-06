@@ -6,6 +6,7 @@
 
 Dieser Parameter beschreibt die maximale Ausgangsleistung der GGM IDS. Der Standardwert ist 100%. Dieser Parameter kommt zum Einsatz, wenn ein kleiner Kessel mit bspw. 20l Volumen auf der GGM IDS genutzt wird. Durch Reduzierung der Leistung der IDS kann ein zu schnelles Aufheizen und ein Überkochen vermieden werden. Die Parameter "Max. Leistung IDS" und "Leistung kochen" sollten beim Einsatz von kleineren Braukesseln zusammen reduziert werden.
 
+Optional\
 Beim Maischen ist ein Anstieg der Maischetemperatzur von 1°C pro Minute erwünscht. Die benötigte Leistung P der GGM IDS kann berechnet werden:
 
 P = m[kg] * 75
@@ -84,7 +85,7 @@ Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur
 
 ### Intervall (SampleTime)
 
-Dieser Parameter gibt an, in welchem zeitlichen Abstand eine Berechnung der benötigten Leistung ermittelt werden. Der Standardwert ist 3000ms. Das Intervall wird zur PID Berechnung und im AutoTune eingesetzt. In Brauküchen mit kleinem Volumen ist ein kleineres Intervall ggfs. vorteilhaft. Je kleiner das Intervall, desto häufiger werden Sensoren abgefragt und PID Werte berechnet. Dies führt zur einer höheren Auslastung des Brautomaten. Wertebereich 1000 - 7000ms
+Dieser Parameter gibt an, in welchem zeitlichen Abstand eine Berechnung der benötigten Leistung ermittelt werden. Der Standardwert ist 3000ms. Das Intervall wird zur PID Berechnung und im AutoTune eingesetzt. In Brauküchen mit kleinem Volumen ist ein kleineres Intervall ggfs. vorteilhaft. Je kleiner das Intervall, desto häufiger werden Sensoren abgefragt und PID Werte berechnet. Dies führt zur einer höheren Auslastung des Brautomaten. Wertebereich 1000 - 7000ms (ESP8266: 2000 - 7000).
 
 ### PID Algorithmus
 

@@ -1,12 +1,46 @@
 # Changelog
 
 ESP32 Arduino 2.0.17 ESP-IDF v4.4.7\
-VSCode 1.92 Arduino 0.6 Arduino CLI 1.0.4\
+VSCode 1.93 Arduino 0.6 Arduino CLI 1.0.4\
 VSCode plugin ESP8266LittleFS based on ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker task scheduler lib\
+InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNextionLibrary)\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
+
+Version 1.45
+
+* Neu:          neue Option Zeitzone in den Systemeinstellungen. Tabelle Zeitzonen siehe Anleitung
+* Neu:          InnuNextion Library zur Steuerung Nextion Display
+* Fix:          Debug Ausgaben Sensoren (type mismatch)
+* Fix:          Sensortyp Variable id falsch gesetzt
+* Fix:          möglicher Fehler zu schnell aufeinanderfolgenden Sensorabfragen behoben
+* Fix:          Sensoren werden nun asynchron (NON-blocking) abgefragt
+* Fix:          html get request Sensoren und Aktoren korrigiert, wenn noch keine Sensoren/Aktoren konfiguriert waren
+* Fix:          Compiler Warnung array out of bounce behoben
+* Fix:          WebServer Zugriff auf Dateien
+* Fix:          Logging Maischeprozess falscher Index
+* Optimiert:    avoid String
+
+* Optimiert:    Logging: Unterteilung in Sensoren, Aktoren, IDS, HLT, Konfigruation, System und Display
+* Optimiert:    Logging Error: nur Fehler
+* Optimiert:    Logging Info: Informationen zu Konfiguration und Fehler
+* Optimiert:    Logging Verbose: Boradcasts SSE, Informationen zu Konfiguration und Fehler
+
+Weitere Entwicklung: (nicht in Version 1.45 enthalten)
+
+* Migration:    Migration Quellcode auf platformIO. Siehe [Arduino Extension abgekündigt](https://github.com/microsoft/vscode-arduino)
+* Migration:    Lib NextionX2 Display nicht platformIO kompatibel. Ersetzt durch eigene Lib
+* Migration:    Lib NTPClient ersetzt durch Arduino core time.h Funktionen
+
+* Intern:       Compiler Flags für ESP-IDF 4.4 (2.0.17) und ESP-IDF 5.4 (3.0.4) erstellt
+* Intern:       Firmware auf Basis ESP-IDF 5.4 zu groß - Partitionstabelle angepasst
+* Intern:       Firmware auf Basis ESP-IDF 4.4 größer, als mit VSCode Arduino - Partitionstabelle muss nicht angepasst werden
+* Intern:       JS und CSS Dateien gz komprimiert für Firmware auf Basis ESP-IDF 5.4
+* Intern:       ESP32 S3 DevKit1 8MB Modul mit integriertem JTAG Adapter für Debug eingebunden
+* Intern:       Lib WiFi mit ESP_IDF5 mehr als doppelt so groß gegenüber ESP_IDF4 (Erweiterung der Verschlüsselung)
+* Intern:       keine Verbesserung WLAN mit ESP_IDF5 (Arudino 3.x) gegenüber ESP_IDF4 (Arduino 2.x) in einem Fritz.box Netzwerk
 
 Version 1.44
 
