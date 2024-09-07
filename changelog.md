@@ -9,6 +9,11 @@ InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNexti
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
+Version 1.45.1
+
+* Neu:          Während eines Maischeprozesses werden Leistung IDS2, HLT und Aktoren werden im Flash gespeichert
+* Fix:          der Maischeschritt wurde nicht automatisch fortgesetzt, wenn ein aktiver Schritt mit deaktiviertem autonext über den Play Button gestartet war
+
 Version 1.45
 
 * Neu:          neue Option Zeitzone in den Systemeinstellungen. Tabelle Zeitzonen siehe Anleitung
