@@ -12,9 +12,11 @@ Mit Hilfe der Zeitsteuerung kann ein Brautag geplant und automatisch gestartet w
 
 ![Zeitsteuerung](/docs/img/Zeitsteuerung.jpg)
 
-Über das Element DateTimer Picker kann sehr einfach ein Datum und eine Uhrzeit ausgewählt werden. Der Rezeptname wird temporär ersetzt durch den angegebenen Startzeitpunkt.
+Über das Element DateTimerPicker kann sehr einfach ein Datum und eine Uhrzeit ausgewählt werden. Der Rezeptname wird temporär ersetzt durch den angegebenen Startzeitpunkt.
 
 ![Zeitsteuerung](/docs/img/Zeitsteuerung2.jpg)
+
+Eine aktivierte Zeitsteuerung wird in der Konfiguration gespeichert. Startet der Brautomat neu, wird das eingestellte Datum und Uhrzeit eingelesen. Liegt dieser Braustart in der Zukunft, wird die Zeitsteuerung aktiviert. Liegt der Braustart in der Vergangenheit, wird die Zeitsteuerung deaktiviert.
 
 ## Verwaltung Maischepläne
 
@@ -61,6 +63,8 @@ Der ausgewählte Maischeplan wird aus dem Flash Speicher entfernt.
 ## Voreinstellung Import
 
 ### Optionale Einstellungen für den Import
+
+![Voreinstellung Import](/docs/img/voreinstellung_import.jpg)
 
 Der Brautomat benötigt einen Step Einmaischen (optional) und einen Step Abmaischen. Insbesondere der Schritt Abmaischen dient mit deaktivertem "autonext" als Trennschritt zwischen Maischen und Kochen. Beim Import kann der Brautomat fehlende Einmaisch- und Abmaischschritte einfügen. Zusätzlich können fehlende Temperaturen mit Vorgaben belegt werden.
 
