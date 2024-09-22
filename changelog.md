@@ -4,10 +4,48 @@ ESP32 Arduino 2.0.17 ESP-IDF v4.4.7\
 VSCode 1.93 Arduino 0.6 Arduino CLI 1.0.4\
 VSCode plugin ESP8266LittleFS based on ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
-InnuTicker task scheduler lib\
+InnuTicker Task Scheduler lib\
 InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNextionLibrary)\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
+
+Version 1.46.2
+
+* Neu:          Alle Datenübertragungen an das Web Interface und vom WebIf an den ESP auf JSON umgestellt
+* Neu:          Überprüfung aller Eingabe im Web interface (client side validation). Keine Überprüfung beim Editieren der Tabelle Maischeplan
+* Hinweis:      die Eingabe von Umlauten und Sonderzeichen (außer #) in Sensor- und Aktornamen im WebIf ist nicht mehr möglich (Rührwerk -> Ruehrwerk)
+* Hinweis:      Sensor- und Aktornamen dürfen maximal 20 Zeichen lang sein
+* Hinweis:      Maischplan Namen dürfen maximal 25 Zeichen lang sein
+* Hinweis:      Beim Rezeptimport werden Umlaute ersetzt
+* Fix:          Import Maischeplan Typ Brautomat Formatfehler Rezepte mit Version älter als 1.39. Überprüfung eingefügt
+* Fix:          Doppeltes Warnsignal bei Toastnachrichten Typ Error entfernt
+* Fix:          Einstelllung für das Logging Display wurde nicht korrekt gespeichert
+* Fix:          Display Anzeige Modus manuelle Steuerung fehlerhafte Status Überprüfung (typo)
+* Fix:          Abfrage AdruinoJSON containskey (deprecated) ersetzt
+* Fix:          die Vorgaben Temperatur WPH und VWH wurde nicht korrekt übertragen. Das konnte zu einem Abbruch beim Speichern der Konfiguration führen.
+* Fix:          Nextion Display Lib type mismatch
+* Fix:          Toast Nachricht WebUpdate abgeschlossen wurde nach Umstellung JSON nicht mehr angezeigt
+* optimiert:    diverse Quellcode Optimierungen: permanente Überprüfung der Eingabe reduziert
+* optimiert:    avoid Strings (not yet ready)
+* optimiert:    mehr freier Speicher LittleFS durch gzip JS/CSS/TTF (erforderlich für ESP_IDF5)
+* optimiert:    Ladevorgang JS/CSS/TTF durch gzip beschleunigt
+* optimiert:    die Klasse Nachguss (HLT) wurde auf getter/setter umgestellt. Damit sind alle Klassen gekapselt
+* optimiert:    Überprüfung der Eingaben für Nachguss Objekte in die set Methoden verschoben
+
+Weitere Entwicklung: (nicht in Version 1.46 enthalten - Brautomat32 platformIO)
+
+* Migration:    platformIO Portierung ESP32 Wemos D1 IDF4 (4.4.7) abgeschlossen
+* Migration:    platformIO Portierung ESP32 Wemos D1 IDF5 (5.1.4) abgeschlossen (geänderte Paritionen)
+* Migration:    platformio Portierung ESP8266 Wemos D1 Mini (2.0.17) abgeschlossen
+* Sync:         Quellcode synchronisiert ESP8266, ESP32 IDF4 und ESP32 IDF5 (pending ... )
+* Sync:         Compiler Direktiven ESP8266, ESP32, ESP_IDF4 und ESP_IDF5
+* Fix:          ESP-IDF5 WebUpdate Funktion httpUpdate flush durch clear ersetzt (libs, siehe github repository esp32)
+* Fehler:       ESP32 Task Watchdog funktioniert (noch) nicht in der Version ESP_IDF5. In ESP_IDF5 deaktiviert
+* EPS_IDF5dev:  Build EPS-IDF 5.3.1 hinzugefügt (pioarduino)
+
+Version 1.45.3 bis .6
+
+* intern
 
 Version 1.45.2
 
