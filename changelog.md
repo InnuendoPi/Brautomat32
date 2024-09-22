@@ -9,7 +9,7 @@ InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNexti
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.2
+Version 1.46.3
 
 * Neu:          Alle Datenübertragungen an das Web Interface und vom WebIf an den ESP auf JSON umgestellt
 * Neu:          Überprüfung aller Eingabe im Web interface (client side validation). Keine Überprüfung beim Editieren der Tabelle Maischeplan
@@ -23,8 +23,10 @@ Version 1.46.2
 * Fix:          Display Anzeige Modus manuelle Steuerung fehlerhafte Status Überprüfung (typo)
 * Fix:          Abfrage AdruinoJSON containskey (deprecated) ersetzt
 * Fix:          die Vorgaben Temperatur WPH und VWH wurde nicht korrekt übertragen. Das konnte zu einem Abbruch beim Speichern der Konfiguration führen.
-* Fix:          Nextion Display Lib type mismatch
+* Fix:          InnuNextion Display Lib: type mismatch für das Logging
+* Fix:          InnuNextion Display Lib: wenn die Startseite auf MaischeSud oder Manuell eingestellt war, war der erste Seitenwechsel am Display fehlerhaft
 * Fix:          Toast Nachricht WebUpdate abgeschlossen wurde nach Umstellung JSON nicht mehr angezeigt
+* Fix:          Timing Problem behoben, wenn die PID Regel von manueller PID Modus auf AutoTune PID Modus umgestellt wurde (Kp, Kd und Ki blieben auf 0)
 * optimiert:    diverse Quellcode Optimierungen: permanente Überprüfung der Eingabe reduziert
 * optimiert:    avoid Strings (not yet ready)
 * optimiert:    mehr freier Speicher LittleFS durch gzip JS/CSS/TTF (erforderlich für ESP_IDF5)
