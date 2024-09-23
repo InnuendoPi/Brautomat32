@@ -9,14 +9,13 @@ InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNexti
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.3
+Version 1.46.4
 
 * Neu:          Alle Datenübertragungen an das Web Interface und vom WebIf an den ESP auf JSON umgestellt
 * Neu:          Überprüfung aller Eingabe im Web interface (client side validation). Keine Überprüfung beim Editieren der Tabelle Maischeplan
-* Hinweis:      die Eingabe von Umlauten und Sonderzeichen (außer #) in Sensor- und Aktornamen im WebIf ist nicht mehr möglich (Rührwerk -> Ruehrwerk)
+* Hinweis:      die Eingabe von Umlauten und Sonderzeichen (außer #) in Sensor- und Aktornamen im WebIf ist nicht mehr möglich
 * Hinweis:      Sensor- und Aktornamen dürfen maximal 20 Zeichen lang sein
-* Hinweis:      Maischplan Namen dürfen maximal 25 Zeichen lang sein
-* Hinweis:      Beim Rezeptimport werden Umlaute ersetzt
+* Hinweis:      Maischplan Namen sind auf maximal 25 Zeichen beschränkt. Namen werden gekürzt (Begrenzung LittleFS Dateiname)
 * Fix:          Import Maischeplan Typ Brautomat Formatfehler Rezepte mit Version älter als 1.39. Überprüfung eingefügt
 * Fix:          Doppeltes Warnsignal bei Toastnachrichten Typ Error entfernt
 * Fix:          Einstelllung für das Logging Display wurde nicht korrekt gespeichert
@@ -27,6 +26,9 @@ Version 1.46.3
 * Fix:          InnuNextion Display Lib: wenn die Startseite auf MaischeSud oder Manuell eingestellt war, war der erste Seitenwechsel am Display fehlerhaft
 * Fix:          Toast Nachricht WebUpdate abgeschlossen wurde nach Umstellung JSON nicht mehr angezeigt
 * Fix:          Timing Problem behoben, wenn die PID Regel von manueller PID Modus auf AutoTune PID Modus umgestellt wurde (Kp, Kd und Ki blieben auf 0)
+* Fix:          fehlerhafte GPIO Zuweisung Pin D16 korrigiert
+* Fix:          Überprüfung GPIO D16 in Benutzung korrigiert
+* Fix:          Fehler korrigiert, wenn ein zweiter PT100x Sensor (an GPIO D16) hinzugefügt wurde
 * optimiert:    diverse Quellcode Optimierungen: permanente Überprüfung der Eingabe reduziert
 * optimiert:    avoid Strings (not yet ready)
 * optimiert:    mehr freier Speicher LittleFS durch gzip JS/CSS/TTF (erforderlich für ESP_IDF5)
