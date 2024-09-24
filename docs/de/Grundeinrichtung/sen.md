@@ -5,6 +5,7 @@ Im Abschnitt Sensoren wird mit einem Klick auf das Plus Zeichen ein neuer Sensor
 ![Sensoren anlegen](/docs/img/Sensor-einrichten.jpg)
 
 Temperatursensoren vom Typ Dallas DS18B20 haben eine eindeutige Adresse. Über diese Adresse unterscheidet die Firmware die angeschlossenen Sensoren. Die Sensor Adresse kann aus der Auswahlliste ausgewählt. Wird kein Sensor angezeigt, kann mit dem Reload Button die Erkennung der Sensoren neu gestartet werden. Wird weiterhin kein Sensor angezeigt, ist die Kabelverbindung zu überprüfen. Als zweite Eigenschaft besitzt ein Sensor einen Namen. Über den Namen kann der Anwender die Sensoren unterscheiden. In dieser Grundkonfiguration hat der Sensor den Namen "Sensor IDS2".&#x20;
+Sensornamen können maximal 20 Zeichen lang sein. Als Sonderzeichen sind das Hashtag # und das Leerzeichen erlaubt. Das Web Interface überprüft auftomatisch die Eingabe.
 
 ![Sensoren konfigurieren](/docs/img/Sensor-einstellungen.jpg)
 

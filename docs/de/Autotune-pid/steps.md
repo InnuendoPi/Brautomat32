@@ -48,4 +48,4 @@ TYREUS LUYBEN PI\
 CIANCONE MARLIN PID\
 CIANCONE MARLIN PI
 
-Die berechneten Werte der unterschiedlichen Algorithmen können in den EInstellungen mit der Auswahl INDIVIDUAL_PID in den Zeilen P, I und D eingetragen werden. Dies sollte jedoch nur in seltenen Fällen zu besseren Ergebnissen führen.
+Die berechneten Werte der unterschiedlichen Algorithmen können in den Einstellungen mit der Auswahl INDIVIDUAL_PID in den Zeilen P, I und D eingetragen werden. Dies sollte jedoch nur in seltenen Fällen zu besseren Ergebnissen führen.

@@ -12,10 +12,10 @@ Direkt unterhalb vom Maischeplan befindet sich die Steuerung. Mithilfe der 5 But
 
 Der Play Button hat im Maischeprozess zwei Funktionen:
 
-1. Die erste Funktion lautet "starte den Rast-Timer für die aktuelle Rast". Der Play Button startet unabhängig von der IST-Temperatur den Rast-Timer.\
-Beispiel: wenn im Schritt Kochen die Würze bereits wallend kocht, die Ist-Temperatur mit 98,5°C aber unter der Rast-Temperatur mit 100°C liegt und somit der Rast-Timer nicht startet.\
+1. Die erste Funktion lautet _starte den Rast-Timer für die aktuelle Rast_. Der Play Button startet unabhängig von der IST-Temperatur den Rast-Timer.\
+Beispiel: wenn im Schritt Kochen die Würze bereits wallend kocht, die Ist-Temperatur mit 98,5°C aber unter der Rast-Temperatur mit 100°C liegt und somit der Rast-Timer nicht startet.
 
-2. Die zweite Funktion vom Play Button hängt mit der Eigenschaft _autonext_ zusammen: setze den Maischeprozess mit der nächsten Rast fort. Die Funktionen "mit der nächsten Rast den Maischeprozess fortsetzen" wird später in der Beschreibung _autonext_ im Maischeplan erläutert. Der Play Button wird in dieser Funktion rot angezeigt.
+2. Die zweite Funktion vom Play Button hängt mit der Eigenschaft _autonext_ zusammen: setze den Maischeprozess mit der nächsten Rast fort. Der Play Button wird in dieser Funktion rot angezeigt. Die Funktionen _mit der nächsten Rast den Maischeprozess fortsetzen_ wird später in der Beschreibung _autonext_ im Maischeplan erläutert.
 
 ## Der Pause Button
 
@@ -27,7 +27,7 @@ In der Aufheizphase werden die Buttons zum Maischeplan editieren ein- bzw. ausge
 
 - Pause während einer Rast
 
-Während einer Rast wird mit dem Pause Button zusätzlich der Rast-Timer im Maischeprozess angehalten. Der Pause Button wird dann rot angezeigt. Bei einer Pause wird die Ist-Temperatur gegenüber der Rast-Zieltemperatur gehalten, d. h. der PID-Controller und somit das Induktionskochfeld bleiben aktiv. Mithilfe einer Pause während einer Rast kann der Maischeplan angepasst werden. Die Dauer der Pause verlängert die bisherige Rastdauer.
+Während einer Rast wird mit dem Pause Button zusätzlich der Rast-Timer im Maischeprozess angehalten. Der Pause Button wird dann rot angezeigt. Während einer Pause wird die Ist-Temperatur gegenüber der Rast-Zieltemperatur gehalten, d. h. der PID-Controller und somit das Induktionskochfeld bleiben aktiv. Mithilfe einer Pause während einer Rast kann der Maischeplan angepasst werden. Die Dauer der Pause verlängert die bisherige Rastdauer.
 
 ## Der Previous Button
 

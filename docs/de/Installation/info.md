@@ -10,7 +10,7 @@ Die Installation der Firmware wird über das im ZIP Archiv enthaltene Script "Fl
 
 Das Betriebssystem MS Windows erstellt beim Verbinden vom ESP Microcontroller mit einem USB Anschluss am PC oder Notebook automatisch einen seriellen COM Port.
 
-![COM Port](/docs/img/com.jpg)
+![Windows Gerätemanager](/docs/img/com.jpg)
 
 Im Bild wurde ein ESP Device auf COM7 gefunden. In seltenen Fällen wird unter MS Windows kein serieller COM Port automatisch bereitgestellt. USB Treiber für ESP Microcontroller sind auf folgenden Webseiten verfügbar: (MS Win und macOS)
 
@@ -44,11 +44,11 @@ ESP32 Step 2 Firmware flashen:
 
 Nach dem Flashen der Firmware startet der Brautomat im AccessPoint Mode. Ein offenes WLAN mit dem Namen _Brautomat_ wird sichtbar. Mit diesem WLAN muss eine Verbindung hergestellt werden. Das funktioniert sowohl vom PC oder Notebook, als auch mit dem Smartphone. Sobald die Verbindung hergestellt ist, öffnet der Webbrowser das WLAN Konfigurationsportal. Sollte sich das Portal nicht automatisch öffnen, muss als Adresse <http://192.168.4.1> manuell eingegeben werden.
 
-![IDS](/docs/img/wlan1.jpg)
+![WLAN Konfiguration](/docs/img/wlan1.jpg)
 
 Über den Button "Configure WiFi" wird die Konfiguration WLAN angezeigt
 
-![IDS](/docs/img/wlan2.jpg)
+![WLAN Konfiguration](/docs/img/wlan2.jpg)
 
 Hier muss das WLAN (SSID und das Password) eigegeben werden. Mit _Save__ startet der Brautomat neu und verbindet sich mit dem WLAN. Das Web Interface vom Brautomat ist nun im lokalen WLAN über <http://brautomat.local> erreichbar.
 
@@ -57,6 +57,8 @@ Damit ist die Grundinstallation bereits abgeschlossen. Der Vorgang Firmware flas
 ## Updates
 
 Updates können im Brautomat über das Menü "Update" eingespielt werden. Eine neue Firmware kann über "WebUpdate" oder "Datei Update" eingespielt werden. Bei einer Aktualisierung der Firmware per WebUpdate lädt die Firmware die aktuelle Version aus dem Internet aus dem github Repository. Bei der Aktualisierung per Datei Update wird die Firmware per Upload vom lokalen PC geladen. Ein USB-Kabel oder das Script aus der Installation sind nicht erforderlich.
+
+Der Speicherbereich von einem ESP Microcontroller unterteilt sich in Firmware und Dateisystem. Im laufenden Betrieb können nur im Dateisystem Konfigurationen, Rezepte und andere Dateien gespeichert bzw. verändert werden. Auf den Bereich Firmware kann nur lesend zugegriffen werden. Bei einem Update wird der Firmware Bereich vollständig neu installiert und im Dateisystem einzelne Dateien ersetzt.
 
 ### WebUpdate
 
@@ -79,6 +81,6 @@ Unter Firmware mit dem Button "Datei auswählen" muss nun aus dem Archiv Firmwar
 
 Auch das Dateisystem vom Brautomat kann aktualisiert werden.
 
-_Bitte unbedingt beachten:_
+_Bitte beachten:_
 
-Update FileSystem löscht alle Einstellungen und Konfigurationen. Das beinhaltet neben der Konfiguration auch MaischeSud Kessel Profile und Rezepte. Die Funktion Update FileSystem ist eher für den Notfall gedacht. In nahezu allen Fällen ist ein DateiUpdate Firmware gefolgt von einem WebUpdate die richtige Auswahl, weil das WebUpdate nach dem Update Firmware einzelene Dateien im Dateisystem aktualisiert. Die Funktion Update FileSystem erstellt das Dateisystem neu.
+Die Funktion Update FileSystem erstellt das Dateisystem neu. Update FileSystem überschreibt alle Einstellungen und Konfigurationen. Das beinhaltet neben der Konfiguration auch MaischeSud Kessel Profile und Rezepte. In nahezu allen Fällen ist ein DateiUpdate Firmware gefolgt von einem WebUpdate die richtige Wahl, weil das WebUpdate nach dem Update Firmware einzelene Dateien im Dateisystem aktualisiert.
