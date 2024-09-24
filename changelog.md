@@ -9,7 +9,7 @@ InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNexti
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.5
+Version 1.46
 
 * Neu:          Alle Datenübertragungen an das Web Interface und vom WebIf an den ESP auf JSON umgestellt
 * Neu:          Überprüfung aller Eingabe im Web interface (client side validation). Keine Überprüfung beim Editieren der Tabelle Maischeplan
