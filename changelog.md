@@ -9,7 +9,7 @@ InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNexti
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.4
+Version 1.46.5
 
 * Neu:          Alle Datenübertragungen an das Web Interface und vom WebIf an den ESP auf JSON umgestellt
 * Neu:          Überprüfung aller Eingabe im Web interface (client side validation). Keine Überprüfung beim Editieren der Tabelle Maischeplan
@@ -29,27 +29,26 @@ Version 1.46.4
 * Fix:          fehlerhafte GPIO Zuweisung Pin D16 korrigiert
 * Fix:          Überprüfung GPIO D16 in Benutzung korrigiert
 * Fix:          Fehler korrigiert, wenn ein zweiter PT100x Sensor (an GPIO D16) hinzugefügt wurde
-* optimiert:    diverse Quellcode Optimierungen: permanente Überprüfung der Eingabe reduziert
+* Fix:          Voreinstellung Logging System von INFO auf NONE korrigiert
+* Fix:          Überprüfung der Eingabe Aktorname korrigiert
+* Update:       ArduinoJSON 7.2.0
+* Update:       ESPTool 4.8.0
+* optimiert:    diverse Quellcode Optimierungen
 * optimiert:    avoid Strings (not yet ready)
 * optimiert:    mehr freier Speicher LittleFS durch gzip JS/CSS/TTF (erforderlich für ESP_IDF5)
 * optimiert:    Ladevorgang JS/CSS/TTF durch gzip beschleunigt
-* optimiert:    die Klasse Nachguss (HLT) wurde auf getter/setter umgestellt. Damit sind alle Klassen gekapselt
-* optimiert:    Überprüfung der Eingaben für Nachguss Objekte in die set Methoden verschoben
 
 Weitere Entwicklung: (nicht in Version 1.46 enthalten - Brautomat32 platformIO)
 
 * Migration:    platformIO Portierung ESP32 Wemos D1 IDF4 (4.4.7) abgeschlossen
-* Migration:    platformIO Portierung ESP32 Wemos D1 IDF5 (5.1.4) abgeschlossen (geänderte Paritionen)
+* Migration:    platformIO Portierung ESP32 Wemos D1 IDF5 (5.1.4) abgeschlossen
 * Migration:    platformio Portierung ESP8266 Wemos D1 Mini (2.0.17) abgeschlossen
+* Hinweis:      ein WebUpdate ESP32 von IDF4 (4.x) auf IDF5 (5.x) ist nicht möglich (geänderte Paritionen)
 * Sync:         Quellcode synchronisiert ESP8266, ESP32 IDF4 und ESP32 IDF5 (pending ... )
 * Sync:         Compiler Direktiven ESP8266, ESP32, ESP_IDF4 und ESP_IDF5
 * Fix:          ESP-IDF5 WebUpdate Funktion httpUpdate flush durch clear ersetzt (libs, siehe github repository esp32)
 * Fehler:       ESP32 Task Watchdog funktioniert (noch) nicht in der Version ESP_IDF5. In ESP_IDF5 deaktiviert
 * EPS_IDF5dev:  Build EPS-IDF 5.3.1 hinzugefügt (pioarduino)
-
-Version 1.45.3 bis .6
-
-* intern
 
 Version 1.45.2
 
