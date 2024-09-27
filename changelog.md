@@ -6,8 +6,14 @@ VSCode plugin ESP8266LittleFS based on ESP8266fs\
 InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
 InnuTicker Task Scheduler lib\
 InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNextionLibrary)\
+InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
+
+Version 1.46.1
+
+* Update:       ESPTool 4.8.1 Winx64 Fixed failing esptool imports on Windows [ESPTool](https://github.com/espressif/esptool/releases/tag/v4.8.1)
+* Update:       InnuLog
 
 Version 1.46
 
