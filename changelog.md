@@ -16,6 +16,7 @@ Version 1.46.2
 * Fix:          Logging Output Sensoren typo behoben
 * Update:       ESPTool 4.8.1 Winx64 Fixed failing esptool imports on Windows [ESPTool](https://github.com/espressif/esptool/releases/tag/v4.8.1)
 * Update:       InnuLog
+* Update:       Display Firmware Dateien neu erstellt
 
 Version 1.46
 
