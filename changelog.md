@@ -10,8 +10,13 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.6
+Version 1.46.7
 
+* Fix:          Konvertierung Sensoradressen überarbeitet (first char lost)
+* Update:       Braustatus lesen/speichern/löschen im EEprom überarbeitet
+* Update:       Handling SoftwareSerial für Nextion Display angepasst
+* Deaktiviert:  Logging wegen OOM Exception auf ESP8266 deaktiviert (Logging nur mit ESP32)
+* Neu:          Funktionen für Display Buttons im manuellen Modus implementiert
 * Fix:          Timing Problem DS18B20 im async Modus behoben
 * Fix:          Logging Output Sensoren typo behoben
 * Fix:          InnuNextion Lib Fehler in der Verarbeitung Push Button Commands behoben. Es wurden bei Seitenwechsel keine Werte angezeigt
