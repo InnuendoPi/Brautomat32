@@ -10,8 +10,11 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.9
+Version 1.46.10
 
+* Geändert:     Manueller Modus: schrittweite über die Buttons + und - über das Display auf +5% bzw. -5% angepasst
+* Geändert:     Manueller Modus: neues Event Slider move eingefügt
+* Geändert:     Manueller Modus: Display Icon OnOff eingefügt
 * Fix:          Parameter AutoTune IDS korrigiert (#Fehler SkyBandit)
 * Fix:          Parameter Kp, Ki und Kd im Modus manueller PID wurden aus dem WebIf in das falsche Profil (last statt active) übertragen (#Fehler lowPerformer)
 * Fix:          Parameter Debug AutoTune IDS wurde nicht korrket gespeichert
