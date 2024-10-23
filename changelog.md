@@ -10,8 +10,14 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
-Version 1.46.10
+Version 1.46.12
 
+* Geändert:     Manueller Modus: schrittweite über die Buttons + und - über das WebIf auf +1% bzw. -1% angepasst
+* Geändert:     Manueller Modus: Shortcuts für IDS Leistung auf 0, 20, 40, 60, 80 und 100% Kreise erstellt
+* Fix:          Sync manueller Modus Display nach WebIf und WebIf
+* Fix:          CheckIDSState (err state) wird nur aufgerufen, wenn PIN Interrupt (blau) gesetzt ist
+* Fix:          Bei einer Änderung IDS PID Regel wurden die Daten Kp, Ki und Kd (last/active) nicht korrekt an das WebIf gesendet
+* Entfernt:     Debugausgaben entfernt
 * Geändert:     Manueller Modus: schrittweite über die Buttons + und - über das Display auf +5% bzw. -5% angepasst
 * Geändert:     Manueller Modus: neues Event Slider move eingefügt
 * Geändert:     Manueller Modus: Display Icon OnOff eingefügt
