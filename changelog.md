@@ -1,18 +1,32 @@
 # Changelog
 
-ESP32 Arduino 2.0.17 ESP-IDF v4.4.7\
-VSCode 1.94 Arduino 0.6 Arduino CLI 1.0.4\
-VSCode plugin ESP8266LittleFS based on ESP8266fs\
-InnuAPID AutoTune PID lib based on [Brett Beauregard](https://github.com/br3ttb/Arduino-PID-Library)\
-InnuTicker Task Scheduler lib\
-InnuNextion Display lib based on [EasyNext](https://github.com/Seithan/EasyNextionLibrary)\
-InnuLog Debug lib serial monitor\
-InnuFramework CSS/JS bootstrap 4.6.2\
+ESP32 Arduino 2.0.17 ESP-IDF v4.4.7
+VSCode 1.95 Arduino 0.7 Arduino CLI 1.1.0
+VSCode plugin ESP8266LittleFS
+InnuAPID AutoTune PID lib
+InnuTicker Task Scheduler lib
+InnuNextion Display lib
+InnuLog Debug lib serial monitor
+InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
+
+Version 1.47.7
+
+* Neu:          Webhook für Aktoren
+* Geändert:     im WebIf Aktoren werden PWM und invertieren passend zur Auswahl GPIO/Webhook ein- bzw. ausgeblendet
+* Fix:          default Kesselname gesetzt
+* Neu:          Eigenschaft Name hinzugefügt
+* Neu:          zweites Induktionskochfeld "SUD" kann mit dem Brautomat gesteuert werden
+* Neu:          neuer Sonderbefehl SUD für die zweite GGM IDS
+* Neu:          Display Firmware Anzeige Kesselübersicht um zweites Induktionskochfeld erweitert
+* Geändert:     Sonderbefehle können auch Dauer und Temperatur verarbeiten
+* Geändert:     im Display wird auf der Seite Kesselübersicht der Name angezeigt
+* Fix:          Suche nach DS18B20 Adressen korrigiert
+* Update:       VSCode 1.95
 
 Version 1.46.13
 
-* Geändert: Suche Sensoradressen angepasst (ESP8266)
+* Geändert:     Suche Sensoradressen angepasst (ESP8266)
 * Geändert:     Manueller Modus: schrittweite über die Buttons + und - über das WebIf auf +1% bzw. -1% angepasst
 * Geändert:     Manueller Modus: Shortcuts für IDS Leistung auf 0, 20, 40, 60, 80 und 100% Kreise erstellt
 * Fix:          Sync manueller Modus Display nach WebIf und WebIf
@@ -22,10 +36,12 @@ Version 1.46.13
 * Geändert:     Manueller Modus: schrittweite über die Buttons + und - über das Display auf +5% bzw. -5% angepasst
 * Geändert:     Manueller Modus: neues Event Slider move eingefügt
 * Geändert:     Manueller Modus: Display Icon OnOff eingefügt
+* Fix:          Manueller Modus: Touch Event der Buttons +/- wurden nicht immer korrekt erkannt
 * Fix:          Parameter AutoTune IDS korrigiert (#Fehler SkyBandit)
 * Fix:          Parameter Kp, Ki und Kd im Modus manueller PID wurden aus dem WebIf in das falsche Profil (last statt active) übertragen (#Fehler lowPerformer)
 * Fix:          Parameter Debug AutoTune IDS wurde nicht korrket gespeichert
 * Fix:          Parameter AutoTune IDS wurde nicht korrket gespeichert (typo)
+* Fix:          ON/OFF in den Sonderfunktionen für Aktoren, Nachguss oder IDS sind nicht mehr case sensitive
 * Fix:          Konvertierung Sensoradressen überarbeitet (first char lost)
 * Update:       Braustatus lesen/speichern/löschen im EEprom überarbeitet
 * Update:       Handling SoftwareSerial für Nextion Display angepasst
@@ -33,10 +49,10 @@ Version 1.46.13
 * Neu:          Funktionen für Display Buttons im manuellen Modus implementiert
 * Fix:          Timing Problem DS18B20 im async Modus behoben
 * Fix:          Logging Output Sensoren typo behoben
-* Fix:          InnuNextion Lib Fehler in der Verarbeitung Push Button Commands behoben. Es wurden bei Seitenwechsel keine Werte angezeigt
+* Fix:          InnuNextion Display Lib Fehler warte auf Daten SoftwareSerial behoben
 * Update:       ESPTool 4.8.1 Winx64 Fixed failing esptool imports on Windows [ESPTool](https://github.com/espressif/esptool/releases/tag/v4.8.1)
 * Update:       InnuLog
-* Update:       Display Firmware Dateien neu erstellt
+* Update:       ESP8266 3.2.0 core libs
 
 Version 1.46
 
