@@ -10,8 +10,12 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.47.7
+Version 1.47.9
 
+* Fix:          Autorestart Maischestep nach Reset oder Ausschalten, wenn Timer noch nicht gestartet war
+* Fix:          Anzeige Restzeit Maischestep nach Reset oder Ausschalten nicht korrekt
+* Fix:          Nachguss/Sud ein oder ausschalten ohne Braustart hat fehlerhaft den Brauprozess gestartet.
+* Neu:          Webhook für Nachguss
 * Neu:          Webhook für Aktoren
 * Geändert:     im WebIf Aktoren werden PWM und invertieren passend zur Auswahl GPIO/Webhook ein- bzw. ausgeblendet
 * Fix:          default Kesselname gesetzt
