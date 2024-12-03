@@ -244,6 +244,7 @@
     "HLT_DEB": "AutoTune debug",
     "HLT_TEXT2": "AutoTune on gitbook",
     "HLT_DEL": " delete HLT",
+    "HLT_URL": "Webhook",
     "HLT_TT_SEN": "Select sensor connected to HLT",
     "HLT_TT_MAXO": "Max. power output HLT [1-100%]",
     "HLT_TT_KU": "the brewing system value Ku is determined using AutoTune",
