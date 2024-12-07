@@ -10,8 +10,12 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.47.9
+Version 1.47.10
 
+* Fix:          TickerMash Status war nach Reset/Stromunterbrechung bei deaktiviertem autonext nicht korrekt
+* Geändert:     die Dauer einer Stromunterbrechung während einer aktiven Rast (Timer läuft), wird nach dem Neustart von der Rastzeit automatisch abgezogen
+* Neu:          es wird ein Zeitstempel mitgespeichert, um die Dauer einer Unterbrechung bemessen zu können
+* Geändert:     die aktuelle Rastzeit wird nun im 10s Takt in Sekunden statt Restminuten alle 60s gespeichert
 * Fix:          Autorestart Maischestep nach Reset oder Ausschalten, wenn Timer noch nicht gestartet war
 * Fix:          Anzeige Restzeit Maischestep nach Reset oder Ausschalten nicht korrekt
 * Fix:          Nachguss/Sud ein oder ausschalten ohne Braustart hat fehlerhaft den Brauprozess gestartet.
