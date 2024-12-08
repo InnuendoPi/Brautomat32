@@ -10,8 +10,11 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.47.10
+Version 1.47.11
 
+* Fix:          Das Logging für den Maischeprozess war zu Debugzwecken fest auf VERBOSE eingestellt
+* Neu:          Toast Message, wenn der Rast Timer nach einer Unterbrechung angeapsst wurde
+* Fix:          Webhook Nachguss wurde nicht korrekt verarbeitet
 * Fix:          TickerMash Status war nach Reset/Stromunterbrechung bei deaktiviertem autonext nicht korrekt
 * Geändert:     die Dauer einer Stromunterbrechung während einer aktiven Rast (Timer läuft), wird nach dem Neustart von der Rastzeit automatisch abgezogen
 * Neu:          es wird ein Zeitstempel mitgespeichert, um die Dauer einer Unterbrechung bemessen zu können
