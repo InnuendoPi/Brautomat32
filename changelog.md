@@ -12,6 +12,7 @@ Server Sent Events (6 SSE channels)
 
 Version 1.47
 
+* Update:       Nextion Display Dateien aktualisiert
 * Fix:          Brautomat Status nach Stromunterbrechung (verschiedene Zustände korrigiert)
 * Fix:          typedef time_t
 * Fix:          Das Logging für den Maischeprozess war zu Debugzwecken fest auf VERBOSE eingestellt
