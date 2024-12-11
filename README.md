@@ -118,10 +118,20 @@ _Legal note: "Boxing Bell" (info), "Short School Bell" (error), "Ding sound effe
 
 ## Changelog
 
-Version 1.46.1
+Version 1.47
 
-* Update:       ESPTool 4.8.1 Winx64 Fixed failing esptool imports on Windows [ESPTool](https://github.com/espressif/esptool/releases/tag/v4.8.1)
-* Update:       InnuLog
+* Update:       Nextion Display Dateien aktualisiert
+* Neu:          Toast Message, wenn der Rast Timer nach einer Unterbrechung angeapsst wurde
+* Neu:          es wird ein Zeitstempel mitgespeichert, um die Dauer einer Unterbrechung bemessen zu können
+* Neu:          Webhook für Nachguss
+* Neu:          Webhook für Aktoren
+* Neu:          Eigenschaft Name hinzugefügt
+* Neu:          zweites Induktionskochfeld "SUD" kann mit dem Brautomat gesteuert werden
+* Neu:          neuer Sonderbefehl SUD für die zweite GGM IDS
+* Neu:          Display Firmware Anzeige Kesselübersicht um zweites Induktionskochfeld erweitert
+* Geändert:     Sonderbefehle können auch Dauer und Temperatur verarbeiten
+* Geändert:     im Display wird auf der Seite Kesselübersicht der Name angezeigt
+* Fix:          Suche nach DS18B20 Adressen korrigiert
 
 Version 1.46
 
