@@ -10,8 +10,10 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.47.11
+Version 1.47.12
 
+* Fix:          Brautomat Status nach Stromunterbrechung (verschiedene Zustände korrigiert)
+* Fix:          typedef time_t
 * Fix:          Das Logging für den Maischeprozess war zu Debugzwecken fest auf VERBOSE eingestellt
 * Neu:          Toast Message, wenn der Rast Timer nach einer Unterbrechung angeapsst wurde
 * Fix:          Webhook Nachguss wurde nicht korrekt verarbeitet
