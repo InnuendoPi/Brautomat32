@@ -23,7 +23,7 @@ Diese Anleitung unterteilt sich in drei Themenbereich:
   * Das Display
   * 3D Gehäuse
   * zus. Hardware
-* Infos, FAQs & co
+* Infos und FAQs
   * kleinerBrauhelfer2
   * das MQTTDevice
 

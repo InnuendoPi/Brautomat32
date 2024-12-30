@@ -119,20 +119,22 @@ _Hinweis: die folgenden zwei Themen Sonderfunktion Aktoren Schalten und Sonderfu
 
 ## Sonderfunktion Aktoren Schalten
 
-Eine zweite Sonderfunktion sind Steuerbefehle für das Induktionskochfeld, den Nachguss und die Aktoren. Die Syntax für den Maischeschritt lautet:
+Eine zweite Sonderfunktion sind Steuerbefehle für die Induktionskochfelder Maische und Sud, den Nachguss und die Aktoren. Die Syntax für den Maischeschritt lautet:
 
 * Aktorname:Leistung
 
-Dabei kann die Leistung entweder ON oder OFF oder eine Zahl zwischen 0 und 100% sein. Dabei entspricht der Status OFF dem Wert 0% und ON dem Wert 100%. Die Rasttemperatur und die Rastdauer müssen für diese Sonderfunktion auf 0 gesetzt sein. Der Steuerbefehl für das Induktionskochfeld lautet IDS. Der Steuerbefehl für den Nachguss lautet HLT. Für den Nachguss ist zusätzlich der Steuerbefehl Nachguss nutzbar. Der Steuerbefehl für einen Aktor ist der Aktorname.
+Dabei kann die Leistung entweder ON oder OFF oder eine Zahl zwischen 0 und 100% sein. Dabei entspricht der Status OFF dem Wert 0% und ON dem Wert 100%. Der Steuerbefehl für das erste Induktionskochfeld lautet IDS oder MAISCHE. Der Steuerbefehl für das zweite Induktionskochfeld lautet SUD. Der Steuerbefehl für den Nachguss lautet HLT. Für den Nachguss ist zusätzlich der Steuerbefehl Nachguss nutzbar. Der Steuerbefehl für einen Aktor ist der Aktorname.
 
 ![Sonderfunktion Steuerbefehl](/docs/img/Maischeplan-Aktoren.jpg)
 
 Der Maischeplan im Bild schaltet an drei Stellen Aktoren. Direkt zu Beginn wird das Rührwerk eingeschaltet: Ruehrwerk:ON
 Kurz vor dem Ende des Maischeplans wird das Rührwerk mit dem Befehl Ruehrwerk:OFF ausgeschaltet und der Nachguss mit Nachuss:ON eingeschaltet. Aktornamen dürfen keine Sonderzeichen (außer - und _), Umlaute oder Leerzeichen enthalten und müssen eindeutig sein. Das Web Interface überprüft automatische die Eingaben.
 
-Der Steuerbefehl für einen Aktor kann mit einer Leistung angegeben werden, bspw. PUMPE:60. Der Aktor Pumpe würde nun mit 60% eingeschaltet werden. Das setzt voraus, dass dieser Aktor für PWM aktiviert wurde. Wird der Steuerbefehl für einen Aktor ohne PWM ausgeführt, dann wird die Leistung 60% ersetzt durch ON bzw. 100%.
+Der Steuerbefehl für einen Aktor kann mit einer Leistung angegeben werden, bspw. PUMPE:60. Der Aktor Pumpe würde nun mit 60% eingeschaltet werden. Das setzt voraus, dass dieser Aktor für PWM aktiviert wurde. Wird der Steuerbefehl für einen Aktor ohne PWM ausgeführt, dann wird die Leistung 60% ersetzt durch ON bzw. 100%. Die Rasttemperatur und die Rastdauer müssen für bei Steuerbefehlen für Aktoren auf 0 gesetzt sein.
 
 Der Steuerbefehl IDS:50 setzt die maximale Ausgangsleistung vom Induktionskochfeld auf 50%. Ebenso kann der Nachguss mit HLT:75 auf 75% Leistung gesetzt werden.
+
+Der Steuerbefehl SUD:Dickmaische kochen und einer Rastdauer von 10 Minuten und einer Rasttempertur von 100 Grad führt einen Maischeschritt auf einem zweiten Induktionskochfeld aus.
 
 Beispiele:
 
@@ -143,6 +145,8 @@ Beispiele:
 * IDS:OFF
 * HLT:100
 * HLT:OFF
+* SUD:Dickmaische kochen
+* SUD:60
 
 Ein praxisnahes Beispiel im Maischeplan für das Induktionskochfeld:
 
