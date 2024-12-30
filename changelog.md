@@ -10,8 +10,13 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.47.1
+Version 1.47.3
 
+* Fix:          Casting private ArduinoJSON objects (Update 7.3)
+* Update:       ArduinoJSON 7.3
+* Update:       VSCode 1.96
+* Fix:          die Berechnung der erforderlichen Leistung IDS (PID Controller) bei einem Sensorfehler (-127 Grad) nicht mehr ausgeführt
+* Fix:          Einlesen Maischeplan nach Stromunterbrechung: Zuweisung Maische, Sud, HLT, Steuerbefehl oder Aktor korrigiert
 * Fix:          Fehler Hinzufügen/Entfernen von Maischeschritte behoben, wenn der Brauprozess gestartet ist
 * Update:       Nextion Display Dateien aktualisiert
 * Fix:          Brautomat Status nach Stromunterbrechung (verschiedene Zustände korrigiert)

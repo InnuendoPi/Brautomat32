@@ -22,7 +22,9 @@ Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und 
   * Alarmierung für Hopfengaben
   * Bis zu 20 Teilschritte
 * Verwaltung von Maischeplänen
-* Steuerung für einen Nachguss Kessel (HLT)
+* Steuerung Induktionskochfeld als Maischepfanne
+* Steuerung Induktionskochfeld als Sudpfanne (Würzepfanne)
+* Steuerung Nachguss (HLT)
 * Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
 * PWM für Aktoren
 * Audio Alarme
