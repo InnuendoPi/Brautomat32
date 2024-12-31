@@ -134,7 +134,17 @@ Der Steuerbefehl für einen Aktor kann mit einer Leistung angegeben werden, bspw
 
 Der Steuerbefehl IDS:50 setzt die maximale Ausgangsleistung vom Induktionskochfeld auf 50%. Ebenso kann der Nachguss mit HLT:75 auf 75% Leistung gesetzt werden.
 
-Der Steuerbefehl SUD:Dickmaische kochen und einer Rastdauer von 10 Minuten und einer Rasttempertur von 100 Grad führt einen Maischeschritt auf einem zweiten Induktionskochfeld aus.
+![Sonderfunktion Steuerbefehl](/docs/img/sonderfunktion_sud1.jpg)
+
+Der Steuerbefehl SUD:Dickmaische kochen und einer Rastdauer von 10 Minuten und einer Rasttempertur von 100 Grad führt einen Maischeschritt auf einem zweiten Induktionskochfeld aus. Der Rasttimer wird gestartet, sobald die Rasttemperatur erreicht ist.
+
+![Sonderfunktion Steuerbefehl](/docs/img/sonderfunktion_sud2.jpg)
+
+Der Steuerbefehl SUD:Dickmaische kochen und einer Rasttempertur von 100 Grad aber ohne Rastdauer schaltet das zweite Induktionskochfeld ein, startet den PID Controller und springt direkt zum nächsten Schritt im Maischeplan.
+
+![Sonderfunktion Steuerbefehl](/docs/img/sonderfunktion_sud3.jpg)
+
+Der Maischeschritt Verzuckerung 72°C wird auf dem ersten Induktionkochfeld "Maische" ausgeführt. Der PID Controller regelt die benötigte Leistung für den Kessel "Maische". Zeitgleich regelt der PID Controller die benötigte leistung für den Kessel "Sud".
 
 Beispiele:
 
@@ -148,7 +158,15 @@ Beispiele:
 * SUD:Dickmaische kochen
 * SUD:60
 
-Ein praxisnahes Beispiel im Maischeplan für das Induktionskochfeld:
+_Hinweis: über die Steuerbefehle können die Kessel Maische, Sud und HLT zeitgleich genutzt werden. Es kann aber nur ein Rasttimer aktiv sein. Das erste Induktionskochfeld "Maische" muss immer eine Rastdauer eingetragen haben._
+
+Beispiel Dekoktion mit zwei Induktionskochfeldern:
+
+![Sonderfunktion Steuerbefehl](/docs/img/sonderfunktion_sud4.jpg)
+
+Aufgrund der Einschränkung "der erste Kessel "Maische" muss immer mit einer Rastdauer betrieben werden", ergibt sich für die Prozesse Dekoktion ein einfaches Vorgehen: die zu kochende Teilmaische muss in den Kessel "Maische" und die auf Temperatur zu haltende Teilmaische muss in den Kessel "Sud".
+
+Beispiel für die Verwendung der Leistung für das Induktionskochfeld:
 
 Gegeben sei eine Schüttung mit 7kg und ein Hauptguss mit 28l. In Summe beträgt die Masse 35kg\
 
