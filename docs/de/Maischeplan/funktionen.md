@@ -144,7 +144,7 @@ Der Steuerbefehl SUD:Dickmaische kochen und einer Rasttempertur von 100 Grad abe
 
 ![SUD Steuerbefehl](/docs/img/sonderfunktion_sud3.jpg)
 
-Der Maischeschritt Verzuckerung 72°C wird auf dem ersten Induktionkochfeld "Maische" ausgeführt. Der PID Controller regelt die benötigte Leistung für den Kessel "Maische". Zeitgleich regelt der PID Controller die benötigte leistung für den Kessel "Sud".
+Der Maischeschritt Verzuckerung 72°C wird auf dem ersten Induktionkochfeld "Maische" ausgeführt. Der PID Controller regelt die benötigte Leistung für den Kessel "Maische". Zeitgleich regelt der PID Controller die benötigte Leistung für den Kessel "Sud".
 
 Beispiele:
 
