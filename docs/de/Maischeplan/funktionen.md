@@ -115,9 +115,9 @@ _Hintergrund: Wenn die Funktion autonext aktiviert ist, vergleicht der Brautomat
 
 Durch die Tabellenform ist das Grundprinzip vom Brautomat die aufsteigende Infusion. Das schließt Varianten wie bspw. das Earlsche Kochmaischverfahren ein. Mit Hilfe der Eigenschaft "autonext" können auch andere Brauverfahren umgesetzt werden. Es gilt aber zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "halber Automatik" unterstützen kann. Ein auslösender Trigger für eine Aktion wie bspw. das Ziehen von Teilmaischen, muss durch den Anwender manuell erfolgen. Manuell bedeuet beim Brautomat das Anklicken vom Play Button. Eine Rast mit null Minuten Dauer und deaktiviertem autonext kann als Auslöser für eine manuelle Aktion genutzt werden.
 
-_Hinweis: die folgenden zwei Themen Sonderfunktion Aktoren Schalten und Sonderfunktion IDS Profilwechsel sind optional und für den Einstieg in den Brautomat nicht relevant._
+_Hinweis: die folgenden Themen zu den Steuerbefehlen sind optional und für den Einstieg in den Brautomat nicht relevant._
 
-## Sonderfunktion Aktoren Schalten
+## Steuerbefehle
 
 Eine zweite Sonderfunktion sind Steuerbefehle für die Induktionskochfelder Maische und Sud, den Nachguss und die Aktoren. Die Syntax für den Maischeschritt lautet:
 
@@ -125,7 +125,7 @@ Eine zweite Sonderfunktion sind Steuerbefehle für die Induktionskochfelder Mais
 
 Dabei kann die Leistung entweder ON oder OFF oder eine Zahl zwischen 0 und 100% sein. Dabei entspricht der Status OFF dem Wert 0% und ON dem Wert 100%. Der Steuerbefehl für das erste Induktionskochfeld lautet IDS oder MAISCHE. Der Steuerbefehl für das zweite Induktionskochfeld lautet SUD. Der Steuerbefehl für den Nachguss lautet HLT. Für den Nachguss ist zusätzlich der Steuerbefehl Nachguss nutzbar. Der Steuerbefehl für einen Aktor ist der Aktorname.
 
-![Sonderfunktion Steuerbefehl](/docs/img/Maischeplan-Aktoren.jpg)
+![Aktor Steuerbefehl](/docs/img/Maischeplan-Aktoren.jpg)
 
 Der Maischeplan im Bild schaltet an drei Stellen Aktoren. Direkt zu Beginn wird das Rührwerk eingeschaltet: Ruehrwerk:ON
 Kurz vor dem Ende des Maischeplans wird das Rührwerk mit dem Befehl Ruehrwerk:OFF ausgeschaltet und der Nachguss mit Nachuss:ON eingeschaltet. Aktornamen dürfen keine Sonderzeichen (außer - und _), Umlaute oder Leerzeichen enthalten und müssen eindeutig sein. Das Web Interface überprüft automatische die Eingaben.
@@ -134,15 +134,15 @@ Der Steuerbefehl für einen Aktor kann mit einer Leistung angegeben werden, bspw
 
 Der Steuerbefehl IDS:50 setzt die maximale Ausgangsleistung vom Induktionskochfeld auf 50%. Ebenso kann der Nachguss mit HLT:75 auf 75% Leistung gesetzt werden.
 
-![Sonderfunktion Steuerbefehl](/docs/img/sonderfunktion_sud1.jpg)
+![IDS Steuerbefehl](/docs/img/sonderfunktion_sud1.jpg)
 
 Der Steuerbefehl SUD:Dickmaische kochen und einer Rastdauer von 10 Minuten und einer Rasttempertur von 100 Grad führt einen Maischeschritt auf einem zweiten Induktionskochfeld aus. Der Rasttimer wird gestartet, sobald die Rasttemperatur erreicht ist.
 
-![Sonderfunktion Steuerbefehl](/docs/img/sonderfunktion_sud2.jpg)
+![SUD Steuerbefehl](/docs/img/sonderfunktion_sud2.jpg)
 
 Der Steuerbefehl SUD:Dickmaische kochen und einer Rasttempertur von 100 Grad aber ohne Rastdauer schaltet das zweite Induktionskochfeld ein, startet den PID Controller und springt direkt zum nächsten Schritt im Maischeplan.
 
-![Sonderfunktion Steuerbefehl](/docs/img/sonderfunktion_sud3.jpg)
+![SUD Steuerbefehl](/docs/img/sonderfunktion_sud3.jpg)
 
 Der Maischeschritt Verzuckerung 72°C wird auf dem ersten Induktionkochfeld "Maische" ausgeführt. Der PID Controller regelt die benötigte Leistung für den Kessel "Maische". Zeitgleich regelt der PID Controller die benötigte leistung für den Kessel "Sud".
 
@@ -162,7 +162,7 @@ _Hinweis: über die Steuerbefehle können die Kessel Maische, Sud und HLT zeitgl
 
 Beispiel Dekoktion mit zwei Induktionskochfeldern:
 
-![Sonderfunktion Steuerbefehl](/docs/img/sonderfunktion_sud4.jpg)
+![IDS und SUD Steuerbefehl](/docs/img/sonderfunktion_sud4.jpg)
 
 Aufgrund der Einschränkung "der erste Kessel "Maische" muss immer mit einer Rastdauer betrieben werden", ergibt sich für die Prozesse Dekoktion ein einfaches Vorgehen: die zu kochende Teilmaische muss in den Kessel "Maische" und die auf Temperatur zu haltende Teilmaische muss in den Kessel "Sud".
 
@@ -172,7 +172,7 @@ Gegeben sei eine Schüttung mit 7kg und ein Hauptguss mit 28l. In Summe beträgt
 
 Mit Hilfe der Sonderfunktion IDS:<Leistung in %> kann die Leistung der GGM IDS so eingestellt werden, dass beim Maischen die Aufheizrate 1°C pro Minute beträgt.
 
-![Sonderfunktion Steuerbefehl](/docs/img/IDS-Sonderfunktion.jpg)
+![Steuerbefehl IDS Leistung](/docs/img/IDS-Sonderfunktion.jpg)
 
 _Erläuterungen zum Rechenweg siehe: Parameter der GGM IDS - Temperatursteuerung - Maximale Leistung der IDS._
 
@@ -201,13 +201,13 @@ Der Profilwechsel ermöglicht die Verarbeitung von Teilmaischen mit angepassten 
 
 Für das Beispiel sei folgende Konfiguration für die GGM IDS bzw. den MasicheSud Kessel gegeben:
 
-![Sonderfunktion Steuerbefehl](/docs/img/aktoren_schalten4.jpg)
+![IDS Steuerbefehl](/docs/img/aktoren_schalten4.jpg)
 
 Die maximale Ausgangsleistung ist mit 100% auf dem Standardwert konfiguriert. Die Temperatur "Übergang zum Kochen" beträgt 95°C. Ab dieser Temepratur beträgt die maximale Ausgangsleistung der GGM IDS nur noch 80%.
 
 Der Maischeplan in der Abbildung startet mit dem Schritt "Hauptguss aufheizen". Das Induktionskochfeld GGM IDS würde mit der Leistung "Max. Leistung IDS" (Parameter im Tab Temperatursteuerung) das Wasser erhitzen, also mit 100%.
 
-![Sonderfunktion Steuerbefehl](/docs/img/aktoren_schalten2.jpg)
+![IDS Steuerbefehl](/docs/img/aktoren_schalten2.jpg)
 
 Bei 59°C startet der Rasttimer. Die Rastdauer beträgt null Minuten. Der Brautomat springt in die nächste Zeile zu Schritt 2.
 Der Steuerbefehl IDS:65 setzt die maximale Leistung der IDS auf 65%. Der Brautomat springt in die nächste Zeile zu Schritt 3.
@@ -215,7 +215,7 @@ Nun wird von 59°C auf die Zieltemperatur im Schritt "Einmaischen" aufgeheitzt. 
 
 Die maximale Ausgangsleistung von 65% wird in den folgenden Maischeschritten beibehalten. Bis der Brautomat nach dem Schritt "Abmaischen" auf en Steuerbefehl IDS:100 trifft
 
-![Sonderfunktion Steuerbefehl](/docs/img/aktoren_schalten3.jpg)
+![IDS Steuerbefehl](/docs/img/aktoren_schalten3.jpg)
 
 Der Steuerbefehl ändert die maximale Ausgangsleistung der IDS auf 100%. Nun wird die Würze bis zur Temperatur "Übergang zum Kochen" bei 95°C (siehe oben) mit 100% Leistung erhitzt. Ab 95°C schaltet die GGM IDS auf 80% Leistung. 80% entspricht dem Parameter "Leistung ab Übergang".
 
