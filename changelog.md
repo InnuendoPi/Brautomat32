@@ -10,8 +10,11 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.47.3
+Version 1.47.4
 
+* Update:       Erläuterungen Steuerbefehle in der Anleitung erweitert
+* Fix:          Debug Ausgaben Braustatus Flash (read/write/erase)
+* Geändert:     deprecated lib EEPROM durch Preferences für ESP32 ersetzt (save states in flash)
 * Fix:          Casting private ArduinoJSON objects (Update 7.3)
 * Update:       ArduinoJSON 7.3
 * Update:       VSCode 1.96
