@@ -10,8 +10,15 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.47.4
+Version 1.47.6
 
+* Fix:          es ist nun möglich, alle PID Parameter für Maische, Sud und HLT bei aktivem PID Controller (beim Brauen) anzupassen
+* Fix:          wenn SoftSerial keinen oder einen fehlerhaften Wert für den PowerButton von Display im manuellen Modus liefert
+* Geändert:     Modul checkIDSState Kessel Sud
+* Neu:          Auswahl Gerätetyp GGM oder Relais für Maische und Sud
+* Fix:          Korrektur Sprachdateien für das Objekt SUD
+* Fix:          Korrektur Pin Interrupt handling zweite GGM IDS
+* Fix:          Korrektur task watchdog timer ESP32 IDF5.x (platformIO)
 * Update:       Erläuterungen Steuerbefehle in der Anleitung erweitert
 * Fix:          Debug Ausgaben Braustatus Flash (read/write/erase)
 * Geändert:     deprecated lib EEPROM durch Preferences für ESP32 ersetzt (save states in flash)
