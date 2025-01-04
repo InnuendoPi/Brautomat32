@@ -98,21 +98,23 @@ GPIO Zuordnung:
 | D5         | GPIO018 | ok     | ok     | GGM IDS Interrupt blue/green                  |
 | D6         | GPIO019 | ok     | ok     | GGM IDS Command yellow                        |
 | D7         | GPIO023 | ok     | ok     | GGM IDS Relay white                           |
-| D8         | GPIO005 | ok     | ok     | Buzzer                                        |
+| D8         | GPIO005 | ok     | ok     | Buzzer, outputs PWM signal at boot            |
 | D9         | GPIO027 | ok     | ok     | SCLK                                          |
 | D10        | GPIO025 | ok     | ok     | MISO                                          |
 | D11        | GPIO032 | ok     | ok     | MOSI                                          |
-| D12        | GPIO012 | (ok)   | ok     | TDI, boot fails if pulled high, strapping pin |
+| D12        | GPIO012 | (ok)   | ok     | TDI, boot fails if pulled high                |
 | D13        | GPIO004 | ok     | ok     | CS0                                           |
 | D14        | GPIO000 | pullUp | (ok)   | must be low to enter flash mode               |
 | D15        | GPIO002 | ok     | ok     | onboard LED, must be low to enter flash mode  |
 | D16        | GPIO033 | ok     | ok     | CS1                                           |
-| D17        | GPIO014 | ok     | ok     | CS2                                           |
-| D18        | GPIO015 | ok     | ok     |                                               |
+| D17        | GPIO014 | ok     | ok     | CS2, outputs PWM signal at boot               |
+| D18        | GPIO015 | ok     | ok     | outputs PWM signal at boot                    |
 | D19        | GPIO013 | ok     | ok     |                                               |
+| D20        | GPIO010 | (ok)   | (ok)   | SD3 SPI flash                                 |
 ||||||
 
-Pins connected to onboard flash and not recommended for GPIO use: CMD (IO11), CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9) and SD3 (IO10)
+Pins connected to the integrated SPI flash and not recommended for other use: CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9), SD3 (IO10), CMD (IO11)\
+GPIOs 34 to 39 are input only pins.
 
 ## 🔉MP3 Dateien
 
