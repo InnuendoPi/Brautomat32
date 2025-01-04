@@ -8,13 +8,13 @@ Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Eigenschaft
 
 * PIN weiß [Relais] - Standardeinstellung: D7
 * PIN gelb [Command] - Standardeinstellung: D6
-* PIN blau [Interrupt] - Standardeinstellung: D5
+* PIN blau [Interrupt] - Standardeinstellung: - (kein Interrupt)
+
+_Hinweis: PIN blau [Interrupt D5] sollte durch die Auswahl "-" unbelegt bleiben._
 
 Vorbelegt sind GPIOs (D5, D6 und D7) für das original Anschlusskabel der GGM IDS. Diese Vorauswahl entspricht auch der Platine in diesem Projekt. Als nächste Eigenschaft muss ein Temperatursensor angegeben werden, welcher dem MaischeSud Kessel zugewiesen wird. In der Auswahlliste erscheinen die Sensornamen der bereits eingerichteten Sensoren. In dieser Grundeinrichtung ist nur ein Sensor mit dem Namen "Sensor IDS2" vorhanden und wird ausgewählt.
 
 _Tipp: dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktuelle Temperatur genannt und wird im Maischeprozess immer wieder mit der Rast-Temperatur (Zieltemperatur) verglichen._
-
-_Tipp: PIN blau [Interrupt D5] kann durch die Auswahl "-" unbelegt bleiben._
 
 ![MaischeSud Kessel konfigurieren](/docs/img/IDS-konfigurieren.jpg)
 
