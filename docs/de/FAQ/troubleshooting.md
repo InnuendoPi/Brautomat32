@@ -34,3 +34,34 @@ Sehr gut isolierte Maische- Sudkessel benötigen einen größere AutoTune Datenr
 
 Sensoren vom Typ Dallas DS18B20 werden auf sehr vielen Plattformen zu sehr unterschiedlichen Preisen angeboten. Die Sensorkalibrierung hilft Abweichungen zu minimieren. In jedem Fall sollte der Sensor der IDS kalibriert werden, weil Abweichungen von mehreren Grad Celsius (je nach Herkunft) möglich sind.\
 Wenn ein Sensor regelmäßig im Web Interface mit Sensor Error (Toasts) gemeldet wird, sollte zunächst ein anderer Anschluss für den Sensor ausprobiert werden. Die drei Anschlüsse auf der Platine für die Sensoren sind gleichwertig und haben keine vorgegebene Reihenfolge. Bei Sensorproblemen sind die Lötpunkte der 3er-Schraubklemmblöcke und der Widerstand 4.7kOhm (auf der Platine unter dem ESP8266) zu prüfen.
+
+## GGM IDS Pin Interrupt
+
+Der Pin Interrupt liefert einen Rückkanal vom Induktionskochfeld zum Brautomat. Dieser Rückkanal wird mit einem Interrupt GPIO vom ESP mit dem Brautomat verbunden. Ein Interrupt unterbricht den Programmablauf und prüft die Interrupt Bedingung.\
+Das Induktionkochfeld GGM IDS sendet fortlaufend etwa alle 300 Millisekunden einen Interrupt: entweder das Signal "alles ok" (0000) oder einen ErrorCode (bspw. 0010 für kein Kessel bzw. leerer Kessel).
+
+Ausschnitt serielle Ausgabe am Pin Interrupt:
+
+```text
+10:00:00:174 -> 0000 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 0 1 1 1 1 
+10:00:00:543 -> 0000 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 0 1 1 1 1 
+10:00:00:864 -> 0000 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 0 1 1 1 1 
+10:00:01:209 -> 0000 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 0 1 1 1 1 
+10:00:01:554 -> 0000 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 0 1 1 1 1 
+```
+
+Die serielle Ausgabe am Pin Interrupt zeigt anschaulich, dass das Induktionskochfeld permanent "alles ok" sendet. Der Brautomat unterbricht aber mit jedem Interrupt (etwa alle 300ms) seine Arbeit beim Brauen und überprüft die Interrupt Bedingung. Der Pin Interrupt sollte daher nur zur Fehlersuche eingesetzt werden.
+
+Im Handbuch der GGM IDS2 sind folgende Interrupts beschrieben:
+
+E0 kein/leerer Kessel (0010 2)\
+E1 Stromkreisfehler (0011 3)\
+E3 Überhitzung (0101 5)\
+E4 Temperatursensor (0110 6)\
+E7 Niederspannungsschutz (1001 9)\
+E8 Überspannungsschutz (1010 10)\
+EC Bedienfeld (1110 14)\
+
+Leider sind die binären Zeichenfolgen nicht bekannt. Lediglich E1 kein/leerer Kessel ist bekannt. Die Zeichenfolgen den Klammern wurden durch Tests ermittelt, sind aber nicht sicher.
+
+Der Pin Interrupt sollte nur bei Problemen belegt werden. Für das erste Induktionskochfeld ist vorbelegt der Pin D5. Im normalen Braubetrieb ist kein Pin Interrupt erforderlich.
