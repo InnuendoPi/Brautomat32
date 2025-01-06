@@ -6,36 +6,7 @@
 
 Dieser Parameter beschreibt die maximale Ausgangsleistung der GGM IDS. Der Standardwert ist 100%. Dieser Parameter kommt zum Einsatz, wenn ein kleiner Kessel mit bspw. 20l Volumen auf der GGM IDS genutzt wird. Durch Reduzierung der Leistung der IDS kann ein zu schnelles Aufheizen und ein Überkochen vermieden werden. Die Parameter "Max. Leistung IDS" und "Leistung kochen" sollten beim Einsatz von kleineren Braukesseln zusammen reduziert werden.
 
-Optional\
-Beim Maischen ist ein Anstieg der Maischetemperatzur von 1°C pro Minute erwünscht. Die benötigte Leistung P der GGM IDS kann berechnet werden:
-
-P = m[kg] * 75
-
-    P = m[kg] * c * T / (t * w)
-
-m := Masse Hauptguss + Schüttung\
-c := spezifische Wärmekapazität Maische = 3600 Joule/(kg * °C)\
-T := Temperaturdifferenz  = 1°C\
-t := Zeit = 60sek\
-w := Wirkungsrad Induktion (80-90%) = 0.8
-
-`c * T / (t * w) = 3600 * 1 / (60 * 0.8) = 75`
-
-Beispiel 1: Schüttung + HG = 9kg + 35l = 44\
-`P = 44 * 75 = 3300`
-
-Es sind näherungsweise 3300 W/min erforderlich, um ein Volumen von 44kg pro Minute um 1°C zu erhitzen. Die GGM IDS müsste mit ca. 94-95% Leistung betrieben werden (Sonderfunktion IDS:95).
-
-Beispiel 2: Schüttung + HG = 5,9kg + 26,5l = 32,4\
-P = 32,4 * 75 = 2430
-
-Es sind näherungsweise 2430 W/min erforderlich, um ein Volumen von 32,4kg pro Minute um 1°C zu erhitzen. Die GGM IDS müsste mit ca. 69-70% Leistung betrieben werden (Sonderfunktion IDS:70).
-
-Die hier verwendete spez. Wärmekapazität 3600 hat eine Fehlertoleranz von ca. 2% (Abhängig von Temperatur und Extrakt). Malzschrot hat eine Wärmekapazität von 1570 J/(kg*°C), Wasser hat im Temperaturbereich 50-80°C eine Wärmekapazität von 4190 J/(kg*°C). Unter der Annahme, der Wassergehalt im Malzschrot beträgt 6%: (Zahlen aus Beispiel 1)
-
-    9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 162194,8 / 44 = 3686,25 J pro kg und Grad Celsius
-
-Siehe auch [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+Am Ende dieses Kapitels sind [zwei Beispiele zur Berechnung der benötigten Leistung](https://innuendopi.gitbook.io/brautomat32/parameter-im-uberblick/parameter-ggm-ids#Berechnung-der-erforderlichen-Leistung-der-GGM-IDS) aufgeführt.
 
 ### Temperatur delta zum Ziel
 
@@ -116,3 +87,64 @@ Der Brautomat kann Hardware Profile verwalten. Profile werden nur genutzt, wenn 
 Profile werden im Ordner /Profile gespeichert. Profile ermöglichen einen schnellen und einfachen Wechsel zwischen verschiedenen MaischeSud Kessel. Die Funktion Speichern erstellt eine Profildatei mit den o.g. Paramter, während die Funktion Löschen die Profildatei aus dem Flash-Speicher entfernt.
 
 Das Standardprofil beim Start des Brautomaten ist immer das zuletzt ausgewählte Profil.
+
+## Berechnung der erforderlichen Leistung der GGM IDS
+
+_Der folgende Absatz beschreibt ein optionales Thema._
+
+Beim Maischen ist ein Anstieg der Maischetemperatzur von 1°C pro Minute erwünscht. Die benötigte Leistung P der GGM IDS kann wie folgt berechnet werden:
+
+erforderliche Leistung P = m[kg] * 75\
+vorhandene Leistung der GGM IDS P = 3500\
+Faktor in Prozent = erforderliche Leistung : vorhandene Leistung
+
+### Beispiel 1
+
+Im ersten Beispiel ist eine Schüttung mit 9kg und ein Hauptguss mit 35l gegeben. Daraus ergibt sich eine Gesamtmasse von
+
+`m = 9 + 35 = 44`
+
+Mit der Masse m = 44 setzen wir in die vereinfachte Formel ein:
+
+`P = 44 * 75 = 3300`
+
+Es sind näherungsweise 3300 W/min erforderlich, um ein Volumen von 44kg pro Minute um 1°C zu erhitzen. Wird die GGM IDS mit 100% Leistung betrieben, also 3500W, wird die die Temperaturdifferenz von 1°C in der Maische in weniger als 60 Sekunden erreicht. Um Das Ziel 1°C Temperaturanstieg in der Maische pro Minute zu erreichen, muss die maximale Leistung der GGM IDS reduziert werden:
+
+`3300 : 3500 = 0,94 das entspricht 94%`
+
+Die GGM IDS müsste mit ca. 94-95% Leistung betrieben werden (Sonderfunktion IDS:94).
+
+### Beispiel 2
+
+Im zweiten Beispiel ist eine Schüttung mit 5,9kg und ein Hauptguss von 26,5l gegeben. Die Gesamtmasse beträgt 32,4kg.
+
+`m = 5,9 + 26,5 = 32,4`
+
+Die Masse m = 32,4 setzen wir wieder in die vereinfachte Formel ein:
+
+`P = 32,4 * 75 = 2430`
+`2430 : 3500 = 0,69`
+
+Es sind näherungsweise 2430 W/min erforderlich, um ein Volumen von 32,4kg pro Minute um 1°C zu erhitzen. Die GGM IDS müsste mit ca. 69-70% Leistung betrieben werden (Sonderfunktion IDS:70).
+
+## Woher kommt die Vereinfachung Masse * 75?
+
+    P = m[kg] * c * T / (t * w)
+
+m   entspricht Masse Hauptguss + Schüttung\
+c   entspricht der spezifischen Wärmekapazität Maische. Der wert 3600 wird eingesetzt (Einheit Joule/(kg * °C))\
+T   entspricht der Temperaturdifferenz. Wir verwenden 1°C Differenz\
+t   entspricht der Zeit. Wir setzen als Zeit 60sek in die Gleichung ein\
+w   der Wirkungsrad Induktion (80-90%). Es wird der Wert 0.8 in die Gleichtung eingesetzt
+
+`c * T / (t * w) = 3600 * 1 / (60 * 0.8) = 75`
+
+Mit dieser Vereinfachung erhalten wir den Wert 75.
+
+## spezifische Wärmekapazität
+
+Die hier verwendete spez. Wärmekapazität 3600 hat eine Fehlertoleranz von ca. 2% (Abhängig von Temperatur und Extrakt). Malzschrot hat eine Wärmekapazität von 1570 J/(kg*°C), Wasser hat im Temperaturbereich 50-80°C eine Wärmekapazität von 4190 J/(kg*°C). Unter der Annahme, der Wassergehalt im Malzschrot beträgt 6%: (Zahlen aus Beispiel 1)
+
+    9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 162194,8 / 44 = 3686,25 J pro kg und Grad Celsius
+
+Siehe auch [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)

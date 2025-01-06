@@ -12,8 +12,8 @@ Server Sent Events (6 SSE channels)
 
 Version 1.47.7
 
+* Fix:          Korrektur Links nach gitbook
 * Geändert:     Sensor Informationen als Tab eingefügt
-* Geändert:     Sensor Informationen im Log file Kalibrierung eingefügt
 * Fix:          es ist nun möglich, alle PID Parameter für Maische, Sud und HLT bei aktivem PID Controller (beim Brauen) anzupassen
 * Fix:          wenn SoftSerial keinen oder einen fehlerhaften Wert für den PowerButton von Display im manuellen Modus liefert
 * Geändert:     Modul checkIDSState Kessel Sud
