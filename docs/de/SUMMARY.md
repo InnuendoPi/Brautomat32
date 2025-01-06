@@ -16,7 +16,7 @@
   * [Kalibrierung](Sensoren/kalibrierung.md)
 * [Nachguss](Nachguss/hlt.md)
 * [Aktoren](Aktoren/act.md)
-* [Parameter im Überblick](Parameter/README.md)
+* [Parameter im Überblick](Parameter/info.md)
   * [Parameter GGM IDS](Parameter/parameter-ggm-ids.md)
   * [Parameter System](Parameter/parameter-system.md)
   * [Funktionen der Buttons](Parameter/funktionen-der-buttons.md)
