@@ -6,7 +6,7 @@
 
 Dieser Parameter beschreibt die maximale Ausgangsleistung der GGM IDS. Der Standardwert ist 100%. Dieser Parameter kommt zum Einsatz, wenn ein kleiner Kessel mit bspw. 20l Volumen auf der GGM IDS genutzt wird. Durch Reduzierung der Leistung der IDS kann ein zu schnelles Aufheizen und ein Überkochen vermieden werden. Die Parameter "Max. Leistung IDS" und "Leistung kochen" sollten beim Einsatz von kleineren Braukesseln zusammen reduziert werden.
 
-Am Ende dieses Kapitels sind [zwei Beispiele zur Berechnung der benötigten Leistung](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung-der-ggm-ids) aufgeführt.
+Am Ende dieses Kapitels sind [zwei Beispiele zur Berechnung der benötigten Leistung](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung) aufgeführt.
 
 ### Temperatur delta zum Ziel
 
@@ -88,7 +88,7 @@ Profile werden im Ordner /Profile gespeichert. Profile ermöglichen einen schnel
 
 Das Standardprofil beim Start des Brautomaten ist immer das zuletzt ausgewählte Profil.
 
-## Berechnung der erforderlichen Leistung der GGM IDS
+## Berechnung der erforderlichen Leistung
 
 _Der folgende Absatz beschreibt ein optionales Thema._
 
@@ -127,7 +127,7 @@ Die Masse m = 32,4 setzen wir wieder in die vereinfachte Formel ein:
 
 Es sind näherungsweise 2430 W/min erforderlich, um ein Volumen von 32,4kg pro Minute um 1°C zu erhitzen. Die GGM IDS müsste mit ca. 69-70% Leistung betrieben werden (Sonderfunktion IDS:70).
 
-## Woher kommt die Vereinfachung Masse * 75?
+### Vereinfachung Masse * 75?
 
     P = m[kg] * c * T / (t * w)
 
@@ -141,7 +141,7 @@ w   der Wirkungsrad Induktion (80-90%). Es wird der Wert 0.8 in die Gleichtung e
 
 Mit dieser Vereinfachung erhalten wir den Wert 75.
 
-## spezifische Wärmekapazität
+### spezifische Wärmekapazität
 
 Die hier verwendete spez. Wärmekapazität 3600 hat eine Fehlertoleranz von ca. 2% (Abhängig von Temperatur und Extrakt). Malzschrot hat eine Wärmekapazität von 1570 J/(kg*°C), Wasser hat im Temperaturbereich 50-80°C eine Wärmekapazität von 4190 J/(kg*°C). Unter der Annahme, der Wassergehalt im Malzschrot beträgt 6%: (Zahlen aus Beispiel 1)
 
