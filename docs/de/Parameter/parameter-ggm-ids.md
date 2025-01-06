@@ -104,7 +104,7 @@ Im ersten Beispiel ist eine Schüttung mit 9kg und ein Hauptguss mit 35l gegeben
 
 `m = 9 + 35 = 44`
 
-Mit der Masse m = 44 setzen wir in die vereinfachte Formel ein:
+Die Masse m = 44 setzen wir in die vereinfachte Formel ein:
 
 `P = 44 * 75 = 3300`
 
@@ -120,9 +120,9 @@ Im zweiten Beispiel ist eine Schüttung mit 5,9kg und ein Hauptguss von 26,5l ge
 
 `m = 5,9 + 26,5 = 32,4`
 
-Die Masse m = 32,4 setzen wir wieder in die vereinfachte Formel ein:
+Die Masse m = 32,4 setzen wir in die vereinfachte Formel ein:
 
-`P = 32,4 * 75 = 2430`
+`P = 32,4 * 75 = 2430`\
 `2430 : 3500 = 0,69`
 
 Es sind näherungsweise 2430 W/min erforderlich, um ein Volumen von 32,4kg pro Minute um 1°C zu erhitzen. Die GGM IDS müsste mit ca. 69-70% Leistung betrieben werden (Sonderfunktion IDS:70).
