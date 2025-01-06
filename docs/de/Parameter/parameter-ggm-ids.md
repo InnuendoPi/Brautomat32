@@ -6,7 +6,7 @@
 
 Dieser Parameter beschreibt die maximale Ausgangsleistung der GGM IDS. Der Standardwert ist 100%. Dieser Parameter kommt zum Einsatz, wenn ein kleiner Kessel mit bspw. 20l Volumen auf der GGM IDS genutzt wird. Durch Reduzierung der Leistung der IDS kann ein zu schnelles Aufheizen und ein Überkochen vermieden werden. Die Parameter "Max. Leistung IDS" und "Leistung kochen" sollten beim Einsatz von kleineren Braukesseln zusammen reduziert werden.
 
-Am Ende dieses Kapitels sind [zwei Beispiele zur Berechnung der benötigten Leistung](https://innuendopi.gitbook.io/brautomat32/parameter-im-uberblick/parameter-ggm-ids#Berechnung-der-erforderlichen-Leistung-der-GGM-IDS) aufgeführt.
+Am Ende dieses Kapitels sind [zwei Beispiele zur Berechnung der benötigten Leistung](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung-der-ggm-ids) aufgeführt.
 
 ### Temperatur delta zum Ziel
 
