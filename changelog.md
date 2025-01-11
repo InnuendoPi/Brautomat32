@@ -12,6 +12,7 @@ Server Sent Events (6 SSE channels)
 
 Version 1.47.8
 
+* Fix:          InnuAPID PID Controller debug Ausgaben aktuelle Leistung typo
 * Fix:          Korrekturen html und CSS
 * Fix:          Korrektur Links nach gitbook
 * Geändert:     Sensor Informationen als Tab eingefügt
