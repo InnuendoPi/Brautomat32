@@ -10,8 +10,11 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.47.7
+Version 1.47.8
 
+* Fix:          Korrekturen html und CSS
+* Fix:          Korrektur Links nach gitbook
+* Geändert:     Sensor Informationen als Tab eingefügt
 * Fix:          Korrektur Links nach gitbook
 * Geändert:     Sensor Informationen als Tab eingefügt
 * Fix:          es ist nun möglich, alle PID Parameter für Maische, Sud und HLT bei aktivem PID Controller (beim Brauen) anzupassen
