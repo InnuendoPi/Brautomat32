@@ -62,8 +62,6 @@ Der ausgewählte Maischeplan wird aus dem Flash Speicher entfernt.
 
 ## Voreinstellung Import
 
-### Optionale Einstellungen für den Import
-
 ![Voreinstellung Import](/docs/img/voreinstellung_import.jpg)
 
 Der Brautomat benötigt einen Step Einmaischen (optional) und einen Step Abmaischen. Insbesondere der Schritt Abmaischen dient mit deaktivertem "autonext" als Trennschritt zwischen Maischen und Kochen. Beim Import kann der Brautomat fehlende Einmaisch- und Abmaischschritte einfügen. Zusätzlich können fehlende Temperaturen mit Vorgaben belegt werden.
@@ -71,3 +69,23 @@ Der Brautomat benötigt einen Step Einmaischen (optional) und einen Step Abmaisc
 ### Temperaturvorgaben für fehlende Parameter
 
 Bei Rezepten aus unterschiedlichen Quellen können u.a. Temperaturangaben fehlen. Dies betrifft insbesondere die Temperaturen für das Einmaischen, das Abmaischen, die Vorderwürzenzhopfung und die Whirlpoolhopfung. Die interne Programmlogik des Brautomaten benötigt immer eine Temperatur zur Verarbeitung, auch wenn manche Temperaturen aus Sicht eines Brauers nicht erfordferlich sind. Fehlende Temperaturen werden mit Standardwerten vorbelegt werden.
+
+### Temperatur Einmaischen [°C]
+
+Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für das Einmaischen. Dieser Parameter wird nur dann verwendet, wenn beim Rezeptimport keine Einmaisch-Temperatur angegeben ist.
+
+### Temperatur Abmaischen [°C]
+
+Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für das Abmaischen. Dieser Parameter wird nur dann verwendet, wenn beim Rezeptimport keine Abmaisch-Temperatur angegeben ist.
+
+### Temperatur VWH [°C]
+
+Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Vorderwürzenhopfung. Häufig wird bei Rezepten keine Temperatur für die VWH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temnperatur angegeben, wird diese beim Import verwendet.
+
+### Temperatur WPH [°C]
+
+Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Whirlpoolhopfung. Häufig wird bei Rezepten keine Temperatur für die WPH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temnperatur angegeben, wird diese beim Import verwendet.
+
+### Temperatur Kochen [°C]
+
+Dieser Parameter beschreibt die Temperatur, ab der die Würze wallend kocht. Der Standardwert ist 98°C und entspricht etwa einem Standort in 500m Höhe über NN. Für den Rezeptimport wird dieser Parameter als Temperatur Kochen verwendet.
