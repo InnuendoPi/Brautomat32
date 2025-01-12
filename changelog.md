@@ -10,8 +10,13 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
+Version 1.48
+
+* Update:       Release 1.48 erstellt
+
 Version 1.47.9
 
+* Neu:          Link nach gitbook für Parameter Voreinstellungen Import eingefügt
 * Geändert:     bei Klick auf Prev oder Next wird der Status Button Play zurückgesetzt (ein dekativiertes autonext wird aufgehoben)
 * Fix:          Auswertung Sonderbefehle bei Klick auf den Button Play korrigiert
 * Fix:          der PID Controller wurde mit dem Sonderbefehl IDS nicht korrekt gestartet, wenn die IDS ausgeschaltet war
