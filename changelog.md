@@ -10,8 +10,13 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.47.8
+Version 1.47.9
 
+* Geändert:     bei Klick auf Prev oder Next wird der Status Button Play zurückgesetzt (ein dekativiertes autonext wird aufgehoben)
+* Fix:          Auswertung Sonderbefehle bei Klick auf den Button Play korrigiert
+* Fix:          der PID Controller wurde mit dem Sonderbefehl IDS nicht korrekt gestartet, wenn die IDS ausgeschaltet war
+* Fix:          Verzögerung Ablauf Maischeplan behoben, wenn die Rastdauer mit 0s eingetragen war
+* Geändert:     Parameter Temperatur Kochen wurde in die Einstellungen Maischeplan verschoben
 * Fix:          InnuAPID PID Controller debug Ausgaben aktuelle Leistung typo
 * Fix:          Korrekturen html und CSS
 * Fix:          Korrektur Links nach gitbook
