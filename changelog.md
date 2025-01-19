@@ -10,8 +10,9 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.48
+Version 1.48.1
 
+* Update:       Dallas Temperature Bibliothek 4.0.1 (fix err handling, fix device search)
 * Update:       Release 1.48 erstellt
 
 Version 1.47.9
