@@ -10,8 +10,10 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.48.2
+Version 1.48.3
 
+* Fix:          Bei Profilwechsel und Sonderbefehl IDSPROFIL wurde der Status GPIO invertieren im Relais Modus nicht korrekt übernommen
+* Geändert:     default Status GPIO invertieren in der Kessel Konfiguration auf false gesetzt
 * Neu:          Im Relais Modus kann der GPIO nun invertiert werden
 * Fix:          Freigabe GPIOs bei Wechsel Kesseltyp (off, IDS, Relais) korrigiert
 * Fix:          Fehler in der Profilverwaltung behoben
