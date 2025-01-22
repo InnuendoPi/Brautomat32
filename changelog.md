@@ -10,8 +10,11 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.48.1
+Version 1.48.2
 
+* Neu:          Im Relais Modus kann der GPIO nun invertiert werden
+* Fix:          Freigabe GPIOs bei Wechsel Kesseltyp (off, IDS, Relais) korrigiert
+* Fix:          Fehler in der Profilverwaltung behoben
 * Update:       Dallas Temperature Bibliothek 4.0.1 (fix err handling, fix device search)
 * Update:       Release 1.48 erstellt
 
