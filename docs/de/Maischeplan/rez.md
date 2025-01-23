@@ -22,11 +22,11 @@ Eine aktivierte Zeitsteuerung wird in der Konfiguration gespeichert. Startet der
 
 ### Maischeplan erstellen
 
-In das Eingabefeld ist der Maischeplan Name einzugeben. Mit Klick auf _OK_ wird ein neuer leerer Maischeplan erstellt.
+In das Eingabefeld ist der Maischeplan Name einzugeben. Mit Klick auf *OK* wird ein neuer leerer Maischeplan erstellt.
 
 ### Maischeplan umbenennen
 
-In das Eingabefeld ist der neue Name für den Maischeplan einzugeben. Mit Klick auf _OK_ wird der Maischeplan unter dem neuen Namen gespeichert.
+In das Eingabefeld ist der neue Name für den Maischeplan einzugeben. Mit Klick auf *OK* wird der Maischeplan unter dem neuen Namen gespeichert.
 
 ### Maischeplan wechseln
 
