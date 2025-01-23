@@ -335,6 +335,7 @@
     "TOAST_MASH_ENDE": "Maischeprozess beendet",
     "TOAST_MMUM_ERR": "Fehler beim Speichern Rezept Maische Malz und mehr",
     "TOAST_PLAY": "Klicke Play Button",
+    "TOAST_PROFILWARN": "Warnung Profilwechsel",
     "TOAST_PROFILERR": "Fehler beim Speichern Profil",
     "TOAST_PROFILERR2": "Fehler beim Lesen Profil",
     "TOAST_REZ_ERR1": "Fehler beim Öffnen Rezept",

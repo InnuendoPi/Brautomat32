@@ -321,6 +321,7 @@
     "TOAST_MASH_START": "Maischeprozess started",
     "TOAST_MASH_ENDE": "Maischeprozess finished",
     "TOAST_SENERR": "Sensor error",
+    "TOAST_PROFILWARN": "Warning change profile",
     "TOAST_PROFILERR": "Error could not save profile",
     "TOAST_PROFILERR2": "Error could not read profile",
     "TOAST_IDSERR": "Error GGM IDS Interrupt",

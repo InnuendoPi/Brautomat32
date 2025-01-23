@@ -188,14 +188,16 @@ _Hinweis: Der hier verwendete Wirkungsgrad 80% für ein Induktionskochfeld ist e
 
 ## Sonderfunktion IDS Profilwechsel
 
-Eine weitere Sonderfunktion ist der PID Profilwechsel. Der Befehl lautet IDSPROFIL. Als Zahl wird die Profilnummer angegeben. Das erste Profil hat die Nummer 0 (null), das 2. Prodil die Nummer 1
+Eine weitere Sonderfunktion ist der PID Profilwechsel. Der Befehl lautet IDSPROFIL. Hinter dem Doppelpunkt folgt der Profilname.
 
 Beispiele:
 
-IDSPROFIL:0
-IDSPROFIL:1
+IDSPROFIL:Profil68l
+IDSPROFIL:Profil36l
 
-Der Profilwechsel ermöglicht die Verarbeitung von Teilmaischen mit angepassten PID Parametern.
+Der Sonderbefehl IDSPROFIL ersetzt alle PID Parameter. Der Sonderbefehl IDS: verändert die Ausgangsleistung bei identischen PID Parametern.
+
+_Hinweis: der Sonderbefehl IDSPROFIL im Maischeplan wird abgebrochen, wenn der Gerätetyp (IDS1, IDS2 Relais) nicht identisch ist._
 
 ### Beispiel Steuerbefehl IDS
 
