@@ -10,8 +10,18 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.48.4
+Version 1.48.7
 
+* Geändert:     Die Nachricht "WebUpdate abgeschlossen" mit auto reload wurde "manchmal" nicht angezeigt
+* Fix:          Fehler im Modul Aktoren UpdatePower behoben
+* Geändert:     ajax synchronous get requests
+* Fix:          Button "Nachguss löschen" wurde aus WebIf ohne Kessel ID übermittelt
+* Fix:          wurde vor dem Power Button Maischeplan Sud oder HLT eingeschaltet, wurde ein Sonderbefehl als erster Maischeschritt nicht ausgeführt
+* Fix:          sehr langsame Reaktion im Relais Modus behoben
+* Fix:          noiseband und Temperatur delta zum Ziel wurden nicht korrekt im Profil gespeichert
+* Geändert:     in der Chart Legende werden die Kesselnamen angezeigt. Die Zieltemperaturen mit dem postfix "target"
+* Update:       Chart.js 4.4.1
+* Geändert:     Ist und Soll Temperatur Kessel Sud in die Chart eingefügt
 * Geändert:     Der Sonderbefehl IDSPROFIL prüft vor dem Profilwechsel den Gerätetyp
 * Fix:          SensorID wurde im Sonderbefehl IDSPROFIL nicht korrekt übertragen
 * Update:       Dallas Temperature Bibliothek 4.0.3
