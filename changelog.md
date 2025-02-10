@@ -1,7 +1,7 @@
 # Changelog
 
 ESP32 Arduino 2.0.17 ESP-IDF v4.4.7
-VSCode 1.96 Arduino 0.7 Arduino CLI 1.1.0
+VSCode 1.97 Arduino 0.7 Arduino CLI 1.1.1
 VSCode plugin ESP8266LittleFS
 InnuAPID AutoTune PID lib
 InnuTicker Task Scheduler lib
@@ -10,8 +10,13 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.48.7
+Version 1.48.8
 
+* Update:       VSCode 1.97
+* Update:       Dallas Temperature Bibliothek 4.0.4
+* Fix:          Temperatur Übergang Kochen wurde nicht korrekt an PID Controller übertragen, wenn der brauprozess aus dem Flashspeicher fortgesetzt wurde
+* Fix:          Typo Debugausgaben ThresTemp und ThresOutput
+* Geändert:     InnuAPID Überprüfung Temperatur Übergang Kochen angepasst
 * Geändert:     Die Nachricht "WebUpdate abgeschlossen" mit auto reload wurde "manchmal" nicht angezeigt
 * Fix:          Fehler im Modul Aktoren UpdatePower behoben
 * Geändert:     ajax synchronous get requests
