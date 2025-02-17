@@ -2,8 +2,6 @@
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.en.md)
 
-![ESP8266](https://img.shields.io/badge/arduino%203.1.2&message=ESP8266&logo=arduino&logoColor=white&color=green) ![ESP32](https://img.shields.io/badge/arduino%20IDF5&message=ESP32&logo=arduino&logoColor=white&color=blue) ![ESP32](https://img.shields.io/badge/arduino%20IDF4&message=ESP32&logo=arduino&logoColor=white&color=red)
-
 Der Brautomat ist eine Brausteuerung für den ESP8266 und ESP32 D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
 > **Hinweis:** Mit Version 1.50 werden alle Brautomat Versionen (Brautomat (ESP8266), Brautomat32 (ESP32 IDF4) und Brautomat32pIO (ESP32 IDF5)) im Repository Brautomat32 veröffentlicht.
@@ -14,11 +12,11 @@ Der Brautomat ist eine Brausteuerung für den ESP8266 und ESP32 D1 mini. Der Bra
 
 Der Brautomat kann auf einem ESP8266 oder einem ESP32 eingesetzt werden.
 
-[![ESP8266](https://img.shields.io/static/v1?label=Download-Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip) [![ESP32pIO](https://img.shields.io/static/v1?label=Download-Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip)
+[![ESP8266](https://img.shields.io/static/v1?label=Download%20Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip) [![ESP32pIO](https://img.shields.io/static/v1?label=Download%20Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip)
 
 Aus Kompatibilitätsgründen existiert für den ESP32 auch eine ESP32-IDF4 Version (ehemals Brautomat32):
 
-[![ESP32](https://img.shields.io/static/v1?label=Download-Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
+[![ESP32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
 
 > **Hinweis:** Die ESP32 Varianten IDF4 und IDF5 (ehemals Brautomat32 und Brautomat32pIO) sind nicht kompatiblel. Ein WebUpdate von IDF4 auf IDF5 ist nicht möglich.
 
