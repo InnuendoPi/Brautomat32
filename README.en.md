@@ -12,22 +12,19 @@ The Brautomat is a brewing controller for the ESP8266 and ESP32 D1 mini. The Bra
 
 ## 💿 Download
 
-The Brautomat can be used on an ESP8266 or an ESP32.
+The Brautomat can be operated on an ESP32 or an ESP8266. The ESP32 with the Brautomat32pIO firmware is recommended.
 
-[![ESP8266](https://img.shields.io/static/v1?label=Download-Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip) [![ESP32pIO](https://img.shields.io/static/v1?label=Download-Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip)
+[![ESP8266](https://img.shields.io/static/v1?label=Download%20Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip) [![ESP32pIO](https://img.shields.io/static/v1?label=Download%20Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip) [![ESP32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
 
-For compatibility reasons, there is also an ESP32-IDF4 version (formerly Brautomat32) for the ESP32:
-
-[![ESP32](https://img.shields.io/static/v1?label=Download-Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
+For compatibility reasons, a Brautomat32 version based on ESP32-IDF4 also exists for the ESP32.
 
 ## ▶️ Installation
 
 Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
 * Download Brautomat
-* unzip Firmware.zip
-* open command line (cmd.exe) and change into firmware.zip directory
-* start script "Flashen.cmd"
+* unzip file
+* Double-click on the “Flashen.cmd” file
 
 ZIP files includes [esptool](https://github.com/espressif/esptool).
 
