@@ -33,7 +33,7 @@ Die Länge vom rote Balken unter der Ansicht IDS und Nachguss zeigt die erledigt
 
 #### MaischeSud
 
-Auf dieser Ansicht wird das Induktionskochfeld dargestellt. Es wird nur die aktuelle Rast mit Dauer im Kopf angezeigt. Die Länge roter Balken unter den Temperaturen den Fortschrit der aktuellen Rast an.
+Auf dieser Ansicht wird das erste Induktionskochfeld dargestellt. Es wird nur die aktuelle Rast mit Dauer im Kopf angezeigt. Die Länge roter Balken unter den Temperaturen den Fortschrit der aktuellen Rast an.
 
 ![Display](/docs/img/brewpage.jpg)
 
@@ -65,7 +65,7 @@ _Tipp: der mDNS Name wird ohne Protokoll (http://) und ohne top-level Domain (.l
 
 ### Logging
 
-Im Tab Logging kann für der Module Konfiguration, Sensoren, Aktoren, Induktion, Nachguss, Display und System eine serielle Protokollausgabe aktiviert werden. Zur Protokollierung stehen die Level Error, Info, Verbose und Aus zur Verfügung. Benötigt wird ein Serial Monitor, bspw. mit der Arduino IDE, VSCODE etc. Die Baudrate ist 115200.
+Das Logging steht nur bei Verwendung von einem ESP32 zu Verfügung. Ein ESP8266 unterstützt diese Funktionen nicht. Im Tab Logging kann für der Module Konfiguration, Sensoren, Aktoren, Induktion, Nachguss, Display und System eine serielle Protokollausgabe aktiviert werden. Zur Protokollierung stehen die Level Error, Info, Verbose und Aus zur Verfügung. Benötigt wird ein Serial Monitor, bspw. mit der Arduino IDE, VSCODE etc. Die Baudrate ist 115200.
 
 Der Modus Error gibt ausschließlich Fehler aus.
 
