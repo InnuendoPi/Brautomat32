@@ -14,13 +14,23 @@ Der Brautomat ist eine Brausteuerung für den ESP8266 und ESP32 D1 mini. Der Bra
 
 Der Brautomat kann auf einem ESP8266 oder einem ESP32 eingesetzt werden.
 
-[![ESP8266](https://img.shields.io/static/v1?label=Download-Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/blob/main/Brautomat.zip) [![ESP32pIO](https://img.shields.io/static/v1?label=Download-Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/blob/main/Brautomat32pIO.zip)
+[![ESP8266](https://img.shields.io/static/v1?label=Download-Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip) [![ESP32pIO](https://img.shields.io/static/v1?label=Download-Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip)
 
 Aus Kompatibilitätsgründen existiert für den ESP32 auch eine ESP32-IDF4 Version (ehemals Brautomat32):
 
-[![ESP32](https://img.shields.io/static/v1?label=Download-Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/blob/main/Brautomat32.zip)
+[![ESP32](https://img.shields.io/static/v1?label=Download-Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
 
 > **Hinweis:** Die ESP32 Varianten IDF4 und IDF5 (ehemals Brautomat32 und Brautomat32pIO) sind nicht kompatiblel. Ein WebUpdate von IDF4 auf IDF5 ist nicht möglich.
+
+## ▶️ Installation
+
+Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+
+* Brautomat herunterladen
+* ZIP Datei entpacken
+* Doppelklick auf die Datei "Flashen.cmd"
+
+Das ZIP Archiv enthält [esptool](https://github.com/espressif/esptool).
 
 ## Hauptfunktionen
 
@@ -58,9 +68,9 @@ Aus Kompatibilitätsgründen existiert für den ESP32 auch eine ESP32-IDF4 Versi
 
 ## 📚 Dokumentation
 
-Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat32/](https://innuendopi.gitbook.io/brautomat32/)\
-Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
-Changelog: [https://github.com/InnuendoPi/Brautomat32/blob/main/CHANGELOG.md](./)
+Eine ausführliche Anleitung liegt auf gitbook: [Anleitung & Beschreibung](https://innuendopi.gitbook.io/brautomat32/)\
+Das Hobbybrauer Forum: [Diskussion & Neuigkeiten](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
+Die letzten Änderungen: [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
 
 ## 📰 WebInterface
 
@@ -133,10 +143,6 @@ GPIO Zuordnung:
 Pins connected to the integrated SPI flash and not recommended for other use: CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9), SD3 (IO10), CMD (IO11)\
 GPIOs 34 to 39 are input only pins.
 
-## 🔉MP3 Dateien
-
-_Legal note: "Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
-
 ## Changelog
 
 Version 1.50
@@ -172,3 +178,7 @@ Version 1.50
 Version 1.49
 
 Die Version 1.49 ist ein Zwischenupdate für alle Bautomat versionen (ESP8266 und ESP32 (Brautomat32, Brautomat32pIO). Nach dem Zwischenupdate kann direkt auf Version 1.50 aktualisiert werden
+
+## 🔉MP3 Dateien
+
+_Legal note: "Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
