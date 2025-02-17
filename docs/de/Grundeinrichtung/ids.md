@@ -4,7 +4,7 @@ Im ersten Abschnitt "Maischeplan" wird der MaischeSud Kessel über das Zahnrad o
 
 ![MaischeSud Kessel anlegen](/docs/img/IDS-einrichten.jpg)
 
-Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Eigenschaft ist der Gerätetyp. Es stehen GGM IDS1, GGM IDS2 imd Relais zur Auswahl. Es folgen drei Parameter zur Steuerung:
+Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Eigenschaft ist der Gerätetyp. Es stehen GGM IDS1, GGM IDS2, Relais und Webhook zur Auswahl. Es folgen die Parameter zur Steuerung:
 
 * PIN weiß [Relais] - Standardeinstellung: D7
 * PIN gelb [Command] - Standardeinstellung: D6
