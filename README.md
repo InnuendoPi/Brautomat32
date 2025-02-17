@@ -2,7 +2,7 @@
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.en.md)
 
-![ESP8266](https://img.shields.io/static/v1?label=arduino-3.1.2&message=ESP8266&logo=arduino&logoColor=white&color=green) ![ESP32](https://img.shields.io/static/v1?label=arduino-IDF5&message=ESP32&logo=arduino&logoColor=white&color=blue) ![ESP32](https://img.shields.io/static/v1?label=arduino-IDF4&message=ESP32&logo=arduino&logoColor=white&color=red)
+![ESP8266](https://img.shields.io/badge/arduino%203.1.2&message=ESP8266&logo=arduino&logoColor=white&color=green) ![ESP32](https://img.shields.io/badge/arduino%20IDF5&message=ESP32&logo=arduino&logoColor=white&color=blue) ![ESP32](https://img.shields.io/badge/arduino%20IDF4&message=ESP32&logo=arduino&logoColor=white&color=red)
 
 Der Brautomat ist eine Brausteuerung für den ESP8266 und ESP32 D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
