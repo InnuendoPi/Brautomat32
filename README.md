@@ -1,14 +1,26 @@
-# Der Brautomat für ESP32
+# Der Brautomat32
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.en.md)
 
-![ESP8266](https://img.shields.io/static/v1?label=arduino-3.1.2&message=ESP8266&logo=arduino&logoColor=white&color=green) ![ESP32](https://img.shields.io/static/v1?label=arduino-IDF4&message=ESP32&logo=arduino&logoColor=white&color=blue) ![ESP32](https://img.shields.io/static/v1?label=arduino-IDF5&message=ESP32&logo=arduino&logoColor=white&color=red)
+![ESP8266](https://img.shields.io/static/v1?label=arduino-3.1.2&message=ESP8266&logo=arduino&logoColor=white&color=green) ![ESP32](https://img.shields.io/static/v1?label=arduino-IDF5&message=ESP32&logo=arduino&logoColor=white&color=blue) ![ESP32](https://img.shields.io/static/v1?label=arduino-IDF4&message=ESP32&logo=arduino&logoColor=white&color=red)
 
 Der Brautomat ist eine Brausteuerung für den ESP8266 und ESP32 D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
 > **Hinweis:** Mit Version 1.50 werden alle Brautomat Versionen (Brautomat (ESP8266), Brautomat32 (ESP32 IDF4) und Brautomat32pIO (ESP32 IDF5)) im Repository Brautomat32 veröffentlicht.
 
 ***
+
+## 💿 Download
+
+Der Brautomat kann auf einem ESP8266 oder einem ESP32 eingesetzt werden.
+
+[![ESP8266](https://img.shields.io/static/v1?label=Download-Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/blob/main/Brautomat.zip) [![ESP32pIO](https://img.shields.io/static/v1?label=Download-Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/blob/main/Brautomat32pIO.zip)
+
+Aus Kompatibilitätsgründen existiert für den ESP32 auch eine ESP32-IDF4 Version (ehemals Brautomat32):
+
+[![ESP32](https://img.shields.io/static/v1?label=Download-Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/blob/main/Brautomat32.zip)
+
+> **Hinweis:** Die ESP32 Varianten IDF4 und IDF5 (ehemals Brautomat32 und Brautomat32pIO) sind nicht kompatiblel. Ein WebUpdate von IDF4 auf IDF5 ist nicht möglich.
 
 ## Hauptfunktionen
 
@@ -48,7 +60,7 @@ Der Brautomat ist eine Brausteuerung für den ESP8266 und ESP32 D1 mini. Der Bra
 
 Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat32/](https://innuendopi.gitbook.io/brautomat32/)\
 Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
-Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](./)
+Changelog: [https://github.com/InnuendoPi/Brautomat32/blob/main/CHANGELOG.md](./)
 
 ## 📰 WebInterface
 
@@ -159,4 +171,4 @@ Version 1.50
 
 Version 1.49
 
-Die Version 1.49 ist ein Zwischenupdate für den ESP8266 und den ESP32 IDF4 (ehemals Brautomat32). Nach dem Zwischenupdate kann direkt auf Version 1.50 aktualisiert werden
+Die Version 1.49 ist ein Zwischenupdate für alle Bautomat versionen (ESP8266 und ESP32 (Brautomat32, Brautomat32pIO). Nach dem Zwischenupdate kann direkt auf Version 1.50 aktualisiert werden
