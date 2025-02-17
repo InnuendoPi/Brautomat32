@@ -1,20 +1,32 @@
-# Brautomat for ESP32
+# Brautomat32
 
-[![de](https://img.shields.io/badge/lang-de-green.svg)](https://github.com/InnuendoPi/Brautomat32)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.en.md)
 
-Brautomat is a brewing controller for GGM IDS induction hobs with an ESP32 Wemos D1 mini. Brautomat is used in the brewery by hobby brewers and offers intuitive, easy-to-use controls. During mashing, rest temperatures are reached automatically and the rest times are adhered too. Brautomat also supports the the boiling process of the wort and adding hops. In an ascending infusion mash process, the brautomat can fully automate the mashing process.
+![ESP8266](https://img.shields.io/static/v1?label=arduino-3.1.2&message=ESP8266&logo=arduino&logoColor=white&color=green) ![ESP32](https://img.shields.io/static/v1?label=arduino-IDF5&message=ESP32&logo=arduino&logoColor=white&color=blue) ![ESP32](https://img.shields.io/static/v1?label=arduino-IDF4&message=ESP32&logo=arduino&logoColor=white&color=red)
 
-_Note: induction hobs from other manufacturers than GGM IDS are not supported._
+The Brautomat is a brewing controller for the ESP8266 and ESP32 D1 mini. The Brautomat offers an intuitive, easy-to-use control system.
 
-_Note: please use german manual with browser translation._
+> **Hinweis:** With version 1.50 all Brautomat versions (Brautomat (ESP8266), Brautomat32 (ESP32 IDF4) and Brautomat32pIO (ESP32 IDF5)) are published in the Brautomat32 repository.
 
 ***
+
+## 💿 Download
+
+The Brautomat can be used on an ESP8266 or an ESP32.
+
+[![ESP8266](https://img.shields.io/static/v1?label=Download-Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/blob/main/Brautomat.zip) [![ESP32pIO](https://img.shields.io/static/v1?label=Download-Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/blob/main/Brautomat32pIO.zip)
+
+For compatibility reasons, there is also an ESP32-IDF4 version (formerly Brautomat32) for the ESP32:
+
+[![ESP32](https://img.shields.io/static/v1?label=Download-Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/blob/main/Brautomat32.zip)
 
 ## Features
 
 Brautomat is a stand alone brewing device and offers:
 
-* induction hob controller GGM IDS
+* induction hob controller
+* relay controller
+* webhook controller
 * integrated PID-Controller
 * digital sensors DS18B20
 * analog sensors PT100x with MAX31865 Amplifier
@@ -22,8 +34,11 @@ Brautomat is a stand alone brewing device and offers:
 * mash plan management
   * full automated rest temperature reach & hold
   * full automated rest duration timer function
-* Mash plans with up to 20 steps
-* Hot liquid tank controller (HLT)
+  * Mash plans with up to 20 steps
+* Controll up to 3 kettles
+  * Mash
+  * MLT
+  * HLT
 * Controlling actors like agitator, pumps etc.
 * PWM for heating elements
 * Temperature progression in the mashing process (line chart)
@@ -42,13 +57,11 @@ Brautomat is a stand alone brewing device and offers:
 
 Manual: [https://innuendopi.gitbook.io/brautomat32en/](https://innuendopi.gitbook.io/brautomat32en/)\
 Discussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
-Changelog: [https://github.com/InnuendoPi/Brautomat/blob/main/CHANGELOG.md](./)
+Changelog: [https://github.com/InnuendoPi/Brautomat32/blob/main/CHANGELOG.md](./)
 
 ## 📰 WebInterface
 
-The Brautomat is web browser controlled. A web browser with support for CSS3, HTML5, Javascript and Server Sent Events (SSE) is required.\
-
-Compatible browser list [Browser](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent\_events/Using\_server-sent\_events#browser\_compatibility)
+The Brautomat is web browser controlled.
 
 ![Startseite](docs/img/brautomat.jpg)\
 ![Startseite](docs/img/IDS-AutoTune-Ziel.jpg)\

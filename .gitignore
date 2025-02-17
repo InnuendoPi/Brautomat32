@@ -85,7 +85,8 @@ PINMAP.txt
 Infos.txt
 partitions.csv
 backup/
-
+Display/HMI/
+Display/mqttdevice4-320x240fix/
 sdkconfig.*
 sdkconfig.defaults
 sdkconfig.wemos_d1_mini32_IDF5dev
