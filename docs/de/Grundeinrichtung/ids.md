@@ -4,7 +4,7 @@ Im ersten Abschnitt "Maischeplan" wird der MaischeSud Kessel über das Zahnrad o
 
 ![MaischeSud Kessel anlegen](/docs/img/IDS-einrichten.jpg)
 
-Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Eigenschaft ist der IDS Typ. Es stehen IDS1 und IDS2 zur Auswahl. Es folgen drei Parameter zur Steuerung:
+Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Eigenschaft ist der Gerätetyp. Es stehen GGM IDS1, GGM IDS2 imd Relais zur Auswahl. Es folgen drei Parameter zur Steuerung:
 
 * PIN weiß [Relais] - Standardeinstellung: D7
 * PIN gelb [Command] - Standardeinstellung: D6
@@ -18,11 +18,15 @@ _Tipp: dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. 
 
 ![MaischeSud Kessel konfigurieren](/docs/img/IDS-konfigurieren.jpg)
 
+Bei der Auswahl Relais ändert sich das Aussehen. Die Option GPIO invertieren muss aktiviert werden, wenn das Kochfeld einschaltet und der Brautomat ausgeschaltet anzeigt. Der Relaisschaltzyklus verbelibt auf den Standardwert 5000ms.
+
+![MaischeSud Kessel konfigurieren](/docs/img/relais-konfigurieren.jpg)
+
 Die Parameter auf dem Reiter "Temperatursteuerung" werden im Abschnitt "alle Parameter" erläutert. Die Standardwerte sollen zunächst übernommen werden.
 
 ![MaischeSud Kessel konfigurieren](/docs/img/IDS-temperaturen.jpg)
 
-Nach der Grundkonfiguration muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID-Controller berechnet automatisch die benötigte Leistung der GGM IDS, um die Temperatur in der Maische (Ist) auf Rast-Temperatur (Ziel) zu bringen. Je besser der PID-Controller konfiguriert ist, desto genauer wird die Rast-Temperatur über die Rast-Dauer gehalten. Konfiguriert wird der PID-Controller über die zwei Parameter Ku und Pu, aus denen die Parameter P, I und D berechnet werden. Für eine anlagenbezogene Konfiguration wird der Prozess AutoTune im Abschnitt "AutoTune Schritt für Schritt" im Detail erläutert. Für diese erste Grundeinrichtung werden folgende Werte für den Verstärkungsfaktor Ku und die Periodendauer Pu eingetragen und dann die PID tuning Regel "IDS" ausgewählt:
+Nach der Grundkonfiguration muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID-Controller berechnet automatisch die benötigte Leistung für das Kochfeld, um die Temperatur in der Maische (Ist) auf Rast-Temperatur (Ziel) zu bringen. Je besser der PID-Controller konfiguriert ist, desto genauer wird die Rast-Temperatur über die Rast-Dauer gehalten. Konfiguriert wird der PID-Controller über die zwei Parameter Ku und Pu, aus denen die Parameter P, I und D berechnet werden. Für eine anlagenbezogene Konfiguration wird der Prozess AutoTune im Abschnitt "AutoTune Schritt für Schritt" im Detail erläutert. Für diese erste Grundeinrichtung werden folgende Werte für den Verstärkungsfaktor Ku und die Periodendauer Pu eingetragen und dann die PID tuning Regel "IDS" ausgewählt:
 
 ![IDS](/docs/img/IDS-pid-einrichten.jpg)
 

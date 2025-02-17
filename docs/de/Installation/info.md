@@ -26,19 +26,27 @@ Falls das Script nicht genutzt werden kann, kann die Firmware manuell auf den ES
 
 ESP8266 Step 1 Flash löschen:
 
-- `esptool.exe --chip esp8266 erase_flash`
+```json
+esptool.exe --chip esp8266 erase_flash
+```
 
 ESP8266 Step 2 Firmware flashen:
 
-- `esptool.exe --chip esp8266 --baud 921600 write_flash 0x000000 Brautomat.ino.bin 0x200000 Brautomat.mklittlefs.bin`
+```json
+esptool.exe --chip esp8266 --baud 921600 write_flash 0x000000 Brautomat.ino.bin 0x200000 Brautomat.mklittlefs.bin
+```
 
 ESP32 Step 1 Flash löschen:
 
-- `esptool.exe --chip esp32 erase_flash`
+```json
+esptool.exe --chip esp32 erase_flash
+```
 
 ESP32 Step 2 Firmware flashen:
 
-- `esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 Brautomat32.ino.bootloader.bin 0x8000 Brautomat32.ino.partitions.bin 0xe000 boot_app0.bin 0x10000 Brautomat32.ino.bin 0x2d0000 Brautomat32.mklittlefs.bin`
+```json
+esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 Brautomat32.ino.bootloader.bin 0x8000 Brautomat32.ino.partitions.bin 0xe000 boot_app0.bin 0x10000 Brautomat32.ino.bin 0x2d0000 Brautomat32.mklittlefs.bin
+```
 
 ## WLAN Konfiguration
 

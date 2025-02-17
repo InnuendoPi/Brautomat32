@@ -176,11 +176,15 @@ Mit Hilfe der Sonderfunktion IDS:<Leistung in %> kann die Leistung der GGM IDS s
 
 _Erläuterungen zum Rechenweg siehe: Parameter der GGM IDS - Temperatursteuerung - Maximale Leistung der IDS._
 
-`Benötigte Leistung P = m * c * T / (t * w)`\
-`Der Ausdruck c * T / (t * w) wird bei einem Wirkungsgrad von 80% für das Induktionskochfeld ersetzt durch den Wert 75`\
-`Die Masse m beträgt 35kg`\
-`P = 35 x 75 = 2625`
-`2625W sind 75% der max. Leistung 3500W (2625 / 3500 * 100 = 75%)`\
+```json
+
+    Benötigte Leistung P = m * c * T / (t * w)
+    Der Ausdruck c * T / (t * w) wird bei einem Wirkungsgrad von 80% für das Induktionskochfeld ersetzt durch den Wert 75
+    Die Masse m beträgt 35kg
+    P = 35 x 75 = 2625
+    2625W sind 75% der max. Leistung 3500W (2625 / 3500 * 100 = 75%)
+
+```
 
 In dem oben dargestellten Maischeplan wird in Zeile 2 mit dem Steuerbefehl "IDS:75" die maximale Leistung der IDS nach dem Einmaischen auf 75% gesetzt. Mit diesem Steuerbefehl werden die nächsten Schritte (Maltoserast, Verzuckerung und Abmaischen) mit maximal 75% Leistung durchgeführt. Nach dem Abmaischen muss der User auf den Play Button klicken (autonext deaktiviert). Hier beginnt das Läutern, gefolgt von der Läuterruhe etc. Der Brauprozess wird mit dem Steuerbefehl "IDS:100" fortgesetzt. Die maximale Leistung der IDS wird zum Kochen der Würze auf 100% Leistung gesetzt.
 
