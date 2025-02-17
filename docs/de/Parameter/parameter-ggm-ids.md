@@ -1,10 +1,10 @@
-# Parameter GGM IDS
+# Parameter Kochfeld
 
 ## Temperatursteuerung
 
-### Max. Leistung IDS
+### Max. Leistung
 
-Dieser Parameter beschreibt die maximale Ausgangsleistung der GGM IDS. Der Standardwert ist 100%. Dieser Parameter kommt zum Einsatz, wenn ein kleiner Kessel mit bspw. 20l Volumen auf der GGM IDS genutzt wird. Durch Reduzierung der Leistung der IDS kann ein zu schnelles Aufheizen und ein Überkochen vermieden werden. Die Parameter "Max. Leistung IDS" und "Leistung kochen" sollten beim Einsatz von kleineren Braukesseln zusammen reduziert werden.
+Dieser Parameter beschreibt die maximale Ausgangsleistung vom Kochfeld. Der Standardwert ist 100%. Dieser Parameter kommt zum Einsatz, wenn ein kleiner Kessel mit bspw. 20l Volumen auf dem Kochfeld genutzt wird. Durch Reduzierung der Leistung kann ein zu schnelles Aufheizen und ein Überkochen vermieden werden. Die Parameter "Max. Leistung" und "Leistung kochen" sollten beim Einsatz von kleineren Braukesseln zusammen reduziert werden.
 
 Am Ende dieses Kapitels sind [zwei Beispiele zur Berechnung der benötigten Leistung](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung) aufgeführt.
 
@@ -14,23 +14,23 @@ Dieser Parameter beschreibt, ab welcher Differenz zur Rasttemperatur (Ziel) der 
 
 ### Übergang zum Kochen [°C]
 
-Dieser Parameter beschreibt die Temperatur, ab der der PID Controller das Kochen der Würze erkennen soll. Der Standardwert ist 95°C. Dieser Parameter beschreibt nicht, ab welcher Temperatur die Würze zu kochen beginnt. Dieser Parameter beschreibt die Temperatur, ab der der Brautomat den PID Controller deaktiviert und mit einer vorgegebenen Leistung "Leistung ab Übergang" das Induktionskochfeld steuert. Anders als bei den Rast-Temperaturen ist beim Kochen nicht das genaue Erreichen und halten der Temperatur das Ziel, sondern das wallend Kochen. Anstatt also die Leistung zu reduzieren, wird beim Kochen das Induktionskochfeld mit einer konstanten Leistng betrieben.
+Dieser Parameter beschreibt die Temperatur, ab der der PID Controller das Kochen der Würze erkennen soll. Der Standardwert ist 95°C. Dieser Parameter beschreibt nicht, ab welcher Temperatur die Würze zu kochen beginnt. Dieser Parameter beschreibt die Temperatur, ab der der Brautomat den PID Controller deaktiviert und mit einer vorgegebenen Leistung "Leistung ab Übergang" das Kochfeld steuert. Anders als bei den Rast-Temperaturen ist beim Kochen nicht das genaue Erreichen und halten der Temperatur das Ziel, sondern das wallend Kochen. Anstatt also die Leistung zu reduzieren, wird beim Kochen das Induktionskochfeld mit einer konstanten Leistng betrieben.
 
 ### Leistung ab Übergang [%]
 
-Dieser Parameter beschreibt die Ausgangsleistung der IDS ab der Temperatur Kochen. Der Standardwert ist 100%. Mit dem Parameter "Übergang zum Kochen" ist eine Temperatur festgelegt worden, ab der der PID Controller deaktiviert wird. Mit dem Parameter "Leistung ab Übergang" wird nun die feste Ausgangsleistung der IDS vorgegeben. Wird ein Braukessel mit einem Volumen über 35l oder mehr eingesetzt, ist der Standardwert 100% eine passende Wahl. In Brauküchen mit kleinen Kesseln kann 100% Energiezufuhr ein Überkochen bewirken. In diesem Fall kann die maximale Energiezufuhr mit diesem Parameter auf bspw. 75% reduziert werden.
+Dieser Parameter beschreibt die Ausgangsleistung der IDS ab der Temperatur Kochen. Der Standardwert ist 100%. Mit dem Parameter "Übergang zum Kochen" ist eine Temperatur festgelegt worden, ab der der PID Controller deaktiviert wird. Mit dem Parameter "Leistung ab Übergang" wird nun die feste Ausgangsleistung für das Kochfeld vorgegeben. Wird ein Braukessel mit einem Volumen über 35l oder mehr eingesetzt, ist der Standardwert 100% eine passende Wahl. In Brauküchen mit kleinen Kesseln kann 100% Energiezufuhr ein Überkochen bewirken. In diesem Fall kann die maximale Energiezufuhr mit diesem Parameter auf bspw. 75% reduziert werden.
 
 ### Leistung bei Sensorfehler [0-100%]
 
-Tritt ein Sensorfehler auf, bspw. ein Sensor ist nicht verbunden oder ein Defekt, kann die Leistung der IDS für diesen Fehlerfall angepasst werden. Ein Wert von 100% ignoriert den Sensorfehler.
+Tritt ein Sensorfehler auf, bspw. ein Sensor ist nicht verbunden oder ein Defekt, kann die Leistung vom Kochfeld für diesen Fehlerfall angepasst werden. Ein Wert von 100% ignoriert den Sensorfehler.
 
-Wird die Leistung bei Sensorfehler auf 0% eingestellt, dann pausiert der Brautomat den Maischeprozess. Die GGM IDS wird abgeschaltet. Ist der Rasttimer gestartet, wird der Timer angehalten.
+Wird die Leistung bei Sensorfehler auf 0% eingestellt, dann pausiert der Brautomat den Maischeprozess. Das Kochfeld wird abgeschaltet. Ist der Rasttimer gestartet, wird der Timer angehalten.
 
 Der Brautomat startet nach 3 aufeinanderfolgenden fehlerhaften Sensorwerten die Fehlerbehandlung. Die Sensoren werden ca. alle 2000ms abgefragt. D.h. es vergehen zwischen Toast Nachricht Sensorfehler und Start der Fehlerbehandlung ca. 6 Sekunden.
 
 Meldet ein fehlerhafter Sensor wieder korrekte Sensorwerte, führt der Brautomat den Maischeprozess automatisch fort.
 
-_Hinweis: der Parameter Max. Leistung IDS wird durch den Parameter Leistung bei Sensorfehler nicht überschritten. Wurde bspw. Max. Leistung IDS auf 75% und Leistung bei Sensorfehler auf 100% konfiguriert, dann ist die effektive maximale Ausgangsleistung der IDS auch bei einem Sensorfehler 75%._
+_Hinweis: der Parameter Max. Leistung wird durch den Parameter Leistung bei Sensorfehler nicht überschritten. Wurde bspw. Max. Leistung IDS auf 75% und Leistung bei Sensorfehler auf 100% konfiguriert, dann ist die effektive maximale Ausgangsleistung auch bei einem Sensorfehler 75%._
 
 ## PID Manager
 
@@ -60,8 +60,8 @@ _Diese 10 Parameter sind je Brauanlage individuell einzustellen. Die Parameter k
 
 Der Brautomat kann Hardware Profile verwalten. Profile werden nur genutzt, wenn unterschiedliche MaischeSud Kessel vorhanden sind. Anwender mit unterschiedlich großen MaischeSud Kesseln können über Profile den MaischeSud Kessel für den Brautag auswählen, anstatt manuell alle Parameter neu eingeben zu müssen. Ein Hardware Profil beinhaltet alle benötigten EInstellungen von einem MaischeSud Kessel:
 
-* die PID-Controller EInstellungen
-* die maximale Leistung IDS
+* die PID-Controller Einstellungen
+* die maximale Leistung
 * Leistung ab Übergang
 
 Profile werden im Ordner /Profile gespeichert. Profile ermöglichen einen schnellen und einfachen Wechsel zwischen verschiedenen MaischeSud Kessel. Die Funktion Speichern erstellt eine Profildatei mit den o.g. Paramter, während die Funktion Löschen die Profildatei aus dem Flash-Speicher entfernt.
@@ -82,15 +82,21 @@ Faktor in Prozent = erforderliche Leistung : vorhandene Leistung
 
 Im ersten Beispiel ist eine Schüttung mit 9kg und ein Hauptguss mit 35l gegeben. Daraus ergibt sich eine Gesamtmasse von
 
-`m = 9 + 35 = 44`
+```json
+m = 9 + 35 = 44
+```
 
 Die Masse m = 44 setzen wir in die vereinfachte Formel ein:
 
-`P = 44 * 75 = 3300`
+```json
+P = 44 * 75 = 3300
+```
 
 Es sind näherungsweise 3300 W/min erforderlich, um ein Volumen von 44kg pro Minute um 1°C zu erhitzen. Wird die GGM IDS mit 100% Leistung betrieben, also 3500W, wird die die Temperaturdifferenz von 1°C in der Maische in weniger als 60 Sekunden erreicht. Um Das Ziel 1°C Temperaturanstieg in der Maische pro Minute zu erreichen, muss die maximale Leistung der GGM IDS reduziert werden:
 
-`3300 : 3500 = 0,94 das entspricht 94%`
+```json
+3300 : 3500 = 0,94 das entspricht 94%
+```
 
 Die GGM IDS müsste mit ca. 94-95% Leistung betrieben werden (Sonderfunktion IDS:94).
 
@@ -98,18 +104,24 @@ Die GGM IDS müsste mit ca. 94-95% Leistung betrieben werden (Sonderfunktion IDS
 
 Im zweiten Beispiel ist eine Schüttung mit 5,9kg und ein Hauptguss von 26,5l gegeben. Die Gesamtmasse beträgt 32,4kg.
 
-`m = 5,9 + 26,5 = 32,4`
+```json
+m = 5,9 + 26,5 = 32,4
+```
 
 Die Masse m = 32,4 setzen wir in die vereinfachte Formel ein:
 
-`P = 32,4 * 75 = 2430`\
-`2430 : 3500 = 0,69`
+```json
+P = 32,4 * 75 = 2430
+2430 : 3500 = 0,69
+```
 
 Es sind näherungsweise 2430 W/min erforderlich, um ein Volumen von 32,4kg pro Minute um 1°C zu erhitzen. Die GGM IDS müsste mit ca. 69-70% Leistung betrieben werden (Sonderfunktion IDS:70).
 
 ### Vereinfachung Masse * 75?
 
-    P = m[kg] * c * T / (t * w)
+```json
+P = m[kg] * c * T / (t * w)
+```
 
 m   entspricht Masse Hauptguss + Schüttung\
 c   entspricht der spezifischen Wärmekapazität Maische. Der wert 3600 wird eingesetzt (Einheit Joule/(kg * °C))\
@@ -117,7 +129,9 @@ T   entspricht der Temperaturdifferenz. Wir verwenden 1°C Differenz\
 t   entspricht der Zeit. Wir setzen als Zeit 60sek in die Gleichung ein\
 w   der Wirkungsrad Induktion (80-90%). Es wird der Wert 0.8 in die Gleichtung eingesetzt
 
-`c * T / (t * w) = 3600 * 1 / (60 * 0.8) = 75`
+```json
+c * T / (t * w) = 3600 * 1 / (60 * 0.8) = 75
+```
 
 Mit dieser Vereinfachung erhalten wir den Wert 75.
 
@@ -125,6 +139,8 @@ Mit dieser Vereinfachung erhalten wir den Wert 75.
 
 Die hier verwendete spez. Wärmekapazität 3600 hat eine Fehlertoleranz von ca. 2% (Abhängig von Temperatur und Extrakt). Malzschrot hat eine Wärmekapazität von 1570 J/(kg*°C), Wasser hat im Temperaturbereich 50-80°C eine Wärmekapazität von 4190 J/(kg*°C). Unter der Annahme, der Wassergehalt im Malzschrot beträgt 6%: (Zahlen aus Beispiel 1)
 
-    9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 162194,8 / 44 = 3686,25 J pro kg und Grad Celsius
+```json
+9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 162194,8 / 44 = 3686,25 J pro kg und Grad Celsius
+```
 
 Siehe auch [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
