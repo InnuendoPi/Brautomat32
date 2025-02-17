@@ -235,6 +235,7 @@
     "HLT_TAB1": "Konfiguration",
     "HLT_TAB2": "PID Manager",
     "HLT_TAB3": "AutoTune",
+    "HLT_TAB4": "Temperature control",
     "HLT_EN": "Enable HLT",
     "HLT_NAME": "device name",
     "HLT_PIN": "GPIO PIN",

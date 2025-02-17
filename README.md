@@ -2,15 +2,19 @@
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.en.md)
 
-Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP32 D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
+![ESP8266](https://img.shields.io/static/v1?label=arduino-3.1.2&message=ESP8266&logo=arduino&logoColor=white&color=green) ![ESP32](https://img.shields.io/static/v1?label=arduino-IDF4&message=ESP32&logo=arduino&logoColor=white&color=blue) ![ESP32](https://img.shields.io/static/v1?label=arduino-IDF5&message=ESP32&logo=arduino&logoColor=white&color=red)
+
+Der Brautomat ist eine Brausteuerung für den ESP8266 und ESP32 D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
+
+> **Hinweis:** Mit Version 1.50 werden alle Brautomat Versionen (Brautomat (ESP8266), Brautomat32 (ESP32 IDF4) und Brautomat32pIO (ESP32 IDF5)) im Repository Brautomat32 veröffentlicht.
 
 ***
 
 ## Hauptfunktionen
 
-* Steuerung der Induktionskochfelder GGM
-  * GGM IDS1
-  * GGM IDS2
+* Steuerung der Induktionskochfeld
+* Steuerung per Relais
+* Steuerung über Webhook
 * integrierter PID-Controller
 * PID-AutoTune
 * Temperatursensoren
@@ -22,9 +26,10 @@ Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und 
   * Alarmierung für Hopfengaben
   * Bis zu 20 Teilschritte
 * Verwaltung von Maischeplänen
-* Steuerung Induktionskochfeld als Maischepfanne
-* Steuerung Induktionskochfeld als Sudpfanne (Würzepfanne)
-* Steuerung Nachguss (HLT)
+* Steuerung von bis zu 3 Kochfeldern
+  * MaischeSud
+  * Sudpfanne (MLT)
+  * Nachguss (HLT)
 * Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
 * PWM für Aktoren
 * Audio Alarme
@@ -122,58 +127,36 @@ _Legal note: "Boxing Bell" (info), "Short School Bell" (error), "Ding sound effe
 
 ## Changelog
 
-Version 1.47
+Version 1.50
 
-* Update:       Nextion Display Dateien aktualisiert
-* Neu:          Toast Message, wenn der Rast Timer nach einer Unterbrechung angeapsst wurde
-* Neu:          es wird ein Zeitstempel mitgespeichert, um die Dauer einer Unterbrechung bemessen zu können
-* Neu:          Webhook für Nachguss
-* Neu:          Webhook für Aktoren
-* Neu:          Eigenschaft Name hinzugefügt
-* Neu:          zweites Induktionskochfeld "SUD" kann mit dem Brautomat gesteuert werden
-* Neu:          neuer Sonderbefehl SUD für die zweite GGM IDS
-* Neu:          Display Firmware Anzeige Kesselübersicht um zweites Induktionskochfeld erweitert
-* Geändert:     Sonderbefehle können auch Dauer und Temperatur verarbeiten
-* Geändert:     im Display wird auf der Seite Kesselübersicht der Name angezeigt
-* Fix:          Suche nach DS18B20 Adressen korrigiert
+* Update:       Arduino core 3.1.2 pioArduino 53.03.12 with Fix #10972 (String nullptr)
+* Geändert:     Webhook URL für Maischekessel aktiviert
+* Geändert:     Profile um Webhook URL erweitert
+* Neu:          Sonderbefehl SUDPROFIL
+* Neu:          Sonderbefehl HLTPROFIL, alternativ NACHGUSSPROFIL
+* Neu:          Sonderbefehl MAISCHEPROFIL als Alternative für IDSPROFIL
+* Geändert:     Kesselprofile für Sud und Nachguss hinzugefügt
+* Geändert:     WebIf Optimierung abgeschlossen
+* Geändert:     Kessel Sud für die Verwendung von Webhooks erweitert
+* Geändert:     einheitliche Optik für die Einstellungen Kessel Maische, Sud an Nachguss
+* Gerändert:    Nachguss Tab Temperatursteuerung eingefügt
+* Geändert:     Button Nachguss löschen entfernt. Funktion wird mit Auswahl deaktiviert ausgeführt
+* Downgrade:    Arduino core 3.1.1 wegen Fehler in 53.03.12 (Exception)
+* Geändert:     Nachguss für Verwendung mit IDS erweitert (wegen Downgrade noch nicht abgeschlossen)
+* Geändert:     Verarbeitung der Kettle Parameter url, dutycycle und invert überarbeitet
+* Update:       Arduino core 3.1.2
+* Geändert:     träges WebIf Part 4: Ausblenden von Objekten überarbeitet
+* Geändert:     träges WebIf Part 3: request Zeitkorrektur nach Stromlos/-Ausfall überarbeitet
+* Geändert:     träges WebIf Part 2: request & response handling überarbeitet
+* Fix:          träges WebIf Part 1: Server response mime Format für JSON korrigiert
+* Geändert:     Abfrageintervall Sensoren von Minimum SampleTime MAISCHE, SUD und HLT auf festen Wert 2000ms gesetzt
+* Geändert:     neuer Parameter DutyCycle im Relais Modus (1000ms bis 60000ms). Default 5000
+* Geändert:     InnuAPID Bibliothek Übergabe KettleID für debug Ausgaben hinzugefügt (default 0)
+* Geändert:     InnuAPID Bibliothek Berechnung der benötigten Leistung wenn lastTime null ist
+* Fix:          Fehler in setProfil D Parameter behoben
+* Update:       VSCode 1.97
+* Update:       Dallas Temperature Bibliothek 4.0.4
 
-Version 1.46
+Version 1.49
 
-* Neu:          Alle Datenübertragungen an das Web Interface und vom WebIf an den ESP auf JSON umgestellt
-* Neu:          Überprüfung aller Eingabe im Web interface (client side validation). Keine Überprüfung beim Editieren der Tabelle Maischeplan
-* Hinweis:      die Eingabe von Umlauten und Sonderzeichen (außer #) in Sensor- und Aktornamen im WebIf ist nicht mehr möglich
-* Hinweis:      Sensor- und Aktornamen dürfen maximal 20 Zeichen lang sein
-* Hinweis:      Maischplan Namen sind auf maximal 25 Zeichen beschränkt. Namen werden gekürzt (Begrenzung LittleFS Dateiname)
-* Fix:          Import Maischeplan Typ Brautomat Formatfehler Rezepte mit Version älter als 1.39. Überprüfung eingefügt
-* Fix:          Doppeltes Warnsignal bei Toastnachrichten Typ Error entfernt
-* Fix:          Einstelllung für das Logging Display wurde nicht korrekt gespeichert
-* Fix:          Display Anzeige Modus manuelle Steuerung fehlerhafte Status Überprüfung (typo)
-* Fix:          Abfrage AdruinoJSON containskey (deprecated) ersetzt
-* Fix:          die Vorgaben Temperatur WPH und VWH wurde nicht korrekt übertragen. Das konnte zu einem Abbruch beim Speichern der Konfiguration führen.
-* Fix:          InnuNextion Display Lib: type mismatch für das Logging
-* Fix:          InnuNextion Display Lib: wenn die Startseite auf MaischeSud oder Manuell eingestellt war, war der erste Seitenwechsel am Display fehlerhaft
-* Fix:          Toast Nachricht WebUpdate abgeschlossen wurde nach Umstellung JSON nicht mehr angezeigt
-* Fix:          Timing Problem behoben, wenn die PID Regel von manueller PID Modus auf AutoTune PID Modus umgestellt wurde (Kp, Kd und Ki blieben auf 0)
-* Fix:          fehlerhafte GPIO Zuweisung Pin D16 korrigiert
-* Fix:          Überprüfung GPIO D16 in Benutzung korrigiert
-* Fix:          Fehler korrigiert, wenn ein zweiter PT100x Sensor (an GPIO D16) hinzugefügt wurde
-* Fix:          Voreinstellung Logging System von INFO auf NONE korrigiert
-* Fix:          Überprüfung der Eingabe Aktorname korrigiert
-* Update:       ArduinoJSON 7.2.0
-* Update:       ESPTool 4.8.0
-* optimiert:    diverse Quellcode Optimierungen
-* optimiert:    avoid Strings (not yet ready)
-* optimiert:    mehr freier Speicher LittleFS durch gzip JS/CSS/TTF (erforderlich für ESP_IDF5)
-* optimiert:    Ladevorgang JS/CSS/TTF durch gzip beschleunigt
-
-Weitere Entwicklung: (nicht in Version 1.46 enthalten - Brautomat32 platformIO)
-
-* Migration:    platformIO Portierung ESP32 Wemos D1 IDF4 (4.4.7) abgeschlossen
-* Migration:    platformIO Portierung ESP32 Wemos D1 IDF5 (5.1.4) abgeschlossen
-* Migration:    platformio Portierung ESP8266 Wemos D1 Mini (2.0.17) abgeschlossen
-* Hinweis:      ein WebUpdate ESP32 von IDF4 (4.x) auf IDF5 (5.x) ist nicht möglich (geänderte Paritionen)
-* Sync:         Quellcode synchronisiert ESP8266, ESP32 IDF4 und ESP32 IDF5 (pending ... )
-* Sync:         Compiler Direktiven ESP8266, ESP32, ESP_IDF4 und ESP_IDF5
-* Fix:          ESP-IDF5 WebUpdate Funktion httpUpdate flush durch clear ersetzt (libs, siehe github repository esp32)
-* Fehler:       ESP32 Task Watchdog funktioniert (noch) nicht in der Version ESP_IDF5. In ESP_IDF5 deaktiviert
-* EPS_IDF5dev:  Build EPS-IDF 5.3.1 hinzugefügt (pioarduino)
+Die Version 1.49 ist ein Zwischenupdate für den ESP8266 und den ESP32 IDF4 (ehemals Brautomat32). Nach dem Zwischenupdate kann direkt auf Version 1.50 aktualisiert werden
