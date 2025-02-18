@@ -72,6 +72,7 @@
     "MISC_LOG_SEN": "Sensoren",
     "MISC_LOG_ACT": "Aktoren",
     "MISC_LOG_IND": "Induktion",
+    "MISC_LOG_SUD": "Sud",
     "MISC_LOG_HLT": "Nachguss",
     "MISC_LOG_SYS": "System",
 	"MISC_LOG_MAS": "Maischeprozess",

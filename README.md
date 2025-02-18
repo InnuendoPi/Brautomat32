@@ -141,9 +141,12 @@ GPIOs 34 to 39 are input only pins.
 
 ## Changelog
 
-Version 1.50.1
+Version 1.50.2
 
+* Update:       Arduino core 3.1.3 pioArduino 53.03.13
 * Fix:          Rezeptimport war nach Umstellung 1.50 fehlerhaft (veraltetes Element im WebIf)
+* Fix:          Webhooks festes mapping für HLT entfernt
+* Neu:          Logging für Kessel Sud erweitert
 
 Version 1.50
 

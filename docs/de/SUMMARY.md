@@ -17,6 +17,7 @@
 * [Sudkessel MLT](Sud/sud.md)
 * [Nachguss HLT](Nachguss/hlt.md)
 * [Aktoren](Aktoren/act.md)
+* [Logging](Logging/log.md)
 * [Parameter im Überblick](Parameter/info.md)
   * [Parameter GGM IDS](Parameter/parameter-ggm-ids.md)
   * [Parameter System](Parameter/parameter-system.md)
