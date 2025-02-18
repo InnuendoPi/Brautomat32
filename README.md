@@ -141,6 +141,10 @@ GPIOs 34 to 39 are input only pins.
 
 ## Changelog
 
+Version 1.50.1
+
+* Fix:          Rezeptimport war nach Umstellung 1.50 fehlerhaft (veraltetes Element im WebIf)
+
 Version 1.50
 
 * Update:       Arduino core 3.1.2 pioArduino 53.03.12 with Fix #10972 (String nullptr)
