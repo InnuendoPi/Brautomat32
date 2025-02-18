@@ -6,19 +6,27 @@
 
 The Brautomat is a brewing controller for the ESP8266 and ESP32 D1 mini. The Brautomat offers an intuitive, easy-to-use control system.
 
-> **Hinweis:** With version 1.50 all Brautomat versions (Brautomat (ESP8266), Brautomat32 (ESP32 IDF4) and Brautomat32pIO (ESP32 IDF5)) are published in the Brautomat32 repository.
+> **Note:** With version 1.50 all Brautomat versions (Brautomat (ESP8266), Brautomat32 (ESP32 IDF4) and Brautomat32pIO (ESP32 IDF5)) are published in the Brautomat32 repository.
 
 ***
 
 ## 💿 Download
 
-The Brautomat can be used on an ESP8266 or an ESP32.
+The Brautomat can be operated on an ESP32 or an ESP8266. The ESP32 with the Brautomat32pIO firmware is recommended.
 
-[![ESP8266](https://img.shields.io/static/v1?label=Download-Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/blob/main/Brautomat.zip) [![ESP32pIO](https://img.shields.io/static/v1?label=Download-Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/blob/main/Brautomat32pIO.zip)
+[![ESP8266](https://img.shields.io/static/v1?label=Download%20Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip) [![ESP32pIO](https://img.shields.io/static/v1?label=Download%20Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip) [![ESP32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
 
-For compatibility reasons, there is also an ESP32-IDF4 version (formerly Brautomat32) for the ESP32:
+For compatibility reasons, a Brautomat32 version based on ESP32-IDF4 also exists for the ESP32.
 
-[![ESP32](https://img.shields.io/static/v1?label=Download-Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/blob/main/Brautomat32.zip)
+## ▶️ Installation
+
+Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+
+* Download Brautomat
+* unzip file
+* Double-click on the “Flashen.cmd” file
+
+ZIP files includes [esptool](https://github.com/espressif/esptool).
 
 ## Features
 
@@ -55,9 +63,9 @@ Brautomat is a stand alone brewing device and offers:
 
 ## 📚 Documentation
 
-Manual: [https://innuendopi.gitbook.io/brautomat32en/](https://innuendopi.gitbook.io/brautomat32en/)\
-Discussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
-Changelog: [https://github.com/InnuendoPi/Brautomat32/blob/main/CHANGELOG.md](./)
+Detailed instructions availible on gitbook: [Instructions & description](https://innuendopi.gitbook.io/brautomat32/)\
+The Hobby Brewers Forum (german): [Discussion & News](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
+Last changes: [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
 
 ## 📰 WebInterface
 
@@ -78,17 +86,6 @@ Brautomat offers three different displays:
 ![Overview](docs/img/kettlepage-sm.jpg) ![Mash tun](docs/img/brewpage-sm.jpg) ![Manual control](docs/img/induction-mode-sm.jpg)
 
 _Note: the display is an optional extension. Only Nextion ITEAD HMI 3.5" Touchdisplays are supported._
-
-## ▶️ Installation
-
-Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
-
-* Download [Firmeware.zip](tools/Firmware.zip)
-* unzip Firmware.zip
-* open command line (cmd.exe) and change into firmware.zip directory
-* start script "flashen.cmd"
-
-Script flashen.cmd use [esptool](https://github.com/espressif/esptool).
 
 ## 🗺️ Multilingual
 

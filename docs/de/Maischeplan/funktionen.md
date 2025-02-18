@@ -190,18 +190,20 @@ In dem oben dargestellten Maischeplan wird in Zeile 2 mit dem Steuerbefehl "IDS:
 
 _Hinweis: Der hier verwendete Wirkungsgrad 80% für ein Induktionskochfeld ist eine Durchschnittswert. Ein isolierter und abgedeckter Maischekessel (Deckel oder Rührwerk) kann einen höheren Wirkungsgrad besitzen._
 
-## Sonderfunktion IDS Profilwechsel
+## Sonderfunktion Profilwechsel
 
-Eine weitere Sonderfunktion ist der PID Profilwechsel. Der Befehl lautet IDSPROFIL. Hinter dem Doppelpunkt folgt der Profilname.
+Eine weitere Sonderfunktion ist der Profilwechsel. Der Befehle lautet IDSPROFIL, SUDPROFIL und HLTPROFIL. Hinter dem Doppelpunkt folgt der Profilname.
 
 Beispiele:
 
 IDSPROFIL:Profil68l
 IDSPROFIL:Profil36l
 
-Der Sonderbefehl IDSPROFIL ersetzt alle PID Parameter. Der Sonderbefehl IDS: verändert die Ausgangsleistung bei identischen PID Parametern.
+Mit diesem Sonderbefehl werden alle Parameter von einem Kessel ausgestauscht. Auf diese Weise können unterschiedliche Hardware Profile hinterlegt werden. Im Brauverfahren Dekoktion bietet der Sonderbefehl eine einfache Möglichkeit, bei gleichem Kessel und kleinerem Volumen angepasst Parameter einzusetzen.
 
-_Hinweis: der Sonderbefehl IDSPROFIL im Maischeplan wird abgebrochen, wenn der Gerätetyp (IDS1, IDS2 Relais) nicht identisch ist._
+Die Sonderbefehle IDS: und IDSPROFIL: haben unterschiedliche Wirkungen: Der Sonderbefehl IDS: verändert die maximale Ausgangsleistung. Alle anderen Parameter bleiben gleich.
+
+_Hinweis: der Sonderbefehl IDSPROFIL im Maischeplan wird abgebrochen, wenn der Gerätetyp (IDS1, IDS2 oder Relais) nicht identisch ist._
 
 ### Beispiel Steuerbefehl IDS
 
