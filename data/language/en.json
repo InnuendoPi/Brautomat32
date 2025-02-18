@@ -72,6 +72,7 @@
     "MISC_LOG_SEN": "sensors",
     "MISC_LOG_ACT": "actors",
     "MISC_LOG_IND": "induction",
+    "MISC_LOG_SUD": "sud",
     "MISC_LOG_HLT": "hlt",
     "MISC_LOG_SYS": "system",
 	"MISC_LOG_MAS": "mash process",
