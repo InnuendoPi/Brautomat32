@@ -58,11 +58,7 @@ _Diese 10 Parameter sind je Brauanlage individuell einzustellen. Die Parameter k
 
 ## Profile
 
-Der Brautomat kann Hardware Profile verwalten. Profile werden nur genutzt, wenn unterschiedliche MaischeSud Kessel vorhanden sind. Anwender mit unterschiedlich großen MaischeSud Kesseln können über Profile den MaischeSud Kessel für den Brautag auswählen, anstatt manuell alle Parameter neu eingeben zu müssen. Ein Hardware Profil beinhaltet alle benötigten EInstellungen von einem MaischeSud Kessel:
-
-* die PID-Controller Einstellungen
-* die maximale Leistung
-* Leistung ab Übergang
+Der Brautomat kann Hardware Profile verwalten. Profile werden nur genutzt, wenn unterschiedliche Kessel vorhanden sind. Anwender mit unterschiedlich großen Kesseln können über Profile den Kessel für den Brautag auswählen, anstatt manuell alle Parameter neu eingeben zu müssen. Ein Hardware Profil beinhaltet alle  Einstellungen von einem Kessel.
 
 Profile werden im Ordner /Profile gespeichert. Profile ermöglichen einen schnellen und einfachen Wechsel zwischen verschiedenen MaischeSud Kessel. Die Funktion Speichern erstellt eine Profildatei mit den o.g. Paramter, während die Funktion Löschen die Profildatei aus dem Flash-Speicher entfernt.
 

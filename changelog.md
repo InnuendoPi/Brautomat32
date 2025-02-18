@@ -11,6 +11,10 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
+Version 1.50.1
+
+* Fix:          Rezeptimport war nach Umstellung 1.50 fehlerhaft (veraltetes Element im WebIf)
+
 Version 1.50
 
 * Update:       Arduino core 3.1.2 pioArduino 53.03.12 with Fix #10972 (String nullptr)

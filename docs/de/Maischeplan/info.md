@@ -1,7 +1,7 @@
 # Der Maischeplan
 
-Der Brautomat arbeiten nach einem Maischeplan in Tabellenform. Dieser Plan wird zeilenweise von oben nach unten abgearbeitet. Jede Zeile ist ein Maischeschritt. In den Spalten jeder Zeile stehen die Eigenschaft von einem Maischeschritt.
+Der Brautomat arbeitet nach einem tabellarischen Maischplan. Dieser Plan wird zeilenweise von oben nach unten abgearbeitet. Jede Zeile entspricht einem Maischeschritt. In den Spalten jeder Zeile stehen die Eigenschaften eines Maischeschrittes.
 
-Im Maischeplan werden auch Schritte zum Würzekochen, sowie Hopfengaben und Zusätze eingefügt.
+Im Maischeplan sind auch Würzekochschritte, Hopfengaben und Zusatzstoffe eingetragen.
 
-Dem Einsteiger in den Brautomat wird empfohlen, das Kapitel _Maischeplan_ vor dem ersten Brautag zu lesen. Fast alle Funktionen sind intuitiv. Es existieren aber auch weniger offensichtliche Funktionen.
+Dem Einsteiger wird empfohlen, das Kapitel _Maischeplan_ vor dem ersten Brautag zu lesen. Fast alle Funktionen erschließen sich intuitiv. Es gibt aber auch weniger offensichtliche Funktionen.
