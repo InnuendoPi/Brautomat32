@@ -6,6 +6,8 @@ Das integrierte Logging hilft bei der Fehlersuche. Für die Ausgabe wird ein ser
 
 Der serielle Monitor muss neben dem COM Port auf eine Baudrate 115200 und CRLF eingestellt werden.
 
+> **Hinweis:** An einem Brautag sollte das Logging vollständig deaktiviert sein.
+
 Mithilfe der Systemeinstellung können verschiedene Kanäle für die serielle Ausgabe aktiviert werden.
 
 * Konfiguration - in diesem Kanal werden Meldung angezeigt, wenn die config gelesen oder gespeichert wird
