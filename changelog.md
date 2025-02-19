@@ -1,6 +1,6 @@
 # Changelog
 
-ESP32 Arduino 3.1.2 ESP-IDF v5.3.2
+ESP32 Arduino 3.1.3 ESP-IDF v5.3.2
 ESP32 Arduino 2.0.17 ESP-IDF v4.4.7
 ESP8266 Arduino 3.1.2 Arduino CLI 1.1.1
 VSCode plugin ESPFS
@@ -13,9 +13,18 @@ Server Sent Events (6 SSE channels)
 
 Version 1.50.2
 
-* Update:       Arduino core 3.1.3 pioArduino 53.03.13
+* Geändert:     Sichtbarkeit Parameter Schaltzyklus in den Einstellungen Kessel angepasst
+* Fix:          Korrektur in der Ansicht Einstellungen für den Gerätetyp Webhook: der Parameter URL wurde bei erneutem Öffnen nicht angezeigt
+* Geändert:     Der Parameter DutyCycle wird auf Standard default zurückgesetzt, wenn der Gerätetyp verändert wird
+* Geändert:     Der Parameter Webhook URL wird gelöscht, wenn der Gerätetyp geändert wird
+* Geändert:     Der Parameter GPIO Inverted wird gelöscht, wenn der Gerätetyp geändert wird
+* Fix:          Parameter GPIO Inverted wurde nicht korrekt im Profil gespeichert
+* Geändert:     Rezeptimport Formatüberprüfung angepasst (MMum, BrewFather)
+* Geändert:     Logging SSE Events (debug) werden vollständig im Kanal System protokolliert
+* Geändert:     Logging Webhook response message zum response code eingefügt
+* Update:       Arduino core 3.1.3 pioArduino 53.03.13 (IDF 5.3.2.250210)
 * Fix:          Rezeptimport war nach Umstellung 1.50 fehlerhaft (veraltetes Element im WebIf)
-* Fix:          Webhooks festes mapping für HLT entfernt
+* Fix:          Webhooks festes mapping auf Kessel HLT entfernt
 * Neu:          Logging für Kessel Sud erweitert
 
 Version 1.50
