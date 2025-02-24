@@ -328,7 +328,7 @@
     "TOAST_PROFILWARN": "Warning change profile",
     "TOAST_PROFILERR": "Error could not save profile",
     "TOAST_PROFILERR2": "Error could not read profile",
-    "TOAST_IDSERR": "Error GGM IDS Interrupt",
+    "TOAST_IDSERR": "Controller error",
     "TOAST_JSON_ERR": "Error deserializeJson",
     "TOAST_CONFIGERR1": "Êrror could not save config.txt",
     "TOAST_CONFIGERR2": "Error configuration file config.txt too large",
@@ -345,5 +345,6 @@
     "TOAST_BREW_ERR": "Error could not save recipe BrewFather",
     "TOAST_FIL_KBH2_ERR": "Error filter KBH2 recipe import",
     "TOAST_FIL_MMUM_ERR": "Error filter MMum recipe import",
-    "TOAST_FIL_BF_ERR": "Error filter BF recipe import"
+    "TOAST_FIL_BF_ERR": "Error filter BF recipe import",
+    "TOAST_ACTERR": "Actor error"
 }
