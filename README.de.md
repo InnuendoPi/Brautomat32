@@ -90,13 +90,13 @@ Der Brautomat wird über einen WebBrowser gesteuert.
 
 Der Brautomat32 unterstützt (nahezu) beliebig viele Sprachen. Jede Sprache hat eine eigene Sprachdatei. Die Sprachdateien im JSON Format sind im Ordner data/language hinterlegt.
 
-_Unterstützte das Projekt und übersetze den Brautomat32 in eine neue Sprache bzw. korrigiere vorhandene Sprachdateien!_
+_Unterstützte das Projekt und übersetze den Brautomat32 in eine neue Sprache oder korrigiere vorhandene Sprachdateien!_
 
 ## 📙 Platine 2.1
 
 ![Platine](docs/img/Platine21.jpg)
 
-Eine Platine für den Arduino ESP Controller ist verfügbar. Die Platine bietet neben den Schraubklemmblöcken für die GPIOs auch einen separaten Anschluss für das Induktionskochfeld sowie drei Anschlüsse für Temperatursensoren. Die Gerber Datei ist im Ordner Tools gespeichert. Die Platine 2.0 kann sowohl mit dem ESP8266, als auch mit dem ESP32 betrieben werden.
+Eine Platine für den Arduino ESP Controller ist verfügbar. Die Platine bietet neben den Schraubklemmblöcken für die GPIOs auch einen separaten Anschluss für das Induktionskochfeld sowie drei Anschlüsse für Temperatursensoren. Die Gerber Datei ist im Ordner Gehaeuse gespeichert. Die Platine 2.1 kann sowohl mit dem ESP8266, als auch mit dem ESP32 betrieben werden.
 
 ## 📗 Gehäuse
 

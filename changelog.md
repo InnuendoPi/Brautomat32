@@ -11,8 +11,30 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.50.2
+Version 1.50.3
 
+* Geändert:     alle WebIf requests verarbeiten die Webserver Antwort nur bei success (200)
+* Geändert:     kann ein WebIf request nicht korrekt verarbeitet werden, sendet der Webserver 400 an das WebIf zurück
+* Fix:          alle sprintf Aufrufe in snprintf gewandelt
+* Fix:          Logging PID Controller falscher Variablentyp
+* Geändert:     InnuTicker lib 0.0.5
+* Geändert:     InnuAPID lib 1.5
+* Optimiert:    Optimierungen Flash mem usage
+* Fix:          WebIf Fehler doppelter playsound Aufruf, wenn der server response code bad request (400) war
+* Fix:          WebIf fehlendes server response im Profilmanagement
+* Revert:       Logging SSE Events (debug) werden im zugehörigen SSE Kanal protokolliert
+* Geändert:     GPIO Commands und Webhook Requests für Aktoren optimiert
+* Fix:          Fehler in der Funktion Reduzierung der Ausglangsleistung bei Sensorfehler behoben (mapping auf MaischeSud Kessel (aus V 1.4x) entfernt)
+* Geändert:     GPIO Commands und Webhook Requests für die drei Kessel optimiert
+* Geändert:     Informationen im Logging der drei Kessel (Maische, Sud, Hlt) und deren Typen (Error, Info, Verbose) überarbeitet
+* Neu:          Im Logging GGM IDS werden die Commands an das Induktionskochfeld ausgegeben (binär)
+* Geändert:     Logging Kessel und Aktoren angepasst
+* Geändert:     Einheitliches handling Webhooks für Kessel und Aktoren
+* Geändert:     Aktoren Webhooks angepasst
+* Geändert:     Webhook Timeout 3000ms (def 5000) (ESP8266, ESP32)
+* Geändert:     Webhook connection Timeout 3000ms (def 5000) (ESP32)
+* Fix:          Endlose Error Toasts wenn webhook URL fehlerhaft (timeout)
+* Fix:          Eine falsche oder fehlerhafte Webhook URL konnte den Brautomat vollständig blockieren
 * Geändert:     Sichtbarkeit Parameter Schaltzyklus in den Einstellungen Kessel angepasst
 * Fix:          Korrektur in der Ansicht Einstellungen für den Gerätetyp Webhook: der Parameter URL wurde bei erneutem Öffnen nicht angezeigt
 * Geändert:     Der Parameter DutyCycle wird auf Standard default zurückgesetzt, wenn der Gerätetyp verändert wird
@@ -24,7 +46,7 @@ Version 1.50.2
 * Geändert:     Logging Webhook response message zum response code eingefügt
 * Update:       Arduino core 3.1.3 pioArduino 53.03.13 (IDF 5.3.2.250210)
 * Fix:          Rezeptimport war nach Umstellung 1.50 fehlerhaft (veraltetes Element im WebIf)
-* Fix:          Webhooks festes mapping auf Kessel HLT entfernt
+* Fix:          Webhooks mapping auf Kessel HLT ( aus V 1.4x) entfernt
 * Neu:          Logging für Kessel Sud erweitert
 
 Version 1.50

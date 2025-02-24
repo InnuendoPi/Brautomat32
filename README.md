@@ -91,13 +91,13 @@ _Note: the display is an optional extension. Only Nextion ITEAD HMI 3.5" Touchdi
 
 Brautomat32 supports (almost) any number of languages. Each language has its own language file. The language files in JSON format are stored in the folder data/language.
 
-_Supported the project and translated the Brautomat into a new language or corrected existing language files!_
+_Support this project and translate Brautomat into a new language or correct existing language files!_
 
 ## 📙 Circuit board 2.1
 
 ![Platine](docs/img/Platine21.jpg)
 
-A board for the Arduino ESP controller is available. In addition to the screw terminal blocks for the GPIOs, the board also offers a separate connection for the induction hob and three connections for temperature sensors. The Gerber file is stored in the Tools folder. The board 2.0 can be operated with both the ESP8266 and the ESP32.
+A board for the Arduino ESP controller is available. In addition to the screw terminal blocks for the GPIOs, the board also offers a separate connection for the induction hob and three connections for temperature sensors. The Gerber file is stored in the Gehaeuse folder. The board 2.1 can be operated with both the ESP8266 and the ESP32.
 
 ## 📗 Case
 

@@ -122,6 +122,7 @@ boards/
 *.py
 *.txt
 *.old
+*.xxx
 dependencies.lock
 mklittlefs.exe
 Rezepte/

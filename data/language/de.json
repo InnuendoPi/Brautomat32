@@ -325,7 +325,7 @@
     "TOAST_BREW_ERR": "Fehler beim Speichern Rezept BrewFather",
     "TOAST_CONFIGERR1": "Fehler beim Speichern config.txt",
     "TOAST_CONFIGERR2": "Fehler config.txt zu groß",
-    "TOAST_IDSERR": "Fehler GGM IDS Interrupt",
+    "TOAST_IDSERR": "Fehler Steuerung",
     "TOAST_IMP_ERR": "Fehler beim Brautomat Rezept-Import",
     "TOAST_IMP_KBH_ERR": "Fehler beim Rezept-Import kleinerBrauhelfer2",
     "TOAST_IMP_MMUM_ERR": "Fehler beim Rezept-Import Maische Malz und mehr",
@@ -345,5 +345,6 @@
     "TOAST_REZ_ERR1": "Fehler beim Öffnen Rezept",
     "TOAST_REZ_ERR2": "Fehler beim Speichern Rezept",
     "TOAST_RAST_START": "Rast gestartet",
-    "TOAST_SENERR": "Sensorfehler"
+    "TOAST_SENERR": "Sensorfehler",
+    "TOAST_ACTERR": "Aktorfehler"
 }
