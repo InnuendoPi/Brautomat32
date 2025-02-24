@@ -13,7 +13,7 @@ Server Sent Events (6 SSE channels)
 
 Version 1.50.3
 
-* Geändert:     alle WebIf requests verarbeiten die Webserver Antwort nur bei success (200)
+* Geändert:     WebIf requests verarbeiten die Webserver Antwort bei success (200)
 * Geändert:     kann ein WebIf request nicht korrekt verarbeitet werden, sendet der Webserver 400 an das WebIf zurück
 * Fix:          alle sprintf Aufrufe in snprintf gewandelt
 * Fix:          Logging PID Controller falscher Variablentyp
