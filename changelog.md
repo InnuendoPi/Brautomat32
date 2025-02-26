@@ -1,15 +1,14 @@
 # Changelog
 
-ESP32 Arduino 3.1.3 ESP-IDF v5.3.2
-ESP32 Arduino 2.0.17 ESP-IDF v4.4.7
-ESP8266 Arduino 3.1.2 Arduino CLI 1.1.1
-VSCode plugin ESPFS
-InnuAPID AutoTune PID lib
-InnuTicker Task Scheduler lib
-InnuNextion Display lib
-InnuLog Debug lib serial monitor
+ESP32 Arduino 3.1.3 ESP-IDF v5.3.2\
+ESP32 Arduino 2.0.17 ESP-IDF v4.4.7\
+ESP8266 Arduino 3.1.2\
+VSCode 1.97 pioarduino IDE 1.0.6\
+InnuAPID AutoTune PID lib 1.5\
+InnuTicker Task Scheduler lib 0.0.5\
+InnuNextion Display lib\
+InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
-Server Sent Events (6 SSE channels)
 
 Version 1.51
 
