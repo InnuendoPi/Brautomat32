@@ -20,13 +20,16 @@ Aus Kompatibilitätsgründen existiert für den ESP32 auch eine Version Brautoma
 
 ## ▶️ Installation
 
-Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
-
 * Brautomat herunterladen
+  * ESP8266: Brautomat.zip
+  * ESP32 IDF4: Brautomat32.zip
+  * ESP32 IDF5: Brautomat32pIO.zip (empfohlen für ESP32)
 * ZIP Datei entpacken
 * Doppelklick auf die Datei "Flashen.cmd"
 
 Das ZIP Archiv enthält [esptool](https://github.com/espressif/esptool).
+
+Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
 ## 📓 Hauptfunktionen
 

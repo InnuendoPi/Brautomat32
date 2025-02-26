@@ -11,8 +11,9 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.50.5
+Version 1.51
 
+* Update:       Arduino libs IDF 5.3
 * Optimiert:    Optimierungen Webserver response
 * Geändert:     Anpassungen WebIf Checkboxen
 * Geändert:     Sprachauswahl in die Systemeinstellungen -> Dashboard verschoben
