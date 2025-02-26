@@ -11,8 +11,12 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.50.3
+Version 1.50.5
 
+* Optimiert:    Optimierungen Webserver response
+* Geändert:     Anpassungen WebIf Checkboxen
+* Geändert:     Sprachauswahl in die Systemeinstellungen -> Dashboard verschoben
+* Geändert:     Anpassungen Intervall Zeitaktualisierung
 * Geändert:     WebIf requests verarbeiten die Webserver Antwort bei success (200)
 * Geändert:     kann ein WebIf request nicht korrekt verarbeitet werden, sendet der Webserver 400 an das WebIf zurück
 * Fix:          alle sprintf Aufrufe in snprintf gewandelt
