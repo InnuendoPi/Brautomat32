@@ -1,6 +1,6 @@
 # Brautomat32
 
-![Static Badge](https://img.shields.io/badge/arduino%20IDF5%20ESP32-blue?style=plastic?logo=Arduino) ![Static Badge](https://img.shields.io/badge/arduino%20IDF4%20ESP32-red?style=plastic?logo=Arduino) ![Static Badge](https://img.shields.io/badge/arduino%20IDF5%20ESP8266-green?style=plastic?logo=Arduino)
+![Static Badge](https://img.shields.io/badge/ESP32pIO%20IDF5-blue) ![Static Badge](https://img.shields.io/badge/ESP32%20IDF4%20-red) ![Static Badge](https://img.shields.io/badge/ESP8266%20-green)
 
 The Brautomat is a brewing controller for the ESP8266 and ESP32 D1 mini. The Brautomat offers an intuitive, easy-to-use control system.
 
