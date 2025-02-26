@@ -20,13 +20,16 @@ For compatibility reasons, a Brautomat32 version based on ESP32-IDF4 also exists
 
 ## ▶️ Installation
 
-Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
-
 * Download Brautomat
+  * ESP8266: Brautomat.zip
+  * ESP32 IDF4: Brautomat32.zip
+  * ESP32 IDF5: Brautomat32pIO.zip (recommended for ESP32)
 * unzip file
-* Double-click on the “Flashen.cmd” file
+* Double-click file “Flashen.cmd”
 
 ZIP files includes [esptool](https://github.com/espressif/esptool).
+
+In most cases not required: Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
 ## 📓 Features
 
@@ -42,6 +45,7 @@ Brautomat is a stand alone brewing device and offers:
 * mash plan management
   * full automated rest temperature reach & hold
   * full automated rest duration timer function
+  * actors can be managed through mashplan
   * Mash plans with up to 20 steps
 * Controll up to 3 kettles
   * Mash
@@ -60,16 +64,17 @@ Brautomat is a stand alone brewing device and offers:
 * Nextion 3,5" HMI Touchdisplay (optional)
 * WebUpdate for easy firmware updates
 * Support for different languages
+* and much more
 
 ## 📚 Documentation
 
 Detailed instructions availible on gitbook: [Instructions & description](https://innuendopi.gitbook.io/brautomat32/)\
-The Hobby Brewers Forum (german): [Discussion & News](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
+Forum Hobbybrauer (german): [Discussion & News](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
 Last changes: [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
 
 ## 📰 WebInterface
 
-The Brautomat is web browser controlled.
+The Brautomat is operated via web browser. You can use your tablet, smartphone or pc.
 
 ![Startseite](docs/img/brautomat.jpg)\
 ![Startseite](docs/img/IDS-AutoTune-Ziel.jpg)\
