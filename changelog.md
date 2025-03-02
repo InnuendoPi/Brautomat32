@@ -12,6 +12,7 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 Version 1.51
 
+* Geändert:     BrewFather Import Hopfengabe erweitert (Alpha und Menge)
 * Update:       Arduino libs IDF 5.3
 * Optimiert:    Optimierungen Webserver response
 * Geändert:     Anpassungen WebIf Checkboxen
