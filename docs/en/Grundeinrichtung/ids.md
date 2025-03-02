@@ -1,43 +1,66 @@
-# Induktionskochfeld GGM IDS einrichten
+# Setting up induction hob einrichten
 
-Im ersten Abschnitt "Maischeplan" wird der MaischeSud Kessel über das Zahnrad oben rechts angelegt.
+## Creating a Mash-Boil kettle
+
+In the "Mashing Plan" section, the mash-boil kettle is created using the gear icon in the top right corner.
 
 ![MaischeSud Kessel anlegen](/docs/img/IDS-einrichten.jpg)
 
-Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Eigenschaft ist der IDS Typ. Es stehen IDS1 und IDS2 zur Auswahl. Es folgen drei Parameter zur Steuerung:
+## Configure a Mash-Boil kettle
 
-* PIN weiß [Relais] - Standardeinstellung: D7
-* PIN gelb [Command] - Standardeinstellung: D6
-* PIN blau [Interrupt] - Standardeinstellung: D5
+First, the induction cooktop must be configured. The first setting is the IDS type, where you can choose between GGM IDS1 and IDS2, Relay and webhook. Then, three control parameters need to be set:
 
-Vorbelegt sind GPIOs (D5, D6 und D7) für das original Anschlusskabel GGM IDS (mit Anschluss an einer JST-HX Buchse). Als nächste Eigenschaft muss ein Temperatursensor angegeben werden, welcher dem MaischeSud Kessel zugewiesen wird. In der Auswahlliste erscheinen die Sensornamen der bereits eingerichteten Sensoren. In dieser Grundeinrichtung ist nur ein Sensor mit dem Namen "Sensor IDS2" vorhanden und wird ausgewählt.
+* White PIN [Relay] – Default: D7
+* Yellow PIN [Command] – Default: D6
+* Blue PIN [Interrupt] – Default: D5
 
-_Tipp_: _dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird im Folgenden auch Ist-Temperatur oder aktuelle Temperatur genannt und wird im Maischeprozess immer wieder mit der Rast-Temperatur (Zieltemperatur) verglichen._
+These GPIOs (D5, D6, and D7) are preconfigured for the original GGM IDS connection cable with a JST-HX connector btw. screw terminal connection.
+
+Next, a temperature sensor must be assigned to the mash-boil kettle. The selection list displays all previously configured sensors. In this basic setup, only one sensor, "Sensor IDS2," is available and should be selected.
+
+_Tip: A temperature sensor must be permanently assigned to the induction cooktop. The sensor reading is referred to as the actual temperature and is continuously compared to the set temperature (target temperature) during the mashing process._
 
 ![MaischeSud Kessel konfigurieren](/docs/img/IDS-konfigurieren.jpg)
 
-Die Parameter auf dem Reiter "Temperatursteuerung" werden im Abschnitt "alle Parameter" erläutert. Die Standardwerte sollen zunächst übernommen werden.
+The parameters in the "Temperature Control" tab are explained in detail in the "All Parameters" section. For now, the default values should be used.
 
 ![MaischeSud Kessel konfigurieren](/docs/img/IDS-temperaturen.jpg)
 
-Nach der Grundkonfiguration muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID-Controller berechnet automatisch die benötigte Leistung der GGM IDS, um die Temperatur in der Maische (Ist-Temperatur) auf Rast-Temperatur zu bringen. Je besser der PID-Controller konfiguriert ist, desto genauer wird die Rast-Temperatur über die Rast-Dauer gehalten. Konfiguriert wird der PID-Controller über die zwei Parameter Ku und Pu, aus denen die Parameter P, I und D berechnet werden. Für eine anlagenbezogene Konfiguration wird der Prozess AutoTune im Abschnitt "AutoTune Schritt für Schritt" im Detail erläutert. Für diese erste Grundeinrichtung werden folgende Werte für den Verstärkungsfaktor Ku und die Periodendauer Pu eingetragen und dann die PID tuning Regel "IDS" ausgewählt:
+## Configuring the PID Controller
+
+After completing the basic setup, the PID controller must be configured in the PID Manager tab. This controller automatically adjusts the power output of the GGM IDS to maintain the mash temperature (actual temperature) at the target temperature. A well-configured PID controller ensures that the set temperature is held precisely during the rest period.
+
+The PID controller is configured using two parameters:
+
+* Ku (ultimate gain) – Amplification factor
+* Pu (ultimate period) – Period duration
+
+These values are used to calculate the P, I, and D parameters. For a system-specific configuration, the AutoTune process is explained in detail in the "AutoTune Step by Step" section.
+
+For this initial setup, enter the following Ku and Pu values, then select the PID tuning rule "AutoTune mode":
 
 ![IDS](/docs/img/IDS-AutoTune-erg.jpg)
 
-Wenn die Werte für Ku und Pu eingetragen sind, ermittelt die Auswahl "PID Algorithmus" die drei Werte P, I und D automatisch. Eine Erläuterung aller Parameter erfolgt später.
+Once the Ku and Pu values are entered, the selected PID algorithm will automatically determine the three values P, I, and D. A full explanation of all parameters will be provided later.
 
-_Tipp:_ _Bei einerm Kesselvolumen von 36l und einem Maischevolumen von ca. 20l sind folgende Startparameter gut geeignet:_
+## Initial parameters for different kettle sizes
 
-```text
-Verstärkungsfaktor Ku (ultimate gain):      182
-Periodendauer Pu (ultimate period):         2245
-```
-
-_Bei einerm Kesselvolumen von 70l und einem Maischevolumen von über 50l sind folgende Startparameter gut geeignet:_
+For a 36L kettle with approximately 20L of mash:
 
 ```text
-Verstärkungsfaktor Ku (ultimate gain):      225
-Periodendauer Pu (ultimate period):         1500
+ultimate gain Ku:           182
+ultimate period Pu:         2245
 ```
 
-Mit dem Speichern der Konfiguration ist die Grundkonfiguration bereits abgeschlossen. Mit einem Temperatursensor und einem MaischeSud Kessel kann nun gebraut werden. Zum Brauen ist noch ein Maischeplan erforderlich.
+For a 70L kettle with over 50L of mash:
+
+```text
+ultimate gain Ku:           225
+ultimate period Pu:         1500
+```
+
+## Completing the basic configuration
+
+After saving the settings, the basic configuration is complete. Brewing can now begin with a temperature sensor and a mash-boil kettle.
+
+_Note: A mashing plan is also required for the brewing process._

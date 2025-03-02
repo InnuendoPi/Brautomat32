@@ -2,7 +2,7 @@
 
 ![Static Badge](https://img.shields.io/badge/ESP32pIO%20IDF5-blue) ![Static Badge](https://img.shields.io/badge/ESP32%20IDF4%20-red) ![Static Badge](https://img.shields.io/badge/ESP8266%20-green)
 
-The Brautomat is a brewing controller for the ESP8266 and ESP32 D1 mini. The Brautomat offers an intuitive, easy-to-use control system.
+The Brautomat is a brewing controller for ESP32 D1 Mini NodeMCU and ESP8266 D1 mini. The Brautomat offers an intuitive, easy-to-use control system.
 
 > **Note:** With version 1.50 all Brautomat versions (Brautomat (ESP8266), Brautomat32 (ESP32 IDF4) and Brautomat32pIO (ESP32 IDF5)) are published in the Brautomat32 repository.
 
@@ -10,18 +10,21 @@ The Brautomat is a brewing controller for the ESP8266 and ESP32 D1 mini. The Bra
 
 ## 💿 Download
 
-The Brautomat can be operated on an ESP32 or an ESP8266. The ESP32 with the Brautomat32pIO firmware is recommended.
+ESP32 D1 Mini NodeMCU and Brautomat32pIO is recommended.
 
 [![ESP32pIO](https://img.shields.io/static/v1?label=Download%20Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip) [![ESP32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip) [![ESP8266](https://img.shields.io/static/v1?label=Download%20Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip)
 
-For compatibility reasons, a Brautomat32 version based on ESP32-IDF4 also exists for the ESP32.
+> **note:**
+
+* You cannot update (file or WebUpdate) from Brautomat32 to Brautomat32pIO due to different partition layouts. You need to reflash the firmware.\
+* For compatibility reasons, a Brautomat32 version based on ESP32-IDF4 still exists for the ESP32 but due to end of life IDF4 not recommended.
 
 ## ▶️ Installation
 
 * Download Brautomat
-  * ESP8266: Brautomat.zip
-  * ESP32 IDF4: Brautomat32.zip
-  * ESP32 IDF5: Brautomat32pIO.zip (recommended for ESP32)
+  * [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip): Brautomat32pIO.zip
+  * [ESP32 IDF4](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip): Brautomat32.zip
+  * [ESP8266](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip): Brautomat.zip
 * unzip file
 * Double-click file “Flashen.cmd”
 
@@ -49,6 +52,7 @@ Brautomat is a stand alone brewing device and offers:
   * Mash
   * MLT
   * HLT
+* Kettle profiles
 * Controlling actors like agitator, pumps etc.
 * PWM for heating elements
 * Temperature progression in the mashing process (line chart)
@@ -66,7 +70,7 @@ Brautomat is a stand alone brewing device and offers:
 
 ## 📚 Documentation
 
-Detailed instructions availible on gitbook: [Instructions & description](https://innuendopi.gitbook.io/brautomat32/)\
+Detailed instructions availible on gitbook (german): [Instructions & description](https://innuendopi.gitbook.io/brautomat32/)\
 Forum Hobbybrauer (german): [Discussion & News](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
 Last changes: [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
 

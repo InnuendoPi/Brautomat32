@@ -1,48 +1,28 @@
-# Brautomat - en
+# Brautomat: Intuitive Brewing Control for Homebrewers
 
-Brautomat is a brewing control for induction hobs GGM IDS with an ESP32 Wemos D1 mini. Brautomat is used in the brewhouse by hobby brewers and offers intuitive, easy-to-use controls. During mashing, rest temperatures are reached automatically and the rest times are adhered to. Brautomat also supports the hobby brewer when boiling the wort and adding hops. In the ascending infusion process, the brautomat can fully automate the mashing process.
+The Brautomat is a brewing controller specifically designed for the ESP32 D1 mini or the ESP8266 Wemos D1 mini. It is utilized in the brewhouses of homebrewers and is characterized by its user-friendly operation. During mashing, rest temperatures are automatically reached, and the corresponding times are precisely maintained. Additionally, the Brautomat assists in the brewing process during wort boiling and hop additions. In the rising infusion method, the Brautomat can fully automate the mashing process.
 
- _Note: induction hobs from other manufacturers are not supported._
+> **Note:** This manual is continuously expanded, corrected, and improved. Originally, the Brautomat project could only control the GGM IDS2 induction cooktop. Since version 1.48, other cooktops can also be connected in relay mode. Although the manual describes functions with a GGM IDS in many sections, only the manual mode is exclusively suitable for the GGM IDS2. All other functions are also available for other cooktops.
 
- _Note: please use german manual with browser translation._
+## Structure of this Manual
 
-## Content
+This manual is not linear and does not need to be read from top to bottom. For beginners, it is recommended to start with the "The Software" section, especially the chapter "The Mashing Plan".
 
-This guide is divided into three subject areas:
+The manual is divided into three main areas:
 
-* Software: how to use Brautomat firmware
-  * installation
-  * basic setup
-  * mash plan
+* The Software: Usage of the Brautomat firmware
+  * Installation
+  * Basic Setup
+  * The Mashing Plan
   * AutoTune PID
-  * sensors, actors und sparge water (hlt)
-  * recipes
-* Hardware: circuit board and suitable extensions
-  * circuit board structure and connections
-  * display
-  * 3D case
-  * additional hardware
-* Infos, FAQs & co
-  * kleineBrauhelfer2
-  * MQTTDevice
+  * Sensors, Actuators, and Sparging
+* The Hardware: The circuit board and suitable extensions
+  * Structure and connections of the circuit board
+  * The Display
+  * 3D-printed housing
+* Additional hardware
+* Information and FAQs:
+  * KleinerBrauhelfer2
+  * The MQTTDevice
 
-This manual does not have any order and do not need to be read from top to bottom.
-
-## Overview
-
-* induction hob controller
-* integrated PID-Controller
-* PID-AutoTune
-* Mash plans management
-* Mash plans with up to 20 steps
-* Hot liquid tank controller (HLT)
-* Controlling actors like agitator, pumps etc.
-* PWM
-* Temperature progression in the mashing process (line chart)
-* Recipe import kleinen Brauhelfer2
-* Recipe import Maische Malz und Mehr
-* Recipe import BrewFather
-* Recipe export
-* 3,5" HMI Touchdisplay Nextion (optional)
-
-_"Legal note: Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) and "Success sound effect" (success) mp3 from Free Sounds Library [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
+The "The Software" section concludes with an overview of parameters. Detailed information is provided for many parameters to simplify configuration and application.
