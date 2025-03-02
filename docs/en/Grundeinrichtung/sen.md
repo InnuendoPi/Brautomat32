@@ -1,12 +1,12 @@
-# Setting Up the Temperature Sensor
+# Setting up the temperature sensor
 
-## Adding a New Sensor
+## Adding a new sensor
 
 In the "Sensors" section, a new sensor can be added by clicking the plus symbol.
 
 ![Sensoren anlegen](/docs/img/Sensor-einrichten.jpg)
 
-## Assigning a Sensor Address and Name
+## Assigning a sensor address and name
 
 Temperature sensors of type Dallas DS18B20 have a unique address, which the firmware uses for identification. This address can be selected from the dropdown list.
 
