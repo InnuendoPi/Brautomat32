@@ -1,4 +1,4 @@
-# Setting up induction hob einrichten
+# Setting up induction hob
 
 ## Creating a Mash-Boil kettle
 
