@@ -4,4 +4,4 @@ Der Brautomat benötigt mindestens einen Temperatursensor sowie entweder ein Ind
 
 Die Grundeinstellung wird anhand des Induktionskochfelds GGM IDS2 demonstriert. Für ein relaisgesteuertes Kochfeld erfolgt die Konfiguration analog.  
 
-Diese Grundeinstellung beschreibt eine Brauanlage mit einem Maische-Sud-Kessel. Die Einrichtung zusätzlicher Kessel (z. B. Sud- oder HLT-Kessel) erfolgt nach demselben Prinzip.  
+Diese Grundeinstellung beschreibt eine Brauanlage mit einem Maische-Sud-Kessel. Die Einrichtung zusätzlicher Kessel (z. B. Sud- oder HLT-Kessel) erfolgt nach demselben Prinzip.
