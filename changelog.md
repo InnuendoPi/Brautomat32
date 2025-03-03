@@ -10,8 +10,10 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51
+Version 1.51.1
 
+* Fix:          unter bestimmten Bedingungen konnte ein Sensorfehler Auswirkungen auf alle Kessel (PID) haben
+* Update:       ArduinoJSON Bibliothek 7.3.1
 * Geändert:     BrewFather Import Hopfengabe erweitert (Alpha und Menge)
 * Update:       Arduino libs IDF 5.3
 * Optimiert:    Optimierungen Webserver response
