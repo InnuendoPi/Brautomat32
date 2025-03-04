@@ -10,8 +10,11 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.1
+Version 1.51.2
 
+* Geändert:     Auswahl für das Schaltsignal bei Webhook Aktoren oder Kessel
+* Geändert:     Handling Leistung ab Übergang Kochen
+* Geändert:     Ablauf Maischeplan überarbeitet und doppelten Code entfernt (checkTemp)
 * Fix:          unter bestimmten Bedingungen konnte ein Sensorfehler Auswirkungen auf alle Kessel (PID) haben
 * Update:       ArduinoJSON Bibliothek 7.3.1
 * Geändert:     BrewFather Import Hopfengabe erweitert (Alpha und Menge)
