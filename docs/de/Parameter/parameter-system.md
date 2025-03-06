@@ -51,7 +51,7 @@ Es ist zu beachten, dass SDA, SCL an den PINs D1, D2 betrieben werden müssen.
 
 ### MAX31865 Verstärker aktivieren
 
-Wenn analoge Sensoren vom Typ PT100x verwendet werden, muss dieser Schalter aktiviert werden. Ein analoger PT100x-Sensor benötigt einen RTD-Digital-Wandler, um an einen ESP-Mikrocontroller angeschlossen zu werden. Ein MAX31865 Amplifier ist ein RTD Digital Wandler in Form einer kleinen Zusatzplatine.\
+Wenn analoge Sensoren vom Typ PT100x verwendet werden, muss dieser Schalter aktiviert werden. Ein analoger PT100x-Sensor benötigt einen RTD-Digital-Wandler, um an einen ESP-Mikrocontroller angeschlossen zu werden. Ein MAX31865 Amplifier ist ein RTD Digital Wandler in Form einer kleinen Zusatzplatine.
 
 ### mDNS aktivieren
 

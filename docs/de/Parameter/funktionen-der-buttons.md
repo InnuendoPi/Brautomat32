@@ -52,10 +52,10 @@ Mit dem Graph Button kann die visuelle Darstellung des Temperaturverlaufs ein- u
 
 In den Einstellungen zum Maischeplan stehen neben dem Maischeplannamen und der Zeitsteuerung auch der Maischeplanwechsel, das Importieren, Exportieren sowie das Löschen von Maischeplänen zur Verfügung.
 
-### Die Schaltfläche Maischeplan anzeigen (Schaltfläche zuklappen)
+### Die Schaltfläche Maischeplan anzeigen (Collapse Button)
 
 Der Button Maischeplan anzeigen hat eine Klappfunktion: Während des Brauens nimmt der Maischeplan unnötig viel Bildschirmfläche ein. Mit collapse kann die Tabelle Maischeplan ein- und ausgeklappt werden.
 
-### Die Schaltfläche Diagramm anzeigen (Schaltfläche Zusammenklappen)
+### Die Schaltfläche Diagramm anzeigen (Collapse Button)
 
 Der Button Chart anzeigen hat eine collapse Funktion: Während des Brauens nimmt die Grafik unnötig viel Bildschirmfläche ein. Mit collapse kann die Grafik ein- und ausgeklappt werden. Die Grafik wird auch im eingeklappten Zustand weiter aktualisiert.

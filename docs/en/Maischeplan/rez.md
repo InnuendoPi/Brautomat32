@@ -34,7 +34,6 @@ The Brauomat manages mash plans in the flash memory. By selecting *Change mash p
 
 ### Import mash plan
 
-The selected mash plan is deleted from the flash memory.\
 The Brautomat can import brewing recipes from the following sources:
 
 * kleinerBrauhelfer2 (from version 2.5 export type Brautomat)

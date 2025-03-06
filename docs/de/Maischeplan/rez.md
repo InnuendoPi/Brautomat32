@@ -34,7 +34,6 @@ Der Brautomat verwaltet Maischepläne im Flash-Speicher. Durch Auswahl von *Mais
 
 ### Maischeplan importieren
 
-Der ausgewählte Maischeplan wird aus dem Flash-Speicher gelöscht.
 Der Brautomat kann Braurezepte aus folgenden Quellen importieren:
 
 * kleinerBrauhelfer2 (ab Version 2.5 Exporttyp Brautomat)
@@ -68,7 +67,7 @@ Der Brautomat benötigt einen Schritt Einmaischen (optional) und einen Schritt A
 
 ### Temperaturvorgaben für fehlende Parameter
 
-Bei Rezepten aus verschiedenen Quellen können u.a. Temperaturangaben fehlen. Dies betrifft insbesondere die Temperaturen für Einmaischen, Abmaischen, Vorderwürze und Whirlpool-Hopfung. Die interne Programmlogik des Brauautomaten benötigt immer eine Temperatur für die Verarbeitung, auch wenn einige Temperaturen aus Sicht des Brauers nicht notwendig sind. Fehlende Temperaturen werden mit Standardwerten vorbelegt.
+Bei Rezepten aus verschiedenen Quellen können u.a. Temperaturangaben fehlen. Dies betrifft insbesondere die Temperaturen für Einmaischen, Abmaischen, Vorderwürze und Whirlpool-Hopfung. Die interne Programmlogik des Brautomaten benötigt immer eine Temperatur für die Verarbeitung, auch wenn einige Temperaturen aus Sicht des Brauers nicht notwendig sind. Fehlende Temperaturen werden mit Standardwerten vorbelegt.
 
 ### Temperatur Einmaischen [°C]
 

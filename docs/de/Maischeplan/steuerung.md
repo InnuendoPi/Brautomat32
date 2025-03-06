@@ -29,7 +29,7 @@ Während der Aufheizphase werden die Schaltflächen zum Editieren des Maischepla
 
 Während einer Rast wird mit der Pausetaste auch der Rasttimer im Maischprozess angehalten. Der Pauseknopf wird dann rot dargestellt. Während einer Rast wird die Ist-Temperatur gegenüber der Rastsolltemperatur gehalten, d.h. der PID-Regler und damit das Induktionskochfeld bleiben aktiv. Mit Hilfe einer Pause während einer Rast kann der Maischeplan angepasst werden. Die Dauer der Pause verlängert die bisherige Rastzeit.
 
-## Die Previous Schaltfläche
+## Die Previous Button
 
 Mit dem Prev-Button wird zum vorherigen Schritt im Maischeplan gesprungen. Wurde der Maischprozess angehalten, wird der Rasttimer des aktuellen Rasts zurückgesetzt und neu gestartet.
 

@@ -8,7 +8,7 @@ Dieser Parameter beschreibt die maximale Ausgangsleistung des Kochfeldes. Der St
 
 Am Ende dieses Kapitels finden Sie [zwei Beispiele zur Berechnung der benötigten Leistung](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung).
 
-### Temperaturdifferenz zum Sollwert
+### Temperatur delta zum Ziel
 
 Dieser Parameter beschreibt, ab welcher Differenz zur Rasttemperatur (Sollwert) der Timer für eine Rast starten soll. Der Standardwert ist 0,3°C. Im Maischprozess ermöglicht der PID-Regler eine sehr genaue Temperaturregelung. Eine Rasttemperatur wird auf +-0,2°C genau erreicht, indem der PID-Regler die Energiezufuhr vor Erreichen der Rasttemperatur kontrolliert reduziert. Die Reduzierung der Energiezufuhr hat den Nebeneffekt, dass der letzte Schritt zum Erreichen der Rasttemperatur länger dauert. Genau an dieser Stelle kommt der Parameter "Delta zum Ziel" ins Spiel: Soll z.B. eine Rasttemperatur von 63°C erreicht werden und die aktuelle Temperatur beträgt 62,7°C, dann würde bei einem Temperaturdelta zum Ziel von 0,3°C der Rasttimer starten. Bezogen auf die individuelle Brauanlage kann mit delta zum Ziel eine ungewollte Verlängerung der Rastzeit vermieden werden.
 
@@ -46,7 +46,7 @@ Dieser Parameter gibt an, in welchem zeitlichen Abstand eine Berechnung der ben�
 
 Dieser Parameter wird für die Erkennung von Extremwerten (Max, Min) verwendet. AutoTune noiseband gibt an, welche Mindeständeurng zum vorherigen Messwert vorhanden sein muss, um einen neuen Extremalwert zu erkennen. Der Standardwert für die GGM IDS beträgt 0.2. Für einen Nachguss Kocher über ein Relais oder SSR beträgt der Standardwert 0.5. Wertebereich: 0.1 - 1.0
 
-### AutoTune Datenreihe
+### AutoTune Datenreihe (lookback)
 
 Dieser Parameter gibt an, wie viele Messwerte für die Ermittlung von Extremalwerten betrachtet werden sollen. Der Standardwert beträgt 50 Messwerte. Zu beachten gilt, dass maximal 100 Messwerte konfiguriert werden können. Bei sehr gut wärmeisolierten Braukesseln (bspw. mit Armaflex) kann eine Erhöhung auf 100 Messwerte in der Datenreihe die Erkennung von Extremalwerten in der Abkühlphase vom AutoTune Prozess verbessern.
 
