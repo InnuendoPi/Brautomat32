@@ -2,19 +2,19 @@
 
 ## System
 
-### Aktiviere Alarm-Buzzer
+### Alarmsummer aktivieren
 
-Mit diesem parameter kann ein Piezo Buzzer aktiviert werden. In der Standardeinstellung ist der Buzzer an GPIO D8 angeschlossen. Das entspricht dem Layout der Platine 2.0. Buzzer Alarme unterstützen den Maischeprozess durch Signaltöne.
+Mit diesem Parameter kann ein Piezo-Summer aktiviert werden. Standardmäßig ist der Buzzer an GPIO D8 angeschlossen. Dies entspricht dem Layout der Platine 2.0. Buzzer Alarme unterstützen den Maischprozess durch Signaltöne.
 
-### Aktiviere Toasts und mp3 Alarme
+### Toasts und mp3 Alarme aktivieren
 
-Toasts sind kleine Push Nachrichten. Die Nachrichten erscheinen als Kachel unten rechts im Browser. Mit Ausnahme von Fehler-Benachrichtigungn werden Toasts nach wenigen Sekunden ausgeblendet. Es gibt Toast Nachrichten zum Maischeprozess, Toast Nachrichten vom System und textlose mp3 Alarme. Dazu passend hat die Eigenschaft Toasts 3 Optionen: Aus, Ein und Fehler. Die Auswahl "Aus" schaltet Toast Nachrichten ab. Die Option "Ein" sendet alle Toasts Nachrichten und mp3-Alarme. Die Option "Fehler" sendet nur Toast Nachrichten bei Systemfehler, aber keine Nachrichten zum Maischeprozess.
+Toasts sind kleine Push-Nachrichten. Sie erscheinen als Kachel unten rechts im Browser. Mit Ausnahme von Fehlermeldungen werden Toasts nach einigen Sekunden wieder ausgeblendet. Es gibt Toast-Nachrichten über den Maischprozess, Toast-Nachrichten vom System und textlose mp3-Alarme. Die Eigenschaft Toasts hat 3 Optionen: Aus, Ein und Fehler. Die Option "Aus" schaltet die Toastmeldungen aus. Die Option "Ein" sendet alle Toast-Nachrichten und mp3-Alarme. Die Option "Fehler" sendet nur Toastmeldungen bei Systemfehlern, aber keine Meldungen über den Maischprozess.
 
-Toasts unterstützen eine Audio Ausgabe. So werden Toasts im Maischeprozess nicht nur zu einer visuelle, sondern auch einer akkustischen Erinnerung. Die Firmware beinhaltet die Audio Dateien info.mp3, success.mp3, warning.mp3 und error.mp3. Die Audio Dateien (mp3) können ausgetauscht werden. Lediglich die Benennung muss gleich bleiben. Im Browser sollte Autoplay Audio für die IP-Adresse des Brautomaten erlaubt sein.
+Toasts unterstützt Audioausgabe. Dadurch werden Toasts während des Maischprozesses nicht nur visuell, sondern auch akustisch angezeigt. Die Firmware enthält die Audiodateien info.mp3, success.mp3, warning.mp3 und error.mp3. Die Audiodateien (mp3) können ausgetauscht werden. Nur der Name muss gleich bleiben. Im Browser muss Autoplay Audio für die IP-Adresse des Brautautomaten aktiviert sein.
 
-_Tipp: iOS Geräte -_ _mp3 Audio benötigt auf iOS Geräten eine "user gesture", bspw. ein Klick oder Touch event. Einfach ein Element auf der Webseite anklicken und mp3 Audio wird ausgegeben. Ohne die user gesture wird die Audio Ausgabe vom iOS System blockiert_
+mp3-Audio benötigt auf iOS-Geräten eine "Benutzergeste", z.B. einen Klick oder ein Berührungsereignis. Einfach auf ein Element auf der Webseite klicken und mp3 Audio wird ausgegeben. Ohne die user gesture wird die Audioausgabe vom iOS System blockiert_.
 
-_Tipp: automatische Medienwiedergabe -_ _Alle gängigen Browser wie MS Edge, Chrome oder Firefox haben in den Einstellungen unter Webseitenberechtigung Optionen für die automatische Medienwiedergabe. Es wird empfohlen, die Webseite vom Brautomat in die Liste "Zulassen" hinzuzufügen. Im folgenden Bild ist die Webseite vom Brautomat mit dem mDNS Namen im Microsoft Edge Browser hinzugefügt worden. Alternativ kann auch die IP-Adresse eingetragen werden_
+Alle gängigen Browser wie MS Edge, Chrome oder Firefox haben in den Einstellungen unter Websiteberechtigungen Optionen für die automatische Medienwiedergabe. Es wird empfohlen, die Webseite vom Brautomat in die Liste "Erlauben" aufzunehmen. In der folgenden Abbildung wurde die Webseite vom Brautomat mit dem mDNS-Namen im Browser Microsoft Edge hinzugefügt. Alternativ kann auch die IP-Adresse eingetragen werden
 
 ![media](/docs/img/autoplay-media.jpg)
 
@@ -22,67 +22,67 @@ Mit dieser Einstellung können mp3 Alarme einen Piezo Buzzer ersetzen.
 
 ### Aktiviere Touchdisplay
 
-Mit diesem Parameter kann ein Nextion HMI 3.5 Zoll Display betrieben werden. Der Brautomat bietet drei Ansichten
+Mit diesem Parameter kann ein Nextion HMI 3,5 Zoll Display betrieben werden. Der Brautomat bietet drei Ansichten
 
 #### Kesselübersicht
 
-Auf dieser Ansicht werden IDS und Nachguss mit Ist- und Zieltemperaturen dargestellt. Die aktuelle und die nächste Rast werden mit Dauer angezeigt.
-Die Länge vom rote Balken unter der Ansicht IDS und Nachguss zeigt die erledigte Rastdauer an.  
+In dieser Ansicht werden IDS und Nachguss mit Ist- und Solltemperaturen angezeigt. Die aktuelle und die nächste Rast werden mit Dauer angezeigt.
+Die Länge des roten Balkens unter der Ansicht IDS und Nachguss zeigt die abgelaufene Rastzeit an.
 
 ![Display](/docs/img/kettlepage.jpg)
 
 #### MaischeSud
 
-Auf dieser Ansicht wird das erste Induktionskochfeld dargestellt. Es wird nur die aktuelle Rast mit Dauer im Kopf angezeigt. Die Länge roter Balken unter den Temperaturen den Fortschrit der aktuellen Rast an.
+Diese Ansicht zeigt das erste Induktionskochfeld. Es wird nur der aktuelle Kochvorgang mit der Dauer im Kopf angezeigt. Die Länge der roten Balken unter den Temperaturen zeigt den Fortschritt des aktuellen Kochvorgangs an.
 
 ![Display](/docs/img/brewpage.jpg)
 
-#### Manueller Modus
+#### Manueller Modus (nur für GGM IDS2)
 
-Auf dieser Ansicht ist für die manuelle Steuerung vom Induktionskochfeld. Im manuellen Betrieb stehen 6 Powerstufen zur Verfügung: 0, 20, 40, 60, 80 und 100% Leistung. Der manuelle Betrieb ist nur für die GGM IDS2 geeignet. (IDS1 nicht getestet!)
+Diese Ansicht dient zur manuellen Steuerung des Induktionskochfeldes. Im Handbetrieb stehen 6 Leistungsstufen zur Verfügung: 0, 20, 40, 60, 80 und 100% Leistung. Der manuelle Modus ist nur für das GGM IDS2 geeignet. (IDS1 nicht getestet!)
 
 ![Display](/docs/img/induction-mode.jpg)
 
-Ein Display ist optional. Der Brautomat unterstützt ausschließlich Nextion HMI 3.5 Zoll Touchdisplays (Basic und Discovery Series).
+Ein Display ist optional. Der Brautomat unterstützt nur Nextion HMI 3,5 Zoll Touchdisplays (Basic und Discovery Serie).
 
-Das Display wird mit einer SD Karte konfiguriert. Die zum Display passende TFT Datei aus dem Ordner Info wird auf eine SD Karte kopiert und in das Display eingesteckt. Sobald das Display eingeschaltet wird, startet die Konfiguration. Der Vorgang dauert etwa eine Minute. Im Display steht der Fortschritt. Sobald die Konfiguration aufgespielt ist, wird das Display abgeschaltet und die SD Karte entfernt. Das Display ist nun einsatzbereit.
+Die Konfiguration des Displays erfolgt über eine SD-Karte. Die zum Display passende TFT Datei aus dem Ordner Info wird auf die SD Karte kopiert und in das Display gesteckt. Sobald das Display eingeschaltet wird, beginnt die Konfiguration. Der Vorgang dauert ca. eine Minute. Der Fortschritt wird auf dem Display angezeigt. Sobald die Konfiguration abgeschlossen ist, wird die Anzeige ausgeschaltet und die SD-Karte entfernt. Das Display ist jetzt betriebsbereit.
 
-Zu beachten gilt, dass SDA, SCL an den PINs D1, D2 betrieben werden müssen.
+Es ist zu beachten, dass SDA, SCL an den PINs D1, D2 betrieben werden müssen.
 
-### Aktviere MAX31865 Amplifier
+### MAX31865 Verstärker aktivieren
 
-Wenn analoge Sensoren vom Typ PT100x eingesetzt werden, muss dieser Schalter aktiviert werden. Ein analoger Sensor PT100x benötigt für den Anschluss an einen ESP Mikrocontroller einen RTD digital Wandler. Ein MAX31865 Amplifier ist ein RTD digital Wandler in Form einer kleinen Zusatzplatine.\
+Wenn analoge Sensoren vom Typ PT100x verwendet werden, muss dieser Schalter aktiviert werden. Ein analoger PT100x-Sensor benötigt einen RTD-Digital-Wandler, um an einen ESP-Mikrocontroller angeschlossen zu werden. Ein MAX31865 Amplifier ist ein RTD Digital Wandler in Form einer kleinen Zusatzplatine.\
 
-### Aktiviere mDNS
+### mDNS aktivieren
 
-Multicast DNS wird zur Auflösung von Hostnamen zu IP Adressen in kleinen Netzwerken verwendet. mDNS ermöglicht einen "sprechenden" Namen für den Brautomaten zu verwenden. Voreingestellt ist der mDNS Name "brautomat". Das Web Interface ist über die Adresse <http://brautomat.local> erreichbar. Der Hostname ist auf maximal 15 Zeichen beschränkt.
+Multicast DNS wird verwendet, um Hostnamen in IP-Adressen in kleinen Netzwerken aufzulösen. mDNS ermöglicht es, einen "sprechenden" Namen für den Brauautomaten zu verwenden. Voreingestellt ist der mDNS-Name "brautomat". Das Webinterface ist über die Adresse <http://brautomat.local> erreichbar. Der Hostname ist auf maximal 15 Zeichen begrenzt.
 
-_Tipp: der mDNS Name wird ohne Protokoll (http://) und ohne top-level Domain (.local) in den Systemeinstellungen konfiguriert (brautomat)._
+Hinweis: Der mDNS Name wird ohne Protokoll (http://) und ohne Top-Level-Domain (.local) in den Systemeinstellungen (brautomat) konfiguriert.
 
 ### Dashboard
 
-Über das Dashboard können sehr einfach Elemente ein- und ausgeblendet werden. Ist bspw. kein Nachguss im Einsatz, sollte das Element Nachguss für das Dashboard deaktiviert werden. Deaktivierte Elemente verringern den Datenverkehr.
+Über das Dashboard können sehr einfach Elemente ein- und ausgeblendet werden. Wird z.B. kein Nachguss verwendet, sollte das Element Nachguss für das Dashboard deaktiviert werden. Deaktivierte Elemente reduzieren den Datenverkehr.
 
-### Logging
+### Protokollierung
 
-Das Logging steht nur bei Verwendung von einem ESP32 zu Verfügung. Ein ESP8266 unterstützt diese Funktionen nicht. Im Tab Logging kann für der Module Konfiguration, Sensoren, Aktoren, Induktion, Nachguss, Display und System eine serielle Protokollausgabe aktiviert werden. Zur Protokollierung stehen die Level Error, Info, Verbose und Aus zur Verfügung. Benötigt wird ein Serial Monitor, bspw. mit der Arduino IDE, VSCODE etc. Die Baudrate ist 115200.
+Logging ist nur verfügbar, wenn ein ESP32 verwendet wird. Ein ESP8266 unterstützt diese Funktion nicht. Auf der Registerkarte Logging kann eine serielle Protokollausgabe für die Module Konfiguration, Sensoren, Aktoren, Induktion, Nachgießen, Anzeige und System aktiviert werden. Für die Protokollierung stehen die Stufen Error, Info, Verbose und Off zur Verfügung. Benötigt wird ein serieller Monitor, z.B. mit der Arduino IDE, VSCODE etc. Die Baudrate beträgt 115200.
 
-Der Modus Error gibt ausschließlich Fehler aus.
+Der Error Modus gibt nur Fehler aus.
 
-Der Modus Info beinhaltet Error und gibt im seriellen Monitor zusätzlich Informationen zur Konfigurationen aus.
+Der Modus Info beinhaltet Error und gibt zusätzlich Informationen zur Konfiguration im Serial Monitor aus.
 
-Der Modus Verbose beinhaltet Error und Info und gibt zusätzlich Informationen zum Datentransfer (SSE Broadcasts) aus.
+Der Verbose Modus beinhaltet Error und Info und gibt zusätzlich Informationen zum Datentransfer (SSE Broadcasts) aus.
 
-### NTP Zeitserver
+### NTP-Zeitserver
 
-Das Network Time Protokoll (NTP) synchronisiert regelmäßig die Uhrzeit mit einem Zeitserver. Der Standard Zeitserver lautet europe.pool.ntp.org und ist ein Zeitgeber im Internet. Wenn im lokalem Netzwerk ein Zeitgeber vorhanden ist, kann dieser Zeitgeber genutzt werden. Wenm bspw. ist eine Fritz.box (c) im Einsatz ist, kann als Zeitserver fritz.box eingetragen werden. Wenn ein lokaler Zeitgeber konfiguriert st, benötigt der Brautomat keinen Zugriff auf das Internet. Die Funktion WebUpdate benötigt für die SSL Verschlüsselung zwingend einen Zeitserver.
+Das Network Time Protocol (NTP) synchronisiert die Uhrzeit regelmäßig mit einem Zeitserver. Der Standardzeitserver ist europe.pool.ntp.org und ist ein Zeitgeber im Internet. Wenn im lokalen Netzwerk ein Zeitserver vorhanden ist, kann dieser verwendet werden. Wird z.B. eine Fritz.box (c) verwendet, kann als Zeitserver fritz.box eingetragen werden. Wird eine lokale Zeitschaltuhr konfiguriert, benötigt der Automat keinen Internetzugang. Die Funktion WebUpdate benötigt für die SSL-Verschlüsselung zwingend einen Zeitserver.
 
 ### NTP Zeitzone
 
-Die Zeitzone wird aus einer Tabelle ermittelt. Die Zeitzone Europe Berlin ist voreingestellt und lautet <CET-1CEST,M3.5.0,M10.5.0/3>.
-Anhand der Zeitzone wird die korrekte Uhrzeit ermittelt, inklusive einer Sommer- oder Winterzeit.
+Die Zeitzone wird aus einer Tabelle bestimmt. Die Zeitzone Europa Berlin ist voreingestellt und lautet <CET-1CEST,M3.5.0,M10.5.0/3>.
+Anhand der Zeitzone wird die korrekte Uhrzeit inklusive Sommer- bzw. Winterzeit ermittelt.
 
-#### Tabelle Zeitzonen
+#### Zeitzonen-Tabelle
 
 |Africa/Abidjan                |GMT0                                        |
 |------------------------------|--------------------------------------------|

@@ -1,29 +1,30 @@
-# Kalibrierung
+# Calibration
 
-Sensoren vom Typ Dallas DS18B20 haben teilweise Abweichungen von der tatsächlichen Temperatur. In den techn. Spezifikationen der Hersteller wird oft eine Genauigkeit von +-0.5°C im Bereich von -10°C bis 85°C angegeben. Ferner werden die Sensoren als kalibriert bezeichnet.
+Dallas DS18B20 sensors sometimes deviate from the actual temperature. The manufacturer's technical specifications often specify an accuracy of +-0.5°C in the range from -10°C to 85°C. The sensors are also labelled as calibrated.
 
-Mithilfe einer 2-Punkte Kalibrierung können Abweichungen korrigiert werden. Die Kalibrierung vom Brautomat ist eine lineare Korrektur. Zur Kalibrierung der Sensoren wird ein geeichtes Thermometer benötigt. Der Braukessel wird mit einer typischen Menge Wasser befüllt und auf 40°C erhitzt. Der Unterschied zwischen dem Sensorwert und dem geeichten Thermometer wird im Parameter "Offset 1 \[40°C]" eingetragen. Dieser Vorgang wird bei 78°C wiederholt und der Unterschied wird im Parameter "Offset 2 \[78°C]" eingetragen. Alle Sensormesswerten werden künfig anhand dieser Korrektur ausgegeben.
+Deviations can be corrected with the aid of a 2-point calibration. Calibration by the Brautomat is a linear correction. A calibrated thermometer is required to calibrate the sensors. The brewing kettle is filled with a typical amount of water and heated to 40°C. The difference between the sensor value and the calibrated thermometer is entered in the parameter ‘Offset 1 \[40°C]’. This process is repeated at 78°C and the difference is entered in the parameter ‘Offset 2 \[78°C]’. In future, all measured values from the sensor will be output with this correction.
 
-Zur Kalibrierung wird das Temperatursensor in den Modus hohe Auflösung versetzt (12bit Auflösung bzw. 0.0625°C). Eine Kalibrierung über das Web Interface besteht aus 60 Messproben. Der Zeitbedarf beträgt fast genau 60 Sekunden für eine Kalibrierung. Als Ergebnis der Temperaturmessung wird der Mittelwert der 60 Messproben genommen. Ein Offset ist die Differenz zwischen der tatsächlichen Temperatur und dem Mittelwert.
+For calibration, the temperature sensor is set to high-resolution mode (12-bit resolution or 0.0625°C). A calibration via the web interface consists of 60 measured values. The time required for a calibration is almost exactly 60 seconds. The result of the temperature measurement is the average of the 60 measured values. An offset is the difference between the actual temperature and the mean value.
 
-In vielen Fällen reicht eine 1-Punkt-Kalibrierung im Eisbad aus, weil die Abweichung der Sensoren DS18B20 meistens kontant verläuft.
+In many cases, a 1-point calibration in an ice bath is sufficient, as the offset of the DS18B20 sensors is usually constant.
 
-## Vorgehensweise Kalibrierung ohne Referenz-Thermometer
+## Calibration procedure without reference thermometer
 
-Steht ein Referenz-Thermometer nicht zur Verfügung, kann eine Kalibrierung mit einem Eisbad und einem Kochvorgang durchgeführt werden.\
-Es wird für den unteren Messbereich ein Gefäss mit 50% Eiswürfel und 50% kaltem Wasser benötigt. Ein Eisbad hat eine (fast exakte) Temperatur von 0.0°C. Das Eiswasser muss kontinuierlich gerührt werden, vorzugsweise mit einem Magnetrührer. Im Eisbad wird die Kalibrierung auf 0°C gestartet.
+If no reference thermometer is available, calibration can be carried out using an ice bath and a boiling process.
 
-Der zweite Punkt für eine Kalibrierung kann über die Höhe über Normalhöhennull und dem damit verbundenen Siedepunkt ermittelt werden. Bei 0m über NHN bzw. bei einem atmosphärischen Druck von 1.013bar beträgt die Siedepunkttemperatur 100.l0°C. Mit steigender Höhe nimmt der atmosphärische Druck ab und somit sinkt die Siedepunkttemperatur. Zunächst muss die örtliche NHN bspw. über google earth ermittelt werden. Der Siedepunkt sinkt je Meter über NHN um 0.003354°C. Auf der Websiete von [rechneronline](https://rechneronline.de/barometer/siedepunkt.php) wird der Siedepunkt über die Höhe über NHN ausgerechnet. Viele Smartphones bieten die Information Höhe in der Kompass- oder Navi-App ebenfalls. Die Höhe über NHN sollte mit einer Genauigkeit von etwa +-20m ermittelt werden. Das entspricht einer Verändeurng der Siedepunkttemperatur von 0.06708°C und damit weit außerhalb der Genauigkeit der Steuerung Brautomat. Die zweite Punkt Kalibrierung wird mit einem MaischeSud Kessel, einem Rührwerk und dem zuvor ermittelten lokalen Siedepunkt durchgeführt. Die Zieltemperatur ist dementsprechen die Siedepunkttemperatur. Es ist darauf zu achten, dass die Siedepunkttemperatur erreicht ist und über mindestens eine Minute gehalten wird, bevor die Kalibrierung für den oberen Wertebereich gestartet wird. Außerdem ist es sehr wichtig, dass das Induktionskochfeld mit konstanter Leistung eingeschaltet bleibt.
+For the lower measuring range, a container with 50% ice cubes and 50% cold water is required. An ice bath has a temperature of (almost exactly) 0.0 °C. The ice water must be stirred continuously, preferably with a magnetic stirrer. Calibration is started at 0 °C in the ice bath.
 
-Offset #1 (unterer Wertebereich) ist die Differenz von 0.0°C (Eisbad) gegenüber dem Mittelwert aus dem ersten Durchgang Kalibierung. Offset #2 (oberer Wertebereich) ist die Differenz zwischen Siedepunkt und dem Mittelwert aus dem zweiten Durchgang Kalibrierung.
+The second point for calibration can be determined via the altitude above sea level and the associated boiling point. At 0 m above sea level or an atmospheric pressure of 1.013 bar, the boiling temperature is 100.l0°C. The higher the altitude, the lower the atmospheric pressure and thus the boiling temperature. Firstly, the local NHN must be determined, e.g. using google earth. The boiling temperature drops by 0.003354°C per metre above sea level. On the website of [rechneronline](https://rechneronline.de/barometer/siedepunkt.php), the boiling point is calculated using the altitude above sea level. Many smartphones also provide altitude information in the compass or sat nav app. The altitude above sea level should be determined with an accuracy of approx. +-20m. This corresponds to a change in boiling point temperature of 0.06708°C and is therefore well outside the accuracy of the Brautomat control system. The second point calibration is carried out with a mash tun, an agitator and the previously determined local boiling point. The target temperature is therefore the boiling point temperature. It is important to ensure that the boiling point temperature is reached and held for at least one minute before starting the calibration for the upper value range. It is also very important that the induction hob remains switched on with constant power.
 
-## Vorgehensweise Kalibrierung mit Fieber-Thermometer
+Offset #1 (lower value range) is the difference between 0.0°C (ice bath) and the mean value of the first calibration run. Offset #2 (upper value range) is the difference between the boiling point and the mean value from the second calibration run.
 
-Ein Fieber-Thermometer ist ein gut geeignetes Refernz-Thermometer. Der oberere Weiterebereich ist mit einem Fieberthemometer bei ca. 40°C eingeschränkt. Die Durchführung der Kalibrierung entspricht der Vorgehensweise Eisbad und Siedepunkttemperatur. Einziger Unterschied: wenn bspw. 40°C als zweiter Kalibrierungspunkt ausgewählt wurde, dann muss die Induktionskochplatte ausgeschaltet werden, sobald die Zieltemperatur erreicht wurde und über ca. 60 Sekunden konstant blieb (keine Schwanken). Erst dann soll die Kalibrierung, also das erfassen von 60 Messproben gestartet werden.
+## Calibration procedure with clinical thermometer
 
-## Logfile Sensorkalibrierung
+A clinical thermometer is a well-suited reference thermometer. The upper measuring range of a clinical thermometer is limited to approx. 40°C. The calibration procedure is the same as for an ice bath and boiling temperature. The only difference is that if, for example, 40°C is selected as the second calibration point, the induction hotplate must be switched off as soon as the target temperature is reached and remains constant for approx. 60 seconds (no fluctuations). Only then may the calibration, i.e. the recording of 60 measurement samples, be started.
 
-Bei jeder Kalibrierung wird ein Logfile geschrieben. Beispiel:
+## Sensor calibration log file
+
+A log file is written for each calibration. Example:
 
 ```text
 13:22:37 Sensor Kalibrierung gestartet

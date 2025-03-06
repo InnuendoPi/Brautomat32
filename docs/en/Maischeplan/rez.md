@@ -1,91 +1,91 @@
-# Einstellungen Maischeplan
+# Mash plan settings
 
-Der Brautomat bietet eine einfache Verwaltung der Maischepläne. Neben importieren und exportieren kann zwischen gespeicherten Maischeplänen gewechselt werden. Ebenso ist eine Zeitsteuerung möglich. Dieses Kapitel beendet die Beschreibung der Grundfunktionen.
+The Brauomat offers simple management of mash plans. In addition to importing and exporting, you can switch between saved mash plans. Time control is also possible. This chapter concludes the description of the basic functions.
 
-## Maischeplan
+## Mash plan
 
-In den Einstellungen kann der Maischeplan Name festgelegt werden. Aus dem Maischeplan Namen wird der Dateiname abgeleitet. Die Parameter *Gesamte Kochdauer* und *Nachisomerisierungszeit* werden rein informativ angezeigt und sind nicht editierbar. Diese Parameter werden beim Rezept Import eingelesen. Wird ein Maischeplan manuell angelegt, sind die Werte Kochdauer und Nachisomerisierung ohne Bedeutung, weil der Brautomat keine Bittereinheiten berechnet.
+The name of the mash plan can be defined in the settings. The file name is derived from the mash plan name. The parameters *total boiling time* and *post-isomerisation time* are only displayed for information and cannot be edited. These parameters are read in during recipe import. If a mash plan is created manually, the boiling time and post-isomerisation time values are irrelevant as the Brauomat does not calculate bittering units.
 
-### Zeitsteuerung
+## Time control
 
-Mit Hilfe der Zeitsteuerung kann ein Brautag geplant und automatisch gestartet werden.
+A bridal day can be planned and started automatically with the help of time control.
 
-![Zeitsteuerung](/docs/img/Zeitsteuerung.jpg)
+![Time control](/docs/img/Time-control.jpg)
 
-Über das Element DateTimerPicker kann sehr einfach ein Datum und eine Uhrzeit ausgewählt werden. Der Rezeptname wird temporär ersetzt durch den angegebenen Startzeitpunkt.
+The DateTimerPicker element can be used to select a date and time very easily. The recipe name is temporarily replaced by the specified start time.
 
-![Zeitsteuerung](/docs/img/Zeitsteuerung2.jpg)
+![Timer](/docs/img/Timer2.jpg)
 
-Eine aktivierte Zeitsteuerung wird in der Konfiguration gespeichert. Startet der Brautomat neu, wird das eingestellte Datum und Uhrzeit eingelesen. Liegt dieser Braustart in der Zukunft, wird die Zeitsteuerung aktiviert. Liegt der Braustart in der Vergangenheit, wird die Zeitsteuerung deaktiviert.
+An activated time control is saved in the configuration. When the Brautomat is restarted, the set date and time are read in. If this brewing start is in the future, the time control is activated. If the brewing start is in the past, the time control is deactivated.
 
-## Verwaltung Maischepläne
+## Manage mash plans
 
-### Maischeplan erstellen
+### Create mash plan
 
-In das Eingabefeld ist der Maischeplan Name einzugeben. Mit Klick auf *OK* wird ein neuer leerer Maischeplan erstellt.
+Enter the name of the mash plan in the input field. Press *OK* to create a new empty mash plan.
 
-### Maischeplan umbenennen
+### Rename mash plan
 
-In das Eingabefeld ist der neue Name für den Maischeplan einzugeben. Mit Klick auf *OK* wird der Maischeplan unter dem neuen Namen gespeichert.
+Enter the new name for the mash plan in the input field. Press *OK* to save the mash plan under the new name.
 
-### Maischeplan wechseln
+### Change mash plan
 
-Der Brautomat verwaltet Maischepläne im Flash Speicher. Über die Auswahl *Maischeplan Wechseln* kann zwischen den vorhandenen Maischeplänen gewechselt werden.
+The Brauomat manages mash plans in the flash memory. By selecting *Change mash plan*, you can switch between the existing mash plans.
 
-### Maischeplan importieren
+### Import mash plan
 
-Der ausgewählte Maischeplan wird aus dem Flash Speicher entfernt.
-Der Brautomat kann Braurezepte aus folgenden Quellen importieren:
+The selected mash plan is deleted from the flash memory.\
+The Brautomat can import brewing recipes from the following sources:
 
-* kleinerBrauhelfer2 (ab Version 2.5 Exporttyp Brautomat)
-* MaischeMalzundMehr
-* BrewFather
+* kleinerBrauhelfer2 (from version 2.5 export type Brautomat)
+* MaischMaluundmehr
+* Brewfather
 * Brautomat
 
-Aus einem importiertem Braurezept wird ein Brautomat Maischeplan. Empfohlen wird die Rezeptverwaltung und -entwicklung mit dem kbh2. Der Exportfilter "Brautomat" beinhaltet alle Daten in optimierter Form, die zum Brauen mit dem Brautomat benötigt werden.
+An imported brewing recipe becomes a Brautomat mash plan. Recipe management and creation with kbh2 is recommended. The ‘Brauomat’ export filter contains all the data required for brewing with the Brauomat in optimised form.
 
-Rezepte aus MaischeMalzundMehr sollten ebenfalls zunächst im kleinenBrauhelfer2 importiert und auf die individuellen Anlagenwerte, Rohstoffe etc. angepasst werden. Weil MMum keine Rastnamen vergibt, empfiehlt sich eine Bearbeitung im KBH2 Maischplan.
+Recipes from MaischeMalzundMehr should also first be imported into the smallBrauhelfer2 and adapted to the individual system values, raw materials etc. As MMum does not assign rest names, it is recommended to edit them in the KBH2 mash plan.
 
-Rezepte aus BrewFather müssen die Eigenschaft boilTime (Kochdauer) mit einem ganzzahligen Wert belegt haben. Empfohlen wird auch ein Wert für den Parameter Equipment -> whirlpoolTime. Rastnamen können bei BrewFather einen (nahezu beliebig) langen Fließtext enthalten. Der Text wird auf maximal 50 Buchstaben gekürzt. Brewfather erlaubt Fließkommazahlen und Text als Rastdauer. Die Parameter werden in ganzzahlige Werte gewandelt oder auf 0 gesetzt.
+Recipes from BrewFather must assign an integer value to the boilTime property. A value for the parameter Equipment -> whirlpoolTime is also recommended. Brew names in BrewFather can contain a continuous text of (almost any) length. The text is shortened to a maximum of 50 characters. Brewfather allows floating point numbers and text as a rest time. The parameters are converted to integers or set to 0.
 
-*Hinweis: die ESP Microcontroller haben einen kleinen RAM Speicher. Rezepte mit sehr langen Texten, Bildern oder anderen Anhängen können ggfs. nicht importiert werden. Vor dem Import sollten Bilder und sehr lange Beschreibungen entfernt werden.*
+*Note: The ESP microcontrollers have a small RAM memory. Recipes with very long texts, images or other attachments may not be able to be imported. Images and very long descriptions should be removed before importing.
 
-Importierte Rezepte werden im Ordner /Rezepte gespeichtert. Als Dateinamen wird der Rezpetnamen verwendet. Die maximale Dateinamenlänge im Arduino Dateisystem beträgt 31 Zeichen. Leerzeichen und Umlaute werden bei der Speicherung ersetzt.
+Imported recipes are saved in the /Recipes folder. The recipe name is used as the file name. The maximum length of the file name in the Arduino file system is 31 characters. Spaces and umlauts are replaced when saving.
 
-### Maischeplan exportieren
+### Export mash plan
 
-Ein Maischeplan kann im JSON Format exportiert werden. Zum Wiedereinlesen ist der Import im Format Brautomat zu verwenden.
+A mash plan can be exported in JSON format. The import in Brautomat format must be used to read it back in.
 
-### Maischeplan entfernen
+### Remove mash plan
 
-Der ausgewählte Maischeplan wird aus dem Flash Speicher entfernt.
+The selected mash plan is removed from the flash memory.
 
-## Voreinstellung Import
+## Import default setting
 
-![Voreinstellung Import](/docs/img/voreinstellung_import.jpg)
+![Preset import](/docs/img/preset_import.jpg)
 
-Der Brautomat benötigt einen Step Einmaischen (optional) und einen Step Abmaischen. Insbesondere der Schritt Abmaischen dient mit deaktivertem "autonext" als Trennschritt zwischen Maischen und Kochen. Beim Import kann der Brautomat fehlende Einmaisch- und Abmaischschritte einfügen. Zusätzlich können fehlende Temperaturen mit Vorgaben belegt werden.
+The Brauomat requires a mash-in step (optional) and a mash-out step. If ‘autonext’ is deactivated, the mashing step in particular serves as a separation step between mashing and boiling. When importing, the Brauomat can insert missing mashing-in and mashing-off steps. Missing temperatures can also be specified.
 
-### Temperaturvorgaben für fehlende Parameter
+### Temperature specifications for missing parameters
 
-Bei Rezepten aus unterschiedlichen Quellen können u.a. Temperaturangaben fehlen. Dies betrifft insbesondere die Temperaturen für das Einmaischen, das Abmaischen, die Vorderwürzenzhopfung und die Whirlpoolhopfung. Die interne Programmlogik des Brautomaten benötigt immer eine Temperatur zur Verarbeitung, auch wenn manche Temperaturen aus Sicht eines Brauers nicht erfordferlich sind. Fehlende Temperaturen werden mit Standardwerten vorbelegt werden.
+Temperature specifications may be missing in recipes from various sources. This applies in particular to the temperatures for mashing in, mashing out, front wort and whirlpool hopping. The internal programme logic of the Brautomat always requires a temperature for processing, even if some temperatures are not necessary from the brewer's point of view. Missing temperatures are preset with default values.
 
-### Temperatur Einmaischen [°C]
+### Mashing-in temperature [°C]
 
-Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für das Einmaischen. Dieser Parameter wird nur dann verwendet, wenn beim Rezeptimport keine Einmaisch-Temperatur angegeben ist.
+This parameter is for the recipe import and describes the standard temperature for mashing in. This parameter is only used if no mashing-in temperature is specified during recipe import.
 
-### Temperatur Abmaischen [°C]
+### Mashing temperature [°C]
 
-Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für das Abmaischen. Dieser Parameter wird nur dann verwendet, wenn beim Rezeptimport keine Abmaisch-Temperatur angegeben ist.
+This parameter is for the recipe import and describes the standard temperature for mashing down. This parameter is only used if no mashing temperature is specified in the recipe import.
 
-### Temperatur VWH [°C]
+### Temperature VWH [°C]
 
-Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Vorderwürzenhopfung. Häufig wird bei Rezepten keine Temperatur für die VWH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temnperatur angegeben, wird diese beim Import verwendet.
+This parameter is for the recipe import and describes the standard temperature for hopping a front wort. Often no temperature is specified for the VWH in recipes. A temperature specification is required for the Brautomat. If a temperature is specified in the recipe, this is used for the import.
 
-### Temperatur WPH [°C]
+### Temperature WPH [°C]
 
-Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Whirlpoolhopfung. Häufig wird bei Rezepten keine Temperatur für die WPH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temnperatur angegeben, wird diese beim Import verwendet.
+This parameter is for the recipe import and describes the standard temperature for whirlpool hopping. Often no temperature is specified for the WPH in recipes. A temperature specification is required for the Brautomat. If a temperature is specified in the recipe, this is used for the import.
 
-### Temperatur Kochen [°C]
+### Boiling temperature [°C]
 
-Dieser Parameter beschreibt die Temperatur, ab der die Würze wallend kocht. Der Standardwert ist 98°C und entspricht etwa einem Standort in 500m Höhe über NN. Für den Rezeptimport wird dieser Parameter als Temperatur Kochen verwendet.
+This parameter describes the temperature from which the wort boils. The default value is 98°C and corresponds approximately to a location 500 metres above sea level. This parameter is used as the boiling temperature for the recipe import.

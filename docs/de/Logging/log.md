@@ -2,48 +2,48 @@
 
 ![media](/docs/img/logging.jpg)
 
-Das integrierte Logging hilft bei der Fehlersuche, sowohl bei Erkennung von Fehlern in der Firmware Brautomat32 als auch bei Anwenderfehlern. Für die Ausgabe wird ein serieller Monitor benötigt. Im Folgenden wird Microsoft Visual Studio Code mit der Extension Microsoft Serial Monitor gezeigt. Microsoft Visual Code ist kostenneutral und als standalone Version verfügbar (keine Installation erforderlich).
+Das integrierte Logging hilft bei der Fehlersuche, sowohl bei Fehlern in der Firmware Brautomat32 als auch bei Anwenderfehlern. Für die Ausgabe wird ein serieller Monitor benötigt. Im Folgenden wird Microsoft Visual Studio Code mit der Erweiterung Microsoft Serial Monitor gezeigt. Microsoft Visual Code ist kostenfrei und als eigenständige Version verfügbar (keine Installation erforderlich).
 
-Der serielle Monitor muss neben dem COM Port auf eine Baudrate 115200 und CRLF eingestellt werden.
+Der serielle Monitor muss zusätzlich zum COM-Port auf eine Baudrate von 115200 und CRLF eingestellt werden.
 
 ![Microsoft Visual Studio Code](/docs/img/vscode.jpg)
 
 > **Hinweise:**\
-An einem Brautag sollte das Logging vollständig deaktiviert sein.\
-Auf dem ESP8266 steht die Option Logging nicht zur Verfügung.
+An einem Hochzeitstag sollte das Logging komplett deaktiviert werden.\
+Die Option Logging ist auf dem ESP8266 nicht verfügbar.
 
 ## Einstellungen Logging
 
-Mithilfe der Systemeinstellung können verschiedene Kanäle für die serielle Ausgabe aktiviert werden.
+Über die Systemeinstellungen können verschiedene Kanäle für die serielle Ausgabe aktiviert werden.
 
-* Konfiguration - in diesem Kanal werden Meldung angezeigt, wenn die config gelesen oder gespeichert wird
-* Sensoren - in diesem Kanal werden Meldungen zu den Sensoren angezeigt
+* Konfiguration - in diesem Kanal werden Meldungen angezeigt, wenn die Konfiguration gelesen oder gespeichert wird.
+* Sensoren - in diesem Kanal werden Meldungen zu den Sensoren ausgegeben
 * Aktoren - ein Kanal für Meldungen über Aktoren
 * Maische Kessel - in diesem Kanal werden Meldungen zum ersten Kessel angezeigt
-* Sud Kessel - alle Meldungen zum Kessel Sud
-* Hlt Kessel - Meldungen zum Nachguss Kessel
-* System - Systemnachrichten werden in diesem Kanal angezeigt
-* Maischeprozess - in diesem Kanal wird der Maischeprozess protokolliert
+* Sudkessel - alle Meldungen zum Sudkessel
+* Nachgusskessel - Meldungen zum Nachgusskessel
+* System - in diesem Kanal werden Systemmeldungen angezeigt
+* Maischprozess - in diesem Kanal wird der Maischprozess protokolliert
 * Nextion Display - Protokollierung für das Display
 
-Jeder Kanal hat die Option Aus, Error, Info und Debug.
+Jeder Kanal hat die Optionen Aus, Fehler, Info und Debug.
 
-* Aus - keine Protokollierung
+* Aus - keine Protokollierung.
 
-Der Kanal gibt keine Protokollierung auf der seriellen onsole aus.
+Der Kanal gibt kein Log auf die serielle Konsole aus.
 
-* Error - es werden nur Fehler protokolliert
+* Error - Nur Fehler werden protokolliert.
 
-Debug Ausgaben Error protokollieren Fehler. In VSCode wird der Typ ERROR in rot dargestellt
+Debug Ausgabe Error Fehler protokollieren. In VSCode wird der Typ ERROR rot dargestellt.
 
 ```json
 [1127953][E][SENSOREN.cpp:1600] setSenErr(): Test sensor error: #0 Sensor_Sud error state: 1
 [1127972][E][SENSOREN.cpp:76] Update(): Sen: Sensor_Sud error #1 could not read temperature data
 ```
 
-* Info - Prozessprotokollieren
+* Info - Prozess protokollieren
 
-Debug Ausgaben Typ Info verfolgen die Prozesse. Der Typ Info beinhaltet die Ausgaben Typ Error. In VSCode wird der Typ INFO in grün dargestellt
+Debug-Ausgaben Typ Info protokollieren Prozesse. Der Typ Info enthält die Ausgaben vom Typ Error. In VSCode wird der Typ INFO grün dargestellt.
 
 ```json
 [1071747][I][KETTLES.cpp:2044] debKonsole(): set new powerlast: 1071746ms
@@ -51,9 +51,9 @@ Debug Ausgaben Typ Info verfolgen die Prozesse. Der Typ Info beinhaltet die Ausg
 [1071822][I][KETTLES.cpp:2044] debKonsole(): webhook on: 5000ms (mDutyCycle 5000 * Power 100 / 100)
 ```
 
-* Debug - alle verfügbaren Informationen werden ausgegeben
+* Debug - alle verfügbaren Informationen werden ausgegeben.
 
-Debug Aus gaben vom Typ Verbose beinhalten alle vorherigen Typen. Zusätzlich werden im Typ Verbose alle SSE Broadcast protokolliert. In VSCode wird der Typ Verbose in blau dargestellt.
+Debug Ausgaben vom Typ Verbose enthalten alle vorhergehenden Typen. Zusätzlich werden alle SSE Broadcasts im Typ Verbose protokolliert. In VSCode wird der Typ Verbose blau dargestellt.
 
 ```json
 [1026335][V][SYSTEM.cpp:847] SSEBroadcastJson(): kettle hlt: {"ison":false,"state":false,"power":0,"enabled":3,"setp":0,"temp":"32.4"}
@@ -101,12 +101,12 @@ Wenn der Brautomat mit einer seriellen Konsiole verbunden ist, erscheint beim Bo
 
 ## Test Sensorfehler
 
-Ein Sensorfehler per Web URL provoziert werden. Die Sensoren im Brautomat haben beginnend mit 0 eine ID. Ein Sensorfehler kann per Webaufruf erstellt werden:
+Ein Sensorfehler kann über eine Web-URL ausgelöst werden. Die Sensoren im Brautomat haben eine ID beginnend mit 0. Ein Sensorfehler kann per Web Aufruf erzeugt werden:
 
 ```json
 http://brautomat.local/setSenErr?id=0
 ```
 
-Um den Sensorfehler zu beheben, wird die exakt gleiche URL nochmals aufgerufen. Der erste Sensor hat die ID 0, der Zweite die ID 1 und der Dritte die ID 2. Es muss in der URL nur die abschließende 0 durch die gewünscht Sensor ID ersetzt werden.
+Um den Sensorfehler zu beheben, wird die exakt gleiche URL erneut aufgerufen. Der erste Sensor hat die ID 0, der zweite die ID 1 und der dritte die ID 2. In der URL muss nur die letzte 0 durch die gewünschte Sensor-ID ersetzt werden.
 
-Mit diesem Test Sensorfehler lässt sich sehr einfach der Parameter "Leistung bei Sensorfehler" überprüfen.
+Mit diesem Sensorfehler-Test kann der Parameter "Verhalten bei Sensorfehler" sehr einfach überprüft werden.

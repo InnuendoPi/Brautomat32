@@ -1,42 +1,43 @@
-# AutoTune Schritt für Schritt
+# AutoTune step by step
 
-Das praktische Vorgehen AutoTune schaut wie folgt aus:
+The practical AutoTune procedure is as follows:
 
 ![AutoTune](/docs/img/IDS-AutoTune.jpg)
 
-1. Befülle Deinen MaischeSud Kessel mit einer typischen Menge Wasser
+1. fill your mash tun with a typical amount of water
 
-    a. Eine typische Menge entspricht dem Hauptguss + Schüttung
+    a. A typical quantity corresponds to the main pour + pouring
 
-    Beispiel: 20l Hauptguss und 5kg Schüttung ergibt eine typische Menge von 25l
+    Example: 20 litres of main pour and 5kg of bulk results in a typical quantity of 25l
 
-    b. Schalte das Rührwerk ein
-2. Setze eine AutoTune Zieltemperatur
+    b. Switch on the agitator
 
-    a. die Zieltemperatur sollte 50°C oder mehr betragen.
+2. set an AutoTune target temperature
 
-    b. die Zieltemperatur soll min. 10°C über der aktuellen Ist-Temperatur liegen.
+    a. the target temperature should be 50°C or more.
 
-3. Aktiviere „PID AutoTune“
-4. Aktiviere „AutoTune debug“
-5. Speichere diese Einstellung
-6. Mit einem Klick auf den Power Button wird "AutoTune IDS" gestartet.
+    b. the target temperature should be at least 10°C above the current actual temperature.
+
+3. activate ‘PID AutoTune’
+4. activate ‘AutoTune debug’
+5. save this setting
+6. click on the power button to start ‘AutoTune IDS’.
 
 ![AutoTune2](/docs/img/IDS-AutoTune-start.jpg)
 
-Der AutoTune Prozess besteht aus zwei Phasen. Phase 1 ist das Aufheizen auf Zieltemperatur. Mit Erreichen der Zieltemperatur wird das Induktionskochfeld abgeschaltet. Die Zieltemperatur wird dabei teils deutlich um 2-3°C überschritten. Das deutliche Überschreiten der Zieltemperatur ist im AutoTune Prozess notwendig. Es folgt eine Abkühlphase unter die Zieltemperatur. Diese zwei Phase werden 5x wiederholt. Der AutoTune Prozess dauert je nach Umgebung relativ lange (90min und mehr). Der meiste Zeitbedarf entsteht während den Abkühlphasen. Je besser ein Braukessel isoliert ist, desto länger dauert der AutoTune Prozess bzw. die Abkühlphase. Der AutoTune Prozess sollte bei einer typischen Maischetemperaturen von ca. 60°C durchgeführt werden. Der aktuelle Status ist in der Spalte „AutoTune Prozess 0/5“ sichtbar. Die erste Zahl ist der aktuelle Schritt und die zweite Zahl die Anzahl der voraussichtlich benötigten AutoTune-Schritte. Im AutoTune Prozessverlauf werden Messwerte ermittelt. Die Messwerte werden fortlaufend überprüft. Hat ein Messwert eine Abweichung, wird die Messung wiederholt. Bei einer Wiederholung erscheint "AutoTune Prozess 6/5". Es werden maximal 20 Wiederholungen durchgeführt. Das AutoTune Ergebnis wird in den Einstellung der GGM IDS im Tab PID-Manager dargestellt:
+The AutoTune process consists of two phases. Phase 1 is heating up to the target temperature. When the target temperature is reached, the induction hob is switched off. The target temperature is sometimes significantly exceeded by 2-3°C. Significantly exceeding the target temperature is necessary for the AutoTune process. This is followed by a cooling phase below the target temperature. These two phases are repeated 5 times. Depending on the environment, the AutoTune process takes a relatively long time (90 minutes or more). Most of the time is required during the cooling phases. The better a brew kettle is insulated, the longer the AutoTune process and the cooling phase will take. The AutoTune process should be carried out at a typical mash temperature of approx. 60°C. The current status is displayed in the ‘AutoTune process 0/5’ column. The first number is the current step and the second number is the number of AutoTune steps expected to be required. Measured values are determined during the AutoTune process. The measured values are constantly checked. If a measured value shows a deviation, the measurement is repeated. ‘AutoTune process 6/5’ is displayed during a repetition. A maximum of 20 repetitions are carried out. The result of AutoTune is displayed in the PID Manager tab of the GGM IDS settings:
 
 ![AutoTune3](/docs/img/IDS-AutoTune-erg.jpg)
 
-Der AutoTune Prozess ist abgeschlossen und die ermittelten Anlagenparameter werden automatisch gespeichert.\
-Das Ergebnis von AutoTune sind die Werte Verstärkungsfaktor Ku (ultimate gain) und die Periodendauer (ultimate period). Aus diesen zwei Parametern werden P, I und D berechnet. Zur Berechnung der PID-Werte stehen diverse Algorithmen zur Verfügung. Der Brautomat verwendet einen PID-Algorithmus, der für das Brauen (eigentlich für das Erhitzen von Flüssigkeiten) optimiert ist und u.a. auch im Addon PIDBoil von CraftBeerPi eingestezt wird.
+The AutoTune process is complete and the determined system parameters are saved automatically.\
+The result of AutoTune is the gain factor Ku (ultimate gain) and the period duration (ultimate period). P, I and D are calculated from these two parameters. Various algorithms are available for calculating the PID values. The Brauomat uses a PID algorithm that is optimised for brewing (actually for heating liquids) and is also used, for example, in the PIDBoil add-on from CraftBeerPi.
 
-_Tipp: Nach dem AutoTune Prozess sollte die Konfiguration mittels Backup gesichert werden._
+_Tip: After the AutoTune process, the configuration should be backed up._
 
-Wenn der AutoTune Prozess beendet ist und "AutoTune debug" aktiviert wurde, kann über den Explorer das Protokoll "autotune\_log.txt" eingesehen werden. In dieser Protokolldatei werden alle Informationen mitgeschrieben.\
-In der Datei "idsAutoTune.txt" bzw. "hltAutoTune.txt" wird das AutoTune Ergebnis im JSON Format abgespeichert. Beide Dateien sind rein informativ und werden für den Betrieb nicht benötigt. In diesen Dateien sind PID-Werte über verschiedene Berechnungsmethoden aufgeführt.
+When the AutoTune process has finished and ‘AutoTune debug’ has been activated, the ‘autotune\_log.txt’ log can be viewed via the Explorer. All information is logged in this log file.\
+In the file ‘idsAutoTune.txt’ or ‘hltAutoTune.txt’, the result of AutoTune is saved in JSON format. Both files are purely informative and are not required for operation. The PID values are listed in these files according to various calculation methods.
 
-Im Log sind folgende Berechnungsmethoden aufgeführt:
+The following calculation methods are listed in the log:
 
 INTEGRAL PID\
 SOME OVERSHOOT PID\
@@ -48,4 +49,4 @@ TYREUS LUYBEN PI\
 CIANCONE MARLIN PID\
 CIANCONE MARLIN PI
 
-Die berechneten Werte der unterschiedlichen Algorithmen können in den EInstellungen mit der Auswahl INDIVIDUAL_PID in den Zeilen P, I und D eingetragen werden. Dies sollte jedoch nur in seltenen Fällen zu besseren Ergebnissen führen.
+The calculated values of the various algorithms can be entered in the settings with the INDIVIDUAL_PID selection in lines P, I and D. However, this should only rarely lead to better results. However, this should only lead to better results in rare cases.

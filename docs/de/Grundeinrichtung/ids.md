@@ -8,7 +8,9 @@ Im ersten Abschnitt "Maischeplan" wird der MaischeSud-Kessel über das Zahnrad o
 
 ## Konfiguration eines Kochfelds
 
-Zunächst muss das Induktionskochfeld konfiguriert werden. Die erste Einstellung betrifft den IDS-Typ, bei dem IDS1 oder IDS2 ausgewählt werden kann. Anschließend folgen drei Steuerungsparameter:
+Zunächst muss ein Kochfeld konfiguriert werden. In dieser Grundeinrichtung wird ein GGM IDS Induktionskochfeld eingerichtet.
+
+Die erste Einstellung betrifft den IDS-Typ, bei dem IDS1 oder IDS2 ausgewählt werden kann. Anschließend folgen drei Steuerungsparameter:
 
 * PIN weiß [Relais] - Standard: D7
 * PIN gelb [Command] - Standard: D6

@@ -1,6 +1,6 @@
 # Basic setup
 
-The brewing machine requires at least a temperature sensor and either an induction cooktop (GGM IDS) or a relay-controlled cooktop. In the following basic setup, only the essential parameters are configured, while optional settings will be explained later.
+The Brautomat requires at least a temperature sensor and either an induction cooktop (GGM IDS) or a relay-controlled cooktop. In the following basic setup, only the essential parameters are configured, while optional settings will be explained later.
 
 The basic setup is demonstrated using the GGM IDS2 induction cooktop. The configuration for a relay-controlled cooktop follows the same principle.
 

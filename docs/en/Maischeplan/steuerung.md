@@ -1,52 +1,46 @@
-# Die Steuerung
+# The control unit
 
-Direkt unterhalb vom Maischeplan befindet sich die Steuerung. Mithilfe der 5 Buttons Power, Play, Pause Backward und Forward wird der Maischeprozess gesteuert.
+The controls are located directly below the mash plan. The mashing process is controlled using the 5 buttons Power, Play, Pause, Previous and Next.
 
-![Maischeplan](/docs/img/Buttons.jpg)
+![Mash plan](/docs/img/Buttons.jpg)
 
-## Der Power Button
+## The power button
 
-Über den Power Button wird der Maischeprozess ein- bzw. ausgeschaltet. Sobald AutoTune in den Einstellungen der GGM IDS oder im Nachguss aktiviert ist, wird der AutoTune Prozess über den Power Button gestartet bzw. gestoppt.
+The mashing process is switched on and off using the power button. If the AutoTune function is activated in the GGM IDS settings or in the post-mash, the AutoTune process is started or stopped via the power button.
 
-_Tipp: Wenn der Maischeprozess gestartet ist, sind die Funktionen zum editieren des Maischeplans deaktiviert. Wird der Maischeprozess pausiert, kann der Maischeplan während des Maischeprozesses verändert werden._
+## The play button
 
-## Der Play Button
+The Play button has two functions in the mashing process:
 
-Der Play Button hat im Maischeprozess zwei Funktionen:
+1. the first function is _start the rest timer for the current rest_. The Play button starts the rest timer regardless of the ACTUAL temperature.\
+Example: if the wort is already boiling in the boiling step, but the actual temperature of 98.5°C is below the rest temperature of 100°C and therefore the rest timer does not start.
 
-1. Die erste Funktion lautet "starte den Rast-Timer für die aktuelle Rast". Der Play Button startet unabhängig von der IST-Temperatur den Rast-Timer.\
-Beispiel: wenn im Schritt Kochen die Würze bereits wallend kocht, die Ist-Temperatur mit 98,5°C aber unter der Rast-Temperatur mit 100°C liegt und somit der Rast-Timer nicht startet.\
-Der Play Button wird rot angezeigt.
+2. the second function of the Play button is related to the _autonext_ property: continue the mashing process with the next rest. The Play button is displayed in red in this function. The functions _continue the mashing process with the next rest_ are explained later in the description _autonext_ in the mash plan.
 
-2. Die zweite Funktion vom Play Button hängt mit der Eigenschaft _autonext_ zusammen: setze den Maischeprozess mit der nächsten Rast fort. Die Funktionen "mit der nächsten Rast den Maischeprozess fortsetzen" wurde mit der Beschreibung _autonext_ im Maischeplan erläutert.\
-Ein Anwendungsfall ist das Einmaischen. Wird der Schritt Einmaischen mit deaktiviertem autonext konfiguriert, verbleibt der Maischeprozess im einem Wartestatus bis der Play Button angeklickt wird. Der Play Button wird rot angezeigt.
+## The pause button
 
-## Der Pause Button
+The function of the Pause button must be differentiated between during the heating phase to a resting temperature and during a rest.
 
-Die Funktion vom Pause Button ist während der Aufheizphase auf eine Rasttemperatur und während einer Rast zu unterscheiden.
+- Pause during the heating phase
 
-- Pause während der Aufheizphase
+During the heating phase, the buttons for editing the mash plan are shown or hidden. The induction hob remains switched on during an activated pause in order to reach the target temperature. The pause button is then displayed in red. The mash schedule can be adjusted during the brewing process using a pause. If the rest target temperature is reached during a pause, the rest timer is started and the pause is ended.
 
-In der Aufheizphase werden lediglich die Icons zum Maischeplan editieren ein- bzw. ausgeblendet. Der PID Controller berechnet während einer aktivierten Pause weiter die benötigte Leistung, um die Zieltemperatur zu erreichen. Der Pause Button wird dann rot angezeigt. Mithilfe einer Pause kann der Maischeplan während des Brauprozesses angepasst werden. Wird während einer Pause die Rast-Zieltemperatur erreicht, wird der Rast-Timer gestartet und die Pause beendet. Änderungen am Maiswcheplan werden nicht automatisch gespeichert.
+- Pause during a rest
 
-- Pause während einer Rast
+During a rest, the rest timer in the mashing process is also stopped with the Pause button. The pause button is then displayed in red. During a pause, the actual temperature is maintained in relation to the resting target temperature, i.e. the PID controller and therefore the induction hob remain active. The mash schedule can be adjusted using a pause during a rest. The duration of the pause extends the previous resting time.
 
-Während einer Rast wird mit dem Pause Button zusätzlich der Rast-Timer im Maischeprozess angehalten. Der Pause Button wird dann rot angezeigt. Bei einer Pause wird die  Ist-Temperatur gegenüber der Rast-Zieltemperatur gehalten, d. h. der PID-Controller und somit das Induktionskochfeld bleiben aktiv. Mithilfe einer Pause während einer Rast kann der Maischeplan angepasst werden. Die Dauer der Pause verlängert die bisherige Rastdauer.
+## The Previous Button
 
-*Der Unterschied zwischen "Pause" und "autonext": bei deaktiviertem autonext wird die GGM IDS ausgeschaltet.*
+The Prev button is used to jump to the previous step in the mashing plan. If the mashing process was paused, the rest timer for the current rest is reset and restarted.
 
-## Der Backward Button
+## The Next button
 
-Mit dem Backward Button wird zum vorherigem Schritt im Maischeplan gesprungen. War der Maischeprozess pausiert, wird der Rast-Timer der aktuellen Rast zurückgesetzt und neu gestartet.
+The Next button is used to jump to the next step in the mashing plan or, if it was the last step in the plan, to end the mashing process.
 
-## Der Forward Button
+## The Collapse button
 
-Mit dem Forward Button wird zum nächsten Schritt im Maischeplan gesprungen oder falls es der letzte Schritt im Plan war der Maischeprozess beendet.
+The Collapse button collapses or collapses the mash plan table.
 
-## Der Maischeplan anzeigen Button
+![Mash plan](/docs/img/Mash-plan-display.jpg)
 
-Der Maischeplan anzeigen Button klappt die Tabelle Maischeplan ein und aus.
-
-![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
-
-Der Masicheplan anzeigen Button bleibt nach Braustart sichtbar. Alle anderen Buttom zum Verändern des Maischeplans werden bei Braustart ausgeblendet.
+The collapse button remains visible after brewing has started. All buttons for editing the mash plan are hidden when brewing starts.

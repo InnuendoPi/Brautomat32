@@ -1,16 +1,16 @@
 # Parameter Kochfeld
 
-## Temperatursteuerung
+## Temperaturregelung
 
 ### Max. Leistung
 
-Dieser Parameter beschreibt die maximale Ausgangsleistung vom Kochfeld. Der Standardwert ist 100%. Dieser Parameter kommt zum Einsatz, wenn ein kleiner Kessel mit bspw. 20l Volumen auf dem Kochfeld genutzt wird. Durch Reduzierung der Leistung kann ein zu schnelles Aufheizen und ein Überkochen vermieden werden. Die Parameter "Max. Leistung" und "Leistung kochen" sollten beim Einsatz von kleineren Braukesseln zusammen reduziert werden.
+Dieser Parameter beschreibt die maximale Ausgangsleistung des Kochfeldes. Der Standardwert ist 100%. Dieser Parameter wird verwendet, wenn ein kleiner Kessel mit z.B. 20l Volumen auf dem Kochfeld verwendet wird. Durch die Reduzierung der Leistung kann ein zu schnelles Aufheizen und Überkochen vermieden werden. Die Parameter "Max. Leistung" und "Kochleistung" sollten bei der Verwendung von kleinen Braukesseln gemeinsam reduziert werden.
 
-Am Ende dieses Kapitels sind [zwei Beispiele zur Berechnung der benötigten Leistung](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung) aufgeführt.
+Am Ende dieses Kapitels finden Sie [zwei Beispiele zur Berechnung der benötigten Leistung](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung).
 
-### Temperatur delta zum Ziel
+### Temperaturdifferenz zum Sollwert
 
-Dieser Parameter beschreibt, ab welcher Differenz zur Rasttemperatur (Ziel) der Timer einer Rast starten soll. Der Standardwert ist 0.3°C. Im Maischeprozess ermöglicht der PID Controller eine sehr genaue Temperatursteuerung. Eine Rasttemperatur wird mit +-0.2°C genau erreicht, indem der PID Controller die Energiezufuhr vor dem Erreichen der Rasttemperatur kontrolliert reduziert. Die Reduzierung der Energiezufuhr hat als Nebeneffekt, dass der letzte Schritt zum Erreichen der Rasttemperatur länger dauert. Genau an dieser Stelle kommt der Parameter "delta zum Ziel" ins Spiel: soll bspw. eine Rasttemperatur von 63°C erreicht werden und ist die aktuelle Temperatur 62.7°C, dann würde mit einem Temperatur delta zum Ziel von 0.3°C der Rasttimer starten. Bezogen auf die individuelle Brauanlage kann mit delta zum Ziel eine ungewollte Verlängerung der Rastzeit vermieden werden.
+Dieser Parameter beschreibt, ab welcher Differenz zur Rasttemperatur (Sollwert) der Timer für eine Rast starten soll. Der Standardwert ist 0,3°C. Im Maischprozess ermöglicht der PID-Regler eine sehr genaue Temperaturregelung. Eine Rasttemperatur wird auf +-0,2°C genau erreicht, indem der PID-Regler die Energiezufuhr vor Erreichen der Rasttemperatur kontrolliert reduziert. Die Reduzierung der Energiezufuhr hat den Nebeneffekt, dass der letzte Schritt zum Erreichen der Rasttemperatur länger dauert. Genau an dieser Stelle kommt der Parameter "Delta zum Ziel" ins Spiel: Soll z.B. eine Rasttemperatur von 63°C erreicht werden und die aktuelle Temperatur beträgt 62,7°C, dann würde bei einem Temperaturdelta zum Ziel von 0,3°C der Rasttimer starten. Bezogen auf die individuelle Brauanlage kann mit delta zum Ziel eine ungewollte Verlängerung der Rastzeit vermieden werden.
 
 ### Übergang zum Kochen [°C]
 
