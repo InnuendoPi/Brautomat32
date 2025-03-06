@@ -14,7 +14,7 @@ Die erste Einstellung betrifft den IDS-Typ, bei dem IDS1 oder IDS2 ausgewählt w
 
 * PIN weiß [Relais] - Standard: D7
 * PIN gelb [Command] - Standard: D6
-* PIN blau [Interrupt] - Standard: D5
+* PIN blau [Interrupt] - Standard: - (unbelegt) oder D5
 
 Diese GPIOs (D5, D6 und D7) sind für das GGM IDS-Anschlusskabel mit JST-HX-Buchse bzw. den Schraubklemmblock vorkonfiguriert.
 

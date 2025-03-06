@@ -1,6 +1,6 @@
 # Brautomat: Intuitive Brewing Control for Homebrewers
 
-> **Note:** translation still in progress. Please use german version and web browser translation.
+> **Note:** translation still in progress
 
 ![ESP32](https://img.shields.io/static/v1?label=Arduino&message=ESP32&logo=arduino&logoColor=white&color=blue) ![ESP8266](https://img.shields.io/static/v1?label=Arduino&message=ESP8266&logo=arduino&logoColor=white&color=green)
 

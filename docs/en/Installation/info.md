@@ -67,7 +67,7 @@ esptool.exe --chip esp8266 --baud 921600 write_flash 0x000000 firmware.bin 0x200
 
 Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 
-With macOS, flashing the firmware is divided into two steps. In the first step, the firmware brautomat.ino.bin is installed on the Wemos using the pyflasher tool.
+With macOS, flashing the firmware is divided into two steps. In the first step, the firmware firmware.bin is installed on the Wemos using the pyflasher tool.
 
 ![macOS](/docs/img/flashen_macos.png)
 
@@ -111,7 +111,7 @@ In the Brautomat web interface, select the Update menu item and then FileUpdate.
 
 ![DateiUpdate](/docs/img/dateiupdate2.jpg)
 
-Under Firmware with the ‘Select file’ button, the file _Brautomat.ino.bin_ or _Brautomat32.ino.bin_ must now be selected from the Firmware.ZIP archive (in Fig. 2). Click on Update Firmware to start the update.
+Under Firmware with the ‘Select file’ button, the file _firmware.bin_ must now be selected from the ZIP archive (in Fig. 2). Click on Update Firmware to start the update.
 
 The file system of the Brautomat can also be updated.
 

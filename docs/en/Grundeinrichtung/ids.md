@@ -14,7 +14,7 @@ The first setting is the IDS type, where you can choose between GGM IDS1 and IDS
 
 * White PIN [Relay] – Default: D7
 * Yellow PIN [Command] – Default: D6
-* Blue PIN [Interrupt] – Default: D5
+* Blue PIN [Interrupt] – Default: - (unset) or D5
 
 These GPIOs (D5, D6, and D7) are preconfigured for the original GGM IDS connection cable with a JST-HX connector btw. screw terminal connection.
 

@@ -8,7 +8,7 @@ This parameter describes the maximum output power of the cooktop. The default va
 
 At the end of this chapter you will find [two examples for calculating the required output](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung).
 
-### Temperature difference to the setpoint
+### Temperature delta to target
 
 This parameter describes the difference to the rest temperature (setpoint) at which the timer should start for a rest. The default value is 0.3°C. In the mashing process, the PID controller enables very precise temperature control. A rest temperature is achieved with an accuracy of +-0.2°C by the PID controller reducing the energy supply in a controlled manner before the rest temperature is reached. Reducing the energy supply has the side effect that the last step to reach the rest temperature takes longer. This is exactly where the “Delta to target” parameter comes into play: If, for example, a rest temperature of 63°C is to be reached and the current temperature is 62.7°C, then the rest timer would start at a temperature delta to target of 0.3°C. In relation to the individual brewing system, an unwanted extension of the resting time can be avoided with delta zum Ziel.
 
@@ -46,7 +46,7 @@ This parameter specifies the interval at which a calculation of the required pow
 
 This parameter is used to recognise extreme values (max, min). AutoTune noiseband specifies the minimum level that must be present in relation to the previous measured value in order to recognise a new extreme value. The default value for the RCD IDS is 0.2. For a post-cast boiler via a relay or SSR, the default value is 0.5. Value range: 0.1 - 1.0.
 
-### AutoTune kookbacks
+### AutoTune lookbacks
 
 This parameter specifies how many measured values are to be considered for the determination of extreme values. The default value is 50 measured values. Please note that a maximum of 100 measured values can be configured. For very well thermally insulated brewing kettles (e.g. with Armaflex), an increase to 100 measured values in the data series can improve the detection of extreme values in the cooling phase of the AutoTune process.
 

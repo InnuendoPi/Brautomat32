@@ -84,7 +84,7 @@ Am Ende von einem Maischeprozess wird über eine Jodprobe festgestellt, dass die
 
 Der erste Schritt des Maischeplans mit dem Namen _Einmaischen 50°C_ hat eine Rastzeit von 10 Minuten und einen deaktivierten _autonext_. Das Bild zeigt die Situation, wenn der Rasttimer die 10 Minuten erreicht hat: Der Timer ist auf 00:00 Restzeit heruntergezählt. Der Play-Button wechselt automatisch auf rot. Unten rechts erscheint die Toastmeldung "Click play button". Das Induktionskochfeld schaltet sich aus. Der Brauprozess wartet auf einen Klick auf die Wiedergabetaste.
 
-* Am Ende einer Pause mit deaktiviertem _autonext_ wird der Brauprozess gestoppt und das GGM IDS ausgeschaltet.
+* Am Ende einer Pause mit deaktiviertem _autonext_ wird der Brauprozess gestoppt und das Induktionskochfeld ausgeschaltet.
 
 Der zweite Maischschritt mit der Bezeichnung _Maltoserast 63°C_ hat eine Rasttemperatur von 63°C und eine Rastzeit von 25 Minuten. In diesem Schritt steuert der Brautomat das Induktionskochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Rasttimer ist eine Stoppuhr, die auf 00:00 (0 Minuten : 0 Sekunden) herunterzählt. Wenn dieser Timer die Rastzeit von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft _autonext_. Wenn _autonext_ aktiviert ist, springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Beispielrezept ist dies der Schritt _Verzuckerung 72°C_. Der Schritt Verzuckerung hat eine Rasttemperatur von 72°C. Der Brautomat erhöht automatisch die Leistung des Induktionskochfeldes, um die neue Rasttemperatur zu erreichen.
 
@@ -124,7 +124,7 @@ Eine zweite Sonderfunktion sind Steuerbefehle für die Induktionskochfelder Mais
 
 * Aktorname:Leistung
 
-Die Leistung kann entweder EIN oder AUS oder eine Zahl zwischen 0 und 100% sein. Dabei entspricht der Zustand OFF dem Wert 0% und ON dem Wert 100%. Der Steuerbefehl für das erste Induktionskochfeld ist IDS oder MAISCHE. Der Steuerbefehl für das zweite Induktionskochfeld ist SUD. Der Steuerbefehl für das Nachgaren ist HLT. Für den Nachguss kann zusätzlich der Steuerbefehl Nachguss verwendet werden. Der Steuerbefehl für einen Aktor ist der Aktorname.
+Die Leistung kann entweder EIN oder AUS oder eine Zahl zwischen 0 und 100% sein. Dabei entspricht der Zustand OFF dem Wert 0% und ON dem Wert 100%. Der Steuerbefehl für das erste Induktionskochfeld ist IDS oder MAISCHE. Der Steuerbefehl für das zweite Induktionskochfeld ist SUD. Der Steuerbefehl für den Nachguss ist HLT. Für den Nachguss kann zusätzlich der Steuerbefehl Nachguss verwendet werden. Der Steuerbefehl für einen Aktor ist der Aktorname.
 
 ![Aktor Steuerbefehl](/docs/img/Maischeplan-Aktoren.jpg)
 
@@ -133,7 +133,7 @@ Kurz vor Ende des Maischeplans wird das Rührwerk ausgeschaltet: Ruehrwerk:AUS u
 
 Der Steuerbefehl für einen Aktor kann mit einer Leistung angegeben werden, z.B. PUMPE:60. Der Aktor Pumpe wird dann mit 60% eingeschaltet. Dies setzt voraus, dass dieser Aktor für PWM aktiviert wurde. Wird der Steuerbefehl für einen Aktor ohne PWM ausgeführt, so wird die Leistung 60% durch EIN bzw. 100% ersetzt. Die Rasttemperatur und die Rastzeit müssen bei Steuerbefehlen für Aktoren auf 0 gesetzt werden.
 
-Der Steuerbefehl IDS:50 setzt die maximale Ausgangsleistung des Induktionskochfeldes auf 50%. Ebenso kann mit HLT:75 das Nachgaren auf 75% Leistung eingestellt werden.
+Der Steuerbefehl IDS:50 setzt die maximale Ausgangsleistung des Induktionskochfeldes auf 50%. Ebenso kann mit HLT:75 den Nachguss auf 75% Leistung eingestellt werden.
 
 ![IDS Steuerbefehl](/docs/img/sonderfunktion_sud1.jpg)
 
@@ -228,4 +228,4 @@ Die maximale Ausgangsleistung von 65% wird in den folgenden Maischschritten beib
 
 Der Steuerbefehl ändert die maximale Ausgangsleistung des IDS auf 100%. Die Würze wird nun mit 100% Leistung bis zur Temperatur "Übergang zum Kochen" bei 95°C (siehe oben) aufgeheizt. Ab 95°C schaltet das GGM IDS auf 80% Leistung. 80% entspricht dem Parameter "Leistung ab Übergang".
 
-Mit den Steuerbefehlen für das IDS kann ein Anbrennen der Maische oder ein Überkochen der Würze, insbesondere bei kleineren Kesselvolumina, verhindert werden.
+Mit den Steuerbefehlen für die IDS kann ein Anbrennen der Maische oder ein Überkochen der Würze, insbesondere bei kleineren Kesselvolumina, verhindert werden.

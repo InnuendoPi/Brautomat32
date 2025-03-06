@@ -11,17 +11,17 @@ Diese Anleitung wird stetig erweitert, korrigiert bzw. verbessert. Ursprünglich
 
 ## Aufteilung dieser Anleitung
 
-Diese Anleitung hat keine Reihenfolge und muss nicht von oben nach unten durchgelesen werden. Der Themenbereich _Die Software_, insbesondere das Kapitel _Der Maischeplan_, ist für den Einstieg in den Brautomat empfohlen.
+Diese Anleitung hat keine Reihenfolge und muss nicht von oben nach unten durchgelesen werden. Der Themenbereich _Software_, insbesondere das Kapitel _Der Maischeplan_, ist für den Einstieg in den Brautomat empfohlen.
 
 Diese Anleitung unterteilt sich in drei Themenbereich:
 
-* Die Software: die Verwendung der Firmware Brautomat
+* Software: die Verwendung der Firmware Brautomat
   * Installation
   * Grundeinrichtung
   * Der Maischeplan
   * AutoTune PID
-  * Sensoren, Aktoren und Nachguss
-* Die Hardware: die Platine und passende Erweiterungen
+  * Sensoren, Sudkessel, Nachguss und Aktoren
+* Hardware: die Platine und passende Erweiterungen
   * Die Platine Aufbau und Anschlüsse
   * Das Display
   * 3D Gehäuse
@@ -30,4 +30,4 @@ Diese Anleitung unterteilt sich in drei Themenbereich:
   * kleinerBrauhelfer2
   * das MQTTDevice
 
-Der Themenbereich _Die Software_ wird mit einer Zusammenfassung _Parameter im Überblick_ abgeschlossen. Zu vielen Parametern werden Details und Informationen gegeben, um die Konfiguration und Anwendung zu vereinfachen.
+Der Themenbereich _Software_ wird mit einer Zusammenfassung _Parameter im Überblick_ abgeschlossen. Zu vielen Parametern werden Details und Informationen gegeben, um die Konfiguration und Anwendung zu vereinfachen.

@@ -4,9 +4,11 @@ Um den Brautomat nutzen zu können, muss die Firmware geflasht werden. Außerdem
 
 ## Firmware flashen mit MS Windows
 
-[![Download ESP8266](https://img.shields.io/badge/Firmware-ESP8266-green.svg)](https://github.com/InnuendoPi/Brautomat/releases/download/Release/Firmware.zip) [![Download ESP32](https://img.shields.io/badge/Firmware-ESP32-blue.svg)](https://github.com/InnuendoPi/Brautomat32/releases/download/Release/Firmware.zip)
+* [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip): Brautomat32pIO.zip
+* [ESP32 IDF4](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip): Brautomat32.zip
+* [ESP8266](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip): Brautomat.zip
 
-Die Installation der Firmware wird über das im ZIP Archiv enthaltene Script "Flashen.cmd" durchgeführt. Das Archiv Firmware.zip wird in einem beliebigen Ordner entpackt. Der ESP Microcontroller wird mit per USB Kabel mit dem PC/Notebook verbunden. Ein Doppelklick auf das Script Flashen.cmd startet das Flashen der Firmware.
+Die Installation der Firmware wird über das im ZIP Archiv enthaltene Script "Flashen.cmd" durchgeführt. Das ZIP Archiv wird in einem beliebigen Ordner entpackt. Der ESP Microcontroller wird mit per USB Kabel mit dem PC/Notebook verbunden. Ein Doppelklick auf das Script Flashen.cmd startet das Flashen der Firmware.
 
 Das Betriebssystem MS Windows erstellt beim Verbinden vom ESP Microcontroller mit einem USB Anschluss am PC oder Notebook automatisch einen seriellen COM Port.
 
@@ -18,11 +20,11 @@ Im Bild wurde ein ESP Device auf COM7 gefunden. In seltenen Fällen wird unter M
 
 Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/espressif/esptool>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme (macOS, Linux). Die Windows-Version 64bit ist im ZIP Archiv enthalten. ESPTool is licensed under GPL v2.
 
-## Manuelles Flashen MS Windows, macOS und Linux
+### Manuelles Flashen MS Windows, macOS und Linux
 
 Falls das Script nicht genutzt werden kann, kann die Firmware manuell auf den ESP Microcontroller übertragen werden.
 
-### Brautomat32pIO (ESP-IDF5)
+#### Brautomat32pIO (ESP-IDF5)
 
 ESP32 Step 1 Flash löschen:
 
@@ -36,7 +38,7 @@ ESP32 Step 2 Firmware flashen:
 esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x350000 LittleFS.bin
 ```
 
-### Brautomat32 (ESP-IDF4)
+#### Brautomat32 (ESP-IDF4)
 
 ESP32 Step 1 Flash löschen:
 
@@ -50,7 +52,7 @@ ESP32 Step 2 Firmware flashen:
 esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x2d0000 LittleFS.bin
 ```
 
-### Brautom (ESP8266)
+#### Brautomat (ESP8266)
 
 ESP8266 Step 1 Flash löschen:
 
@@ -64,7 +66,7 @@ ESP8266 Step 2 Firmware flashen:
 esptool.exe --chip esp8266 --baud 921600 write_flash 0x000000 firmware.bin 0x200000 LittleFS.bin
 ```
 
-## Firmware flash with macOS
+### Firmware flashen mit macOS
 
 Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 
@@ -75,7 +77,7 @@ Unter macOS ist das Flashen der Firmware in zwei Schritte unterteilt. Im ersten 
 Der Brautomat muss dann mit dem WLAN verbunden werden. Sobald der Brautomat mit dem WLAN verbunden ist, muss das Dateisystem installiert werden.\
 Im Browser öffnen: <http://brautomat.local/update>
 
-Nach einem Klick auf die Schaltfläche „Dateisystem“ wird die Datei brautomat.mklittlefs.bin ausgewählt und durch einen Klick auf Dateisystem aktualisieren installiert.
+Nach einem Klick auf die Schaltfläche „Dateisystem“ wird die Datei LittleFS.bin ausgewählt und durch einen Klick auf Dateisystem aktualisieren installiert.
 
 ## WLAN Konfiguration
 
@@ -112,7 +114,7 @@ Im WebInterface Brautomat den Menüpunkt Update und anschließend DateiUpdate au
 
 ![DateiUpdate](/docs/img/dateiupdate2.jpg)
 
-Unter Firmware mit dem Button "Datei auswählen" muss nun aus dem Archiv Firmware.ZIP die Datei _Brautomat.ino.bin_ bzw. _Brautomat32.ino.bin_ ausgewählt werden (im Bild 2). Ein Klick auf Update Firmware startet das Update.
+Unter Firmware mit dem Button "Datei auswählen" muss nun aus dem ZIP Archiv die Datei _firmware.bin_ ausgewählt werden (im Bild 2). Ein Klick auf Update Firmware startet das Update.
 
 Auch das Dateisystem vom Brautomat kann aktualisiert werden.
 
