@@ -33,4 +33,5 @@ Durch Klicken auf "Sensor speichern" wird der Sensor angelegt und anschließend 
 
 ![Sensoren Dashboard](/docs/img/Sensor-dashboard.jpg)
 
-_Hinweis: Die Konfiguration von analogen PT100x-Sensoren erfolgt auf die gleiche Weise, wird jedoch in dieser Grundeinrichtung nicht behandelt._
+> **Hinweis:**\
+Die Konfiguration von analogen PT100x-Sensoren erfolgt auf die gleiche Weise, wird jedoch in dieser Grundeinrichtung nicht behandelt.

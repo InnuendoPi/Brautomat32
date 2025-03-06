@@ -1,3 +1,3 @@
-# Sudkessel
+# Sud kettle MLT
 
-Der Brautomat bietet optional die Möglichkeit, einen Sudkessel oder MLT zu konfigurieren. Die Konfiguration wird in identischer Weise wie das erste Kochfeld durchgeführt. Die Konfiguration ist optional und ermöglicht eine zwei- bzw. drei-Kesselumgeung aufzubauen.
+The Brauomat offers the option of configuring a brew kettle or MLT. The configuration is carried out in the same way as for the first hob. The configuration is optional and makes it possible to set up an environment with two or three kettles.

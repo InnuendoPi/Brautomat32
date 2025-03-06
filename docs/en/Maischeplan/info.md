@@ -1,5 +1,7 @@
-# Der Maischeplan
+# The mashing plan
 
-Der Brautomat arbeiten nach einem Maischeplan. Dieser Plan wird zeilenweise von oben nach unten abgearbeitet. Jede Zeile ist ein Maischeschritt. Jede Zeile hat Spalte, welche die Eigenschaft eines Maischeschrittes darstellen.
+The Brautomat works according to a tabular mashing plan. This plan is processed line by line from top to bottom. Each row represents a mashing step. The properties of a mashing step are shown in the columns of each row.
 
-Im Maischeplan werden auch Schritte zum Kochen der Würze, sowie Zusätze und Hopfengaben eingefügt.
+Wort boiling steps, hop additions and additives are also entered in the mash plan.
+
+Beginners are recommended to read the chapter _Mash plan before the first brewing day. Almost all functions are intuitively understandable. However, there are also less obvious functions.

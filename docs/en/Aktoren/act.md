@@ -1,7 +1,7 @@
-# Aktoren
+# Actors
 
-![media](/docs/img/aktoren_einstellungen.jpg)
+![media](/docs/img/actuators_settings.jpg)
 
-Aktoren wie bspw. Rührwerk, Pumpen oder Ringheizelemente werden mit einem Namen und einem GPIO (Schalter) konfiguriert. GPIO invertieren wurde im Abschnitt Nachguss erläutert. Aktoren können die Eigenschaft PWM (Pulsweitenmodulation) haben. PWM im Brautomat ist ein takten der Leistung (Ein und Ausschalten oder Storm fließt und Strom fließt nicht). Die Eingabe ist in Prozent. Permanent eingeschaltet sind 100%. Bei einem Wasserkocher wäre dies sinngemäß dauerhaft maximale Leistung. Ein PWM von 50% wäre 50:50 Strom fließt und Strom fließt nicht. Der pulse cycle beträgt 500ms. Die Leistung kann im laufenden Betrieb über die zwei Buttons in der Aktoren-Tabelle verändert werden. Die Buttons zur Veränderung der Leistung sind je Aktor sichtbar, wenn PWM für den Aktor aktiviert wurde. Die Funktion PWM im Brautomat ist bspw. für Relais oder SSRs geeignet. Ungeeignet ist die Funktion als Motorsteuerung Rührwerk.
+Actors such as stirrers, pumps or ring heaters are configured with a name and a GPIO (switch). Actors can have the PWM (pulse width modulation) property. PWM in Brautomat is a clocking of the power (switching on and off or current flows and current does not flow). The input is in per cent. Constantly switched on is 100%. In the case of a kettle, this would be maximum power at all times. A PWM of 50% would be 50:50 current flowing and current not flowing. The pulse interval is 500ms. The power can be changed during operation using the two buttons in the actor table. The buttons for changing the power are visible for each actuator if PWM has been activated for the actor. The PWM function in Brautomat is suitable for relays or SSRs, for example. The function is not suitable as a motor control for agitators.
 
-![media](/docs/img/aktoren.jpg)
+![media](/docs/img/actuators.jpg)

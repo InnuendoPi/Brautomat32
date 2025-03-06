@@ -24,17 +24,17 @@ Das praktische Vorgehen AutoTune schaut wie folgt aus:
 
 ![AutoTune2](/docs/img/IDS-AutoTune-start.jpg)
 
-Der AutoTune Prozess besteht aus zwei Phasen. Phase 1 ist das Aufheizen auf Zieltemperatur. Mit Erreichen der Zieltemperatur wird das Induktionskochfeld abgeschaltet. Die Zieltemperatur wird dabei teils deutlich um 2-3°C überschritten. Das deutliche Überschreiten der Zieltemperatur ist im AutoTune Prozess notwendig. Es folgt eine Abkühlphase unter die Zieltemperatur. Diese zwei Phase werden 5x wiederholt. Der AutoTune Prozess dauert je nach Umgebung relativ lange (90min und mehr). Der meiste Zeitbedarf entsteht während den Abkühlphasen. Je besser ein Braukessel isoliert ist, desto länger dauert der AutoTune Prozess bzw. die Abkühlphase. Der AutoTune Prozess sollte bei einer typischen Maischetemperaturen von ca. 60°C durchgeführt werden. Der aktuelle Status ist in der Spalte „AutoTune Prozess 0/5“ sichtbar. Die erste Zahl ist der aktuelle Schritt und die zweite Zahl die Anzahl der voraussichtlich benötigten AutoTune-Schritte. Im AutoTune Prozessverlauf werden Messwerte ermittelt. Die Messwerte werden fortlaufend überprüft. Hat ein Messwert eine Abweichung, wird die Messung wiederholt. Bei einer Wiederholung erscheint "AutoTune Prozess 6/5". Es werden maximal 20 Wiederholungen durchgeführt. Das AutoTune Ergebnis wird in den Einstellung der GGM IDS im Tab PID-Manager dargestellt:
+Der AutoTune-Prozess besteht aus zwei Phasen. Phase 1 ist das Aufheizen auf die Zieltemperatur. Bei Erreichen der Zieltemperatur wird das Induktionskochfeld abgeschaltet. Dabei wird die Zieltemperatur teilweise deutlich um 2-3°C überschritten. Die deutliche Überschreitung der Zieltemperatur ist für den AutoTune-Prozess notwendig. Es folgt eine Abkühlphase unter die Zieltemperatur. Diese beiden Phasen werden 5x wiederholt. Der AutoTune-Prozess dauert je nach Umgebung relativ lange (90min und mehr). Die meiste Zeit wird während der Abkühlphasen benötigt. Je besser ein Sudkessel isoliert ist, desto länger dauert der AutoTune-Prozess bzw. die Abkühlphase. Der AutoTune-Prozess sollte bei einer typischen Maischetemperatur von ca. 60°C durchgeführt werden. Der aktuelle Status wird in der Spalte „AutoTune Prozess 0/5“ angezeigt. Die erste Zahl ist der aktuelle Schritt und die zweite Zahl ist die Anzahl der voraussichtlich erforderlichen AutoTune-Schritte. Während des AutoTune-Prozesses werden Messwerte ermittelt. Die Messwerte werden ständig überprüft. Weist ein Messwert eine Abweichung auf, wird die Messung wiederholt. Bei einer Wiederholung wird "AutoTune Prozess 6/5" angezeigt. Maximal werden 20 Wiederholungen durchgeführt. Das Ergebnis von AutoTune wird in den Einstellungen des GGM IDS im Register PID-Manager angezeigt:
 
 ![AutoTune3](/docs/img/IDS-AutoTune-erg.jpg)
 
-Der AutoTune Prozess ist abgeschlossen und die ermittelten Anlagenparameter werden automatisch gespeichert.\
-Das Ergebnis von AutoTune sind die Werte Verstärkungsfaktor Ku (ultimate gain) und die Periodendauer (ultimate period). Aus diesen zwei Parametern werden P, I und D berechnet. Zur Berechnung der PID-Werte stehen diverse Algorithmen zur Verfügung. Der Brautomat verwendet einen PID-Algorithmus, der für das Brauen (eigentlich für das Erhitzen von Flüssigkeiten) optimiert ist und u.a. auch im Addon PIDBoil von CraftBeerPi eingestezt wird.
+Der AutoTune-Vorgang ist abgeschlossen und die ermittelten Anlagenparameter werden automatisch gespeichert.\
+Das Ergebnis von AutoTune sind der Verstärkungsfaktor Ku (ultimate gain) und die Periodendauer (ultimate period). Aus diesen beiden Parametern werden P, I und D berechnet. Für die Berechnung der PID-Werte stehen verschiedene Algorithmen zur Verfügung. Der Brautomat verwendet einen PID-Algorithmus, der für das Brauen (eigentlich für das Erhitzen von Flüssigkeiten) optimiert ist und z.B. auch im Addon PIDBoil von CraftBeerPi verwendet wird.
 
-_Tipp: Nach dem AutoTune Prozess sollte die Konfiguration mittels Backup gesichert werden._
+_Tipp: Nach dem AutoTune-Prozess sollte die Konfiguration mittels Backup gesichert werden._
 
-Wenn der AutoTune Prozess beendet ist und "AutoTune debug" aktiviert wurde, kann über den Explorer das Protokoll "autotune\_log.txt" eingesehen werden. In dieser Protokolldatei werden alle Informationen mitgeschrieben.\
-In der Datei "idsAutoTune.txt" bzw. "hltAutoTune.txt" wird das AutoTune Ergebnis im JSON Format abgespeichert. Beide Dateien sind rein informativ und werden für den Betrieb nicht benötigt. In diesen Dateien sind PID-Werte über verschiedene Berechnungsmethoden aufgeführt.
+Wenn der AutoTune-Prozess beendet ist und "AutoTune debug" aktiviert wurde, kann über den Explorer das Protokoll "autotune\_log.txt" eingesehen werden. In dieser Protokolldatei werden alle Informationen protokolliert.\
+In der Datei "idsAutoTune.txt" bzw. "hltAutoTune.txt" wird das Ergebnis von AutoTune im JSON-Format gespeichert. Beide Dateien sind rein informativ und werden für den Betrieb nicht benötigt. In diesen Dateien sind die PID-Werte nach verschiedenen Berechnungsmethoden aufgelistet.
 
 Im Log sind folgende Berechnungsmethoden aufgeführt:
 
@@ -48,4 +48,4 @@ TYREUS LUYBEN PI\
 CIANCONE MARLIN PID\
 CIANCONE MARLIN PI
 
-Die berechneten Werte der unterschiedlichen Algorithmen können in den Einstellungen mit der Auswahl INDIVIDUAL_PID in den Zeilen P, I und D eingetragen werden. Dies sollte jedoch nur in seltenen Fällen zu besseren Ergebnissen führen.
+Die berechneten Werte der verschiedenen Algorithmen können in den Einstellungen mit der Auswahl INDIVIDUAL_PID in den Zeilen P, I und D eingegeben werden. Dies dürfte jedoch nur in seltenen Fällen zu besseren Ergebnissen führen.

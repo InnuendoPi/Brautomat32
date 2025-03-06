@@ -1,43 +1,43 @@
-# Funktionen der Buttons
+# Functions of the buttons
 
-## Beschreibung aller Buttons
+## Description of all buttons
 
-Der Maischeplan verfügt über Buttons zum Editieren, erweitern oder Löschen der Tabelle. Diese sind eher selbsterklärend.
+The mash plan has buttons for editing, moving or deleting a row.
 
-### Der grüne Speichern Button Maischeplan
+### The save button of the mash plan
 
-Mit dem günen Button Tabelle speichern in der Kopfzeile der Tabelle Maischeplan wird der Inhalt der Tabelle in eine Datei (JSON) abgespeichert.
+The Save button in the header of the mash plan table saves the contents of the table to a file (JSON).
 
-### Der blaue Speichern Button Maischeplan
+### The Refresh mash plan button (Reload button)
 
-Mit dem blauen Button in jeder Maischeplan Zeile werden Ändeurngen in der aktuellen Zeile in die Maischeplan Tabelle übernommen. Zu beachten ist, dass der blaue Button in die Maischeplan Tabelle *übernimmt* und der grüne Speichern Button den Maischeplan im Flash Speicher *abspeichert*. Wird eine Zeilenänderung (blauer Button) nicht gespeichert (grüner Button), wird die Änderung nicht übernommen.
+This function reloads the table from the file. Please note that all unsaved changes (green button) are discarded without prompting. This button has the Exit editor mode function as a second function.
 
-### Der Aktualisiere Maischeplan Button
+### The exit button of the editor
 
-Mit dieser Funktion wird die Tabelle neu aus der Datei eingelesen. Zu beachten gilt, dass alle nicht gespeicherten Änderungen (grüner Button) ohne Rückfrage verworfen werden.
+This function is used to exit the editor mode without saving the changes in the mash plan.
 
-### Der Löschen Button
+### The delete button
 
-Mit dem Löschen Button wird die gesamte Tabelle geleert. Zu beachten gilt, dass erst mit Klick auf Tabelle Speichern (grüner Button) die Änderung übernommen wird.
+The Delete button deletes the entire table. Please note that the changes are only saved when you click on Save table (green button).
 
-### Der + Button
+### The + button
 
-Mit dem Plus-Button wird eine neue Rast hinzugefügt. Zu beachten gilt, dass die neue Zeile in der Tabelle mit Klick auf das blaue Speichern-Symbol in der Tabellenzeile übernommen werden muss und abschließend mit einem Klick auf das grüne Speichern-Symbol die Tabelle gespeichert wird.
+The plus button is used to add a new row. Please note that the new row in the table must be accepted by clicking on the blue save symbol in the table row and then the table is saved by clicking on the green save symbol.
 
-### Der Graph Button
+### The Graph button
 
-Mit dem Graph Button kann die visuelle Darstellung vom Temperaturverlauf ein- bzw. ausgeblendet werden. Zusätzlich können einzelne Graphen durch Klick auf den Graphnamen ein- und ausgeblendet werden. Die Standardeinstellung auf sichtbar eingestellt.
+The graph button can be used to show or hide the visual display of the temperature curve. In addition, individual graphs can be shown or hidden by clicking on the graph name. The default setting is set to visible.
 
-*Tipp: Wenn der Temperaturverlauf nicht interessant ist, einfach auf den grünen Graph Button klicken. Sobald die Grafik ausgeblendet ist, einmal die Systemkonfiguration öffnen und auf Speichern klicken. So wird die Einstellung Grafik Temperaturverlauf aus- bzw. einblenden gespeichert.*
+*Tip: If the temperature curve is not interesting, simply click on the green graph button. As soon as the graph is hidden, open the system configuration once and click on Save. This saves the setting Hide/show temperature graph*.
 
-### Der Einstellungen Maischeplan Button
+### The mash plan settings button (database button)
 
-In den Einstellungen zum Maischeplan sind neben dem Maischplan Namen und der Zeitsteuerung auch der Maischeplan Wechsel, der Import, der Export sowie das Löschen von Maischplänen verfügbar.
+In addition to the mash plan name and the time control, the settings for the mash plan also include the mash plan change, import, export and deletion of mash plans.
 
-### Der Maischeplan anzeigen Button
+### The Show mash plan button (Collapse button)
 
-Der Button Maischeplan anzeigen hat eine collapse Funktion: während des Brauen verbraucht der Maischeplan unnötig viel Bildschirmfläche. Mit collapse lässt sich die Tabelle Maischeplan ein- und ausklappen.
+The Show mash plan button has a collapse function: during brewing, the mash plan consumes an unnecessary amount of screen space. With collapse, the mash plan table can be collapsed and expanded.
 
-### Der Chart anzeigen Button
+### The show chart button (collapse button)
 
-Der Button Chart anzeigen hat eine collapse Funktion: während des Brauen verbraucht die Grafik unnötig viel Bildschirmfläche. Mit collapse lässt sich die Grafik ein- und ausklappen. Die Grafik wird im eingeklappten Zustand ebenfalls weiter aktualisiert.
+The Show chart button has a collapse function: during brewing, the chart consumes an unnecessary amount of screen space. With collapse, the chart can be collapsed and expanded. The chart is also updated when collapsed.

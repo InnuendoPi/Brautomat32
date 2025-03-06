@@ -1,53 +1,67 @@
 # Installation
 
-Die Installation unterteilt sich in Firmware flashen und WLAN Konfigura
+To be able to use the Brautomat, the firmware must be flashed. The ESP microcontroller must also be connected to the local WLAN.
 
 ## Firmware flash with MS Windows scriptbased
 
-Download: <https://github.com/InnuendoPi/Brautomat/releases/download/Release/Firmware.zip>
+The firmware is installed using the included “Flashen.cmd” script. To do this, the archive Firmware.zip is unpacked in any folder. The ESP microcontroller is connected to the PC/notebook via USB cable. Double-click on the Flashen.cmd script to start flashing the firmware.
 
-The firmware is installed using the included “Flashen.cmd” script. To do this, the archive Firmware.zip is unpacked in any folder. The Wemos D1 mini is connected to the PC via USB cable
+The MS Windows operating system automatically creates a serial COM port when connecting the ESP microcontroller to a USB port on the PC or notebook.
 
-The MS Windows operating system automatically creates a serial COM port when you connect the Wemos D1 mini. Depending on the system, this can be COM3, COM4 or higher. The Flashen.cmd script is preset to the serial port COM3. If the Wemos D1 Mini is not connected to COM3, “COM3” must be replaced by the correct COM port in lines 6 and 8 of the Flashen.cmd script.
+![Windows Gerätemanager](/docs/img/com.jpg)
 
-```bash
-1: @ECHO OFF
-2: CLS
-3: SET SCRIPT_LOCATION=%~dp0
-4: cd %SCRIPT_LOCATION%
-5: echo erase flash
-6: esptool.exe -cp COM3 -cd nodemcu -ce
-7: echo Flash firmware and LittleFS
-8: esptool.exe -cp COM3 -cd nodemcu -ca 0x000000 -cf Brautomat.ino.bin -ca 0x200000 -cf Brautomat.mklittlefs.bin
-9: echo ESC to quit
-10: pause
-11: exit
-```
+An ESP device was found on COM7 in the image. In rare cases, no serial COM port is automatically provided under MS Windows. USB drivers for ESP microcontrollers are available on the following websites: (MS Win and macOS).
 
-The COM port can be found on Windows systems via the Device Manager:
-
-![COM Port](/docs/img/com.jpg)
-
-In this example an ESP device was found on COM7. So in lines 6 and 8, COM3 must be replaced by COM7.
+[![ESP32 driver](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads) [![ESP8266 driver](https://img.shields.io/static/v1?label=Treiber&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://www.wch-ic.com/search?t=all&q=ch341)
 
 Script Flashen.cmd uses esptool.exe <https://github.com/igrr/esptool-ck/releases>.\
 ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This code is licensed under GPL v2.
 
-## manual flash with MS Windows and Linux
+## Manual flash with MS Windows and Linux
 
-If the script cannot be used, the firmware must be transferred manually to the Wemos D1 mini.
+If the script cannot be used, the firmware can be transferred manually to the ESP microcontroller.
 
-Step 1 Flash erase:
+### Brautomat32pIO (ESP-IDF5)
 
-- `esptool.exe -cp COM3 -cd nodemcu -ce\`
+ESP32 Step 1 erase flash:
 
-Step 2 Firmware flash:
+```json
+esptool.exe --chip esp32 erase_flash
+```
 
-- `esptool.exe -cp COM3 -cd nodemcu -ca 0x000000 -cf Brautomat.ino.bin -ca 0x200000 -cf Brautomat.mklittlefs.bin\`
+ESP32 Step 2 flash firmware
 
-COM3 should be replaced with the actual serial port. The command lines Step 1 and 2 assume that the files esptool, brautomat.ino.bin and Brautomat.mklittlefs.bin are in the same directory.
+```json
+esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x350000 LittleFS.bin
+```
 
-In rare cases, no USB port is automatically provided under MS Windows. A USB driver is available here: <http://www.wch.cn/download/CH341SER_ZIP.html>
+### Brautomat32 (ESP-IDF4)
+
+ESP32 Step 1 erase flash:
+
+```json
+esptool.exe --chip esp32 erase_flash
+```
+
+ESP32 Step 2 flash firmware:
+
+```json
+esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x2d0000 LittleFS.bin
+```
+
+### Brautom (ESP8266)
+
+ESP8266 Step 1 erase flash:
+
+```json
+esptool.exe --chip esp8266 erase_flash
+```
+
+ESP8266 Step 2 flash firmware:
+
+```json
+esptool.exe --chip esp8266 --baud 921600 write_flash 0x000000 firmware.bin 0x200000 LittleFS.bin
+```
 
 ## Firmware flash with macOS
 
@@ -57,14 +71,14 @@ With macOS, flashing the firmware is divided into two steps. In the first step, 
 
 ![macOS](/docs/img/flashen_macos.png)
 
-The vending machine must then be connected to the WLAN. As soon as the bread machine is connected to the WLAN, the file system must be installed.\
+The brautomat must then be connected to the WLAN. As soon as the brautomat is connected to the WLAN, the file system must be installed.\
 Open in browser: <http://brautomat.local/update>
 
 After clicking on the "Filesystem" button, the file brautomat.mklittlefs.bin is selected and installed by clicking on Update Filesystem.
 
 ## WLAN configuration
 
-After flashing the firmware, the automatic machine starts in AccessPoint mode. An open WLAN called Brautomat becomes visible. A connection must be established with this WLAN. Once the connection is established, the web browser opens the WLAN configuration portal. If the portal does not open automatically, <http://192.168.4.1> must be entered manually as the address.
+After flashing the firmware, the Brautomat starts in AccessPoint mode. An open WLAN with the name _Brautomat_ becomes visible. A connection must be established with this WLAN. This works from a PC or notebook as well as with a smartphone. As soon as the connection is established, the web browser opens the Wi-Fi configuration portal. If the portal does not open automatically, the address <http://192.168.4.1> must be entered manually.
 
 ![IDS](/docs/img/wlan1.jpg)
 
@@ -72,29 +86,34 @@ The WLAN configuration is displayed using the “Configure WiFi” button
 
 ![IDS](/docs/img/wlan2.jpg)
 
-The WLAN (SSID) and the password must be configured here. When you save, the bread machine restarts and connects to the WiFi. The Brautomat web interface can be accessed via <http://brautomat.local>.
+The WLAN (SSID) and the password must be configured here. When you save, the brautomat restarts and connects to the WiFi. The Brautomat web interface can be accessed via <http://brautomat.local>.
+
+This completes the basic installation. The firmware flashing and WLAN configuration process only needs to be carried out once. The Brautomat must now be configured. The configuration is described in the section _Basic setup_. The following section _Update_ can be skipped for the time being.
 
 ## Updates
 
-Updates can be installed in the brewing machine via the “Update” menu. A new firmware can be imported via “WebUpdate” or “File Update”. When updating the firmware via WebUpdate, the firmware downloads the current version from the Internet from the github repository. When updating via file update, the firmware is uploaded from the local PC. A USB cable or the script from the installation are not required.
+Updates can be installed via the ‘Update’ menu. New firmware can be installed via ‘WebUpdate’ or ‘File Update’. When updating the firmware via WebUpdate, the firmware loads the current version from the Internet from the github repository. When updating via File Update, the firmware is uploaded from the local PC. A USB cable or the script from the installation are not required.
 
-The WebUpdate restarts the bread machine several times. First, the firmware is updated. After another restart, the framework will be updated. The WebUpdate is logged in the webUpdateLog.txt file.
+The memory area of an ESP microcontroller is divided into firmware and file system. During operation, configurations, recipes and other files can only be saved or changed in the file system. The firmware area can only be accessed read-only. During an update, the firmware area is completely reinstalled and individual files are replaced in the file system.
 
-If the _WebUpdate with trial version_ option is activated, the WebUpdate will be carried out with the current developer version. These are test versions. New functions in the firmware are (usually) initially stored in the repository as a test version. Trial versions are not recommended for productive use.
+### WebUpdate
 
-## FileUpdate
+The WebUpdate restarts the Brautomat several times. Firstly, the firmware is updated. After a further restart, the framework is updated. The WebUpdate process is logged in the webUpdateLog.txt file.
 
-An update of the firmware via the FileUpdate selection takes place in just a few steps:
+If the option _WebUpdate with test version_ is activated, the WebUpdate is carried out with the current developer version. These are test versions. New functions in the firmware are (usually) initially stored as a test version in the github repository. Test versions are not recommended for productive use.
 
-Download latest [firmware](https://github.com/InnuendoPi/Brautomat/blob/main/tools/Firmware.zip). The ZIP archive will then be unpacked.\
-In the Brautomat web interface, select the Update menu item and then FileUpdate. A simple update website (picture 1) is displayed:
+### FileUpdate
 
-![FileUpdate](/docs/img/dateiupdate2.jpg)
+Updating the firmware via the FileUpdate selection takes just a few steps:
 
-Under Firmware with the "Select file" button, the file _Brautomat.ino.bin_ must now be selected from the Firmware.ZIP archive (in Figure 2). Clicking on Update Firmware starts the update.
+Firstly, the current firmware must be downloaded. The ZIP archive is then unpacked.\
+In the Brautomat web interface, select the Update menu item and then FileUpdate. A simple update web page is displayed (Fig. 1):
 
-The Brautomat file system can also be updated.
+![DateiUpdate](/docs/img/dateiupdate2.jpg)
 
-_Please note:_
+Under Firmware with the ‘Select file’ button, the file _Brautomat.ino.bin_ or _Brautomat32.ino.bin_ must now be selected from the Firmware.ZIP archive (in Fig. 2). Click on Update Firmware to start the update.
 
-Update FileSystem deletes all settings and configurations. In addition to the configuration, this also includes mash brew boiler profiles and recipes. The Update FileSystem function is intended more for emergencies. In almost all cases, a file update firmware followed by a WebUpdate is the right choice because the WebUpdate updates individual files in the file system after the firmware update. The Update FileSystem function rebuilds the file system.
+The file system of the Brautomat can also be updated.
+
+> **note:**\
+The Update FileSystem function recreates the file system. Update FileSystem overwrites all settings and configurations. In addition to the configuration, this also includes MashSud boiler profiles and recipes. In almost all cases, a FileUpdate Firmware followed by a WebUpdate is the right choice because the WebUpdate updates individual files in the file system after the Update Firmware.

@@ -1,28 +1,28 @@
-# Funktionen der Buttons
+# Funktionen der Schaltflächen
 
-## Beschreibung aller Buttons
+## Beschreibung aller Schaltflächen
 
-Der Maischeplan verfügt über Buttons zum Editieren, verschieben oder Löschen einer Zeile.
+Der Maischeplan verfügt über Schaltflächen zum Bearbeiten, Verschieben oder Löschen einer Zeile.
 
-### Der Speichern Button Maischeplan
+### Der Speichern-Button des Maischeplans
 
-Mit dem Speichern Button in der Kopfzeile der Tabelle Maischeplan wird der Inhalt der Tabelle in eine Datei (JSON) abgespeichert.
+Der Speichern-Button in der Kopfzeile der Tabelle Maischeplan speichert den Inhalt der Tabelle in eine Datei (JSON).
 
-### Der Aktualisiere Maischeplan Button (Reload Button)
+### Der Button Maischeplan aktualisieren (Reload Button)
 
-Mit dieser Funktion wird die Tabelle neu aus der Datei eingelesen. Zu beachten gilt, dass alle nicht gespeicherten Änderungen (grüner Button) ohne Rückfrage verworfen werden. Dieser Button hat als zweite Funktion die Exit Editormodus Funktion.
+Mit dieser Funktion wird die Tabelle aus der Datei neu eingelesen. Dabei ist zu beachten, dass alle nicht gespeicherten Änderungen (grüner Button) ohne Rückfrage verworfen werden. Dieser Button hat als zweite Funktion die Exit Editormodus Funktion.
 
-### Der Exit Editormodus Button (Exit Button)
+### Der Exit-Button des Editors
 
-Mit dieser Funktion wird der Editormodus ohne speichern der Änderungen im Maischeplan verlassen.
+Mit dieser Funktion wird der Editormodus verlassen, ohne die Änderungen im Maischeplan zu speichern.
 
-### Der Löschen Button
+### Der Löschen-Button
 
-Mit dem Löschen Button wird die gesamte Tabelle geleert. Zu beachten gilt, dass erst mit Klick auf Tabelle Speichern (grüner Button) die Änderung übernommen wird.
+Mit dem Löschen-Button wird die gesamte Tabelle gelöscht. Es ist zu beachten, dass die Änderungen erst mit Klick auf Tabelle speichern (grüner Button) übernommen werden.
 
-### Der + Button
+### Die + Schaltfläche
 
-Mit dem Plus-Button wird eine neue Rast hinzugefügt. Zu beachten gilt, dass die neue Zeile in der Tabelle mit Klick auf das blaue Speichern-Symbol in der Tabellenzeile übernommen werden muss und abschließend mit einem Klick auf das grüne Speichern-Symbol die Tabelle gespeichert wird.
+Mit dem Plus-Button wird eine neue Zeile hinzugefügt. Es ist zu beachten, dass die neue Zeile in der Tabelle mit Klick auf das blaue Speichern-Symbol in der Tabellenzeile übernommen werden muss und abschließend mit Klick auf das grüne Speichern-Symbol die Tabelle gespeichert wird.
 
 ### Der Graph Button
 
@@ -41,3 +41,21 @@ Der Button Maischeplan anzeigen hat eine collapse Funktion: während des Brauen 
 ### Der Chart anzeigen Button (Collapse Button)
 
 Der Button Chart anzeigen hat eine collapse Funktion: während des Brauen verbraucht die Grafik unnötig viel Bildschirmfläche. Mit collapse lässt sich die Grafik ein- und ausklappen. Die Grafik wird im eingeklappten Zustand ebenfalls weiter aktualisiert.
+
+### Der Graph-Button
+
+Mit dem Graph Button kann die visuelle Darstellung des Temperaturverlaufs ein- und ausgeblendet werden. Zusätzlich können einzelne Graphiken durch Anklicken des Graphiknamens ein- und ausgeblendet werden. Die Voreinstellung ist sichtbar.
+
+*Tipp: Wenn der Temperaturverlauf nicht von Interesse ist, einfach auf den grünen Graph Button klicken. Sobald die Grafik ausgeblendet ist, einmal die Systemkonfiguration öffnen und auf Speichern klicken. Damit wird die Einstellung Grafik Temperaturverlauf aus- bzw. einblenden gespeichert*.
+
+### Einstellungen Maischeplan Button (Datenbank Button)
+
+In den Einstellungen zum Maischeplan stehen neben dem Maischeplannamen und der Zeitsteuerung auch der Maischeplanwechsel, das Importieren, Exportieren sowie das Löschen von Maischeplänen zur Verfügung.
+
+### Die Schaltfläche Maischeplan anzeigen (Schaltfläche zuklappen)
+
+Der Button Maischeplan anzeigen hat eine Klappfunktion: Während des Brauens nimmt der Maischeplan unnötig viel Bildschirmfläche ein. Mit collapse kann die Tabelle Maischeplan ein- und ausgeklappt werden.
+
+### Die Schaltfläche Diagramm anzeigen (Schaltfläche Zusammenklappen)
+
+Der Button Chart anzeigen hat eine collapse Funktion: Während des Brauens nimmt die Grafik unnötig viel Bildschirmfläche ein. Mit collapse kann die Grafik ein- und ausgeklappt werden. Die Grafik wird auch im eingeklappten Zustand weiter aktualisiert.
