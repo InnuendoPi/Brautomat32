@@ -48,13 +48,13 @@ A [LED pressure switch](https://www.amazon.de/dp/B09WXPJQN3?psc=1&ref=ppx_yo2ov_
     > a larger case with display and two PWM modules\
     > Cover dimensions WxH 26x9cm\
     > File name: InnuCase-1\
-    ![InnuCase #1](/docs/img/Lid-1_Display_2PWM.jpg)
+    ![InnuCase #1](/docs/img/Deckel-1_Display_2PWM.jpg)
 
 * InnuCase #2
     > a smaller case with display\
     > cover dimensions WxH 20x9cm\
     > file name: InnuCase-2\
-    ![InnuCase #1](/docs/img/Lid-2_Display.jpg)
+    ![InnuCase #1](/docs/img/Deckel-2_Display.jpg)
 
 ## Housing screw connection
 

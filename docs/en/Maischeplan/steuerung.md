@@ -41,6 +41,6 @@ The Next button is used to jump to the next step in the mashing plan or, if it w
 
 The Collapse button collapses or collapses the mash plan table.
 
-![Mash plan](/docs/img/Mash-plan-display.jpg)
+![Mash plan](/docs/img/Maischeplan-anzeigen.jpg)
 
 The collapse button remains visible after brewing has started. All buttons for editing the mash plan are hidden when brewing starts.
