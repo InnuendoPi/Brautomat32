@@ -27,7 +27,7 @@ The case is divided into the two assemblies case base and case lid. Each assembl
 
 ## Wall bracket for the FreggaCase
 
-![Wall bracket](/docs/img/FreggaCase_Wall_bracket.jpg)
+![Wall bracket](/docs/img/FreggaCase_Wandhalterung.jpg)
 
 ## Materials used for the case structure
 

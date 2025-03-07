@@ -80,7 +80,7 @@ at the end of a mashing process, an iodine sample is used to determine that the 
 
 ## Function and application of autonext
 
-![Mash plan autonext](/docs/img/Mash-plan-autonext.jpg)
+![Mash plan autonext](/docs/img/Maischeplan-autonext.jpg)
 
 The first step of the mash plan with the name _Mash-in 50°C_ has a resting time of 10 minutes and a deactivated _autonext_. The picture shows the situation when the rest timer has reached 10 minutes: The timer has counted down to 00:00 remaining time. The play button automatically changes to red. The toast message ‘Click play button’ appears at the bottom right. The induction hob switches off. The brewing process waits for a click on the play button.
 
@@ -90,7 +90,7 @@ The second mashing step, labelled _Maltose rest 63°C_, has a rest temperature o
 
 * At the end of a rest with _Autoext_ activated, the mashing process continues automatically and the GGM IDS remains switched on.
 
-![Mash plan autonext](/docs/img/Mash-plan-autonext2.jpg)
+![Mash plan autonext](/docs/img/Maischeplan-autonext2.jpg)
 
 The _autonext_ property in the seventh step _Mash 78°C_ is not activated. If the Brauomat encounters a deactivated autonext, the Brauomat ends the current rest after the rest time has elapsed and sets the power of the induction hob to 0% (off). In this state, the ‘Play button’ is displayed in red. To continue the brewing process, the Play button must be clicked.
 
@@ -136,15 +136,15 @@ The control command for an actor can be specified with a power, e.g. PUMP:60. Th
 
 The IDS:50 control command sets the maximum output power of the induction hob to 50%. Post-cooking can also be set to 75% power with HLT:75.
 
-![IDS control command](/docs/img/special_function_sud1.jpg)
+![IDS control command](/docs/img/sonderfunktion_sud1.jpg)
 
 The control command SOUTH:Boil thick mash with a resting time of 10 minutes and a resting temperature of 100 degrees carries out a mashing step on a second induction hob. The rest timer is started as soon as the rest temperature is reached.
 
-![Control command SUD](/docs/img/special_function_sud2.jpg)
+![Control command SUD](/docs/img/sonderfunktion_sud2.jpg)
 
 The control command SUD:Boil thick mash with a rest temperature of 100 degrees but without rest time switches on the second induction hob, starts the PID controller and jumps directly to the next step in the mash schedule.
 
-![Control command SUD](/docs/img/special_function_sud3.jpg)
+![Control command SUD](/docs/img/sonderfunktion_sud3.jpg)
 
 The mashing step saccharification 72°C is carried out on the first induction hob ‘Mash’. The PID controller regulates the power required for the mash boiler. At the same time, the PID controller regulates the power required for the ‘brew’ boiler.
 
@@ -164,7 +164,7 @@ _Note: The mash, brew and HLT boilers can be operated simultaneously with the co
 
 Example: Decoction with two induction hobs:
 
-![IDS and SUD control command](/docs/img/special_function_sud4.jpg)
+![IDS and SUD control command](/docs/img/sonderfunktion_sud4.jpg)
 
 Due to the restriction ‘the first boiler “mash” must always be operated with a resting time’, there is a simple procedure for the decoction processes: the partial mash to be boiled must be placed in the ‘mash’ boiler and the partial mash to be kept at temperature must be placed in the ‘brew’ boiler.
 
@@ -174,7 +174,7 @@ Given a pour of 7kg and a main pour of 28 litres. The total mass is 35kg\
 
 Using the special function IDS:<power in %>, the power of the RCD IDS can be set so that the heating rate during mashing is 1°C per minute.
 
-![IDS power control command](/docs/img/IDS-special-function.jpg)
+![IDS power control command](/docs/img/IDS-Sonderfunktion.jpg)
 
 For explanations of the calculation method, see: Parameters of the RCD IDS - Temperature control - Maximum power of the IDS._
 

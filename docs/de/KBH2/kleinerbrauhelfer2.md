@@ -18,13 +18,9 @@ Im Tab Maischplan bietet der kbh2 vier verschiedene Arten Malze zur Maische hinz
 
 Das Kochmaischverfahren von Earl Scheid ist sehr gut mit dem keinenBrauhelfer2 zu planen und mit dem Brautomat sehr einfach automatisiert durchzuführen. Zu beachten gilt, dass zwischen den zwei Teilmaischen ein Maischeschritt Zubrühen (Hauptguss und Malze Teil2) erforderlich ist. Je nach Volumen Malze 2 ist die empfohlene Vorgehensweise mit deaktiviertem autonext für den Schritt Zuberühen zu arbeiten, um ausreichend Zeit für das Einmaischen von Malze 2 zu haben, bevor die zweite Maltoserast beginnt. Alternativ kann als Zieltemperatur im Mischkreuz Hauptguss/Malze 1 zu Hauptguss/Malze 2 ca. 60°C mit direktem (autonext) Aufheizen auf 63°C gewählt werden.
 
-![Beispiel](https://kleiner-brauhelfer.de/docs/programmreiter/rezept/rezept-maischplan.html#variation-das-earlsche-kochmaischverfahren)
-
 ### Beispiel 2: kbh2 Dekoktion
 
 Dekoktionsverfahren unterstützt der Brautomat mit halber Automatik. Wenn bspw. eine Teilmaische gezogen wurde, benötigt der Brautomat eine Information (Klick auf Play), wenn dieser Teilschritt abgeschlossen ist. Die Rezepterstellung im kbh2 sowie der Import in den Brautomat erleichtern den Brautag mit Dekoktion. Eine Beschreibung über die Möglichkeiten ist in der Anleitung vom kleinenBrauhelfer2 zu finden.
-
-![Beispiel](https://kleiner-brauhelfer.de/docs/programmreiter/rezept/rezept-maischplan.html#die-dekoktion)
 
 ## Der kbh2 Tab Kochen
 
