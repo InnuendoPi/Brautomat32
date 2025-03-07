@@ -25,7 +25,6 @@
 * [Circuit board](Platine/plat.md)
   * [Connectors](Platine/Anschluesse.md)
   * [Setting up circuit board V2](Platine/Aufbau-der-Platine2.md)
-  * [Setting up circuit board V1](Platine/Aufbau-der-Platine.md)
 * [Display](Display/dis.md)
 * [3D print case](Case/case.md)
   * [InnuCase](Case/Innu/InnuCase.md)
