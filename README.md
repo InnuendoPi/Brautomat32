@@ -19,7 +19,7 @@ ESP32 D1 Mini NodeMCU and Brautomat32pIO is recommended.
 
 > **note:**
 
-* You cannot update (file or WebUpdate) from Brautomat32 to Brautomat32pIO due to different partition layouts. You need to reflash the firmware.\
+* You cannot update (file or WebUpdate) from Brautomat32 to Brautomat32pIO due to different partition layouts. You need to reflash the firmware.
 * For compatibility reasons, a Brautomat32 version based on ESP32-IDF4 still exists for the ESP32 but due to end of life IDF4 not recommended.
 
 ## ▶️ Installation
