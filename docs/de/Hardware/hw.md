@@ -42,8 +42,6 @@ Nicht alle Verbraucher benötigen ein leistungsstarkes SSR. Bspw. können Aktore
 | Relaisboard Keenso 4 Kanal | [amazon](https://www.amazon.de/dp/B07QKHPBVP/?coliid=IW0L994AVYJSX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | Relaisboard Keenso 2 Kanal | [amazon](https://www.amazon.de/dp/B07PY7LF9Z/?coliid=IHJD818Z5259W&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 
-Das Relaisboard kann per Jumpereinstellung auf High Trigger (es fließt Strom) und Low Trigger (es fließt kein Strom) eingestellt werden. Diese Möglichkeit macht das Relaisboard ideal für den Einsatz mit einem ESP8266 oder einer Port Erweiterung PCF8574.
-
 ### Ringheizelemente
 
 Ein Ringheizlement ist beim Kochen der Würze nützlich, wenn die Leistung der GGM IDS nicht mehr oder nur so eben ausreicht, um die Würze wallend zu kochen. Eine gute Auswahl an Ringheizelementen gibt es beim [Douglas von Crafthardware](https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel).

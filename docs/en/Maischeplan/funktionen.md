@@ -86,7 +86,7 @@ The first step of the mash plan with the name _Mash-in 50°C_ has a resting time
 
 * At the end of a pause with _autonext_ deactivated, the brewing process is stopped and the GGM IDS is switched off.
 
-The second mashing step, labelled _Maltose rest 63°C_, has a rest temperature of 63°C and a rest time of 25 minutes. In this step, the Brauomat first controls the induction hob to 63°C. As soon as this 63°C is reached, the Brauomat starts the timer. A rest timer is a stopwatch that counts down to 00:00 (0 minutes : 0 seconds). When this timer has reached the resting time of 25 minutes, the automatic brewer checks the _autonext_ property. If _autonext_ is activated, the Brauomat automatically jumps to the next step in the mash schedule. In this example recipe, this is the ‘Saccharification 72°C’ step. The saccharification step has a rest temperature of 72°C. The Brauomat automatically increases the power of the induction hob to reach the new resting temperature.
+The second mashing step, labelled _Maltose rest 63°C_, has a rest temperature of 63°C and a rest time of 25 minutes. In this step, the Brauomat first controls the induction hob to 63°C. As soon as this 63°C is reached, the Brauomat starts the timer. A rest timer is a stopwatch that counts down to 00:00 (0 minutes : 0 seconds). When this timer has reached the resting time of 25 minutes, the Brautomat checks the _autonext_ property. If _autonext_ is activated, the Brauomat automatically jumps to the next step in the mash schedule. In this example recipe, this is the ‘Saccharification 72°C’ step. The saccharification step has a rest temperature of 72°C. The Brauomat automatically increases the power of the induction hob to reach the new resting temperature.
 
 * At the end of a rest with _Autoext_ activated, the mashing process continues automatically and the GGM IDS remains switched on.
 
@@ -96,9 +96,9 @@ The _autonext_ property in the seventh step _Mash 78°C_ is not activated. If th
 
 In this image, the active idle state is ‘Boiling’, the current power of the GGM IDS is displayed as 0% and the play button is red. This state is reached exactly when the rest _boiling 78°C_ is finished and the Brautomat is waiting for a user action to continue.
 
-While in the first example of _autonext_ the play button is usually clicked directly in the mash-in step to continue, in the second example of mash-out a longer time can pass for lautering and the lautering rest. The Brauomat is left in the ‘Click play button’ state. All actuators can be used in this state.
+While in the first example of _autonext_ the play button is usually clicked directly in the mash-in step to continue, in the second example of mash-out a longer time can pass for lautering and the lautering rest. The Brauomat is left in the ‘Click play button’ state. All actors can be used in this state.
 
-_Difference between Autonext and Pause: If Autonext is deactivated at the end of the rest, the RCD IDS is switched off. The pause button stops the latching timer, but the GGM IDS remains switched on and the automatic brewer regulates the required power of the GGM IDS._
+_Difference between Autonext and Pause: If Autonext is deactivated at the end of the rest, the RCD IDS is switched off. The pause button stops the latching timer, but the GGM IDS remains switched on and the Brautomat regulates the required power of the GGM IDS._
 
 The optional special functions are described in the following sections. Brautomat beginners can skip the description of the special functions.
 
@@ -120,7 +120,7 @@ Note: The following topics on the control commands are optional and not relevant
 
 ## Control commands
 
-A second special function is control commands for the induction hobs mash and brew, post-cast and actuators. The syntax for the mash step is
+A second special function is control commands for the induction hobs mash and brew, post-cast and actors. The syntax for the mash step is
 
 * Actor name:Power
 
@@ -128,11 +128,11 @@ The power can be either ON or OFF or a number between 0 and 100%. The OFF state 
 
 ![Aktor Steuerbefehl](/docs/img/Maischeplan-Aktoren.jpg)
 
-The mash plan in the picture switches actuators at three points. The agitator is switched on right at the beginning: Agitator:ON
+The mash plan in the picture switches actors at three points. The agitator is switched on right at the beginning: Agitator:ON
 
-Shortly before the end of the mash plan, the agitator is switched off: Agitator:OFF and the post-pour is switched on: Post-pour:ON. Actuator names must not contain any special characters (except - and _), umlauts or spaces and must be unique. The web interface checks the entries automatically.
+Shortly before the end of the mash plan, the agitator is switched off: Agitator:OFF and the post-pour is switched on: Post-pour:ON. Actor names must not contain any special characters (except - and _), umlauts or spaces and must be unique. The web interface checks the entries automatically.
 
-The control command for an actuator can be specified with a power, e.g. PUMP:60. The pump actuator is then switched on at 60%. This assumes that this actuator has been activated for PWM. If the control command is executed for an actuator without PWM, the power 60% is replaced by ON or 100%. The dwell temperature and the dwell time must be set to 0 for control commands for actuators.
+The control command for an actor can be specified with a power, e.g. PUMP:60. The pump actor is then switched on at 60%. This assumes that this actor has been activated for PWM. If the control command is executed for an actor without PWM, the power 60% is replaced by ON or 100%. The dwell temperature and the dwell time must be set to 0 for control commands for actors.
 
 The IDS:50 control command sets the maximum output power of the induction hob to 50%. Post-cooking can also be set to 75% power with HLT:75.
 
@@ -221,7 +221,7 @@ The mash schedule in the illustration begins with the ‘Heating up the main pou
 
 The rest timer starts at 59°C. The resting time is zero minutes. The Brautomat jumps to step 2 in the next line.
 
-The IDS:65 control command sets the maximum output of the IDS to 65%. The automatic brewer jumps to the next line in step 3.
+The IDS:65 control command sets the maximum output of the IDS to 65%. The Brautomat jumps to the next line in step 3.
 
 It is now heated from 59°C to the target temperature in the ‘Mashing’ step. The maximum output of the IDS is 65%.
 

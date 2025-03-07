@@ -12,13 +12,7 @@ Das Display benötigt für den Betrieb mit dem Brautomat eine Firmware. In der T
 
 ## Display anschließen
 
-Bevor ein Display genutzt werden kann, müssen die Jumper (Steckbrücken) J1 und J2 auf der Platine überprüft werden:
-
-* Jumper J1: muss auf Position 1-2 gesteckt sein
-* Jumper J2: muss auf Position 1-2 gesteckt sein
-* Jumper J3: wird mit Nextion Display nicht genutzt und sollte auf 2-3 gesteckt sein
-
-Anschließend werden die 4 Kabel vom Display mit der Platine verbunden
+Das Display wird mit 4 Kabeln mit der Platine verbunden
 
 | Kabel         | Nextion Display | Anschlussklemme Platine  |
 | ------------- | --------------- | ------------------------ |
@@ -43,13 +37,13 @@ Die Seite MaischeSud ist die bevorzugte Seite beim Brauen. Auf dem Dispaly werde
 * Ziel-Temperatur (Rast-Temperatur)
 * verbleibende Rastdauer
 
-angezeigt. In der unteren Zeile wird zusätzlich die nächste Rast angezeigt. Die Zeitangabe links ist die Uhrzeit, zu welche die nächste Rast starten wird. Das grüne Play Symbol rechts zeigt an, dass die nächste Rast automatisch startet.
+angezeigt. In der unteren Zeile wird zusätzlich die nächste Rast angezeigt. Die Zeitangabe links ist die Uhrzeit, zu welche die nächste Rast starten wird. Das grüne Play Symbol rechts zeigt an, dass die nächste Rast automatisch startet (autonext).
 
 ## Ansicht Kesselübersicht
 
 ![Kesselübersicht](/docs/img/kettlepage-sm.jpg)
 
-Die Kesselübersicht wurde vom MQTTDevice übernommen und zeigt den MaischeSud Kessel und falls vorhanden den Nachguss mit den Informationen Ist- und Ziel-Temnperatur an.
+Die Kesselübersicht zeigt den MaischeSud Kessel und falls vorhanden den Sud und Nachguss Kessel mit den Informationen Ist- und Ziel-Temnperatur an.
 
 _Hinweis: die Ansicht Kesselübersicht zeigt in der unteren Zeile die Adresse vom Brautomat: entweder den mDNS Namen oder die IP Adresse._
 

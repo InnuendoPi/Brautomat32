@@ -1,40 +1,40 @@
-# Anschlüsse
+# Connections
 
 ![Platine](/docs/img/Anschluesse.jpg)
 
-## Die GGM IDS anschließen
+## Induction hob GGM IDS
 
-Die Voreinstellung für das Induktionskochfeld lautet:
+The default setting for the induction hob is:
 
-| Typ         | Farbe | Anschluss  |
+| type         | color | connection  |
 | ------------- | --------------- | ------------------------ |
-| Interrupt     | blau/grün | D5 |
-| Command       | gelb | D6 |
-| Relay         | weiß | D7 |
-| Spannung +    | rot  | 5V/Vcc |
-| Spannung -    | schwarz  | GND |
+| Interrupt     | blue/green | - (unset) or D5 |
+| Command       | yellow | D6 |
+| Relay         | white | D7 |
+| Power +    | red  | 5V/Vcc |
+| Power -    | black  | GND |
 | |  | |
 
-Auf der Platinenabbildung sind die 5 Anschlüsse für das Induktionskochfeld mit "GGM" markiert. Das GGM Anschlusskabel vom Bedienfeld hat ein blaues Kabel, während das Ersatzkabel ein grünes Kabel hat.
+On the wiring diagram, the 5 connections for the induction hob are labeled “GGM”. The GGM connection cable from the control panel has a blue cable, while the replacement cable has a green cable.
 
-Der Brautomat kann inklusive Display mit der Spannungsversorgung von der GGM IDS betrieben werden. Hierzu müssen lediglich das rote und das schwarze Kabel in die markierten Schraubklemmen eingesetzt werden. Eine weitere zus. Spannungsversorgung darf in dem Fall nicht an den ESP Mikrocontroller angeschlossen werden.
+The Brauomat including display can be operated with the power supply of the GGM IDS. To do this, only the red and black cables need to be plugged into the marked screw terminals. In this case, an additional power supply must not be connected to the ESP microcontroller.
 
-Alternativ kann der Brautomat mit einem 5V DC Netzteil betrieben werden. In diesem Fall wird das rote Kabel von der GGM IDS nicht angeschlossen.
+Alternatively, the Brautomat can be operated with a 5V DC power supply unit. In this case, the red cable is not connected to the GGM IDS.
 
-## Temperatursensoren Dallas DS18B20 anschließen
+## Connecting Dallas DS18B20 temperature sensors
 
-Der Brautomat unterstützt bis zu drei Temperatursensoren DS18B20. Der Anschluss ist auf der Platinenabbildung mit DS18B20-1 bis DS18B20-3 markiert. Die Farben der Sensorkabel sind unterschiedlich. Bei sehr günstigen Sensoren ohne Beschriftung oder Beschreibung ist die Farbgebung meist schwarz - rot - gelb.
+The Brautomat supports up to three DS18B20 temperature sensors. The connection is marked DS18B20-1 to DS18B20-3 on the circuit board illustration. The colors of the sensor cables are different. For very inexpensive sensors without labeling or description, the color scheme is usually black - red - yellow.
 
-| Typ         | Farbe | Anschluss  |
+| type         | color | connection  |
 | ------------- | --------------- | ------------------------ |
-| Spannung +   | grün oder rot | Vcc |
-| Datenleitung | weiß oder gelb | Data |
-| Spannung -   | braun oder schwarz  | GND |
+| Power +   | green or red | Vcc |
+| Data | white or yellow | Data |
+| Power -   | brown or black  | GND |
 | |  | |
 
-## Temperatursensoren PT100x und MAX31865 anschließen
+## Connecting PT100x sensors and MAX31865 amplifier
 
-| Typ         | Anschluss  |
+| type         | connection  |
 | ------------- | ------------------------ |
 | SPI clock in | SCLK D9 |
 | SDO MasterIn SlaveOut | MISO D10 |

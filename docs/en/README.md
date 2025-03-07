@@ -19,7 +19,7 @@ The manual is divided into three main areas:
   * Basic setup
   * The mashing plan
   * AutoTune PID
-  * Sensors, actuators, and sparging
+  * Sensors, actors, and sparging
 * The Hardware: The circuit board and suitable extensions
   * Structure and connections of the circuit board
   * The display

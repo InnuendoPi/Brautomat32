@@ -1,35 +1,35 @@
-# Erstelle eine neue Sprachdatei
+# Create a new language file
 
-Erstelle eine Kopie der Sprachdatei data/language/de.json und benenne die Datei mit zwei Zeichen in eine neue Sprachdatei:
+Create a copy of the language file data/language/en.json and rename the file with two characters to a new language file:
 
-Spanisch: es.json\
-Französisch: fr.json\
-Dänisch: dk.json\
-Niederländisch: nl.json\
+Spanish: es.json\
+French: fr.json\
+Danish: dk.json\
+Dutch: nl.json\
 etc.
 
-Übersetze in jeder Zeile alle Wörter ab dem Doppelpunkt:
+Translate all words from the colon in each line:
 
 ```bash
  {
-   "SPEICHERN": " archivo",
-   "SCHLIESSEN": " cerca",
+   “SAVE": ‘ archivo’,
+   “CLOSE": ‘ cerca’,
    ...
  }
 ```
 
-Öffne im Web Interface vom Brautomat den Explorer. Kopiere die neue Sprachdatei auf Deinen Brautomat in den Ordner /language. Abschließend muss die neue Sprachdatei dem Brautomat bekannt gemacht werden: editiere die Datei /lang.js
+Open the Explorer in the web interface of the Brautomat. Copy the new language file to your Brautomat in the /language folder. Finally, the new language file must be made known to the Brautomat: edit the file /lang.js
 
 ```bash
 const supportedLocales = ["de", "en"];  // language files 
 ```
 
-Wenn Du bspw. eine spanische Sprachdatei es.json hinzugefügt hast, dann editiere die Datei /lang.js wie folgt:
+For example, if you have added a Spanish language file es.json, then edit the file /lang.js as follows:
 
 ```bash
-const supportedLocales = ["de", "en", "es"];  // language files 
+const supportedLocales = [“de”, “en”, “es”]; // language files 
 ```
 
-Speichere die Datei mit der Tastenkombination Strg-S und starte den Brautomat neu. Nun kannst Du die neue Sprache im WebInterface auswählen.
+Save the file with the key combination Ctrl-S and restart the Brautomat. Now you can select the new language in the WebInterface.
 
-_Teile eine neue Sprachdatei mit anderen Usern! Sende mir Deine Sprachdatei oder Deine Korrektur._
+Share a new language file with other users! Send me your language file or your correction.

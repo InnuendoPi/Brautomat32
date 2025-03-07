@@ -1,6 +1,6 @@
-# Brautomat Gehäuse 3D Druck
+# Brautomat housing 3D printing
 
-Aktuell sind zwei unterschiedlcihe Gehäuse für den Brautomat verfügbar:
+There are currently two different cases available for the Brautomat:
 
-* das InnuCase
-* das FreggaCase
+* the InnuCase
+* the FreggaCase

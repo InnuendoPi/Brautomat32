@@ -20,7 +20,7 @@ ESP32 D1 Mini NodeMCU and Brautomat32pIO is recommended.
 > **note:**
 
 * You cannot update (file or WebUpdate) from Brautomat32 to Brautomat32pIO due to different partition layouts. You need to reflash the firmware.
-* For compatibility reasons, a Brautomat32 version based on ESP32-IDF4 still exists for the ESP32 but due to end of life IDF4 not recommended.
+* For compatibility reasons, a Brautomat32 version based on ESP32-IDF4 still exists but due to end of life IDF4 not recommended.
 
 ## ▶️ Installation
 
@@ -73,7 +73,7 @@ Brautomat is a stand alone brewing device and offers:
 
 ## 📚 Documentation
 
-Detailed instructions availible on gitbook: [Instructions & description](https://innuendopi.gitbook.io/brautomat32/)\
+Detailed instructions: [Instructions & description](https://innuendopi.gitbook.io/brautomat32/)\
 Forum Hobbybrauer (german): [Discussion & News](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
 Last changes: [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
 
@@ -87,11 +87,11 @@ The Brautomat is operated via web browser. You can use your tablet, smartphone o
 
 ## 💻 Nextion HMI Touchdisplay
 
-Brautomat offers three different displays:
+Brautomat offers three different display views:
 
-* Overview
-* Mash tun
-* Manual control cooking
+* Overview: all kettles are displayed
+* Mash tun: MaischeSud kettle (first kettle) ist displayed
+* Manual control cooking: only usable with induction hob GGM IDS2
 
 ![Overview](docs/img/kettlepage-sm.jpg) ![Mash tun](docs/img/brewpage-sm.jpg) ![Manual control](docs/img/induction-mode-sm.jpg)
 
@@ -107,7 +107,7 @@ _Support this project and translate Brautomat into a new language or correct exi
 
 ![Platine](docs/img/Platine21.jpg)
 
-A board for the Arduino ESP controller is available. In addition to the screw terminal blocks for the GPIOs, the board also offers a separate connection for the induction hob and three connections for temperature sensors. The Gerber file is stored in the Gehaeuse folder. The board 2.1 can be operated with both the ESP8266 and the ESP32.
+A board for the ESP32 D1 Mini NodeMCU and ESP8266 D1 mini is available. In addition to the screw terminal blocks for the GPIOs, the board also offers a separate connection for the induction hob GGM IDS and three connections for temperature sensors Dallas DS18B20. The Gerber file is stored in the Gehaeuse folder. The board 2.1 can be operated with both ESP32 and ESP8266 (only D1 mini varaints).
 
 ## 📗 Case
 

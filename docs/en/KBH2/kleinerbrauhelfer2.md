@@ -1,54 +1,55 @@
 # KleinerBrauhelfer2
 
-Ab Version 2.5.0 hat das Programm [kleinerBrauhelfer2](https://kleiner-brauhelfer.de/) einen Export Filter für den Brautomat. Die Rezeptentwicklung und Gestaltung ist mit dem kleinenBrauhelfer2 in allen erdenklichen Details möglich. Mit dem Spickzettel bietet der kbh2 einen sehr guten und hilfreichen Ablaufplan für die praktische Umsetzung in der Brauküche. Mit dem Export Filter für den Brautomat können alle Schritte übernommen werden.
+As of version 2.5.0, the program [kleinerBrauhelfer2](https://kleiner-brauhelfer.de/) has an export filter for the brewing machine. Recipe development and design is possible with the kleinerBrauhelfer2 in every conceivable detail. With the cheat sheet, the kbh2 offers a very good and helpful flow chart for practical implementation in the brewing kitchen. All steps can be transferred using the export filter for the brewing machine.
 
-## Der kbh2 Tab Maischplan
+## The kbh2 mashing plan tab
 
-Im Tab Maischplan bietet der kbh2 vier verschiedene Arten Malze zur Maische hinzuzufügen: Einmaischen, Aufheizen, Zubrühen und Dekoktion. Alle vier Arten werden im Brautomat unterstützt. Der Typ Einmaischen wird automatisch mit deaktiviertem autonext eingefügt. Aufheizen und Zubrühen mit aktiviertem autonext. Die Dekoktion wird mit deaktivertem autonext übernommen.
+The kbh2 offers four different ways of adding malt to the mash in the Mashing plan tab: Mashing in, Heating up, Brewing in and Decoction. All four types are supported in the brewing machine. The mashing-in type is added automatically with autonext deactivated. Heating and brewing with autonext activated. The decoction is taken over with deactivated autonext.
 
-![Kochen](/docs/img/kbh2-maischplan.jpg)
+![boiling](/docs/img/kbh2-maischplan.jpg)
 
- Der Brautomat benötigt einen Maischeschritt "Abmaischen", um das Ende vom Maischen und den Übergang zum Läutern zu erkennen. Es sollte in kbh2 Maischplan am Ende ein Schritt Abmaischen vom Typ "Aufheizen" mit 76°C oder höher und einer Dauer von 1 Minute angefügt werden. In dieser Kombination wird Abmaischen vom Brautomat erkannt und mit deaktiviertem autonext eingefügt.
+ The Brautomat requires a “Mash off” mashing step to recognize the end of mashing and the transition to lautering. In kbh2 Maischplan, a mash-off step of the type “Heating up” with 76°C or higher and a duration of 1 minute should be added at the end. In this combination, mashing down is recognized by the brewing machine and inserted with autonext deactivated.
 
-![Kochen](/docs/img/kbh2-maischplan2.jpg)
+![boiling](/docs/img/kbh2-maischplan2.jpg)
 
-### Beispiel 1: kbh2 Earl Scheidt Kochmaischverfahren
+### Example 1: kbh2 Earl Scheidt boil mashing proccess
 
 [Earl Scheid](http://hb-tauschboerse.bplaced.net/Neues_Maischverfahren.htm)
 
-Das Kochmaischverfahren von Earl Scheid ist sehr gut mit dem keinenBrauhelfer2 zu planen und mit dem Brautomat sehr einfach automatisiert durchzuführen. Zu beachten gilt, dass zwischen den zwei Teilmaischen ein Maischeschritt Zubrühen (Hauptguss und Malze Teil2) erforderlich ist. Je nach Volumen Malze 2 ist die empfohlene Vorgehensweise mit deaktiviertem autonext für den Schritt Zuberühen zu arbeiten, um ausreichend Zeit für das Einmaischen von Malze 2 zu haben, bevor die zweite Maltoserast beginnt. Alternativ kann als Zieltemperatur im Mischkreuz Hauptguss/Malze 1 zu Hauptguss/Malze 2 ca. 60°C mit direktem (autonext) Aufheizen auf 63°C gewählt werden.
+Earl Scheid's boil mashing process is very easy to plan with the keineBrauhelfer2 and very easy to automate with the Brauomat. It should be noted that a mashing step is required between the two partial mashes (main mash and malt part 2). Depending on the volume of malts 2, the recommended procedure is to work with deactivated autonext for the mash-in step in order to have sufficient time to mash in malts 2 before the second maltose rest begins. Alternatively, approx. 60°C with direct (autonext) heating to 63°C can be selected as the target temperature in the main mash/malts 1 to main mash/malts 2 mixing cross.
 
 ![Beispiel](https://kleiner-brauhelfer.de/docs/programmreiter/rezept/rezept-maischplan.html#variation-das-earlsche-kochmaischverfahren)
 
-### Beispiel 2: kbh2 Dekoktion
+### Example 2: kbh2 Decoction
 
-Dekoktionsverfahren unterstützt der Brautomat mit halber Automatik. Wenn bspw. eine Teilmaische gezogen wurde, benötigt der Brautomat eine Information (Klick auf Play), wenn dieser Teilschritt abgeschlossen ist. Die Rezepterstellung im kbh2 sowie der Import in den Brautomat erleichtern den Brautag mit Dekoktion. Eine Beschreibung über die Möglichkeiten ist in der Anleitung vom kleinenBrauhelfer2 zu finden.
+Decoction processes are supported by the semi-automatic Brautomat. If, for example, a partial mash has been drawn, the brewing machine requires information (click on Play) when this partial step has been completed. The recipe creation in kbh2 and the import into the brewing machine facilitate the brewing day with decoction. A description of the possibilities can be found in the instructions of the small brewing assistant 2.
 
 ![Beispiel](https://kleiner-brauhelfer.de/docs/programmreiter/rezept/rezept-maischplan.html#die-dekoktion)
 
-## Der kbh2 Tab Kochen
+## The kbh2 Boil tab
 
-Aus dem kleinenBrauhelfer2 werden die 5 Hopfengabentypen Vorderwürze, Kochbeginn, Kochen, Kochende und Ausschlagen übernommen und in der benötigten Reihenfolge in den Maischeplan vom Brautomat aufgenommen.
+The 5 hop addition types - front wort, start of boil, boil, end of boil and pitching - are taken from the small brewing assistant2 and included in the required order in the mash plan of the brewing machine.
 
-Eine Zeitangabe im kbh2 im Tab Kochen bedeutet "wie lange wird die Hopfengabe gekocht". Aus der Kochdauer ergeben sich u. a. Bittere und Aroma. Siehe hierzu auch die Formelsammlung im kbh2.
-Die kbh2 Zeitangabe "wie lange wird die Hopfengabe gekocht" wird beim Import in den Brautomat in eine Zeitangabe "zu welcher Zeit erfolgt die Hopfengabe" umgewandelt.
+A time specification in kbh2 in the Boiling tab means “how long is the hop addition boiled”. The boiling time determines the bitterness and aroma, among other things. See also the collection of formulas in kbh2.
 
-![Kochen](/docs/img/hopfen.jpg)
+The kbh2 time specification “how long is the hop addition boiled” is converted into a time specification “at what time is the hop addition” when imported into the brewing machine.
 
-### Ein klein wenig hin-und-her rechnen
+![boiling](/docs/img/hopfen.jpg)
 
-Im Bild kbh2 ist die Hopfengabe dargestellt. Die erste Hopfengabe ist "Hallertauer Perle 7% 2020" mit einer Kochdauer von 65 Minuten. Ein zweiter Parameter ist in diesem Zusammenhang wichtig: auf der linken Seite ist die gesamte Kochdauer mit 80 Minuten grün markiert. Die Würze wird also 15 Minuten lang ohne Hopfen gekocht. Die zweite Hopfengabe ist der "Hallertauer Tradition 5.7% 2020" Hopfen mit einer Kochdauer von 15 Minuten. In den letzten 15 Minuten Kochen der Würze hat die Hallertauer Perle von ursprünglich 65 Minuten noch 15 Minuten Kochzeit übrig und die zweite Hopfengabe Hallertauer Tradition kocht 15 Minuten lang von den verbliebenen 15 Minuten Restkochzeit mit. Die letze Hopfengabe wird zum Ausschlagen gegeben, also nach dem Kochende.
+### Some calculations
 
-Die Aufgabe vom Brautomat ist den Zeitpunkt der Hopfengabe beim Brauen anzugeben und am besten mit einem aktustischem Signal an die Hopfenhgabe zu erinnern.
+Figure kbh2 shows the hop addition. The first hop addition is “Hallertauer Perle 7% 2020” with a boiling time of 65 minutes. A second parameter is important in this context: the total boiling time of 80 minutes is marked in green on the left-hand side. This means that the wort is boiled for 15 minutes without hops. The second hop addition is the “Hallertau Tradition 5.7% 2020” hop with a boiling time of 15 minutes. In the last 15 minutes of boiling the wort, the Hallertauer Perle still has 15 minutes of boiling time left from the original 65 minutes and the second addition of Hallertauer Tradition hops boils for 15 minutes of the remaining 15 minutes of boiling time. The last addition of hops is added at the end of the boil.
 
-Vorgegeben ist in diesem Beispiel eine gesamte Kochedauer von 80 Minuten und eine erste Hopfengabe "Hallertauer Perle" mit einer Kochdauer von 65 Minuten. Daraus ergibt sich eine Differenz von 15 Minuten Kochdauer ohne Hopfengabe. Der erste Teilschritt Würzekochen hat eine Dauer von 15 Minuten. Jetzt muss die erste Hopfengabe erfolgen. Die zweite Hopfengabe "Hallertauer Tradition 5.7% 2020" hat eine Kochdauer von 15 Minuten. Von den 65 Minuten sind 15 Minuten lang Hallertauer Perle und Hallertauer Tradition zusammen im in der Würze. 65 Minuten abzüglich 15 Minuten ergibt den zeitlichen Abstand der Hopfengaben von 50 Minuten. Die Hopfengabe Hallertauer Perle muss 50 Minuten vor der Hopfengabe Hallertauer Tradition gegeben werden.
+The task of the brewing machine is to indicate the time of the hop addition during brewing and, ideally, to remind the brewer of the hop addition with an acoustic signal.
 
-Die letzte Hopfengabe "Hallertauer Tradition 5.7% 2020" wird zum Ausschlagen gegeben. Beim Ausschlagen ist das Kochen beendet. Also zählt die Hopfengabe Ausschlagen nicht zur gesamten Kochdauer.
+In this example, a total boiling time of 80 minutes and a first hop addition of “Hallertauer Perle” with a boiling time of 65 minutes are specified. This results in a difference of 15 minutes boiling time without the addition of hops. The first partial wort boiling step has a duration of 15 minutes. The first addition of hops must now take place. The second hop addition “Hallertau Tradition 5.7% 2020” has a boiling time of 15 minutes. Of the 65 minutes, Hallertauer Perle and Hallertauer Tradition are in the wort together for 15 minutes. 65 minutes minus 15 minutes results in a time interval of 50 minutes between the hop additions. The Hallertauer Perle hop addition must be added 50 minutes before the Hallertauer Tradition hop addition.
 
-![Kochen](/docs/img/hopfengaben.jpg)
+The last addition of “Hallertauer Tradition 5.7% 2020” hops is added at the time of stripping. Boiling is complete when the hops are pitched. This means that the hop addition for whipping does not count towards the total boiling time.
 
-In gleicher Weise verhält sich die Hopfengabe Ausschlagen. Es ist eine Nachisomerisierungszeit von 10 Minuten gegeben. Die Hopfengabe "Hallertauer Tradition 5.7% 2020" zum Ausschlagen mit einer Kochdauer von -5 Minuten ist Teil der Nachisomerisierung.
+![boiling](/docs/img/hopfengaben.jpg)
 
-_Tipp: Werden zwei Hopfengaben zur gleichen Zeit zugegeben, wird die erste Hopfengabenzeit auf 0 Minuten gesetzt und die zweite Hopfengabe auf die tatsächliche Zeit der Zugabe. Die Logik ist nach dem Rechenweg oben einfach: der Abstand zwischen zwei Hopfengaben zum gleichen Zeotpunkt beträgt 0 Minuten._
+The hop addition behaves in the same way. There is a post-isomerisation time of 10 minutes. The ‘Hallertau Tradition 5.7% 2020’ hops addition for the knock-out with a boiling time of -5 minutes is part of the post-isomerisation.
 
-In gleicher Weise wie die Hopfengaben verhalten sich die Zusätze aus dem kbh2 aus den Tabs Maischen und Kochen. Zusätze aus dem kbh2 Tabs Wasseraufbereitung und Gärung werden nicht unterstützt.
+Tip: If two hop additions are added at the same time, the first hop addition time is set to 0 minutes and the second hop addition is set to the actual addition time. The logic is simple according to the calculation above: the interval between two hop additions at the same time is 0 minutes.
+
+The additions from the kbh2 from the mashing and boiling tabs behave in the same way as the hop additions. Additions from the kbh2 tabs water treatment and fermentation are not supported.

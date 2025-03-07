@@ -18,7 +18,7 @@ Various channels for serial output can be activated via the system settings.
 
 * Configuration - messages are displayed in this channel when the configuration is read or saved.
 * Sensors - messages about the sensors are output in this channel
-* Actors - a channel for messages about actuators
+* Actors - a channel for messages about actors
 * Mash kettle - messages for the first kettle are displayed in this channel
 * Brew kettle - all messages for the brew kettle
 * HLT - messages for the HLT kettle

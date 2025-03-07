@@ -8,18 +8,18 @@ Die Voreinstellung für das Induktionskochfeld lautet:
 
 | Typ         | Farbe | Anschluss  |
 | ------------- | --------------- | ------------------------ |
-| Interrupt     | blau/grün | D5 |
+| Interrupt     | blau/grün | - (unbelegt) oder D5 |
 | Command       | gelb | D6 |
 | Relay         | weiß | D7 |
 | Spannung +    | rot  | 5V/Vcc |
 | Spannung -    | schwarz  | GND |
 | |  | |
 
-Auf der Platinenabbildung sind die 5 Anschlüsse für das Induktionskochfeld mit "GGM" markiert. Das GGM Anschlusskabel vom Bedienfeld hat ein blaues Kabel, während das Ersatzkabel ein grünes Kabel hat.
+Auf dem Schaltplan sind die 5 Anschlüsse für das Induktionskochfeld mit "GGM" gekennzeichnet. Das GGM-Anschlusskabel vom Bedienfeld hat ein blaues Kabel, während das Ersatzkabel ein grünes Kabel hat.
 
-Der Brautomat kann inklusive Display mit der Spannungsversorgung von der GGM IDS betrieben werden. Hierzu müssen lediglich das rote und das schwarze Kabel in die markierten Schraubklemmen eingesetzt werden. Eine weitere zus. Spannungsversorgung darf in dem Fall nicht an den ESP Mikrocontroller angeschlossen werden.
+Der Brautomat inklusive Display kann mit der Spannungsversorgung der GGM IDS betrieben werden. Dazu müssen nur das rote und das schwarze Kabel in die gekennzeichneten Schraubklemmen gesteckt werden. Eine weitere zusätzliche Spannungsversorgung darf in diesem Fall nicht an den ESP-Mikrocontroller angeschlossen werden.
 
-Alternativ kann der Brautomat mit einem 5V DC Netzteil betrieben werden. In diesem Fall wird das rote Kabel von der GGM IDS nicht angeschlossen.
+Alternativ kann der Brautomat mit einem 5V DC Netzteil betrieben werden. In diesem Fall wird das rote Kabel nicht mit dem GGM IDS verbunden.
 
 ## Temperatursensoren Dallas DS18B20 anschließen
 
