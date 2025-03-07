@@ -2,7 +2,7 @@
 
 The controls are located directly below the mash plan. The mashing process is controlled using the 5 buttons Power, Play, Pause, Previous and Next.
 
-![Mash plan](/docs/img/Buttons.jpg)
+![Controller](/docs/img/Buttons.jpg)
 
 ## The power button
 

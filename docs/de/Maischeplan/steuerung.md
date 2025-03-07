@@ -2,7 +2,7 @@
 
 Direkt unter dem Maischeplan befindet sich die Steuerung. Mit den 5 Tasten Power, Play, Pause, Previous und Next wird der Maischprozess gesteuert.
 
-![Maischeplan](/docs/img/Buttons.jpg)
+![Steuerung](/docs/img/Buttons.jpg)
 
 ## Der Taster Power
 
