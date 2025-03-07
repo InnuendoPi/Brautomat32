@@ -2,8 +2,6 @@
 
 Diese kurze Anleitung beschreibt den Aufbau der Platine. Der Platinenaufbau ist nicht anspruchsvoll. Diese Kurzbeschreibung ist als Hilfe für den ungeübten Bastler gedacht und richtet sich natürlich nicht an versierte Elektrotechniker. Informationen zum Löten, geeignete Lötkolben und Lötzin sind auf youtube oder ähnlichen Kanälen zu finden.
 
-_Hinweis: die Fehlerkorrektur für die Platine Version 2 mit ESP8266 beachten!_
-
 Die Stückliste der Platine:
 
 ![Stückliste](/docs/img/Aufbau1.jpg)

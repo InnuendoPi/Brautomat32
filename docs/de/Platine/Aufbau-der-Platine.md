@@ -1,5 +1,8 @@
 # Aufbau der Platine Version 1
 
+> **Hinweis:**
+Die Platine V1 ist veraltet und wird nicht mehr weiterentwickelt.
+
 Diese kurze Anleitung beschreibt den Aufbau der Platine. Der Platinenaufbau ist nicht anspruchsvoll. Diese Kurzbeschreibung ist als Hilfe für den ungeübten Bastler gedacht und richtet sich natürlich nicht an versierte Elektrotechniker. Informationen zum Löten, geeignete Lötkolben und Lötzin sind auf youtube oder ähnlichen Kanälen zu finden.
 
 ## Platine Version 1

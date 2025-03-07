@@ -1,107 +1,157 @@
-# Aufbau der neuen Platine ohne LevelShifter
+# Assembly of the circuit board version 2 for ESP8266/ESP32
 
-Diese kurze Anleitung beschreibt den Aufbau der Platine. Der Platinenaufbau ist nicht anspruchsvoll. Diese Kurzbeschreibung ist als Hilfe für den ungeübten Bastler gedacht und richtet sich natürlich nicht an versierte Elektrotechniker. Informationen zum Löten, geeignete Lötkolben und Lötzin sind auf youtube oder ähnlichen Kanälen zu finden.
+This short guide describes the construction of the board. The board assembly is not demanding. This short description is intended as an aid for the inexperienced hobbyist and is of course not aimed at experienced electrical engineers. Information on soldering, suitable soldering irons and solder can be found on youtube or similar channels.
 
-Die Stückliste der Platine:
+The parts list of the circuit board:
 
 ![Stückliste](/docs/img/Aufbau1.jpg)
 
-Nummer 1: Widerstand 4.7kOhm\
-Nummer 2: JST-HX Buchse (weiß) und 5 Pol Schraubklemmblock\
-Nummer 3: passiver Piezo Buzzer\
-Nummer 4: Schraubklemmblöcke mit dem Rastermaß 2.54mm
+Number 1: Resistor 4.7kOhm\
+Number 2: JST-HX socket (white) and 5-pin screw terminal block\
+Number 3: passive piezo buzzer\
+Number 4: Screw terminal blocks with a pitch of 2.54mm
 
-## Überlegungen vor dem Aufbau
+## Parts list for the circuit board version 2
 
-Die Platine kann abhängig von der Verbindung zum Induktionskochfeld GGM IDS unterschiedlich bestückt werden:
+The JST-HX socket position is an alternative to the 5-pin screw terminal block. The cable from the control unit of the GGM IDS2 has the appropriate plug for a JST-HX socket. If a replacement cable is used instead of the signal cable, the connection with a 5-pin screw terminal blockj is easier.
 
-1.1 Das Originalkabel vom Bedienfeld der GGM IDS wird verwendet
+| count                                                | article                    | link                  |
+| ----------------------------------------------------- | ------------------------------ | --------------------------------- |
+| 3                                                     | Schraubklemmblock 3pol RM 2.54 | [amazon](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 1 optional                                            | Schraubklemmblock 3pol RM 2.54 | |
+| 1                                                     | Schraubklemmblock 5pol RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 1 alternativ zum Schraubklemmblock 5pol               | JST-HX Buchse 90° RM 2.54      | (voelkner D17526) |
+| 2                                                     | Schraubklemmblock 8pol RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 2                                                     | Schraubklemmblock 12pol RM 2.54| [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 1                                                     | Stiftleiste RM 2.54            | [amazon](https://www.amazon.de/dp/B01MQ5HJYQ?ref_=pe_27091401_487187591_302_E_DDE_dt_1) |
+| 1                                                     | Widerstand 4,7kOhm             | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
+| 1 optional                                            | Passiver Buzzer 12mm 3V        | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
+| 1 ESP32                                               | ESP32 D1 mini                  | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
+| 1 ESP8266 alternative zum ESP32                       | ESP8266 Wemos D1 mini          | [amazon](https://www.amazon.de/dp/B08BTYHJM1/?coliid=I3HCHU407TLWGX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_2FHXW05SH9AGJ9Z8WH2K) |
+| 1 optional                                            | Display Nextion 3.5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
+|                                                       |                                |                                   |
 
-In diesem Fall wird die weiße JST-HX Buchse benötigt (im Bild Nummer 2). Der 5er Schraubklemmblock auf dem Bild direkt neben der JST-HX Buchse wird dann nicht verwendet.
+_Note: the links or article numbers listed are purely informative and are not linked to affiliate/marketing programs._
 
-1.2 Ein Ersatzkabel wird verwendet
+The Nextion 3.5 inch display is available as Basic, Discovery or Enhanced. The currently most favourable model can be selected for the Brautomat. Displays with 2.8 inch or smaller and 4 inch and larger have a different pixel resolution and are not supported by the Brautomat!
 
-In diesem Fall wird die weiße JST-HX Buchse nicht verwendet, sondern der 5er Schraubklemmblock.
+## Considerations before assembly
 
-Es wird also entweder die JST-HX Buchse oder der 5er Schraubklemmblock in die Platine eingesetzt.
+The circuit board can be equipped differently depending on the connection to the GGM IDS induction hob:
 
-## Die Schraubklemmblöcke einsetzen
+1.1 The original cable from the control panel of the GGM IDS is used
 
-Zwei Hinweise zum Einsetzen der Schraubklemmblöcke:
+In this case, the white JST-HX socket is required (number 2 in the picture). The 5-pin screw terminal block in the picture directly next to the JST-HX socket is then not used.
 
-1. Die Öffnung der Schraubklemmblöcke zeigt immer nach außen (von der Platine weg).
-2. Die Schraubklemmblöcke werden mit einem Lötpunkt fixiert. Dann wird der korrekten Sitz kontrolliert. Anschließend werden alle Lötpunkte verlötet.
+1.2 A replacement cable is used
 
-Im Folgenden werden nun Step by Step die Schraubklemmblöcke eingesetzt und verlötet.\
-Im Schritt Nummer 1 werden die zwei 12 Pol Schraubklemmblöcke eingesetzt. An den 12er Schraubklemmblöcken liegen die GPIOs D9 bis D19 vom ESP32 an.
+In this case, the white JST-HX socket is not used, but the 5-pin screw terminal block.
 
-![Schraubklemmblock](/docs/img/Aufbau2.jpg)
+Either the JST-HX socket or the 5-pin screw terminal block is therefore inserted into the circuit board.
 
-Die Platine nun umdrehen und jeden Schraubklemmblock mit einem Lötpunkt fixieren. Jetzt den korrekten Sitz der Schraubklemmblöcke kontrollieren. Alle Pins müssen korrekt durch die Lötpunkte durchgesteckt sein. Anschließend werden alle Pins verlötet.
+## Inserting the screw terminal blocks
 
-In Schritt Nummer 2 werden die zwei 8 Pol Schraubklemmblöcke eingesetzt. An den 8er Schraubklemmblöcken liegen die GPIOs D0 bis D8 vom ESP32 und ESP8266 an.
+Two notes on inserting the screw terminal blocks:
 
-![Schraubklemmblöcke](/docs/img/Aufbau3.jpg)
+1. the opening of the screw terminal blocks always faces outwards (away from the circuit board).
+2. the screw terminal blocks are fixed in place with a soldering point. Then check that they are seated correctly. All soldering points are then soldered.
 
-Die Platine schaut in diesem Status nun so aus:
+The screw terminal blocks are now inserted and soldered step by step.\
+In step number 1, the two 12-pin screw terminal blocks are inserted. The GPIOs D9 to D19 of the ESP32 are connected to the 12-pin screw terminal blocks.
 
-![Schraubklemmblöcke](/docs/img/Aufbau4.jpg)
+![screw terminal](/docs/img/Aufbau2.jpg)
 
-In Schritt Nummer 3 werden die drei 3er Schraubklemmblöcke eingesetzt und verlötet.
+Now turn the circuit board over and fix each screw terminal block with a soldering point. Now check that the screw terminal blocks are seated correctly. All pins must be correctly inserted through the solder points. All pins are then soldered.
 
-![Schraubklemmblock für Sensoren](/docs/img/Aufbau5.jpg)
+In step number 2, the two 8-pin screw terminal blocks are inserted. The GPIOs D0 to D8 of the ESP32 and ESP8266 are connected to the 8-pin screw terminal blocks.
 
-An die drei Anschlüssen werden Temperatursensoren DS18B20 angeschlossen. Es gibt keine Reihenfolge oder Rangordnung für diese drei Anschlüsse. Werden nur analoge PT100x Sensoren eingesetzt, können die drei Schraubklemmblöcke weggelassen werden.
+![screw terminal](/docs/img/Aufbau3.jpg)
 
-In Schritt Nummer 4 wird entweder die JST-HX Buchse für das Originalkabel oder ein 5er Schraubklemmblock für das Ersatzkabel eingesetzt und verlötet: (siehe Überlegungen vor dem Aufbau).
+The circuit board now looks like this in this status:
 
-![JST-HX oder Schraubklemmblock](/docs/img/Aufbau6.jpg)
+![screw terminal](/docs/img/Aufbau4.jpg)
+
+In step number 3, the three 3-screw terminal blocks are inserted and soldered.
+
+![screw terminals for sensors](/docs/img/Aufbau5.jpg)
+
+DS18B20 temperature sensors are connected to the three connections. There is no sequence or order of priority for these three connections. If only analogue PT100x sensors are used, the three screw terminal blocks can be omitted.
+
+With version 2.1 of the board, an optional 3-screw terminal block can be used at the GND position next to the 3-screw terminal blocks for sensors. The additional GND connections are useful if actuators (pumps, agitator, etc.) are used. If no actuators are used, the screw terminal block can be omitted.
+
+In step number 4, either the JST-HX socket for the original cable or a 5-pin screw terminal block for the replacement cable is inserted and soldered: (see considerations before assembly).
+
+![JST-HX or screw terminal](/docs/img/Aufbau6.jpg)
 
 ## Der Piezo Buzzer
 
-Der Piezo Buzzer ist optional. Dieser Schritt kann übersprungen werden, wenn akustische Signale nicht erwünscht sind.\
-Der Piezo Buzzer hat einen Plus- und einen Minuspol
+The piezo buzzer is optional. This step can be skipped if acoustic signals are not desired.\
+The piezo buzzer has a positive and a negative pole.
 
 ![Buzzer Plus Minus](/docs/img/Aufbau8.jpg)
 
-Der Pluspol wird in die Markierung D8 und dementsprechend der Minuspol in die Markierung GND eingesetzt.
+The positive pole is inserted into the D8 marker and the negative pole into the GND marker.
 
 ![Buzzer](/docs/img/Aufbau7.jpg)
 
-## Der 4.7kOhm Widerstand
+## The 4.7kOhm resistor
 
-Der Widerstand 4.7kOhm ist für die Temperatursensoren Dallas DS18B20 zwingend erforderlich. Werden nur analoge PT100x Sensoren eingesetzt, kann der Widerstand weggelassen werden.
+The 4.7kOhm resistor is mandatory for the Dallas DS18B20 temperature sensors. If only analogue PT100x sensors are used, the resistor can be omitted.
 
-![Widerstand](/docs/img/Aufbau9.jpg)
+![resistor](/docs/img/Aufbau9.jpg)
 
-Die Beinchen am Widerstand werden um 90° gebogen (bspw. um einen Schlitzschraubendreher). Anschließend wird der Widerstand an der Position mit der Beschriftung "4k7" eingesetzt. Die Richtung muss nicht beachtet werden. Die Grundfarbe von Widerständen ist häufig blau oder sandfarben. Die Farbringe zeigen den elektrischen Widerstand:
+The legs on the resistor are bent by 90° (e.g. with a slotted screwdriver). The resistor is then inserted at the position labelled ‘4k7’. The direction does not have to be observed. The basic colour of resistors is often blue or sand-coloured. The coloured rings show the electrical resistance:
 
-4.7kOhm Widerstand mit 4 Ringen: gelb - violett - rot - [Toleranz]
+4.7kOhm resistor with 4 rings: yellow - violet - red - [tolerance]
 
-4.7kOhm Widerstand mit 5 Ringen: gelb - violett - schwarz - braun - [Toleranz]
+4.7kOhm resistor with 5 rings: yellow - violet - black - brown - [tolerance]
 
-![Widerstand](/docs/img/Aufbau10.jpg)
+![resistor](/docs/img/Aufbau10.jpg)
 
 Die Beinchen vom Widerstand werden auf der Rückseite leicht nach außen gebogen und verlötet. Mit einem Seitenschneider werden die Beinchen über dem Lötauge abgeschnitten.
 
-## Den ESP32 aufsockeln
+## Den ESP Microcontroller aufsockeln
 
 Durch das Aufsockeln lässt sich der ESP Mikrocontroller jederzeit von der Platine abnehmen. So kann wahlweise ein ESP8266 oder ein ESP32 eingesetzt werden. Das Aufsockeln ist auch bei einer Fehlersuche nützlich.
 
 ![Aufsockeln](/docs/img/Aufbau14.jpg)
 
-Zum Lieferumfang der ESP Mikrocontroller gehören die Adapter Nummer 1. Zusätzlich wird eine Stiftleisten Nummer 2 im Rastermaß 2.54mm benötigt.
+The ESP microcontrollers are supplied with adapter number 1 and an additional pin header number 2 with a pitch of 2.54 mm.
 
 ![Teileliste](/docs/img/Aufbau11.jpg)
 
-Adapter und Stiftleisten werden für das Aufsockeln benötigt. Die Stiftleiste wird zunächst in den Adapter eingesteckt, wie in Nummer 3 dargestellt. Anschließend werden Adpapter mit Stiftleiste in die Platine eingesetzt, jeweils zwei Stück links und 2 Stück rechts
+Adapters and pin headers are required for socketing. The pin header is first plugged into the adapter, as shown in number 3. Then insert the adapter with pin header into the board, two on the left and two on the right
 
-_Tipp: die Stiftleiste wird als 40 Pin Leiste geliefert. Die Stiftleiste wird in voller Länge in die Adapter gesteckt. Der Überhang über den Adapter wird am Ende abgeknickt._
+_Tip: the pin header is supplied as a 40-pin strip. The full length of the pin header is inserted into the adapter. The overhang over the adapter is snapped off at the end._
 
 ![Sockel](/docs/img/Aufbau12.jpg)
 
-Nun wird der ESP aufgelegt und mit einem Lötpunkt auf jeder Seite fixiert. Jetzt wird der Sitz der Sockel kontrolliert. Anschließend werden ale Lötpunkt verlötet.
+Now place the ESP on top and fix it with a soldering point on each side. Now check the fit of the sockets. All soldering points are then soldered.
 
 ![ESP32](/docs/img/Aufbau15.jpg)
 
-Abschließend sollten alle Lötpunkte überprüft werden. Wenn alle Lötpunkte verschlossen sind, ist der Brautomat fertig.
+Finally, all soldering points should be checked. If all soldering points are sealed, the Brautomat is ready.
+
+## Socketing the ESP8266
+
+If an ESP8266 is used, ensure that it is correctly seated when inserting the ESP8266:
+
+![ESP8266](/docs/img/Platine_ESP8266.jpg)
+
+The red line marks the area for the correct position of the ESP8266: the ESP8266 is plugged into the inner row of sockets, leaving 2 rows of sockets free towards the front edge of the board. Incorrect positioning can destroy the ESP8266!
+
+## Error correction board version 2.0 ESP8266
+
+> **Note:**
+with PCB version 2.1 no corrections required!\
+If an ESP32 is used, no error correction is required
+
+An error has crept into the board 2.0 without LevelShifter. A GND connection is missing. This error only occurs in operation with an ESP8266.
+
+To correct the error, a cable must be connected from the GND connection at the bottom right to any other GND connection, e.g. to the GND connection at the top right.
+
+![Platine 2.0](/docs/img/Platine20_korr.jpg)
+
+The missing connection was corrected with board version 2.1. Version 2.1 differs from version 2.0 by the imprint on the circuit board and the additional GND connections at the top right.
+
+![Platine 2.1](/docs/img/Platine21.jpg)
