@@ -1,6 +1,6 @@
 # Das FreggaCase
 
-Das FreggaCase wurde vom Hobbybrauer Fregga entworfen. Die 3D Druckdateien sind im Archiv tools/FreggaCase/FreggaCase.zip hinterlegt.\
+Das FreggaCase wurde vom Hobbybrauer Fregga entworfen. Die 3D Druckdateien sind im Archiv Gehaeuse/FreggaCase/FreggaCase.zip hinterlegt.\
 Das Gehäuse ist unterteilt in die zwei Baugruppen Gehäuseunterteil und Gehäusedeckel. Jede Baugruppe hat verschiedene Optionen.
 
 ## Optionen für den Gehäusedeckel

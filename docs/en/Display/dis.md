@@ -1,6 +1,6 @@
 # Display
 
-Der Brautomat kann optional mit einem Touchdisplay betrieben werden. Unterstützt werden 3.5 Zoll Touchdisplay von Nextion
+The Brautomat can optionally be operated with a touch display. Supported are 3.5 inch touch displays from Nextion
 
 | Nextion Display | Firmware  |
 | --------------- | --------- |
@@ -8,53 +8,47 @@ Der Brautomat kann optional mit einem Touchdisplay betrieben werden. Unterstütz
 | NX4832K035 (Enhanced Serie) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832K035.tft) |
 | NX4832F035 (Discovery Serie) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832F035.tft)  |
 
-Das Display benötigt für den Betrieb mit dem Brautomat eine Firmware. In der Tabelle ist die zum Displaytyp passende Firmware verlinkt. Siehe auch Displaydatei flashen.
+The display requires firmware for operation with the Brautomat. The table links to the firmware suitable for the display type. See also Flashing the display file.
 
-## Display anschließen
+## Connecting Nextion Display
 
-Bevor ein Display genutzt werden kann, müssen die Jumper (Steckbrücken) J1 und J2 auf der Platine überprüft werden:
+The display is connected to the circuit board with 4 cables
 
-* Jumper J1: muss auf Position 1-2 gesteckt sein
-* Jumper J2: muss auf Position 1-2 gesteckt sein
-* Jumper J3: wird mit Nextion Display nicht genutzt und sollte auf 2-3 gesteckt sein
-
-Anschließend werden die 4 Kabel vom Display mit der Platine verbunden
-
-| Kabel         | Nextion Display | Anschlussklemme Platine  |
+| cable         | Nextion Display | screw terminal  |
 | ------------- | --------------- | ------------------------ |
-|     rot       | Strom + | Vcc |
-|   schwarz     | Strom - | GND |
-|    blau       | TX      | SDL (D1) |
-|    gelb       | RX      | SDA (D2) |
+|     red       | power + | Vcc |
+|   black     | power - | GND |
+|    blue       | TX      | SDL (D1) |
+|    yellow       | RX      | SDA (D2) |
 
-![Anschluss](/docs/img/disp1.jpg)
+![Connection](/docs/img/disp1.jpg)
 
-## Displaydatei flashen
+## Flashing the display file
 
-Vor dem ersten Betrieb muss das Display vorbereitet werden. Hierzu wird die passende Display Firmware aus der Tabelle heruntergeladen und auf eine microSD Karte gespeichert. Die microSD Karte wird in den SD Kartenslot vom Display eingesteckt und der Brautomat eingeschaltet. Der Flashvorgang startet automatisch. Der Flashstatus wird auf dem Display angezeigt. Nach Abschluss wird der Brautomat ausgeschaltet und die microSD Karte wird entfernt. Für den normalen Betrieb wird die microSD Karte nicht benötigt.
+The display must be prepared before it is used for the first time. To do this, download the appropriate display firmware from the table and save it on a microSD card. The microSD card is inserted into the SD card slot of the display and the Brautomat is switched on. The flashing process starts automatically. The flash status is shown on the display. After completion, the Brauomat is switched off and the microSD card is removed. The microSD card is not required for normal operation.
 
-## Ansicht MaischeSud
+## View MaischeSud
 
 ![MaischeSud](/docs/img/brewpage-sm.jpg)
 
-Die Seite MaischeSud ist die bevorzugte Seite beim Brauen. Auf dem Dispaly werden die sekündlich die Informationen
+The MashBrew page is the preferred page for brewing. The display shows the following information every second
 
-* Ist-Temperatur
-* Ziel-Temperatur (Rast-Temperatur)
-* verbleibende Rastdauer
+* Actual temperature
+* Target temperature (resting temperature)
+* Remaining rest time
 
-angezeigt. In der unteren Zeile wird zusätzlich die nächste Rast angezeigt. Die Zeitangabe links ist die Uhrzeit, zu welche die nächste Rast starten wird. Das grüne Play Symbol rechts zeigt an, dass die nächste Rast automatisch startet.
+is displayed every second. The next rest period is also displayed in the bottom line. The time on the left is the time at which the next rest will start. The green play symbol on the right indicates that the next rest will start automatically (autonext).
 
-## Ansicht Kesselübersicht
+## View kettle overview
 
-![Kesselübersicht](/docs/img/kettlepage-sm.jpg)
+![Kettle overview](/docs/img/kettlepage-sm.jpg)
 
-Die Kesselübersicht wurde vom MQTTDevice übernommen und zeigt den MaischeSud Kessel und falls vorhanden den Nachguss mit den Informationen Ist- und Ziel-Temnperatur an.
+The kettle overview shows the mash brew kettle and, if available, the MLT and HLT kettle with the actual and target temperature information.
 
-_Hinweis: die Ansicht Kesselübersicht zeigt in der unteren Zeile die Adresse vom Brautomat: entweder den mDNS Namen oder die IP Adresse._
+_Note: the kettle overview view shows the address of the Brautomat in the bottom line: either the mDNS name or the IP address._
 
-## Ansicht Manuelle Steuerung
+## Manual control view
 
-![Manuelle Steueung](/docs/img/induction-mode-sm.jpg)
+![Manual control](/docs/img/induction-mode-sm.jpg)
 
-Die Seite manuelle Steuerung bietet die Möglichkeit, die GGM IDS manuell zu betreiben. Über die Buttons + und - können die Leistungsstufen hoch- bzw. heruntergeregelt werden.
+The manual control page offers the option of operating the GGM IDS manually. The + and - buttons can be used to increase or decrease the power levels.

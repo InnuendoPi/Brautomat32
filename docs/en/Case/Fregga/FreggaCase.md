@@ -1,34 +1,35 @@
-# Das FreggaCase
+# The FreggaCase
 
-Das FreggaCase wurde vom Hobbybrauer Fregga entworfen. Die 3D Druckdateien sind im Archiv tools/FreggaCase/FreggaCase.zip hinterlegt.\
-Das Gehäuse ist unterteilt in die zwei Baugruppen Gehäuseunterteil und Gehäusedeckel. Jede Baugruppe hat verschiedene Optionen.
+The FreggaCase was designed by hobby brewer Fregga. The 3D print files are stored in the archive Gehaeuse/FreggaCase/FreggaCase.zip.\
 
-## Optionen für den Gehäusedeckel
+The case is divided into the two assemblies case base and case lid. Each assembly has different options.
 
-* mit Display, PWM Modul und Hauptschalter
-* nur Display
-* ohne Auschnitte (kein Display, kein PWM, kein Hauptschalter)
+## Options for the housing cover
+
+* with display, PWM module and main switch
+* display only
+* without cut-outs (no display, no PWM, no main switch)
 
 ![Deckel mit Display und PWM](/docs/img/Fregga_Deckel_voll.jpg)
 ![Deckel mit Display](/docs/img/FreggaCase_Deckel_Display.jpg)
 ![geschlossener Deckel](/docs/img/FreggaCase_Deckel_ohne.jpg)
 
-## Optionen für das Gehäuseunterteil
+## Options for the lower part of the housing
 
-* mit 4 Anschlüssen
-* mit 3 Anschlüssen
-* mit 2 Anschlüssen
-* ohne Anschlüsse
+* with 4 connections
+* with 3 connections
+* with 2 connections
+* without connections
 
 ![Unterteil mit 4 Anschlüssen](/docs/img/FreggaCase_Unterteil_voll.jpg) ![Unterteil mit  Anschlüssen](/docs/img/FreggaCase_Unterteil_drei.jpg)
 
 ![Unterteil mit 2 Anschlüssen](/docs/img/FreggaCase_Unterteil_zwei.jpg) ![Unterteil ohne Anschlüssen](/docs/img/FreggaCase_Unterteil_ohne.jpg)
 
-## Wandhalterung für das FreggaCase
+## Wall bracket for the FreggaCase
 
-![Wandhalterung](/docs/img/FreggaCase_Wandhalterung.jpg)
+![Wall bracket](/docs/img/FreggaCase_Wall_bracket.jpg)
 
-## Verwendete Materialien für den Gehäuseaufbau
+## Materials used for the case structure
 
 Zylinderschraube M5x25\
 Gewindeeinsätze M5 sowie M3S\
@@ -36,7 +37,7 @@ Gewindeeinsätze M5 sowie M3S\
 [Das PWM Modul](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_56603DDHC44WFNJ0BFM4)\
 [Das Relaismodul](https://www.amazon.de/dp/B07PY7LF9Z/?coliid=IHJD818Z5259W&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_J3D8XGQB34CH8FXPD06G)
 
-## Bilder
+## pictures
 
 ![FreggaCase](/docs/img/Fregga-1.jpg)
 ![FreggaCase](/docs/img/Fregga-2.jpg)

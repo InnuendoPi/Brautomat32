@@ -1,6 +1,6 @@
 # Das InnuCase
 
-Das InnuCase ist in zwei Größen verfügbar. Die Druckdateien sind im Ordner tools/InnuCase hinterlegt.
+Das InnuCase ist in zwei Größen verfügbar. Die Druckdateien sind im Ordner Gehaeuse/InnuCase hinterlegt.
 
 ## Gehäuseform
 
