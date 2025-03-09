@@ -10,8 +10,9 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.2
+Version 1.51.3
 
+* Fix:          Revert Ablauf Maischeplan überarbeitet und doppelten Code entfernt (checkTemp)
 * Update:       gitbook Anleitung de/en überarbeitet
 * Geändert:     Auswahl für das Schaltsignal bei Webhook Aktoren oder Kessel
 * Geändert:     Handling Leistung ab Übergang Kochen
