@@ -3,15 +3,17 @@
 ESP32 Arduino 3.1.3 ESP-IDF v5.3.2\
 ESP32 Arduino 2.0.17 ESP-IDF v4.4.7\
 ESP8266 Arduino 3.1.2\
-VSCode 1.97 pioarduino IDE 1.0.6\
+VSCode 1.98 pioarduino IDE 1.0.6\
 InnuAPID AutoTune PID lib 1.5\
 InnuTicker Task Scheduler lib 0.0.5\
 InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.3
+Version 1.51.4
 
+* Neu:          Anbindung an BrewFather API (Rezepte und Sude)
+* Fix:          BrewFather Importfilter
 * Fix:          Revert Ablauf Maischeplan überarbeitet und doppelten Code entfernt (checkTemp)
 * Update:       gitbook Anleitung de/en überarbeitet
 * Geändert:     Auswahl für das Schaltsignal bei Webhook Aktoren oder Kessel
