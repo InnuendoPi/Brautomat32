@@ -10,8 +10,9 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.4
+Version 1.51.5
 
+* Fix:          Fehler Speichern Brewfather API credentials behoben
 * Neu:          Anbindung an BrewFather API (Rezepte und Sude)
 * Fix:          BrewFather Importfilter
 * Fix:          Revert Ablauf Maischeplan überarbeitet und doppelten Code entfernt (checkTemp)
