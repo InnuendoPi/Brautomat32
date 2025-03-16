@@ -65,6 +65,7 @@ Brautomat is a stand alone brewing device and offers:
   * kleinerBrauhelfer2
   * Maische Malz und Mehr
   * BrewFather
+* Brewfather API support (ESP32 only)
 * Recipe export
 * Nextion 3,5" HMI Touchdisplay (optional)
 * WebUpdate for easy firmware updates
