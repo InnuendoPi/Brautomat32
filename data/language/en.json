@@ -25,7 +25,7 @@
     "EDITSUD_TT": "mash plan settings",
     "SAVEMASH_TT": "save mash table",
     "VIEWMASH_TT": "show/hide mash table",
-    "BFDOWN_TT": "download Brewfather list of recipes",
+    "BFDOWN_TT": " GET Brewfather data",
     "CARD_ACT_NAME": "actors",
     "CARD_SEN_NAME": "sensors",
     "CARD_HLT_NAME": "Hlt",
