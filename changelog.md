@@ -10,8 +10,12 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.5
+Version 1.51.6
 
+* neu:          Objekt Spinner wird angezeigt, wenn von der Brewfather API Daten gelesen werden
+* neu:          Tab Brewfather API wird ausgeblendet, wenn die API credentials nicht konfiguriert sind
+* Fix:          Korrektur Sichtbarkeit der Brewfather Objekte
+* Fix:          Korrektur Auswahl deaktiviert Brewfather API
 * Fix:          Fehler Speichern Brewfather API credentials behoben
 * Neu:          Anbindung an BrewFather API (Rezepte und Sude)
 * Fix:          BrewFather Importfilter
