@@ -4,14 +4,25 @@ ESP32 Arduino 3.1.3 ESP-IDF v5.3.2\
 ESP32 Arduino 2.0.17 ESP-IDF v4.4.7\
 ESP8266 Arduino 3.1.2\
 VSCode 1.98 pioarduino IDE 1.0.6\
-InnuAPID AutoTune PID lib 1.5\
+InnuAPID AutoTune PID lib 1.6\
 InnuTicker Task Scheduler lib 0.0.5\
 InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.6
+Version 1.51.8
 
+* Geändert:     Anzahl der Schritte im Maischeplan von 20 auf max 30 erhöht
+* Geändert:     ajax post requests response dataType auf Text statt automatische Erkennung
+* Geändert:     ajax post requests optionale Parameter cache und async entfernt (Verwendung der defaults)
+* Geändert:     Revert: WebIf playsounds warten auf complete response.status 200 verlangsamt das Webif im Brauprozess. review steht aus
+* Fix:          Fehler beim Beenden Maischeprozess, wenn die maximale Anzahl an Steps (20) verwendet wurde
+* neu:          neuer Parameter Deaktiviere PID Berechnung ab Übergang Kochen (noPIDboil)
+* Geändert:     InnuAPID lib 1.6 noPIDboil
+* Geändert:     Ablauf Maischeplan überarbeitet und doppelten Code entfernt (checkTemp) Teil 2
+* Fix:          sendAlarm(ALARM_INFO) reboot bei aktiviertem Display entfernt
+* Fix:          Debug Ausgaben type mismatch uint64_t
+* Geändert:     WebIf playsounds auf response.status 200 (ok) oder 400 (err) angepasst
 * neu:          Objekt Spinner wird angezeigt, wenn von der Brewfather API Daten gelesen werden
 * neu:          Tab Brewfather API wird ausgeblendet, wenn die API credentials nicht konfiguriert sind
 * Fix:          Korrektur Sichtbarkeit der Brewfather Objekte
