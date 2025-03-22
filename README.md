@@ -50,7 +50,7 @@ Brautomat is a stand alone brewing device and offers:
   * full automated rest temperature reach & hold
   * full automated rest duration timer function
   * actors can be managed through mashplan
-  * Mash plans with up to 20 steps
+  * Mash plans with up to 30 steps
 * Controll up to 3 kettles
   * Mash
   * MLT
