@@ -12,6 +12,7 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 Version 1.51.8
 
+* Fix:          Links gitbook
 * Geändert:     Anzahl der Schritte im Maischeplan von 20 auf max 30 erhöht
 * Geändert:     ajax post requests response dataType auf Text statt automatische Erkennung
 * Geändert:     ajax post requests optionale Parameter cache und async entfernt (Verwendung der defaults)
