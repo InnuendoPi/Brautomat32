@@ -48,7 +48,7 @@ Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs]
   * Automatisches Anfahren und halten der Rasttemperaturen
   * Würzekochen
   * Alarmierung für Hopfengaben
-  * Bis zu 20 Teilschritte
+  * Bis zu 30 Teilschritte
 * Verwaltung von Maischeplänen
 * Steuerung von bis zu 3 Kochfeldern
   * MaischeSud
@@ -65,6 +65,7 @@ Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs]
   * kleinen Brauhelfer2
   * Maische Malz und Mehr
   * BrewFather
+* Brewfather API support (ESP32 only)
 * Rezept Export
 * Unterstützung für 3,5" HMI Touchdisplay Nextion
 
