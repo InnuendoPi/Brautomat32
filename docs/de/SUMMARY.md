@@ -19,7 +19,7 @@
 * [Aktoren](Aktoren/act.md)
 * [Logging](Logging/log.md)
 * [Parameter im Überblick](Parameter/info.md)
-  * [Parameter GGM IDS](Parameter/parameter-ggm-ids.md)
+  * [Parameter Kessel](Parameter/parameter-kessel.md)
   * [Parameter System](Parameter/parameter-system.md)
   * [Funktionen der Buttons](Parameter/funktionen-der-buttons.md)
 * [Die Platine](Platine/plat.md)

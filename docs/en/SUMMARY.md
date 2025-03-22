@@ -19,7 +19,7 @@
 * [Actors](Aktoren/act.md)
 * [Logging](Logging/log.md)
 * [Parameter overview](Parameter/README.md)
-  * [Parameter kettle](Parameter/parameter-ggm-ids.md)
+  * [Parameter kettle](Parameter/parameter-kessel.md)
   * [Parameter System](Parameter/parameter-system.md)
   * [Functionen buttons](Parameter/funktionen-der-buttons.md)
 * [Circuit board](Platine/plat.md)

@@ -20,6 +20,12 @@ This parameter describes the temperature at which the PID controller should reco
 
 This parameter describes the output power of the IDS from the cooking temperature. The default value is 100%. The ‘Transition to boiling’ parameter defines a temperature from which the PID controller is deactivated. The ‘Power from transition’ parameter is now used to specify the fixed output power for the hob. If a brewing kettle with a volume of 35 litres or more is used, the default value of 100% is a suitable choice. In brewing kitchens with small kettles, 100% energy supply can cause boiling over. In this case, the maximum energy supply can be reduced to 75%, for example, using this parameter.
 
+### Deactivate PID for boiling [%]
+
+This parameter determines the behavior of the PID controller during boiling if the actual temperature is above the target temperature. Example: the boiling temperature was set to 98°C in the mash plan. The “Power from transition” parameter switches off the PID calculation from the “Transition to boiling” temperature. If the “Deactivate PID for boiling” parameter is activated (default), the PID controller remains switched off even above the target temperature from the mash plan and the power from the “Power from transition” parameter is used. This parameter is activated by default and enables flowing boiling.
+
+If the “Deactivate PID for boiling” parameter is not activated, the required power is calculated by the PID controller once the target temperature (in this case 98°C) is reached. The calculated power above the target temperature is 0%. The hob switches off and prevents boiling over if necessary.
+
 ### Power in case of sensor error [0-100%]
 
 If a sensor error occurs, e.g. a sensor is not connected or is defective, the power of the hob can be adjusted for this error. A value of 100% ignores the sensor error.

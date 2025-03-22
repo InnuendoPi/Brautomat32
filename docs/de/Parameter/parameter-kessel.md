@@ -14,11 +14,17 @@ Dieser Parameter beschreibt, ab welcher Differenz zur Rasttemperatur (Sollwert) 
 
 ### Übergang zum Kochen [°C]
 
-Dieser Parameter beschreibt die Temperatur, ab der der PID Controller das Kochen der Würze erkennen soll. Der Standardwert ist 95°C. Dieser Parameter beschreibt nicht, ab welcher Temperatur die Würze zu kochen beginnt. Dieser Parameter beschreibt die Temperatur, ab der der Brautomat den PID Controller deaktiviert und mit einer vorgegebenen Leistung "Leistung ab Übergang" das Kochfeld steuert. Anders als bei den Rast-Temperaturen ist beim Kochen nicht das genaue Erreichen und halten der Temperatur das Ziel, sondern das wallend Kochen. Anstatt also die Leistung zu reduzieren, wird beim Kochen das Induktionskochfeld mit einer konstanten Leistng betrieben.
+Dieser Parameter beschreibt die Temperatur, ab der der PID Controller das Kochen der Würze erkennen soll. Der Standardwert ist 95°C. Dieser Parameter beschreibt nicht, ab welcher Temperatur die Würze zu kochen beginnt. Dieser Parameter beschreibt die Temperatur, ab der der Brautomat den PID Controller deaktiviert und mit einer vorgegebenen Leistung "Leistung ab Übergang" das Kochfeld steuert. Anders als bei den Rast-Temperaturen ist beim Kochen nicht das genaue Erreichen und halten der Temperatur das Ziel, sondern das wallend Kochen. Anstatt also die Leistung zu reduzieren, wird beim Kochen das Induktionskochfeld mit einer konstanten Leistung betrieben.
 
 ### Leistung ab Übergang [%]
 
 Dieser Parameter beschreibt die Ausgangsleistung der IDS ab der Temperatur Kochen. Der Standardwert ist 100%. Mit dem Parameter "Übergang zum Kochen" ist eine Temperatur festgelegt worden, ab der der PID Controller deaktiviert wird. Mit dem Parameter "Leistung ab Übergang" wird nun die feste Ausgangsleistung für das Kochfeld vorgegeben. Wird ein Braukessel mit einem Volumen über 35l oder mehr eingesetzt, ist der Standardwert 100% eine passende Wahl. In Brauküchen mit kleinen Kesseln kann 100% Energiezufuhr ein Überkochen bewirken. In diesem Fall kann die maximale Energiezufuhr mit diesem Parameter auf bspw. 75% reduziert werden.
+
+### Deaktiviere PID zum Kochen [on/off]
+
+Dieser Parameter bestimmt das Verhalten vom PID Controller beim Kochen, wenn die Ist-Temperatur über der Ziel-Temperatur liegt. Beispiel: die Kochtemperatur wurde im Maischeplan auf 98°C festgelegt. Der Parameter "Leistung ab Übergang" schaltet die PID Berechnung ab der Temperatur "Übergang zum Kochen" aus. Wenn der Parameter "Deaktivere PID zum Kochen" aktiviert ist (default), dann bleibt der PID Controller auch über der Ziel-Temperatur aus dem Maischeplan ausgeschaltet und die Leistung aus dem Parameter "Leistung ab Übergang" wird verwendet. Dieser Parameter ist in der Voreinstellung aktiviert und ermöglicht ein wallendes Kochen.
+
+Wenn der Parameter "Deaktiviere PID zum Kochen" nicht aktiviert ist, wird die benötigte Leistung ab Erreichen der Ziel-Temepratur (hier 98°C) durch den PID Controller berechnet. Die berechnete Leistung oberhalb der Ziel-Temperatur ist 0%. Das Kochfeld schaltet ab und verhindert ggfs. ein Überkochen.
 
 ### Leistung bei Sensorfehler [0-100%]
 
