@@ -10,8 +10,10 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.8
+Version 1.51.9
 
+* Neu:          Chart als JPEG speichern
+* Fix:          sendAlarm bei Seitenwechsel Display
 * Fix:          Links gitbook
 * Geändert:     Anzahl der Schritte im Maischeplan von 20 auf max 30 erhöht
 * Geändert:     ajax post requests response dataType auf Text statt automatische Erkennung
