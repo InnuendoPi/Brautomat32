@@ -10,8 +10,10 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.9
+Version 1.51.11
 
+* Update:       ESP IDF 5.4RC2
+* Geändert:     Überprüfung Dateiname beim Rezeptimport erweitert (/ wird durch _ ersetzt)
 * Fix:          Korrektur serveStatic Einträge
 * Neu:          Auswahl Auflösung DS18B20 Sensoren. Default HIGH (12bit, 0.0625°C, 750ms)
 * Fix:          sendAlarm Info beim Booten bei aktiviertem Display entfernt. Boot wurde als Seitenwechsel behandelt
