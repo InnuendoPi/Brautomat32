@@ -12,6 +12,12 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 Version 1.51.9
 
+* Fix:          Korrektur serveStatic Einträge
+* Neu:          Auswahl Auflösung DS18B20 Sensoren. Default HIGH (12bit, 0.0625°C, 750ms)
+* Fix:          sendAlarm Info beim Booten bei aktiviertem Display entfernt. Boot wurde als Seitenwechsel behandelt
+* Fix:          Display Firmware Werte Vorgaben entfernt
+* Geändert:     doppeltes eraseflash beim Beenden Maischeplan entfernt
+* Geändert:     InnuAPID Debug log output
 * Neu:          Chart als JPEG speichern
 * Fix:          sendAlarm bei Seitenwechsel Display
 * Fix:          Links gitbook
