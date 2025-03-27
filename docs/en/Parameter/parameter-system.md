@@ -50,7 +50,7 @@ The display is configured via an SD card. The TFT file matching the display from
 
 Please note that SDA, SCL must be operated at PINs D1, D2.
 
-### Activate MAX31865 amplifier
+### Activate PT100x sensors MAX31865 amplifier
 
 If analogue PT100x sensors are used, this switch must be activated. An analogue PT100x sensor requires an RTD digital converter in order to be connected to an ESP microcontroller. A MAX31865 Amplifier is an RTD digital converter in the form of a small add-on board.\
 
