@@ -10,9 +10,15 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.11
+Version 1.51.12
 
-* Update:       ESP IDF 5.4RC2
+* Update:       ESP32 IDF5 5.4.1 (3.20)
+* Fix:          Brewfather Rezeptimport fehlende Temperatur Hopfengabe
+* Fix:          Brewfather Rezeptimport maximale Anzahl Hopfengaben auf 15 erweitert
+* Geändert:     Brewfather Rezeptimport Einmaisch- und Whirlpooltemperaturen werden ausgelesen
+* Geändert:     async fetch Funktion ersetzt synchrone ajax get requests beim Start WebIf (SSE channel, language, etc.)
+* Geändert:     handling WebIf gz Dateien (TTF, CSS, JS)
+* Update:       ESP32 IDF5 5.4 RC2
 * Geändert:     Überprüfung Dateiname beim Rezeptimport erweitert (/ wird durch _ ersetzt)
 * Fix:          Korrektur serveStatic Einträge
 * Neu:          Auswahl Auflösung DS18B20 Sensoren. Default HIGH (12bit, 0.0625°C, 750ms)
