@@ -12,6 +12,7 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 Version 1.51.12
 
+* Fix:          Fehler in der Abfrage BrewFather API behoben, wenn eine sehr große Rezept/Sudliste abgerufen wurde
 * Revert:       async fetch Funktion ersetzt synchrone ajax get requests beim Start WebIf: WebUpdate lädt Webseite nicht neu (unhandled fetch err)
 * Fix:          Fehler in der Abfrage BrewFather API behoben, wenn das Abfrageergebniss keine Rezepte oder Sude enthält
 * Geändert:     Abfrage BrewFather API angepasst, wenn die API kein httpCode 200 (ok) sendet
