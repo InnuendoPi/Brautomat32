@@ -12,6 +12,8 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 Version 1.51.12
 
+* Fix:          Fehler in der Abfrage BrewFather API behoben, wenn das Abfrageergebniss keine Rezepte oder Sude enthält
+* Geändert:     Abfrage BrewFather API angepasst, wenn die API kein httpCode 200 (ok) sendet
 * Update:       ESP32 IDF5 5.4.1 (3.20)
 * Fix:          Brewfather Rezeptimport fehlende Temperatur Hopfengabe
 * Fix:          Brewfather Rezeptimport maximale Anzahl Hopfengaben auf 15 erweitert
