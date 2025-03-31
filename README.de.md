@@ -15,7 +15,7 @@ Die Firmware ist in drei Versionen verfügbar:
 
 Empfohlen wird der ESP32 D1 Mini NodeMCU mit der Firmware Brautomat32pIO (ESP-IDF5).
 
-[![ESP8266](https://img.shields.io/static/v1?label=Download%20Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip) [![ESP32pIO](https://img.shields.io/static/v1?label=Download%20Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip) [![ESP32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
+[![ESP32pIO](https://img.shields.io/static/v1?label=Download%20Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip) [![ESP8266](https://img.shields.io/static/v1?label=Download%20Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip) [![ESP32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
 
 > **Hinweis:**
 
