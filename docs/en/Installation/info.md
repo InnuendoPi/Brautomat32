@@ -18,7 +18,7 @@ The MS Windows operating system automatically creates a serial COM port when con
 
 An ESP device was found on COM7 in the image. In rare cases, no serial COM port is automatically provided under MS Windows. USB drivers for ESP microcontrollers are available on the following websites: (MS Win and macOS).
 
-[![ESP32 driver](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads) [![ESP8266 driver](https://img.shields.io/static/v1?label=Treiber&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://www.wch-ic.com/search?t=all&q=ch341)
+[![ESP32 driver](https://img.shields.io/static/v1?label=driver&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads) [![ESP8266 driver](https://img.shields.io/static/v1?label=driver&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://www.wch-ic.com/search?t=all&q=ch341)
 
 Script Flashen.cmd uses esptool.exe <https://github.com/igrr/esptool-ck/releases>.\
 ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This code is licensed under GPL v2.
@@ -115,7 +115,7 @@ Updating the firmware via the FileUpdate selection takes just a few steps:
 Firstly, the current firmware must be downloaded. The ZIP archive is then unpacked.\
 In the Brautomat web interface, select the Update menu item and then FileUpdate. A simple update web page is displayed (Fig. 1):
 
-![DateiUpdate](/docs/img/dateiupdate2.jpg)
+![FileUpdate](/docs/img/dateiupdate2.jpg)
 
 Under Firmware with the ‘Select file’ button, the file _firmware.bin_ must now be selected from the ZIP archive (in Fig. 2). Click on Update Firmware to start the update.
 
