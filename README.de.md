@@ -17,9 +17,10 @@ Empfohlen wird der ESP32 D1 Mini NodeMCU mit der Firmware Brautomat32pIO (ESP-ID
 
 [![ESP8266](https://img.shields.io/static/v1?label=Download%20Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip) [![ESP32pIO](https://img.shields.io/static/v1?label=Download%20Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip) [![ESP32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
 
-Aus Kompatibilitätsgründen existiert für den ESP32 auch eine Version Brautomat32 auf Basis ESP32-IDF4.
+> **Hinweis:**
 
-> **Hinweis:** Die ESP32 Varianten IDF4 und IDF5 (ehemals Brautomat32 und Brautomat32pIO) sind nicht kompatiblel. Ein WebUpdate von IDF4 auf IDF5 ist nicht möglich.
+* Die ESP32 Varianten IDF4 und IDF5 (ehemals Brautomat32 und Brautomat32pIO) sind nicht kompatiblel. Ein WebUpdate von IDF4 auf IDF5 ist nicht möglich.
+* Aus Kompatibilitätsgründen existiert für den ESP32 auch eine Version Brautomat32 auf Basis ESP32-IDF4. ESP32-IDF 4 ist end of life und wird nicht empfohlen.
 
 ## ▶️ Installation
 
