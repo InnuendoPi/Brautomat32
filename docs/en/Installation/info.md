@@ -4,6 +4,12 @@ To be able to use the Brautomat, the firmware must be flashed. The ESP microcont
 
 ## Firmware flash with MS Windows scriptbased
 
+The Brautomat is available in three versions. The Brautomat32pIO version is recommended because this version for the ESP32 is based on the current ESP32 framework. The Brautomat32 version is for the ESP32, but is based on the outdated IDF4 (end of life) framework. The Brautomat version is for the ESP8266 (end of life).
+
+* [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip): Brautomat32pIO.zip
+* [ESP32 IDF4](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip): Brautomat32.zip (eol)
+* [ESP8266](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip): Brautomat.zip (eol)
+
 The firmware is installed using the included “Flashen.cmd” script. To do this, the archive Firmware.zip is unpacked in any folder. The ESP microcontroller is connected to the PC/notebook via USB cable. Double-click on the Flashen.cmd script to start flashing the firmware.
 
 The MS Windows operating system automatically creates a serial COM port when connecting the ESP microcontroller to a USB port on the PC or notebook.
@@ -49,7 +55,7 @@ ESP32 Step 2 flash firmware:
 esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x2d0000 LittleFS.bin
 ```
 
-### Brautom (ESP8266)
+### Brautomat (ESP8266)
 
 ESP8266 Step 1 erase flash:
 
