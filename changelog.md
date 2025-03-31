@@ -10,9 +10,14 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.12
+Version 1.51.14
 
-* Fix:          Fehler in der Abfrage BrewFather API behoben, wenn eine sehr große Rezept/Sudliste abgerufen wurde
+* Neu:          Kopie von Maischeplan erstellen
+* Geändert:     In der Tabelle Brewfather Rezepte/Sude wird die ID ausgeblendet
+* Geändert:     BrewFather Rezepte und Sude ohne Namen (Entwürfe) werden gefiltert
+* Geändert:     BrewFather Rezepte und Sude werden nach Rezeptnamen sortiert angezeigt
+* Fix           fix(rmt): memset all config structs to zero before using PR #11203
+* Fix:          Fehler in der Abfrage BrewFather API behoben, wenn eine große Anzahl an Rezepten oder Suden abgerufen wurde (Brewfather Limit 50)
 * Revert:       async fetch Funktion ersetzt synchrone ajax get requests beim Start WebIf: WebUpdate lädt Webseite nicht neu (unhandled fetch err)
 * Fix:          Fehler in der Abfrage BrewFather API behoben, wenn das Abfrageergebniss keine Rezepte oder Sude enthält
 * Geändert:     Abfrage BrewFather API angepasst, wenn die API kein httpCode 200 (ok) sendet
