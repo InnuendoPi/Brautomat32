@@ -10,7 +10,9 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.14
+Version 1.51.15
+
+* Geändert:     Brew Page - für diese Version ist eine neue Nextion Display Firmware erforderlich
 
 * Neu:          Kopie von Maischeplan erstellen
 * Geändert:     In der Tabelle Brewfather Rezepte/Sude wird die ID ausgeblendet
