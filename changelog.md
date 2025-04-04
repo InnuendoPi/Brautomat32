@@ -10,10 +10,16 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.15
+Version 1.51.16
 
-* Geändert:     Brew Page - für diese Version ist eine neue Nextion Display Firmware erforderlich
-
+* Geändert:     Restore stellt alle Objekte aus dem Backup wieder her
+* Geändert:     Backup Dateiname kann nun vorgegeben werden
+* Geändert:     Backup Brautomat beinhaltet: config, log, BrewFather API, Profile und Rezepte
+* Neu:          Display Firmware Version in Nextion hinterlegt
+* Geändert:     Inline Konvertierung Rezepte in neues Format
+* Geändert:     Alle Importfilter auf neues Rezeptformat umgestellt
+* Fix:          Fehler im JSON Format Rezpete behoben
+* Geändert:     Brew Page - Nextion Display Firmware sys0: 10
 * Neu:          Kopie von Maischeplan erstellen
 * Geändert:     In der Tabelle Brewfather Rezepte/Sude wird die ID ausgeblendet
 * Geändert:     BrewFather Rezepte und Sude ohne Namen (Entwürfe) werden gefiltert
