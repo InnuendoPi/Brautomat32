@@ -10,8 +10,13 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.16
+Version 1.51.16.1
 
+* Geändert:     Auslesen der Firmware Version Display angepasst
+* Fix:          Korrektur Varialentyp für Display Rückgabe (type mismatch)
+* Fix:          doppeltes speichern der config beim Import Brewfather API entfernt
+* Geändert:     Inline Konvertierung Format Maischepläne Quellcode Optimierung (doppelten Code entfernt)
+* Fix:          Display Firmware Controller Deck: Seite Kettles wurde die Uhrzeit nicht korrekt dargestellt
 * Geändert:     Restore stellt alle Objekte aus dem Backup wieder her
 * Geändert:     Backup Dateiname kann nun vorgegeben werden
 * Geändert:     Backup Brautomat beinhaltet: config, log, BrewFather API, Profile und Rezepte
