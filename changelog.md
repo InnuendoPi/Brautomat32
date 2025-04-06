@@ -3,19 +3,26 @@
 ESP32 Arduino 3.1.3 ESP-IDF v5.3.2\
 ESP32 Arduino 2.0.17 ESP-IDF v4.4.7\
 ESP8266 Arduino 3.1.2\
-VSCode 1.98 pioarduino IDE 1.0.6\
+VSCode 1.99 pioarduino IDE 1.0.6\
 InnuAPID AutoTune PID lib 1.6\
 InnuTicker Task Scheduler lib 0.0.5\
 InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.16.1
+Version 1.51.16.2
 
+* Breaking:     prepareSys: ein Webupdate von Version 1.46 oder älter ist nicht mehr möglich
+* Entfernt:     prepareSys: Konvertierung altes Format Brautomat Konfiguration beim Boot entfernt (Brautomat V 1.46 oder älter)
+* Entfernt:     prepareSys: Überprüfung der Verzeichnisse language, Profil und Rezept (Brautomat 1.46 oder älter) beim Boot entfernt
+* Geändert:     prepareSys: ist keine Datei config.txt vorhanden, erstellt prepareSys eine default config.txt
+* Geändert:     prepareSys: wenn beim boot die Datei backup.json vorhanden ist, wird die Datei gelöscht
+* Fix:          Korrekturen WebIf nach W3C hmtl Validator
+* Fix:          default Maischeplan wurde nicht geladen, wenn keine config vorhanden war
 * Geändert:     Auslesen der Firmware Version Display angepasst
 * Fix:          Korrektur Varialentyp für Display Rückgabe (type mismatch)
-* Fix:          doppeltes speichern der config beim Import Brewfather API entfernt
-* Geändert:     Inline Konvertierung Format Maischepläne Quellcode Optimierung (doppelten Code entfernt)
+* Fix:          doppeltes speichern der Konfiguration beim Import über die Brewfather API entfernt
+* Geändert:     Inline Konvertierung Format Maischepläne angepasst (doppelten Code entfernt)
 * Fix:          Display Firmware Controller Deck: Seite Kettles wurde die Uhrzeit nicht korrekt dargestellt
 * Geändert:     Restore stellt alle Objekte aus dem Backup wieder her
 * Geändert:     Backup Dateiname kann nun vorgegeben werden
