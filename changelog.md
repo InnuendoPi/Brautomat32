@@ -10,8 +10,10 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.16.2
+Version 1.51.16.3
 
+* Fix:          InnuAPID: Fehler Berechnung Leistung korrigiert, wenn die Ist-Temperatur über dem Wert Übergang Temperatur kochen, die (neue) Ziel-Temperatur aber unter dem Wert liegt
+* Fix:          Fehler Compiler directives ESP8266 behoben
 * Breaking:     prepareSys: ein Webupdate von Version 1.46 oder älter ist nicht mehr möglich
 * Entfernt:     prepareSys: Konvertierung altes Format Brautomat Konfiguration beim Boot entfernt (Brautomat V 1.46 oder älter)
 * Entfernt:     prepareSys: Überprüfung der Verzeichnisse language, Profil und Rezept (Brautomat 1.46 oder älter) beim Boot entfernt
