@@ -10,9 +10,13 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.51.16.3
+Version 1.52 RC1
 
+* Neu:          Reload Chart: das Chart kann neu geladen werden
+* Neu:          alle Messpunkte für das Chart werden protokolliert. Pausen (Stromunterbrechungen) werden mit Ist 0°C und Soll 0°C erfasst.
 * Fix:          InnuAPID: Fehler Berechnung Leistung korrigiert, wenn die Ist-Temperatur über dem Wert Übergang Temperatur kochen, die (neue) Ziel-Temperatur aber unter dem Wert liegt
+* Fix:          SNTP Überprüfung: wenn beim Boot keine Uhrzeit abgerufen werden kann, wird getLocalTime wiederholt
+* Fix:          Im debug_mode wurde breakDuration bei power off oder reboot durch den serial monitor doppelt von active_seconds einer aktiven Rast abgezogen
 * Fix:          Fehler Compiler directives ESP8266 behoben
 * Breaking:     prepareSys: ein Webupdate von Version 1.46 oder älter ist nicht mehr möglich
 * Entfernt:     prepareSys: Konvertierung altes Format Brautomat Konfiguration beim Boot entfernt (Brautomat V 1.46 oder älter)
