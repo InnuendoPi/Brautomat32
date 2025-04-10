@@ -10,6 +10,9 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 Version 1.52 RC2
 
+* Geändert:     Mit dem Start von einem Maischeschritt wird ein neuer Chart Messpunkt gesetzt
+* Geändert:     Die Buttons Play, Pause, Prev und Next erstellen einen Messpunkt in der Chart zum Klickzeitpunkt
+* Fix:          Protokollierung der Chart Messpunkte wird beim Boot gelöscht, wenn der vorherige Brauprozess noch keinen Maischestep gestartet hatte
 * Fix:          Restore file wurde nicht geschlossen
 * Fix:          Sichtbarkeit Brewfather API Elemente korrigiert, wenn keine API credentials eingetragen wurden
 * Fix:          DS18B20 Sensorauflösung HIGH, wenn nach WebUpdate keine DS18B20 Sensorauflösung aus alter config gelesen werden kann
