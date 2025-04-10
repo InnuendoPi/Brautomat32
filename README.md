@@ -71,9 +71,9 @@ Last changes: [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/ch
 
 The Brautomat is operated via web browser. You can use your tablet, smartphone or pc.
 
-![Startseite](docs/img/brautomat.jpg)\
-![Startseite](docs/img/IDS-AutoTune-Ziel.jpg)\
-![Startseite](docs/img/brautomat-2.jpg)
+![WebIf](docs/img/brautomat.jpg)\
+![WebIf](docs/img/IDS-AutoTune-Ziel.jpg)\
+![WebIf](docs/img/brautomat-2.jpg)
 
 ## 💻 Nextion HMI Touchdisplay
 
