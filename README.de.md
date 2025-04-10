@@ -1,6 +1,6 @@
 # Der Brautomat32
 
-[![en](https://img.shields.io/badge/language-en-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.en.md) ![Static Badge](https://img.shields.io/badge/ESP32%20IDF5-blue)
+[![en](https://img.shields.io/badge/language-en-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.md) ![Static Badge](https://img.shields.io/badge/ESP32%20IDF5-blue)
 
 Der Brautomat ist eine Brausteuerung für den ESP32 D1 Mini NodeMCU. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
