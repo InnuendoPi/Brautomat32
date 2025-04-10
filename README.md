@@ -1,33 +1,21 @@
 # Brautomat32
 
-[![de](https://img.shields.io/badge/Sprache-de-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.de.md)
+[![de](https://img.shields.io/badge/Sprache-de-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.de.md) ![Static Badge](https://img.shields.io/badge/ESP32pIO%20IDF5-blue)
 
-The Brautomat is a brewing controller for ESP32 D1 Mini NodeMCU and ESP8266 D1 mini. The Brautomat offers an intuitive, easy-to-use control system.\
+The Brautomat is a brewing controller for ESP32 D1 Mini NodeMCU. The Brautomat offers an intuitive, easy-to-use control system.\
 The firmware is available in three versions:
-
-![Static Badge](https://img.shields.io/badge/ESP32pIO%20IDF5-blue) ![Static Badge](https://img.shields.io/badge/ESP32%20IDF4%20-red) ![Static Badge](https://img.shields.io/badge/ESP8266%20-green)
-
-> **Note:** With version 1.50+ all Brautomat versions are published in the Brautomat32 github repository.
 
 ***
 
 ## 💿 Download
 
-ESP32 D1 Mini NodeMCU and Brautomat32pIO is recommended.
+[![Brautomat32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
 
-[![ESP32pIO](https://img.shields.io/static/v1?label=Download%20Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip) [![ESP32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip) [![ESP8266](https://img.shields.io/static/v1?label=Download%20Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip)
-
-> **note:**
-
-* You cannot update (file or WebUpdate) from Brautomat32 to Brautomat32pIO due to different partition layouts. You need to reflash the firmware.
-* For compatibility reasons, a Brautomat32 version based on ESP32-IDF4 still exists but due to end of life IDF4 not recommended.
+> **note:** Brautomat ESP32-IDF4 and ESP8266 are end of life.
 
 ## ▶️ Installation
 
-* Download Brautomat
-  * [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip): Brautomat32pIO.zip
-  * [ESP32 IDF4](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip): Brautomat32.zip
-  * [ESP8266](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip): Brautomat.zip
+* [Download Brautomat ESP32](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
 * unzip file
 * Double-click file “Flashen.cmd”
 
@@ -47,7 +35,7 @@ Brautomat is a stand alone brewing device and offers:
 * analog sensors PT100x with MAX31865 Amplifier
 * PID-AutoTune
 * mash plan management
-  * full automated rest temperature reach & hold
+  * full automated rest temperature reach and hold
   * full automated rest duration timer function
   * actors can be managed through mashplan
   * Mash plans with up to 30 steps
@@ -55,7 +43,7 @@ Brautomat is a stand alone brewing device and offers:
   * Mash
   * MLT
   * HLT
-* Kettle profiles
+* Kettle hardware profiles
 * Controlling actors like agitator, pumps etc.
 * PWM for heating elements
 * Temperature progression in the mashing process (line chart)
@@ -65,8 +53,9 @@ Brautomat is a stand alone brewing device and offers:
   * kleinerBrauhelfer2
   * Maische Malz und Mehr
   * BrewFather
-* Brewfather API support (ESP32 only)
 * Recipe export
+* Brewfather recipes and batches API support
+* Backup and Restore
 * Nextion 3,5" HMI Touchdisplay (optional)
 * WebUpdate for easy firmware updates
 * Support for different languages
@@ -108,7 +97,7 @@ _Support this project and translate Brautomat into a new language or correct exi
 
 ![Platine](docs/img/Platine21.jpg)
 
-A board for the ESP32 D1 Mini NodeMCU and ESP8266 D1 mini is available. In addition to the screw terminal blocks for the GPIOs, the board also offers a separate connection for the induction hob GGM IDS and three connections for temperature sensors Dallas DS18B20. The Gerber file is stored in the Gehaeuse folder. The board 2.1 can be operated with both ESP32 and ESP8266 (only D1 mini varaints).
+A ciruit board for the ESP32 D1 Mini NodeMCU is available. In addition to the screw terminal blocks for the GPIOs, the board also offers a separate connection for the induction hob GGM IDS and three connections for temperature sensors Dallas DS18B20. The Gerber file is stored in the Gehaeuse folder. The board 2.1 can be operated with ESP32 D1 mini varaint only.
 
 ## 📗 Case
 
@@ -117,7 +106,7 @@ A board for the ESP32 D1 Mini NodeMCU and ESP8266 D1 mini is available. In addit
 
 ## Pinout
 
-The ESP32 D1 offers a pinout suitable for the ESP8266 (GPIO D0 to D8). The pin assignment shown is based on the ESP32 D1 Mini NodeMCU module from [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
+The pin assignment shown is based on the ESP32 D1 Mini NodeMCU module from [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
 
 GPIO mapping:
 
