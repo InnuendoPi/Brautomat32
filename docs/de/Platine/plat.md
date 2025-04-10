@@ -8,12 +8,3 @@ Das Board ist ein Breakout Board für die Mikrocontroller ESP8266 und ESP32. An 
 * GPIO D8 ist auf der Platine mit dem Anschluss für einen Piezo Buzzer verbunden
 
 ![Platine 2](/docs/img/Platine21.jpg)
-
-## Welcher ESP ist der Richtige?
-
-Empfohlen wird der ESP32.
-
-* Der ESP32 im Vergleich zum ESP8266
-    > bietet mehr CPU Leistung (dual core)\
-    > bietet mehr Anschlüsse (GPIOs)\
-    > bietet mehr Möglichkeiten für künftige Erweiterungen (Pumpen, Nachguss, Heizelemente, etc.)

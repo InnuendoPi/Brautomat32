@@ -1,4 +1,4 @@
-# Aufbau der Platine Version 2 für ESP8266/ESP32
+# Aufbau der Platine Version 2
 
 Diese kurze Anleitung beschreibt den Aufbau der Platine. Der Platinenaufbau ist nicht anspruchsvoll. Diese Kurzbeschreibung ist als Hilfe für den ungeübten Bastler gedacht und richtet sich natürlich nicht an versierte Elektrotechniker. Informationen zum Löten, geeignete Lötkolben und Lötzin sind auf youtube oder ähnlichen Kanälen zu finden.
 
@@ -27,7 +27,6 @@ Die Position JST-HX Buchse ist eine Alternative zum 5 Pol Schraubklemmblock. Das
 | 1                                                     | Widerstand 4,7kOhm             | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
 | 1 optional                                            | Passiver Buzzer 12mm 3V        | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
 | 1 ESP32                                               | ESP32 D1 mini                  | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
-| 1 ESP8266 alternative zum ESP32                       | ESP8266 Wemos D1 mini          | [amazon](https://www.amazon.de/dp/B08BTYHJM1/?coliid=I3HCHU407TLWGX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_2FHXW05SH9AGJ9Z8WH2K) |
 | 1 optional                                            | Display Nextion 3.5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
 |                                                       |                                |                                   |
 
@@ -63,7 +62,7 @@ Im Schritt Nummer 1 werden die zwei 12 Pol Schraubklemmblöcke eingesetzt. An de
 
 Die Platine nun umdrehen und jeden Schraubklemmblock mit einem Lötpunkt fixieren. Jetzt den korrekten Sitz der Schraubklemmblöcke kontrollieren. Alle Pins müssen korrekt durch die Lötpunkte durchgesteckt sein. Anschließend werden alle Pins verlötet.
 
-In Schritt Nummer 2 werden die zwei 8 Pol Schraubklemmblöcke eingesetzt. An den 8er Schraubklemmblöcken liegen die GPIOs D0 bis D8 vom ESP32 und ESP8266 an.
+In Schritt Nummer 2 werden die zwei 8 Pol Schraubklemmblöcke eingesetzt. An den 8er Schraubklemmblöcken liegen die GPIOs D0 bis D8 vom ESP32 an.
 
 ![Schraubklemmblöcke](/docs/img/Aufbau3.jpg)
 
@@ -112,7 +111,7 @@ Die Beinchen vom Widerstand werden auf der Rückseite leicht nach außen gebogen
 
 ## Den ESP Microcontroller aufsockeln
 
-Durch das Aufsockeln lässt sich der ESP Mikrocontroller jederzeit von der Platine abnehmen. So kann wahlweise ein ESP8266 oder ein ESP32 eingesetzt werden. Das Aufsockeln ist auch bei einer Fehlersuche nützlich.
+Durch das Aufsockeln lässt sich der ESP Mikrocontroller jederzeit von der Platine abnehmen. Das Aufsockeln ist auch bei einer Fehlersuche nützlich.
 
 ![Aufsockeln](/docs/img/Aufbau14.jpg)
 
@@ -131,25 +130,3 @@ Nun wird der ESP aufgelegt und mit einem Lötpunkt auf jeder Seite fixiert. Jetz
 ![ESP32](/docs/img/Aufbau15.jpg)
 
 Abschließend sollten alle Lötpunkte überprüft werden. Wenn alle Lötpunkte verschlossen sind, ist der Brautomat fertig.
-
-## Den ESP8266 aufsockeln
-
-Wird ein ESP8266 verwendet, ist beim Einsetzen des ESP8266 auf den korrekten Sitz zu achten:
-
-![ESP8266](/docs/img/Platine_ESP8266.jpg)
-
-Die rote Linie kennzeichnet den Bereich für den korrekten Sitz des ESP8266: der ESP8266 wird in die innere Sockelreihe eingesteckt und es bleiben zum vorderen Platinenrand 2 Sockelreihen frei. Eine falsche Postion kann den ESP8266 zerstören!
-
-## Fehlerkorrektur Platine Version 2.0 ESP8266
-
-Bei der Platine 2.0 ohne LevelShifter hat sich ein Fehler eingeschlichen. Es fehlt eine Verbindung GND. Dieser Fehler tritt nur im Betrieb mit einem ESP8266 auf.
-
-_Hinweis: Wird ein ESP32 eingesetzt, ist keine Fehlerkorrektur erforderlich._
-
-Zur Fehlerkorrektur muss ein Kabel vom Anschluss GND unten rechts zu einem beliebigen anderen GND Anschluss angeschlossen werden, bspw. an den Anschluss GND oben rechts.
-
-![Platine 2.0](/docs/img/Platine20_korr.jpg)
-
-Die fehlende Verbindung wurde mit der Platine Version 2.1 korrigiert. Die Version 2.1 unterscheidet sich von Version 2.0 durch den Aufdruck auf der Platine und die zusätzichen Anschlüsse GND oben rechts.
-
-![Platine 2.1](/docs/img/Platine21.jpg)

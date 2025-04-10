@@ -66,7 +66,7 @@ Elements can be shown and hidden very easily via the dashboard. If, for example,
 
 ### Logging
 
-Logging is only available if an ESP32 is used. An ESP8266 does not support this function. On the Logging tab, a serial log output can be activated for the Configuration, Sensors, Actors, Induction, Pouring, Display and System modules. The Error, Info, Verbose and Off levels are available for logging. A serial monitor is required, e.g. with the Arduino IDE, VSCODE etc. The baud rate is 115200.
+Logging is only available if an ESP32 is used. On the Logging tab, a serial log output can be activated for the Configuration, Sensors, Actors, Induction, Pouring, Display and System modules. The Error, Info, Verbose and Off levels are available for logging. A serial monitor is required, e.g. with the Arduino IDE, VSCODE etc. The baud rate is 115200.
 
 The Error mode only outputs errors.
 

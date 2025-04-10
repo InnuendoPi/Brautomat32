@@ -42,7 +42,7 @@ Note: the Max. Power is not exceeded by the parameter Power in case of sensor er
 
 ### Interval (SampleTime)
 
-This parameter specifies the interval at which a calculation of the required power is determined. The default value is 3000ms. The interval is used for the PID calculation and in AutoTune. In brewing kitchens with a small volume, a smaller interval may be advantageous. The smaller the interval, the more frequently sensors are queried and PID values are calculated. This leads to a higher utilisation of the Brautomat. Value range 1000 - 7000ms (ESP8266: 2000 - 7000).
+This parameter specifies the interval at which a calculation of the required power is determined. The default value is 3000ms. The interval is used for the PID calculation and in AutoTune. In brewing kitchens with a small volume, a smaller interval may be advantageous. The smaller the interval, the more frequently sensors are queried and PID values are calculated. This leads to a higher utilisation of the Brautomat. Value range 1000 - 7000ms.
 
 ### PID algorithm
 

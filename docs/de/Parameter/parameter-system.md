@@ -65,7 +65,7 @@ Hinweis: Der mDNS Name wird ohne Protokoll (http://) und ohne Top-Level-Domain (
 
 ### Protokollierung
 
-Logging ist nur verfügbar, wenn ein ESP32 verwendet wird. Ein ESP8266 unterstützt diese Funktion nicht. Auf der Registerkarte Logging kann eine serielle Protokollausgabe für die Module Konfiguration, Sensoren, Aktoren, Induktion, Nachgießen, Anzeige und System aktiviert werden. Für die Protokollierung stehen die Stufen Error, Info, Verbose und Off zur Verfügung. Benötigt wird ein serieller Monitor, z.B. mit der Arduino IDE, VSCODE etc. Die Baudrate beträgt 115200.
+Logging ist nur verfügbar, wenn ein ESP32 verwendet wird. Auf der Registerkarte Logging kann eine serielle Protokollausgabe für die Module Konfiguration, Sensoren, Aktoren, Induktion, Nachgießen, Anzeige und System aktiviert werden. Für die Protokollierung stehen die Stufen Error, Info, Verbose und Off zur Verfügung. Benötigt wird ein serieller Monitor, z.B. mit der Arduino IDE, VSCODE etc. Die Baudrate beträgt 115200.
 
 Der Error Modus gibt nur Fehler aus.
 

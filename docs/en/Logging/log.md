@@ -9,8 +9,7 @@ The serial monitor must be set to a baud rate of 115200 and CRLF in addition to 
 ![Microsoft Visual Studio Code](/docs/img/vscode.jpg)
 
 > **Notes:**\
-Logging should be completely deactivated on a wedding day.\
-The Logging option is not available on the ESP8266.
+Logging should be completely deactivated on a wedding day.
 
 ## Logging settings
 
