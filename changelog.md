@@ -1,14 +1,24 @@
 # Changelog
 
-ESP32 Arduino 3.1.3 ESP-IDF v5.3.2\
-ESP32 Arduino 2.0.17 ESP-IDF v4.4.7\
-ESP8266 Arduino 3.1.2\
+ESP32 Arduino 3.2.0 ESP-IDF v5.4.1\
 VSCode 1.99 pioarduino IDE 1.0.6\
 InnuAPID AutoTune PID lib 1.6\
 InnuTicker Task Scheduler lib 0.0.5\
 InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
+
+Version 1.52 RC2
+
+* Fix:          Sichtbarkeit Brewfather API Elemente korrigiert, wenn keine API credentials eingetragen wurden
+* Fix:          DS18B20 Sensorauflösung HIGH, wenn nach WebUpdate keine DS18B20 Sensorauflösung aus alter config gelesen werden kann
+* Update:       ArduinoJSON Bibliothek 7.4.0
+
+* Breaking:     Die Entwicklung für ESP8266 und ESP32 IDF4 (veraltetes Framework) endet mit Version 1.52 beendet
+* Neuer Name:   Das Kürzel "pIO" wurde entfernt
+* Neuer Name:   Der Brautomat32 für den ESP32 dem Framework IDF4 (eol) hat das Kürzel IDF4
+
+* Fix:          Backup and Restore ESP8266: auf dem ESP8266 wird nur die config.txt gesichert und wiederhergestellt, Rezepte und Profile nicht möglich (noMemory)
 
 Version 1.52 RC1
 
@@ -18,7 +28,9 @@ Version 1.52 RC1
 * Fix:          SNTP Überprüfung: wenn beim Boot keine Uhrzeit abgerufen werden kann, wird getLocalTime wiederholt
 * Fix:          Im debug_mode wurde breakDuration bei power off oder reboot durch den serial monitor doppelt von active_seconds einer aktiven Rast abgezogen
 * Fix:          Fehler Compiler directives ESP8266 behoben
+
 * Breaking:     prepareSys: ein Webupdate von Version 1.46 oder älter ist nicht mehr möglich
+
 * Entfernt:     prepareSys: Konvertierung altes Format Brautomat Konfiguration beim Boot entfernt (Brautomat V 1.46 oder älter)
 * Entfernt:     prepareSys: Überprüfung der Verzeichnisse language, Profil und Rezept (Brautomat 1.46 oder älter) beim Boot entfernt
 * Geändert:     prepareSys: ist keine Datei config.txt vorhanden, erstellt prepareSys eine default config.txt
@@ -88,6 +100,9 @@ Version 1.52 RC1
 * Geändert:     Handling Leistung ab Übergang Kochen
 * Geändert:     Ablauf Maischeplan überarbeitet und doppelten Code entfernt (checkTemp)
 * Fix:          unter bestimmten Bedingungen konnte ein Sensorfehler Auswirkungen auf alle Kessel (PID) haben
+
+Version 1.51
+
 * Update:       ArduinoJSON Bibliothek 7.3.1
 * Geändert:     BrewFather Import Hopfengabe erweitert (Alpha und Menge)
 * Update:       Arduino libs IDF 5.3
