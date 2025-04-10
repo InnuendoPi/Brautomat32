@@ -1,33 +1,20 @@
 # Der Brautomat32
 
-[![en](https://img.shields.io/badge/language-en-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.en.md)
+[![en](https://img.shields.io/badge/language-en-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.en.md) ![Static Badge](https://img.shields.io/badge/ESP32%20IDF5-blue)
 
-Der Brautomat ist eine Brausteuerung für den ESP32 D1 Mini NodeMCU und ESP8266 D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.\
-Die Firmware ist in drei Versionen verfügbar:
-
-![Static Badge](https://img.shields.io/badge/ESP32pIO%20IDF5-blue) ![Static Badge](https://img.shields.io/badge/ESP32%20IDF4%20-red) ![Static Badge](https://img.shields.io/badge/ESP8266%20-green)
-
-> **Hinweis:** Ab der Version 1.50+ werden alle drei Brautomat Versionen im github Repository Brautomat32 veröffentlicht.
+Der Brautomat ist eine Brausteuerung für den ESP32 D1 Mini NodeMCU. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
 ***
 
 ## 💿 Download
 
-Empfohlen wird der ESP32 D1 Mini NodeMCU mit der Firmware Brautomat32pIO (ESP-IDF5).
+[![Brautomat32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
 
-[![ESP32pIO](https://img.shields.io/static/v1?label=Download%20Brautomat32pIO&message=ESP32pIO&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip) [![ESP8266](https://img.shields.io/static/v1?label=Download%20Brautomat&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip) [![ESP32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
-
-> **Hinweis:**
-
-* Die ESP32 Varianten IDF4 und IDF5 (ehemals Brautomat32 und Brautomat32pIO) sind nicht kompatiblel. Ein WebUpdate von IDF4 auf IDF5 ist nicht möglich.
-* Aus Kompatibilitätsgründen existiert für den ESP32 auch eine Version Brautomat32 auf Basis ESP32-IDF4. ESP32-IDF 4 ist end of life und wird nicht empfohlen.
+> **Hinweis:** Der Brautomat ESP32-IDF4 und ESP8266 sind end of life.
 
 ## ▶️ Installation
 
-* Brautomat herunterladen
-  * ESP8266: Brautomat.zip
-  * ESP32 IDF4: Brautomat32.zip
-  * ESP32 IDF5: Brautomat32pIO.zip (empfohlen für ESP32)
+* [Download Brautomat ESP32](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
 * ZIP Datei entpacken
 * Doppelklick auf die Datei "Flashen.cmd"
 
@@ -66,13 +53,14 @@ Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs]
   * kleinen Brauhelfer2
   * Maische Malz und Mehr
   * BrewFather
-* Brewfather API support (ESP32 only)
 * Rezept Export
+* Brewfather API support
+* Backup und Restore
 * Unterstützung für 3,5" HMI Touchdisplay Nextion
 
 ## 📚 Dokumentation
 
-Eine ausführliche Anleitung liegt auf gitbook: [Anleitung & Beschreibung](https://innuendopi.gitbook.io/brautomat32/)\
+Eine ausführliche Anleitung auf gitbook: [Anleitung & Beschreibung](https://innuendopi.gitbook.io/brautomat32/)\
 Das Hobbybrauer Forum: [Diskussion & Neuigkeiten](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
 Die letzten Änderungen: [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
 
@@ -104,7 +92,7 @@ _Unterstützte das Projekt und übersetze den Brautomat32 in eine neue Sprache o
 
 ![Platine](docs/img/Platine21.jpg)
 
-Eine Platine für den Arduino ESP Controller ist verfügbar. Die Platine bietet neben den Schraubklemmblöcken für die GPIOs auch einen separaten Anschluss für das Induktionskochfeld sowie drei Anschlüsse für Temperatursensoren. Die Gerber Datei ist im Ordner Gehaeuse gespeichert. Die Platine 2.1 kann sowohl mit dem ESP8266, als auch mit dem ESP32 betrieben werden.
+Eine Platine für den Arduino ESP Controller ist verfügbar. Die Platine bietet neben den Schraubklemmblöcken für die GPIOs auch einen separaten Anschluss für das Induktionskochfeld sowie drei Anschlüsse für Temperatursensoren. Die Gerber Datei ist im Ordner Gehaeuse gespeichert.
 
 ## 📗 Gehäuse
 
@@ -113,7 +101,7 @@ Eine Platine für den Arduino ESP Controller ist verfügbar. Die Platine bietet 
 
 ## 📘 Pin-Belegung
 
-Der ESP32 D1 bietet ein Pinout passend zum ESP8266 (GPIO D0 bis D8). Die dargestellte Pinbelegung basiert auf dem Modul ESP32 D1 Mini NodeMCU von [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
+Die dargestellte Pinbelegung basiert auf dem Modul ESP32 D1 Mini NodeMCU von [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
 
 GPIO Zuordnung:
 
