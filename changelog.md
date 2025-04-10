@@ -18,7 +18,7 @@ Version 1.52 RC2
 * Fix:          DS18B20 Sensorauflösung HIGH, wenn nach WebUpdate keine DS18B20 Sensorauflösung aus alter config gelesen werden kann
 * Update:       ArduinoJSON Bibliothek 7.4.0
 
-* Breaking:     Die Entwicklung für ESP8266 und ESP32 IDF4 (veraltetes Framework) endet mit Version 1.52 beendet
+* Breaking:     Die Entwicklung für ESP8266 und ESP32 IDF4 (veraltetes Framework) endet mit Version 1.52
 * Neuer Name:   Das Kürzel "pIO" wurde entfernt
 * Neuer Name:   Der Brautomat32 für den ESP32 dem Framework IDF4 (eol) hat das Kürzel IDF4
 
