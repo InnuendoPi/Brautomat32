@@ -1,6 +1,6 @@
 # Brautomat32
 
-[![de](https://img.shields.io/badge/Sprache-de-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.de.md) ![Static Badge](https://img.shields.io/badge/ESP32pIO%20IDF5-blue)
+[![de](https://img.shields.io/badge/Sprache-de-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.de.md) ![Static Badge](https://img.shields.io/badge/ESP32%20IDF5-blue)
 
 The Brautomat is a brewing controller for ESP32 D1 Mini NodeMCU. The Brautomat offers an intuitive, easy-to-use control system.\
 The firmware is available in three versions:
