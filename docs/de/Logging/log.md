@@ -10,7 +10,6 @@ Der serielle Monitor muss zusätzlich zum COM-Port auf eine Baudrate von 115200 
 
 > **Hinweise:**\
 An einem Hochzeitstag sollte das Logging komplett deaktiviert werden.\
-Die Option Logging ist auf dem ESP8266 nicht verfügbar.
 
 ## Einstellungen Logging
 

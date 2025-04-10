@@ -4,11 +4,9 @@ Um den Brautomat nutzen zu können, muss die Firmware geflasht werden. Außerdem
 
 ## Firmware flashen mit MS Windows
 
-Der Brautomat ist in drei Versionen verfügbar. Empfohlen wird die Version Brautomat32pIO, weil diese Version für den ESP32 auf dem aktuellen ESP32 Framework basiert. Die Version Brautomat32 ist für den ESP32, basiert aber auf dem veralteten Framework IDF4 (end of life). Die Version Brautomat ist für den ESP8266 (end of life).
+Die Version Brautomat32 ist für den ESP32 und basiert auf dem Framework IDF5.
 
 * [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip): Brautomat32pIO.zip
-* [ESP32 IDF4](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip): Brautomat32.zip (eol)
-* [ESP8266](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat.zip): Brautomat.zip (eol)
 
 Die Installation der Firmware wird über das im ZIP Archiv enthaltene Script "Flashen.cmd" durchgeführt. Das ZIP Archiv wird in einem beliebigen Ordner entpackt. Der ESP Microcontroller wird mit per USB Kabel mit dem PC/Notebook verbunden. Ein Doppelklick auf das Script Flashen.cmd startet das Flashen der Firmware.
 
@@ -18,7 +16,7 @@ Das Betriebssystem MS Windows erstellt beim Verbinden vom ESP Microcontroller mi
 
 Im Bild wurde ein ESP Device auf COM7 gefunden. In seltenen Fällen wird unter MS Windows kein serieller COM Port automatisch bereitgestellt. USB Treiber für ESP Microcontroller sind auf folgenden Webseiten verfügbar: (MS Win und macOS)
 
-[![ESP8266 Treiber](https://img.shields.io/static/v1?label=Treiber&message=ESP8266&logo=arduino&logoColor=white&color=green)](https://www.wch-ic.com/search?t=all&q=ch341) [![ESP32 Treiber](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+[![ESP32 Treiber](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
 Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/espressif/esptool>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme (macOS, Linux). Die Windows-Version 64bit ist im ZIP Archiv enthalten. ESPTool is licensed under GPL v2.
 
@@ -52,20 +50,6 @@ ESP32 Step 2 Firmware flashen:
 
 ```json
 esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x2d0000 LittleFS.bin
-```
-
-#### Brautomat (ESP8266)
-
-ESP8266 Step 1 Flash löschen:
-
-```json
-esptool.exe --chip esp8266 erase_flash
-```
-
-ESP8266 Step 2 Firmware flashen:
-
-```json
-esptool.exe --chip esp8266 --baud 921600 write_flash 0x000000 firmware.bin 0x200000 LittleFS.bin
 ```
 
 ### Firmware flashen mit macOS

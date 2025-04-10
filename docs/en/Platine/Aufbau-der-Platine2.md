@@ -1,4 +1,4 @@
-# Assembly of the circuit board version 2 for ESP8266/ESP32
+# Assembly of the circuit board version 2
 
 This short guide describes the construction of the board. The board assembly is not demanding. This short description is intended as an aid for the inexperienced hobbyist and is of course not aimed at experienced electrical engineers. Information on soldering, suitable soldering irons and solder can be found on youtube or similar channels.
 
@@ -27,7 +27,6 @@ The JST-HX socket position is an alternative to the 5-pin screw terminal block. 
 | 1                                                     | Widerstand 4,7kOhm             | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
 | 1 optional                                            | Passiver Buzzer 12mm 3V        | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
 | 1 ESP32                                               | ESP32 D1 mini                  | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
-| 1 ESP8266 alternative zum ESP32                       | ESP8266 Wemos D1 mini          | [amazon](https://www.amazon.de/dp/B08BTYHJM1/?coliid=I3HCHU407TLWGX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_2FHXW05SH9AGJ9Z8WH2K) |
 | 1 optional                                            | Display Nextion 3.5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
 |                                                       |                                |                                   |
 
@@ -63,7 +62,7 @@ In step number 1, the two 12-pin screw terminal blocks are inserted. The GPIOs D
 
 Now turn the circuit board over and fix each screw terminal block with a soldering point. Now check that the screw terminal blocks are seated correctly. All pins must be correctly inserted through the solder points. All pins are then soldered.
 
-In step number 2, the two 8-pin screw terminal blocks are inserted. The GPIOs D0 to D8 of the ESP32 and ESP8266 are connected to the 8-pin screw terminal blocks.
+In step number 2, the two 8-pin screw terminal blocks are inserted. The GPIOs D0 to D8 of the ESP32 are connected to the 8-pin screw terminal blocks.
 
 ![screw terminal](/docs/img/Aufbau3.jpg)
 
@@ -112,7 +111,7 @@ Die Beinchen vom Widerstand werden auf der Rückseite leicht nach außen gebogen
 
 ## Den ESP Microcontroller aufsockeln
 
-Durch das Aufsockeln lässt sich der ESP Mikrocontroller jederzeit von der Platine abnehmen. So kann wahlweise ein ESP8266 oder ein ESP32 eingesetzt werden. Das Aufsockeln ist auch bei einer Fehlersuche nützlich.
+Durch das Aufsockeln lässt sich der ESP Mikrocontroller jederzeit von der Platine abnehmen. Das Aufsockeln ist auch bei einer Fehlersuche nützlich.
 
 ![Aufsockeln](/docs/img/Aufbau14.jpg)
 
@@ -131,27 +130,3 @@ Now place the ESP on top and fix it with a soldering point on each side. Now che
 ![ESP32](/docs/img/Aufbau15.jpg)
 
 Finally, all soldering points should be checked. If all soldering points are sealed, the Brautomat is ready.
-
-## Socketing the ESP8266
-
-If an ESP8266 is used, ensure that it is correctly seated when inserting the ESP8266:
-
-![ESP8266](/docs/img/Platine_ESP8266.jpg)
-
-The red line marks the area for the correct position of the ESP8266: the ESP8266 is plugged into the inner row of sockets, leaving 2 rows of sockets free towards the front edge of the board. Incorrect positioning can destroy the ESP8266!
-
-## Error correction board version 2.0 ESP8266
-
-> **Note:**
-with PCB version 2.1 no corrections required!\
-If an ESP32 is used, no error correction is required
-
-An error has crept into the board 2.0 without LevelShifter. A GND connection is missing. This error only occurs in operation with an ESP8266.
-
-To correct the error, a cable must be connected from the GND connection at the bottom right to any other GND connection, e.g. to the GND connection at the top right.
-
-![Platine 2.0](/docs/img/Platine20_korr.jpg)
-
-The missing connection was corrected with board version 2.1. Version 2.1 differs from version 2.0 by the imprint on the circuit board and the additional GND connections at the top right.
-
-![Platine 2.1](/docs/img/Platine21.jpg)

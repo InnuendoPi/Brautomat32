@@ -30,8 +30,6 @@ Rezepte aus MaischeMalzundMehr sollten ebenfalls zunächst im kleinenBrauhelfer2
 
 Rezepte aus BrewFather müssen die Eigenschaft boilTime (Kochdauer) mit einem ganzzahligen Wert belegt haben. Empfohlen wird auch ein Wert für den Parameter Equipment -> whirlpoolTime. Rastnamen können bei BrewFather einen (nahezu beliebig) langen Fließtext enthalten. Der Text wird auf maximal 50 Buchstaben gekürzt. Brewfather erlaubt Fließkommazahlen und Text als Rastdauer. Die Parameter werden in ganzzahlige Werte gewandelt oder auf 0 gesetzt.
 
-*Hinweis: der ESP8266 hat nur einen kleinen RAM Speicher. Rezepte mit sehr lange Texten, Bildern oder anderen Anhängen können ggfs. nicht eingelesen werden.*
-
 Importierte Rezepte werden im Ordner /Rezepte gespeichtert. Als Dateinamen wird der Rezpetnamen verwendet. Die maximale Dateinamenlänge im Arduino Dateisystem beträgt 31 Zeichen. Leerzeichen und Umlaute werden bei der Speicherung ersetzt.
 
 ## Optionen für den Import

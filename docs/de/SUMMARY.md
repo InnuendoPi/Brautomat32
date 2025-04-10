@@ -25,7 +25,6 @@
 * [Die Platine](Platine/plat.md)
   * [Anschlüsse](Platine/Anschluesse.md)
   * [Aufbau der Platine Version 2](Platine/Aufbau-der-Platine2.md)
-  * [Aufbau der Platine Version 1](Platine/Aufbau-der-Platine.md)
 * [Display](Display/dis.md)
 * [Gehäuse 3D Druck](Case/case.md)
   * [InnuCase](Case/Innu/InnuCase.md)

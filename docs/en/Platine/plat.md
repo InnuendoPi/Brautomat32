@@ -8,12 +8,3 @@ The board is a breakout board for the ESP8266 and ESP32 microcontrollers. Sensor
 * GPIO D8 is connected to the connection for a piezo buzzer on the board
 
 ![PCB 2](/docs/img/Platine21.jpg)
-
-## Which ESP is the right one?
-
-The ESP32 is recommended.
-
-* The ESP32 compared to the ESP8266
-    > offers more CPU power (dual core)\
-    > offers more connections (GPIOs)\
-    > offers more options for future expansions (pumps, recasting, heating elements, etc.)
