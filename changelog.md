@@ -10,6 +10,7 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 Version 1.52 RC2
 
+* Fix:          Restore file wurde nicht geschlossen
 * Fix:          Sichtbarkeit Brewfather API Elemente korrigiert, wenn keine API credentials eingetragen wurden
 * Fix:          DS18B20 Sensorauflösung HIGH, wenn nach WebUpdate keine DS18B20 Sensorauflösung aus alter config gelesen werden kann
 * Update:       ArduinoJSON Bibliothek 7.4.0
