@@ -10,6 +10,7 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 Version 1.52 RC3
 
+* Geändert:     Vor der Erstellung eines Backups wird die Konfiguration gespeichert (Änderung BF API sichern)
 * Fix:          Restore BrewFather credentials wurden wegen einer Ausnahme für den ESP8266 übersprungen
 * Fix:          Resize Chart durch Funktion Chart löschen behoben
 * Geändert:     Mit dem Start von einem Maischeschritt wird ein neuer Chart Messpunkt gesetzt
