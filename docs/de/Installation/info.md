@@ -6,7 +6,7 @@ Um den Brautomat nutzen zu können, muss die Firmware geflasht werden. Außerdem
 
 Die Version Brautomat32 ist für den ESP32 und basiert auf dem Framework IDF5.
 
-* [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip): Brautomat32pIO.zip
+* [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip): Brautomat32.zip
 
 Die Installation der Firmware wird über das im ZIP Archiv enthaltene Script "Flashen.cmd" durchgeführt. Das ZIP Archiv wird in einem beliebigen Ordner entpackt. Der ESP Microcontroller wird mit per USB Kabel mit dem PC/Notebook verbunden. Ein Doppelklick auf das Script Flashen.cmd startet das Flashen der Firmware.
 
@@ -24,7 +24,7 @@ Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/espressif/
 
 Falls das Script nicht genutzt werden kann, kann die Firmware manuell auf den ESP Microcontroller übertragen werden.
 
-#### Brautomat32pIO (ESP-IDF5)
+#### Brautomat32
 
 ESP32 Step 1 Flash löschen:
 
@@ -36,20 +36,6 @@ ESP32 Step 2 Firmware flashen:
 
 ```json
 esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x350000 LittleFS.bin
-```
-
-#### Brautomat32 (ESP-IDF4)
-
-ESP32 Step 1 Flash löschen:
-
-```json
-esptool.exe --chip esp32 erase_flash
-```
-
-ESP32 Step 2 Firmware flashen:
-
-```json
-esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x2d0000 LittleFS.bin
 ```
 
 ### Firmware flashen mit macOS
