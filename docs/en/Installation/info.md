@@ -6,7 +6,7 @@ To be able to use the Brautomat, the firmware must be flashed. The ESP microcont
 
 The Brautomat32 version is for the ESP32, based on framework IDF5.
 
-* [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32pIO.zip): Brautomat32pIO.zip
+* [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip): Brautomat32.zip
 
 The firmware is installed using the included “Flashen.cmd” script. To do this, the archive Firmware.zip is unpacked in any folder. The ESP microcontroller is connected to the PC/notebook via USB cable. Double-click on the Flashen.cmd script to start flashing the firmware.
 
@@ -25,7 +25,7 @@ ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This co
 
 If the script cannot be used, the firmware can be transferred manually to the ESP microcontroller.
 
-### Brautomat32pIO (ESP-IDF5)
+### Brautomat32
 
 ESP32 Step 1 erase flash:
 
@@ -37,20 +37,6 @@ ESP32 Step 2 flash firmware
 
 ```json
 esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x350000 LittleFS.bin
-```
-
-### Brautomat32 (ESP-IDF4)
-
-ESP32 Step 1 erase flash:
-
-```json
-esptool.exe --chip esp32 erase_flash
-```
-
-ESP32 Step 2 flash firmware:
-
-```json
-esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x2d0000 LittleFS.bin
 ```
 
 ## Firmware flash with macOS
@@ -68,7 +54,7 @@ After clicking on the "Filesystem" button, the file brautomat.mklittlefs.bin is 
 
 ## WLAN configuration
 
-After flashing the firmware, the Brautomat starts in AccessPoint mode. An open WLAN with the name _Brautomat_ becomes visible. A connection must be established with this WLAN. This works from a PC or notebook as well as with a smartphone. As soon as the connection is established, the web browser opens the Wi-Fi configuration portal. If the portal does not open automatically, the address <http://192.168.4.1> must be entered manually.
+After flashing the firmware, the Brautomat starts in AccessPoint mode. An open WLAN with the name _Brautomat32_ becomes visible. A connection must be established with this WLAN. This works from a PC or notebook as well as with a smartphone. As soon as the connection is established, the web browser opens the Wi-Fi configuration portal. If the portal does not open automatically, the address <http://192.168.4.1> must be entered manually.
 
 ![IDS](/docs/img/wlan1.jpg)
 
