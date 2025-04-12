@@ -4,4 +4,4 @@ The Brautomat works according to a tabular mashing plan. This plan is processed 
 
 Wort boiling steps, hop additions and additives are also entered in the mash plan.
 
-Beginners are recommended to read the chapter _Mash plan before the first brewing day. Almost all functions are intuitively understandable. However, there are also less obvious functions.
+Beginners are recommended to read the chapter _The mashing plan_ before the first brewing day. Almost all functions are intuitively understandable. However, there are also less obvious functions.

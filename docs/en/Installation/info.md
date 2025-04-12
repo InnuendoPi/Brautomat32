@@ -60,7 +60,7 @@ The WLAN configuration is displayed using the “Configure WiFi” button
 
 ![IDS](/docs/img/wlan2.jpg)
 
-The WLAN (SSID) and the password must be configured here. When you save, the brautomat restarts and connects to the WiFi. The Brautomat web interface can be accessed via <http://brautomat.local>.
+The WLAN (SSID) and the password must be configured here. After saving WLAN credentials, the brautomat restarts and connects to the WiFi. The Brautomat web interface can be accessed via <http://brautomat.local>.
 
 This completes the basic installation. The firmware flashing and WLAN configuration process only needs to be carried out once. The Brautomat must now be configured. The configuration is described in the section _Basic setup_. The following section _Update_ can be skipped for the time being.
 

@@ -1,14 +1,14 @@
-# Setting up induction hob
+# Kettle setup
 
-## Creating a Mash-Boil kettle
+## Creating a mash kettle
 
-In the "Mashing Plan" section, the mash-boil kettle is created using the gear icon in the top right corner.
+In the "Mashing Plan" section, the mash kettle is created using the gear icon in the top right corner.
 
 ![MaischeSud Kessel anlegen](/docs/img/IDS-einrichten.jpg)
 
-## Configure a Mash-Boil kettle
+## Configure a mash kettle
 
-Firstly, a hob must be configured. A GGM IDS induction hob is set up in this basic configuration.
+Firstly, a kettle must be configured. A GGM IDS induction hob is set up in this basic configuration.
 
 The first setting is the IDS type, where you can choose between GGM IDS1 and IDS2, Relay and webhook. Then, three control parameters need to be set:
 
@@ -30,7 +30,7 @@ The parameters in the "Temperature Control" tab are explained in detail in the "
 
 ## Configuring the PID Controller
 
-After completing the basic setup, the PID controller must be configured in the PID Manager tab. This controller automatically adjusts the power output of the GGM IDS to maintain the mash temperature (actual temperature) at the target temperature. A well-configured PID controller ensures that the set temperature is held precisely during the rest period.
+After completing the basic setup, the PID controller must be configured in the PID Manager tab. This controller automatically adjusts the power output of the GGM IDS to maintain the mash temperature (actual temperature) at the target temperature. A well-configured PID controller ensures that the target temperature is held precisely during the rest period.
 
 The PID controller is configured using two parameters:
 
