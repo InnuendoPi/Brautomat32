@@ -2,7 +2,7 @@
 
 The following description uses an _invented_ example recipe. This description is not about the recipe, but about the procedure for mashing with the Brautomat.
 
-The mashing plan is in the form of a table. This table is processed from top to bottom by the brewing system on a brewing day. In the example recipe, the line _Mash in at 50°C_ is the first mashing step and _WHP Hallertauer Tradition_ is the last mashing step. A very important function in the mash plan is the property in the _autoext_ column.
+The mashing plan is in the form of a table. This table is processed from top to bottom by the brewing system on a brewing day. In the example recipe, the line _Mash in at 50°C_ (Einmiaschen 50°C) is the first mashing step and _WHP Hallertauer Tradition_ is the last mashing step. A very important function in the mash plan is the property in the _autonext_ column.
 
 ## Basic functions
 
@@ -10,10 +10,10 @@ The mashing plan is in the form of a table. This table is processed from top to 
 
 For orientation, the structure of the table rows is described first. A row in the mash plan represents a step in the mash plan. Each table row has these columns:
 
-* The ‘Rest’ column shows a name for this mashing step.
-* The ‘Temperature’ column shows the resting temperature (also called target or set temperature in this manual).
-* The ‘Duration’ column shows the resting time (timer), i.e. how long the Brautomat should hold the resting temperature.
-* The ‘autoext’ column indicates whether the next step is to be carried out automatically after the resting time (timer) has elapsed.
+* The Rest column shows a name for this mashing step.
+* The Temperature column shows the resting temperature (also called target or set temperature in this manual).
+* The Duration column shows the resting time (timer), i.e. how long the Brautomat should hold the resting temperature.
+* The autoext column indicates whether the next step is to be carried out automatically after the resting time (timer) has elapsed.
 
 After these four entries for the mashing step, there are editing buttons in each line with the following functions: (from left to right)
 
@@ -45,8 +45,8 @@ All buttons for editing the mash plan are hidden as soon as the brewing process 
 
 Together with the Power, Play, Pause, Prev and Next controls, this results in an intuitive brewing control system. The mash plan shown here is an import from the smallBrauhelfer2. The import automatically inserts the rest temperatures and rest times. The alpha acid and the quantity in grams are automatically appended to the hop names. These abbreviations are also prefixed:
 
-* VWH: first wort hopping (FWH)
-* Boiling (without hops)
+* VWH: first wort hopping
+* Kochen: Boiling (without hops)
 * WPH: Whirlpool hopping
 
 Additives as shown in the picture _Kochen Hefenahrung 1gr_ are imported into the mash plan from the smallBrauherlfer2 with the time of addition and quantity.
@@ -78,7 +78,7 @@ at the end of a mashing process, an iodine sample is used to determine that the 
 * Save
 * Click the Pause button and the mashing process continues with the adjusted resting duration.
 
-## Function and application of autonext
+## Function and usage of autonext
 
 ![Mash plan autonext](/docs/img/Maischeplan-autonext.jpg)
 
