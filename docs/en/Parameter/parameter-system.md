@@ -76,7 +76,7 @@ Verbose mode contains Error and Info and also outputs information on data transf
 
 ### NTP time server
 
-The Network Time Protocol (NTP) regularly synchronises the time with a time server. The standard time server is europe.pool.ntp.org and is a time server on the Internet. If a time server is available in the local network, this can be used. If, for example, a Fritz.box (c) is used, fritz.box can be entered as the time server. If a local time switch is configured, the time switch does not require Internet access. The WebUpdate function requires a time server for SSL encryption.
+The Network Time Protocol (NTP) regularly synchronises the time with a time server. The standard time server is europe.pool.ntp.org. If a time server is available in the local network, this can be used. If a local time server is configured, the Brautomat does not require Internet access. The WebUpdate function requires a time server for SSL encryption.
 
 ### NTP time zone
 

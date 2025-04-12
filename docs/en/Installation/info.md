@@ -8,13 +8,13 @@ The Brautomat32 version is for the ESP32, based on framework IDF5.
 
 * [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip): Brautomat32.zip
 
-The firmware is installed using the included “Flashen.cmd” script. To do this, the archive Firmware.zip is unpacked in any folder. The ESP microcontroller is connected to the PC/notebook via USB cable. Double-click on the Flashen.cmd script to start flashing the firmware.
+The firmware is installed using the included “Flashen.cmd” script. To do this, unzip the archive in any folder. The ESP microcontroller is connected to the PC/notebook via USB cable. Double-click on the Flashen.cmd script to start flashing the firmware.
 
 The MS Windows operating system automatically creates a serial COM port when connecting the ESP microcontroller to a USB port on the PC or notebook.
 
 ![Windows Gerätemanager](/docs/img/com.jpg)
 
-An ESP device was found on COM7 in the image. In rare cases, no serial COM port is automatically provided under MS Windows. USB drivers for ESP microcontrollers are available on the following websites: (MS Win and macOS).
+An ESP device was found on COM7. In rare cases, no serial COM port is automatically provided under MS Windows. USB drivers for ESP microcontrollers are available on the following websites: (MS Win and macOS).
 
 [![ESP32 driver](https://img.shields.io/static/v1?label=driver&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
@@ -24,8 +24,6 @@ ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This co
 ## Manual flash with MS Windows and Linux
 
 If the script cannot be used, the firmware can be transferred manually to the ESP microcontroller.
-
-### Brautomat32
 
 ESP32 Step 1 erase flash:
 
