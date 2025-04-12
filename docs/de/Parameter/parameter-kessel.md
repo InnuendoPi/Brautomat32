@@ -4,13 +4,13 @@
 
 ### Max. Leistung
 
-Dieser Parameter beschreibt die maximale Ausgangsleistung des Kochfeldes. Der Standardwert ist 100%. Dieser Parameter wird verwendet, wenn ein kleiner Kessel mit z.B. 20l Volumen auf dem Kochfeld verwendet wird. Durch die Reduzierung der Leistung kann ein zu schnelles Aufheizen und Überkochen vermieden werden. Die Parameter "Max. Leistung" und "Kochleistung" sollten bei der Verwendung von kleinen Braukesseln gemeinsam reduziert werden.
+Dieser Parameter beschreibt die maximale Ausgangsleistung des Kochfeldes. Der Standardwert ist 100%. Dieser Parameter wird verwendet, wenn ein kleiner Kessel mit z.B. 20l Volumen auf dem Kochfeld verwendet wird. Durch die Reduzierung der Leistung kann ein zu schnelles Aufheizen und Überkochen vermieden werden. Die Parameter "Max. Leistung" und "Leistung ab Übergang" sollten bei der Verwendung von kleinen Braukesseln gemeinsam reduziert werden.
 
 Am Ende dieses Kapitels finden Sie [zwei Beispiele zur Berechnung der benötigten Leistung](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung).
 
 ### Temperatur delta zum Ziel
 
-Dieser Parameter beschreibt, ab welcher Differenz zur Rasttemperatur (Sollwert) der Timer für eine Rast starten soll. Der Standardwert ist 0,3°C. Im Maischprozess ermöglicht der PID-Regler eine sehr genaue Temperaturregelung. Eine Rasttemperatur wird auf +-0,2°C genau erreicht, indem der PID-Regler die Energiezufuhr vor Erreichen der Rasttemperatur kontrolliert reduziert. Die Reduzierung der Energiezufuhr hat den Nebeneffekt, dass der letzte Schritt zum Erreichen der Rasttemperatur länger dauert. Genau an dieser Stelle kommt der Parameter "Delta zum Ziel" ins Spiel: Soll z.B. eine Rasttemperatur von 63°C erreicht werden und die aktuelle Temperatur beträgt 62,7°C, dann würde bei einem Temperaturdelta zum Ziel von 0,3°C der Rasttimer starten. Bezogen auf die individuelle Brauanlage kann mit delta zum Ziel eine ungewollte Verlängerung der Rastzeit vermieden werden.
+Dieser Parameter beschreibt, ab welcher Differenz zur Rasttemperatur (Sollwert) der Timer für eine Rast starten soll. Der Standardwert ist 0,3°C. Im Maischprozess ermöglicht der PID-Regler eine sehr genaue Temperaturregelung. Eine Rasttemperatur wird auf +-0,2°C genau erreicht, indem der PID-Regler die Energiezufuhr vor Erreichen der Rasttemperatur kontrolliert reduziert. Die Reduzierung der Energiezufuhr hat den Nebeneffekt, dass der letzte Schritt zum Erreichen der Rasttemperatur länger dauert. Genau an dieser Stelle kommt der Parameter "Delta zum Ziel" ins Spiel: Soll z.B. eine Rasttemperatur von 63°C erreicht werden und die aktuelle Temperatur beträgt 62,7°C, dann würde bei einem Temperatur delta zum Ziel von 0,3°C der Rasttimer starten. Bezogen auf die individuelle Brauanlage kann mit delta zum Ziel eine ungewollte Verlängerung der Rastzeit vermieden werden.
 
 ### Übergang zum Kochen [°C]
 
@@ -18,11 +18,11 @@ Dieser Parameter beschreibt die Temperatur, ab der der PID Controller das Kochen
 
 ### Leistung ab Übergang [%]
 
-Dieser Parameter beschreibt die Ausgangsleistung der IDS ab der Temperatur Kochen. Der Standardwert ist 100%. Mit dem Parameter "Übergang zum Kochen" ist eine Temperatur festgelegt worden, ab der der PID Controller deaktiviert wird. Mit dem Parameter "Leistung ab Übergang" wird nun die feste Ausgangsleistung für das Kochfeld vorgegeben. Wird ein Braukessel mit einem Volumen über 35l oder mehr eingesetzt, ist der Standardwert 100% eine passende Wahl. In Brauküchen mit kleinen Kesseln kann 100% Energiezufuhr ein Überkochen bewirken. In diesem Fall kann die maximale Energiezufuhr mit diesem Parameter auf bspw. 75% reduziert werden.
+Dieser Parameter beschreibt die Ausgangsleistung für das Kochfeld ab der Temperatur Übergang zum Kochen. Der Standardwert ist 100%. Mit dem Parameter "Übergang zum Kochen" ist eine Temperatur festgelegt worden, ab der der PID Controller deaktiviert wird. Mit dem Parameter "Leistung ab Übergang" wird nun die feste Ausgangsleistung für das Kochfeld vorgegeben. Wird ein Braukessel mit einem Volumen über 35l oder mehr eingesetzt, ist der Standardwert 100% eine passende Wahl. In Brauküchen mit kleinen Kesseln kann 100% Energiezufuhr ein Überkochen bewirken. In diesem Fall kann die maximale Energiezufuhr mit diesem Parameter auf bspw. 75% reduziert werden.
 
 ### Deaktiviere PID zum Kochen [on/off]
 
-Dieser Parameter bestimmt das Verhalten vom PID Controller beim Kochen, wenn die Ist-Temperatur über der Ziel-Temperatur liegt. Beispiel: die Kochtemperatur wurde im Maischeplan auf 98°C festgelegt. Der Parameter "Leistung ab Übergang" schaltet die PID Berechnung ab der Temperatur "Übergang zum Kochen" aus. Wenn der Parameter "Deaktivere PID zum Kochen" aktiviert ist (default), dann bleibt der PID Controller auch über der Ziel-Temperatur aus dem Maischeplan ausgeschaltet und die Leistung aus dem Parameter "Leistung ab Übergang" wird verwendet. Dieser Parameter ist in der Voreinstellung aktiviert und ermöglicht ein wallendes Kochen.
+Dieser Parameter bestimmt das Verhalten vom PID Controller beim Kochen, wenn die Ist-Temperatur über der Ziel-Temperatur liegt. Beispiel: die Kochtemperatur wurde im Maischeplan auf 98°C festgelegt. Der Parameter "Leistung ab Übergang" schaltet die PID Berechnung ab der Temperatur "Übergang zum Kochen" aus. Wenn der Parameter "Deaktivere PID zum Kochen" aktiviert ist (Standard), dann bleibt der PID Controller auch über der Ziel-Temperatur von 98°C aus dem Maischeplan ausgeschaltet und die Leistung aus dem Parameter "Leistung ab Übergang" wird verwendet. Dieser Parameter ist in der Voreinstellung aktiviert und ermöglicht ein wallendes Kochen.
 
 Wenn der Parameter "Deaktiviere PID zum Kochen" nicht aktiviert ist, wird die benötigte Leistung ab Erreichen der Ziel-Temepratur (hier 98°C) durch den PID Controller berechnet. Die berechnete Leistung oberhalb der Ziel-Temperatur ist 0%. Das Kochfeld schaltet ab und verhindert ggfs. ein Überkochen.
 
@@ -42,7 +42,7 @@ _Hinweis: der Parameter Max. Leistung wird durch den Parameter Leistung bei Sens
 
 ### Intervall (SampleTime)
 
-Dieser Parameter gibt an, in welchem zeitlichen Abstand eine Berechnung der benötigten Leistung ermittelt werden. Der Standardwert ist 3000ms. Das Intervall wird zur PID Berechnung und im AutoTune eingesetzt. In Brauküchen mit kleinem Volumen ist ein kleineres Intervall ggfs. vorteilhaft. Je kleiner das Intervall, desto häufiger werden Sensoren abgefragt und PID Werte berechnet. Dies führt zur einer höheren Auslastung des Brautomaten. Wertebereich 1000 - 7000ms.
+Dieser Parameter gibt an, in welchem zeitlichen Abstand eine Berechnung der benötigten Leistung ermittelt werden. Der Standardwert ist 3000ms. Das Intervall wird zur PID Berechnung und im AutoTune eingesetzt. In Brauküchen mit kleinem Volumen ist ein kleineres Intervall ggfs. vorteilhaft. Je kleiner das Intervall, desto häufiger wird die benötigte Leistung berechnet. Dies führt zur einer höheren Auslastung des Brautomaten. Wertebereich 1000 - 7000ms.
 
 ### PID Algorithmus
 
@@ -54,7 +54,7 @@ Dieser Parameter wird für die Erkennung von Extremwerten (Max, Min) verwendet. 
 
 ### AutoTune Datenreihe (lookback)
 
-Dieser Parameter gibt an, wie viele Messwerte für die Ermittlung von Extremalwerten betrachtet werden sollen. Der Standardwert beträgt 50 Messwerte. Zu beachten gilt, dass maximal 100 Messwerte konfiguriert werden können. Bei sehr gut wärmeisolierten Braukesseln (bspw. mit Armaflex) kann eine Erhöhung auf 100 Messwerte in der Datenreihe die Erkennung von Extremalwerten in der Abkühlphase vom AutoTune Prozess verbessern.
+Dieser Parameter gibt an, wie viele Messwerte für die Ermittlung von Extremalwerten betrachtet werden sollen. Der Standardwert beträgt 50 Messwerte. Zu beachten gilt, dass maximal 100 Messwerte konfiguriert werden können. Bei sehr gut wärmeisolierten Braukesseln kann eine Erhöhung auf 100 Messwerte in der Datenreihe die Erkennung von Extremalwerten in der Abkühlphase vom AutoTune Prozess verbessern.
 
 ### AutoTune debug
 
@@ -64,9 +64,9 @@ _Diese 10 Parameter sind je Brauanlage individuell einzustellen. Die Parameter k
 
 ## Profile
 
-Der Brautomat kann Hardware Profile verwalten. Profile werden nur genutzt, wenn unterschiedliche Kessel vorhanden sind. Anwender mit unterschiedlich großen Kesseln können über Profile den Kessel für den Brautag auswählen, anstatt manuell alle Parameter neu eingeben zu müssen. Ein Hardware Profil beinhaltet alle  Einstellungen von einem Kessel.
+Der Brautomat kann Hardware Profile verwalten. Profile können verwendet werden, wenn unterschiedliche Kessel vorhanden sind. Anwender mit unterschiedlich großen Kesseln können über Profile den Kessel für den Brautag auswählen, anstatt manuell alle Parameter neu eingeben zu müssen. Ein Hardware Profil beinhaltet alle  Einstellungen von einem Kessel.
 
-Profile werden im Ordner /Profile gespeichert. Profile ermöglichen einen schnellen und einfachen Wechsel zwischen verschiedenen MaischeSud Kessel. Die Funktion Speichern erstellt eine Profildatei mit den o.g. Paramter, während die Funktion Löschen die Profildatei aus dem Flash-Speicher entfernt.
+Profile werden im Ordner /Profile gespeichert. Profile ermöglichen einen schnellen und einfachen Wechsel zwischen verschiedenen Kesseln. Die Funktion Speichern erstellt eine Profildatei mit den o.g. Paramter, während die Funktion Löschen die Profildatei aus dem Flash-Speicher entfernt.
 
 Das Standardprofil beim Start des Brautomaten ist immer das zuletzt ausgewählte Profil.
 

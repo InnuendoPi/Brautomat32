@@ -24,8 +24,6 @@ Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/espressif/
 
 Falls das Script nicht genutzt werden kann, kann die Firmware manuell auf den ESP Microcontroller übertragen werden.
 
-#### Brautomat32
-
 ESP32 Step 1 Flash löschen:
 
 ```json
@@ -53,7 +51,7 @@ Nach einem Klick auf die Schaltfläche „Dateisystem“ wird die Datei LittleFS
 
 ## WLAN Konfiguration
 
-Nach dem Flashen der Firmware startet der Brautomat im AccessPoint Mode. Ein offenes WLAN mit dem Namen _Brautomat_ wird sichtbar. Mit diesem WLAN muss eine Verbindung hergestellt werden. Das funktioniert sowohl vom PC oder Notebook, als auch mit dem Smartphone. Sobald die Verbindung hergestellt ist, öffnet der Webbrowser das WLAN Konfigurationsportal. Sollte sich das Portal nicht automatisch öffnen, muss als Adresse <http://192.168.4.1> manuell eingegeben werden.
+Nach dem Flashen der Firmware startet der Brautomat im AccessPoint Mode. Ein offenes WLAN mit dem Namen _Brautomat_ wird sichtbar. Mit diesem WLAN muss eine Verbindung hergestellt werden. Sobald die Verbindung hergestellt ist, öffnet der Webbrowser das WLAN Konfigurationsportal. Sollte sich das Portal nicht automatisch öffnen, muss als Adresse <http://192.168.4.1> im Web Browser manuell eingegeben werden.
 
 ![WLAN Konfiguration](/docs/img/wlan1.jpg)
 
@@ -61,9 +59,9 @@ Nach dem Flashen der Firmware startet der Brautomat im AccessPoint Mode. Ein off
 
 ![WLAN Konfiguration](/docs/img/wlan2.jpg)
 
-Hier muss das WLAN (SSID und das Password) eigegeben werden. Mit _Save__ startet der Brautomat neu und verbindet sich mit dem WLAN. Das Web Interface vom Brautomat ist nun im lokalen WLAN über <http://brautomat.local> erreichbar.
+Hier muss das WLAN (SSID und das Password) eingegeben werden. Mit _Save_ startet der Brautomat neu und verbindet sich mit dem WLAN. Das Web Interface vom Brautomat ist  im lokalen WLAN über die Adresse <http://brautomat.local> erreichbar.
 
-Damit ist die Grundinstallation bereits abgeschlossen. Der Vorgang Firmware flashen und WLAN Konfiguration ist nur einmal durchzuführen. Der Brautomat muss nun konfiguriert werden. Die Konfiguration wird im Abschnitt _Grundeinrichtung_ beschrieben. Der folgende Abschnitt _Update_ kann zunächst übersprungen werden.
+Damit ist die Grundinstallation abgeschlossen. Der Vorgang Firmware flashen und WLAN Konfiguration ist nur einmal durchzuführen. Der Brautomat muss nun konfiguriert werden. Die Konfiguration wird im Abschnitt _Grundeinrichtung_ beschrieben. Der folgende Abschnitt _Update_ kann zunächst übersprungen werden.
 
 ## Updates
 

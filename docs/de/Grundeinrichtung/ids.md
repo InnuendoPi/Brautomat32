@@ -1,8 +1,8 @@
-# Induktionskochfeld GGM IDS einrichten
+# Kochfeld einrichten
 
 ## Anlegen des MaischeSud-Kessels
 
-Im ersten Abschnitt "Maischeplan" wird der MaischeSud-Kessel über das Zahnrad oben rechts erstellt.
+Im ersten Abschnitt _Maischeplan_ wird der MaischeSud-Kessel über das Zahnrad oben rechts erstellt.
 
 ![MaischeSud Kessel anlegen](/docs/img/IDS-einrichten.jpg)
 
@@ -18,9 +18,9 @@ Die erste Einstellung betrifft den IDS-Typ, bei dem IDS1 oder IDS2 ausgewählt w
 
 Diese GPIOs (D5, D6 und D7) sind für das GGM IDS-Anschlusskabel mit JST-HX-Buchse bzw. den Schraubklemmblock vorkonfiguriert.
 
-Als nächstes muss ein Temperatursensor dem MaischeSud-Kessel zugewiesen werden. Die Auswahl erfolgt aus einer Liste bereits eingerichteter Sensoren. In dieser Grundeinrichtung ist nur der Sensor "Sensor IDS2" vorhanden, der entsprechend ausgewählt wird.
+Als nächstes muss ein Temperatursensor dem MaischeSud-Kessel zugewiesen werden. Die Auswahl erfolgt aus einer Liste bereits eingerichteter Sensoren. In dieser Grundeinrichtung ist nur der Sensor _Sensor IDS2_ vorhanden, der entsprechend ausgewählt wird.
 
-_Tipp_: _Dem Induktionskochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird als Ist-Temperatur oder aktuelle Temperatur bezeichnet und während des Maischeprozesses kontinuierlich mit der Rast-Temperatur (Zieltemperatur) verglichen._
+_Tipp_: _Einem Kochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird als Ist-Temperatur oder aktuelle Temperatur bezeichnet und während des Maischeprozesses kontinuierlich mit der Rast-Temperatur (Zieltemperatur) verglichen._
 
 ![MaischeSud Kessel konfigurieren](/docs/img/IDS-konfigurieren.jpg)
 
@@ -30,16 +30,16 @@ Die Parameter im Reiter "Temperatursteuerung" werden im Abschnitt "Alle Paramete
 
 ## Einrichtung des PID-Controllers
 
-Nach der Grundkonfiguration muss der PID-Controller im Tab PID Manager eingerichtet werden. Dieser berechnet automatisch die erforderliche Leistung der GGM IDS, um die Maische-Temperatur (Ist-Temperatur) auf die Rast-Temperatur zu bringen. Eine präzise PID-Konfiguration sorgt dafür, dass die Rast-Temperatur über die gesamte Rast-Dauer konstant bleibt.
+Nach der Grundkonfiguration muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID Controller berechnet automatisch die erforderliche Leistung für das Kochfeld, um die Maische-Temperatur (Ist-Temperatur) auf die Rast-Temperatur zu bringen. Eine präzise PID-Konfiguration sorgt dafür, dass die Rast-Temperatur über die gesamte Rast-Dauer konstant bleibt.
 
 Der PID-Controller wird mit zwei Parametern eingestellt:
 
 * Ku (ultimate gain) – Verstärkungsfaktor
 * Pu (ultimate period) – Periodendauer
 
-Aus diesen beiden Werten werden die PID-Parameter P, I und D berechnet. Für eine anlagenbezogene Konfiguration wird der AutoTune-Prozess im Abschnitt "AutoTune Schritt für Schritt" ausführlich beschrieben.
+Aus diesen beiden Werten werden die PID-Parameter P, I und D berechnet. Diese Parameter sind für jede Brauanlage individuell und werden mit dem AutoTune Prozess ermittelt. Der AutoTune-Prozess wird im Abschnitt "AutoTune Schritt für Schritt" ausführlich beschrieben.
 
-Für diese Grundeinrichtung werden die folgenden Werte für Ku und Pu eingetragen. Danach wird die PID-Tuning-Regel "AutoTune Modus" ausgewählt:
+Für diese Grundeinrichtung werden die folgenden Werte für Ku und Pu eingetragen. Danach wird die PID-Tuning-Regel _AutoTune Modus_ ausgewählt:
 
 ![IDS](/docs/img/IDS-AutoTune-erg.jpg)
 

@@ -2,13 +2,13 @@
 
 ## System
 
-### Alarmsummer aktivieren
+### Piezo Buzzer aktivieren
 
-Mit diesem Parameter kann ein Piezo-Summer aktiviert werden. Standardmäßig ist der Buzzer an GPIO D8 angeschlossen. Dies entspricht dem Layout der Platine 2.0. Buzzer Alarme unterstützen den Maischprozess durch Signaltöne.
+Mit diesem Parameter kann ein Piezo-Buzzer aktiviert werden. Standardmäßig ist der Buzzer an GPIO D8 angeschlossen. Dies entspricht dem Layout der Platine 2.1. Buzzer Alarme unterstützen den Maischprozess durch Signaltöne.
 
 ### Toasts und mp3 Alarme aktivieren
 
-Toasts sind kleine Push-Nachrichten. Sie erscheinen als Kachel unten rechts im Browser. Mit Ausnahme von Fehlermeldungen werden Toasts nach einigen Sekunden wieder ausgeblendet. Es gibt Toast-Nachrichten über den Maischprozess, Toast-Nachrichten vom System und textlose mp3-Alarme. Die Eigenschaft Toasts hat 3 Optionen: Aus, Ein und Fehler. Die Option "Aus" schaltet die Toastmeldungen aus. Die Option "Ein" sendet alle Toast-Nachrichten und mp3-Alarme. Die Option "Fehler" sendet nur Toastmeldungen bei Systemfehlern, aber keine Meldungen über den Maischprozess.
+Toasts sind kleine Push-Nachrichten. Sie erscheinen als Kachel unten rechts im Browser. Mit Ausnahme von Fehlermeldungen werden Toasts nach einigen Sekunden automatisch ausgeblendet. Es gibt Toast-Nachrichten über den Maischprozess, Toast-Nachrichten vom System und textlose mp3-Alarme. Die Eigenschaft Toasts hat 3 Optionen: Aus, Ein und Fehler. Die Option "Aus" schaltet die Alarmmeldungen aus. Die Option "Ein" sendet alle Toast-Nachrichten und mp3-Alarme. Die Option "nur Fehler" sendet nur Toastmeldungen bei Systemfehlern, aber keine Meldungen über den Maischprozess.
 
 Toasts unterstützt Audioausgabe. Dadurch werden Toasts während des Maischprozesses nicht nur visuell, sondern auch akustisch angezeigt. Die Firmware enthält die Audiodateien info.mp3, success.mp3, warning.mp3 und error.mp3. Die Audiodateien (mp3) können ausgetauscht werden. Nur der Name muss gleich bleiben. Im Browser muss Autoplay Audio für die IP-Adresse des Brautautomaten aktiviert sein.
 
@@ -29,19 +29,19 @@ Mit diesem Parameter kann ein Nextion HMI 3,5 Zoll Display betrieben werden. Der
 In dieser Ansicht werden IDS und Nachguss mit Ist- und Solltemperaturen angezeigt. Die aktuelle und die nächste Rast werden mit Dauer angezeigt.
 Die Länge des roten Balkens unter der Ansicht IDS und Nachguss zeigt die abgelaufene Rastzeit an.
 
-![Display](/docs/img/kettlepage.jpg)
+![Display](/docs/img/kettlepage-sm.jpg)
 
 #### MaischeSud
 
-Diese Ansicht zeigt das erste Induktionskochfeld. Es wird nur der aktuelle Kochvorgang mit der Dauer im Kopf angezeigt. Die Länge der roten Balken unter den Temperaturen zeigt den Fortschritt des aktuellen Kochvorgangs an.
+Diese Ansicht zeigt das erste Kochfeld. Es wird die aktuelle Rast mit Ist- und Solltemperatur sowie der aktuellen Restzeit angezeigt. Die Länge des roten Balkens unter den Temperaturen zeigt den Fortschritt der aktuellen Rast an. Das Symbol rechts neben der Restzeit zeigt an, ob die nächste Rast automatisch gestartet wird (autonext): grün bedeutet automatisch, rot bedeutet Pause. Zusätzlich wird das Controller Deck angezeigt mit den entsprechend Funktionen.
 
-![Display](/docs/img/brewpage.jpg)
+![Display](/docs/img/brewpage-sm.jpg)
 
 #### Manueller Modus (nur für GGM IDS2)
 
 Diese Ansicht dient zur manuellen Steuerung des Induktionskochfeldes. Im Handbetrieb stehen 6 Leistungsstufen zur Verfügung: 0, 20, 40, 60, 80 und 100% Leistung. Der manuelle Modus ist nur für das GGM IDS2 geeignet. (IDS1 nicht getestet!)
 
-![Display](/docs/img/induction-mode.jpg)
+![Display](/docs/img/induction-mode-sm.jpg)
 
 Ein Display ist optional. Der Brautomat unterstützt nur Nextion HMI 3,5 Zoll Touchdisplays (Basic und Discovery Serie).
 
@@ -55,7 +55,7 @@ Wenn analoge Sensoren vom Typ PT100x verwendet werden, muss dieser Schalter akti
 
 ### mDNS aktivieren
 
-Multicast DNS wird verwendet, um Hostnamen in IP-Adressen in kleinen Netzwerken aufzulösen. mDNS ermöglicht es, einen "sprechenden" Namen für den Brauautomaten zu verwenden. Voreingestellt ist der mDNS-Name "brautomat". Das Webinterface ist über die Adresse <http://brautomat.local> erreichbar. Der Hostname ist auf maximal 15 Zeichen begrenzt.
+Multicast DNS wird verwendet, um Hostnamen in IP-Adressen in kleinen Netzwerken aufzulösen. mDNS ermöglicht es, einen "sprechenden" Namen für den Brautomat zu verwenden. Voreingestellt ist der mDNS-Name "brautomat". Das Webinterface ist über die Adresse <http://brautomat.local> erreichbar. Der Hostname ist auf maximal 15 Zeichen begrenzt.
 
 Hinweis: Der mDNS Name wird ohne Protokoll (http://) und ohne Top-Level-Domain (.local) in den Systemeinstellungen (brautomat) konfiguriert.
 
@@ -65,7 +65,7 @@ Hinweis: Der mDNS Name wird ohne Protokoll (http://) und ohne Top-Level-Domain (
 
 ### Protokollierung
 
-Logging ist nur verfügbar, wenn ein ESP32 verwendet wird. Auf der Registerkarte Logging kann eine serielle Protokollausgabe für die Module Konfiguration, Sensoren, Aktoren, Induktion, Nachgießen, Anzeige und System aktiviert werden. Für die Protokollierung stehen die Stufen Error, Info, Verbose und Off zur Verfügung. Benötigt wird ein serieller Monitor, z.B. mit der Arduino IDE, VSCODE etc. Die Baudrate beträgt 115200.
+Auf der Registerkarte Logging kann eine serielle Protokollausgabe für alle Module aktiviert werden. Für die Protokollierung stehen die Stufen Error, Info, Verbose und Off zur Verfügung. Benötigt wird ein serieller Monitor, z.B. mit der Arduino IDE, VSCODE etc. Die Baudrate beträgt 115200.
 
 Der Error Modus gibt nur Fehler aus.
 
@@ -75,7 +75,7 @@ Der Verbose Modus beinhaltet Error und Info und gibt zusätzlich Informationen z
 
 ### NTP-Zeitserver
 
-Das Network Time Protocol (NTP) synchronisiert die Uhrzeit regelmäßig mit einem Zeitserver. Der Standardzeitserver ist europe.pool.ntp.org und ist ein Zeitgeber im Internet. Wenn im lokalen Netzwerk ein Zeitserver vorhanden ist, kann dieser verwendet werden. Wird z.B. eine Fritz.box (c) verwendet, kann als Zeitserver fritz.box eingetragen werden. Wird eine lokale Zeitschaltuhr konfiguriert, benötigt der Automat keinen Internetzugang. Die Funktion WebUpdate benötigt für die SSL-Verschlüsselung zwingend einen Zeitserver.
+Das Network Time Protocol (NTP) synchronisiert die Uhrzeit regelmäßig mit einem Zeitserver. Der Standardzeitserver ist europe.pool.ntp.org. Wenn im lokalen Netzwerk ein Zeitserver vorhanden ist, kann dieser verwendet werden. Wird ein lokaler Zeitserver konfiguriert, benötigt der Brautomat keinen Internetzugang. Eine korrekte Uhrzeit ist für den Brauprozess wichtig. Die Funktion WebUpdate benötigt für die SSL-Verschlüsselung einen Zeitserver.
 
 ### NTP Zeitzone
 

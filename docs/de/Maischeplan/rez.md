@@ -45,9 +45,9 @@ Aus einem importierten Braurezept wird ein Brautomat Maischeplan. Empfohlen wird
 
 Rezepte aus MaischeMalzundMehr sollten ebenfalls zuerst in den kleinenBrauhelfer2 importiert und an die individuellen Anlagenwerte, Rohstoffe etc. angepasst werden. Da MMum keine Rastennamen vergibt, empfiehlt sich eine Bearbeitung im KBH2 Maischplan.
 
-Rezepte aus BrewFather müssen die Eigenschaft boilTime mit einem ganzzahligen Wert belegen. Ein Wert für den Parameter Equipment -> whirlpoolTime wird ebenfalls empfohlen. Rastennamen können im BrewFather einen (fast beliebig) langen Fließtext enthalten. Der Text wird auf maximal 50 Zeichen gekürzt. Brewfather erlaubt Fließkommazahlen und Text als Rastzeit. Die Parameter werden in Ganzzahlen konvertiert oder auf 0 gesetzt.
+Rezepte und Sude könne aus BrewFather per Datei Import oder per API Abruf importiert werden. Rastennamen können im BrewFather einen (fast beliebig) langen Fließtext enthalten. Der Text wird auf maximal 50 Zeichen gekürzt. Brewfather erlaubt Fließkommazahlen und Text als Rastzeit. Die Parameter werden in Ganzzahlen konvertiert oder auf 0 gesetzt.
 
-*Hinweis: Die ESP-Mikrocontroller haben einen kleinen RAM-Speicher. Rezepte mit sehr langen Texten, Bildern oder anderen Anhängen können unter Umständen nicht importiert werden. Bilder und sehr lange Beschreibungen sollten vor dem Import entfernt werden.
+*Hinweis: Die ESP-Mikrocontroller haben einen kleinen RAM-Speicher. Rezepte mit sehr langen Texten, Bildern oder anderen Anhängen können unter Umständen nicht importiert werden. Der Brautomat filtert Rezepte vor dem Import. Trotzdem kann es erforderlich sein, dass Bilder und sehr lange Beschreibungen vor dem Import entfernt werden müssen.
 
 Importierte Rezepte werden im Ordner /Rezepte gespeichert. Als Dateiname wird der Rezeptname verwendet. Die maximale Länge des Dateinamens im Arduino-Dateisystem beträgt 31 Zeichen. Leerzeichen und Umlaute werden beim Speichern ersetzt.
 
@@ -63,7 +63,7 @@ Der ausgewählte Maischeplan wird aus dem Flashspeicher entfernt.
 
 ![Voreinstellung Import](/docs/img/voreinstellung_import.jpg)
 
-Der Brautomat benötigt einen Schritt Einmaischen (optional) und einen Schritt Abmaischen. Insbesondere der Step Abmaischen dient bei deaktiviertem "autonext" als Trennschritt zwischen Maischen und Kochen. Beim Importieren kann der Brautomat fehlende Einmaisch- und Abmaischschritte einfügen. Zusätzlich können fehlende Temperaturen mit Vorgaben versehen werden.
+Der Brautomat benötigt einen Schritt Einmaischen (optional) und einen Schritt Abmaischen. Insbesondere der Step Abmaischen dient bei deaktiviertem autonext als Trennschritt zwischen Maischen und Kochen. Beim Importieren kann der Brautomat fehlende Einmaisch- und Abmaischschritte einfügen. Zusätzlich können fehlende Temperaturen mit Vorgaben versehen werden.
 
 ### Temperaturvorgaben für fehlende Parameter
 

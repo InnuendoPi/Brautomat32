@@ -82,70 +82,68 @@ Am Ende von einem Maischeprozess wird über eine Jodprobe festgestellt, dass die
 
 ![Maischeplan autonext](/docs/img/Maischeplan-autonext.jpg)
 
-Der erste Schritt des Maischeplans mit dem Namen _Einmaischen 50°C_ hat eine Rastzeit von 10 Minuten und einen deaktivierten _autonext_. Das Bild zeigt die Situation, wenn der Rasttimer die 10 Minuten erreicht hat: Der Timer ist auf 00:00 Restzeit heruntergezählt. Der Play-Button wechselt automatisch auf rot. Unten rechts erscheint die Toastmeldung "Click play button". Das Induktionskochfeld schaltet sich aus. Der Brauprozess wartet auf einen Klick auf die Wiedergabetaste.
+Der erste Schritt des Maischeplans mit dem Namen _Einmaischen 50°C_ hat eine Rastzeit von 10 Minuten und einen deaktivierten _autonext_. Das Bild zeigt die Situation, wenn der Rasttimer die 10 Minuten erreicht hat: Der Timer ist auf 00:00 Restzeit heruntergezählt. Der Play-Button wechselt automatisch auf rot. Unten rechts erscheint die Toastmeldung "Click play button". Das Kochfeld schaltet sich aus. Der Brauprozess wartet auf einen Klick auf den Play Button.
 
-* Am Ende einer Pause mit deaktiviertem _autonext_ wird der Brauprozess gestoppt und das Induktionskochfeld ausgeschaltet.
+* Am Ende einer Pause mit deaktiviertem _autonext_ wird der Brauprozess gestoppt und das Kochfeld ausgeschaltet.
 
-Der zweite Maischschritt mit der Bezeichnung _Maltoserast 63°C_ hat eine Rasttemperatur von 63°C und eine Rastzeit von 25 Minuten. In diesem Schritt steuert der Brautomat das Induktionskochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Rasttimer ist eine Stoppuhr, die auf 00:00 (0 Minuten : 0 Sekunden) herunterzählt. Wenn dieser Timer die Rastzeit von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft _autonext_. Wenn _autonext_ aktiviert ist, springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Beispielrezept ist dies der Schritt _Verzuckerung 72°C_. Der Schritt Verzuckerung hat eine Rasttemperatur von 72°C. Der Brautomat erhöht automatisch die Leistung des Induktionskochfeldes, um die neue Rasttemperatur zu erreichen.
+Der zweite Maischschritt mit der Bezeichnung _Maltoserast 63°C_ hat eine Rasttemperatur von 63°C und eine Rastzeit von 25 Minuten. In diesem Schritt steuert der Brautomat das Kochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Rasttimer ist eine Stoppuhr, die auf 00:00 (0 Minuten : 0 Sekunden) herunterzählt. Wenn dieser Timer die Rastzeit von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft _autonext_. Wenn _autonext_ aktiviert ist, springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Beispielrezept ist dies der Schritt _Verzuckerung 72°C_. Der Schritt Verzuckerung hat eine Rasttemperatur von 72°C. Der Brautomat erhöht automatisch die Leistung des Kochfeldes, um die neue Rasttemperatur zu erreichen.
 
 * Am Ende einer Rast mit aktiviertem _autoext_ wird der Maischprozess automatisch fortgesetzt und die GGM IDS bleibt eingeschaltet.
 
 ![Maischeplan autonext](/docs/img/Maischeplan-autonext2.jpg)
 
-Die Eigenschaft _autonext_ im siebten Schritt _Abmaischen 78°C_ ist nicht aktiviert. Trifft der Brautomat auf ein deaktiviertes autonext, beendet der Brautomat nach Ablauf der Rastzeit die aktuelle Rast und setzt die Leistung des Induktionskochfeldes auf 0% (aus). In diesem Zustand wird die "Play-Taste" rot dargestellt. Um den Brauvorgang fortzusetzen, muss der Play Button angeklickt werden.
-
-In diesem Bild ist der aktive Ruhezustand "Kochen", die aktuelle Leistung des GGM IDS wird mit 0% angezeigt und die Wiedergabetaste ist rot. Dieser Zustand wird genau dann erreicht, wenn die Rast _Abmaischen 78°C_ beendet ist und der Brautomat auf die Fortsetzung durch eine Benutzeraktion wartet.
+Die Eigenschaft _autonext_ im siebten Schritt _Abmaischen 78°C_ ist nicht aktiviert. Trifft der Brautomat auf ein deaktiviertes autonext, beendet der Brautomat nach Ablauf der Rastzeit die aktuelle Rast und schaltet das Kochfeld aus (0% Leistung). In diesem Zustand wird der Play Button rot dargestellt. Um den Brauvorgang fortzusetzen, muss der Play Button angeklickt werden.
 
 Während im ersten Beispiel von _autonext_ im Schritt Einmaischen meist direkt der Play Button zum Fortsetzen angeklickt wird, kann im zweiten Beispiel Abmaischen eine längere Zeit für das Läutern und die Läuterruhe vergehen. Der Brautomat wird im Zustand "Play Button klicken" belassen. In diesem Zustand können alle Aktoren verwendet werden.
 
-_Unterschied Autonext und Pause: Bei deaktiviertem Autonext am Rastende wird das GGM IDS abgeschaltet. Mit der Pausetaste wird der Rasttimer angehalten, die GGM IDS bleibt aber eingeschaltet und der Brautomat regelt die benötigte Leistung der GGM IDS._
+## Unterschied Autonext und Pause
+
+Bei deaktiviertem Autonext am Rastende wird das Kochfeld abgeschaltet. Mit dem Pause Button wird der Rasttimer angehalten, das Kochfeld bleibt aber eingeschaltet und der Brautomat berechnet die benötigte Leistung für das Kochfeld_
 
 In den folgenden Abschnitten werden die optionalen Sonderfunktionen beschrieben. Brautomat-Einsteiger können die Beschreibung der Sonderfunktionen überspringen.
 
 ## Sonderfunktion 0°C Rast bei aktiviertem Autonext
 
-Eine Sonderfunktion ist die Rasttemperatur 0°C bei aktiviertem autonext: Wird die Rasttemperatur auf 0°C gesetzt und autonext aktiviert, wird der Maischeschritt ohne Temperaturkontrolle automatisch gestartet. Im Maischplanbeispiel ist diese Sonderfunktion nach dem Würzekochen im Schritt _Nachisomerisierung_ dargestellt. Die Würze hat zu diesem Zeitpunkt eine Temperatur von ca. 100°C. Das Induktionskochfeld soll abgeschaltet und der Timer für die Nachisomerisierung direkt gestartet werden:
+Eine Sonderfunktion ist die Rasttemperatur 0°C bei aktiviertem autonext: Wird die Rasttemperatur auf 0°C gesetzt und autonext aktiviert, wird der Maischeschritt ohne Temperaturkontrolle automatisch gestartet. Im Maischplanbeispiel ist diese Sonderfunktion nach dem Würzekochen im Schritt _Nachisomerisierung_ dargestellt. Die Würze hat zu diesem Zeitpunkt eine Temperatur von ca. 100°C. Das Kochfeld soll abgeschaltet und der Timer für die Nachisomerisierung direkt gestartet werden:
 
 ![Sonderfunktion 0°C](/docs/img/Maischeplan-Sonderfunktion.jpg)
 
-Die Sonderfunktion _0°C Rasttemperatur mit aktiviertem autonext_ erfüllt genau diese Anforderung: Ist- und Solltemperatur werden ignoriert und der Rasttimer wird gestartet. Wäre die Rasttemperatur des Schrittes Nachisomerisierung nicht auf 0°C, sondern z.B. auf 95°C eingestellt, würde der Rasttimer für den Schritt Nachisomerisierung erst starten, wenn die Temperatur im MaischeSud Kessel von 100°C auf 95°C abgekühlt ist. Während der Nachisomerisierung sinkt die Temperatur in der Würze. Bei Bedarf wird die Würze aktiv gekühlt. Die Sonderfunktion _0°C Rasttemperatur bei aktiviertem autonext_ bewirkt, dass das Induktionskochfeld ausgeschaltet bleibt.
-
-Hintergrund: Ist die Funktion autonext aktiviert, vergleicht der Brautomat ständig die aktuelle Isttemperatur mit der Rasttemperatur. Die Eigenschaft "Temperatur Delta zur Solltemperatur" gibt an, wie viel Grad Abweichung zulässig sind, damit der nächste Maischschritt automatisch gestartet wird. Bei einer Rasttemperatur von 63°C und einem "Temperatur delta zum Soll" von 0,3°C würde der Maischeschritt ab einer Ist-Temperatur von 62,7°C bei steigender Temperatur und ab 63,3°C bei fallender Temperatur gestartet.
+Die Sonderfunktion _0°C Rasttemperatur mit aktiviertem autonext_ erfüllt genau diese Anforderung: Ist- und Solltemperatur werden ignoriert und der Rasttimer wird gestartet. Wäre die Rasttemperatur des Schrittes Nachisomerisierung nicht auf 0°C, sondern z.B. auf 95°C eingestellt, würde der Rasttimer für den Schritt Nachisomerisierung erst starten, wenn die Temperatur im MaischeSud Kessel von 100°C auf 95°C abgekühlt ist. Während der Nachisomerisierung sinkt die Temperatur in der Würze. Bei Bedarf wird die Würze aktiv gekühlt. Die Sonderfunktion _0°C Rasttemperatur bei aktiviertem autonext_ bewirkt, dass das Kochfeld ausgeschaltet bleibt.
 
 ## Brauverfahren
 
-Das Grundprinzip des Brauautomaten ist die aufsteigende Infusion. Dies schließt Varianten wie z.B. das Earlsche Kochmaischverfahren ein. Durch die Eigenschaft "autonext" können auch andere Brauverfahren realisiert werden. Es ist jedoch zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "Halbautomatik" unterstützen kann. Ein auslösender Trigger für eine Aktion, wie z.B. das Ziehen von Teilmaischen, muss manuell durch den Bediener erfolgen. Manuell bedeutet bei der Brauanlage das Anklicken des Play-Buttons. Als Auslöser für eine manuelle Aktion kann eine Pause von null Minuten mit deaktiviertem Autonext verwendet werden.
+Das Grundprinzip des Brauautomaten ist die aufsteigende Infusion. Dies schließt Varianten wie z.B. das Earlsche Kochmaischverfahren ein. Durch die Eigenschaft "autonext" können auch andere Brauverfahren realisiert werden. Es ist jedoch zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "Halbautomatik" unterstützen kann. Ein auslösender Trigger für eine Aktion, wie z.B. das Ziehen von Teilmaischen, muss manuell durch den Bediener erfolgen. Manuell bedeutet beim Brautomat die Verwendung der Buttons Play und Pause. Als Auslöser für eine manuelle Aktion kann eine Rast von null Minuten mit deaktiviertem Autonext verwendet werden.
 
 Hinweis: Die folgenden Themen zu den Steuerbefehlen sind optional und für den Einstieg in den Brautomat nicht relevant.
 
 ## Steuerbefehle
 
-Eine zweite Sonderfunktion sind Steuerbefehle für die Induktionskochfelder Maische und Sud, Nachguss und Aktoren. Die Syntax für den Maischeschritt lautet
+Eine zweite Sonderfunktion sind Steuerbefehle für die Kochfelder und Aktoren. Die Syntax für den Maischeschritt lautet
 
 * Aktorname:Leistung
 
-Die Leistung kann entweder EIN oder AUS oder eine Zahl zwischen 0 und 100% sein. Dabei entspricht der Zustand OFF dem Wert 0% und ON dem Wert 100%. Der Steuerbefehl für das erste Induktionskochfeld ist IDS oder MAISCHE. Der Steuerbefehl für das zweite Induktionskochfeld ist SUD. Der Steuerbefehl für den Nachguss ist HLT. Für den Nachguss kann zusätzlich der Steuerbefehl Nachguss verwendet werden. Der Steuerbefehl für einen Aktor ist der Aktorname.
+Die Leistung kann entweder ON oder OFF oder eine Zahl zwischen 0 und 100% sein. Dabei entspricht der Zustand OFF dem Wert 0% und ON dem Wert 100%. Der Steuerbefehl für das erste Induktionskochfeld ist IDS oder MAISCHE. Der Steuerbefehl für das zweite Induktionskochfeld ist SUD. Der Steuerbefehl für den Nachguss ist HLT. Der Steuerbefehl für einen Aktor ist der Aktorname.
 
 ![Aktor Steuerbefehl](/docs/img/Maischeplan-Aktoren.jpg)
 
-Der Maischeplan im Bild schaltet an drei Stellen Aktoren. Gleich zu Beginn wird das Rührwerk eingeschaltet: Rührwerk:EIN
-Kurz vor Ende des Maischeplans wird das Rührwerk ausgeschaltet: Ruehrwerk:AUS und der Nachguss eingeschaltet: Nachguss:EIN. Aktornamen dürfen keine Sonderzeichen (außer - und _), Umlaute oder Leerzeichen enthalten und müssen eindeutig sein. Das Webinterface überprüft die Eingaben automatisch.
+Der Maischeplan im Bild schaltet an drei Stellen Aktoren. Gleich zu Beginn wird das Rührwerk eingeschaltet: Rührwerk:ON
+Kurz vor Ende des Maischeplans wird das Rührwerk ausgeschaltet: Ruehrwerk:OFF und der Nachguss eingeschaltet: Nachguss:ON.
 
-Der Steuerbefehl für einen Aktor kann mit einer Leistung angegeben werden, z.B. PUMPE:60. Der Aktor Pumpe wird dann mit 60% eingeschaltet. Dies setzt voraus, dass dieser Aktor für PWM aktiviert wurde. Wird der Steuerbefehl für einen Aktor ohne PWM ausgeführt, so wird die Leistung 60% durch EIN bzw. 100% ersetzt. Die Rasttemperatur und die Rastzeit müssen bei Steuerbefehlen für Aktoren auf 0 gesetzt werden.
+Der Steuerbefehl für einen Aktor kann mit einer Leistung angegeben werden, z.B. PUMPE:60. Der Aktor Pumpe wird dann mit 60% Leistung eingeschaltet. Dies setzt voraus, dass dieser Aktor für PWM aktiviert wurde. Die Rast-Temperatur und die Rast Dauer müssen bei Steuerbefehlen auf 0 gesetzt werden.
 
-Der Steuerbefehl IDS:50 setzt die maximale Ausgangsleistung des Induktionskochfeldes auf 50%. Ebenso kann mit HLT:75 den Nachguss auf 75% Leistung eingestellt werden.
+Der Steuerbefehl IDS:50 setzt die maximale Ausgangsleistung des Kochfeldes auf 50%. Ebenso kann mit HLT:75 der Nachguss auf 75% Leistung eingeschaltet werden.
 
 ![IDS Steuerbefehl](/docs/img/sonderfunktion_sud1.jpg)
 
-Der Steuerbefehl SÜD:Dickmaische kochen mit einer Rastzeit von 10 Minuten und einer Rasttemperatur von 100 Grad führt einen Maischeschritt auf einem zweiten Induktionskochfeld durch. Der Rasttimer wird gestartet, sobald die Rasttemperatur erreicht ist.
+Der Steuerbefehl SUD:Dickmaische kochen mit einer Rastzeit von 10 Minuten und einer Rasttemperatur von 100 Grad führt einen Maischeschritt auf einem zweiten Kochfeld durch. Der Rasttimer wird gestartet, sobald die Rasttemperatur erreicht ist.
 
 ![Steuerbefehl SUD](/docs/img/sonderfunktion_sud2.jpg)
 
-Der Steuerbefehl SUD:Dickmaische kochen mit einer Rasttemperatur von 100 Grad aber ohne Rastzeit schaltet das zweite Induktionskochfeld ein, startet den PID-Regler und springt direkt zum nächsten Schritt im Maischeplan.
+Der Steuerbefehl SUD:Dickmaische kochen mit einer Rasttemperatur von 100 Grad aber ohne Rastzeit schaltet das zweite Kochfeld ein, startet den PID-Controller für das Kochfeld und springt direkt zum nächsten Schritt im Maischeplan.
 
 ![Steuerbefehl SUD](/docs/img/sonderfunktion_sud3.jpg)
 
-Der Maischeschritt Verzuckerung 72°C wird auf dem ersten Induktionskochfeld "Maische" durchgeführt. Der PID-Regler regelt die erforderliche Leistung für den Maischkessel. Gleichzeitig regelt der PID-Regler die benötigte Leistung für den Kessel "Sud".
+Der Maischeschritt Verzuckerung 72°C wird auf dem ersten Kochfeld _Maische_ durchgeführt. Der PID-Regler regelt die erforderliche Leistung für den Maischkessel. Gleichzeitig regelt der PID-Controller die benötigte Leistung für den Kessel _Sud_.
 
 Beispiele:
 
@@ -159,21 +157,21 @@ Beispiele:
 * SUD:Dickmaische kochen
 * SUD:60
 
-_Hinweis: Mit den Steuerbefehlen können die Kessel Maische, Sud und HLT gleichzeitig betrieben werden. Es kann jedoch nur ein Rasttimer aktiv sein. Das erste Induktionskochfeld "Maische" muss immer einen Rasttimer eingetragen haben._
+_Hinweis: Mit den Steuerbefehlen können die Kessel Maische, Sud und HLT gleichzeitig betrieben werden. Es kann jedoch nur ein Rasttimer aktiv sein. Das erste Kochfeld "Maische" muss immer einen Rasttimer eingetragen haben._
 
-Beispiel: Dekoktion mit zwei Induktionskochfeldern:
+Beispiel: Dekoktion mit zwei Kochfeldern:
 
 ![IDS und SUD Steuerbefehl](/docs/img/sonderfunktion_sud4.jpg)
 
-Aufgrund der Einschränkung "der erste Kessel "Maische" muss immer mit einer Rastzeit betrieben werden" ergibt sich für die Prozesse Dekoktion eine einfache Vorgehensweise: die zu kochende Teilmaische muss in den Kessel "Maische" und die auf Temperatur zu haltende Teilmaische muss in den Kessel "Sud".
+Aufgrund der Einschränkung _der erste Kessel Maische muss immer mit einer Rastzeit betrieben werden_ ergibt sich für die Prozesse Dekoktion eine einfache Vorgehensweise: die zu kochende Teilmaische muss in den Kessel _Maische_ und die auf Temperatur zu haltende Teilmaische muss in den Kessel _Sud_.
 
-Beispiel für die Verwendung der Leistung für das Induktionskochfeld:
+Beispiel für die Verwendung der Leistung für ein Kochfeld:
 
 Gegeben sei eine Schüttung mit 7kg und ein Hauptguss mit 28l. In Summe beträgt die Masse 35kg\
 
-Mit Hilfe der Sonderfunktion IDS:<Leistung in %> kann die Leistung der GGM IDS so eingestellt werden, dass beim Maischen die Aufheizrate 1°C pro Minute beträgt.
+Mit Hilfe der Sonderfunktion IDS:<Leistung in %> kann die Leistung eines Kochfeldes so eingestellt werden, dass beim Maischen die Aufheizrate 1°C pro Minute beträgt.
 
-![Steuerbefehl IDS Leistung](/docs/img/IDS-Sonderfunktion.jpg)
+![Steuerbefehl MAISCHE Leistung](/docs/img/IDS-Sonderfunktion.jpg)
 
 _Erläuterungen zum Rechenweg siehe: Parameter der GGM IDS - Temperatursteuerung - Maximale Leistung der IDS._
 
@@ -212,7 +210,7 @@ Als Beispiel wird die folgende Konfiguration für das GGM IDS bzw. den Kessel Ma
 
 ![IDS Steuerbefehl](/docs/img/aktoren_schalten4.jpg)
 
-Die maximale Leistungsabgabe ist auf 100% voreingestellt. Die Temperatur "Übergang zum Sieden" beträgt 95°C. Ab dieser Temperatur beträgt die maximale Ausgangsleistung des GGM IDS nur noch 80%.
+Die maximale Leistungsabgabe ist auf 100% voreingestellt. Die Temperatur "Übergang zum KOchen" beträgt 95°C. Ab dieser Temperatur beträgt die maximale Ausgangsleistung des GGM IDS nur noch 80%.
 
 Der Maischeplan in der Abbildung beginnt mit dem Schritt "Aufheizen des Hauptgusses". Das Induktionskochfeld GGM IDS würde das Wasser mit der Leistung "Max. Leistung IDS" (Parameter im Register Temperatursteuerung), also mit 100%, erhitzen.
 

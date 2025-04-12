@@ -2,8 +2,7 @@
 
 [![de](https://img.shields.io/badge/Sprache-de-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.de.md) ![Static Badge](https://img.shields.io/badge/ESP32%20IDF5-blue)
 
-The Brautomat is a brewing controller for ESP32 D1 Mini NodeMCU. The Brautomat offers an intuitive, easy-to-use control system.\
-The firmware is available in three versions:
+The Brautomat is a brewing controller for ESP32. The Brautomat offers an intuitive, easy-to-use control system.
 
 ***
 
@@ -97,7 +96,7 @@ _Support this project and translate Brautomat into a new language or correct exi
 
 ![Platine](docs/img/Platine21.jpg)
 
-A ciruit board for the ESP32 D1 Mini NodeMCU is available. In addition to the screw terminal blocks for the GPIOs, the board also offers a separate connection for the induction hob GGM IDS and three connections for temperature sensors Dallas DS18B20. The Gerber file is stored in the Gehaeuse folder. The board 2.1 can be operated with ESP32 D1 mini varaint only.
+A ciruit board for the ESP32 D1 Mini NodeMCU is available. In addition to the screw terminal blocks for the GPIOs, the board also offers a separate connection for the induction hob GGM IDS and three connections for temperature sensors Dallas DS18B20. The Gerber file is stored in the Gehaeuse folder. The board 2.1 can be operated with ESP32 D1 mini variant only.
 
 ## 📗 Case
 
