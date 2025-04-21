@@ -8,8 +8,10 @@ InnuNextion Display lib\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.52 RC3
+Version 1.52
 
+* Update:       ArduinoJSON Bibliothek 7.4.1
+* Fix:          File handling open: ein fehlerhaftes oder extrem großes BF JSON konnte eine temp Datei im Status open hinterlassen
 * Geändert:     Vor der Erstellung eines Backups wird die Konfiguration gespeichert (Änderung BF API sichern)
 * Fix:          Restore BrewFather credentials wurden wegen einer Ausnahme für den ESP8266 übersprungen
 * Fix:          Resize Chart durch Funktion Chart löschen behoben
