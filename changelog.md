@@ -3,13 +3,18 @@
 ESP32 Arduino 3.2.0 ESP-IDF v5.4.1\
 VSCode 1.99 pioarduino IDE 1.0.6\
 InnuAPID AutoTune PID lib 1.6\
-InnuTicker Task Scheduler lib 0.0.5\
-InnuNextion Display lib\
+InnuTicker Task Scheduler lib 0.0.6\
+InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
 Version 1.52
 
+* Geändert:     Watchdog feed/reset angepasst
+* Update:       InnuTicker: RAM handling (ptr)
+* Update:       InnuNextion: RAM handling (ptr)
+* Geändert:     Überprüfung Sonderzeichen (Namen etc.) RAM hanlding (ptr)
+* Fix:          Fehler im Modul Rezept umbenennen/kopieren behoben
 * Fix:          Debug BF Import entfernt
 * Geändert:     Rezeptimort (removed global var)
 * Update:       ArduinoJSON Bibliothek 7.4.1
