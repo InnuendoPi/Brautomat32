@@ -8,17 +8,24 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.52
+Version 1.53RC
 
-* Geändert:     Watchdog feed/reset angepasst
+* Fix:          Bug: Fehler im Modul Rezept umbenennen/kopieren behoben (altes Format)
+* Fix:          Debug Ausgaben BF Import entfernt
+* Fix:          ein fehlerhaftes oder sehr großes Brewfather JSON konnte eine temporäre Datei im Status geöffnet hinterlassen
+* Fix:          ESP32 IDF4 und ESP8266 Updates erstellt (EOL)P
 * Update:       InnuTicker: RAM handling (ptr)
 * Update:       InnuNextion: RAM handling (ptr)
-* Geändert:     Überprüfung Sonderzeichen (Namen etc.) RAM hanlding (ptr)
-* Fix:          Fehler im Modul Rezept umbenennen/kopieren behoben
-* Fix:          Debug BF Import entfernt
-* Geändert:     Rezeptimort (removed global var)
 * Update:       ArduinoJSON Bibliothek 7.4.1
-* Fix:          File handling open: ein fehlerhaftes oder extrem großes BF JSON konnte eine temp Datei im Status open hinterlassen
+* Geändert:     bei Aktoren ohne aktiviertes PWM wird die Eigenschaft Leistung nicht mehr angezeigt (100%)
+* Geändert:     bei der PID Manager Eingabe Ku/Pu wird die Berechnung PID bei der Vorauswahl Autotune PID Modus automatisch durchgeführt
+* Geändert:     Watchdog feed/reset angepasst
+* Geändert:     RAM handling Webserver response (avoid mem copies)
+* Geändert:     RAM handling Überprüfung auf Sonderzeichen (ptr)
+* Geändert:     Rezeptimort (removed global var)
+
+Version 1.52
+
 * Geändert:     Vor der Erstellung eines Backups wird die Konfiguration gespeichert (Änderung BF API sichern)
 * Fix:          Restore BrewFather credentials wurden wegen einer Ausnahme für den ESP8266 übersprungen
 * Fix:          Resize Chart durch Funktion Chart löschen behoben
