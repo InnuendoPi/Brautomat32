@@ -10,8 +10,6 @@ Der Brautomat ist eine Brausteuerung für den ESP32 D1 Mini NodeMCU. Der Brautom
 
 [![Brautomat32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
 
-> **Hinweis:** Der Brautomat ESP32-IDF4 und ESP8266 sind end of life.
-
 ## ▶️ Installation
 
 * [Download Brautomat ESP32](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)

@@ -10,8 +10,6 @@ The Brautomat is a brewing controller for ESP32. The Brautomat offers an intuiti
 
 [![Brautomat32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
 
-> **note:** Brautomat ESP32-IDF4 and ESP8266 are end of life.
-
 ## ▶️ Installation
 
 * [Download Brautomat ESP32](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)

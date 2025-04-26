@@ -75,11 +75,14 @@ Der Verbose Modus beinhaltet Error und Info und gibt zusätzlich Informationen z
 
 ### NTP-Zeitserver
 
-Das Network Time Protocol (NTP) synchronisiert die Uhrzeit regelmäßig mit einem Zeitserver. Der Standardzeitserver ist europe.pool.ntp.org. Wenn im lokalen Netzwerk ein Zeitserver vorhanden ist, kann dieser verwendet werden. Wird ein lokaler Zeitserver konfiguriert, benötigt der Brautomat keinen Internetzugang. Eine korrekte Uhrzeit ist für den Brauprozess wichtig. Die Funktion WebUpdate benötigt für die SSL-Verschlüsselung einen Zeitserver.
+Das Network Time Protocol (NTP) synchronisiert die Uhrzeit regelmäßig mit einem Zeitserver. Der Standardzeitserver ist europe.pool.ntp.org. Wenn im lokalen Netzwerk ein Zeitserver vorhanden ist, sollte dieser verwendet werden. Wird ein lokaler Zeitserver konfiguriert, benötigt der Brautomat keinen Internetzugang. Bspw. fritz.box oder die IP Adresse vom Standard Gateway.
 
 ### NTP Zeitzone
 
-Die Zeitzone wird aus einer Tabelle bestimmt. Die Zeitzone Europa Berlin ist voreingestellt und lautet <CET-1CEST,M3.5.0,M10.5.0/3>.
+Die Zeitzone wird aus einer Tabelle bestimmt. Die Zeitzone Europa Berlin ist voreingestellt:
+
+<CET-1CEST,M3.5.0,M10.5.0/3>
+
 Anhand der Zeitzone wird die korrekte Uhrzeit inklusive Sommer- bzw. Winterzeit ermittelt.
 
 #### Zeitzonen-Tabelle

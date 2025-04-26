@@ -127,6 +127,7 @@
     "MISC_RES_HEAP": "Freier Heap Speicher:",
     "MISC_RES_FW": "Sketch Speicher:",
     "MISC_RES_SDK": "SDK Version:",
+    "MISC_NTP_TEXT": "Tabelle Zeitzonen",
     "MISC_TT_AUDIO": "Nachrichten und mp3 Audiosignale",
     "MISC_TT_PAGE": "Startseite im Touch-Display",
     "MISC_TT_MDNS": "mDNS Name für den Brautomat im Netzwerk",
