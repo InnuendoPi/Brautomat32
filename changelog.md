@@ -8,12 +8,13 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.53RC
+Version 1.53
 
 * Fix:          Bug: Fehler im Modul Rezept umbenennen/kopieren behoben (altes Format)
 * Fix:          Debug Ausgaben BF Import entfernt
 * Fix:          ein fehlerhaftes oder sehr großes Brewfather JSON konnte eine temporäre Datei im Status geöffnet hinterlassen
-* Fix:          ESP32 IDF4 und ESP8266 Updates erstellt (EOL)P
+* Fix:          Fehler ESP8266 Aktualisierung Uhrzeit behoben
+* Update:       ESP32 IDF4 und ESP8266 Updates erstellt (EOL)
 * Update:       InnuTicker: RAM handling (ptr)
 * Update:       InnuNextion: RAM handling (ptr)
 * Update:       ArduinoJSON Bibliothek 7.4.1
@@ -22,7 +23,7 @@ Version 1.53RC
 * Geändert:     Watchdog feed/reset angepasst
 * Geändert:     RAM handling Webserver response (avoid mem copies)
 * Geändert:     RAM handling Überprüfung auf Sonderzeichen (ptr)
-* Geändert:     Rezeptimort (removed global var)
+* Geändert:     Rezeptimport (removed global var)
 
 Version 1.52
 

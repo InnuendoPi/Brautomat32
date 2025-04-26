@@ -125,6 +125,7 @@
     "MISC_RES_HEAP": "Free heap mem:",
     "MISC_RES_FW": "Sketch mem:",
     "MISC_RES_SDK": "SDK version:",
+    "MISC_NTP_TEXT": "table timezones",
     "MISC_TT_AUDIO": "toasts messages and mp3 audio alerts",
     "MISC_TT_PAGE": "default start page display",
     "MISC_TT_MDNS": "Brautomat mDNS name in your local network",
