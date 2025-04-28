@@ -8,6 +8,10 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
+Version 1.54
+
+* Fix:          Fehler im Modul Maischeplan editieren behoben
+
 Version 1.53
 
 * Fix:          Bug: Fehler im Modul Rezept umbenennen/kopieren behoben (altes Format)
