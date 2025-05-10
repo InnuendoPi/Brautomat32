@@ -1,12 +1,19 @@
 # Changelog
 
 ESP32 Arduino 3.2.0 ESP-IDF v5.4.1\
-VSCode 1.99 pioarduino IDE 1.0.6\
+VSCode 1.100 pioarduino IDE 1.0.6\
 InnuAPID AutoTune PID lib 1.6\
 InnuTicker Task Scheduler lib 0.0.6\
 InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
+
+Version 1.54.1
+
+* Fix:          Fehler im Modul Maischeplan editieren autonext behoben
+* Geändert:     Reload Maischeplan (reset array and read mashplan)
+* Update:       VSCode
+* Fix:          html Buttons aria-hidden Attribut
 
 Version 1.54
 
