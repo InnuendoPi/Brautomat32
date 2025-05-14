@@ -1,6 +1,6 @@
 # Changelog
 
-ESP32 Arduino 3.2.0 ESP-IDF v5.4.1\
+ESP32 Arduino 3.2.0 ESP-IDF v5.4.2\
 VSCode 1.100 pioarduino IDE 1.0.6\
 InnuAPID AutoTune PID lib 1.6\
 InnuTicker Task Scheduler lib 0.0.6\
@@ -8,8 +8,13 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.54.1
+Version 1.54.4
 
+* Geändert:     in den Einstellungen der Kessel wird der aktive Profilname im Header angezeigt
+* Geändert:     in den Einstellungen der Aktoren und Sensoren wird der Gerätename im Header angezeigt
+* Fix:          Fehler Hardware Profil löschen behoben
+* Fix:          BrewFather API Tabelle: handling IDs Rezepte/Sude
+* Fix:          Liste Hardware Profile
 * Fix:          Fehler im Modul Maischeplan editieren autonext behoben
 * Geändert:     Reload Maischeplan (reset array and read mashplan)
 * Update:       VSCode
