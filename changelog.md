@@ -10,6 +10,7 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 Version 1.54.6
 
+* Fix:          typo check Kesseltyp
 * Geändert:     div. Anpassungen html/js
 * Geändert:     Überprüfung returnCodes BrewFather
 * Fix:          Fehler empty response im request getDots behoben
