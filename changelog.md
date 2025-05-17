@@ -8,9 +8,10 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.54.5
+Version 1.54.6
 
-* Geändert:     Überprüfung reutrnCodes BrewFather
+* Geändert:     div. Anpassungen html/js
+* Geändert:     Überprüfung returnCodes BrewFather
 * Fix:          Fehler empty response im request getDots behoben
 * Geändert:     in den Einstellungen der Kessel wird der aktive Profilname im Header angezeigt
 * Geändert:     in den Einstellungen der Aktoren und Sensoren wird der Gerätename im Header angezeigt
