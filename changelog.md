@@ -8,8 +8,10 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.54.6
+Version 1.54.7
 
+* Geändert:     Chart laden nach reboot/power off
+* Fix:          html check undefined object
 * Fix:          typo check Kesseltyp
 * Geändert:     div. Anpassungen html/js
 * Geändert:     Überprüfung returnCodes BrewFather
