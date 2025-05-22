@@ -8,8 +8,9 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.54.7
+Version 1.54.8
 
+* Geändert:     Tabelle BrewFather wird beim Öffnen Modal immer geleert
 * Geändert:     Chart laden nach reboot/power off
 * Fix:          html check undefined object
 * Fix:          typo check Kesseltyp
@@ -25,9 +26,6 @@ Version 1.54.7
 * Geändert:     Reload Maischeplan (reset array and read mashplan)
 * Update:       VSCode
 * Fix:          html Buttons aria-hidden Attribut
-
-Version 1.54
-
 * Fix:          Fehler im Modul Maischeplan editieren behoben
 
 Version 1.53
