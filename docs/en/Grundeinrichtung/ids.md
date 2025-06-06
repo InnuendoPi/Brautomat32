@@ -61,6 +61,16 @@ ultimate gain Ku:           225
 ultimate period Pu:         1500
 ```
 
+## Setup time server
+
+Configuring a time server is mandatory for operation. The Network Time Protocol (NTP) regularly synchronises the time with a time server. Preconfigured time server is set to europe.pool.ntp.org. If a time server is available in the local network, it is highly reccommended to configure a local time server! If a local time server is configured, the Brautomat does not require Internet access. Per default fallback NTP time servers are set to pool.ntp.org and time.nist.gov.
+
+## NTP time zone
+
+Beside ntp time server a timezone is mandatroy, too. A list of all time zones: [time zone table](https://innuendopi.gitbook.io/brautomat32/parameter-overview/parameter-system#time-zone-table).
+
+Pre configured time zone: Europe Berlin
+
 ## Completing the basic configuration
 
 After saving the settings, the basic configuration is complete. Brewing can now begin with a temperature sensor and a mash-boil kettle.

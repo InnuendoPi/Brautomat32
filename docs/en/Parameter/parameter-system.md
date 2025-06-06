@@ -76,13 +76,13 @@ Verbose mode contains Error and Info and also outputs information on data transf
 
 ### NTP time server
 
-The Network Time Protocol (NTP) regularly synchronises the time with a time server. The standard time server is europe.pool.ntp.org. If a time server is available in the local network, it is highly reccommended to use a local time server. If a local time server is configured, the Brautomat does not require Internet access. Most internet routers offer lan time services, like fritz.box or IP address default gateway.
+Configuring a time server is mandatory for operation. The Network Time Protocol (NTP) regularly synchronises the time with a time server. Preconfigured time server is set to europe.pool.ntp.org. If a time server is available in the local network, it is highly reccommended to configure a local time server! If a local time server is configured, the Brautomat does not require Internet access. Per default fallback NTP time servers are set to pool.ntp.org and time.nist.gov.
 
 ### NTP time zone
 
-The time zone is determined from a table. The time zone Europe Berlin is preset and is <CET-1CEST,M3.5.0,M10.5.0/3>.
+Beside ntp time server a timezone is mandatroy, too. The time zone is determined from the table below. The time zone Europe Berlin is preset and is <CET-1CEST,M3.5.0,M10.5.0/3>.
 
-The time zone is used to determine the correct time including summer and winter time.
+The time zone is used to determine the correct time including summer, winter time and daylight savings.
 
 #### Time zone table
 
