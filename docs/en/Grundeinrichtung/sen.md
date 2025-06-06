@@ -31,5 +31,5 @@ Click "Save Sensor" to add the sensor. It will then be displayed in the "Sensors
 
 ![Sensoren Dashboard](/docs/img/Sensor-dashboard.jpg)
 
-> **Hinweis:**\
+> **note:**\
 The configuration process for analog PT100x sensors follows the same steps but is not covered in this basic setup.

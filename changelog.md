@@ -8,7 +8,15 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.54.8
+Version 1.55.1
+
+* Fix:          Chart laden nach reboot/power off unvollständig
+* Geändert:     NTP Zeitsynchronisierung angepasst (Redundanz)
+* Geändert:     Berechnung der Dauer einer Unterbrechung Maischeplan durch power off/reboot erfolgt nur, wenn NTP Zeitsync erfolgreich war
+* Geändert:     Eingabeüberprüfung WebIf Sensoren Offsets korrigiert
+* Geändert:     Eingabeüberprüfung WebIf Aktoren PWM korrigiert
+
+Version 1.55 ()
 
 * Geändert:     Tabelle BrewFather wird beim Öffnen Modal immer geleert
 * Geändert:     Chart laden nach reboot/power off
