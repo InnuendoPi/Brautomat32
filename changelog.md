@@ -8,15 +8,17 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.55.1
+Version 1.55.2
 
+* Fix:          WLAN Fehlerkorrektur: IDF cores IDF5 WiFi (Workaround bug in esp_wifi_get_protocol() (#11239))
+* Fix:          WebIf: Fehlerkorrektur IDF cores IDF5 NetworkClientSecure (Do not check if client is connected if already disconnected (#11356))
 * Fix:          Chart laden nach reboot/power off unvollständig
 * Geändert:     NTP Zeitsynchronisierung angepasst (Redundanz)
 * Geändert:     Berechnung der Dauer einer Unterbrechung Maischeplan durch power off/reboot erfolgt nur, wenn NTP Zeitsync erfolgreich war
 * Geändert:     Eingabeüberprüfung WebIf Sensoren Offsets korrigiert
 * Geändert:     Eingabeüberprüfung WebIf Aktoren PWM korrigiert
 
-Version 1.55 ()
+Version 1.55
 
 * Geändert:     Tabelle BrewFather wird beim Öffnen Modal immer geleert
 * Geändert:     Chart laden nach reboot/power off
