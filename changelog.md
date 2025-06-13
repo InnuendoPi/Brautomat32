@@ -1,22 +1,52 @@
 # Changelog
 
 ESP32 Arduino 3.2.0 ESP-IDF v5.4.2\
-VSCode 1.100 pioarduino IDE 1.0.6\
+VSCode 1.101 pioarduino IDE 1.0.6\
 InnuAPID AutoTune PID lib 1.6\
 InnuTicker Task Scheduler lib 0.0.6\
 InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.55.2
+Version 1.56.1 ESP32 IDF5 only
 
-* Fix:          WLAN Fehlerkorrektur: IDF cores IDF5 WiFi (Workaround bug in esp_wifi_get_protocol() (#11239))
-* Fix:          WebIf: Fehlerkorrektur IDF cores IDF5 NetworkClientSecure (Do not check if client is connected if already disconnected (#11356))
+* Geändert:     prepare Sys für WebUpdate auf Version 1.56+ (Verzeichnis Fermenter, Beispiele Ale und Lager)
+* Fix:          doppelter sendAlarm nach power off/reboot, wenn ein Maische oder Fermenter Prozess aktiv war
+* Fix:          Default dutyCycle Fermenter auf 60s korrigiert
+* Fix:          WebIf falsche Zuweisung modal window
+* Fix:          Power Button Display Fermenter Modus
+* Fix:          sendAlarm Tone wurde bei Start/Stop Maische/Fermenter doppelt aufgerufen
+* Fix:          Aktualisierung der WebIf Buttons SSE wurde doppelt aufgerufen
+* Fix:          Anzahl der Chart Messpunkte im Fermenter Modus korrigiert
+* Fix:          Progress bar Display war nicht korrekt berechnet
+* Fix:          Überprüfung dutyCycle max auf 240s korrigiert
+* Geändert:     Status Fermenter wird alle 60s gespeichert (MaischeSud alle 10s)
+* Fix:          speichern aktueller Status Berechnung der Restzeit
+* Fix:          Prüfung Speichern aktueller Status im Flash korrigiert
+* Geändert:     TickerSys Aufrufe optimiert (doppelte Aufrufe per loop)
+* Fix:          eine aktive Kühlung oder Heizung schaltet mit Erreichen der Ziel-Temperatur ab
+* Entfernt:     Unterstützung für alte Display Firmware entfernt (älter als commit 1.51.16 aus April 2025)
+* Fix:          Anzeige Restzeit Fermenter
+* Fix:          WebIf Benennung GPIOs Fermenter vertauscht
+* Geändert:     calcRemaining angepasst (Reduzierung der Berechnungen per loop)
+* Fix:          Bei aktivem Gärplan führte eine Änderung der Fermentereinstellungen (verlassen editState) zu Ziel-Temperatur von 0°C.
+* Fix:          Bei aktivem Gärplan wurde nach eine Änderung der Fermentereinstellungen (saveConfig) checkFermTemp nicht mehr aufgerufen
+* Geändert:     Anpassung language Dateien für Fermenter Anzeige WebIf Status
+* Geändert:     Anpassungen aktueller Status Flash Speicher
+* Geändert:     setLastTime bei manueller Aktualisierung Sensoren, Aktoren und Kettles
+* Fix:          Bug IDF cores WiFi (Workaround bug in esp_wifi_get_protocol() (#11239))
+* Fix:          Bug IDF cores NetworkClientSecure (Do not check if client is connected if already disconnected (#11356))
+* Optimiert:    Berechnung der Sensorwerte calc offsets nach Update (Reduzierung der Berechnungen per loop)
+* Geändert:     Sensorfehler sendtoast erst nach zwei aufeinanderfolgenden Abfragefehlern
+* Neu:          Pause nach Kühlung/Heizen eingefügt
 * Fix:          Chart laden nach reboot/power off unvollständig
-* Geändert:     NTP Zeitsynchronisierung angepasst (Redundanz)
-* Geändert:     Berechnung der Dauer einer Unterbrechung Maischeplan durch power off/reboot erfolgt nur, wenn NTP Zeitsync erfolgreich war
-* Geändert:     Eingabeüberprüfung WebIf Sensoren Offsets korrigiert
-* Geändert:     Eingabeüberprüfung WebIf Aktoren PWM korrigiert
+* Geändert:     NTP Zeitsynchronisierung angepasst
+* Fix:          GPIO invertieren wurde nicht korrekt gespeichert
+* Fix:          Step Restzeit auf Display fehlerhaft
+* Neu:          Fermenter Modus
+* Entfernt:     ESP8266
+* Entfernt:     IDF4
+* Neu:          Fermenter Modus
 
 Version 1.55
 
@@ -36,6 +66,9 @@ Version 1.55
 * Geändert:     Reload Maischeplan (reset array and read mashplan)
 * Update:       VSCode
 * Fix:          html Buttons aria-hidden Attribut
+* Fix:          Fehler im Modul Maischeplan editieren behoben
+Version 1.54
+
 * Fix:          Fehler im Modul Maischeplan editieren behoben
 
 Version 1.53
