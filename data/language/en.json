@@ -98,7 +98,7 @@
     "MISC_TOAST_LIST": ["Off", "On", "error only"],
     "MISC_DISPLAY_EN": "Enable touchdisplay *",
     "MISC_DISPLAY_PAGE": "default page",
-    "MISC_DISPLAY_PAGE_LIST": ["Overview", "Mash tun", "manual mode"],
+    "MISC_DISPLAY_PAGE_LIST": ["overview", "Mash tun & Fermenter", "manual mode"],
     "MISC_DISPLAY_POW": "Display power save",
     "MISC_SPI": "Enable PT100x sensors MAX31865 Amplifier *",
     "MISC_MDNS_EN": "Enable mDNS *",
