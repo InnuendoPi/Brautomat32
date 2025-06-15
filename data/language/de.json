@@ -98,7 +98,7 @@
     "MISC_TOAST_LIST": ["Aus", "Ein", "Nur Fehler"],
     "MISC_DISPLAY_EN": "Aktiviere Touchdisplay *",
     "MISC_DISPLAY_PAGE": "Startseite wählen",
-    "MISC_DISPLAY_PAGE_LIST": ["Kesselübersicht", "MaischeSud", "manueller Modus"],
+    "MISC_DISPLAY_PAGE_LIST": ["Übersicht", "MaischeSud & Fermenter", "manueller Modus"],
     "MISC_DISPLAY_POW": "Display power save",
     "MISC_SPI": "Aktiviere PT100x Sensoren MAX31865 Amplifier *",
     "MISC_MDNS_EN": "Aktiviere mDNS *",

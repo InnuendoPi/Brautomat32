@@ -8,8 +8,10 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.56.1 ESP32 IDF5 only
+Version 1.56.2 ESP32 IDF5 only
 
+* Geändert:     clear values beim Öffnen von modal windows
+* Fix:          es gab eine Bedingung, unter der startSSE die DS18B20 Sensoren vor Ablauf conversion time abfragen konnte
 * Geändert:     prepare Sys für WebUpdate auf Version 1.56+ (Verzeichnis Fermenter, Beispiele Ale und Lager)
 * Fix:          doppelter sendAlarm nach power off/reboot, wenn ein Maische oder Fermenter Prozess aktiv war
 * Fix:          Default dutyCycle Fermenter auf 60s korrigiert
@@ -43,7 +45,6 @@ Version 1.56.1 ESP32 IDF5 only
 * Geändert:     NTP Zeitsynchronisierung angepasst
 * Fix:          GPIO invertieren wurde nicht korrekt gespeichert
 * Fix:          Step Restzeit auf Display fehlerhaft
-* Neu:          Fermenter Modus
 * Entfernt:     ESP8266
 * Entfernt:     IDF4
 * Neu:          Fermenter Modus
