@@ -8,8 +8,14 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.56.2 ESP32 IDF5 only
+getdots timestamp falsch
 
+Version 1.56.3 ESP32 IDF5 only
+
+* Test:         GGM IDS5
+* Geändert:     Tootipp Chart Zieltemperatur mit einer Nachkommastelle
+* Fix:          Darstellung MaischeSud Relais Modus fehlerhaft
+* Geändert:     diverse WebIf Javascript Korrekturen
 * Geändert:     clear values beim Öffnen von modal windows
 * Fix:          es gab eine Bedingung, unter der startSSE die DS18B20 Sensoren vor Ablauf conversion time abfragen konnte
 * Geändert:     prepare Sys für WebUpdate auf Version 1.56+ (Verzeichnis Fermenter, Beispiele Ale und Lager)
