@@ -10,13 +10,18 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 getdots timestamp falsch
 
-Version 1.56.3 ESP32 IDF5 only
+Version 1.56.5 ESP32 IDF5 only
 
-* Test:         GGM IDS5
-* Geändert:     Tootipp Chart Zieltemperatur mit einer Nachkommastelle
-* Fix:          Darstellung MaischeSud Relais Modus fehlerhaft
+* Geändert:     Bereich Schaltzyklus Aktoren 10ms bis 240000ms
+* Update:       ArduinoJSON 7.4.2
+* Fix:          Bug IDF cores uart (feat(uart): fixes pin attach for any IDF 5.x (#11499))
+* Fix:          Bug IDF cores uart (fixes pin attach for any IDF 5.x #11499)
+* Geändert:     Javascript load first tab on load/reload for modal windows
+* Test:         GGM IDS5 hinzugefügt (noch im Test!)
+* Geändert:     Tooltipp Chart Zieltemperatur mit einer Nachkommastelle
+* Fix:          Darstellung Einstellungen MaischeSud Kessel im Relais Modus fehlerhaft
 * Geändert:     diverse WebIf Javascript Korrekturen
-* Geändert:     clear values beim Öffnen von modal windows
+* Geändert:     Javascript clear values on load/reload for modal windows
 * Fix:          es gab eine Bedingung, unter der startSSE die DS18B20 Sensoren vor Ablauf conversion time abfragen konnte
 * Geändert:     prepare Sys für WebUpdate auf Version 1.56+ (Verzeichnis Fermenter, Beispiele Ale und Lager)
 * Fix:          doppelter sendAlarm nach power off/reboot, wenn ein Maische oder Fermenter Prozess aktiv war
