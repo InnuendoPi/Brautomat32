@@ -8,10 +8,13 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-getdots timestamp falsch
+Version 1.56.6
 
-Version 1.56.5 ESP32 IDF5 only
-
+* Geändert:     node-minify CSS, JS und html
+* Geändert:     Javascript in separate Datei auf LittleFS ausgelagert (verfügbarer Flash Speicher für IDF 5.4 und 5.5 vergrößert)
+* Update:       IDF 5.4.2
+* Geändert:     diverse WebIf html Korrekturen
+* Geändert:     WiFiManager config portal Optionen erase und update entfernt. Standard debug level der lib deaktiviert
 * Geändert:     Bereich Schaltzyklus Aktoren 10ms bis 240000ms
 * Update:       ArduinoJSON 7.4.2
 * Fix:          Bug IDF cores uart (feat(uart): fixes pin attach for any IDF 5.x (#11499))

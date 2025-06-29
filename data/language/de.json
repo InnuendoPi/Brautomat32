@@ -286,7 +286,7 @@
     "HLT_PU": "Periodendauer Pu (period)",
     "HLT_SAMPLE": "Intervall (SampleTime) [3000ms]",
     "HLT_RULE": "PID Algorithmus",
-    "HLT_RULE_LIST": ["manueller Kp Ki KD Modus", "AutoTune PID Modus"],
+    "HLT_RULE_LIST": ["manueller PID Modus", "AutoTune PID Modus"],
     "HLT_KP": "PID Kp",
     "HLT_KI": "PID Ki",
     "HLT_KD": "PID Kd",
