@@ -82,7 +82,7 @@ In step number 4, either the JST-HX socket for the original cable or a 5-pin scr
 
 ![JST-HX or screw terminal](/docs/img/Aufbau6.jpg)
 
-## Der Piezo Buzzer
+## Piezo Buzzer
 
 The piezo buzzer is optional. This step can be skipped if acoustic signals are not desired.\
 The piezo buzzer has a positive and a negative pole.
@@ -107,11 +107,11 @@ The legs on the resistor are bent by 90° (e.g. with a slotted screwdriver). The
 
 ![resistor](/docs/img/Aufbau10.jpg)
 
-Die Beinchen vom Widerstand werden auf der Rückseite leicht nach außen gebogen und verlötet. Mit einem Seitenschneider werden die Beinchen über dem Lötauge abgeschnitten.
+The legs of the resistor are bent slightly outwards on the back and soldered. Use a side cutter to cut off the legs above the soldering eye.
 
-## Den ESP Microcontroller aufsockeln
+## Mounting ESP32
 
-Durch das Aufsockeln lässt sich der ESP Mikrocontroller jederzeit von der Platine abnehmen. Das Aufsockeln ist auch bei einer Fehlersuche nützlich.
+The ESP microcontroller can be removed from the circuit board at any time by sockets. Socketing is also useful for troubleshooting.
 
 ![Aufsockeln](/docs/img/Aufbau14.jpg)
 
