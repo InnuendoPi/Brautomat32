@@ -8,8 +8,16 @@ InnuNextion Display lib 0.0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-Version 1.56.7
+Version 1.56.9
 
+* Geändert:     Display Firmware Restzeit BrewPage Font angepasst
+* Geändert:     in der Fermenter Chart wird nun alle 30min ein neuer Messpunkt erstellt. Bisher 15min
+* Geändert:     Anzahl der Display Aktualisierungen deutlich reduziert
+* Fix:          Display progress bar kettlePage
+* Geändert:     debug Ausgaben InnuNextion lib angepasst
+* Update:       IDF 5.4.2-25
+* Fix:          BrewFather API Filter korrigiert
+* Geändert:     diverse Quellcode Optimierungen
 * Geändert:     node-minify CSS, JS und html
 * Update:       IDF 5.4.2
 * Geändert:     diverse WebIf html Korrekturen
