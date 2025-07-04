@@ -41,6 +41,7 @@ Brautomat is a stand alone brewing device and offers:
   * MLT
   * HLT
 * Kettle hardware profiles
+* Fermenter Mode
 * Controlling actors like agitator, pumps etc.
 * PWM for heating elements
 * Temperature progression in the mashing process (line chart)
