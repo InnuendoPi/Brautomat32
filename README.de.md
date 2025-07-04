@@ -41,6 +41,7 @@ Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs]
   * Sudpfanne (MLT)
   * Nachguss (HLT)
 * Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
+* Fermenter Modus
 * PWM für Aktoren
 * Audio Alarme
   * MP3 Alarme
