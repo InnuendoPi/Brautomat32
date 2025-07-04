@@ -29,6 +29,8 @@ Flash: [==========]  95.1% (used 1620626 bytes from 1703936 bytes)
 
 Version 1.56.10 Development
 
+* Fix:          Ausgabe Konsole Access Point Mode WLAN config Portal
+* Fix:          Ausgabe Konsole boot und init Brautomat
 * Fix:          Display Firmware Controller Deck Power Button wurde als default on angezeigt
 * Fix:          Fehler bei der Berechnung Restzeit behoben, wenn die Rastdauer 0 Sekunden beträgt
 * Geändert:     Generische Schnittstelle (kettles, sensors, actors, misc) für das Senden von JSON Datenpaketen
