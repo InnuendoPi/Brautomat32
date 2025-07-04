@@ -10,18 +10,18 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Übersicht Brautomat32 Versionen
 
-Brautomat32 Release, pIOArduino Main Branch: produktiver Einsatz
-
+Brautomat32 Release: produktiver Einsatz\
+main repository\
 RAM:   [==        ]  19.2% (used 62956 bytes from 327680 bytes)\
 Flash: [========= ]  86.1% (used 1467426 bytes from 1703936 bytes)
 
-Brautomat32 Testversion, pIOArduino Develop Branch (include InnuLog lib): neue Funktionen
-
+Brautomat32 Testversion: neue Funktionen\
+develop repository, beinhaltet InnuLog\
 RAM:   [==        ]  19.2% (used 62956 bytes from 327680 bytes)\
 Flash: [========= ]  90.0% (used 1534118 bytes from 1703936 bytes)
 
-Brautomat32 Debug, pIOArduino Develop Branch (max. CORE_DEBUG_LEVEL, include InnuLog lib): Anaalyse, nicht für den produktiven Einsatz geeignet
-
+Brautomat32 Debug: Analyse, nicht für den produktiven Einsatz geeignet\
+develop repository, max. CORE_DEBUG_LEVEL, beinhaltet InnuLog\
 RAM:   [==        ]  19.3% (used 63204 bytes from 327680 bytes)\
 Flash: [==========]  95.1% (used 1620626 bytes from 1703936 bytes)
 
