@@ -1,6 +1,6 @@
 # Brautomat32
 
-[![de](https://img.shields.io/badge/Sprache-de-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.de.md) ![Static Badge](https://img.shields.io/badge/ESP32%20IDF5-blue)
+[![de](https://img.shields.io/badge/Sprache-de-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.de.md)
 
 The Brautomat is a brewing controller for ESP32. The Brautomat offers an intuitive, easy-to-use control system.
 
@@ -8,11 +8,19 @@ The Brautomat is a brewing controller for ESP32. The Brautomat offers an intuiti
 
 ## 💿 Download
 
-[![Brautomat32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
+Latest Stable Release
+
+<!-- [![Brautomat32](https://img.shields.io/static/v1?label=Download%20Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip) -->
+[![Brautomat32](https://img.shields.io/static/v1?label=Download%20Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest)
+
+Latest Development Release
+
+[![Brautomat32](https://img.shields.io/static/v1?label=Download%20Development%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Brautomat32.zip)
 
 ## ▶️ Installation
 
-* [Download Brautomat ESP32](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
+<!-- * [Download Brautomat ESP32](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip) -->
+* Download Brautomat ESP32
 * unzip file
 * Double-click file “Flashen.cmd”
 
