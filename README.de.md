@@ -1,6 +1,6 @@
 # Der Brautomat32
 
-[![en](https://img.shields.io/badge/language-en-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.md) ![Static Badge](https://img.shields.io/badge/ESP32%20IDF5-blue)
+[![en](https://img.shields.io/badge/language-en-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.md)
 
 Der Brautomat ist eine Brausteuerung für den ESP32 D1 Mini NodeMCU. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
@@ -8,11 +8,19 @@ Der Brautomat ist eine Brausteuerung für den ESP32 D1 Mini NodeMCU. Der Brautom
 
 ## 💿 Download
 
-[![Brautomat32](https://img.shields.io/static/v1?label=Download%20Brautomat32&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
+Latest Stable Release
+
+<!-- [![Brautomat32](https://img.shields.io/static/v1?label=Download%20Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip) -->
+[![Brautomat32](https://img.shields.io/static/v1?label=Download%20Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest)
+
+Latest Development Release
+
+[![Brautomat32](https://img.shields.io/static/v1?label=Download%20Development%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Brautomat32.zip)
 
 ## ▶️ Installation
 
-* [Download Brautomat ESP32](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip)
+<!-- * [Download Brautomat ESP32](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip) -->
+* Download Brautomat ESP32
 * ZIP Datei entpacken
 * Doppelklick auf die Datei "Flashen.cmd"
 
