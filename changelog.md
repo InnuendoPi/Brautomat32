@@ -11,7 +11,7 @@ InnuFramework CSS/JS bootstrap 4.6.2
 ## Übersicht Brautomat32 Versionen
 
 Brautomat32 Release: produktiver Einsatz\
-main repository\
+main repository, InnuLog deaktiviert\
 RAM:   [==        ]  19.2% (used 62956 bytes from 327680 bytes)\
 Flash: [========= ]  86.1% (used 1467426 bytes from 1703936 bytes)
 
@@ -27,8 +27,14 @@ Flash: [==========]  95.1% (used 1620626 bytes from 1703936 bytes)
 
 ## Änderungen
 
-Version 1.56.10 Development
+Version 1.56.12 Development
 
+* Neu:          Relais PID Modus in die Auswahl PID Algorithmus eingefügt (höhere Dämpfung Kd)
+* Geändert:     debug Ausgaben PID Controller
+* Geändert:     debug Ausgaben Kettles
+* Fix:          die Funktion setNewPower hat per loop Kettle Update erneut aufgerufen
+* Entfernt:     Zieltemperatur 0 nach Power off
+* Geändert:     WebServer serveStatic cache header Anpassungen
 * Fix:          Ausgabe Konsole Access Point Mode WLAN config Portal
 * Fix:          Ausgabe Konsole boot und init Brautomat
 * Fix:          Display Firmware Controller Deck Power Button wurde als default on angezeigt
