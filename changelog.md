@@ -16,19 +16,15 @@ RAM:   [==        ]  19.2% (used 62956 bytes from 327680 bytes)\
 Flash: [========= ]  86.1% (used 1467426 bytes from 1703936 bytes)
 
 Brautomat32 Testversion: neue Funktionen\
-develop repository, beinhaltet InnuLog\
+develop repository, InnuLog aktiviert\
 RAM:   [==        ]  19.2% (used 62956 bytes from 327680 bytes)\
 Flash: [========= ]  90.0% (used 1534118 bytes from 1703936 bytes)
-
-Brautomat32 Debug: Analyse, nicht für den produktiven Einsatz geeignet\
-develop repository, max. CORE_DEBUG_LEVEL, beinhaltet InnuLog\
-RAM:   [==        ]  19.3% (used 63204 bytes from 327680 bytes)\
-Flash: [==========]  95.1% (used 1620626 bytes from 1703936 bytes)
 
 ## Änderungen
 
 Version 1.56.12 Development
 
+* Neu:          WebServer Middleware Logger (curl ähnliche Protokollierung WebServer). Auswahl Logging System verbose, Develop Version only
 * Neu:          Relais PID Modus in die Auswahl PID Algorithmus eingefügt (höhere Dämpfung Kd)
 * Geändert:     debug Ausgaben PID Controller
 * Geändert:     debug Ausgaben Kettles
