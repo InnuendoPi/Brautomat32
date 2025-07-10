@@ -63,9 +63,9 @@ Hinweis: Der mDNS Name wird ohne Protokoll (http://) und ohne Top-Level-Domain (
 
 Über das Dashboard können sehr einfach Elemente ein- und ausgeblendet werden. Wird z.B. kein Nachguss verwendet, sollte das Element Nachguss für das Dashboard deaktiviert werden. Deaktivierte Elemente reduzieren den Datenverkehr.
 
-### Protokollierung
+### Logging
 
-Auf der Registerkarte Logging kann eine serielle Protokollausgabe für alle Module aktiviert werden. Für die Protokollierung stehen die Stufen Error, Info, Verbose und Off zur Verfügung. Benötigt wird ein serieller Monitor, z.B. mit der Arduino IDE, VSCODE etc. Die Baudrate beträgt 115200.
+Das Logging ist nur in der Development Version aktiviert. Auf der Registerkarte Logging kann eine serielle Protokollausgabe für alle Module aktiviert werden. Für die Protokollierung stehen die Stufen Error, Info, Verbose und Off zur Verfügung. Benötigt wird ein serieller Monitor, z.B. mit der Arduino IDE, VSCODE etc. Die Baudrate beträgt 115200.
 
 Der Error Modus gibt nur Fehler aus.
 

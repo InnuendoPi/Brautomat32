@@ -46,6 +46,12 @@ This parameter specifies the interval at which a calculation of the required pow
 
 ### PID algorithm
 
+There are threee options availible:
+
+* manual PID mode: you can set your own paramters Kp, Ki and Kd
+* IDS PID mode: auto calculate PID from Ku and Pu for IDS induction cooker
+* Relay PID mode: auto calculate PID from Ku and Pu for relay based kettles
+
 ## AutoTune
 
 ### AutoTune noiseband

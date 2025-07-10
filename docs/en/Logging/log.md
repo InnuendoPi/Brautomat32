@@ -2,14 +2,11 @@
 
 ![media](/docs/img/logging.jpg)
 
-The integrated logging helps with troubleshooting, both for errors in the Brautomat32 firmware and for user errors. A serial monitor is required for the output. Microsoft Visual Studio Code with the Microsoft Serial Monitor extension is shown below. Microsoft Visual Code is free of charge and available as a stand-alone version (no installation required).
+Logging is only availible in development version. The integrated logging helps with troubleshooting, both for errors in the Brautomat32 firmware and for user errors. A serial monitor is required for the output. Microsoft Visual Studio Code with the Microsoft Serial Monitor extension is shown below. Microsoft Visual Code is free of charge and available as a stand-alone version (no installation required).
 
 The serial monitor must be set to a baud rate of 115200 and CRLF in addition to the COM port.
 
 ![Microsoft Visual Studio Code](/docs/img/vscode.jpg)
-
-> **Notes:**\
-Logging should be completely deactivated on a wedding day.
 
 ## Logging settings
 

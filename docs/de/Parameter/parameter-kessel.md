@@ -46,6 +46,12 @@ Dieser Parameter gibt an, in welchem zeitlichen Abstand eine Berechnung der ben�
 
 ### PID Algorithmus
 
+Es stehen drei Option zur Auswahl
+
+* manualler PID Modus: diese Auswahl erlaubt die Verwendung eigener Kp, Ki and Kd Werte
+* IDS PID Modus: diese Auswahl berechnet anhand der Werte Ku und Pu aus dem AutoTune Prozess die Werte für Kp, Ki und Kd für GGM IDS Induktionskochfelder
+* Relay PID mode: diese Auswahl berechnet anhand der Werte Ku und Pu aus dem AutoTune Prozess die Werte für Kp, Ki und Kd für Relais basierte Kochfelder
+
 ## AutoTune
 
 ### AutoTune noiseband

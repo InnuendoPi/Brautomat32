@@ -22,8 +22,17 @@ Flash: [========= ]  90.0% (used 1534118 bytes from 1703936 bytes)
 
 ## Änderungen
 
-Version 1.56.12 Development
+Version 1.56.13 Development
 
+* Fix:          Fehler in en Sprachdatei für MISC_DASH_LIST behoben
+* Fix:          Aktualisierung WebIf für Sud und Hlt nach Änderungen Ticker Intervalle korrigiert
+* Geändert:     die Ticker Intervalle PID verändern sich abhängig vom duytcycle dynamisch (Reduzierung der ticks/CPU Last)
+* Geändert:     die Ticker Intervalle Maische, Sud und HLT verändern sich abhängig vom Power Status dynamisch (Reduzierung der ticks/CPU Last)
+* Geändert:     das Ticker Intervall Aktoren verändert sich dynamisch, abhängig von eingeschalteten Aktoren und deren dutycycle (Reduzierung der ticks/CPU Last)
+* Geändert:     die Ticker Callback Funktion für Sensoren wurde optimiert (Reduzierung der ticks/CPU Last)
+* Fix:          typo Ticker Intervall HLT
+* Geändert:     WebIf Korrektur Einstellungen HLT sampleTime
+* Geändert:     debug Ausgaben Aktoren, Sensoren und Kettles angepasst
 * Neu:          WebServer Middleware Logger (curl ähnliche Protokollierung WebServer). Auswahl Logging System verbose, Develop Version only
 * Neu:          Relais PID Modus in die Auswahl PID Algorithmus eingefügt (höhere Dämpfung Kd)
 * Geändert:     debug Ausgaben PID Controller

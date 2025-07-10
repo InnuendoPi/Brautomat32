@@ -114,7 +114,7 @@
     "MISC_DASH_CHART": "Chart",
     "MISC_DASH_MAN": "Manual mode (cooking)",
     "MISC_DASH_FERM": "Fermenter",
-    "MISC_DASH_LIST": ["Mashplan", "Fermenter", "-"],
+    "MISC_DASH_LIST": ["Mashplan", "Fermenter"],
     "MISC_TEXT": "Mode",
     "MISC_EXP_TEXT": "backup brautomat:",
     "MISC_EXP": " export",

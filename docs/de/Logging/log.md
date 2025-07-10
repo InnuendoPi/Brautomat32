@@ -2,14 +2,11 @@
 
 ![media](/docs/img/logging.jpg)
 
-Das integrierte Logging hilft bei der Fehlersuche, sowohl bei Fehlern in der Firmware Brautomat32 als auch bei Anwenderfehlern. Für die Ausgabe wird ein serieller Monitor benötigt. Im Folgenden wird Microsoft Visual Studio Code mit der Erweiterung Microsoft Serial Monitor gezeigt. Microsoft Visual Code ist kostenfrei und als eigenständige Version verfügbar (keine Installation erforderlich).
+Das Logging ist nur in der Development Version verfügbar. Das integrierte Logging hilft bei der Fehlersuche, sowohl bei Fehlern in der Firmware Brautomat32 als auch bei Anwenderfehlern. Für die Ausgabe wird ein serieller Monitor benötigt. Im Folgenden wird Microsoft Visual Studio Code mit der Erweiterung Microsoft Serial Monitor gezeigt. Microsoft Visual Code ist kostenfrei und als eigenständige Version verfügbar (keine Installation erforderlich).
 
 Der serielle Monitor muss zusätzlich zum COM-Port auf eine Baudrate von 115200 und CRLF eingestellt werden.
 
 ![Microsoft Visual Studio Code](/docs/img/vscode.jpg)
-
-> **Hinweise:**\
-An einem Hochzeitstag sollte das Logging komplett deaktiviert werden.\
 
 ## Einstellungen Logging
 
