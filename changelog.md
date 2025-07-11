@@ -1,7 +1,7 @@
 # Changelog
 
 ESP32 Arduino 3.2.1 ESP-IDF v5.4.2\
-VSCode 1.101 pioarduino IDE 1.0.6\
+VSCode 1.102 pioarduino IDE 1.0.6\
 InnuAPID AutoTune PID lib 1.6\
 InnuTicker Task Scheduler lib 0.0.6\
 InnuNextion Display lib 0.0.3\
@@ -24,6 +24,10 @@ Flash: [========= ]  90.0% (used 1534118 bytes from 1703936 bytes)
 
 Version 1.56.13 Development
 
+* Fix:          Logging System in der Einstellung verbose: Fehler WebServer MiddleWare Logger behoben
+* Geändert:     Anleitung Logging: Installation und Konfiguration Microsoft VSCode portable
+* Geändert:     Logging für Debug Version für esp32_exception_decoder angepasst (color escape sequences removed)
+* Update:       VSCode 1.102
 * Fix:          Fehler in en Sprachdatei für MISC_DASH_LIST behoben
 * Fix:          Aktualisierung WebIf für Sud und Hlt nach Änderungen Ticker Intervalle korrigiert
 * Geändert:     die Ticker Intervalle PID verändern sich abhängig vom duytcycle dynamisch (Reduzierung der ticks/CPU Last)
