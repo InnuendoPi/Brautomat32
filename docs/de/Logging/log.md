@@ -106,3 +106,25 @@ http://brautomat.local/setSenErr?id=0
 Um den Sensorfehler zu beheben, wird die exakt gleiche URL erneut aufgerufen. Der erste Sensor hat die ID 0, der zweite die ID 1 und der dritte die ID 2. In der URL muss nur die letzte 0 durch die gewünschte Sensor-ID ersetzt werden.
 
 Mit diesem Sensorfehler-Test kann der Parameter "Verhalten bei Sensorfehler" sehr einfach überprüft werden.
+
+## Logging mit Microsoft VSCode
+
+Mit wenigen Schritten kann Microsoft VSCode für das Logging eingerichtet werden. Eine Installation von Microsoft VSCode ist nicht erforderlich, die portable Version ist ausreichend.
+
+Download Microsoft VSCode als ZIP Datei: [Microsoft VSCode](https://code.visualstudio.com/docs/?dv=winzip)
+
+Die ZIP Datei in ein beliebiges Verzeichnis entpacken. Im Dateiexplorer in das Verzeichnis wechseln und einen Ordner mit dem Namen data erstellen. Der Ordner data versetzt MS VScode in den portablen Modus und kann ohne Installation verwendet werden.
+
+![Microsoft Visual Studio Code](/docs/img/vscode_4.jpg)
+
+Microsoft VSCode starten mit Doppelklick auf Code.exe.
+
+![Microsoft Visual Studio Code](/docs/img/vscode_1.jpg)
+
+Für das Logging wird in VScode die Extension Serial Monitor benötigt. Auf der linken Seite den Button Extensions anklicken und im Suchfeld "serial monitor" eingeben.
+
+![Microsoft Visual Studio Code](/docs/img/vscode_2.jpg)
+
+Die Extension Serial Monitor von Microsoft installieren. Der serielle Monitor ist in der Anzeige Output enthalten. Im Menü view den Punkt output anklicken oder mit der Tastenkombination Ctrl Shift U die Ausgabe öffnen. Die Anzeige Extensions kann durch einen Klick auf den Button Extension aus- und eingeblendet werden. Im Fenster Output nun den Tab Serial Monitor anklicken. Jetzt muss nur noch der COM Port ausgewählt werden und die Baud rate auf 115200 eingestellt werden. Das Logging wird mit dem Button Start Monitoring gestartet.
+
+![Microsoft Visual Studio Code](/docs/img/vscode_3.jpg)
