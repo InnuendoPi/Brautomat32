@@ -26,7 +26,6 @@ Version 1.56.14 Development
 
 * Fix:          Controller Deck Button Next und Prev Korrektur Sonderbefehle
 * Fix:          Wenn der Maischeplan während eines aktiven Maischeprozess geändert wurde, dann wurde die Stepdauer aktueller Step nicht auf Mindestdauer geprüft
-* Fix:          Wenn der Maischeplan während eines aktiven Maischeprozess geändert wurde, dann wurde die Zieltemperatur aktueller Step dem Maischekessel zugewiesen
 * Fix:          Korrektur und Optimierung Funktion SSEStep für die Anzeige aktueller Step Status
 * Fix:          Wenn die Konfiguration während eines aktiven Maischeprozess geändert wurde, dann wurde die aktuelle Zieltemperatur immer dem Maischekessel zugewiesen
 * Fix:          Fehler Kettle Sud speichern der Einstellungen behoben (typo)
