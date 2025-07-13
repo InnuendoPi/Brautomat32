@@ -22,13 +22,20 @@ Flash: [========= ]  90.0% (used 1534118 bytes from 1703936 bytes)
 
 ## Änderungen
 
-Version 1.56.13 Development
+Version 1.56.14 Development
 
+* Fix:          Controller Deck Button Next und Prev Korrektur Sonderbefehle
+* Fix:          Wenn der Maischeplan während eines aktiven Maischeprozess geändert wurde, dann wurde die Stepdauer aktueller Step nicht auf Mindestdauer geprüft
+* Fix:          Wenn der Maischeplan während eines aktiven Maischeprozess geändert wurde, dann wurde die Zieltemperatur aktueller Step dem Maischekessel zugewiesen
+* Fix:          Korrektur und Optimierung Funktion SSEStep für die Anzeige aktueller Step Status
+* Fix:          Wenn die Konfiguration während eines aktiven Maischeprozess geändert wurde, dann wurde die aktuelle Zieltemperatur immer dem Maischekessel zugewiesen
+* Fix:          Fehler Kettle Sud speichern der Einstellungen behoben (typo)
+* Fix:          Funktion checkTemp wurde per Loop doppelt aufgerufen werden
 * Fix:          Logging System in der Einstellung verbose: Fehler WebServer MiddleWare Logger behoben
 * Geändert:     Anleitung Logging: Installation und Konfiguration Microsoft VSCode portable
 * Geändert:     Logging für Debug Version für esp32_exception_decoder angepasst (color escape sequences removed)
 * Update:       VSCode 1.102
-* Fix:          Fehler in en Sprachdatei für MISC_DASH_LIST behoben
+* Fix:          Fehler in EN Sprachdatei für MISC_DASH_LIST behoben
 * Fix:          Aktualisierung WebIf für Sud und Hlt nach Änderungen Ticker Intervalle korrigiert
 * Geändert:     die Ticker Intervalle PID verändern sich abhängig vom duytcycle dynamisch (Reduzierung der ticks/CPU Last)
 * Geändert:     die Ticker Intervalle Maische, Sud und HLT verändern sich abhängig vom Power Status dynamisch (Reduzierung der ticks/CPU Last)
