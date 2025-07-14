@@ -22,8 +22,12 @@ Flash: [========= ]  90.0% (used 1534118 bytes from 1703936 bytes)
 
 ## Änderungen
 
-Version 1.56.14 Development
+Version 1.56.15 Development
 
+* Fix:          Anzeige Restzeit im Fermenter Modus korrigiert
+* Geändert:     default dutycycle Fermenter 120 Sekunden (ehem. 60s)
+* Geändert:     Der Gerätename kann in Sonderbefehlen verwendet werden (Kessel und Aktoren)
+* Geändert:     Anleitung: Konfiguration und Einsatz von Kessel
 * Fix:          Controller Deck Button Next und Prev Korrektur Sonderbefehle
 * Fix:          Wenn der Maischeplan während eines aktiven Maischeprozess geändert wurde, dann wurde die Stepdauer aktueller Step nicht auf Mindestdauer geprüft
 * Fix:          Korrektur und Optimierung Funktion SSEStep für die Anzeige aktueller Step Status

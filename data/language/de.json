@@ -239,7 +239,7 @@
     "IDS_TEXT7": "Profil wechseln:",
     "IDS_TEXT8": "Profil entfernen:",
     "IDS_DUTY": "Relais Schaltzyklus [5000]",
-    "IDS_DUTY_FERM": "Relais Schaltzyklus [60000]",
+    "IDS_DUTY_FERM": "Relais Schaltzyklus [120000]",
     "IDS_NOPID": "Deaktiviere PID zum Würzekochen [on]",
     "IDS_HYST": "Hysteresis",
     "IDS_TT_HYST": "Hysteresis 0.0 - 1.0",

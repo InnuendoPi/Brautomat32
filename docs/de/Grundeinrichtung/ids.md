@@ -39,7 +39,7 @@ Der PID-Controller wird mit zwei Parametern eingestellt:
 
 Aus diesen beiden Werten werden die PID-Parameter P, I und D berechnet. Diese Parameter sind für jede Brauanlage individuell und werden mit dem AutoTune Prozess ermittelt. Der AutoTune-Prozess wird im Abschnitt "AutoTune Schritt für Schritt" ausführlich beschrieben.
 
-Für diese Grundeinrichtung werden die folgenden Werte für Ku und Pu eingetragen. Danach wird die PID-Tuning-Regel _AutoTune Modus_ ausgewählt:
+Für diese Grundeinrichtung werden die folgenden Werte für Ku und Pu eingetragen. Danach wird die PID-Tuning-Regel _IDS PID Modus_ ausgewählt:
 
 ![IDS](/docs/img/IDS-AutoTune-erg.jpg)
 

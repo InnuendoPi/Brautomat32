@@ -28,13 +28,13 @@ If the script cannot be used, the firmware can be transferred manually to the ES
 ESP32 Step 1 erase flash:
 
 ```json
-esptool.exe --chip esp32 erase_flash
+esptool.exe --chip esp32 erase-flash
 ```
 
 ESP32 Step 2 flash firmware
 
 ```json
-esptool.exe --chip esp32 --baud 921600 --before default_reset --after hard_reset write_flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x350000 LittleFS.bin
+esptool.exe --chip esp32 --baud 921600 --before default-reset --after hard-reset write-flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x350000 LittleFS.bin
 ```
 
 ## Firmware flash with macOS
