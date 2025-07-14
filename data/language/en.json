@@ -239,7 +239,7 @@
     "IDS_TEXT7": "Change profile:",
     "IDS_TEXT8": "Delete profile:",
     "IDS_DUTY": "Relay dutycycle [5000]",
-    "IDS_DUTY_FERM": "Relay dutycycle [60000]",
+    "IDS_DUTY_FERM": "Relay dutycycle [120000]",
     "IDS_NOPID": "Deactivate PID for boiling [on]",
     "IDS_HYST": "Hysteresis",
     "IDS_TT_HYST": "Hysteresis 0.0 - 1.0",

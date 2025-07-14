@@ -12,9 +12,27 @@ Zur Einrichtung kann ein GPIO für eine Kühlung und ein GPIO für eine Heizung 
 
 ![Fermenter settings](/docs/img/fermenter_set.jpg)
 
-The fermenter mode has three states: Cooling, Heating or Idle. When the state change from cooling or heating, a pause starts. The pause is 120 seconds:
+Der Fermenter hat drei verschiedene Stati: Kühlung, Heizung und Idle. Wenn sich der Status von Kühlung oder Heizung ändert, startet eine Pause. Während der Pause ändert sich der Status vom Fermenter nicht.
 
-* old cooling mode and new cooling mode: no pause. Cooling remains ON
-* old heating mode and new heating mode: no pause. Heating remains ON
-* old mode cooling and new mode heating or idle: pause 120s
-* old mode heating and new mode cooling or idle: pause 120s
+* Alter Status Kühlung und neuer Status Kühlung: keine Pause. Die Kühlung bleibt eingeschaltet
+* Alter Status Heizung und neuer Status Heizung: keine Pause. Die Heizung bleibt eingeschaltet
+* Alter Status Kühlung und neuer Status Heizung: Pause 120s
+* Alter Status Heizung und neuer Status Kühlung: Pause 120s
+
+## Ramp
+
+Ein Fermenter Schritt wird mit einer Start- und einer Endtemperatur angegeben. In der ersten Abbildung in diesem Abschnitt beträgt im ersten Fermenter Schritt die Temperatur jeweils 18°C. Das bedeutet natürlich, dass für die Dauer von 1 Tage die Gärtemperatur unverändert bleibt.
+
+Im zweiten Fermenter Schritt beträgt die Starttemperatur 18°C und die Endtemperatur 20°C. Die Dauer für diesen Fermenter Schritt ist mit 2 Tagen eingetragen. Es gibt nun zwei Möglichkeiten, um von der Start- auf die Endtemepratur zu kommen:
+
+Bei aktiviertem ramp steuert der Brautomat die Gärtemperatur über die angegebene Dauer für diesen Schritt linear. In diesem Fall wird in +0.1°C Schritten über 2 Tage hinweg die Temperatur von 18°C auf 20°C geführt.
+
+Bei deaktiviertem ramp wird die Endtemperatur mit dem Start vom Fermenter Schritt hergestellt, entweder mittels Kühlung oder Heizung. Sobald die Endtemepratur hergestellt ist, wird sie gehalten.
+
+## Relais Schaltzyklus
+
+Der Relais Schaltzyklus bestimmt, wie lange einer der Stati Kühlung, Heizung oder Idle gehalten. Der zulässige Wertebereich liegt zwischen 1000 und 240000ms. Voreingestellt ist 120000, also 120 Sekunden. Ein zu kleiner Schaltzyklus kann sich auf Kühlgeräte negativ auswirken.
+
+## Display
+
+Im Fermenter Modus ist die Ansicht MaischeSud (Seite 2) auszuwählen. Die Kesselübersicht und die Ansicht manuelle Steuerung sind nicht für den Fermenter Modus verwendbar.

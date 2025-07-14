@@ -118,7 +118,7 @@ Hinweis: Die folgenden Themen zu den Steuerbefehlen sind optional und für den E
 
 ## Steuerbefehle
 
-Eine zweite Sonderfunktion sind Steuerbefehle für die Kochfelder und Aktoren. Die Syntax für den Maischeschritt lautet
+Eine zweite Sonderfunktion sind Steuerbefehle für die Kochfelder und Aktoren. Die Syntax für den Maischeschritt lautet.
 
 * Aktorname:Leistung
 
