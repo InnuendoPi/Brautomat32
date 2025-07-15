@@ -31,3 +31,11 @@ Diese Anleitung unterteilt sich in drei Themenbereich:
   * das MQTTDevice
 
 Der Themenbereich _Software_ wird mit einer Zusammenfassung _Parameter im Überblick_ abgeschlossen. Zu vielen Parametern werden Details und Informationen gegeben, um die Konfiguration und Anwendung zu vereinfachen.
+
+## Brautomat Release Version
+
+Die Release version vom Brautomat wird mit dem aktuellen stable Framework espressif compiliert. Diese Version ist für den produktiven Einsatz. Die Release Version wird ohne das Modul Logging bereitgestellt. Die Version ist etwas schneller. Die Release Version sollte bevorzugt eingesetzt werden.
+
+## Brautomat Development Version
+
+Die Development Version vom Brautomat wird mit dem aktuellen Framework esspressif compiliert. Diese Version wird mit dem Modul Logging bereitgestellt. Neue Funktionen und Fehlerkorrekturen werden zuerst in der Development Version bereitgestellt. Diese Version kann produktiv genutzt werden, ist aber nicht empfohlen.
