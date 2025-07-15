@@ -24,11 +24,11 @@ Each kettle is assigned a name in the settings. This name can also be used as a 
 
 Numbers between 0 and 100 are permitted as the maximum output. The value corresponds to the maximum output parameter in the kettle settings and is specified as a percentage. The specification ON corresponds to 100% and OFF to 0%.
 
-### Option 1: manuel switching of kettles
+### Option 1: manual switching of kettles
 
 The second and third kettle can be switched on and off manually via the web interface using the respective power button. If, for example, a kettle is set up for purge water, the target temperature can be set to 78°C in the kettle settings and the kettle can be switched on as required on the brewing day.
 
-### Option 2: automativc switching of kettles
+### Option 2: automatic switching of kettles
 
 The second and third kettle can also be switched via the mash schedule:
 
@@ -46,7 +46,7 @@ The text ‘Teilmaische kochen’ is translated by the Brauomat to 100%. If ther
 
 The control commands can be used to adjust the maximum output during the brewing process. If, for example, the induction hob has a maximum output of 3.5 kW and the brewing kettle used has a volume of 20 litres, the MAISCHE:75 control command can be used to reduce the maximum output power of the induction hob to 75%. The rest with the MAISCHE:75 control command is created with a target temperature of 0°C and a duration of 0 minutes with autonext activated.
 
-## Example dekoktion
+## Example decoction
 
 As described above, a rest from the mash plan is always assigned to the first kettle (MAISCHE) if no control command (colon in the rest name) assigns the rest to another kettle. A control command can either switch the second kettle on/off with a target temperature and jump directly to the next rest or integrate it into the mashing process with a rest duration.
 

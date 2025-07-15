@@ -18,7 +18,7 @@ Im Bild wurde ein ESP Device auf COM7 gefunden. In seltenen Fällen wird unter M
 
 [![ESP32 Treiber](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/espressif/esptool>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme (macOS, Linux). Die Windows-Version 64bit ist im ZIP Archiv enthalten. ESPTool is licensed under GPL v2.
+Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/espressif/esptool>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme (macOS, Linux). Die Windows-Version 64bit ist im ZIP Archiv enthalten. ESPTool is licensed under GPL v2. See the accompanying [LICENSE file](https://github.com/espressif/esptool/blob/master/LICENSE) for a copy.
 
 ### Manuelles Flashen MS Windows, macOS und Linux
 

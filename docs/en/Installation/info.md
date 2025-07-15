@@ -18,8 +18,7 @@ An ESP device was found on COM7. In rare cases, no serial COM port is automatica
 
 [![ESP32 driver](https://img.shields.io/static/v1?label=driver&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-Script Flashen.cmd uses esptool.exe <https://github.com/igrr/esptool-ck/releases>.\
-ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This code is licensed under GPL v2.
+Script Flashen.cmd uses esptool.exe <https://github.com/espressif/esptool>. ESPTool is freely available for various operating systems (macOS, Linux). The Windows version 64bit is included in the ZIP archive. This code is licensed under GPL v2.
 
 ## Manual flash with MS Windows and Linux
 

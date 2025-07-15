@@ -22,8 +22,12 @@ Flash: [========= ]  90.0% (used 1534118 bytes from 1703936 bytes)
 
 ## Änderungen
 
-Version 1.56
+Version 1.56.1
 
+* Geändert:     Anleitung erweitert u. korrigiert
+* Geändert:     Anzeige WebUpdate zeigt an, ob Release oder Testversion aktiviert ist
+
+* Release:      V 1.56
 * Fix:          Anzeige Restzeit im Fermenter Modus korrigiert
 * Geändert:     default dutycycle Fermenter 120 Sekunden (ehem. 60s)
 * Geändert:     Der Gerätename kann in Sonderbefehlen verwendet werden (Kessel und Aktoren)

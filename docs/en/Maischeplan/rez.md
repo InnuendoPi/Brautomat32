@@ -10,11 +10,11 @@ The name of the mash plan can be defined in the settings. The file name is deriv
 
 A bridal day can be planned and started automatically with the help of time control.
 
-![Time control](/docs/img/Time-control.jpg)
+![Time control](/docs/img/Zeitsteuerung.jpg)
 
 The DateTimerPicker element can be used to select a date and time very easily. The recipe name is temporarily replaced by the specified start time.
 
-![Timer](/docs/img/Timer2.jpg)
+![Timer](/docs/img/Zeitsteuerung2.jpg)
 
 An activated time control is saved in the configuration. When the Brautomat is restarted, the set date and time are read in. If this brewing start is in the future, the time control is activated. If the brewing start is in the past, the time control is deactivated.
 

@@ -8,7 +8,7 @@
 * [The mash plan](Maischeplan/info.md)
   * [Controller](Maischeplan/steuerung.md)
   * [Functions](Maischeplan/funktionen.md)
-  * [Recipe](Rezept/rez.md)
+  * [Recipe](Maischeplan/rez.md)
 * [AutoTune PID](Autotune-pid/info.md)
   * [AutoTune process](Autotune-pid/atune.md)
   * [AutoTune step by step](Autotune-pid/steps.md)
