@@ -18,11 +18,12 @@ Various channels for serial output can be activated via the system settings.
 * Mash kettle - messages for the first kettle are displayed in this channel
 * Brew kettle - all messages for the brew kettle
 * HLT - messages for the HLT kettle
+* Fermenter - log channel for fermenter mode
 * System - system messages are displayed in this channel
 * Mashing process - the mashing process is logged in this channel
 * Nextion Display - logging for the display
 
-Each channel has the options Off, Error, Info and Debug.
+Each channel has the options Off, Error, Info and verbose.
 
 * Off - no logging.
 
@@ -30,7 +31,7 @@ The channel does not output a log to the serial console.
 
 * Error - Only errors are logged.
 
-Debug Output Error Log errors. The ERROR type is displayed in red in VSCode.
+Debug Output type Error logs errors only. The ERROR type is displayed in red in VSCode.
 
 ```json
 [1127953][E][SENSOREN.cpp:1600] setSenErr(): Test sensor error: #0 Sensor_Sud error state: 1
@@ -49,13 +50,15 @@ Debug outputs of type Info log processes. The Info type contains the outputs of 
 
 * Debug - all available information is output.
 
-Debug outputs of type Verbose contain all previous types. In addition, all SSE broadcasts of type Verbose are logged. The Verbose type is displayed in blue in VSCode.
+Debug outputs of type Verbose contains all previous types. In addition, all SSE broadcasts of type Verbose are logged. The Verbose type is displayed in blue in VSCode.
 
 ```json
 [1026335][V][SYSTEM.cpp:847] SSEBroadcastJson(): kettle hlt: {"ison":false,"state":false,"power":0,"enabled":3,"setp":0,"temp":"32.4"}
 [1026349][V][SYSTEM.cpp:919] SSEBroadcastJson(): kettle sud: {"ison":false,"state":false,"power":0,"enabled":3,"setp":0,"temp":"32.4"}
 [1026371][V][SYSTEM.cpp:839] SSEBroadcastJson(): kettle mash: {"power":0,"stepnr":0,"tempvalue":"50.4","target":0,"step":6,"timer":3}
 ```
+
+In addition system log type verbose includes a curl like output of all webserver GET and POST requests.
 
 ## Test sensor error
 
@@ -66,7 +69,7 @@ http://brautomat.local/setSenErr?id=0
 
 ```
 
-To rectify the sensor error, the exact same URL is called up again. The first sensor has the ID 0, the second the ID 1 and the third the ID 2. In the URL, only the last 0 must be replaced by the desired sensor ID.
+To stop test sensor error, the exact same URL is called up again. The first sensor has the ID 0, the second the ID 1 and the third the ID 2. In the URL, only the last 0 must be replaced by the desired sensor ID.
 
 This sensor error test makes it very easy to check the ‘Behaviour on sensor error’ parameter.
 

@@ -39,7 +39,7 @@ The PID controller is configured using two parameters:
 
 These values are used to calculate the P, I, and D parameters. For a system-specific configuration, the AutoTune process is explained in detail in the "AutoTune Step by Step" section.
 
-For this initial setup, enter the following Ku and Pu values, then select the PID tuning rule "AutoTune mode":
+For this initial setup, enter the following Ku and Pu values, then select the PID tuning rule _IDS PID mode_:
 
 ![IDS](/docs/img/IDS-AutoTune-erg.jpg)
 
