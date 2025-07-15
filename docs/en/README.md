@@ -30,3 +30,11 @@ The manual is divided into three main areas:
   * The MQTTDevice
 
 The "The software" section concludes with an overview of parameters. Detailed information is provided for many parameters to simplify configuration and application.
+
+## Brautomat release version
+
+Release type Brautomat32 is compiled with stable release framework ESP espressif. This version is for productive use. This version does not include logging modul. Brautomat releases are faster and smaller than development versions due to excluded modul logging. They do not print logging outputs on serial monitor while brewing. Release versions should always be preferred if a serial monitor is not connected.
+
+## Brautomat development version
+
+Development type Brautomat32 is compiled with latest framework ESP espressif. This version includes the logging modul. Also new functions and bug fixes are available in development versions first. Development versions can be used productively, but it is not recommended. New functions may still be under development.
