@@ -22,8 +22,10 @@ Flash: [========= ]  90.0% (used 1534118 bytes from 1703936 bytes)
 
 ## Änderungen
 
-Version 1.56.1
+Version 1.56.2
 
+* Fix:          Controller Deck Button Next in einer 2- der 3-Kessel Umgebung
+* Fix:          Anzeigefehler aktuelle leistung Kettle behoben. Es wurde immer vom 1. Kettel die Leistung angezeigt
 * Fix:          eine SSE Client IP konnte aus der Liste SSE registrierter IP Adressen verloren gehen (verzögerte Anzeige der parameter im WebIf)
 * Geändert:     Anleitung erweitert u. korrigiert
 * Geändert:     Logging WebUpdate erweitert
