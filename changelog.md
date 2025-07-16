@@ -24,7 +24,7 @@ Flash: [========= ]  90.0% (used 1534118 bytes from 1703936 bytes)
 
 Version 1.56.1
 
-* Fix:          eine SSE Client IP konnte aus der Liste SSE registrierter IP Adressen verloren gehen. Die WebIf Inhalte wurden verzögert angezeigt.
+* Fix:          eine SSE Client IP konnte aus der Liste SSE registrierter IP Adressen verloren gehen (verzögerte Anzeige der parameter im WebIf)
 * Geändert:     Anleitung erweitert u. korrigiert
 * Geändert:     Logging WebUpdate erweitert
 * Geändert:     Anzeige WebUpdate zeigt an, ob Release oder Testversion aktiviert ist
