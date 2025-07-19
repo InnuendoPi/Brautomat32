@@ -424,6 +424,7 @@
     "TOAST_RAST_START": "rest started",
     "TOAST_SENERR": "Sensor error",
     "TOAST_ACTERR": "Actor error",
+    "TOAST_COMMANDERR": "control command error",
     "TAB_BF_RECIPE": "recipe name",
     "TAB_BF_AUT": "author",
     "TAB_BF_STYLE": "style",
