@@ -424,6 +424,7 @@
     "TOAST_RAST_START": "Rast gestartet",
     "TOAST_SENERR": "Sensorfehler",
     "TOAST_ACTERR": "Aktorfehler",
+    "TOAST_COMMANDERR": "Fehler Steuerbefehl",
     "TAB_BF_RECIPE": "Rezeptname",
     "TAB_BF_AUT": "Autor",
     "TAB_BF_STYLE": "Stil",

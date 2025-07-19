@@ -22,9 +22,11 @@ Flash: [========= ]  90.0% (used 1534118 bytes from 1703936 bytes)
 
 ## Änderungen
 
-Version 1.56.2
+Version 1.56.3
 
-* Fix:          Controller Deck Button Next in einer 2- der 3-Kessel Umgebung
+* Fix:          Display Manueller Modus Uhrzeit korrigiert
+* Fix:          Controller Deck Button Play in einer 2- der 3-Kessel Umgebung: Step mit Zieltemperatur und Timer wurde sofort gestartet
+* Fix:          Controller Deck Button Next in einer 2- der 3-Kessel Umgebung: Step mit Zieltemperatur und Timer wurde sofort gestartet
 * Fix:          Anzeigefehler WebIf aktuelle Leistung Kessel behoben
 * Fix:          eine SSE Client IP konnte aus der Liste SSE registrierter IP Adressen verloren gehen (verzögerte Anzeige der parameter im WebIf)
 * Geändert:     Anleitung erweitert u. korrigiert
