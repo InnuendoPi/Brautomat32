@@ -62,3 +62,18 @@ Rests in a mash plan in a 2 or 3 vessel environment has the following principle:
 * partial mashes to be boiled are always assigned to the first kettle
 * partial mashes with temperature hold are assigned to the second or third kettle
 * sparge water is always assigned to second oir third kettle
+
+## webhook
+
+Choose PIN white GPIO "-" to make webhook parameters visible. Enter url and choose a switching command:
+
+![webhook](/docs/img/kessel_webhook1.jpg)
+
+Example Shelly 1PM:
+
+Shelly 1PM turn on:  <http://192.168.1.5/relay/0?turn=on>\
+Shelly 1PM turn off: <http://192.168.1.5/relay/0?turn=off>
+
+Enter this webhook url Brautomat: <http://192.168.1.5/relay/0?turn=> (without on and off). Select "on/off for webhook switch.
+
+URL Tasmota: <http://192.168.1.5/cm?cmnd=Power1%201>
