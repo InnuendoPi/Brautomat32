@@ -62,3 +62,18 @@ Die Rasten in einem Maischeplan in einer 2 oder 3 Kesselumgebung haben folgendes
 * zu kochende Teilmaischen werden dem ersten Kessel zugewiesen
 * Restmaischen mit Temperatur halten werden dem zweiten oder dritten Kessel zugewiesen
 * der Nachguss wird immer dem zweiten oder dritten Kessel zugewiesen
+
+## webhook
+
+Der Parameter PIN weiß Relay muss auf "-" eingestellt werden, damit die webhook Elemente im WebInterface angezeigt werden. Zusätzlich wird die webhook URL und das Schalltkommando benötigt:
+
+![webhook](/docs/img/kessel_webhook1.jpg)
+
+Beispiel Shelly 1PM:
+
+Shelly 1PM einschalten: <http://192.168.1.5/relay/0?turn=on>\
+Shelly 1PM ausschalten: <http://192.168.1.5/relay/0?turn=off>
+
+Die webhook URL für Shelly 1PM lautet: <http://192.168.1.5/relay/0?turn=> (ohne on und off). Der Parameter webhook Schalter muss auf "on/off" eingesteltl werden.
+
+URL Tasmota: <http://192.168.x.x/cm?cmnd=Power1%201>

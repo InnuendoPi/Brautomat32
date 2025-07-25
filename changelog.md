@@ -1,8 +1,8 @@
 # Changelog
 
-ESP32 Arduino 3.2.1 ESP-IDF v5.4.2\
+ESP32 Arduino 3.3.0 ESP-IDF v5.5.0\
 VSCode 1.102 pioarduino IDE 1.0.6\
-InnuAPID AutoTune PID lib 1.6\
+InnuAPID AutoTune PID lib 1.7\
 InnuTicker Task Scheduler lib 0.0.6\
 InnuNextion Display lib 0.0.3\
 InnuLog Debug lib serial monitor\
@@ -12,18 +12,26 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 Brautomat32 Release: produktiver Einsatz\
 main repository, InnuLog deaktiviert\
-RAM:   [==        ]  19.2% (used 62956 bytes from 327680 bytes)\
-Flash: [========= ]  86.1% (used 1467426 bytes from 1703936 bytes)
+RAM:   [==        ]  19.1% (used 62648 bytes from 327680 bytes)
+Flash: [========= ]  86.5% (used 1474235 bytes from 1703936 bytes)
 
 Brautomat32 Testversion: neue Funktionen\
 develop repository, InnuLog aktiviert\
-RAM:   [==        ]  19.2% (used 62956 bytes from 327680 bytes)\
-Flash: [========= ]  90.0% (used 1534118 bytes from 1703936 bytes)
+RAM:   [==        ]  19.2% (used 62864 bytes from 327680 bytes)
+Flash: [========= ]  90.9% (used 1548367 bytes from 1703936 bytes)
 
 ## Änderungen
 
-Version 1.56.3
+Version 1.57 RC1
 
+* Fix:          ändern der WebIf Sprache löscht die Werte in WebIf. Das Fenster Systemeinstellungen wird bei Änderung Sprache nun autom. geschlossen.
+* Rework:       Log Ausgaben Aktoren, Sensoren und Kessel (tabellenform) - develop/debug Version only
+* Update:       Arduino V3.3.0 ESP-IDF v5.5.0
+* Update:       InnuAPID v1.7
+* Rework:       Überarbeitung der Klassen sensors, actors, kettles. RAM handling, reorg gobal vars und static class vars
+* Fix:          PID Setpoint wurde auf 0 gesetzt, wenn der Brauprozess pausiert und der Kessel editiert wurde
+* Fix:          PID AutoTune Zuweisung Regel korrigiert
+* Optimiert:    String handling (references, concats, removed/replaced with chars)
 * Fix:          Display Manueller Modus Uhrzeit korrigiert
 * Fix:          Controller Deck Button Play in einer 2- der 3-Kessel Umgebung: Step mit Zieltemperatur und Timer wurde sofort gestartet
 * Fix:          Controller Deck Button Next in einer 2- der 3-Kessel Umgebung: Step mit Zieltemperatur und Timer wurde sofort gestartet
@@ -71,7 +79,7 @@ Version 1.56.3
 * Geändert:     Generische Schnittstelle (kettles, sensors, actors, misc) für das Senden von JSON Datenpaketen
 * Fix:          Überprüfung freier Speicher Dateisystem, bevor ein Messpunkt protokolliert wird
 * Update:       IDF 5.4.2 Release
-* Update:       Arduino Framework 3.2.1
+* Update:       Brautomat32 Develop Arduino Framework 3.2.1
 * Update:       esptool v5.0.0
 * Geändert:     Logging auf der ser. Schnittstelle ist Bestandteil bei Testversionen, aber nicht mehr in Release Versionen
 * Geändert:     InnuLog Debug Bibliothek als Compiler Direktive eingebunden (build_flag BRAUTOMAT_DEBUG)
