@@ -4,7 +4,7 @@
 
 Logging is only availible in development version. The integrated logging helps with troubleshooting, both for errors in the Brautomat32 firmware and for user errors. A serial monitor is required for the output. Microsoft Visual Studio Code with the Microsoft Serial Monitor extension is shown below. Microsoft Visual Code is free of charge and available as a stand-alone version (no installation required).
 
-The serial monitor must be set to a baud rate of 115200 and CRLF in addition to the COM port.
+Serial monitor must be set to a baud rate of 115200 and CRLF in addition to the COM port.
 
 ![Microsoft Visual Studio Code](/docs/img/vscode.jpg)
 
@@ -33,30 +33,15 @@ The channel does not output a log to the serial console.
 
 Debug Output type Error logs errors only. The ERROR type is displayed in red in VSCode.
 
-```json
-[1127953][E][SENSOREN.cpp:1600] setSenErr(): Test sensor error: #0 Sensor_Sud error state: 1
-[1127972][E][SENSOREN.cpp:76] Update(): Sen: Sensor_Sud error #1 could not read temperature data
-```
-
 * Info - Log process
 
 Debug outputs of type Info log processes. The Info type contains the outputs of the Error type. In VSCode, the INFO type is displayed in green.
-
-```json
-[1071747][I][KETTLES.cpp:2044] debKonsole(): set new powerlast: 1071746ms
-[1071821][I][KETTLES.cpp:1922] webhook(): webhook response: 
-[1071822][I][KETTLES.cpp:2044] debKonsole(): webhook on: 5000ms (mDutyCycle 5000 * Power 100 / 100)
-```
 
 * Debug - all available information is output.
 
 Debug outputs of type Verbose contains all previous types. In addition, all SSE broadcasts of type Verbose are logged. The Verbose type is displayed in blue in VSCode.
 
-```json
-[1026335][V][SYSTEM.cpp:847] SSEBroadcastJson(): kettle hlt: {"ison":false,"state":false,"power":0,"enabled":3,"setp":0,"temp":"32.4"}
-[1026349][V][SYSTEM.cpp:919] SSEBroadcastJson(): kettle sud: {"ison":false,"state":false,"power":0,"enabled":3,"setp":0,"temp":"32.4"}
-[1026371][V][SYSTEM.cpp:839] SSEBroadcastJson(): kettle mash: {"power":0,"stepnr":0,"tempvalue":"50.4","target":0,"step":6,"timer":3}
-```
+![Logging sensors](/docs/img/logging_sen.jpg)
 
 In addition system log type verbose includes a curl like output of all webserver GET and POST requests.
 
@@ -92,5 +77,3 @@ The Serial Monitor extension is required for logging in VScode. Click on the Ext
 ![Microsoft Visual Studio Code](/docs/img/vscode_2.jpg)
 
 Install the Serial Monitor extension from Microsoft. The serial monitor is included in the Output display. Click on output in the view menu or open the output with the key combination Ctrl Shift U. The Extensions display can be shown or hidden by clicking on the Extension button. Now click on the Serial Monitor tab in the Output window. Now just select the COM port and set the baud rate to 115200. Logging is started with the Start Monitoring button.
-
-![Microsoft Visual Studio Code](/docs/img/vscode_3.jpg)

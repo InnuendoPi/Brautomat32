@@ -22,8 +22,12 @@ Flash: [========= ]  90.9% (used 1548367 bytes from 1703936 bytes)
 
 ## Änderungen
 
-Version 1.57 RC1
+Version 1.57 RC2
 
+* Fix:          typo TAG Log Ausgaben
+* Geändert:     diverse Korrekturen und Ergänzungen Anleitung
+* Entfernt:     Quellcode Bereinigung und Dokumentation
+* Geändert:     einheitliche Anzahl von 15 Zeichen für Namen von Kessel, Aktoren und Sensoren. Kessel waren bislang auf 10 beschränkt
 * Fix:          ändern der WebIf Sprache löscht die Werte in WebIf. Das Fenster Systemeinstellungen wird bei Änderung Sprache nun autom. geschlossen.
 * Rework:       Log Ausgaben Aktoren, Sensoren und Kessel (tabellenform) - develop/debug Version only
 * Update:       Arduino V3.3.0 ESP-IDF v5.5.0
