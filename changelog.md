@@ -11,14 +11,10 @@ InnuFramework CSS/JS bootstrap 4.6.2
 ## Übersicht Brautomat32 Versionen
 
 Brautomat32 Release: produktiver Einsatz\
-main repository, InnuLog deaktiviert\
-RAM:   [==        ]  19.1% (used 62648 bytes from 327680 bytes)
-Flash: [========= ]  86.5% (used 1474235 bytes from 1703936 bytes)
+main repository, InnuLog deaktiviert
 
 Brautomat32 Testversion: neue Funktionen\
-develop repository, InnuLog aktiviert\
-RAM:   [==        ]  19.2% (used 62864 bytes from 327680 bytes)
-Flash: [========= ]  90.9% (used 1548367 bytes from 1703936 bytes)
+develop repository, InnuLog aktiviert
 
 ## Änderungen
 
