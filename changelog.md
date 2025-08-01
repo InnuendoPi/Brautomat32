@@ -18,8 +18,13 @@ develop repository, InnuLog aktiviert
 
 ## Änderungen
 
-Version 1.57 RC2
+Version 1.57 RC3
 
+* Fix:          Log Ausgaben für PT100x Sensoren korrigiert
+* Geändert:     IDS Interrupt handling in FreeRTOS Task geändert (binary semaphore, higher prio)
+* Geändert:     Steuersignale an IDS in FreeRTOS Task gewandelt (nonblocking delay)
+* Geändert:     handling Steuersignale an IDS angepasst
+* Geändert:     sendAlarm an Piezo Buzzer werden über einen FreeRTOS Task gesendet (nonblocking delay)
 * Fix:          typo TAG Log Ausgaben
 * Geändert:     diverse Korrekturen und Ergänzungen Anleitung
 * Entfernt:     Quellcode Bereinigung und Dokumentation

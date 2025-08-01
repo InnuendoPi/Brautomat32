@@ -38,3 +38,15 @@ Release type Brautomat32 is compiled with stable release framework ESP espressif
 ## Brautomat development version
 
 Development type Brautomat32 is compiled with latest framework ESP espressif. This version includes the logging modul. Also new functions and bug fixes are available in development versions first. Development versions can be used productively, but it is not recommended. New functions may still be under development.
+
+## Why GGM IDS induction hobs?
+
+There are two reasons why these devices should be used:
+
+1. The main circuit board is safely separated from the controller board by optocouplers. This separation makes it safely possible to replace the original control system with the Brautomat32.
+  ![main circuit board](/docs/img/IDS5_2.jpg)
+
+2. The original controller was read out using a digital analyzer. This means that the serial commands for the power stages are known and can be used precisely.
+  ![logic analyzer](/docs/img/IDS5.jpg)
+
+GGM IDS1 and IDS5 offer 10 powersteps, IDS2 offers 5 powersteps operating with max. 3.5kW. Replacing the original control system with the Brautomat is very easy. The cases IDS1 and IDS2 must not be opened. Just simply disconnect the external control unit. The housing of IDS5 needs to be opened.
