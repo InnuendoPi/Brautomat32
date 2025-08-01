@@ -10,7 +10,7 @@ In the "Mashing Plan" section, the mash kettle is created using the gear icon in
 
 Firstly, a kettle must be configured. A GGM IDS induction hob is set up in this basic configuration.
 
-The first setting is the IDS type, where you can choose between GGM IDS1 and IDS2, Relay and webhook. Then, three control parameters need to be set:
+The first setting is the IDS type, where you can choose between GGM IDS1, IDS2, IDS5, Relay and webhook. Then, three control parameters need to be set:
 
 * White PIN [Relay] – Default: D7
 * Yellow PIN [Command] – Default: D6
