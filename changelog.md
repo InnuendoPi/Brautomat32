@@ -18,8 +18,10 @@ develop repository, InnuLog aktiviert
 
 ## Änderungen
 
-Version 1.57 RC4
+Version 1.57 RC5
 
+* Geändert:     Checkbox Ignoriere SPI Fehler" für PT100x Sensoren unter System eingefügt
+* Geändert:     Logging Middleware (curl like) kann nun per Checkbox aktiviert werden (nicht mehr an Logging System gebunden, develop only)
 * github:       Firmware Dateien und ZIP Develop Version in den Ordner build/ESP32-IDF5dev verschoben
 * Fix:          Protokoll WebUpdate
 * Fix:          doppelter Aufruf Konfiguration speichern bei Rezeptimport korrigiert
