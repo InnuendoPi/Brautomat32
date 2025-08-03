@@ -20,6 +20,7 @@ develop repository, InnuLog aktiviert
 
 Version 1.57 RC4
 
+* github:       Firmware Dateien und ZIP Develop Version in den Ordner build/ESP32-IDF5dev verschoben
 * Fix:          Protokoll WebUpdate
 * Fix:          doppelter Aufruf Konfiguration speichern bei Rezeptimport korrigiert
 * Fix:          fehlerhaftes File Objekt für DateiUpload nach RAM Optimierung korrigiert
