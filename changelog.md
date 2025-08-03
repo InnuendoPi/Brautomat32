@@ -20,6 +20,7 @@ develop repository, InnuLog aktiviert
 
 Version 1.57 RC4
 
+* Fix:          Protokoll WebUpdate
 * Fix:          doppelter Aufruf Konfiguration speichern bei Rezeptimport korrigiert
 * Fix:          fehlerhaftes File Objekt für DateiUpload nach RAM Optimierung korrigiert
 * Fix:          Log Ausgaben für PT100x Sensoren korrigiert
