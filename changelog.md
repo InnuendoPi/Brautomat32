@@ -18,10 +18,12 @@ develop repository, InnuLog aktiviert
 
 ## Änderungen
 
-Version 1.57 RC3
+Version 1.57 RC4
 
+* Fix:          doppelter Aufruf Konfiguration speichern bei Rezeptimport korrigiert
+* Fix:          fehlerhaftes File Objekt für DateiUpload nach RAM Optimierung korrigiert
 * Fix:          Log Ausgaben für PT100x Sensoren korrigiert
-* Geändert:     IDS Interrupt handling in FreeRTOS Task geändert (binary semaphore, higher prio)
+* Geändert:     IDS Interrupt handling in FreeRTOS Task gewandelt (binary semaphore, higher prio)
 * Geändert:     Steuersignale an IDS in FreeRTOS Task gewandelt (nonblocking delay)
 * Geändert:     handling Steuersignale an IDS angepasst
 * Geändert:     sendAlarm an Piezo Buzzer werden über einen FreeRTOS Task gesendet (nonblocking delay)
