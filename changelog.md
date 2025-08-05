@@ -18,8 +18,16 @@ develop repository, InnuLog aktiviert
 
 ## Änderungen
 
-Version 1.57 RC5
+Version 1.57 RC6
 
+* Update:       Arduino V3.3.0 ESP-IDF v5.5.0 (Release 55.03.30-2)
+* Fix:          Stack size für Task sendAlarm vergrößert (exception)
+* Geändert:     Logging PID und AutoTune mit Logging verbunden
+* Update:       InnuAPID Bibliothek 1.8
+* Geändert:     Logging Display mit Logging verbunden
+* Update:       InnuNextion Bibliothek 0.0.4
+* Fix:          Korrektur WebIf Anzeige der aktuellen Temperatur im Modus AutoTune MaischeSud Kessel
+* Geändert:     Logging erweitert, flag DEBUG_CPP
 * Geändert:     Checkbox Ignoriere SPI Fehler" für PT100x Sensoren unter System eingefügt
 * Geändert:     Logging Middleware (curl like) kann nun per Checkbox aktiviert werden (nicht mehr an Logging System gebunden, develop only)
 * github:       Firmware Dateien und ZIP Develop Version in den Ordner build/ESP32-IDF5dev verschoben
