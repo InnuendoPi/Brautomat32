@@ -1,25 +1,19 @@
 # Changelog
 
 ESP32 Arduino 3.3.0 ESP-IDF v5.5.0\
-VSCode 1.102 pioarduino IDE 1.0.6\
-InnuAPID AutoTune PID lib 1.7\
+VSCode 1.103 pioarduino IDE 1.0.6\
+InnuAPID AutoTune PID lib 1.8\
 InnuTicker Task Scheduler lib 0.0.6\
-InnuNextion Display lib 0.0.3\
+InnuNextion Display lib 0.0.4\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-## Übersicht Brautomat32 Versionen
-
-Brautomat32 Release: produktiver Einsatz\
-main repository, InnuLog deaktiviert
-
-Brautomat32 Testversion: neue Funktionen\
-develop repository, InnuLog aktiviert
-
 ## Änderungen
 
-Version 1.57 RC6
+Version 1.57 RC7
 
+* Update:       VSCode 1.103
+* Fix:          WebIf Korrekturen
 * Update:       Arduino V3.3.0 ESP-IDF v5.5.0 (Release 55.03.30-2)
 * Fix:          Stack size für Task sendAlarm vergrößert (exception)
 * Geändert:     Logging PID und AutoTune mit Logging verbunden
