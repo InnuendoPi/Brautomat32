@@ -43,7 +43,7 @@ When a table row is edited, the buttons change.
 
 All buttons for editing the mash plan are hidden as soon as the brewing process is started. The collapse button for collapsing and expanding the table is hidden as soon as the mash plan is edited.
 
-Together with the Power, Play, Pause, Prev and Next controls, this results in an intuitive brewing control system. The mash plan shown here is an import from the smallBrauhelfer2. The import automatically inserts the rest temperatures and rest times. The alpha acid and the quantity in grams are automatically appended to the hop names. These abbreviations are also prefixed:
+Together with the Power, Play, Pause, Prev and Next controls, this results in an intuitive brewing control system. The mash plan shown here is an import from the kleinerBrauhelfer2. The import automatically inserts the rest temperatures and rest times. The alpha acid and the quantity in grams are automatically appended to the hop names. These abbreviations are also prefixed:
 
 * VWH: first wort hopping
 * Kochen: Boiling (without hops)
@@ -114,17 +114,27 @@ Background: If the autonext function is activated, the Brauomat constantly compa
 
 ## Brewing process
 
-The basic principle of the Brautomat is the ascending infusion. This includes variants such as Earl's boiling mash process. Other brewing processes can also be realised using the ‘autonext’ feature. However, it should be noted that the Brauomat can only provide ‘semi-automatic’ support for other brewing processes. A trigger for an action, such as the drawing of partial mashes, must be carried out manually by the operator. In the brewing system, manual means clicking the play button. A pause of zero minutes with deactivated Autonext can be used as a trigger for a manual action.
+The basic principle of the Brautomat is the infusion mash process. This includes variants such as Earl's boiling mash process. Other brewing processes can also be realised using the ‘autonext’ feature. However, it should be noted that the Brauomat can only provide ‘semi-automatic’ support for other brewing processes. A trigger for an action, such as the drawing of partial mashes, must be carried out manually by the operator. In the brewing system, manual means clicking the play button. A pause of zero minutes with deactivated Autonext can be used as a trigger for a manual action.
 
 Note: The following topics on the control commands are optional and not relevant for getting started with the Brauomat.
 
+## Kettles
+
+Brautomat supports up to three kettles. The first kettle is the mash kettle. This kettle is required. The second is a brew or MLT kettle, which is optional. Also optional is the third kettle. The third kettle is often used als a hot liquid tank.
+
+Default kettle names:
+
+* First kettle: IDS or MAISCHE
+* Second Kettle: MLT or SUD
+* Third kettle: HLT or NACHGUSS
+
 ## Control commands
 
-A second special function is control commands for the induction hobs mash and brew, post-cast and actors. The syntax for the mash step is
+A second special function is control commands for kettles and actors. The syntax for the mash step is
 
 * Actor name:Power
 
-The power can be either ON or OFF or a number between 0 and 100%. The OFF state corresponds to the value 0% and ON to the value 100%. The control command for the first induction hob is IDS or MIX. The control command for the second induction hob is SUD. The control command for post-cooking is HLT. The post-casting control command can also be used for post-casting. The control command for an actor is the actor name.
+The power can be either ON or OFF or a number between 0 and 100%. The OFF state corresponds to the value 0% and ON to the value 100%. The control command for the first kettle is _IDS_ or _MAISCHE_. The control command for the second kettle is _SUD_ or _MLT_. The control command for third kettle is _HLT_ or _NACHGUSS_. The control command for an actor is the actor name.
 
 ![Aktor Steuerbefehl](/docs/img/Maischeplan-Aktoren.jpg)
 
@@ -138,7 +148,7 @@ The IDS:50 control command sets the maximum output power of the induction hob to
 
 ![IDS control command](/docs/img/sonderfunktion_sud1.jpg)
 
-The control command SOUTH:Boil thick mash with a resting time of 10 minutes and a resting temperature of 100 degrees carries out a mashing step on a second induction hob. The rest timer is started as soon as the rest temperature is reached.
+The control command SUD:Boil thick mash with a resting time of 10 minutes and a resting temperature of 100 degrees carries out a mashing step on a second induction hob. The rest timer is started as soon as the rest temperature is reached.
 
 ![Control command SUD](/docs/img/sonderfunktion_sud2.jpg)
 
@@ -160,15 +170,41 @@ Examples:
 * SUD:Boil thick mash
 * SUD:60
 
-_Note: The mash, brew and HLT boilers can be operated simultaneously with the control commands. However, only one rest timer can be active. The first induction hob ‘Mash’ must always have a rest timer entered._
+_Note: The mash, brew and HLT kettles can be operated simultaneously with the control commands. However, only one rest timer can be active. The first kettle must always have a rest timer entered._
 
-Example: Decoction with two induction hobs:
+### Example control command firt kettle
+
+The following configuration for the firt kettle IDS (the mash brew kettle) is given as an example:
+
+![IDS control command](/docs/img/aktoren_schalten4.jpg)
+
+The maximum power output is preset to 100%. The ‘transition to boiling’ temperature is 95°C. From this temperature, the maximum output power of the GGM IDS is only 80%.
+
+The mash schedule in the illustration begins with the ‘Heating up the main pour’ step. The GGM IDS induction hob would heat the water with the ‘Max. output IDS’ (parameter in the temperature control tab), i.e. at 100%.
+
+![IDS control command](/docs/img/aktoren_schalten2.jpg)
+
+The rest timer starts at 59°C. The resting time is zero minutes. The Brautomat jumps to step 2 in the next line.
+
+The IDS:65 control command sets the maximum output of the IDS to 65%. The Brautomat jumps to the next line in step 3.
+
+It is now heated from 59°C to the target temperature in the ‘Mashing’ step. The maximum output of the IDS is 65%.
+
+The maximum output power of 65% is maintained in the following mashing steps. Until the brew machine encounters the IDS:100 control command after the mashing step.
+
+![IDS control command](/docs/img/aktoren_schalten3.jpg)
+
+The control command changes the maximum output power of the IDS to 100%. The wort is now heated at 100% power up to the ‘transition to boiling’ temperature of 95°C (see above). From 95°C, the RCD IDS switches to 80% output. 80% corresponds to the ‘Power from transition’ parameter.
+
+The control commands for the IDS can be used to prevent the mash from burning or the wort from boiling over, especially with smaller boiler volumes.
+
+### Example: Decoction with two kettles
 
 ![IDS and SUD control command](/docs/img/sonderfunktion_sud4.jpg)
 
-Due to the restriction ‘the first boiler “mash” must always be operated with a resting time’, there is a simple procedure for the decoction processes: the partial mash to be boiled must be placed in the ‘mash’ boiler and the partial mash to be kept at temperature must be placed in the ‘brew’ boiler.
+Due to the restriction ‘the first kettle “mash” must always be operated with a resting time’, there is a simple procedure for the decoction processes: the partial mash to be boiled must be placed in the first ‘mash’ kettle and the partial mash to be kept at temperature must be placed in the second ‘brew’ kettle.
 
-Example of using the power for the induction hob:
+### Example of using the power for the induction hob
 
 Given a pour of 7kg and a main pour of 28 litres. The total mass is 35kg\
 
@@ -207,28 +243,32 @@ The special commands IDS: and IDSPROFIL: have different effects: The special com
 
 Note: the special command IDSPROFIL in the mash schedule is cancelled if the device type (IDS1, IDS2 or relay) is not identical.
 
-### Example of IDS control command
+## Example brewing day
 
-The following configuration for the RCD IDS or the mash brew boiler is given as an example:
+A brewing day example at the end of this section. For this example the following setup is used:
 
-![IDS control command](/docs/img/aktoren_schalten4.jpg)
+Two kettles:
 
-The maximum power output is preset to 100%. The ‘transition to boiling’ temperature is 95°C. From this temperature, the maximum output power of the GGM IDS is only 80%.
+* a mash kettle
+* a kettle HLT for sparing water
 
-The mash schedule in the illustration begins with the ‘Heating up the main pour’ step. The GGM IDS induction hob would heat the water with the ‘Max. output IDS’ (parameter in the temperature control tab), i.e. at 100%.
+Two actors:
 
-![IDS control command](/docs/img/aktoren_schalten2.jpg)
+* Agitator
+* RHE a ring heating element
 
-The rest timer starts at 59°C. The resting time is zero minutes. The Brautomat jumps to step 2 in the next line.
+The mash plan:
 
-The IDS:65 control command sets the maximum output of the IDS to 65%. The Brautomat jumps to the next line in step 3.
+![example mash plan brewing day](/docs/img/example_control_commands1.jpg)
 
-It is now heated from 59°C to the target temperature in the ‘Mashing’ step. The maximum output of the IDS is 65%.
+The example mash plan shows, how easy it is to switch on and off actors btw. how to use control commands in a mash plan. The first step just switches on the agitator. Immediately the Brautomat goes to the next step: heating for mash in. The mash in step is setup with a one minute timer, but autonext is deactivated. The malt is added to the brewing water. Because of the deactivated autonext, the first kettle is switched off. The resulting temperature is determined by the temperature of the brewing water and the temperature of the malt. The play button will be shown in red color. After all malts are added, the button play has to be clicked manually to go on brewing.
 
-The maximum output power of 65% is maintained in the following mashing steps. Until the brew machine encounters the IDS:100 control command after the mashing step.
+Next step is maltose rest. Brautomat's PID controller will handle the required kettle power to reach and hold the rest target temperature. In line 4 the sparging water kettle HLT is switch on. Sparging warter target temperature is set to 75°C. The Brautomat starts the PID Controler for kettle HLT. At this point of the mash plan there are two PID controllers active: one for the mash kettle and one for the sparging water kettle.
 
-![IDS control command](/docs/img/aktoren_schalten3.jpg)
+Hop additions are calculated by their boiling duration. The example mash plan has a boiling duration of 90 minutes. The first 30 minutes are boiling without hops. So there are 60 minutes left for boiling. In the next step _Hall. Tradition 6.0% 37.2g_ hop addition will be boiled for 30 minutes. Now there are 30 minutes boiling left. The next step is another hop addition _Hall. Tradition 6.0% 31.0g_ with a duration of 15 minutes. When this step is finished the first hop addition (37.2g) has a resuliting boil time of 30 + 15 = 45 minutes, while the second hop addition has 15 minutes boil time. And there are 15 minutes boil time left. The two next steps will be added the same way.
 
-The control command changes the maximum output power of the IDS to 100%. The wort is now heated at 100% power up to the ‘transition to boiling’ temperature of 95°C (see above). From 95°C, the RCD IDS switches to 80% output. 80% corresponds to the ‘Power from transition’ parameter.
+The penultimate step _post isomerization_ looks a bit different than others. the target temperature is set to 0°C. Regardless of the actual wort temperature the Brautomat automatically starts the timer of this step. Within the timer duration of 10 minutes the wort has to be cool down to 78°C, which is the target temperature of the last step.
 
-The control commands for the IDS can be used to prevent the mash from burning or the wort from boiling over, especially with smaller boiler volumes.
+The corresponding graph to this mash plan:
+
+![example mash plan brewing day](/docs/img/example_control_commands2.jpg)

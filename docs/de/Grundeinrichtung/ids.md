@@ -20,7 +20,7 @@ Diese GPIOs (D5, D6 und D7) sind für das GGM IDS-Anschlusskabel mit JST-HX-Buch
 
 Als nächstes muss ein Temperatursensor dem MaischeSud-Kessel zugewiesen werden. Die Auswahl erfolgt aus einer Liste bereits eingerichteter Sensoren. In dieser Grundeinrichtung ist nur der Sensor _Sensor IDS2_ vorhanden, der entsprechend ausgewählt wird.
 
-_Tipp_: _Einem Kochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird als Ist-Temperatur oder aktuelle Temperatur bezeichnet und während des Maischeprozesses kontinuierlich mit der Rast-Temperatur (Zieltemperatur) verglichen._
+_Hinweis_: _Einem Kochfeld muss ein Temperatursensor fest zugewiesen werden. Der Sensorwert wird als Ist-Temperatur oder aktuelle Temperatur bezeichnet und während des Maischeprozesses kontinuierlich mit der Rast-Temperatur (Zieltemperatur) verglichen._
 
 ![MaischeSud Kessel konfigurieren](/docs/img/IDS-konfigurieren.jpg)
 
