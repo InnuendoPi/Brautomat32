@@ -1,26 +1,22 @@
 # Changelog
 
 ESP32 Arduino 3.3.0 ESP-IDF v5.5.0\
-VSCode 1.102 pioarduino IDE 1.0.6\
-InnuAPID AutoTune PID lib 1.7\
+VSCode 1.103 pioarduino IDE 1.0.6\
+InnuAPID AutoTune PID lib 1.8\
 InnuTicker Task Scheduler lib 0.0.6\
-InnuNextion Display lib 0.0.3\
+InnuNextion Display lib 0.0.4\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 4.6.2
 
-## Übersicht Brautomat32 Versionen
-
-Brautomat32 Release: produktiver Einsatz\
-main repository, InnuLog deaktiviert
-
-Brautomat32 Testversion: neue Funktionen\
-develop repository, InnuLog aktiviert
-
 ## Änderungen
 
-Version 1.57 RC6
+Version 1.57
 
-* Update:       Arduino V3.3.0 ESP-IDF v5.5.0 (Release 55.03.30-2)
+* Geändert:     Logging erweitert, ids_error.log (develop only)
+* Fix:          Interrupt handling IDS
+* Update:       VSCode 1.103
+* Fix:          WebIf Korrekturen
+* Update:       Arduino V3.3.0 ESP-IDF v5.5.0 (Release 54.03.30-2)
 * Fix:          Stack size für Task sendAlarm vergrößert (exception)
 * Geändert:     Logging PID und AutoTune mit Logging verbunden
 * Update:       InnuAPID Bibliothek 1.8
@@ -35,7 +31,6 @@ Version 1.57 RC6
 * Fix:          doppelter Aufruf Konfiguration speichern bei Rezeptimport korrigiert
 * Fix:          fehlerhaftes File Objekt für DateiUpload nach RAM Optimierung korrigiert
 * Fix:          Log Ausgaben für PT100x Sensoren korrigiert
-* Geändert:     IDS Interrupt handling in FreeRTOS Task gewandelt (binary semaphore, higher prio)
 * Geändert:     Steuersignale an IDS in FreeRTOS Task gewandelt (nonblocking delay)
 * Geändert:     handling Steuersignale an IDS angepasst
 * Geändert:     sendAlarm an Piezo Buzzer werden über einen FreeRTOS Task gesendet (nonblocking delay)
