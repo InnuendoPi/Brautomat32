@@ -10,6 +10,18 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
+Version 1.57.1
+
+Invert prüfen für analogWrite (ON/OFF nicht gesetzt)
+Integration analogWrite in TickerAct -> Update prüfen
+
+* Neu:          Eigenschaft Sensor aktiv: ein Sensor kann temporär deaktiviert werden. Der Status Sensor aktiv wird nicht gespeichert
+* Geändert:     der PID Controller setzt die Ausgangsleistung auf 0%, wenn der Kessel-Sensor deaktiviert wurde
+* Fix           Handling Schaltzyklus Kessel korrigiert
+* Update:       Update ESP-IDF v5.5.0.250821
+* Neu:          Unterstützung für DC PWM Aktoren (Auswahl PWM analog für DC Motoren an L298/MOSFET wie bspw. Rührwerk oder Pumpen, Auflösung: 8bit)
+* Geändert:     PWM umbenannt in PWM digital (einfaches Takten von Relais (on/off))
+
 Version 1.57
 
 * Geändert:     Logging erweitert, ids_error.log (develop only)
