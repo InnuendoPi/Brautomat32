@@ -10,11 +10,12 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
-Version 1.57.1
+Version 1.57.2
 
-Invert prüfen für analogWrite (ON/OFF nicht gesetzt)
-Integration analogWrite in TickerAct -> Update prüfen
-
+* Geändert:     WLAN connection timeout auf 60 Sekunden erhöht
+* Geändert:     WLAN Signalstärke für WLAN Scan ConfigPortal auf min 10% RSSI reduziert
+* Fix:          Debug Code entfernt (WebServer collectAllHeaders)
+* Geändert:     im Nextion Display wird der Sensorstatus auch angezeigt (akt. Temperatur oder off)
 * Neu:          Eigenschaft Sensor aktiv: ein Sensor kann temporär deaktiviert werden. Der Status Sensor aktiv wird nicht gespeichert
 * Geändert:     der PID Controller setzt die Ausgangsleistung auf 0%, wenn der Kessel-Sensor deaktiviert wurde
 * Fix           Handling Schaltzyklus Kessel korrigiert
