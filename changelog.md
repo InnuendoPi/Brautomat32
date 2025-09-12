@@ -10,8 +10,9 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
-Version 1.57.3
+Version 1.57.4
 
+* Geändert:     WebServer Performance (CORS deaktiviert, Boradcast Intervall reduziert, timeoutfreq reduziert)
 * Fix:          Fehler sendCommand für GGM IDS1/IDS5 behoben
 * Update:       VSCode 1.104
 * Update:       pioArduino 1.1.0
