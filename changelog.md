@@ -1,7 +1,7 @@
 # Changelog
 
 ESP32 Arduino 3.3.0 ESP-IDF v5.5.0\
-VSCode 1.103 pioarduino IDE 1.0.6\
+VSCode 1.104 pioarduino IDE 1.1.0\
 InnuAPID AutoTune PID lib 1.8\
 InnuTicker Task Scheduler lib 0.0.6\
 InnuNextion Display lib 0.0.4\
@@ -10,8 +10,11 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
-Version 1.57.2
+Version 1.57.3
 
+* Fix:          Fehler sendCommand für GGM IDS1/IDS5 behoben
+* Update:       VSCode 1.104
+* Update:       pioArduino 1.1.0
 * Geändert:     WLAN connection timeout auf 60 Sekunden erhöht
 * Geändert:     WLAN Signalstärke für WLAN Scan ConfigPortal auf min 10% RSSI reduziert
 * Fix:          Debug Code entfernt (WebServer collectAllHeaders)
