@@ -20,11 +20,11 @@ Version 1.57.4
 * Geändert:     WLAN Signalstärke für WLAN Scan ConfigPortal auf min 10% RSSI reduziert
 * Fix:          Debug Code entfernt (WebServer collectAllHeaders)
 * Geändert:     im Nextion Display wird der Sensorstatus auch angezeigt (akt. Temperatur oder off)
-* Neu:          Eigenschaft Sensor aktiv: ein Sensor kann temporär deaktiviert werden. Der Status Sensor aktiv wird nicht gespeichert
+* Neu:          Beta: Eigenschaft Sensor aktiv: ein Sensor kann temporär deaktiviert werden. Der Status Sensor aktiv wird nicht gespeichert
 * Geändert:     der PID Controller setzt die Ausgangsleistung auf 0%, wenn der Kessel-Sensor deaktiviert wurde
 * Fix           Handling Schaltzyklus Kessel korrigiert
 * Update:       Update ESP-IDF v5.5.0.250821
-* Neu:          Unterstützung für DC PWM Aktoren (Auswahl PWM analog für DC Motoren an L298/MOSFET wie bspw. Rührwerk oder Pumpen, Auflösung: 8bit)
+* Neu:          Beta: Unterstützung für DC PWM Aktoren (Auswahl PWM analog für DC Motoren an L298/MOSFET wie bspw. Rührwerk oder Pumpen, Auflösung: 8bit)
 * Geändert:     PWM umbenannt in PWM digital (einfaches Takten von Relais (on/off))
 
 Version 1.57
