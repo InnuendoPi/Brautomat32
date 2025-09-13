@@ -13,7 +13,7 @@ InnuFramework CSS/JS bootstrap 4.6.2
 Version 1.57.4
 
 * Geändert:     WebServer Performance (CORS deaktiviert, Boradcast Intervall reduziert, timeoutfreq reduziert)
-* Fix:          Fehler sendCommand für GGM IDS1/IDS5 behoben
+* Fix:          Fehler sendCommand für GGM IDS behoben
 * Update:       VSCode 1.104
 * Update:       pioArduino 1.1.0
 * Geändert:     WLAN connection timeout auf 60 Sekunden erhöht
