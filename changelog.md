@@ -10,8 +10,10 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
-Version 1.57.4
+Version 1.57.5
 
+* Fix:          Fehler WebIf Aktoren behoben: das modal window wurde nicht geöffnet (typo)
+* Geändert:     Methode setActorsInterval angepasst (call by change)
 * Geändert:     WebServer Performance (CORS deaktiviert, Boradcast Intervall reduziert, timeoutfreq reduziert)
 * Fix:          Fehler sendCommand für GGM IDS behoben
 * Update:       VSCode 1.104
