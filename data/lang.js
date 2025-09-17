@@ -1,5 +1,5 @@
 // language configuration
-const supportedLocales = ["de", "en"];  // language files
+const supportedLocales = ["de", "en", "no"];  // language files
 
 // optional configuration 
 const defaultLocale = "de";         // dateTimePicker default language  (de, en, es, nl)

@@ -1,6 +1,6 @@
 # Changelog
 
-ESP32 Arduino 3.3.0 ESP-IDF v5.5.0\
+ESP32 Arduino 3.3.1 ESP-IDF v5.5.1\
 VSCode 1.104 pioarduino IDE 1.1.0\
 InnuAPID AutoTune PID lib 1.8\
 InnuTicker Task Scheduler lib 0.0.6\
@@ -10,8 +10,12 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
-Version 1.57.5
+Version 1.57.6
 
+* Neu:          Sprachdatei Norwegisch
+* Update:       Arduino V3.3.1
+* Update:       ESP-IDF v5.5.1 (v5.5-129cd0d2-v4)
+* Fix:          Korrektur Display Brewpage Buttons Next und Prev: aktueller Step wurde im Display nicht aktualisiert
 * Fix:          Fehler WebIf Aktoren behoben: das modal window wurde nicht geöffnet (typo)
 * Geändert:     Methode setActorsInterval angepasst (call by change)
 * Geändert:     WebServer Performance (CORS deaktiviert, Boradcast Intervall reduziert, timeoutfreq reduziert)
