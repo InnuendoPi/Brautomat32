@@ -12,6 +12,7 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 Version 1.57.6
 
+* Geändert:     Sprachdateien umbenannt (deutsch, english, norwegian)
 * Neu:          Sprachdatei Norwegisch
 * Update:       Arduino V3.3.1
 * Update:       ESP-IDF v5.5.1 (v5.5-129cd0d2-v4)
