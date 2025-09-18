@@ -1,5 +1,5 @@
 // Web interface language configuration
-const supportedLocales = ["deutsch", "english", "norwegian"];  // language files in JSON format
+const supportedLocales = ["deutsch", "english", "norsk"];  // language files in JSON format
 
 // optional configuration 
 const defaultLocale = "de";         // dateTimePicker default language  (de, en, es, nl)
