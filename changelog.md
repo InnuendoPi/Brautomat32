@@ -10,8 +10,9 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
-Version 1.57.8
+Version 1.57.9
 
+* Fix:          sendAlarm in ledcWriteTone() konvertiert. sendAlarm Tone() nicht timer/interrupt safe.
 * Geändert:     SNTP Time Update
 * Geändert:     SSE keepAlive timer
 * Fix:          SSE TimeOut
