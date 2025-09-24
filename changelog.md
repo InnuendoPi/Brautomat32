@@ -10,7 +10,7 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
-Version 1.57.9
+Version 1.57.10
 
 * Optimiert:    SSE TimeOut und checkAliveSSE
 * Fix:          sendAlarm in ledcWriteTone() konvertiert. sendAlarm Tone() nicht timer/interrupt safe.

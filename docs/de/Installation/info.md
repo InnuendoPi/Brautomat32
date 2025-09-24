@@ -63,6 +63,10 @@ Hier muss das WLAN (SSID und das Password) eingegeben werden. Mit _Save_ startet
 
 Damit ist die Grundinstallation abgeschlossen. Der Vorgang Firmware flashen und WLAN Konfiguration ist nur einmal durchzuführen. Der Brautomat muss nun konfiguriert werden. Die Konfiguration wird im Abschnitt _Grundeinrichtung_ beschrieben. Der folgende Abschnitt _Update_ kann zunächst übersprungen werden.
 
+> **Hinweis:**\
+Der Brautomat32 versucht bis zu 20sek mit der WLAN Konfiguration (SSID und Password) eine Verbindung herzustellen. Kann keine Verbindung hergestellt werden, bspw. wenn das Password falsch eingegeben wurde, dann startet der Brautomat32 erneut im AccessPoint Mode.\
+In seltenen Fällen und meist nur dann, wenn das WLAN Signal schwach ist, findet der Brautomat32 kein geeignetes WLAN und startet ebenfalls nach ca. 20sek im AccessPoint Mode. In diesem Fall hilft lediglich ein Neustart vom Brautomat32.
+
 ## Updates
 
 Updates können im Brautomat über das Menü "Update" eingespielt werden. Eine neue Firmware kann über "WebUpdate" oder "Datei Update" eingespielt werden. Bei einer Aktualisierung der Firmware per WebUpdate lädt die Firmware die aktuelle Version aus dem Internet aus dem github Repository. Bei der Aktualisierung per Datei Update wird die Firmware per Upload vom lokalen PC geladen. Ein USB-Kabel oder das Script aus der Installation sind nicht erforderlich.
