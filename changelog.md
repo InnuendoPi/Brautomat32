@@ -10,8 +10,13 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
-Version 1.57.6
+Version 1.57.10
 
+* Optimiert:    SSE TimeOut und checkAliveSSE
+* Fix:          sendAlarm in ledcWriteTone() konvertiert. sendAlarm Tone() nicht timer/interrupt safe.
+* Geändert:     SNTP Time Update
+* Geändert:     SSE keepAlive timer
+* Fix:          SSE TimeOut
 * Geändert:     Sprachdateien umbenannt (deutsch, english, norsk)
 * Neu:          Sprachdatei Norwegisch
 * Update:       Arduino V3.3.1

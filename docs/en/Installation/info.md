@@ -63,6 +63,9 @@ The WLAN (SSID) and the password must be configured here. After saving WLAN cred
 
 This completes the basic installation. The firmware flashing and WLAN configuration process only needs to be carried out once. The Brautomat must now be configured. The configuration is described in the section _Basic setup_. The following section _Update_ can be skipped for the time being.
 
+> **Note:**\
+The Brautomat32 attempts to establish a connection using the Wi-Fi configuration (SSID and password) for up to 20 seconds. If no connection can be established, e.g. if the password was entered incorrectly, the Brautomat32 restarts in access point mode. In rare cases and usually only when the Wi-Fi signal is weak, the Brautomat32 cannot find a suitable Wi-Fi network and also restarts in access point mode after approx. 20 seconds. In this case, the only solution is to restart the Brautomat32.
+
 ## Updates
 
 Updates can be installed via the ‘Update’ menu. New firmware can be installed via ‘WebUpdate’ or ‘File Update’. When updating the firmware via WebUpdate, the firmware loads the current version from the Internet from the github repository. When updating via File Update, the firmware is uploaded from the local PC. A USB cable or the script from the installation are not required.
