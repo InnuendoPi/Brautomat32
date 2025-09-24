@@ -10,8 +10,14 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
-Version 1.57.10
+Version 1.57.11
 
+* Fix:          Beim Anlegen von neuen Sensoren wurde die Eigenschaft "Sensor aktiv" (default true) nicht korrekt angezeigt
+* Geändert:     Wenn die Konfiguration im WLAN Config Portal eine erfolgreiche Verbindung herstellt, wird der Brautomat neu gestartet
+* Geändert:     WiFiManager Konfiguration anggepasst: DEBUG Level NODEBUG, NOHELP
+* Geändert:     WiFiManager Konfiguration anggepasst: WLAN setConnectTimeout 20s
+* Geändert:     WiFiManager Konfiguration anggepasst: WLAN setMinimumSignalQuality 20%
+* Geändert:     WiFi Std Konfiguration entfernt
 * Optimiert:    SSE TimeOut und checkAliveSSE
 * Fix:          sendAlarm in ledcWriteTone() konvertiert. sendAlarm Tone() nicht timer/interrupt safe.
 * Geändert:     SNTP Time Update
