@@ -124,17 +124,17 @@ GPIO Zuordnung:
 | D5         | GPIO018 | ok     | ok     | GGM IDS Interrupt blue/green                  |
 | D6         | GPIO019 | ok     | ok     | GGM IDS Command yellow                        |
 | D7         | GPIO023 | ok     | ok     | GGM IDS Relay white                           |
-| D8         | GPIO005 | ok     | ok     | Buzzer, outputs PWM signal at boot            |
-| D9         | GPIO027 | ok     | ok     | SCLK                                          |
-| D10        | GPIO025 | ok     | ok     | MISO                                          |
-| D11        | GPIO032 | ok     | ok     | MOSI                                          |
+| D8         | GPIO005 | ok     | ok     | Buzzer                                        |
+| D9         | GPIO027 | ok     | ok     | SCLK PT100x                                   |
+| D10        | GPIO025 | ok     | ok     | MISO PT100x                                   |
+| D11        | GPIO032 | ok     | ok     | MOSI PT100x                                   |
 | D12        | GPIO012 | (ok)   | ok     | TDI, boot fails if pulled high                |
-| D13        | GPIO004 | ok     | ok     | CS0                                           |
+| D13        | GPIO004 | ok     | ok     | CS0 PT100x                                    |
 | D14        | GPIO000 | pullUp | (ok)   | must be low to enter flash mode               |
 | D15        | GPIO002 | ok     | ok     | onboard LED, must be low to enter flash mode  |
-| D16        | GPIO033 | ok     | ok     | CS1                                           |
-| D17        | GPIO014 | ok     | ok     | CS2, outputs PWM signal at boot               |
-| D18        | GPIO015 | ok     | ok     | outputs PWM signal at boot                    |
+| D16        | GPIO033 | ok     | ok     | CS1 PT100x                                    |
+| D17        | GPIO014 | ok     | ok     | CS2 PT100x                                    |
+| D18        | GPIO015 | ok     | ok     |                                               |
 | D19        | GPIO013 | ok     | ok     |                                               |
 | D20        | GPIO010 | (ok)   | (ok)   | SD3 SPI flash                                 |
 ||||||
