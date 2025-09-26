@@ -10,9 +10,11 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
-Version 1.57.11
+Version 1.57.12
 
-* Fix:          Beim Anlegen von neuen Sensoren wurde die Eigenschaft "Sensor aktiv" (default true) nicht korrekt angezeigt
+* Fix:          async fetch ersetzt synchronous GET request  SSE channel, language, breakDuration, WebUpdate Alert und checkAlive SSE
+* Fix:          html Korrekturen (aria)
+* Fix:          Beim Anlegen von neuen Sensoren wurde die Eigenschaft "Sensor aktiv" (default true) im WebIf nicht korrekt angezeigt
 * Geändert:     Wenn die Konfiguration im WLAN Config Portal eine erfolgreiche Verbindung herstellt, wird der Brautomat neu gestartet
 * Geändert:     WiFiManager Konfiguration anggepasst: DEBUG Level NODEBUG, NOHELP
 * Geändert:     WiFiManager Konfiguration anggepasst: WLAN setConnectTimeout 20s
