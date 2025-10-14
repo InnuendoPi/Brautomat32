@@ -1,7 +1,7 @@
 # Changelog
 
 ESP32 Arduino 3.3.2 ESP-IDF v5.5.1\
-VSCode 1.105 pioarduino IDE 1.1.1\
+VSCode 1.105 pioarduino IDE 1.1.2\
 InnuAPID AutoTune PID lib 1.8\
 InnuTicker Task Scheduler lib 0.0.6\
 InnuNextion Display lib 0.0.4\
@@ -15,7 +15,7 @@ Version 1.58.1 beta
 * Fix:          ESP IDF Ticker im SSE handling ersetzt durch InnuTicker (client.print in ISR not thread safe)
 * Fix:          SSE Prüfung Client mit eindeutiger Session ID erweitert
 * Fix:          JS Überprüfung "no free SSE channel"
-* Update:       pioArduino IDE 1.1.1
+* Update:       pioArduino IDE 1.1.2
 * Update:       VSCode 1.105
 * Fix:          Inline change Ku und Pu bei Auswahl PID-Relais korrigiert
 * Fix:          Webhook powlist wurde im Modal Maischekessel falsch in das JSON eingetragen
