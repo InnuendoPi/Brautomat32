@@ -1,7 +1,7 @@
 # Changelog
 
-ESP32 Arduino 3.3.1 ESP-IDF v5.5.1\
-VSCode 1.104 pioarduino IDE 1.1.0\
+ESP32 Arduino 3.3.2 ESP-IDF v5.5.1\
+VSCode 1.105 pioarduino IDE 1.1.1\
 InnuAPID AutoTune PID lib 1.8\
 InnuTicker Task Scheduler lib 0.0.6\
 InnuNextion Display lib 0.0.4\
@@ -10,10 +10,43 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
+Version 1.58.1 beta
+
+* Fix:          ESP IDF Ticker im SSE handling ersetzt durch InnuTicker (client.print in ISR not thread safe)
+* Fix:          SSE Prüfung Client mit eindeutiger Session ID erweitert
+* Fix:          JS Überprüfung "no free SSE channel"
+* Update:       pioArduino IDE 1.1.1
+* Update:       VSCode 1.105
+* Fix:          Inline change Ku und Pu bei Auswahl PID-Relais korrigiert
+* Fix:          Webhook powlist wurde im Modal Maischekessel falsch in das JSON eingetragen
+* ReWork:       brautomat.js überarbeitet
+* Optimiert:    jQuery Funktionen durch JS/DOM ersetzt. Bootstrap 4.6 Modal dialog, DateTimePicker, Toast erfordern weiterhin jQuery
+* Optimiert:    SerializeJSON jQuery Plugin durch Javascript ersetzt
+* Optimiert:    TableToJSON jQuery Plugin durch Javascript ersetzt
+* Fix:          Anzeigefehler im Modus Fermenter behoben
+* Fix:          Fokus war nicht korrekt, wenn ein Step im Maischeplan/Fermenterplan hinzugefügt wurde
+* Update:       Arduino V3.3.2 ESP-IDF v5.5.1
+* Optimiert:    Zusammenstellung der Dropdown selects vom ESP nach JS in den WebBrowser verschoben
+* Fix:          Korrektur Überprüfung Client IP auf INADDR_NONE
+* Optimiert:    WebServer replyJSONdoc
+* Optimiert:    Webhandler SSE Broadcast und SSEkeepAlive
+* Optimiert:    Webhandler SSEHandler, handleAll und handleNotFound
+* Geändert:     Erlaubte Zeichen Gerätename: a-zA-Z0-9-_# das erste Zeichen muss a-zA-Z0-9 sein (wichtige Änderung: kein Leerzeichen)
+* Geändert:     Erlaubte Zeichen Profilname: a-zA-Z0-9-_ das erste Zeichen muss a-zA-Z0-9 sein (wichtige Änderung: kein #, kein Leerzeichen)
+* ReWork:       Eingabekontrolle WebIf (Geräte- und Dateinamen, Webhook URL, Api Credentials, MDNS, NTP)
+* Fix:          wurde während einer aktiven mp3 eine weitere mp3 gestartet, wurde eine uncought exception ausgelöst
+* ReWork:       html und js aufgeteilt in zwei Dateien. WebUpdate angepasst
+* ReWork:       einheitliche Schnittstelle async apiGET und apiPOST (fetch)
+* ReWork:       jQuery GET und POST request entfernt
+* ReWork:       komplettes WebIf optimiert, Fehler korrigiert, Redundanzen entfernt, aria
+* Fix:          Fehler manueller Modus behoben (loop updateProgress)
+* Fix:          WebServer static korrigiert
+* Fix:          Zieltemperatur Kessel wurde aus WebIf nicht übernommen
+
 Version 1.57.12
 
-* Fix:          async fetch ersetzt synchronous GET request  SSE channel, language, breakDuration, WebUpdate Alert und checkAlive SSE
-* Fix:          html Korrekturen (aria)
+* Fix:          async fetch ersetzt synchronous GET request SSE channel, language, breakDuration, WebUpdate Alert und checkAlive SSE
+* Fix:          html Korrekturen Screenreader (aria)
 * Fix:          Beim Anlegen von neuen Sensoren wurde die Eigenschaft "Sensor aktiv" (default true) im WebIf nicht korrekt angezeigt
 * Geändert:     Wenn die Konfiguration im WLAN Config Portal eine erfolgreiche Verbindung herstellt, wird der Brautomat neu gestartet
 * Geändert:     WiFiManager Konfiguration anggepasst: DEBUG Level NODEBUG, NOHELP

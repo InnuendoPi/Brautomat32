@@ -34,3 +34,4 @@
 * [MQTTDevice](MQTTDevice/mqtt.md)
 * [Übersetze den Brautomat](FAQ/sprache.md)
 * [Troubleshooting](FAQ/troubleshooting.md)
+* [API](API/api.de)

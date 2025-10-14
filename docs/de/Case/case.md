@@ -4,3 +4,4 @@ Aktuell sind zwei unterschiedlcihe Gehäuse für den Brautomat verfügbar:
 
 * das InnuCase
 * das FreggaCase
+* das RSteckCase
