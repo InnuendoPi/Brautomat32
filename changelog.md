@@ -10,8 +10,11 @@ InnuFramework CSS/JS bootstrap 4.6.2
 
 ## Änderungen
 
-Version 1.58.1 beta
+Version 1.58.2 beta
 
+* Fix:          typo und debug Log Ausgaben SSE Broadcast auf VERBOSE gesetzt
+* Geändert:     Modal Dialog Sud öffnet immer den ersten Tab
+* Fix:          Schnelles Öffnen und Schließen Dialog Sud mit aktiven Tab BrewFather sendet zu viele requests in zu kurzer Zeit (empty repsonse)
 * Fix:          ESP IDF Ticker im SSE handling ersetzt durch InnuTicker (client.print in ISR not thread safe)
 * Fix:          SSE Prüfung Client mit eindeutiger Session ID erweitert
 * Fix:          JS Überprüfung "no free SSE channel"
