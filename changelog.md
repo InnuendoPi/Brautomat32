@@ -12,6 +12,7 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 Version 1.58.3 beta
 
+* Fix:          CSS Korrektur für Javascript Funktionen showElements und hideElements
 * Fix:          Reconnect nach Power Off länger als timeout SSE
 * Fix:          WebUpdate Toast Nachricht "No free SSE channel"
 * Optimiert:    WebIf vollständig auf Bootstrap 5.3 mobile first responsive umgestellt
