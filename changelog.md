@@ -1,21 +1,29 @@
 # Changelog
 
 ESP32 Arduino 3.3.2 ESP-IDF v5.5.1\
-VSCode 1.105 pioarduino IDE 1.1.2\
+VSCode 1.105 pioarduino IDE 1.1.5\
 InnuAPID AutoTune PID lib 1.8\
 InnuTicker Task Scheduler lib 0.0.6\
 InnuNextion Display lib 0.0.4\
 InnuLog Debug lib serial monitor\
-InnuFramework CSS/JS bootstrap 4.6.2
+InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.58.2 beta
+Version 1.58.3 beta
 
+* Optimiert:    WebIf vollständig auf Bootstrap 5.3 mobile first responsive umgestellt
+* Optimiert:    Toast Nachrichten werden nun mit dem Bootstrap Framework bereitgestellt. Toasts Plugin entfernt.
+* Deaktiviert:  der Timer gesteuerte Braustart ist temporär deaktiviert (wird in einer der nächsten version neu implementiert)
+* Upgrade:      Bootstrap 5.3.8
+* Update:       pioArduino IDE 1.1.5
+* Geändert:     jQuery vollständig entfernt
+* Fix:          SSE handling prüft send bytes auf dead connection (TCP socket)
+* Fix:          SSE Broadcast prüft vor dem senden, ob der Client verbunden ist
 * Fix:          typo und debug Log Ausgaben SSE Broadcast auf VERBOSE gesetzt
 * Geändert:     Modal Dialog Sud öffnet immer den ersten Tab
 * Fix:          Schnelles Öffnen und Schließen Dialog Sud mit aktiven Tab BrewFather sendet zu viele requests in zu kurzer Zeit (empty repsonse)
-* Fix:          ESP IDF Ticker im SSE handling ersetzt durch InnuTicker (client.print in ISR not thread safe)
+* Fix:          ESP IDF Ticker im SSE handling ersetzt durch InnuTicker (client.print ISR not thread safe)
 * Fix:          SSE Prüfung Client mit eindeutiger Session ID erweitert
 * Fix:          JS Überprüfung "no free SSE channel"
 * Update:       pioArduino IDE 1.1.2
