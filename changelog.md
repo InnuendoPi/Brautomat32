@@ -12,6 +12,8 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 Version 1.58.3 beta
 
+* Fix:          Reconnect nach Power Off länger als timeout SSE
+* Fix:          WebUpdate Toast Nachricht "No free SSE channel"
 * Optimiert:    WebIf vollständig auf Bootstrap 5.3 mobile first responsive umgestellt
 * Optimiert:    Toast Nachrichten werden nun mit dem Bootstrap Framework bereitgestellt. Toasts Plugin entfernt.
 * Deaktiviert:  der Timer gesteuerte Braustart ist temporär deaktiviert (wird in einer der nächsten version neu implementiert)
