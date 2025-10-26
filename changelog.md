@@ -12,7 +12,7 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 Version 1.58.4 beta
 
-* Geändert:     Bei Änderung der Kessel Typ Relais/fermenter werden die GPIOs auf OFF geschaltet. Der GPIO Zustand HIGH/LOW konnte unbestimmt sein
+* Geändert:     Bei Änderung der Kessel Typ Relais/Fermenter werden die GPIOs auf OFF geschaltet. Der GPIO Zustand HIGH/LOW konnte unbestimmt sein
 * Fix:          SSE checkAlive resetTimeOut
 * Fix:          CSS Korrektur Button SSE Status
 * Fix:          CSS Korrektur für Javascript Funktion replaceClass (hover)
