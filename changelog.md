@@ -10,8 +10,12 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.58.3 beta
+Version 1.58.4 beta
 
+* Geändert:     Bei Änderung der Kessel Typ Relais/fermenter werden die GPIOs auf OFF geschaltet. Der GPIO Zustand HIGH/LOW konnte unbestimmt sein
+* Fix:          SSE checkAlive resetTimeOut
+* Fix:          CSS Korrektur Button SSE Status
+* Fix:          CSS Korrektur für Javascript Funktion replaceClass (hover)
 * Fix:          CSS Korrektur für Javascript Funktionen showElements und hideElements
 * Fix:          Reconnect nach Power Off länger als timeout SSE
 * Fix:          WebUpdate Toast Nachricht "No free SSE channel"
