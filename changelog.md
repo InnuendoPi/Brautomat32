@@ -10,8 +10,9 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.58.4 beta
+Version 1.58.5 beta
 
+* Fix:          Fehler taskhandle behoben
 * Geändert:     Bei Änderung der Kessel Typ Relais/Fermenter werden die GPIOs auf OFF geschaltet. Der GPIO Zustand HIGH/LOW konnte unbestimmt sein
 * Fix:          SSE checkAlive resetTimeOut
 * Fix:          CSS Korrektur Button SSE Status
