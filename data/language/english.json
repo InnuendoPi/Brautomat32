@@ -114,7 +114,7 @@
     "MISC_DASH_HLT": "HLT",
     "MISC_DASH_ACT": "Actors",
     "MISC_DASH_SEN": "Sensors",
-    "MISC_DASH_CHART": "Chart",
+    "MISC_DASH_CHART": "show dashboard",
     "MISC_DASH_MAN": "Manual mode",
     "MISC_DASH_FERM": "Fermenter",
     "MISC_DASH_LIST": ["Mashplan", "Fermenter"],
@@ -452,5 +452,18 @@
     "FERMSTEP_RAMP": "ramp",
     "FERMSTEP_DURATION": "step duration",
     "FERMENTER_MODE": "fermentation mode",
-    "MASH_MODE": "mash mode"
+    "MASH_MODE": "mash mode",
+    "MISC_DASH_KETTLECARD": "dashboard kettle card",
+    "MISC_DASH_KETTLECARD_TT": "show or hide kettle card in dashboard",
+    "MISC_DASH_ACTCARD": "dashboard actors card",
+    "MISC_DASH_ACTCARD_TT": "show or hide actors card in dashboard",
+    "MISC_DASH_SENCARD": "dashboard sensors card",
+    "MISC_DASH_SENCARD_TT": "show or hide sensors card in dashboard",
+    "TAB_MAISCHE_NEXTRAST": "Next rest:",
+    "CARD_KETTLE_NAME": "kettles",
+    "TOAST_ACTERR_ID": "invalid actor ID",
+    "TOAST_ACTERR_GPIO": "invalid actor GPIO or webhook URL",
+    "TOAST_IDSERR_ID": "invalid kettle ID",
+    "TOAST_IDSERR_GPIO": "invalid kessel GPIO or webhook URL",
+    "TOAST_IDSERR_PID": "invalid kettle PID configuration"
 }

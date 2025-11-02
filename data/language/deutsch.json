@@ -114,7 +114,7 @@
     "MISC_DASH_HLT": "Nachguss",
     "MISC_DASH_ACT": "Aktoren",
     "MISC_DASH_SEN": "Sensoren",
-    "MISC_DASH_CHART": "Chart",
+    "MISC_DASH_CHART": "Dashboard anzeigen",
     "MISC_DASH_MAN": "Manueller Modus",
     "MISC_DASH_FERM": "Fermenter",
     "MISC_DASH_LIST": ["Maischeplan", "Fermenter"],
@@ -452,5 +452,18 @@
     "FERMSTEP_RAMP": "Ramp",
     "FERMSTEP_DURATION": "Step Dauer",
     "FERMENTER_MODE": "Fermenter Modus",
-    "MASH_MODE": "MaischSud Modus"
+    "MASH_MODE": "MaischSud Modus",
+    "MISC_DASH_KETTLECARD": "Kessel-Card anzeigen",
+    "MISC_DASH_KETTLECARD_TT": "Zeigt oder versteckt die Kessel-Karte im Dashboard",
+    "MISC_DASH_ACTCARD": "Aktoren-Card anzeigen",
+    "MISC_DASH_ACTCARD_TT": "Zeigt oder versteckt die Aktoren-Karte im Dashboard",
+    "MISC_DASH_SENCARD": "Sensoren-Card anzeigen",
+    "MISC_DASH_SENCARD_TT": "Zeigt oder versteckt die Sensoren-Karte im Dashboard",
+    "TAB_MAISCHE_NEXTRAST": "Nächste Rast:",
+    "CARD_KETTLE_NAME": "Kessel",
+    "TOAST_ACTERR_ID": "Aktor ID ungültig",
+    "TOAST_ACTERR_GPIO": "Aktor GPIO oder webhook URL ungültig",
+    "TOAST_IDSERR_ID": "Kessel ID ungültig",
+    "TOAST_IDSERR_GPIO": "Kessel GPIO oder webhook URL ungültig",
+    "TOAST_IDSERR_PID": "Kessel PID Konfiguration ungültig"
 }
