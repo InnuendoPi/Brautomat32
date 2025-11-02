@@ -10,7 +10,14 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.58.5 beta
+Version 1.59.1 beta
+
+* Neu:          ESP32AsyncWebserver ersetzt den ESP Weberver
+* Neu:          Dashboard im Modus Brauen
+* Fix:          mehrere aufeinanderfolgende Aktor Steps im Maischeplan mit deaktiviertem autonext
+* Geändert:     wenn ein Aktor oder ein Kessel nicht vollständig konfiguriert ist, wird das Gerät nicht geschaltet und es erscheint eine Toastnachricht
+
+Version 1.58.4 beta
 
 * Fix:          Fehler taskhandle behoben
 * Geändert:     Bei Änderung der Kessel Typ Relais/Fermenter werden die GPIOs auf OFF geschaltet. Der GPIO Zustand HIGH/LOW konnte unbestimmt sein
