@@ -10,8 +10,12 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.59.1 beta
+Version 1.59.2 beta
 
+* Korrektur:    WebIf Dashboard (kein reload nach Anpassung mehr erforderlich)
+* Korrektur:    typo global var Javascript
+* Neu:          InfoToast wenn neues Release auf github verfügbar ist
+* Neu:          DateiUpdate Webseite neu gestaltet
 * Neu:          ESP32AsyncWebserver ersetzt den ESP Weberver
 * Neu:          Dashboard im Modus Brauen
 * Fix:          mehrere aufeinanderfolgende Aktor Steps im Maischeplan mit deaktiviertem autonext
