@@ -1,17 +1,31 @@
 # Changelog
 
-ESP32 Arduino 3.3.2 ESP-IDF v5.5.1\
+ESP32 Arduino 3.3.3 ESP-IDF v5.5.1\
 VSCode 1.105 pioarduino IDE 1.1.5\
 InnuAPID AutoTune PID lib 1.8\
-InnuTicker Task Scheduler lib 0.0.6\
-InnuNextion Display lib 0.0.4\
+InnuTicker Task Scheduler lib 0.0.7\
+InnuNextion Display lib 0.0.5\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.59.2 beta
+Version 1.59.5 beta
 
+* Fix:          InnuNextion Display Bibliothek: timing für das Auslesen Seitenwechsel korrigiert (+50ms)
+* Fix:          Nextion Display: im SSE handler war es möglich, dass nicht aktive Elemente aktualisiert wurden (manuelles Kochen)
+* Entfernt:     die JS Datei lang.js wurde entfernt
+* ReWork:       nur vorhandene Sporachdateien werden beim WebUpdate aktualisiert
+* Rework:       Sprachdateien werden bei Auswahl aus dem github repository nachgeladen
+* Neu:          Sprachdateien spanisch, französisch, niederländisch, dänisch, schwedisch, polnisch, tschechisch, spanisch, portugisisch
+* Fix:          SSE checkAlive: ESPAsyncWebServer Korrekturen
+* Update:       Arduino V3.3.3
+* Fix:          Exception behoben (AsyncTCP LoadProhibited-Exception)
+* Fix:          NOT FOUND HANDLER: bootstrap.min.css.map
+* Fix:          language fallback deutsch (key und file)
+* Korrektur:    Aufteilung TickerSYS und writeFlash EEprom Braustatus auf zwei unabhängig Tasks
+* Geändert:     sendCommand an GGM IDS von FreeRTOS Task Typ Queue auf Typ Hybrid (Queue + Notify) umgestellt
+* Update:       InnuTicker 0.0.7 Reentrancy-Schutz für Ticker Objekte (RAII-Prinzip)
 * Korrektur:    WebIf Dashboard (kein reload nach Anpassung mehr erforderlich)
 * Korrektur:    typo global var Javascript
 * Neu:          InfoToast wenn neues Release auf github verfügbar ist
