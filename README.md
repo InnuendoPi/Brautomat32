@@ -1,150 +1,213 @@
 # Brautomat32
 
-[![de](https://img.shields.io/badge/Sprache-de-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.de.md)
+<!-- ![Sprache: Deutsch](https://img.shields.io/badge/Sprache-de-red.svg) -->
+[![de](https://img.shields.io/badge/Deutsch-de-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.de.md)
+![PlatformIO](https://img.shields.io/badge/platform-ESP32-blue)
+![Framework](https://img.shields.io/badge/framework-Arduino-green)
+![Version](https://img.shields.io/github/v/release/InnuendoPi/Brautomat32)
 
-The Brautomat is a brewing controller for ESP32. The Brautomat offers an intuitive, easy-to-use control system.
+The **Brautomat32** is a brewing and fermenting controller for ESP32.  
+It provides an intuitive, easy-to-use control deck directly in your preferred web browser.
 
-***
+![WebInterface](docs/img/dashboard160.jpg)
+
+---
 
 ## 💿 Download
 
-Latest Stable Release
+| Release Type | Download |
+|---------------|-----------|
+| **Release** | [![Stable](https://img.shields.io/static/v1?label=Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) |
+| **Development** | [![Dev](https://img.shields.io/static/v1?label=Development%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Brautomat32.zip) |
 
-<!-- [![Brautomat32](https://img.shields.io/static/v1?label=Download%20Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip) -->
-[![Brautomat32](https://img.shields.io/static/v1?label=Download%20Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest)
-
-Latest Development Release
-
-[![Brautomat32](https://img.shields.io/static/v1?label=Download%20Development%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Brautomat32.zip)
+---
 
 ## ▶️ Installation
 
-<!-- * [Download Brautomat ESP32](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip) -->
-* Download Brautomat ESP32
-* unzip file
-* Double-click file “Flashen.cmd”
+* Download **Brautomat ESP32**
+* Unzip the downloaded file
+* Double-click **Flashen.cmd**
 
-ZIP files includes [esptool](https://github.com/espressif/esptool).
+The ZIP file includes [esptool](https://github.com/espressif/esptool).  
 
-In most cases not required: Hardware driver CP210x USB to UART Bridge Virtual COM Port (VCP): [Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+In most cases not required:  
+**CP210x USB to UART Bridge Virtual COM Port (VCP)** driver – [Silicon Labs Download](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+
+---
 
 ## 📓 Features
 
-Brautomat is a stand alone brewing device and offers:
+Brautomat is a standalone brewing device and offers:
 
-* induction hob controller
-* relay controller
-* webhook controller
-* integrated PID-Controller
-* digital sensors DS18B20
-* analog sensors PT100x with MAX31865 Amplifier
-* PID-AutoTune
-* mash plan management
-  * full automated rest temperature reach and hold
-  * full automated rest duration timer function
-  * actors can be managed through mashplan
-  * Mash plans with up to 30 steps
-* Controll up to 3 kettles
-  * Mash
-  * MLT
-  * HLT
-* Kettle hardware profiles
-* Fermenter Mode
-* Controlling actors like agitator, pumps etc.
-* PWM for heating elements
-* Temperature progression in the mashing process (line chart)
-* MP3 alerts
-* Toasts messages
-* Recipe import
-  * kleinerBrauhelfer2
-  * Maische Malz und Mehr
-  * BrewFather
-* Recipe export
-* Brewfather recipes and batches API support
-* Backup and Restore
-* Nextion 3,5" HMI Touchdisplay (optional)
-* WebUpdate for easy firmware updates
-* Support for different languages
-* and much more
+* Induction hob controller  
+* Relay controller  
+* Webhook controller  
+* Integrated PID-Controller  
+* Digital sensors DS18B20  
+* Analog sensors PT100x with MAX31865 amplifier  
+* PID-AutoTune  
+* Mash plan management  
+  * Automatic temperature reach and hold  
+  * Automated rest duration timer  
+  * Actor management within mash plan  
+  * Up to 30 mash steps  
+* Control up to 3 kettles  
+  * Mash  
+  * MLT  
+  * HLT  
+* Kettle hardware profiles  
+* Fermenter mode  
+* Control actors like agitator, pumps, etc.  
+* PWM for heating elements  
+* Temperature progression chart  
+* MP3 alerts  
+* Toast messages  
+* Recipe import  
+  * kleinerBrauhelfer2  
+  * Maische Malz und Mehr  
+  * BrewFather  
+* Recipe export  
+* BrewFather recipes and batches API support  
+* Backup and Restore  
+* Nextion 3.5" HMI Touchdisplay (optional)  
+* WebUpdate for firmware updates  
+* Multilingual support  
+* **[NEW] Dashboard**  
+* And much more...
+
+---
 
 ## 📚 Documentation
 
-Detailed instructions: [Instructions & description](https://innuendopi.gitbook.io/brautomat32/)\
-Forum Hobbybrauer (german): [Discussion & News](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
-Last changes: [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
+* 📘 [Instructions & Description](https://innuendopi.gitbook.io/brautomat32/)  
+* 💬 [Forum Hobbybrauer (German)](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)  
+* 🕓 [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
 
-## 📰 WebInterface
+---
 
-The Brautomat is operated via web browser. You can use your tablet, smartphone or pc.
+## 📰 Web Interface
 
-![WebIf](docs/img/brautomat.jpg)\
-![WebIf](docs/img/IDS-AutoTune-Ziel.jpg)\
-![WebIf](docs/img/brautomat-2.jpg)
+The Brautomat is operated via any modern web browser. You can use your tablet, smartphone, or PC.
 
-## 💻 Nextion HMI Touchdisplay
+<!-- markdownlint-disable-next-line MD033 -->
+<details>
+<!-- markdownlint-disable-next-line MD033 -->
+<summary>Show Web Interface screenshots</summary>
+
+![Web Interface](docs/img/brautomat.jpg)  
+![AutoTune Target](docs/img/IDS-AutoTune-Ziel.jpg)  
+![Dashboard View](docs/img/brautomat-2.jpg)
+
+</details>
+
+---
+
+## 💻 Nextion HMI Touchdisplay (optional)
 
 Brautomat offers three different display views:
 
-* Overview: all kettles are displayed
-* Mash tun: MaischeSud kettle (first kettle) ist displayed
-* Manual control cooking: only usable with induction hob GGM IDS2
+* **Overview** – all kettles are displayed  
+* **Mash tun** – displays the Maische/Sud kettle (first kettle)  
+* **Manual Control (GGM IDS2)** – for direct hob control  
 
-![Overview](docs/img/kettlepage-sm.jpg) ![Mash tun](docs/img/brewpage-sm.jpg) ![Manual control](docs/img/induction-mode-sm.jpg)
+![Overview](docs/img/kettlepage-sm.jpg)  
+![Mash tun](docs/img/brewpage-sm.jpg)  
+![Manual control](docs/img/induction-mode-sm.jpg)
 
-_Note: the display is an optional extension. Only Nextion ITEAD HMI 3.5" Touchdisplays are supported._
+_Note: The display is an optional extension. Only Nextion ITEAD HMI 3.5" touch displays are supported._
+
+---
 
 ## 🗺️ Multilingual
 
-Brautomat32 supports (almost) any number of languages. Each language has its own language file. The language files in JSON format are stored in the folder data/language.
+![de](https://img.shields.io/badge/Deutsch-de-red.svg)
+![en](https://img.shields.io/badge/English-en-blue.svg)
+![es](https://img.shields.io/badge/Español-es-yellow.svg)
+![fr](https://img.shields.io/badge/Français-fr-lightgrey.svg)
+![nl](https://img.shields.io/badge/Nederlands-nl-orange.svg)
+![no](https://img.shields.io/badge/Norsk-no-green.svg)
+![it](https://img.shields.io/badge/Italiano-it-lightblue.svg)
+![sv](https://img.shields.io/badge/Svenska-sv-yellowgreen.svg)
+![pl](https://img.shields.io/badge/Polski-pl-darkred.svg)
+![pt](https://img.shields.io/badge/Português-pt-lightgrey.svg)
+![dk](https://img.shields.io/badge/Dansk-da-blueviolet.svg)
+![cs](https://img.shields.io/badge/Čeština-cs-orange.svg)
 
-_Support this project and translate Brautomat into a new language or correct existing language files!_
+Brautomat32 supports (almost) any number of languages.  
+Each language has its own JSON-based translation file in `/data/language`.
 
-## 📙 Circuit board 2.1
+💡 _Support this project — translate Brautomat into a new language or help improve existing translations!_
+
+---
+
+## 📙 Circuit Board 2.1
 
 ![Platine](docs/img/Platine21.jpg)
 
-A ciruit board for the ESP32 D1 Mini NodeMCU is available. In addition to the screw terminal blocks for the GPIOs, the board also offers a separate connection for the induction hob GGM IDS and three connections for temperature sensors Dallas DS18B20. The Gerber file is stored in the Gehaeuse folder. The board 2.1 can be operated with ESP32 D1 mini variant only.
+A **circuit board** for the ESP32 D1 Mini NodeMCU is available.  
+It offers screw terminals for GPIOs, a dedicated GGM IDS interface, and three DS18B20 sensor ports.  
+Gerber files are stored in the `Gehaeuse` folder.  
+
+[![Gerber files](https://img.shields.io/static/v1?label=Gerber%20Files&message=Download&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Gehaeuse/Brautomat-2.1-Gerber_2024-04-03.zip)
+
+---
 
 ## 📗 Case
 
-![Gehäuse](docs/img/brautomat_01.jpg)
-![Platine](docs/img/brautomat_02.jpg)
+![Case Front](docs/img/brautomat_01.jpg)  
+![Case Inside](docs/img/brautomat_02.jpg)
 
-## Pinout
+---
 
-The pin assignment shown is based on the ESP32 D1 Mini NodeMCU module from [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
+## 📈 Pinout
 
-GPIO mapping:
+The following pin assignment applies to the **ESP32 D1 Mini NodeMCU** (e.g. from [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)):
+
+### GPIO Mapping
 
 ![ESP32 D1 Pinout-1](docs/img/ESP32-D1.pinout-1.jpg) ![ESP32 D1 Pinout-2](docs/img/ESP32-D1.pinout-2.jpg)
 
-| Name | GPIO    | Input  | Output | notes                                         |
-| ---------- | ------- | ------ | ------ | --------------------------------------------- |
-| D0         | GPIO026 | ok     | ok     |                                               |
-| D1         | GPIO022 | ok     | ok     |                                               |
-| D2         | GPIO021 | ok     | ok     |                                               |
-| D3         | GPIO017 | ok     | ok     | DS18B20                                       |
-| D4         | GPIO016 | ok     | ok     |                                               |
-| D5         | GPIO018 | ok     | ok     | GGM IDS Interrupt blue/green                  |
-| D6         | GPIO019 | ok     | ok     | GGM IDS Command yellow                        |
-| D7         | GPIO023 | ok     | ok     | GGM IDS Relay white                           |
-| D8         | GPIO005 | ok     | ok     | Buzzer                                        |
-| D9         | GPIO027 | ok     | ok     | SCLK PT100x                                   |
-| D10        | GPIO025 | ok     | ok     | MISO PT100x                                   |
-| D11        | GPIO032 | ok     | ok     | MOSI PT100x                                   |
-| D12        | GPIO012 | (ok)   | ok     | TDI, boot fails if pulled high, strapping pin |
-| D13        | GPIO004 | ok     | ok     | CS0 PT100x                                    |
-| D14        | GPIO000 | pullUp | (ok)   | must be low to enter flash mode               |
-| D15        | GPIO002 | ok     | ok     | onboard LED, must be low to enter flash mode  |
-| D16        | GPIO033 | ok     | ok     | CS1 PT100x                                    |
-| D17        | GPIO014 | ok     | ok     | CS2 PT100x                                    |
-| D18        | GPIO015 | ok     | ok     |                                               |
-| D19        | GPIO013 | ok     | ok     |                                               |
-| D20        | GPIO010 | (ok)   | (ok)   | SD3 SPI flash                                 |
-||||||
+| Name | GPIO | Input | Output | Notes |
+|:------|:------:|:------:|:------:|:--------------------------------------------|
+| D0 | GPIO026 | ok | ok | |
+| D1 | GPIO022 | ok | ok | |
+| D2 | GPIO021 | ok | ok | |
+| D3 | GPIO017 | ok | ok | DS18B20 |
+| D4 | GPIO016 | ok | ok | |
+| D5 | GPIO018 | ok | ok | GGM IDS interrupt (blue/green) |
+| D6 | GPIO019 | ok | ok | GGM IDS command (yellow) |
+| D7 | GPIO023 | ok | ok | GGM IDS relay (white) |
+| D8 | GPIO005 | ok | ok | Buzzer |
+| D9 | GPIO027 | ok | ok | SCLK PT100x |
+| D10 | GPIO025 | ok | ok | MISO PT100x |
+| D11 | GPIO032 | ok | ok | MOSI PT100x |
+| D12 | GPIO012 | (ok) | ok | Boot fails if pulled high (TDI, strapping) |
+| D13 | GPIO004 | ok | ok | CS0 PT100x |
+| D14 | GPIO000 | pullUp | (ok) | Must be LOW to enter flash mode |
+| D15 | GPIO002 | ok | ok | Onboard LED, must be LOW to enter flash mode |
+| D16 | GPIO033 | ok | ok | CS1 PT100x |
+| D17 | GPIO014 | ok | ok | CS2 PT100x |
+| D18 | GPIO015 | ok | ok | |
+| D19 | GPIO013 | ok | ok | |
+| D20 | GPIO010 | (ok) | (ok) | SD3 SPI flash |
 
-Pins connected to onboard flash and not recommended for GPIO use: CMD (IO11), CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9) and SD3 (IO10)
+⚠️ Pins connected to onboard flash (CMD, CLK, SD0–SD3) are not recommended for GPIO use.
 
-## 🔉MP3 files
+---
 
-_Legal note: "Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) and "Success sound effect" (success) mp3 from Free Sounds Library_ [_http://www.freesoundslibrary.com_](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
+## 🔉 MP3 Files
+
+_Legal note:_  
+“Boxing Bell” (info), “Short School Bell” (error), “Ding sound effect” (warning), and “Success sound effect” (success) are from **Free Sounds Library**  
+🔗 [freesoundslibrary.com](http://www.freesoundslibrary.com)  
+📜 License: **Attribution 4.0 International (CC BY 4.0)** — free for commercial and non-commercial use.
+
+---
+
+## 💬 Community & Support
+
+* [GitHub Discussions](https://github.com/InnuendoPi/Brautomat32/discussions)  
+* [Report an Issue](https://github.com/InnuendoPi/Brautomat32/issues)  
+* ⭐ _If you like this project, please consider giving it a star!_
+
+---
