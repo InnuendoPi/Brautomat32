@@ -148,7 +148,14 @@ Each language has its own JSON-based translation file in `/data/language`.
 
 ## 📙 Circuit Board 2.1
 
+<!-- markdownlint-disable-next-line MD033 -->
+<details>
+<!-- markdownlint-disable-next-line MD033 -->
+<summary>Show screenshot circuit board</summary>
+
 ![Platine](docs/img/Platine21.jpg)
+
+</details>
 
 A **circuit board** for the ESP32 D1 Mini NodeMCU is available.  
 It offers screw terminals for GPIOs, a dedicated GGM IDS interface, and three DS18B20 sensor ports.  
@@ -160,8 +167,15 @@ Gerber files are stored in the `Gehaeuse` folder.
 
 ## 📗 Case
 
+<!-- markdownlint-disable-next-line MD033 -->
+<details>
+<!-- markdownlint-disable-next-line MD033 -->
+<summary>Show case screenshots</summary>
+
 ![Case Front](docs/img/brautomat_01.jpg)  
 ![Case Inside](docs/img/brautomat_02.jpg)
+
+</details>
 
 ---
 
@@ -171,7 +185,14 @@ The following pin assignment applies to the **ESP32 D1 Mini NodeMCU** (e.g. from
 
 ### GPIO Mapping
 
+<!-- markdownlint-disable-next-line MD033 -->
+<details>
+<!-- markdownlint-disable-next-line MD033 -->
+<summary>Show ESP32 pinout screenshots</summary>
+
 ![ESP32 D1 Pinout-1](docs/img/ESP32-D1.pinout-1.jpg) ![ESP32 D1 Pinout-2](docs/img/ESP32-D1.pinout-2.jpg)
+
+</details>
 
 | Name | GPIO | Input | Output | Notes |
 |:------|:------:|:------:|:------:|:--------------------------------------------|
