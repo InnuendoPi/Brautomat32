@@ -94,9 +94,8 @@ The Brautomat is operated via any modern web browser. You can use your tablet, s
 <!-- markdownlint-disable-next-line MD033 -->
 <summary>Show Web Interface screenshots</summary>
 
-![Web Interface](docs/img/brautomat.jpg)  
-![AutoTune Target](docs/img/IDS-AutoTune-Ziel.jpg)  
-![Dashboard View](docs/img/brautomat-2.jpg)
+![WebInterface](docs/img/brautomat160.jpg)  
+![WebInterface](docs/img/brautomat160-2.jpg)
 
 </details>
 
@@ -110,11 +109,18 @@ Brautomat offers three different display views:
 * **Mash tun** – displays the Maische/Sud kettle (first kettle)  
 * **Manual Control (GGM IDS2)** – for direct hob control  
 
+<!-- markdownlint-disable-next-line MD033 -->
+<details>
+<!-- markdownlint-disable-next-line MD033 -->
+<summary>Show display screenshots</summary>
+
 ![Overview](docs/img/kettlepage-sm.jpg)  
 ![Mash tun](docs/img/brewpage-sm.jpg)  
 ![Manual control](docs/img/induction-mode-sm.jpg)
 
 _Note: The display is an optional extension. Only Nextion ITEAD HMI 3.5" touch displays are supported._
+
+</details>
 
 ---
 
