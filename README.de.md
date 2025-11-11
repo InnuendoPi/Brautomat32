@@ -109,9 +109,16 @@ Das Nextion-Display bietet drei verschiedene Ansichten:
 * **Maischeansicht** – zeigt den Maische-/Sudkessel (erster Kessel)  
 * **Manuelle Steuerung (GGM IDS2)** – für direktes Heizen und Kochen  
 
+<!-- markdownlint-disable-next-line MD033 -->
+<details>
+<!-- markdownlint-disable-next-line MD033 -->
+<summary>Display screenshots anzeigen</summary>
+
 ![Übersicht](docs/img/kettlepage-sm.jpg)  
 ![Maischeansicht](docs/img/brewpage-sm.jpg)  
 ![Manuell](docs/img/induction-mode-sm.jpg)
+
+</details>
 
 _Hinweis: Das Display ist optional. Unterstützt werden ausschließlich Nextion ITEAD HMI-Touchdisplays 3,5"._
 
