@@ -147,7 +147,14 @@ Jede Sprache besitzt eine eigene JSON-Datei im Ordner `/data/language`.
 
 ## 📙 Platine Version 2.1
 
+<!-- markdownlint-disable-next-line MD033 -->
+<details>
+<!-- markdownlint-disable-next-line MD033 -->
+<summary>Screenshot Platine anzeigen</summary>
+
 ![Platine](docs/img/Platine21.jpg)
+
+</details>
 
 Für den **ESP32 D1 Mini NodeMCU** steht eine eigene **Platine** zur Verfügung.  
 Sie bietet Schraubklemmen für alle GPIO-Pins, einen dedizierten Anschluss für das Induktionskochfeld **GGM IDS** sowie drei Anschlüsse für DS18B20-Sensoren.  
@@ -159,8 +166,15 @@ Die Gerber-Dateien liegen im Ordner `Gehaeuse`.
 
 ## 📗 Gehäuse
 
+<!-- markdownlint-disable-next-line MD033 -->
+<details>
+<!-- markdownlint-disable-next-line MD033 -->
+<summary>Gehäuse Screenshots anzeigen</summary>
+
 ![Gehäuse außen](docs/img/brautomat_01.jpg)  
 ![Gehäuse innen](docs/img/brautomat_02.jpg)
+
+</details>
 
 ---
 
@@ -170,7 +184,14 @@ Die folgende Belegung basiert auf dem **ESP32 D1 Mini NodeMCU** (z. B. [AZ-Deliv
 
 ### GPIO-Mapping
 
+<!-- markdownlint-disable-next-line MD033 -->
+<details>
+<!-- markdownlint-disable-next-line MD033 -->
+<summary>ESP32 Pinout Screenshots anzeigen</summary>
+
 ![ESP32 D1 Pinout-1](docs/img/ESP32-D1.pinout-1.jpg) ![ESP32 D1 Pinout-2](docs/img/ESP32-D1.pinout-2.jpg)
+
+</details>
 
 | Name | GPIO | Input | Output | Beschreibung |
 |:------|:------:|:------:|:------:|:--------------------------------------------|
