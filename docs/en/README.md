@@ -1,53 +1,44 @@
-# Brautomat: Intuitive brewing and fermenting control for homebrewers
-
-> **Note:** translation still in progress
+# The Brautomat
 
 ![ESP32](https://img.shields.io/static/v1?label=Arduino&message=ESP32&logo=arduino&logoColor=white&color=blue)
 
-The Brautomat is a brewing and fermenting controller specifically designed for the ESP32 D1 mini. It is utilized in the brewhouses of homebrewers and is characterized by its user-friendly operation. During mashing, rest temperatures are automatically reached, and the corresponding times are precisely maintained. Additionally, the Brautomat assists in the brewing process during wort boiling and hop additions. Using infusion brewing method, the Brautomat can fully automate the mashing and boiling process.
+The Brautomat is a brewing control for the ESP32 D1 mini. The Brautomat is used in the brewhouse and offers an intuitive, easy-to-use control. During mashing, rest temperatures are reached automatically and the rest times are adhered to. The Brautomat also supports wort boiling and adding hops and ingredients. In the ascending infusion process, the Brautomat can fully automate the mashing process.
 
-> **Note:** This manual is continuously expanded, corrected, and improved. Originally, the Brautomat project could only control the GGM IDS2 induction hob. Since version 1.48, other induction hobs can also be connected in relay mode. Although the manual describes functions with a GGM IDS in many sections, only the manual mode is exclusively suitable for the GGM IDS2. All other functions are also available for other products.
+> **Note:**
+This page was automatically translated from the original German documentation.
+\
+These instructions are constantly being expanded, corrected or improved. Originally only the GGM IDS2 induction hob could be controlled in the Brautomat project. From version 1.48, other hobs can also be connected in relay mode. The instructions describe the functions with a GGM IDS in many places. Only the manual mode is exclusively suitable for the GGM IDS2. All other functions and options are also available for other hobs.
 
-## Structure of this manual
+ ---
 
-This manual is not linear and does not need to be read from top to bottom. For beginners, it is recommended to start with the installation and basic setup section, especially the chapter "The mash plan".
+## Layout of this guide
 
-The manual is divided into three main areas:
+These instructions are in no order and do not need to be read from top to bottom. The subject area _Software_, especially the chapter _The mash plan_, is recommended for entry into the Brautomat. The chapter _The mash plan_ includes an example brewing day at the end of the explanations of the functions.
 
-* Software: usage of the Brautomat firmware
+This guide is divided into three subject areas:
+
+* Software: the use of firmware Brautomat
   * Installation
   * Basic setup
-  * The mashing plan
+  * The mash plan
   * AutoTune PID
-  * Sensors, actors, and sparging
+  * Sensors, brew kettles, refills and actuators
   * Fermenter mode
-* Hardware: The circuit board and suitable extensions
-  * Structure and connections of the circuit board
+* Hardware: the circuit board and appropriate extensions
+  * The circuit board structure and connections
   * The display
-  * 3D-printed housing
-* Additional hardware
-* Information and FAQs:
-  * KleinerBrauhelfer2
-  * The MQTTDevice
+  * 3D housing
+  * additional hardware
+* Info and FAQs
+  * small brewing helper2
+  * the MQTTDevice
 
-Software section concludes with an overview of parameters. Detailed information is provided for many parameters to simplify configuration and application.
+The topic area _Software_ is concluded with a summary _Parameters at a glance_. Details and information are provided for many parameters to simplify configuration and use.
 
-## Brautomat release version
+## Brautomat Release Version
 
-Release type Brautomat32 is compiled with stable release framework ESP espressif. This version is for productive use. This version does not include logging modul. Brautomat releases are faster and smaller than development versions due to excluded modul logging. They do not print logging outputs on serial monitor while brewing. Release versions should always be preferred if a serial monitor is not connected.
+The release version of Brautomat is compiled with the current stable framework espressif. This version is for productive use. The release version is provided without the Logging module. The version is slightly faster. The release version should be used preferentially.
 
-## Brautomat development version
+## Brautomat Development version
 
-Development type Brautomat32 is compiled with latest framework ESP espressif. This version includes the logging modul. Also new functions and bug fixes are available in development versions first. Development versions can be used productively, but it is not recommended. New functions may still be under development.
-
-## Why GGM IDS induction hobs?
-
-There are two reasons why these devices should be used:
-
-1. The main circuit board is safely separated from the controller board by optocouplers. This separation makes it safely possible to replace the original control system with the Brautomat32.
-  ![main circuit board](/docs/img/IDS5_2.jpg)
-
-2. The original controller was read out using a digital analyzer. This means that the serial commands for the power stages are known and can be used precisely.
-  ![logic analyzer](/docs/img/IDS5.jpg)
-
-GGM IDS1 and IDS5 offer 10 powersteps, IDS2 offers 5 powersteps operating with max. 3.5kW. Replacing the original control system with the Brautomat is very easy. The cases IDS1 and IDS2 must not be opened. Just simply disconnect the external control unit. The housing of IDS5 needs to be opened.
+The development version of Brautomat is compiled with the current esspressif framework. This version is provided with the Logging module. New features and bug fixes are first released in the development version. This version can be used productively, but is not recommended.

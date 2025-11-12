@@ -128,4 +128,5 @@ mklittlefs.exe
 Rezepte/
 docs/de/de.zip
 docs/de/extract_doc.py
-docs/de/docs_extracted.json
+docs/*.json
+docs/en.ori

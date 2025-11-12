@@ -1,22 +1,35 @@
 # Changelog
 
-ESP32 Arduino 3.3.3 ESP-IDF v5.5.1\
+ESP32 Arduino 3.3.4 ESP-IDF v5.5.1\
 VSCode 1.105 pioarduino IDE 1.1.5\
 InnuAPID AutoTune PID lib 1.8\
-InnuTicker Task Scheduler lib 0.0.7\
-InnuNextion Display lib 0.0.5\
+InnuTicker Task Scheduler lib 0.7\
+InnuNextion Display lib 0.6\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.59.5 beta
+Version 1.59.6 RC1
 
+* Fix:          InnuTicker 0.8 BusyGuard (RAII)
+* Update:       Arduino 3.3.4
+* Fix:          Braustatus im Eeprom speichern konnte überlappend ausgeführt werden. WriteFlash in InnuTicker Objekt migriert (RAII-Schutz)
+* Fix:          die Charts von Maische, Sud und HLT waren zeitlich nicht synchron
+* Geändert:     wird der Brautomat bei aktivem Brauprozess ausgeschaltet, wird im Temperaturverlauf eine Lücken für die Dauer der Unterbrechung angezeigt
+* Fix:          Anzeige Chart Sud und Chart Hlt war nicht möglich
+* Fix:          Fehler Backup behoben: der WebServer hat nicht korrekt auf die Anfrage download Backup geantwortet
+* Neu:          InnuNextion: shadow table (Reduzierung der Schreibbefehle an das Display um ca. 70%)
+* Fix:          wenn kein Masichekessel konfiguriert war, wurden im Display konfigurierte Sud und HLT Kessel nicht angezeigt
+* Fix:          Display Anzeige: der Fortschrittsbalken war bei Rastdauer über 60 Minuten nicht korrekt berechnet (Länge roter Balken)
 * Fix:          InnuNextion Display Bibliothek: timing für das Auslesen Seitenwechsel korrigiert (+50ms)
 * Fix:          Nextion Display: im SSE handler war es möglich, dass nicht aktive Elemente aktualisiert wurden (manuelles Kochen)
-* Entfernt:     die JS Datei lang.js wurde entfernt
-* ReWork:       nur vorhandene Sporachdateien werden beim WebUpdate aktualisiert
+
+Version 1.59.5
+
+* ReWork:       nur vorhandene Sprachdateien werden beim WebUpdate aktualisiert
 * Rework:       Sprachdateien werden bei Auswahl aus dem github repository nachgeladen
+* Entfernt:     die JS Datei lang.js wurde entfernt
 * Neu:          Sprachdateien spanisch, französisch, niederländisch, dänisch, schwedisch, polnisch, tschechisch, spanisch, portugisisch
 * Fix:          SSE checkAlive: ESPAsyncWebServer Korrekturen
 * Update:       Arduino V3.3.3
