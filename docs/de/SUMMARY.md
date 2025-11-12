@@ -7,6 +7,7 @@
   * [Induktionskochfeld GGM IDS einrichten](Grundeinrichtung/ids.md)
 * [Der Maischeplan](Maischeplan/info.md)
   * [Die Steuerung](Maischeplan/steuerung.md)
+  * [Das Dashboard](Maischeplan/dashboard.md)
   * [Funktionen](Maischeplan/funktionen.md)
   * [Rezept](Maischeplan/rez.md)
 * [AutoTune PID](Autotune-pid/info.md)
@@ -34,4 +35,4 @@
 * [MQTTDevice](MQTTDevice/mqtt.md)
 * [Übersetze den Brautomat](FAQ/sprache.md)
 * [Troubleshooting](FAQ/troubleshooting.md)
-* [API](API/api.de)
+* [API](API/api.md)

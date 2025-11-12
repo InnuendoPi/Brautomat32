@@ -75,6 +75,8 @@ Der Speicherbereich von einem ESP Microcontroller unterteilt sich in Firmware un
 
 ### WebUpdate
 
+![WebUpdate](/docs/img/webupdate.jpg)
+
 Das WebUpdate startet den Brautomat mehrfach neu. Als erstes wird die Firmware aktualisiert. Nach einem weiteren Neustart wird das Framework aktualisiert. Der Ablauf vom WebUpdate wird in der Datei webUpdateLog.txt protokolliert.
 
 Wenn die Option _WebUpdate mit Testversion_ aktiviert ist, wird das WebUpdate mit der aktuellen Entwicklerversion durchgeführt. Hierbei handelt es sich um Testversionen. Neue Funktionen in der Firmware werden (meistens) zunächst als Testversion im github Repository abgelegt. Für den produktiven Einsatz sind Testversionen nicht empfohlen.

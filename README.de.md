@@ -135,11 +135,10 @@ _Hinweis: Das Display ist optional. Unterstützt werden ausschließlich Nextion 
 ![it](https://img.shields.io/badge/Italiano-it-lightblue.svg)
 ![sv](https://img.shields.io/badge/Svenska-sv-yellowgreen.svg)
 ![pl](https://img.shields.io/badge/Português-pt-lightgrey.svg)
-![dk](https://img.shields.io/badge/Dansk-da-blueviolet.svg)
+![dk](https://img.shields.io/badge/Dansk-dk-blueviolet.svg)
 ![cs](https://img.shields.io/badge/Čeština-cs-orange.svg)
 
 Der Brautomat32 unterstützt (fast) beliebig viele Sprachen.  
-Jede Sprache besitzt eine eigene JSON-Datei im Ordner `/data/language`.
 
 💡 _Unterstütze das Projekt – übersetze den Brautomat in eine neue Sprache oder verbessere vorhandene Übersetzungen!_
 

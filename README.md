@@ -136,11 +136,10 @@ _Note: The display is an optional extension. Only Nextion ITEAD HMI 3.5" touch d
 ![sv](https://img.shields.io/badge/Svenska-sv-yellowgreen.svg)
 ![pl](https://img.shields.io/badge/Polski-pl-darkred.svg)
 ![pt](https://img.shields.io/badge/Português-pt-lightgrey.svg)
-![dk](https://img.shields.io/badge/Dansk-da-blueviolet.svg)
+![dk](https://img.shields.io/badge/Dansk-dk-blueviolet.svg)
 ![cs](https://img.shields.io/badge/Čeština-cs-orange.svg)
 
 Brautomat32 supports (almost) any number of languages.  
-Each language has its own JSON-based translation file in `/data/language`.
 
 💡 _Support this project — translate Brautomat into a new language or help improve existing translations!_
 
