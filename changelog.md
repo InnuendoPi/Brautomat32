@@ -12,6 +12,7 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 Version 1.59.7 RC1
 
+* Fix:          Korrektur WebHandler manuelles Kochen (invalid json)
 * Update:       GGM IDS SendCommand: non-blocking senden der Leistungsstufen
 * Fix:          Überprüfung Anzahl Zeichen Stepname für Displayanzeige
 * Fix:          Task SendAlarm (Tondauer und Länge)
