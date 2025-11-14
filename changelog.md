@@ -4,11 +4,25 @@ ESP32 Arduino 3.3.4 ESP-IDF v5.5.1\
 VSCode 1.105 pioarduino IDE 1.1.5\
 InnuAPID AutoTune PID lib 1.8\
 InnuTicker Task Scheduler lib 0.7\
-InnuNextion Display lib 0.6\
+InnuNextion Display lib 0.7\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
+
+Version 1.59.7 RC1
+
+* Update:       GGM IDS SendCommand: non-blocking senden der Leistungsstufen
+* Fix:          Überprüfung Anzahl Zeichen Stepname für Displayanzeige
+* Fix:          Task SendAlarm (Tondauer und Länge)
+* Fix:          BrewFather WebHandler Batches
+* Update:       InnuNextion Display Lib: isPageStable und isDisplayReady bevor neue Daten gesendet werden
+* Fix:          InnuNextion Display lib: Fix parsing serial input buttons and change page
+* Update:       Display Firmware T035, F035 und K035 (optional)
+* Fix:          alle ToolTipps haben "null" angezeigt
+* Optimiert:    Taskverteilung cores (AsyncTCP)
+* Geändert:     Umstellung von jsonBody auf AsyncJson für alle HTTP_POST request mit json body
+* Fix:          eine zu frühe Rückmeldung an das Web Interface (200) konnte vor Übernahme der Einstellungen ein SSE CFGJSON auslösen
 
 Version 1.59.6 RC1
 
