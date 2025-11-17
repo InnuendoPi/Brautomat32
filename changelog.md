@@ -10,6 +10,17 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.59.8 RC2
+
+* Brautest:     Maischeplan mit GGM IDS2 feherlfrei durchlaufen (dev vTask sendCommand, ISR Interrupt)
+* Neu:          WiFi Setup Brautomat32 Captive Portal
+* Entfernt:     WiFiManager 2.0
+* Patch         WiFiManager 2.0 ESPAsyncWebserver 3.9
+* Update:       ESPAsyncWebServer 3.9.0
+* Fix:          GGM IDS Interrupt: minimaler ISR im IRAM. Abschaltbar über PIN_INTERRUPT
+* Revert:       GGM IDS Interrupt über ISR + vTask führte zu keiner brauchbaren Lösung (false positive, Betrieb IDS gestört)
+* Fix:          InnuNextion Display lib: Artefakte
+
 Version 1.59.7 RC1
 
 * Fix:          Pfadfehler github entfernt (debug tests)
