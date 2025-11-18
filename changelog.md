@@ -12,6 +12,8 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 Version 1.59.8 RC2
 
+* Fix:          WiFi ConfigPortal WIFI_MODE korrigiert. Der AP Mode wurde nicht verlassen
+* Fix:          WiFi ConfigPortal minmiales Fallback, falls Dateisystem oder JS/CSS nicht verfügbar
 * Brautest:     Maischeplan mit GGM IDS2 feherlfrei durchlaufen (dev vTask sendCommand, ISR Interrupt)
 * Neu:          WiFi Setup Brautomat32 Captive Portal
 * Entfernt:     WiFiManager 2.0
