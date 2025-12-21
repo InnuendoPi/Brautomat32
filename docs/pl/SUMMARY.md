@@ -8,7 +8,7 @@
 * [Plan zacieru] (Plan zacieru/info.md)
   * [Kontrola](Mash plan/control.md)
   * Dashboard](plan mieszany/Dashboard.md)
-  * [Funkcje] (plan zacieru/funkcje.md)
+  * [Funkcje](mashplan/functions.md)
   * [Przepis](plan zacieru/rez.md)
 * [AutoTune PID](AutoTune-PID/info.md)
   * [AutoTune proces](AutoTune-PID/atune.md)

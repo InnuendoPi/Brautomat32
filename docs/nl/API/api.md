@@ -251,7 +251,7 @@ console.log(gegevens);
 |-----------|----------|------------|
 | `/bewerk` | KRIJG | Bestandseditor laden |
 | `/status` | KRIJG | Systeemstatus ophalen |
-| `/lijst` | KRIJG | Bestandslijst weergeven |
+| `/lijst` | KRIJG | Bestandslijst tonen |
 | `/bewerk` | ZET | Nieuw bestand maken |
 | `/bewerk` | VERWIJDEREN | Bestand verwijderen |
 | `/bewerk` | POST | Bestand uploaden |

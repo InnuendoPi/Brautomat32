@@ -8,7 +8,7 @@
 * [The Mash Plan](Mash Plan/info.md)
   * [Kontrollen](Mash plan/control.md)
   * [Dashboard](mash-planen/Dashboard.md)
-  * [Functions](mash plan/functions.md)
+  * [Funksjoner](mashplan/functions.md)
   * [Oppskrift](mash plan/rez.md)
 * [AutoTune PID](AutoTune-PID/info.md)
   * [AutoTune prosess](AutoTune-PID/atune.md)

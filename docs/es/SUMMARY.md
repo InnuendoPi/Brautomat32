@@ -1,4 +1,4 @@
-# Tabla de contenidos
+# Tabla de contenido
 
 * [Brautomat](README.md)
 * [Instalación](Instalación/info.md)
@@ -8,7 +8,7 @@
 * [El Plan Mash](Plan Mash/info.md)
   * [El control](Mash plan/control.md)
   * [El Dashboard](plan combinado/Dashboard.md)
-  * [Funciones](plan combinado/funciones.md)
+  * [Funciones](mashplan/functions.md)
   * [Receta](plan de puré/rez.md)
 * [AutoTune PID](AutoTune-PID/info.md)
   * [AutoTune proceso](AutoTune-PID/atune.md)

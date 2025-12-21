@@ -8,7 +8,7 @@
 * [O Plano Mash](Plano Mash/info.md)
   * [O controle](Mash plan/control.md)
   * [O Dashboard](plano de mash/Dashboard.md)
-  * [Funções](mash plan/functions.md)
+  * [Funções](mashplan/functions.md)
   * [Receita](mash plan/rez.md)
 * [AutoTune PID](AutoTune-PID/info.md)
   * [AutoTune processo](AutoTune-PID/atune.md)

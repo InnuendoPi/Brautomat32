@@ -168,7 +168,7 @@ console.log(données);
 | `/setSudCha` | POSTER | Changer d'infusion |
 | `/delSud` | POSTER | Supprimer l'infusion |
 | `/reqSud` | OBTENIR | Obtenir les paramètres sud |
-| `/reqSudname` | OBTENIR | Obtenir le nom actuel de la bière |
+| `/reqSudname` | OBTENIR | Obtenir le nom actuel de la brasserie |
 | `/reqBrauStart` | POSTER | Démarrer le processus de brassage |
 
 ---
