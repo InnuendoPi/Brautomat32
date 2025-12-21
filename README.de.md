@@ -8,6 +8,8 @@
 Der **Brautomat32** ist ein Brau- und Gärsteuerungssystem auf Basis des ESP32.  
 Er bietet eine moderne, intuitiv bedienbare Weboberfläche, die direkt im Browser läuft – auf Tablet, Smartphone oder PC.
 
+**Neuer PID Controller:** nach einem Update von Version 1.59 und älter muss AutoTune gestartet werden!
+
 ![WebInterface](docs/img/dashboard160.jpg)
 
 ---
@@ -55,7 +57,7 @@ Der Brautomat ist ein autarkes Brausystem und bietet:
   * Läuter  
   * HLT (Heißwasser)  
 * Kessel-Hardwareprofile  
-* Gärmodus  
+* Fermenter Modus [beta]  
 * Steuerung von Aktoren (Rührwerk, Pumpe etc.)  
 * PWM-Regelung für Heizelemente  
 * Temperaturverlauf im Maischeprozess (Diagramm)  
