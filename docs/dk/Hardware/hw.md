@@ -14,10 +14,10 @@ A pump is a great help when lautering or transporting it to the fermentation tan
 
 | Item name | Link to article |
 | ------------------------------------------------------ | --------------------------------- |
-| Mini pump 12V DC | [amazon].
+| Mini pump 12V DC | [amazon](https://www.amazon.de/dp/B01NCKXJ92/?coliid=I1I94V063T6GE6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_SSRMRQS5W49WYA43JZ7Z) |
 | Pneumatic connectors 8mm x 1/2 inch 90° rotatable | [amazon](https://amzn.to/3XmH2nP) |
 
-Connections with [camlocks from Braubebo](https://www.braubebo.de/camlock/) as shown in the first picture are also very good and quick.
+Connections with [Camlocks from Braubebo](https://www.braubebo.de/camlock/) as shown in the first picture are also very good and quick.
 
 ### SSR solid state relay
 
@@ -27,7 +27,7 @@ With the Brautomat SSRs can be switched very easily. SSR or solid state relays s
 
 | Item name | Link to article |
 | -------------- | --------------------------------- |
-| Fotek SSR 40DA | [amazon].
+| Fotek SSR 40DA | [amazon](https://www.amazon.de/dp/B09KTV425X/?coliid=I37LH2D7XQ7AYU&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_018F1S8N63CZYRB6XE54) |
 
 Application examples for SSR: If 220V is switched on an SSR Fotek via the Brautomat, a socket for any device with a plug can be attached to the "other end" of the 220V line. For example for the power supply of the agitator. Or for a refill cooker. Or for a ring heating element. The Rotek pump's power supply can also be switched on and off via an SSR.
 
@@ -51,7 +51,7 @@ A ring heating element is useful when boiling the wort if the performance of the
 | Item name | Link to article |
 | ------------------ | --------------------------------- |
 | Speed ​​controller | [amazon](https://www.amazon.de/dp/B09PV11JM8/?coliid=IC6BIVO4B18X9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| Speed ​​controller | [amazon] (https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T)
+| Speed ​​controller | [amazon](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 
 ### Connectors
 

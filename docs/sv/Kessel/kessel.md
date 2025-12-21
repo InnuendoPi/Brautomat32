@@ -4,7 +4,7 @@ Brautomat32 erbjuder möjligheten att ställa in upp till tre pannor. Den först
 
 De tre pannorna kan vara antingen GGM induktionshäll eller relätyp. En panna av relätyp inkluderar en webhook-anslutning.
 
-![Kessel-konfiguration](/docs/img/kessel_1.jpg)
+![Pannakonfiguration](/docs/img/kessel_1.jpg)
 
 Parametrarna beskrivs i kapitlet Grundinställning och parametrar i korthet - Pannparametrar och är identiska för alla tre pannorna.
 
@@ -32,15 +32,15 @@ Den andra och tredje pannan kan slås på och av manuellt via webbgränssnittet 
 
 Den andra och tredje vattenkokaren kan också bytas via mäskplanen:
 
-![Kessel-konfiguration](/docs/img/kessel_2.jpg)
+![Pannakonfiguration](/docs/img/kessel_2.jpg)
 
 I denna förenklade mäskplan slås den tredje pannan HLT på automatiskt i rad 2. Steget HLT:100 med en måltemperatur på 78°C och en varaktighet på 0 minuter slår på påfyllningen med 100% effekt och ställer in måltemperaturen till 78°C. Eftersom varaktigheten är angiven till 0 minuter, slås påfyllningen på permanent. Brautomat går direkt till nästa mäsksteg och lämnar efterinfusionen påslagen. Regulatorn PID reglerar permanent den effekt som krävs för att nå och bibehålla måltemperaturen. Nachguss:100 skulle vara identisk med kontrollkommandot HLT:100. Om påfyllningen har fått namnet "Cooker" i inställningarna, kan även kontrollkommandot COOKER:100 användas.
 
-![Kessel-konfiguration](/docs/img/kessel_3.jpg)
+![Pannakonfiguration](/docs/img/kessel_3.jpg)
 
 I denna mäskplan slås den andra vattenkokaren på i det tredje steget. Till skillnad från föregående HLT-exempel slås SUD-pannan på under en period av 15 minuter med måltemperaturen 100°C. Brautomat förblir på detta steg tills måltemperaturen uppnås och viloperioden på 10 minuter är klar. Vattenkokaren SUD stängs sedan av och Brautomat hoppar till nästa steg i mäskplanen.
 
-Texten "Te"matlagning ilmaische" översätts av Brautomat till 100 %. Om det inte finns något nummer mellan 0 och 100 eller informationen PÅ eller AV efter kolon, så ersätter Brautomat texten med 100 % prestanda.
+Texten "Cook partial mash" är från Brautomat översätter 100 %. Om det inte finns något nummer mellan 0 och 100 eller informationen PÅ eller AV efter kolon, så ersätter Brautomat texten med 100 % kraft.
 
 ## Exempel på olika prestanda
 

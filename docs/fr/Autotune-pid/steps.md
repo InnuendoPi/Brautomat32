@@ -2,7 +2,7 @@
 
 La procédure pratique AutoTune ressemble à ceci :
 
-![AutoTune](/docs/img/IDS-AutoTune.jpg)
+![AutoTune]([[CHEMIN_0]])
 
 1. Remplissez votre bouilloire à purée avec une quantité d'eau typique
 
@@ -26,7 +26,7 @@ La procédure pratique AutoTune ressemble à ceci :
 
 Le processus AutoTune se compose de deux phases. La phase 1 chauffe jusqu'à la température cible. Lorsque la température cible est atteinte, la table de cuisson s'éteint. La température cible est parfois largement dépassée de 2 à 3°C. Un dépassement significatif de la température cible est nécessaire pour le processus AutoTune. Vient ensuite une phase de refroidissement en dessous de la température cible. Ces deux phases sont répétées 5 fois. En fonction de l'environnement, le processus AutoTune prend un temps relativement long (90 minutes ou plus). La plupart du temps est nécessaire pendant les phases de refroidissement. Plus une cuve de brassage est bien isolée, plus le processus AutoTune ou la phase de refroidissement dure longtemps. Le processus AutoTune doit être effectué à une température de purée typique d'env. 60°C. L'état actuel est affiché dans la colonne « AutoTune Processus 0/5 ». Le premier nombre est l'étape actuelle et le deuxième nombre est le nombre de AutoTune étapes qui devraient être nécessaires. Les valeurs mesurées sont déterminées au cours du processus AutoTune. Les valeurs mesurées sont constamment vérifiées. Si une valeur mesurée présente un écart, la mesure est répétée. Si cela est répété, "AutoTune Processus 6/5" s'affiche. Un maximum de 20 répétitions est effectué. Le résultat de AutoTune est affiché dans les paramètres GGM IDS de l'onglet Gestionnaire PID :
 
-![AutoTune3](/docs/img/IDS-AutoTune-erg.jpg)
+![AutoTune3]([[CHEMIN_2]])
 
 Le processus AutoTune est terminé et les paramètres système déterminés sont automatiquement enregistrés.\
 Le résultat de AutoTune est le facteur d'amplification Ku (gain ultime) et la durée de la période (période ultime). P, I et D sont calculés à partir de ces deux paramètres. Différents algorithmes sont disponibles pour calculer les valeurs PID. Le Brautomat utilise un algorithme PID optimisé pour le brassage (en fait pour chauffer des liquides) et est également utilisé, par exemple, dans l'addon CraftBeerPi PIDBoil.

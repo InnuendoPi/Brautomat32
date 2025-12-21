@@ -4,7 +4,7 @@ De Brautomat32 biedt de mogelijkheid om maximaal drie ketels op te stellen. De e
 
 De drie ketels kunnen van het GGM-inductiekookplaat- of relaistype zijn. Een ketel van het relaistype is voorzien van een webhookverbinding.
 
-![Kessel-configuratie](/docs/img/kessel_1.jpg)
+![Ketelconfiguratie](/docs/img/kessel_1.jpg)
 
 De parameters worden beschreven in het hoofdstuk Basisconfiguratie en parameters in één oogopslag - Ketelparameters en zijn voor alle drie de ketels identiek.
 
@@ -32,15 +32,15 @@ De tweede en derde ketel kunnen via de webinterface handmatig worden in- en uitg
 
 De tweede en derde ketel kunnen ook via het maischplan geschakeld worden:
 
-![Kessel-configuratie](/docs/img/kessel_2.jpg)
+![Ketelconfiguratie](/docs/img/kessel_2.jpg)
 
 In dit vereenvoudigde maischplan wordt in lijn 2 automatisch de derde ketel HLT ingeschakeld. De stap HLT:100 met een doeltemperatuur van 78°C en een duur van 0 minuten schakelt de navulling met 100% vermogen in en stelt de doeltemperatuur in op 78°C. Omdat de tijdsduur is aangegeven op 0 minuten, is het bijvullen permanent ingeschakeld. De Brautomat gaat direct naar de volgende maischstap en laat de na-infusie ingeschakeld. De PID-controller regelt permanent het vermogen dat nodig is om de doeltemperatuur te bereiken en te behouden. Nachguss:100 zou identiek zijn aan het besturingscommando HLT:100. Als de navulling in de instellingen de naam “Cooker” heeft gekregen, kan ook het besturingscommando COOKER:100 worden gebruikt.
 
-![Kessel-configuratie](/docs/img/kessel_3.jpg)
+![Ketelconfiguratie](/docs/img/kessel_3.jpg)
 
 Bij dit maischplan wordt in de derde stap het tweede ketelbrouwsel ingeschakeld. In tegenstelling tot het vorige voorbeeld HLT wordt de SUD-ketel gedurende 15 minuten ingeschakeld met de doeltemperatuur van 100°C. De Brautomat blijft op deze stap totdat de doeltemperatuur is bereikt en de rustperiode van 10 minuten is voltooid. Vervolgens wordt de ketel-SUD uitgeschakeld en springt de Brautomat naar de volgende stap in het maischplan.
 
-De tekst "Te"ilmaische koken" wordt door Brautomat vertaald naar 100%. Als er geen getal tussen 0 en 100 staat of de informatie AAN of UIT na de dubbele punt, vervangt de Brautomat de tekst met 100% prestatie.
+De tekst 'Gedeeltelijke puree bereiden' komt uit Brautomat vertaalt 100%. Als er geen getal tussen 0 en 100 staat of de informatie AAN of UIT na de dubbele punt, vervangt de Brautomat de tekst met 100% kracht.
 
 ## Voorbeeld verschillende prestaties
 

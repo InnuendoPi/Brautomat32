@@ -1,6 +1,6 @@
 # KleinerBrauhelfer2
 
-From version 2.5.0 the program [ kleineBrauhelfer2](https:// kleine-brauhelfer.de/) has an export filter for the Brautomat. Recipe development and design is possible in every conceivable detail with the small brewing aid2. With the cheat sheet, kbh2 offers a very good and helpful flow chart for practical implementation in the brewery kitchen. With the export filter for Brautomat all steps can be adopted.
+From version 2.5.0 the program [ kleineBrauhelfer2](https://kleiner-brauhelfer.de/) has an export filter for the Brautomat. Recipe development and design is possible in every conceivable detail with the small brewing aid2. With the cheat sheet, kbh2 offers a very good and helpful flow chart for practical implementation in the brewery kitchen. With the export filter for Brautomat all steps can be adopted.
 
 ## The kbh2 tab mashing plan
 
@@ -33,15 +33,15 @@ The kbh2 time specification "how long is the hop addition cooked" is converted i
 
 ### Do a little bit of back-and-forth math
 
-The hop addition is shown in picture kbh2. The first hop addition is “Hallertauer Perle 7% 2020” with a boiling time of 65 minutes. A second parameter is important in this context: on the left side, the total cooking time is marked green as 80 minutes. So the wort is boiled without hops for 15 minutes. The second addition of hops is the "Hallertauer Tradition 5.7% 2020" hops with a boiling time of 15 minutes. In the last 15 minutes of cooking the wort, the Hallertau Perle still has 15 minutes of cooking time left of the original 65 minutes and the second addition of Hallertau Tradition hops cooks for 15 minutes of the remaining 15 minutes of cooking time. The last addition of hops is added for knocking, i.e. after boilingnde.
+The hop addition is shown in picture kbh2. The first hop addition is “Hallertauer Perle 7% 2020” with a boiling time of 65 minutes. A second parameter is important in this context: on the left side, the total cooking time is marked green as 80 minutes. So the wort is boiled without hops for 15 minutes. The second addition of hops is the "Hallertauer Tradition 5.7% 2020" hops with a boiling time of 15 minutes. In the last 15 minutes of cooking the wort, the Hallertau Perle still has 15 minutes of cooking time left of the original 65 minutes and the second addition of Hallertau Tradition hops cooks for 15 minutes of the remaining 15 minutes of cooking time. The last addition of hops is added for knocking, i.e. after the end of boiling.
 
-The task of Brautomat is to indicate the time at which hops are added during brewing and, ideally, to remind people of the addition of hops with an acoustic signal.
+The task of Brautomat is to indicate the time of adding hops during brewing and ideally with an aktustia small signal to remind you of the addition of hops.
 
 In this example, a total cooking time of 80 minutes and a first addition of “Hallertauer Perle” hops with a cooking time of 65 minutes are specified. This results in a difference of 15 minutes cooking time without adding hops. The first step, boiling the wort, lasts 15 minutes. Now the first addition of hops must be made. The second hop addition “Hallertauer Tradition 5.7% 2020” has a cooking time of 15 minutes. Of the 65 minutes, 15 minutes are Hallertau Pearl and Hallertau Tradition together in the wort. 65 minutes minus 15 minutes results in an interval between hop additions of 50 minutes. The Hallertauer Perle hop addition must be given 50 minutes before the Hallertauer Tradition hop addition.
 
 The last batch of hops “Hallertauer Tradition 5.7% 2020” is given for knocking. When you knock it out, cooking is finished. So the addition of hops does not count towards the total cooking time.
 
-![Cooking](/docs/img/hopfenbaren.jpg)
+![Cooking](/docs/img/hopfengaben.jpg)
 
 The addition of hops behaves in the same way. There is a post-isomerization time of 10 minutes. Adding the “Hallertauer Tradition 5.7% 2020” hops for beating with a boiling time of -5 minutes is part of the post-isomerization.
 

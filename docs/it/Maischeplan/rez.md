@@ -10,11 +10,11 @@ Il nome del piano di mash può essere specificato nelle impostazioni. Il nome de
 
 Con l'aiuto del controllo temporale è possibile pianificare e avviare automaticamente la giornata nuziale.
 
-![Controllo temporale](/docs/img/Controllo temporale.jpg)
+![Controllo temporale](/docs/img/Zeitsteuerung.jpg)
 
 Con l'elemento DateTimerPicker puoi selezionare facilmente una data e un'ora. Il nome della ricetta viene temporaneamente sostituito dall'ora di inizio specificata.
 
-![Controllo temporale](/docs/img/Controllo temporale2.jpg)
+![Controllo temporale](/docs/img/Zeitsteuerung2.jpg)
 
 Un controllo orario attivato viene salvato nella configurazione. Quando la macchina per il caffè viene riavviata, vengono lette la data e l'ora impostate. Se l'inizio della preparazione è futuro, viene attivato il controllo del tempo. Se l'inizio dell'erogazione è nel passato, il controllo del tempo è disattivato.
 
@@ -61,9 +61,9 @@ Il piano di mash selezionato viene rimosso dalla memoria flash.
 
 ## Importa impostazione predefinita
 
-![Importazione preimpostazioni](/docs/img/preset_import.jpg)
+![Importa valore predefinito](/docs/img/voreinstellung_import.jpg)
 
-Il Brautomat richiede uno Schha guidato l'ammostamento (opzionale) e l'ammostamento in un solo passaggio. In particolare, la fase di ammostamento serve come fase di separazione tra l'ammostamento e la cottura quando autonext è disattivato. Durante l'importazione, il Brautomat può inserire passaggi di ammostamento e ammostamento mancanti. Inoltre, le temperature mancanti possono essere fornite con specifiche.
+Il Brautomat richiede una fase di ammostamento (opzionale) e una fase di ammostamento. InIn particolare, la fase di ammostamento serve come fase di separazione tra l'ammostamento e la cottura quando autonext è disattivato. Durante l'importazione, il Brautomat può inserire passaggi di ammostamento e ammostamento mancanti. Inoltre, le temperature mancanti possono essere fornite con specifiche.
 
 ### Valori predefiniti della temperatura per i parametri mancanti
 

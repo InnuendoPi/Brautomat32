@@ -94,7 +94,7 @@ Quando o Brautomat está conectado a um console serial, a seguinte saída aparec
 05:42:28.384 > [I][SYSINFO] mDNS http://Brautomat.endereço IP local 192.168.100.112 hora: 05:42:27 RSSI: -83
 ```
 
-Além da versão de Brautomat, o nome MDNS e o endereço IP atual são gerados. A linha _mount filesystem LittleFS: ok, free heap mem:_ indica que o sistema de arquivos foi montado.
+Além der versão de Brautomat o nome MDNS e o endereço IP atual são gerados. A linha _mount filesystem LittleFS: ok, free heap mem:_ indica que o sistema de arquivos foi montado.
 
 ## Erro no sensor de teste
 

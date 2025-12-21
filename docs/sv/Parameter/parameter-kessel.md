@@ -16,17 +16,17 @@ Denna parameter beskriver skillnaden från vilotemperaturen (börvärdet) vid vi
 
 Denna parameter beskriver den temperatur vid vilken PID-regulatorn ska detektera att vörten kokar. Standardvärdet är 95°C. Denna parameter beskriver inte temperaturen vid vilken vörten börjar koka. Denna parameter beskriver temperaturen vid vilken Brautomat inaktiverar PID-regulatorn och styr hällen med en specificerad effekt "power from transition". I motsats till vilotemperaturerna är syftet med tillagningen inte att exakt nå och bibehålla temperaturen, utan snarare att laga smidigt. Så istället för att minska effekten drivs induktionshällen med konstant effekt vid matlagning.
 
-### Kraft från övergången [%]
+### Power from transition [%]
 
-Denna parameter beskriver uteffekten för hällen från temperaturövergången till matlagning. Standardvärdet är 100 %. Parametern "Övergång till matlagning" har använts för att ställa in en temperatur vid vilken kontrollenheten PID är avaktiverad. Parametern "Power from transition" anger nu den fasta uteffekten för hällen. Om en bryggkokare med en volym på 35l eller mer används är standardvärdet på 100 % ett lämpligt val. I bryggerikök med små vattenkokare kan 100 % energitillförsel orsaka överkokning. I detta fall kan den maximala energitillförseln reduceras till t.ex. 75 % med denna parameter.
+Denna parameter beskriver uteffekten för hällen från temperaturövergången till matlagning. Standardvärdet är 100 %. Parametern "Övergång till matlagning" har använts för att ställa in en temperatur vid vilken kontrollenheten PID är avaktiverad. Parametern "Power from transition" anger nu den fasta uteffekten för hällen. Om en bryggkokare med en volym på 35l eller mer används är standardvärdet på 100 % ett lämpligt val. I bryggerikök med små vattenkokare kan 100 % energitillförsel orsaka överkokning. I detta fall kan den maximala energitillförseln reduceras till till exempel 75 % med denna parameter.
 
 ### Inaktivera PID för matlagning [på/av]
 
 Den här parametern bestämmer beteendet för PID-kontrollen vid tillagning när den faktiska temperaturen är över måltemperaturen. Exempel: tillagningstemperaturen var inställd på 98°C i mäskplanen. Parametern "Power from transition" stänger av PID-beräkningen från "Transition to boiling"-temperaturen. Om parametern "Avaktivera PID för kokning" är aktiverad (standard), förblir PID-regulatorn avstängd även över måltemperaturen på 98°C från mäskplanen och strömmen från parametern "Power from transition" används. Denna parameter är aktiverad som standard och möjliggör rullande tillagning.
 
-Om parametern "Avaktivera PID för matlagning" inte är aktiverad, beräknas den erforderliga effekten av PID-kontrollen när måltemperaturen (här 98°C) har uppnåtts. Den beräknade prestandan över målet-Temperaturen är 0%. Hällen stängs av och förhindrar överkokning vid behov.
+Om parametern "Avaktivera PID för matlagning" inte är aktiverad, beräknas den erforderliga effekten av PID-kontrollen när måltemperaturen (här 98°C) har uppnåtts. Den beräknade effekten över måltemperaturen är 0 %. Hällen stängs av och förhindrar överkokning vid behov.
 
-### Sensorfelprestanda [0-100 %]
+### Prestandavid sensorfel [0-100 %]
 
 Om ett sensorfel uppstår, till exempel att en sensor inte är ansluten eller en defekt, kan hällens effekt justeras för att hantera detta fel. Ett värde på 100 % ignorerar sensorfelet.
 
@@ -72,7 +72,7 @@ _Dessa 10 parametrar måste ställas in individuellt för varje bryggsystem. Par
 
 Brautomat kan hantera hårdvaruprofiler. Profiler kan användas om det finns olika pannor. Användare med vattenkokare av olika storlekar kan använda profiler för att välja vattenkokare för bryggdagen istället för att manuellt behöva ange alla parametrar. En hårdvaruprofil innehåller alla inställningar för en panna.
 
-Profiler sparas i mappen /Profiles. Profiler möjliggör snabbt och enkeltVäxla mellan olika pannor. Spara-funktionen skapar en profilfil med ovanstående parametrar, medan funktionen Ta bort tar bort profilfilen från flashminnet.
+Profiler sparas i mappen /Profiles. Profiler möjliggör snabb och enkel växling mellan olika pannor. Spara-funktionen skapar en profilfil med dsv ovanstående parametrar, medan Delete-funktionen tar bort profilfilen från flashminnet.
 
 Standardprofilen vid start av bakmaskinen är alltid den senast valda profilen.
 
@@ -151,4 +151,4 @@ Den specifika som används här Värmekapacitet 3600 har en feltolerans på cirk
 9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 8 /6246 grader per 5 kg per 5 kg. Celsius
 ```
 
-Se även [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+Se även [Brewing Magazine](https://braumagazin.de/article/berechnungen-in-der-brauerei/)

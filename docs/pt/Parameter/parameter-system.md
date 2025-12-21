@@ -33,7 +33,7 @@ O comprimento da barra vermelha sob a visualização de IDS e reformulação mos
 
 #### MashBud
 
-Esta vista mostra a primeira placa. O tempo de descanso atual é exibido com as temperaturas reais e alvo, bem como o tempo restante atual. O comprimento da barra vermelha sob as temperaturas mostra o progresso do descanso atual. O símbolo à direita do tempo restante mostra se o próximo intervalo começará automaticamente (autonext): verde significa automático, vermelho significa intervalo. Além disso, o deck do controlador é exibido com as funções correspondentes.
+Esta vista mostra a primeira placa. O tempo de descanso atual é exibido com as temperaturas reais e alvo, bem como o tempo restante atual. O comprimento da barra vermelha sob as temperaturas mostra o progresso do descanso atual. O símbolo à direita do tempo restante mostra se o próximo intervalo começará automaticamente (autonext): verde significa automático, vermelho significa intervalo. Além disso, o controller Deck é exibido com as funções correspondentes.
 
 ![Exibição](/docs/img/brewpage-sm.jpg)
 
@@ -47,9 +47,9 @@ Um display é opcional. O Brautomat suporta apenas telas sensíveis ao toque Nex
 
 A exibição é configurada através de um cartão SD. O arquivo TFT da pasta Info que corresponde ao display é copiado para o cartão SD e inserido no display. Assim que o display for ligado, a configuração começa. O processo leva cerca de um minuto. O progresso é mostrado no display. Assim que a configuração for concluída, o display será desligado e o cartão SD será removido. O display agora está pronto para uso.
 
-Deve-se notar que SDA, SCL noOs PINs D1, D2 devem ser operados.
+Deve-se observar que SDA, SCL devem ser operados nos PINs D1, D2.
 
-### Sensores PT100x MAX31865 Ativar amplificador
+### Sensores PT100x MAX31865 Ampl.Ative aqui
 
 Se forem utilizados sensores analógicos PT100x, esta chave deverá ser ativada. Um sensor analógico PT100x requer um conversor RTD para digital para conectar a um microcontrolador ESP. Um amplificador MAX31865 é um conversor digital RTD na forma de uma pequena placa adicional.
 
@@ -59,9 +59,9 @@ O DNS multicast é usado para resolver nomes de host para endereços IP em redes
 
 Nota: O nome mDNS é configurado sem protocolo (http://) e sem domínio de nível superior (.local) nas configurações do sistema (Brautomat).
 
-### Painel
+### Dashboard
 
-Os elementos podem ser facilmente mostrados e ocultados através do painel. Por exemplo, se nenhuma reformulação for usada, o elemento Reformulação deverá ser desativado para o painel. Itens desativados reduzem o tráfego.
+Usando Dashboard você pode facilmente mostrar e ocultar elementos. Por exemplo, se nenhuma reformulação for usada, o elemento Reformulação para o Dashboard deverá ser desativado. Itens desativados reduzem o tráfego.
 
 ### Registro
 
@@ -69,7 +69,7 @@ O registro só é ativado na versão de desenvolvimento. Na guia Logging, a saí
 
 O modo de erro gera apenas erros.
 
-O modo Info contém erros e também gera informações sobre a configuração no monitor serial.
+O modo Info contém erros e também exibe informações sobre a configuração no monitor serial.
 
 O modo detalhado inclui erros e informações e também gera informações sobre transferência de dados (transmissões SSE).
 
@@ -107,8 +107,7 @@ O fuso horário é usado para determinar a hora correta, incluindo o horário de
 |África/Dakar |GMT0 |
 |África/Dar_es_Salaam |EAT-3 |
 |África/Djibuti |EAT-3 |
-|África/Douala |WAT-1 |
-|África/El_Aaiun |<+01>-1 |
+|África/Douala |WAT-1 ||África/El_Aaiun |<+01>-1 |
 |África/Freetown |GMT0 |
 |África/Gaborone |CAT-2 |
 |África/Harare |CAT-2 |
@@ -158,8 +157,8 @@ O fuso horário é usado para determinar a hora correta, incluindo o horário de
 |América/Argentina/Tucumán |<-03>3 |
 |América/Argentina/Ushuaia |<-03>3 |
 |América/Aruba |AST4 |
-|América/Assunção|<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
-|América/Atikokan |EST5 |
+|América/Assunção |<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
+|América/Atikokan|EST5 |
 |América/Bahia |<-03>3 |
 |América/Bahia_Banderas |CST6 |
 |América/Barbados |AST4 |
@@ -260,8 +259,8 @@ O fuso horário é usado para determinar a hora correta, incluindo o horário de
 |América/Porto_Rico |AST4 |
 |América/Punta_Arenas |<-03>3 |
 |América/Rainy_River |CST6CDT,M3.2.0,M11.1.0 |
-|América/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0|
-|América/Recife |<-03>3 |
+|América/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0 |
+|América/Recife |<-03>3|
 |América/Regina |CST6 |
 |América/Resoluta |CST6CDT,M3.2.0,M11.1.0 |
 |América/Rio_Branco |<-05>5 |
@@ -312,8 +311,8 @@ O fuso horário é usado para determinar a hora correta, incluindo o horário de
 |Ásia/Bagdá |<+03>-3 |
 |Ásia/Bahrein |<+03>-3 |
 |Ásia/Baku |<+04>-4 |
-|Ásia/Banguecoque|<+07>-7 |
-|Ásia/Barnaul |<+07>-7 |
+|Ásia/Banguecoque |<+07>-7 |
+|Ásia/Celeiroaul |<+07>-7 |
 |Ásia/Beirute |EET-2EEST,M3.5.0/0,M10.5.0/0 |
 |Ásia/Bishkek |<+06>-6 |
 |Ásia/Brunei |<+08>-8 |
@@ -363,7 +362,7 @@ O fuso horário é usado para determinar a hora correta, incluindo o horário de
 |Ásia/Riade |<+03>-3 |
 |Ásia/Sakhalin |<+11>-11 |
 |Ásia/Samarcanda |<+05>-5 |
-|Ásia/Seul |KST-9|
+|Ásia/Seul |KST-9 |
 |Ásia/Xangai |CST-8 |
 |Ásia/Singapura |<+08>-8 |
 |Ásia/Srednekolymsk |<+11>-11 |
@@ -414,7 +413,7 @@ O fuso horário é usado para determinar a hora correta, incluindo o horário de
 |Europa/Bratislava |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Bruxelas |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Bucareste |EET-2EEST,M3.5.0/3,M10.5.0/4 |
-|Europa/Budapeste |CET-1CEST,M3.5.0,M10.5.0/3|
+|Europa/Budapeste |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Busingen |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Chisinau |EET-2EEST,M3.5.0,M10.5.0/3 |
 |Europa/Copenhague |CET-1CEST,M3.5.0,M10.5.0/3 |
@@ -466,7 +465,7 @@ O fuso horário é usado para determinar a hora correta, incluindo o horário de
 |Europa/Zaporozhye |EET-2EEST,M3.5.0/3,M10.5.0/4 |
 |Europa/Zurique |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Índia/Antananarivo |EAT-3 |
-|Indiano/Chagos |<+06>-6 |
+|Índia/Chagos |<+06>-6|
 |Indiano/Natal |<+07>-7 |
 |Indiano/Cocos |<+0630>-6:30 |
 |Índia/Comores |EAT-3 |
@@ -517,8 +516,8 @@ O fuso horário é usado para determinar a hora correta, incluindo o horário de
 |Etc/GMT |GMT0 |
 |Etc/GMT-0 |GMT0 |
 |Etc/GMT-1 |<+01>-1 |
-|Etc/GMT-2|<+02>-2 |
-|Etc/GMT-3 |<+03>-3 |
+|Etc/GMT-2 |<+02>-2 |
+|Etc/GMT-3|<+03>-3 |
 |Etc/GMT-4 |<+04>-4 |
 |Etc/GMT-5 |<+05>-5 |
 |Etc/GMT-6 |<+06>-6 |

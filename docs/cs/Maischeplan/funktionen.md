@@ -6,18 +6,18 @@ Rmutovací plán je ve formě tabulky. Tato tabulka je zpracována shora dolů v
 
 ## Základní funkce
 
-![Mash plán](/docs/img/Brautomat.jpg)
+![mashplan](/docs/img/brautomat.jpg)
 
 Pro orientaci je nejprve popsána struktura řádků tabulky. Řádek v plánu kaše představuje krok v plánu kaše. Každý řádek tabulky má tyto sloupce:
 
 * Sloupec "Odpočinek" zobrazuje název tohoto kroku kaše.
 * Sloupec "Teplota" obsahuje klidovou teplotu (v této příručce také nazývanou cílová nebo cílová teplota).
-* Sloupec "Doba trvání" obsahuje dobu klidu (časovač), jak dlouho má Brautomat udržovat klidovou teplotu.
+* Sloupec "Trvání" obsahuje dobu klidu (časovač), jak dlouho má Brautomat udržovat klidovou teplotu.
 * Sloupec "autoext" udává, zda bude další krok automaticky pokračovat po uplynutí doby odpočinku (časovače).
 
 Po těchto čtyřech podrobnostech o kroku rmutování jsou v každém řádku tlačítka pro úpravy s následujícími funkcemi: (zleva doprava)
 
-![Upravit plán mash](/docs/img/Brautomat-111.jpg)
+![Upravit plán směsi](/docs/img/brautomat-111.jpg)
 
 * posuňte tento řádek o jednu pozici nahoru
 * posuňte tento řádek o jednu pozici dolů
@@ -26,7 +26,7 @@ Po těchto čtyřech podrobnostech o kroku rmutování jsou v každém řádku t
 
 Záhlaví tabulky obsahuje následující tlačítka (zleva doprava)
 
-![Upravit plán mash](/docs/img/Brautomat-1.jpg)
+![Upravit plán směsi](/docs/img/brautomat-1.jpg)
 
 * nový řádek: přidání nového kroku kaše na konec tabulky
 * Smazat: smazat celou tabulku (prázdný plán kaše)
@@ -34,7 +34,7 @@ Záhlaví tabulky obsahuje následující tlačítka (zleva doprava)
 * Databáze: Plánovač výběru, importu, exportu a plánu kaše
 * Sbalit: Sbalte a rozbalte tabulku s roztahovacím plánem
 
-![Upravit plán mash](/docs/img/Brautomat-11.jpg)
+![Upravit plán směsi](/docs/img/brautomat-11.jpg)
 
 Při úpravě řádku tabulky se tlačítka změní.
 
@@ -55,17 +55,17 @@ Přísady, jak je znázorněno na obrázku _Vaření kvasnicového jídla 1gr_ s
 
 Mash plán lze změnit v Brautomat nebo zcela znovu vytvořit. Symbol tužky přepne čáru v tabulce plánu rmutu do režimu editoru.
 
-![Upravit plán mash](/docs/img/Brautomat-3.jpg)
+![Upravit plán směsi](/docs/img/brautomat-3.jpg)
 
 Nyní lze jeden po druhém měnit libovolný počet řádků tabulky. Jakmile kliknete na symbol pro úpravu plánu rmutu, tlačítko _Uložit_ se změní ze zelené na červenou. Jakmile jsou provedeny všechny změny, musí být plán kaše uložen pomocí tlačítka _Uložit_. Případně lze všechny změny zrušit pomocí tlačítka _Exit_ pro ukončení bez uložení.
 
 Jakmile byl proces rmutování zahájen pomocí tlačítka napájení, zobrazení se změní:
 
-![Upravit plán mash](/docs/img/Brautomat-4.jpg)
+![Upravit plán směsi](/docs/img/brautomat-4.jpg)
 
-Tlačítka pro úpravy jsou skrytá. Aby se to znovu zobrazilo, musí být rmutovací proces zastaven pomocí tlačítka Pauza na ovládacím prvku:
+Tlačítka pro úpravy jsou skrytá. Aby byly znovu viditelné,Proces rmutování je nutné zastavit pomocí tlačítka Pauza na ovládacím prvku:
 
-![Upravit plán mash](/docs/img/Brautomat-5.jpg)
+![Upravit plán směsi](/docs/img/brautomat-5.jpg)
 
 Když je proces rmutování pozastaven, tlačítko Pozastavit v ovládacím prvku se zobrazí červeně a zobrazí se funkce úprav. Indukční varná deska se nevypne. Zbytková teplota se nadále udržuje. Pokud je časovač odpočinku aktivní, bude pozastaven. Pokud se změní plán rmutování (režim editoru), tlačítko Pozastavit pro pokračování v procesu rmutování a tlačítko Napájení jsou deaktivovány a zobrazeny šedě, dokud nebudou změny v plánu rmutování buď uloženy, nebo zahozeny (Konec).
 
@@ -80,7 +80,7 @@ Na konci rmutovacího procesu se použije vzorek jódu k určení, že rmut ješ
 
 ## Funkce a aplikace autonext
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext.jpg)
+![Mash plán autonext](/docs/img/Maischeplan-autonext.jpg)
 
 První krok rmutovacího plánu s názvem _Mashing 50°C_ má dobu odpočinku 10 minut a deaktivovaný _autonext_. Obrázek ukazuje situaci, kdy časovač odpočinku dosáhl 10 minut: Časovač odpočítával zbývající čas 00:00. Tlačítko přehrávání se automaticky změní na červenou. Vpravo dole se zobrazí zpráva toastu „Click play button“. Varná deska se vypne. Proces vaření čeká na kliknutí na tlačítko přehrávání. Webové rozhraní zobrazuje další krok, který se spustí kliknutím na Přehrát.
 
@@ -90,7 +90,7 @@ Druhý krok rmutování, nazvaný _Maltoserast 63°C_, má klidovou teplotu 63°
 
 * Na konci odpočinku s aktivovaným _autoext_ proces rmutování automaticky pokračuje a varná deska zůstane zapnutá.
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext2.jpg)
+![Mash plán autonext](/docs/img/Maischeplan-autonext2.jpg)
 
 Vlastnost _autonext_ v sedmém kroku _Mashing 78°C_ není aktivována. Pokud Brautomat narazí na deaktivovaný autonext, Brautomat ukončí aktuální odpočinek po uplynutí doby odpočinku a vypne varnou desku (0% výkon). V tomto stavu je tlačítko Přehrát zobrazeno červeně. Chcete-li pokračovat v procesu vaření, musíte kliknout na tlačítko Přehrát.
 
@@ -98,9 +98,9 @@ Zatímco v prvním příkladu _autonext_ se obvykle klikne přímo na tlačítko
 
 ## Rozdíl autonext a přerušení
 
-Pokud je autonext na konci zámku deaktivováno, varná deska se vypne. Tlačítkem pauzy se časovač odpočinku zastaví,Varná deska však zůstane zapnutá a Brautomat vypočítá výkon potřebný pro varnou desku.
+Pokud je autonext na konci zámku deaktivováno, varná deska se vypne. Tlačítko pauza zastaví časovač odpočinku, ale varná deska zůstane zapnutá a Brautomat vypočítá požadovaný výkon pro varnou desku.
 
-Následující části popisují volitelné speciální funkce. Brautomat začátečníci mohou přeskočit popis speciálních funkcí.
+Následující části popisují volitelný Synfunkce jsou popsány. Brautomat začátečníci mohou přeskočit popis speciálních funkcí.
 
 ## Speciální funkce 0°C klid při aktivaci autonext
 
@@ -134,26 +134,24 @@ Druhou speciální funkcí jsou ovládací povely pro varné desky a akční čl
 
 Napájení může být buď ZAPNUTO nebo VYPNUTO nebo číslo mezi 0 a 100 %. Stav OFF odpovídá hodnotě 0 % a ON hodnotě 100 %. Ovládací povel pro první indukční varnou desku je IDS nebo MASH. Ovládací povel pro druhou indukční varnou desku je SUD. Řídicí příkaz pro přetypování je HLT. Řídící příkaz pro akční člen je název aktuátoru.
 
-![Příkaz ovládání herce](/docs/img/Maischeplan-Aktoren.jpg)
+![Příkaz ovládání ovladače](/docs/img/Maischeplan-Aktoren.jpg)
 
 Rmutovací plán na obrázku spíná akční členy na třech místech. Míchadlo se zapne hned na začátku: Míchadlo:ZAP
 Krátce před koncem rmutovacího plánu je míchadlo vypnuto: Míchadlo:VYP a doplňování je zapnuto: Doplňování:ON.
 
-Řídicí příkaz pro akční člen může být specifikován s výkonem, např. ČERPADLO: 60. Pohonné čerpadlo se pak zapne na 60% výkon. To předpokládá, že tento akční člen byl aktivován pro PWM. Zbytek teploty a Rast Doba trvání musí být nastavena na 0 pro řídicí příkazy.
+Řídicí příkaz pro akční člen může být specifikován s výkonem, např. ČERPADLO: 60. Pohonné čerpadlo se pak zapne na 60% výkon. To předpokládá, že tento akční člen byl aktivován pro PWM. Klidová teplota a doba klidu musí být nastaveny na 0 pro řídicí příkazy.
 
-Ovládací příkaz IDS:50 nastaví maximální výstupní výkon varné desky na 50 %. Re-casting lze také zapnout na 75% výkon pomocí HLT:75.
-
-![ovládací příkaz IDS](/docs/img/sonderfunktion_sud1.jpg)
+Ovládací příkaz IDS:50 nastaví maximální výstupní výkon varné desky na 50 %. Re-casting lze také zapnout na 75% výkon pomocí HLT:75.![Řídící příkaz IDS](/docs/img/sonderfunktion_sud1.jpg)
 
 Ovládací povel SUD: Vařit hustou kaši s dobou odpočinku 10 minut a klidovou teplotou 100 stupňů provede krok kaše na druhé varné desce. Časovač klidu se spustí, jakmile je dosaženo klidové teploty.
 
-![Ovládací příkaz SUD](/docs/img/sonderfunktion_sud2.jpg)
+![Řídící příkaz SUD](/docs/img/sonderfunktion_sud2.jpg)
 
 Ovládací příkaz SUD: Vařte hustou kaši s klidovou teplotou 100 stupňů, ale bez doby odpočinku zapne druhou varnou desku, spustí ovladač PID varné desky a přeskočí přímo na další krok v plánu rmutování.
 
 ![Řídící příkaz SUD](/docs/img/sonderfunktion_sud3.jpg)
 
-Rmutovací krok sacharifikace při 72 °C se provádí na první varné desce _Maische_. Regulátor PID reguluje požadovaný výkon pro rmutovací kotlík. Regulátor PID zároveň reguluje výkon potřebný pro kotel _Sud_.
+Rmutovací krok sacharifikace při 72 °C se provádí na první varné desce _Maische_. Ovladač PID reguluje požadovaný výkon pro kaši. Regulátor PID zároveň reguluje výkon potřebný pro kotel _Sud_.
 
 Příklady:
 
@@ -173,13 +171,13 @@ _Poznámka: Ovládací příkazy lze použít k současnému ovládání rmutova
 
 Jako příklad je uvedena následující konfigurace pro GGM IDS nebo kotel MashSud:
 
-![ovládací příkaz IDS](/docs/img/aktoren_schaltung4.jpg)
+![Řídící příkaz IDS](/docs/img/aktoren_schalten4.jpg)
 
 Maximální výstupní výkon je přednastaven na 100 %. Teplota „Přechod do vaření“ je 95 °C. Od této teploty je maximální výstupní výkon GGM IDS pouze 80 %.
 
 Plán rmutování na obrázku začíná krokem „Zahřívání hlavního nálevu“. Indukční varná deska GGM IDS by ohřívala vodu s výkonem "Max. Výkon IDS" (parametr v registru regulace teploty), tedy se 100 %.
 
-![Řídící příkaz IDS](/docs/img/aktoren_schaltung2.jpg)
+![Řídící příkaz IDS](/docs/img/aktoren_schalten2.jpg)
 
 Časovač odpočinku začíná na 59°C. Doba odpočinku je nula minut. Brautomat přeskočí na další řádek ke kroku 2.
 Řídící příkaz IDS:65 nastaví maximální výkon IDS na 65 %. Brautomat přeskočí na další řádek ke kroku 3.
@@ -187,7 +185,7 @@ Nyní se teplota ohřeje z 59°C na cílovou teplotu v kroku „rmutování“. 
 
 V následujících krocích rmutování je zachován maximální výstupní výkon 65 %. Dokud Brautomat nesplní řídicí příkaz IDS:100 po kroku rmutování.
 
-![ovládací příkaz IDS](/docs/img/aktoren_schaltung3.jpg)
+![Řídící příkaz IDS](/docs/img/aktoren_schalten3.jpg)
 
 Řídicí příkaz změní maximální výstupní výkon IDS na 100 %. Mladina se nyní zahřívá na 100% výkon na teplotu „přechodu k varu“ 95 °C (viz výše). Od 95°C se GGM IDS přepne na 80% výkon. 80 % odpovídá parametru „Výkon z přechodu“.
 
@@ -207,7 +205,7 @@ Pomocí speciální funkce IDS: <Výkon v %> lze výkon varné desky nastavit ta
 
 ![Ovládací příkaz MASH power](/docs/img/IDS-Sonderfunktion.jpg)
 
-_VysvětlujeInformace o metodě výpočtu viz: Parametry GGM IDS - Řízení teploty - Maximální výkon IDS._
+_Vysvětlení metody výpočtu viz: Parametry GGM IDS - Řízení teploty - Maximální výkon IDS._
 
 ```json
 
@@ -215,7 +213,7 @@ _VysvětlujeInformace o metodě výpočtu viz: Parametry GGM IDS - Řízení tep
     Výraz c * T / (t * w) je u indukční varné desky nahrazen hodnotou 75 při účinnosti 80 %.
     Hmotnost m je 35 kg
     P = 35 x 75 = 2625
-    2625W je 75% z max. výkon 3500W (2625 / 3500 * 100 = 75 %)
+    2625W je 75% z max. výkon 3500W (2625/3500 * 100 = 75 %)
 
 ```
 
@@ -260,7 +258,7 @@ Příklad ukazuje, jak snadné je zapínat a vypínat akční členy pomocí spe
 
 _Alternativa:_ aktivujte vlastnost autonext a nastavte dobu odpočinku na 5 minut. V tomto případě Brautomat udrží rmutovací teplotu po dobu 5 minut (rmutování) a poté se automaticky zahřeje na další klid.
 
-Dalším krokem je maltózový zbytek. PID Regulátor reguluje výkon potřebný k dosažení cílové teploty v rmutu a její udržení po dobu 40 minut. Na řádku 4 se pomocí speciálního příkazu zapne doplňování. Cílová teplota pro náplň je 75 °C a doba trvání je 0 minut. Brautomat spouští regulátor PID pro přelití kotle a na pozadí reguluje požadovaný výkon. V tomto bodě plánu rmutování jsou aktivní dva regulátory PID: regulátor PID pro varnou konvici a PID regulátor pro dolévání. Brautomat po zapnutí skočí přímo na další krok.
+Dalším krokem je maltózový zbytek. Regulátor PID reguluje výkon potřebný k dosažení cílové teploty v rmutu a udržuje ji po dobu 40 minut. Na řádku 4 se pomocí speciálního příkazu zapne doplňování. Cílová teplota pro náplň je 75 °C a doba trvání je 0 minut. Brautomat spouští regulátor PID pro přelití kotle a na pozadí reguluje požadovaný výkon. NaV tomto bodě plánu rmutování jsou aktivní dva regulátory PID: regulátor PID pro varnou konvici a PID regulátor pro dolévání. Brautomat po zapnutí skočí přímo na další krok.
 
 V rmutovacím plánu se servopohon prstencového topného tělesa zapíná nebo spíná jednou speciálním příkazem _RHE:ON_ a jednou _RHE:50_. ON převádí Brautomat se 100% výkonem, zatímco 50 je zpracováno odpovídajícím způsobem s 50% výkonem. Konvice MashSud má maximální objem 70 litrů. Kruhové topné těleso podporuje varnou desku během vaření s 50% výkonem pro intenzivní vaření: 100% výkon varná deska (3,5 kW) plus 1,75 kW kruhové topné těleso (50 %). Na konci vaření se kruhové topné těleso vypne speciálním příkazem _RHE:OFF_.
 

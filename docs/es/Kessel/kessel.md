@@ -4,7 +4,7 @@ El Brautomat32 ofrece la posibilidad de instalar hasta tres calderas. La primera
 
 Las tres calderas pueden ser de placa de inducción GGM o de tipo relé. Una caldera tipo relé incluye una conexión webhook.
 
-![Configuración de Kessel](/docs/img/kessel_1.jpg)
+![Configuración caldera](/docs/img/kessel_1.jpg)
 
 Los parámetros se describen en el capítulo Configuración básica y parámetros de un vistazo - Parámetros de la caldera y son idénticos para las tres calderas.
 
@@ -32,15 +32,15 @@ La segunda y tercera caldera se pueden encender y apagar manualmente a través d
 
 El segundo y tercer hervidor también se pueden cambiar mediante el plan de macerado:
 
-![Configuración de Kessel](/docs/img/kessel_2.jpg)
+![Configuración caldera](/docs/img/kessel_2.jpg)
 
 En este plan de macerado simplificado, la tercera caldera HLT se enciende automáticamente en la línea 2. El paso HLT:100 con una temperatura objetivo de 78°C y una duración de 0 minutos enciende la recarga con el 100% de potencia y establece la temperatura objetivo en 78°C. Debido a que la duración se especifica en 0 minutos, la recarga se activa permanentemente. El Brautomat pasa directamente al siguiente paso de macerado y deja activada la postinfusión. El controlador PID regula permanentemente la potencia necesaria para alcanzar y mantener la temperatura objetivo. Nachguss:100 sería idéntico al comando de control HLT:100. Si en los ajustes se ha asignado a la recarga el nombre "Cocina", también se puede utilizar el comando de control COCINA:100.
 
-![Configuración de Kessel](/docs/img/kessel_3.jpg)
+![Configuración caldera](/docs/img/kessel_3.jpg)
 
 En este plan de maceración, en el tercer paso se activa la segunda preparación en caldera. A diferencia del ejemplo anterior HLT, la caldera SUD se enciende durante 15 minutos con la temperatura nominal de 100°C. El Brautomat permanece en este paso hasta que se alcanza la temperatura objetivo y se completa el período de descanso de 10 minutos. Luego se apaga el hervidor SUD y el Brautomat salta al siguiente paso en el plan de maceración.
 
-El texto "Te"cocinar ilmaische" se traduce por Brautomat al 100%. Si no hay ningún número entre 0 y 100 o la información ON u OFF después de los dos puntos, entonces Brautomat reemplaza el texto con un rendimiento del 100%.
+El texto "Cocinar puré parcial" es de Brautomat traduce 100%. Si no hay un número entre 0 y 100 o la información ON u OFF después de los dos puntos, entonces Brautomat reemplaza el texto con 100% de potencia.
 
 ## Ejemplo de rendimiento diferente
 

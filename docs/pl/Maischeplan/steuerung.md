@@ -1,6 +1,6 @@
 # Sterowanie
 
-Bezpośrednio pod planem zacierania znajduje się talia kontrolerów. Procesem zacierania steruje się za pomocą 5 przycisków Zasilanie, Odtwórz, Pauza, Poprzedni i Następny.
+Bezpośrednio pod planem zacierania znajduje się controller Deck. Procesem zacierania steruje się za pomocą 5 przycisków Zasilanie, Odtwórz, Pauza, Poprzedni i Następny.
 
 ![Kontrola](/docs/img/Buttons.jpg)
 
@@ -41,6 +41,6 @@ Przycisk Dalej powoduje przejście do następnego kroku planu zacierania lub, je
 
 Przycisk Zwiń zwija lub zwija tabelę planu zacieru.
 
-![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
+![plan mashowy](/docs/img/Maischeplan-anzeigen.jpg)
 
 Przycisk zwijania pozostaje widoczny nawet po rozpoczęciu parzenia. Po rozpoczęciu parzenia wszystkie przyciski umożliwiające edycję planu zacieru są ukryte.

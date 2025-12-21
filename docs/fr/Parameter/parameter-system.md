@@ -33,7 +33,7 @@ La longueur de la barre rouge sous la vue IDS et refonte indique le temps de rep
 
 #### MashBud
 
-Cette vue montre la première table de cuisson. Le temps de repos actuel est affiché avec les températures réelle et cible ainsi que le temps restant actuel. La longueur de la barre rouge sous les températures montre la progression du repos en cours. Le symbole à droite du temps restant indique si la prochaine pause démarrera automatiquement (autonext) : vert signifie automatique, rouge signifie pause. De plus, la platine contrôleur est affichée avec les fonctions correspondantes.
+Cette vue montre la première table de cuisson. Le temps de repos actuel est affiché avec les températures réelle et cible ainsi que le temps restant actuel. La longueur de la barre rouge sous les températures montre la progression du repos en cours. Le symbole à droite du temps restant indique si la prochaine pause démarrera automatiquement (autonext) : vert signifie automatique, rouge signifie pause. De plus, le controller Deck est affiché avec les fonctions correspondantes.
 
 ![Affichage](/docs/img/brewpage-sm.jpg)
 
@@ -47,9 +47,9 @@ Un affichage est facultatif. Le Brautomat prend uniquement en charge les écrans
 
 L'affichage est configuré via une carte SD. Le fichier TFT du dossier Info correspondant à l'écran est copié sur la carte SD et inséré dans l'écran. Dès que l'écran est allumé, la configuration commence. Le processus prend environ une minute. La progression est affichée à l'écran. Une fois la configuration terminée, l'écran s'éteindra et la carte SD sera retirée. L'écran est maintenant prêt à l'emploi.
 
-Il convient de noter que SDA, SCL sur leLes PIN D1, D2 doivent être exploités.
+Il convient de noter que SDA, SCL doivent être exploités sur les PIN D1, D2.
 
-### Capteurs PT100x MAX31865 Activer l'amplificateur
+### Capteurs PT100x MAX31865 AmplActivez ici
 
 Si des capteurs analogiques PT100x sont utilisés, cet interrupteur doit être activé. Un capteur analogique PT100x nécessite un convertisseur RTD vers numérique pour se connecter à un microcontrôleur ESP. Un amplificateur MAX31865 est un convertisseur numérique RTD sous la forme d'une petite carte supplémentaire.
 
@@ -59,9 +59,9 @@ Le DNS multidiffusion est utilisé pour résoudre les noms d'hôte en adresses I
 
 Remarque : Le nom mDNS est configuré sans protocole (http://) et sans domaine de premier niveau (.local) dans les paramètres système (Brautomat).
 
-### Tableau de bord
+### Dashboard
 
-Les éléments peuvent être facilement affichés et masqués via le tableau de bord. Par exemple, si aucune refonte n'est utilisée, l'élément Refonte doit être désactivé pour le tableau de bord. Les éléments désactivés réduisent le trafic.
+En utilisant Dashboard, vous pouvez facilement afficher et masquer des éléments. Par exemple, si aucune refonte n'est utilisée, l'élément Recasting pour le Dashboard doit être désactivé. Les éléments désactivés réduisent le trafic.
 
 ### Journalisation
 
@@ -107,8 +107,7 @@ Le fuseau horaire est utilisé pour déterminer l’heure correcte, y compris l�
 |Afrique/Dakar |GMT0 |
 |Afrique/Dar_es_Salaam |EAT-3 |
 |Afrique/Djibouti |EAT-3 |
-|Afrique/Douala |WAT-1 |
-|Afrique/El_Aaiun |<+01>-1 |
+|Afrique/Douala |WAT-1 ||Afrique/El_Aaiun |<+01>-1 |
 |Afrique/Freetown |GMT0 |
 |Afrique/Gaborone |CAT-2 |
 |Afrique/Harare |CAT-2 |
@@ -158,8 +157,8 @@ Le fuseau horaire est utilisé pour déterminer l’heure correcte, y compris l�
 |Amérique/Argentine/Tucuman |<-03>3 |
 |Amérique/Argentine/Ushuaia |<-03>3 |
 |Amérique/Aruba |AST4 |
-|Amérique/Asunción|<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
-|Amérique/Atikokan |EST5 |
+|Amérique/Asunción |<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
+|Amérique/Atikokan|EST5 |
 |Amérique/Bahia |<-03>3 |
 |America/Bahia_Banderas |CST6 |
 |Amérique/Barbade |AST4 |
@@ -188,7 +187,7 @@ Le fuseau horaire est utilisé pour déterminer l’heure correcte, y compris l�
 |Amérique/Détroit |EST5EDT,M3.2.0,M11.1.0 |
 |Amérique/Dominique |AST4 |
 |Amérique/Edmonton |MST7MDT,M3.2.0,M11.1.0 |
-|Amérique/Eirunepe |<-05>5 |
+|Amérique/Eirunepé |<-05>5 |
 |Amérique/Salvador |CST6 |
 |Amérique/Fortaleza |<-03>3 |
 |Amérique/Fort_Nelson |MST7 |
@@ -260,8 +259,8 @@ Le fuseau horaire est utilisé pour déterminer l’heure correcte, y compris l�
 |Amérique/Porto_Rico |AST4 |
 |Amérique/Punta_Arenas |<-03>3 |
 |Amérique/Rainy_River |CST6CDT,M3.2.0,M11.1.0 |
-|Amérique/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0|
-|Amérique/Recife |<-03>3 |
+|Amérique/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0 |
+|Amérique/Recife |<-03>3|
 |Amérique/Régina |CST6 |
 |Amérique/Résolu |CST6CDT,M3.2.0,M11.1.0 |
 |Amérique/Rio_Branco |<-05>5 |
@@ -312,8 +311,8 @@ Le fuseau horaire est utilisé pour déterminer l’heure correcte, y compris l�
 |Asie/Bagdad |<+03>-3 |
 |Asie/Bahreïn |<+03>-3 |
 |Asie/Bakou |<+04>-4 |
-|Asie/Bangkok|<+07>-7 |
-|Asie/Barnaoul |<+07>-7 |
+|Asie/Bangkok |<+07>-7 |
+|Asie/Grangeaoul |<+07>-7 |
 |Asie/Beyrouth |EET-2EEST,M3.5.0/0,M10.5.0/0 |
 |Asie/Bichkek |<+06>-6 |
 |Asie/Brunei |<+08>-8 |
@@ -363,7 +362,7 @@ Le fuseau horaire est utilisé pour déterminer l’heure correcte, y compris l�
 |Asie/Riyad |<+03>-3 |
 |Asie/Sakhaline |<+11>-11 |
 |Asie/Samarkand |<+05>-5 |
-|Asie/Séoul |KST-9|
+|Asie/Séoul |KST-9 |
 |Asie/Shanghai |CST-8 |
 |Asie/Singapour |<+08>-8 |
 |Asie/Srednekolymsk |<+11>-11 |
@@ -414,7 +413,7 @@ Le fuseau horaire est utilisé pour déterminer l’heure correcte, y compris l�
 |Europe/Bratislava |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europe/Bruxelles |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europe/Bucarest |EET-2EEST,M3.5.0/3,M10.5.0/4 |
-|Europe/Budapest |CET-1CEST,M3.5.0,M10.5.0/3|
+|Europe/Budapest |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europe/Büsingen |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europe/Chisinau |EET-2EEST,M3.5.0,M10.5.0/3 |
 |Europe/Copenhague |CET-1CEST,M3.5.0,M10.5.0/3 |
@@ -466,7 +465,7 @@ Le fuseau horaire est utilisé pour déterminer l’heure correcte, y compris l�
 |Europe/Zaporozhye |EET-2EEST,M3.5.0/3,M10.5.0/4 |
 |Europe/Zurich |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Indien/Antananarivo |EAT-3 |
-|Indien/Chagos |<+06>-6 |
+|Indien/Chagos |<+06>-6|
 |Indien/Noël |<+07>-7 |
 |Indien/Cocos |<+0630>-6:30 |
 |Indien/Comore |EAT-3 |
@@ -517,8 +516,8 @@ Le fuseau horaire est utilisé pour déterminer l’heure correcte, y compris l�
 |Etc/GMT |GMT0 |
 |Etc/GMT-0 |GMT0 |
 |Etc/GMT-1 |<+01>-1 |
-|Etc/GMT-2|<+02>-2 |
-|Etc/GMT-3 |<+03>-3 |
+|Etc/GMT-2 |<+02>-2 |
+|Etc/GMT-3|<+03>-3 |
 |Etc/GMT-4 |<+04>-4 |
 |Etc/GMT-5 |<+05>-5 |
 |Etc/GMT-6 |<+06>-6 |

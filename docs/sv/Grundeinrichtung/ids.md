@@ -22,7 +22,7 @@ Därefter måste en temperatursensor tilldelas MashBud-kokaren. Valet görs frå
 
 _Obs_: _En temperaturgivare måste vara permanent tilldelad en spishäll. Givarvärdet kallas den faktiska temperaturen eller aktuell temperatur och jämförs kontinuerligt med vilotemperaturen (måltemperaturen) under mäskningen._
 
-![Konfigurera mäskbryggare](/docs/img/IDS-configure.jpg)
+![Konfigurera mäskbryggare](/docs/img/IDS-konfigurieren.jpg)
 
 Parametrarna på fliken "Temperaturkontroll" förklaras i detalj i avsnittet "Alla parametrar". För grundinställningen antas standardvärdena initialt.
 

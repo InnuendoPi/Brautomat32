@@ -4,7 +4,7 @@ Brautomat32 tilbyr muligheten til å sette opp til tre kjeler. Den første kjele
 
 De tre kjelene kan være enten GGM induksjonstopp eller relétype. En kjele av relétype inkluderer en webhook-tilkobling.
 
-![Kessel-konfigurasjon](/docs/img/kessel_1.jpg)
+![Kjelekonfigurasjon](/docs/img/kessel_1.jpg)
 
 Parametrene er beskrevet i kapittelet Grunnleggende oppsett og parametre på et øyeblikk - Kjelparametere og er identiske for alle tre kjeler.
 
@@ -32,15 +32,15 @@ Den andre og tredje kjelen kan slås på og av manuelt via webgrensesnittet med 
 
 Den andre og tredje vannkokeren kan også byttes via meskeplanen:
 
-![Kessel-konfigurasjon](/docs/img/kessel_2.jpg)
+![Kjelekonfigurasjon](/docs/img/kessel_2.jpg)
 
 I denne forenklede meskeplanen slås den tredje kjelen HLT på automatisk i linje 2. Trinn HLT:100 med en måltemperatur på 78°C og en varighet på 0 minutter slår på etterfyllingen med 100 % effekt og setter måltemperaturen til 78°C. Fordi varigheten er spesifisert til 0 minutter, slås påfyllingen på permanent. Brautomat går direkte til neste mesketrinn og lar etterinfusjonen være slått på. Kontrolleren PID regulerer permanent kraften som kreves for å nå og opprettholde måltemperaturen. Nachguss:100 ville være identisk med kontrollkommandoen HLT:100. Hvis påfyllingen har fått navnet «Cooker» i innstillingene, kan også kontrollkommandoen COOKER:100 brukes.
 
-![Kessel-konfigurasjon](/docs/img/kessel_3.jpg)
+![Kjelekonfigurasjon](/docs/img/kessel_3.jpg)
 
 I denne meskeplanen slås det andre kjelebrygget på i tredje trinn. I motsetning til forrige eksempel HLT, er SUD-kjelen slått på i en periode på 15 minutter med måltemperatur på 100°C. Brautomat forblir på dette trinnet til måltemperaturen er nådd og hvileperioden på 10 minutter er fullført. Vannkokeren SUD slås deretter av og Brautomat hopper til neste trinn i meskeplanen.
 
-Teksten "Te"cooking ilmaische" er oversatt av Brautomat til 100 %. Hvis det ikke er noe tall mellom 0 og 100 eller informasjonen PÅ eller AV etter kolon, erstatter Brautomat teksten med 100 % ytelse.
+Teksten «Cook partial mash» er fra Brautomat oversetter 100 %. Hvis det ikke er noe tall mellom 0 og 100 eller informasjonen PÅ eller AV etter kolon, erstatter Brautomat teksten med 100 % kraft.
 
 ## Eksempel på annen ytelse
 

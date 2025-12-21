@@ -1,6 +1,6 @@
 # Le Dashboard
 
-![Dashboard](/docs/img/dashboard160.jpg)
+![Dashboard]([[CHEMIN_0]])
 
 Le Dashboard est utilisé en brassage. Dès que les tables de cuisson, les actionneurs et les capteurs sont configurés, le Dashboard regroupe toutes les informations importantes en un seul endroit.
 
@@ -8,7 +8,7 @@ Le Dashboard est utilisé en brassage. Dès que les tables de cuisson, les actio
 
 Le Dashboard est activé dans les paramètres système :
 
-![Dashboard](/docs/img/dashboard160-1.jpg)
+![Dashboard]([[CHEMIN_1]])
 
 En fonction de la configuration existante, les chaudières, les actionneurs et les capteurs peuvent être affichés dans Dashboard. La taille de l'interface Web de Brautomat peut être réduite à l'aide de la sélection affichée dans l'image :
 

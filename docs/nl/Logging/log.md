@@ -66,7 +66,7 @@ Uitvoer op de seriële console heeft een vaste opmaak. Voorbeeld:
 [V][SYSTEM.cpp:839] SSEBroadcastJson(): ketel puree: {"power":0,"stepnr":0,"tempvalue":50.4","target":0,"step":6,"timer":3}
 ```
 
-De losse onderdelen:
+De afzonderlijke onderdelen:
 
 ```Json
 [V] Het uitvoertype (hier uitgebreid)
@@ -94,7 +94,7 @@ Wanneer de Brautomat is aangesloten op een seriële console, verschijnt de volge
 05:42:28.384 > [I][SYSINFO] mDNS http://Brautomat.lokaal IP-adres 192.168.100.112 tijd: 05:42:27 RSSI: -83
 ```
 
-Naast de versie van Brautomat worden de MDNS-naam en het huidige IP-adres uitgevoerd. De regel _mount bestandssysteem LittleFS: ok, free heap mem:_ geeft aan dat het bestandssysteem is aangekoppeld.
+Naast der versie van Brautomat De MDNS-naam en het huidige IP-adres worden uitgevoerd. De regel _mount bestandssysteem LittleFS: ok, free heap mem:_ geeft aan dat het bestandssysteem is aangekoppeld.
 
 ## Testsensorfout
 

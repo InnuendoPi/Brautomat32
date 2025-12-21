@@ -19,7 +19,7 @@ Offset #1 (spodní rozsah hodnot) je rozdíl 0,0 °C (ledová lázeň) k průmě
 
 ## Kalibrace postupu s klinickým teploměrem
 
-Klinický teploměr je vhodný referenční teploměr. Horní měřicí rozsah klinického teploměru je omezen na cca. 40 °C. Provedení kalibrace odpovídá postupu pro ledovou lázeň a teplotu varu. Jediný rozdíl: Pokud zvolíte jako druhý kalibrační bod např. 40°C, varná deska se musí vypnout, jakmile je dosaženo cílové teploty a zůstane konstantní po dobu cca. 60 sekund(žádné výkyvy). Teprve poté lze zahájit kalibraci, tedy záznam 60 vzorků měření.
+Klinický teploměr je vhodný referenční teploměr. Horní měřicí rozsah klinického teploměru je omezen na cca. 40 °C. Provedení kalibrace odpovídá postupu pro ledovou lázeň a teplotu varu. Jediný rozdíl: Pokud zvolíte jako druhý kalibrační bod např. 40°C, varná deska se musí vypnout, jakmile je dosaženo cílové teploty a zůstane konstantní po dobu cca. 60 sekund (bez kolísání). Teprve potom může dJe možné spustit kalibraci, tedy záznam 60 vzorků měření.
 
 ## Soubor protokolu kalibrace senzoru
 

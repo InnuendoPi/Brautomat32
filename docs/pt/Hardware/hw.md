@@ -14,10 +14,10 @@ Uma bomba é uma grande ajuda na hora de clarear ou transportar para o tanque de
 
 | Nome do item | Link para artigo |
 | ------------------------------------------------------ | --------------------------------- |
-| Minibomba 12V DC | [amazônia].
-| Conectores pneumáticos 8mm x 1/2 polegada giratórios 90° | [Amazônia](https://amzn.to/3XmH2nP) |
+| Minibomba 12V DC | [amazon](https://www.amazon.de/dp/B01NCKXJ92/?coliid=I1I94V063T6GE6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_SSRMRQS5W49WYA43JZ7Z) |
+| Conectores pneumáticos 8mm x 1/2 polegada giratórios 90° | [amazon](https://amzn.to/3XmH2nP) |
 
-As conexões com [camlocks da Braubebo](https://www.braubebo.de/camlock/) como mostrado na primeira foto também são muito boas e rápidas.
+Conexões com [Camlocks from Braubebo](https://www.braubebo.de/camlock/) como mostrado na primeira imagem também são muito boas e rápidas.
 
 ### Relé de estado sólido SSR
 
@@ -27,7 +27,7 @@ Com o Brautomat SSRs podem ser trocados facilmente. Relés SSR ou de estado sól
 
 | Nome do item | Link para artigo |
 | -------------- | --------------------------------- |
-| Fotek SSR 40DA | [amazônia].
+| Fotek SSR 40DA | [amazon](https://www.amazon.de/dp/B09KTV425X/?coliid=I37LH2D7XQ7AYU&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_018F1S8N63CZYRB6XE54) |
 
 Exemplos de aplicação para SSR: Se 220V for ligado em um SSR Fotek através do Brautomat, um soquete para qualquer dispositivo com plugue pode ser conectado à "outra extremidade" da linha de 220V. Por exemplo, para a alimentação do agitador. Ou para um fogão de recarga. Ou para um elemento de aquecimento de anel. A fonte de alimentação da bomba Rotek também pode ser ligada e desligada através de um SSR.
 
@@ -44,14 +44,14 @@ Nem todos os consumidores precisam de um SSR poderoso. Por exemplo, atuadores co
 
 ### Elementos de aquecimento de anel
 
-Um elemento de aquecimento de anel é útil ao ferver o mosto se o desempenho do GGM IDS não for mais ou apenas suficiente para ferver o mosto até que ele borbulhe. Uma boa seleção de elementos de aquecimento de anel está disponível em [Douglas da Crafthardware](https://www.crafthardware.de/products/ringheizement-3-5-kw-fuer-45-cm-kessel).
+Um elemento de aquecimento de anel é útil ao ferver o mosto se o desempenho do GGM IDS não for mais ou apenas suficiente para ferver o mosto até que ele borbulhe. Uma boa seleção de elementos de aquecimento de anel está disponível em [Douglas da Crafthardware](https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel).
 
 ###PWM
 
 | Nome do item | Link para artigo |
 | ------------------ | --------------------------------- |
 | Controlador de velocidade | [amazon](https://www.amazon.de/dp/B09PV11JM8/?coliid=IC6BIVO4B18X9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| Controlador de velocidade | [amazon] (https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T)
+| Controlador de velocidade | [amazon](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 
 ### Conectores
 
@@ -59,4 +59,4 @@ Um elemento de aquecimento de anel é útil ao ferver o mosto se o desempenho do
 | ------------------ | --------------------------------- |
 | GX 12 2 Pino | [amazon](https://www.amazon.de/dp/B07YSBQWSX/?coliid=IU2GESEA54974&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1PA754W9JYVNX4G9PMV0) |
 | GX 12 3 Pino | [amazon](https://www.amazon.de/dp/B07GBBNHM6/?coliid=I21Z8Z8ELJ9I5J&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |
-| GX 12 4 Pinos | [amazon](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&coid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |
+| GX 12 4 Pinos | [amazon](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |

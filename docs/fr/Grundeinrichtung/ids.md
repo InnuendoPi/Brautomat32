@@ -22,11 +22,11 @@ Ensuite, un capteur de température doit être attribué à la bouilloire MashBu
 
 _Remarque_ : _Une sonde de température doit être affectée en permanence à une table de cuisson. La valeur du capteur est appelée température réelle ou température actuelle et est comparée en permanence à la température de repos (température cible) pendant le processus de brassage._
 
-![Configurer la chaudière de brassage de purée](/docs/img/IDS-configure.jpg)
+![Configurer la chaudière de brassage de purée](/docs/img/IDS-konfigurieren.jpg)
 
 Les paramètres de l'onglet « Contrôle de température » sont expliqués en détail dans la section « Tous les paramètres ». Pour la configuration de base, les valeurs par défaut sont initialement adoptées.
 
-![Configurer la chaudière de brassage de purée](/docs/img/IDS-temperaturen.jpg)
+![Configurer la chaudière de brassage](/docs/img/IDS-temperaturen.jpg)
 
 ## Configuration du contrôleur PID
 
@@ -41,7 +41,7 @@ Les paramètres PID P, I et D sont calculés à partir de ces deux valeurs. Ces 
 
 Les valeurs suivantes pour Ku et Pu sont saisies pour cette configuration de base. La règle de réglage PID _IDS PID Mode_ est alors sélectionnée :
 
-![IDS](/docs/img/IDS-AutoTune-erg.jpg)
+![IDS]([[CHEMIN_3]])
 
 Dès que les valeurs de Ku et Pu sont saisies, l'algorithme PID sélectionné détermine automatiquement les trois valeurs P, I et D. Une explication détaillée de tous les paramètres suivra plus tard.
 

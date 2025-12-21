@@ -6,7 +6,7 @@ Loggning är endast tillgänglig i utvecklingsversionen. Den integrerade loggnin
 
 Den seriella monitorn måste ställas in på en baudhastighet på 115200 och CRLF utöver COM-porten.
 
-![Microsoft Visual Studio Code](/docs/img/vscode.jpg)
+![Microsoft Visual Studio-kod](/docs/img/vscode.jpg)
 
 ## Loggningsinställningar
 
@@ -94,7 +94,7 @@ När Brautomat är ansluten till en seriell konsol, visas följande utgång vid 
 05:42:28.384 > [I][SYSINFO] mDNS http://Brautomat.lokal IP-adress 192.168.100.112 tid: 05:42:27 RSSI: -83
 ```
 
-Förutom versionen av Brautomat matas MDNS-namnet och den aktuella IP-adressen ut. Raden _mount filsystem LittleFS: ok, gratis heap mem:_ indikerar att filsystemet har monterats.
+Förutom der version av Brautomat matas MDNS-namnet och den aktuella IP-adressen ut. Raden _mount filsystem LittleFS: ok, gratis heap mem:_ indikerar att filsystemet har monterats.
 
 ## Testsensorfel
 
@@ -116,11 +116,11 @@ Ladda ner Microsoft VSCode som en ZIP-fil: [Microsoft VSCode](https://code.visua
 
 Extrahera ZIP-filen till valfri katalog. Gå till katalogen i filutforskaren och skapa en mapp som heter data. Datamappen sätter MS VScode i portabelt läge och kan användas utan installation.
 
-![Microsoft Visual Studio Code](/docs/img/vscode_4.jpg)
+![Microsoft Visual Studio-kod](/docs/img/vscode_4.jpg)
 
 Starta Microsoft VSCode genom att dubbelklicka på Code.exe.
 
-![Microsoft Visual Studio Code](/docs/img/vscode_1.jpg)
+![Microsoft Visual Studio-kod](/docs/img/vscode_1.jpg)
 
 Tillägget Serial Monitor krävs i VScode för loggning. Klicka på knappen Extensions till vänster och ange "seriell monitor" i sökfältet.
 

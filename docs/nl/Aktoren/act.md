@@ -1,10 +1,10 @@
 # Acteurs
 
-![Actorinstellingen](/docs/img/aktoren_settings.jpg)
+![Actuatorinstellingen](/docs/img/aktoren_einstellungen.jpg)
 
 Aandrijvingen zoals roerwerken, pompen of ringverwarmingselementen worden geconfigureerd met een naam en een GPIO (schakelaar). Actuators kunnen de eigenschap PWM (pulsbreedtemodulatie) hebben. PWM in Brautomat is een timing van vermogen (in- en uitschakelen of stroom vloeit en stroom vloeit niet). De boeking gebeurt in procenten. Altijd aan is 100%. In het geval van een waterkoker betekent dit permanent maximale prestaties. Een PWM van 50% zou 50:50 stroom vloeien en stroom niet vloeien. Het pulsinterval bedraagt ​​500 ms. Het vermogen kan tijdens bedrijf worden gewijzigd met behulp van de twee knoppen in de actuatortabel. De stroomwisselknoppen zijn voor elke actuator zichtbaar als PWM voor de actuator is ingeschakeld. De PWM-functie in Brautomat is bijvoorbeeld geschikt voor relais of SSR's. De functie als motorbesturing voor roerwerken is niet geschikt.
 
-![Overzicht acteurs](/docs/img/aktoren.jpg)
+![Overzicht actuatoren](/docs/img/aktoren.jpg)
 
 ## webhook
 

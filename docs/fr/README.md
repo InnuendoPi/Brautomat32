@@ -1,6 +1,6 @@
 # Le Brautomat
 
-![ESP32](https://img.shields.io/static/v1?label=Arduino&message=ESP32&logo=arduino&logoColor=white&color=blue)
+![ESP32]([[CHEMIN_0]])
 
 Le Brautomat est une commande de brassage pour le ESP32 D1 mini. Le Brautomat est utilisé dans la brasserie et offre un contrôle intuitif et facile à utiliser. Lors du brassage, les températures de repos sont atteintes automatiquement et les temps de repos sont respectés. Le Brautomat prend également en charge l'ébullition du moût et l'ajout de houblon et d'ingrédients. Dans le processus d'infusion ascendante, le Brautomat peut entièrement automatiser le processus de brassage.
 

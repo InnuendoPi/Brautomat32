@@ -22,7 +22,7 @@ Em seguida, um sensor de temperatura deve ser atribuído à chaleira MashBud. A 
 
 _Nota_: _Um sensor de temperatura deve estar permanentemente atribuído a uma placa. O valor do sensor é referido como a temperatura real ou temperatura atual e é continuamente comparado com a temperatura de repouso (temperatura alvo) durante o processo de mosturação._
 
-![Configurar caldeira de mistura de purê](/docs/img/IDS-configure.jpg)
+![Configurar caldeira de fermentação de purê](/docs/img/IDS-konfigurieren.jpg)
 
 Os parâmetros da aba "Controle de temperatura" são explicados detalhadamente na seção "Todos os parâmetros". Para a configuração básica, inicialmente são adotados os valores padrão.
 

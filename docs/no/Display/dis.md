@@ -4,9 +4,9 @@ Brautomat kan valgfritt betjenes med en berøringsskjerm. 3,5 tommers berørings
 
 | Nextion Display | Fastvare |
 | --------------- | ---------- |
-| NX4832T035 (Basic Series) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832T035.tft) |
-| NX4832K035 (Enhanced Series) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832K035.tft) |
-| NX4832F035 (Discovery Series) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832F035.tft) |
+| NX4832T035 (Basic Series) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832T035.tft) |
+| NX4832K035 (Enhanced Series) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832K035.tft) |
+| NX4832F035 (Discovery Series) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832F035.tft) |
 
 Skjermen krever fastvare for å fungere med Brautomat. Fastvaren som samsvarer med skjermtypen er koblet i tabellen. Se også blinkende visningsfil.
 
@@ -29,7 +29,7 @@ Displayet må klargjøres før første gangs bruk. For å gjøre dette lastes de
 
 ## Se mosbrygg
 
-![MaischeSud](/docs/img/brewpage-sm.jpg)
+![MashSud](/docs/img/brewpage-sm.jpg)
 
 MashSud-siden er den foretrukne siden ved brygging. Informasjonen vises på displayet hvert sekund
 
@@ -41,7 +41,7 @@ vises. Den neste hvilen vises også på nederste linje. Tiden til venstre er tid
 
 ## Se kjeleoversikt
 
-![Kettle-oversikt](/docs/img/kettlepage-sm.jpg)
+![Kjeleoversikt](/docs/img/kettlepage-sm.jpg)
 
 Kjeleoversikten viser bryggkokeren og, hvis tilgjengelig, brygget og hell over kjelen med informasjon om faktisk temperatur og måltemperatur.
 

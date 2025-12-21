@@ -18,15 +18,15 @@ Este parâmetro descreve a temperatura na qual o controlador PID deve detectar q
 
 ### Potência da transição [%]
 
-Este parâmetro descreve a potência de saída da placa desde a transição de temperatura até à cozedura. O valor padrão é 100%. O parâmetro "Transição para cozimento" foi utilizado para definir uma temperatura na qual o controlador PID é desativado. O parâmetro “Potência da transição” agora especifica a potência de saída fixa da placa. Se for usada uma chaleira com volume de 35l ou mais, o valor padrão de 100% é uma escolha adequada. Em cozinhas de cervejarias com chaleiras pequenas, o fornecimento de 100% de energia pode causar fervura. Neste caso, o fornecimento máximo de energia pode ser reduzido para, por exemplo, 75% utilizando este parâmetro.
+Este parâmetro descreve a potência de saída da placa desde a transição de temperatura até à cozedura. O valor padrão é 100%. O parâmetro "Transição para cozimento" foi utilizado para definir uma temperatura na qual o controlador PID é desativado. O parâmetro “Potência da transição” agora especifica a potência de saída fixa da placa. Se for usada uma chaleira com volume de 35l ou mais, o valor padrão de 100% é uma escolha adequada. Em cozinhas de cervejarias com chaleiras pequenas, o fornecimento de 100% de energia pode causar fervura. Neste caso, o fornecimento máximo de energia pode ser reduzido para, por exemplo, 75% com este parâmetro.
 
 ### Desative PID para cozinhar [ligado/desligado]
 
 Este parâmetro determina o comportamento do controlador PID ao cozinhar quando a temperatura real está acima da temperatura alvo. Exemplo: a temperatura de cozedura foi regulada para 98°C no plano de mosturação. O parâmetro "Potência da transição" desliga o cálculo PID da temperatura "Transição para ebulição". Se o parâmetro "Desativar PID para fervura" estiver ativado (padrão), então o controlador PID permanece desligado mesmo acima da temperatura alvo de 98°C do plano de mosturação e a energia do parâmetro "Power from transaction" é usada. Este parâmetro está ativado por padrão e permite o cozimento contínuo.
 
-Se o parâmetro "Desativar PID para cozinhar" não estiver ativado, a potência necessária é calculada pelo controlador PID assim que a temperatura alvo (aqui 98°C) for atingida. O desempenho calculado acima da meta-A temperatura é 0%. A placa desliga-se e evita que ferva, se necessário.
+Se o parâmetro "Desativar PID para cozinhar" não estiver ativado, a potência necessária é calculada pelo controlador PID assim que a temperatura alvo (aqui 98°C) for atingida. A potência calculada acima da temperatura alvo é 0%. A placa desliga-se e evita que ferva, se necessário.
 
-### Desempenho de erro do sensor [0-100%]
+### Desempenhoem caso de erro do sensor [0-100%]
 
 Se ocorrer um erro no sensor, por exemplo, um sensor não está ligado ou existe um defeito, a potência da placa pode ser ajustada para resolver este erro. Um valor de 100% ignora o erro do sensor.
 
@@ -72,7 +72,7 @@ _Estes 10 parâmetros devem ser configurados individualmente para cada sistema d
 
 O Brautomat pode gerenciar perfis de hardware. Os perfis podem ser usados ​​se houver caldeiras diferentes. Os usuários com chaleiras de tamanhos diferentes podem usar perfis para selecionar a chaleira para o dia de preparo, em vez de ter que inserir novamente todos os parâmetros manualmente. Um perfil de hardware contém todas as configurações de uma caldeira.
 
-Os perfis são salvos na pasta /Profiles. Os perfis permitem uma rápida e fácilAlternar entre diferentes caldeiras. A função Salvar cria um arquivo de perfil com os parâmetros acima, enquanto a função Excluir remove o arquivo de perfil da memória flash.
+Os perfis são salvos na pasta /Profiles. Os perfis permitem alternar rápida e facilmente entre diferentes caldeiras. A função Salvar cria um arquivo de perfil com dnos parâmetros acima, enquanto a função Excluir remove o arquivo de perfil da memória flash.
 
 O perfil padrão ao iniciar a máquina de fazer pão é sempre o último perfil selecionado.
 
@@ -151,4 +151,4 @@ A capacidade térmica específica usada aqui 3600 tem uma tolerância de erro de
 9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 162194,8 / 44 = 3686,25 J por kg por grau Celsius
 ```
 
-Veja também [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+Veja também [Revista Brewing](https://braumagazin.de/article/berechnungen-in-der-brauerei/)

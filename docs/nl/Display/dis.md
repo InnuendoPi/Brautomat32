@@ -4,9 +4,9 @@ De Brautomat kan optioneel worden bediend met een touchdisplay. 3,5 inch touchsc
 
 | Nextion-display | Firmware |
 | --------------- | --------- |
-| NX4832T035 (basisserie) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832T035.tft) |
-| NX4832K035 (verbeterde serie) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832K035.tft) |
-| NX4832F035 (Discovery-serie) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832F035.tft) |
+| NX4832T035 (basisserie) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832T035.tft) |
+| NX4832K035 (verbeterde serie) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832K035.tft) |
+| NX4832F035 (Discovery-serie) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832F035.tft) |
 
 Het display heeft firmware nodig om te kunnen werken met Brautomat. De firmware die overeenkomt met het displaytype is in de tabel gekoppeld. Zie ook het displaybestand flashen.
 
@@ -29,7 +29,7 @@ Het display moet vóór de eerste inbedrijfstelling worden voorbereid. Om dit te
 
 ## Bekijk pureebrouwsel
 
-![MaischeSud](/docs/img/brewpage-sm.jpg)
+![MashSud](/docs/img/brewpage-sm.jpg)
 
 De MashSud-kant heeft de voorkeur bij het zetten. De informatie wordt elke seconde op het display weergegeven
 
@@ -43,7 +43,7 @@ weergegeven. De volgende rust wordt ook weergegeven op de onderste regel. Het ti
 
 ![Keteloverzicht](/docs/img/kettlepage-sm.jpg)
 
-Het keteloverzicht toont de maischbrouwketel en, indien aanwezig, de brouw- en overgietketel met informatie over de werkelijke en gewenste temperatuur.
+Het keteloverzicht toont de maischbrouwketel en, indien aanwezig, de brouw- en overgietketel met informatie over de werkelijke en streeftemperatuur.
 
 _Opmerking: in het keteloverzicht wordt op de onderste regel het adres van Brautomat weergegeven: de mDNS-naam of het IP-adres._
 

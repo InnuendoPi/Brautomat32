@@ -4,7 +4,7 @@
 
 En la sección _Sensores_, se puede agregar un nuevo sensor haciendo clic en el símbolo más.
 
-![Crear sensores](/docs/img/Sensor-setup.jpg)
+![Crear sensores](/docs/img/Sensor-einrichten.jpg)
 
 ## Establecer dirección y nombre del sensor
 
@@ -19,7 +19,7 @@ Cada sensor necesita un nombre. En esta configuración básica, el sensor se lla
 
 _Nota: Los nombres de los sensores pueden contener un máximo de 20 caracteres. Los caracteres especiales permitidos son # y espacios. La entrada es verificada automáticamente por la interfaz web._
 
-![Configurar sensores](/docs/img/Sensor-settings.jpg)
+![Configurar sensores](/docs/img/Sensor-einstellungen.jpg)
 
 ## Calibración del sensor (valores de compensación)
 
@@ -29,9 +29,9 @@ Para esta configuración básica, ambos valores se mantienen sin cambios en 0,00
 
 ## Guardar y verificar el sensor
 
-Al hacer clic en _guardar_, se crea el sensor y luego se muestra en el panel en _Sensores_.
+Al hacer clic en _guardar_, se crea el sensor y luego se muestra en Dashboard en _Sensores_.
 
-![Panel de sensores](/docs/img/Sensor-dashboard.jpg)
+![Sensores Dashboard](/docs/img/Sensor-dashboard.jpg)
 
 > **Nota:**
 

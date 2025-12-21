@@ -59,7 +59,7 @@ E1 circuitfout (0011 3)\
 E3 Oververhitting (0101 5)\
 E4 temperatuursensor (0110 6)\
 E7-laagspanningsbeveiliging (1001 9)\
-E8 overspanningsbeveiliging (1010 10)\
+E8 Overspanningsbeveiliging (1010 10)\
 EC-bedieningspaneel (1110 14)\
 
 Helaas zijn de binaire strings niet bekend. Alleen E1 geen/lege ketel is bekend. De tijdDe volgende beugels zijn door middel van testen bepaald, maar zijn niet zeker.

@@ -1,7 +1,7 @@
 # Le cas Fregga
 
 Le FreggaCase a été conçu par le brasseur amateur Fregga. Les fichiers d'impression 3D sont stockés dans l'archive Gehaeuse/FreggaCase/FreggaCase.zip.\
-Le boîtier est divisé en deux ensembles : la base du boîtier et le couvercle du boîtier. Chaque assemblage a des options différentes.
+Le boîtier est divisé en deux ensembles, la base du boîtier et le couvercle du boîtier. Chaque assemblage a des options différentes.
 
 ## Options de couverture du logement
 
@@ -10,7 +10,7 @@ Le boîtier est divisé en deux ensembles : la base du boîtier et le couvercle 
 * Affichage uniquement
 * sans découpes (pas d'affichage, pas de PWM, pas d'interrupteur principal)
 
-![Couvercle avec affichage et PWM](/docs/img/Fregga_Deckel_voll.jpg)
+![Couverture avec affichage et PWM](/docs/img/Fregga_Deckel_voll.jpg)
 ![Couvercle avec affichage et deux PWM](/docs/img/Fregga_Deckel_Aktoren.jpg) \
 ![Couvercle avec affichage](/docs/img/FreggaCase_Deckel_Display.jpg)
 ![couvercle fermé](/docs/img/FreggaCase_Deckel_ohne.jpg)
@@ -22,7 +22,7 @@ Le boîtier est divisé en deux ensembles : la base du boîtier et le couvercle 
 * avec 2 connexions
 *sans connexions
 
-![Partie inférieure avec 4 connexions](/docs/img/FreggaCase_Unterteil_voll.jpg) ![Partie inférieure avec connexions](/docs/img/FreggaCase_Unterteil_drei.jpg)
+![Base avec 4 connexions](/docs/img/FreggaCase_Unterteil_voll.jpg) ![Base avec connexions](/docs/img/FreggaCase_Unterteil_drei.jpg)
 
 ![Partie inférieure avec 2 connexions](/docs/img/FreggaCase_Unterteil_zwei.jpg) ![Partie inférieure sans connexions](/docs/img/FreggaCase_Unterteil_ohne.jpg)
 
@@ -34,9 +34,9 @@ Le boîtier est divisé en deux ensembles : la base du boîtier et le couvercle 
 
 Vis cylindrique M5x25\
 Filets rapportés M5 et M3S\
-[Fiche aéronautique SP13]. B6H27L/ref=sr_1_21?crid=30CZ33B7CJLY3&dib=eyJ2IjoiMSJ9.Jfzt-kvFhs9kL5qFCb5wUNWmk2NrGFhgRKnal0OardiJ6pmt9lv8FYYSR-vM_4Jh K55vKwoyakt7y9-6ltCzbzHtrOT7ceV7gVA9-DIgMesCxzpp4IRGFJ6KNXE3y1fw-jR9DeeLFE9kgv8MZtEKyA.YooKp7XlBYJe27--r9tj5MnV8dewdtx NksmMoxO1_1Y&dib_tag=se&keywords=aviation plug+sp13&qid=1705302837&sprefix=aviation plug+sp%2Caps%2C362&sr=8-21)\
-Le module PWM
-[Le module relais].
+[Connecteur aviation SP13](https://www.amazon.de/Anschlussstecker-Luftfahrtstecker-wasserdichte-Sto%C3%9Fverbinder-Au%C3%9Fenlampen/dp/B0B6B6H27L/ref=sr_1_21?crid=30CZ33B7CJLY3&dib=eyJ2IjoiMSJ9.Jfzt-kvFhs9kL5qFCb5wUNWmk2NrGFhgRKnal0OardiJ6pmt9lv8FYYSR-vM_4JhK55vKwoyakt7y9-6ltCzbzHtrOT7ceV7gVA9-DIgMesCxzpp4IRGFJ6KNXE3y1fw-jR9DeeLFE9kgv8MZtEKyA.YooKp7XlBYJe27--r9tj5MnV8dewdtxNksmMoxO1_1Y&dib_tag=se&keywords=luftfahrtstecker+sp13&qid=1705302837&sprefix=luftfahrtstecker+sp%2Caps%2C362&sr=8-21)\
+[Le module PWM](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_56603DDHC44WFNJ0BFM4)\
+[Le module relais](https://www.amazon.de/dp/B07PY7LF9Z/?coliid=IHJD818Z5259W&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_J3D8XGQB34CH8FXPD06G)
 
 ## Images
 

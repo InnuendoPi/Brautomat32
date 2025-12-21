@@ -1,6 +1,6 @@
 # Ovládací prvky
 
-Přímo pod plánem kaše je paluba ovladače. Proces rmutování se ovládá pomocí 5 tlačítek Power, Play, Pause, Previous a Next.
+Přímo pod plánem kaše je controller Deck. Proces rmutování se ovládá pomocí 5 tlačítek Power, Play, Pause, Previous a Next.
 
 ![Control](/docs/img/Buttons.jpg)
 
@@ -41,6 +41,6 @@ Tlačítko Další přeskočí na další krok v plánu rmutování nebo, pokud 
 
 Tlačítko Sbalit sbalí nebo sbalí tabulku slučovacího plánu.
 
-![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
+![mashplan](/docs/img/Maischeplan-anzeigen.jpg)
 
 Skládací tlačítko zůstává viditelné i po zahájení vaření. Všechna tlačítka pro úpravu rmutovacího plánu jsou po zahájení vaření skryta.

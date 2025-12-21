@@ -1,10 +1,10 @@
 # Attori
 
-![Impostazioni attore](/docs/img/aktoren_settings.jpg)
+![Impostazioni attuatore](/docs/img/aktoren_einstellungen.jpg)
 
 Attuatori come agitatori, pompe o elementi riscaldanti ad anello sono configurati con un nome e un GPIO (interruttore). Gli attuatori possono avere la proprietà PWM (modulazione della larghezza dell'impulso). PWM in Brautomat è una temporizzazione dell'alimentazione (accensione e spegnimento o flusso di corrente e flusso di corrente). L'inserimento avviene in percentuale. Sempre attivo è al 100%. Nel caso di un bollitore ciò significherebbe prestazioni massime permanenti. Un PWM del 50% corrisponderebbe a 50:50 in cui la corrente scorre e la corrente non scorre. L'intervallo degli impulsi è di 500 ms. La potenza può essere modificata durante il funzionamento utilizzando i due pulsanti presenti nella tabella degli attuatori. I pulsanti di cambio potenza sono visibili per ciascun attuatore se PWM è stato abilitato per l'attuatore. La funzione PWM in Brautomat è adatta, ad esempio, per relè o SSR. La funzione come controllo motore per agitatori non è adatta.
 
-![Panoramica degli attori](/docs/img/aktoren.jpg)
+![Panoramica degli attuatori](/docs/img/aktoren.jpg)
 
 ## webhook
 

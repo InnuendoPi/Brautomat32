@@ -14,10 +14,10 @@ Une pompe est d'une grande aide lors de la filtration ou du transport vers la cu
 
 | Nom de l'article | Lien vers l'article |
 | ------------------------------------------------------ | --------------------------------- |
-| Mini pompe 12V DC | [amazone].
-| Connecteurs pneumatiques 8 mm x 1/2 pouce rotatif à 90° | [Amazon](https://amzn.to/3XmH2nP) |
+| Mini pompe 12V DC | [amazone]([[CHEMIN_2]]) |
+| Connecteurs pneumatiques 8 mm x 1/2 pouce rotatif à 90° | [amazone]([[CHEMIN_3]]) |
 
-Les connexions avec les [camlocks de Braubebo](https://www.braubebo.de/camlock/) comme le montre la première image sont également très bonnes et rapides.
+Les connexions avec les [Camlocks de Braubebo](https://www.braubebo.de/camlock/), comme le montre la première image, sont également très bonnes et rapides.
 
 ### Relais statique SSR
 
@@ -27,7 +27,7 @@ Avec le Brautomat, les SSR peuvent être commutés très facilement. Les relais 
 
 | Nom de l'article | Lien vers l'article |
 | ---------- | --------------------------------- |
-| Fotek SSR40DA | [amazone].
+| Fotek SSR40DA | [amazone]([[CHEMIN_6]]) |
 
 Exemples d'application pour SSR : Si le 220 V est allumé sur un SSR Fotek via le Brautomat, une prise pour tout appareil doté d'une fiche peut être connectée à « l'autre extrémité » de la ligne 220 V. Par exemple pour l'alimentation électrique de l'agitateur. Ou pour une cuisinière à recharge. Ou pour un élément chauffant annulaire. L'alimentation électrique de la pompe Rotek peut également être activée et désactivée via un SSR.
 
@@ -39,24 +39,24 @@ Tous les consommateurs n’ont pas besoin d’un RSS puissant. Par exemple, les 
 
 | Nom de l'article | Lien vers l'article |
 | ------------------ | --------------------------------- |
-| Carte relais Keenso 4 canaux | [amazon](https://www.amazon.de/dp/B07QKHPBVP/?coliid=IW0L994AVYJSX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| Carte relais Keenso 2 canaux | [amazon](https://www.amazon.de/dp/B07PY7LF9Z/?coliid=IHJD818Z5259W&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| Carte relais Keenso 4 canaux | [amazone](https://www.amazon.de/dp/B07QKHPBVP/?coliid=IW0L994AVYJSX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| Carte relais Keenso 2 canaux | [amazone]([[CHEMIN_9]]) |
 
 ### Éléments chauffants annulaires
 
-Un élément chauffant annulaire est utile lors de l'ébullition du moût si les performances du GGM IDS ne sont plus ou juste suffisantes pour faire bouillir le moût jusqu'à ce qu'il bouillonne. Une bonne sélection d'éléments chauffants annulaires est disponible auprès de [Douglas de Crafthardware](https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel).
+Un élément chauffant annulaire est utile lors de l'ébullition du moût si les performances du GGM IDS ne sont plus ou juste suffisantes pour faire bouillir le moût jusqu'à ce qu'il bouillonne. Une bonne sélection d'éléments chauffants en anneau est disponible auprès de [Douglas de Crafthardware](https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel).
 
 ### MLI
 
 | Nom de l'article | Lien vers l'article |
 | ------------------ | --------------------------------- |
-| Contrôleur de vitesse | [amazon](https://www.amazon.de/dp/B09PV11JM8/?coliid=IC6BIVO4B18X9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| Contrôleur de vitesse | [Amazon] (https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T)
+| Contrôleur de vitesse | [amazone](https://www.amazon.de/dp/B09PV11JM8/?coliid=IC6BIVO4B18X9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| Contrôleur de vitesse | [amazone](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 
 ### Connecteurs
 
 | Nom de l'article | Lien vers l'article |
 | ------------------ | --------------------------------- |
 | GX12 2 broches | [amazone](https://www.amazon.de/dp/B07YSBQWSX/?coliid=IU2GESEA54974&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1PA754W9JYVNX4G9PMV0) |
-| GX12 3 broches | [amazon](https://www.amazon.de/dp/B07GBBNHM6/?coliid=I21Z8Z8ELJ9I5J&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |
-| GX12 4 broches | [amazon](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |
+| GX12 3 broches | [amazone](https://www.amazon.de/dp/B07GBBNHM6/?coliid=I21Z8Z8ELJ9I5J&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |
+| GX12 4 broches | [amazone](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |

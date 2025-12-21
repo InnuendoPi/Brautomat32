@@ -4,9 +4,9 @@ O Brautomat pode opcionalmente ser operado com uma tela sensível ao toque. Tela
 
 | Exibição seguinte | Firmware |
 | --------------- | --------- |
-| NX4832T035 (Série Básica) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832T035.tft) |
-| NX4832K035 (série aprimorada) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832K035.tft) |
-| NX4832F035 (Série Discovery) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832F035.tft) |
+| NX4832T035 (Série Básica) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832T035.tft) |
+| NX4832K035 (série aprimorada) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832K035.tft) |
+| NX4832F035 (Série Discovery) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832F035.tft) |
 
 O display requer firmware para operar com Brautomat. O firmware que corresponde ao tipo de display está vinculado na tabela. Consulte também atualizando o arquivo de exibição.
 
@@ -29,7 +29,7 @@ O display deve ser preparado antes da operação inicial. Para fazer isso, o fir
 
 ## Ver mistura de purê
 
-![MaischeSud](/docs/img/brewpage-sm.jpg)
+![MashSud](/docs/img/brewpage-sm.jpg)
 
 O lado MashSud é o preferido durante a fabricação de cerveja. As informações são mostradas no display a cada segundo
 
@@ -41,7 +41,7 @@ exibido. O próximo descanso também é exibido na linha inferior. A hora à esq
 
 ## Ver visão geral da caldeira
 
-![Visão geral da chaleira](/docs/img/kettlepage-sm.jpg)
+![Visão geral da caldeira](/docs/img/kettlepage-sm.jpg)
 
 A visão geral da caldeira mostra a caldeira de fermentação e, se disponível, a caldeira de fermentação e vazamento com informações sobre a temperatura real e desejada.
 

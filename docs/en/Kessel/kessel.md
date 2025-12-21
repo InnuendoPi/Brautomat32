@@ -4,7 +4,7 @@ The Brautomat32 offers the option of setting up up to three boilers. The first b
 
 The three boilers can be either GGM induction hob or relay type. A relay type boiler includes a webhook connection.
 
-![Kessel configuration](/docs/img/kessel_1.jpg)
+![Boiler configuration](/docs/img/kessel_1.jpg)
 
 The parameters are described in the chapter Basic setup and parameters at a glance - Boiler parameters and are identical for all three boilers.
 
@@ -32,15 +32,15 @@ The second and third boilers can be switched on and off manually via the web int
 
 The second and third kettles can also be switched via the mash plan:
 
-![Kessel configuration](/docs/img/kessel_2.jpg)
+![Boiler configuration](/docs/img/kessel_2.jpg)
 
 In this simplified mash plan, the third boiler HLT is switched on automatically in line 2. The step HLT:100 with a target temperature of 78°C and a duration of 0 minutes switches on the refill with 100% power and sets the target temperature to 78°C. Because the duration is specified as 0 minutes, the refill is switched on permanently. The Brautomat goes directly to the next mash step and leaves the after-infusion switched on. The PID controller permanently regulates the power required to reach and maintain the target temperature. Nachguss:100 would be identical to the control command HLT:100. If the refill has been given the name “Cooker” in the settings, then the control command COOKER:100 can also be used.
 
-![Kessel configuration](/docs/img/kessel_3.jpg)
+![Boiler configuration](/docs/img/kessel_3.jpg)
 
 In this mash plan, the second kettle brew is switched on in the third step. In contrast to the previous example HLT, the SUD boiler is switched on for a period of 15 minutes with the target temperature of 100°C. The Brautomat remains on this step until the target temperature is reached and the rest period of 10 minutes is completed. The kettle SUD is then switched off and the Brautomat jumps to the next step in the mash plan.
 
-The text "Te"cooking ilmaische" is translated by Brautomat to 100%. If there is no number between 0 and 100 or the information ON or OFF after the colon, then the Brautomat replaces the text with 100% performance.
+The text "Cook partial mash" is from Brautomat translates 100%. If there is no number between 0 and 100 or the information ON or OFF after the colon, then the Brautomat replaces the text with 100% power.
 
 ## Example different performance
 

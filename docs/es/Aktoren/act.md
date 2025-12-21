@@ -1,10 +1,10 @@
 # Actores
 
-![Configuración de actor](/docs/img/aktoren_settings.jpg)
+![Configuración del actuador](/docs/img/aktoren_einstellungen.jpg)
 
 Los actuadores como agitadores, bombas o elementos calefactores anulares se configuran con un nombre y un GPIO (interruptor). Los actuadores pueden tener la propiedad PWM (modulación de ancho de pulso). PWM en Brautomat es un tiempo de potencia (encendido y apagado o corriente fluye y corriente no fluye). La entrada se realiza en porcentaje. Siempre encendido es 100%. En el caso de una tetera, esto significaría un rendimiento máximo permanente. Un PWM del 50% sería 50:50 de corriente fluyendo y corriente no fluyendo. El intervalo de pulso es de 500 ms. La potencia se puede cambiar durante el funcionamiento usando los dos botones en la mesa del actuador. Los botones de cambio de energía son visibles para cada actuador si se ha habilitado PWM para el actuador. La función PWM en Brautomat es adecuada, por ejemplo, para relés o SSR. La función como control de motor para agitadores no es adecuada.
 
-![Resumen de actores](/docs/img/aktoren.jpg)
+![Descripción general de actuadores](/docs/img/aktoren.jpg)
 
 ## webhook
 

@@ -1,8 +1,8 @@
 # Fermenteringsmodus
 
-I fermenteringsmodus behandler Brautomat32 gjæringsplanen ovenfra og ned på samme måte som meskeplanen. Kontrollenheten har de samme funksjonene.
+I fermenteringsmodus behandler Brautomat32 gjæringsplanen ovenfra og ned på samme måte som meskeplanen. controller Deck har de samme funksjonene.
 
-![Fermenter dashboard](/docs/img/fermenter_dash.jpg)
+![Fermenter Dashboard](/docs/img/fermenter_dash.jpg)
 
 Behandlingen av trinnene har en viktig forskjell:
 
@@ -10,7 +10,7 @@ Det første trinnet i gjæringsplanen startes når måltemperaturen er nådd. De
 
 For å sette den opp, kan en GPIO settes opp for kjøling og en GPIO for oppvarming. Enten kjøling eller oppvarming er valgfritt.
 
-![Fermenterinnstillinger](/docs/img/fermenter_set.jpg)
+![Gjæringsinnstilling](/docs/img/fermenter_set.jpg)
 
 Fermenteringsbeholderen har tre forskjellige tilstander: kjøling, oppvarming og tomgang. Når statusen til kjøling eller oppvarming endres, starter en pause. Under pausen endres ikke statusen til fermenteringsbeholderen.
 

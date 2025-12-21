@@ -1,6 +1,6 @@
 # Kontrollerna
 
-Direkt under mäskplanen finns kontrolldäcket. Mäskprocessen styrs med de 5 knapparna Power, Play, Paus, Previous och Next.
+Direkt under mäskplanen finns controller Deck. Mäskprocessen styrs med de 5 knapparna Power, Play, Paus, Previous och Next.
 
 ![Kontroll](/docs/img/Buttons.jpg)
 
@@ -41,6 +41,6 @@ Knappen Nästa hoppar till nästa steg i mäskplanen eller, om det var det sista
 
 Knappen Komprimera komprimerar eller komprimerar mäskplanstabellen.
 
-![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
+![mashplan](/docs/img/Maischeplan-anzeigen.jpg)
 
 Kollapsknappen förblir synlig även efter att bryggningen startar. Alla knappar för att redigera mäskplanen är dolda efter att bryggningen startar.

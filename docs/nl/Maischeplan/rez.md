@@ -10,11 +10,11 @@ De naam van het maischplan kan worden opgegeven in de instellingen. De bestandsn
 
 Met behulp van tijdcontrole kan een bruidsdag automatisch worden gepland en gestart.
 
-![Tijdcontrole](/docs/img/Tijdcontrole.jpg)
+![Tijdcontrole](/docs/img/Zeitsteuerung.jpg)
 
 Met het DateTimerPicker element selecteer je eenvoudig een datum en tijd. De receptnaam wordt tijdelijk vervangen door de opgegeven starttijd.
 
-![Tijdcontrole](/docs/img/Tijdcontrole2.jpg)
+![Tijdcontrole](/docs/img/Zeitsteuerung2.jpg)
 
 Een geactiveerde tijdsturing wordt in de configuratie opgeslagen. Wanneer de zetmachine opnieuw wordt opgestart, worden de ingestelde datum en tijd ingelezen. Als deze zetstart in de toekomst ligt, wordt de tijdsturing geactiveerd. Als de start van het koffiezetten in het verleden ligt, is de tijdbesturing gedeactiveerd.
 
@@ -61,9 +61,9 @@ Het geselecteerde maischplan wordt uit het flashgeheugen verwijderd.
 
 ## Standaard importeren
 
-![Vooraf ingestelde import](/docs/img/preset_import.jpg)
+![Standaard importeren](/docs/img/voreinstellung_import.jpg)
 
-Voor de Brautomat is een Schreed-maischen (optioneel) en éénstaps-maischen. In het bijzonder dient de maischstap als scheidingsstap tussen maischen en koken wanneer autonext is gedeactiveerd. Bij het importeren kan de Brautomat ontbrekende maisch- en maischstappen invoegen. Daarnaast kunnen ontbrekende temperaturen voorzien worden van specificaties.
+De Brautomat vereist een maischstap (optioneel) en een maischstap. InIn het bijzonder dient de maischstap als scheidingsstap tussen maischen en koken wanneer autonext is gedeactiveerd. Bij het importeren kan de Brautomat ontbrekende maisch- en maischstappen invoegen. Daarnaast kunnen ontbrekende temperaturen voorzien worden van specificaties.
 
 ### Temperatuurstandaarden voor ontbrekende parameters
 

@@ -7,4 +7,4 @@ La carte est une carte de dérivation pour les microcontrôleurs ESP8266 et ESP3
 * Le GPIO D3 avec une résistance 4k7 est destiné aux capteurs Dallas DS18B20.
 * GPIO D8 est connecté à la connexion pour un buzzer piézo sur la carte
 
-![Planche 2](/docs/img/Platine21.jpg)
+![Tableau 2](/docs/img/Platine21.jpg)

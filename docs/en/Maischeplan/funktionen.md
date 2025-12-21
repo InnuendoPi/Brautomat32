@@ -6,7 +6,7 @@ The mash plan is in the form of a table. This table is processed from top to bot
 
 ## Basic functions
 
-![Mash plan](/docs/img/Brautomat.jpg)
+![mashplan](/docs/img/brautomat.jpg)
 
 For orientation purposes, the structure of the table rows is first described. A row in the mash plan represents a step in the mash plan. Each table row has these columns:
 
@@ -17,7 +17,7 @@ For orientation purposes, the structure of the table rows is first described. A 
 
 After these four details about the mashing step, there are editing buttons in each line with the following functions: (from left to right)
 
-![Edit mash plan](/docs/img/Brautomat-111.jpg)
+![Edit mash plan](/docs/img/brautomat-111.jpg)
 
 * move this line up one position
 * move this line down one position
@@ -26,7 +26,7 @@ After these four details about the mashing step, there are editing buttons in ea
 
 The table header contains the following buttons (from left to right)
 
-![Edit mash plan](/docs/img/Brautomat-1.jpg)
+![Edit mash plan](/docs/img/brautomat-1.jpg)
 
 * new line: add a new mash step to the end of the table
 * Delete: delete the entire table (empty mash plan)
@@ -34,7 +34,7 @@ The table header contains the following buttons (from left to right)
 * Database: Mash plan selection, import, export and mash plan scheduler
 * Collapse: Collapse and expand the mash plan table
 
-![Edit mash plan](/docs/img/Brautomat-11.jpg)
+![Edit mash plan](/docs/img/brautomat-11.jpg)
 
 When a table row is edited, the buttons change.
 
@@ -55,17 +55,17 @@ Additives as shown in the picture _Cooking yeast food 1gr_ are imported into the
 
 A mash plan can be changed in Brautomat or completely recreated. The pencil symbol puts a line in the mash plan table into editor mode.
 
-![Edit mash plan](/docs/img/Brautomat-3.jpg)
+![Edit mash plan](/docs/img/brautomat-3.jpg)
 
 Any number of table rows can now be changed one after the other. As soon as a symbol for editing the mash plan has been clicked, the _Save_ button changes from green to red. Once all changes have been made, the mash plan must be saved using the _Save_ button. Alternatively, all changes can be discarded using the _Exit_ button to exit without saving.
 
 As soon as a mashing process has been started using the power button, the view changes:
 
-![Edit mash plan](/docs/img/Brautomat-4.jpg)
+![Edit mash plan](/docs/img/brautomat-4.jpg)
 
-The buttons for editing are hidden. In order to make this visible again, the mashing process must be stopped using the Pause button on the control:
+The buttons for editing are hidden. In order to make these visible again,The mashing process must be stopped using the Pause button on the control:
 
-![Edit mash plan](/docs/img/Brautomat-5.jpg)
+![Edit mash plan](/docs/img/brautomat-5.jpg)
 
 When the mashing process is paused, the Pause button in the control is displayed in red and the editing functions are displayed. The induction hob does not turn off. The rest temperature continues to be maintained. If the rest timer is active, it will be paused. If the mash plan is changed (Editor mode), the Pause button to continue the mashing process and the Power button are deactivated and displayed in gray until the changes in the mash plan have either been saved or discarded (Exit).
 
@@ -80,7 +80,7 @@ At the end of a mashing process, an iodine sample is used to determine that the 
 
 ## Function and application of autonext
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext.jpg)
+![Mash plan autonext](/docs/img/Maischeplan-autonext.jpg)
 
 The first step of the mash plan called _Mashing 50°C_ has a rest time of 10 minutes and a deactivated _autonext_. The picture shows the situation when the rest timer has reached 10 minutes: The timer has counted down to 00:00 remaining time. The play button automatically changes to red. The toast message “Click play button” appears at the bottom right. The hob switches off. The brewing process waits for a click on the play button. The web interface shows the next step, which is started by clicking on Play.
 
@@ -90,7 +90,7 @@ The second mashing step, called _Maltoserast 63°C_, has a resting temperature o
 
 * At the end of a rest with _autoext_ activated, the mashing process continues automatically and the hob remains switched on.
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext2.jpg)
+![Mash plan autonext](/docs/img/Maischeplan-autonext2.jpg)
 
 The property _autonext_ in the seventh step _Mashing 78°C_ is not activated. If the Brautomat encounters a deactivated autonext, the Brautomat ends the current rest after the rest time has expired and switches the hob off (0% power). In this state the Play button is displayed in red. To continue the brewing process, the Play button must be clicked.
 
@@ -98,9 +98,9 @@ While in the first example of _autonext_ the Play button is usually clicked dire
 
 ## Difference autonext and break
 
-If autonext is deactivated at the end of the lock, the hob is switched off. With the pause button the rest timer is stopped,However, the hob remains switched on and the Brautomat calculates the power required for the hob.
+If autonext is deactivated at the end of the lock, the hob is switched off. The pause button stops the rest timer, but the hob remains switched on and the Brautomat calculates the required power for the hob.
 
-The following sections describe the optional special functions. Brautomat beginners can skip the description of the special functions.
+The following sections describe the optional Sonthe functions are described. Brautomat beginners can skip the description of the special functions.
 
 ## Special function 0°C rest when autonext is activated
 
@@ -134,16 +134,14 @@ A second special function is control commands for the hobs and actuators. The sy
 
 The power can be either ON or OFF or a number between 0 and 100%. The OFF state corresponds to the value 0% and ON to the value 100%. The control command for the first induction hob is IDS or MASH. The control command for the second induction hob is SUD. The control command for the recast is HLT. The control command for an actuator is the actuator name.
 
-![Actor control command](/docs/img/Maischeplan-Aktoren.jpg)
+![Actuator control command](/docs/img/Maischeplan-Aktoren.jpg)
 
 The mash plan in the picture switches actuators in three places. The agitator is switched on right at the beginning: Agitator:ON
 Shortly before the end of the mash schedule, the agitator is switched off: Agitator:OFF and the refill is switched on: Refill:ON.
 
-The control command for an actuator can be specified with a power, e.g. PUMP:60. The actuator pump is then switched on with 60% power. This assumes that this actuator has been activated for PWM. The rest temperature and the Rast Duration must be set to 0 for control commands.
+The control command for an actuator can be specified with a power, e.g. PUMP:60. The actuator pump is then switched on with 60% power. This assumes that this actuator has been activated for PWM. The rest temperature and the rest duration must be set to 0 for control commands.
 
-The control command IDS:50 sets the maximum output power of the hob to 50%. The re-casting can also be switched on to 75% power with HLT:75.
-
-![IDS control command](/docs/img/sonderfunktion_sud1.jpg)
+The control command IDS:50 sets the maximum output power of the hob to 50%. The re-casting can also be switched on to 75% power with HLT:75.![IDS control command](/docs/img/sonderfunktion_sud1.jpg)
 
 The control command SUD: Cook thick mash with a rest time of 10 minutes and a rest temperature of 100 degrees carries out a mash step on a second hob. The rest timer is started as soon as the rest temperature is reached.
 
@@ -153,7 +151,7 @@ The control command SUD: Cook thick mash with a rest temperature of 100 degrees 
 
 ![Control command SUD](/docs/img/sonderfunktion_sud3.jpg)
 
-The mashing step saccharification at 72°C is carried out on the first hob _Maische_. The PID controller regulates the required power for the mash kettle. At the same time, the PID controller regulates the power required for the boiler _Sud_.
+The mashing step saccharification at 72°C is carried out on the first hob _Maische_. The PID controller regulates the required power for the mash tun. At the same time, the PID controller regulates the power required for the boiler _Sud_.
 
 Examples:
 
@@ -173,13 +171,13 @@ _Note: The control commands can be used to operate the mash, brew and HLT boiler
 
 As an example, the following configuration is given for the GGM IDS or the MashSud boiler:
 
-![IDS control command](/docs/img/aktoren_schaltung4.jpg)
+![IDS control command](/docs/img/aktoren_schalten4.jpg)
 
 The maximum power output is preset to 100%. The “Transition to Cooking” temperature is 95°C. From this temperature onwards, the maximum output power of the GGM IDS is only 80%.
 
 The mash schedule in the illustration begins with the “Heating the main pour” step. The GGM IDS induction hob would heat the water with the power "Max. Power IDS" (parameter in the temperature control register), i.e. with 100%.
 
-![IDS control command](/docs/img/aktoren_schaltung2.jpg)
+![IDS control command](/docs/img/aktoren_schalten2.jpg)
 
 The rest timer starts at 59°C. The rest time is zero minutes. The Brautomat jumps to the next line to step 2.
 The control command IDS:65 sets the maximum power of the IDS to 65%. The Brautomat jumps to the next line to step 3.
@@ -187,7 +185,7 @@ Now the temperature is heated from 59°C to the target temperature in the “mas
 
 The maximum output power of 65% is maintained in the following mashing steps. Until the Brautomat meets the control command IDS:100 after the mashing step.
 
-![IDS control command](/docs/img/aktoren_schaltung3.jpg)
+![IDS control command](/docs/img/aktoren_schalten3.jpg)
 
 The control command changes the maximum output power of the IDS to 100%. The wort is now heated at 100% power to the “transition to boiling” temperature at 95°C (see above). From 95°C the GGM IDS switches to 80% power. 80% corresponds to the "Power from transition" parameter.
 
@@ -207,7 +205,7 @@ With the help of the special function IDS: <Power in %>, the power of a hob can 
 
 ![Control command MASH power](/docs/img/IDS-Sonderfunktion.jpg)
 
-_ExplainsFor information on the calculation method, see: Parameters of the GGM IDS - Temperature control - Maximum performance of the IDS._
+_For explanations of the calculation method, see: Parameters of the GGM IDS - Temperature control - Maximum performance of the IDS._
 
 ```json
 
@@ -260,7 +258,7 @@ The example shows how easy it is to switch actuators on and off using special co
 
 _Alternative:_ activate the property autonext and set the rest period to 5 minutes. In this case, the Brautomat would maintain the mashing temperature for 5 minutes (mashing) and then automatically heat up to the next rest.
 
-The next step is the maltose rest. The PID Controller regulates the power required to reach the target temperature in the mash and maintain it for a period of 40 minutes. In line 4, the refill is switched on using a special command. The target temperature for the refill is 75°C and the duration is 0 minutes. The Brautomat starts the PID controller for the boiler re-casting and regulates the required power in the background. At this point in the mash plan, two PID controllers are active: a PID controller for the mash brew kettle and a PID controller for the after-pour. The Brautomat jumps directly to the next step after switching on.
+The next step is the maltose rest. The PID controller regulates the power required to reach the target temperature in the mash and maintain it for a period of 40 minutes. In line 4, the refill is switched on using a special command. The target temperature for the refill is 75°C and the duration is 0 minutes. The Brautomat starts the PID controller for the boiler re-casting and regulates the required power in the background. ToAt this point in the mash plan, two PID controllers are active: a PID controller for the mash brew kettle and a PID controller for the after-pour. The Brautomat jumps directly to the next step after switching on.
 
 In the mash plan, the ring heating element actuator is switched on or switched once with the special command _RHE:ON_ and once with _RHE:50_. The ON translates the Brautomat with 100% performance, while 50 is processed accordingly with 50% performance. The MashSud kettle has a maximum volume of 70 liters. The ring heating element supports the hob during cooking with 50% power for vigorous cooking: 100% power hob (3.5kW) plus 1.75kW ring heating element (50%). At the end of cooking, the ring heating element is switched off with the special command _RHE:OFF_.
 

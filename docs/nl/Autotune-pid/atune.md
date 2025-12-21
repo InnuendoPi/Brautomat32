@@ -4,7 +4,7 @@ Het AutoTune-proces bepaalt geschikte parameters voor het zetsysteem, zodat de t
 
 Opmerking: Een overschrijding (overschrijding van de ingestelde temperatuur) van 0,5°C is normaal. Afhankelijk van de isolatie van de ketel en de geleverde inductie-energie zal de temperatuur ook na het uitschakelen van de kookplaat nog iets blijven stijgen.
 
-![AutoTune4](/docs/img/IDS-AutoTune-target.jpg)
+![AutoTune4](/docs/img/IDS-AutoTune-Ziel.jpg)
 
 De volgende beschrijving van de PID-waarden is alleen bedoeld als hulpmiddel bij het gebruik van de firmware en kan worden overgeslagen. Het AutoTune-proces wordt beschreven vanaf "Het AutoTune-proces: stap voor stap."\
 De PID-controller regelt de prestaties van de kookplaten. Het is belangrijk om de juiste P-, I- en D-waarden te bepalen. De PID-waarden zijn individueel voor elk zetsysteem en elke omgeving. AutoTune is een procedure die helpt bij het bepalen van geschikte waarden. Het benodigde vermogen van de kookplaten om van de werkelijke temperatuur naar de doeltemperatuur te komen, wordt berekend op basis van de som van de drie waarden: Vereist vermogen = P + I + D\

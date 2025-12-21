@@ -19,7 +19,7 @@ Le décalage n°1 (plage de valeurs inférieure) est la différence de 0,0°C (b
 
 ## Procédure d'étalonnage avec un thermomètre clinique
 
-Un thermomètre clinique est un thermomètre de référence bien adapté. La plage de mesure supérieure d'un thermomètre clinique est limitée à env. 40°C. La réalisation de l'étalonnage correspond à la procédure pour le bain de glace et la température d'ébullition. Seule différence : si vous choisissez par exemple 40 °C comme deuxième point de calibrage, la table de cuisson doit être éteinte dès que la température cible est atteinte et reste constante pendant env. 60 secondes(pas de fluctuations). Ce n'est qu'alors que l'étalonnage, c'est-à-dire l'enregistrement de 60 échantillons de mesure, peut commencer.
+Un thermomètre clinique est un thermomètre de référence bien adapté. La plage de mesure supérieure d'un thermomètre clinique est limitée à env. 40°C. La réalisation de l'étalonnage correspond à la procédure pour le bain de glace et la température d'ébullition. Seule différence : si vous choisissez par exemple 40 °C comme deuxième point de calibrage, la table de cuisson doit être éteinte dès que la température cible est atteinte et reste constante pendant env. 60 secondes (aucune fluctuation). Ce n'est qu'alors que dL'étalonnage, c'est-à-dire l'enregistrement de 60 échantillons de mesure, peut être lancé.
 
 ## Fichier journal d'étalonnage du capteur
 

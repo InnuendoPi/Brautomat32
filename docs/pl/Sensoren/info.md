@@ -1,6 +1,6 @@
 # Czujniki
 
-Brautomat obsługuje do trzech czujników Dallas DS1B20 i czujników PT100x poprzez wzmacniacz MAX31865. Zalecane są czujniki Dallas DS18B20, ponieważ tego typu czujniki są łatwiejsze do podłączenia.
+Brautomat obsługuje do trzech czujników Dallas DS1B20 i czujników PT100x za pośrednictwem wzmacniacza MAX31865. Zalecane są czujniki Dallas DS18B20, ponieważ tego typu czujniki są łatwiejsze do podłączenia.
 
 ## Rozdzielczość czujników DS18B20
 

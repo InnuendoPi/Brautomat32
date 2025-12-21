@@ -1,6 +1,6 @@
 # Os controles
 
-Diretamente abaixo do plano de mash está o deck do controlador. O processo de mosturação é controlado com os 5 botões Power, Play, Pause, Previous e Next.
+Diretamente abaixo do plano de mash está o controller Deck. O processo de mosturação é controlado com os 5 botões Power, Play, Pause, Previous e Next.
 
 ![Controle](/docs/img/Buttons.jpg)
 
@@ -41,6 +41,6 @@ O botão Próximo salta para a próxima etapa do plano de mosturação ou, se fo
 
 O botão Collapse recolhe ou recolhe a tabela do plano de mash.
 
-![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
+![mashplan](/docs/img/Maischeplan-anzeigen.jpg)
 
 O botão de recolhimento permanece visível mesmo após o início da preparação. Todos os botões para editar o plano de mosturação ficam ocultos após o início da preparação.

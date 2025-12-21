@@ -1,10 +1,10 @@
 # AutoTune proceso
 
-El proceso AutoTune determina los parámetros adecuados para el sistema de elaboración de cerveza, de modo que el control de temperatura en el proceso de maceración se pueda realizar con la mayor precisión posible. La atención se centra en las temperaturas REALES y las temperaturas OBJETIVOS correspondientes. En la práctica, esto significa que se deben minimizar los excesos y los déficits.
+El proceso AutoTune determina los parámetros adecuados para el sistema de elaboración de cerveza para que el control de temperatura en el proceso de maceración se pueda realizar con la mayor precisión posible. La atención se centra en las temperaturas REALES y las temperaturas OBJETIVOS correspondientes. En la práctica, esto significa que se deben minimizar los excesos y los déficits.
 
 Nota: Un exceso (superación de la temperatura de referencia) de 0,5 °C es normal. Dependiendo del aislamiento de la caldera y de la energía de inducción suministrada, la temperatura seguirá aumentando ligeramente incluso después de apagar la placa.
 
-![AutoTune4](/docs/img/IDS-AutoTune-target.jpg)
+![AutoTune4](/docs/img/IDS-AutoTune-Ziel.jpg)
 
 La siguiente descripción de los valores PID está destinada únicamente a ser una ayuda para el uso del firmware y se puede omitir. El proceso AutoTune se describe a partir de "El proceso AutoTune: paso a paso."\
 El controlador PID controla el rendimiento de las placas. Es importante determinar los valores P, I y D apropiados. Los valores de PID son ​​individuales para cada sistema y entorno de elaboración de cerveza. AutoTune es un procedimiento que ayuda a determinar los valores adecuados. La potencia requerida de las placas de cocción para pasar de la temperatura real a la temperatura objetivo se calcula a partir de la suma de los tres valores: Potencia requerida = P + I + D\

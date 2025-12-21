@@ -1,6 +1,6 @@
 # Los controles
 
-Directamente debajo del plano de mezcla se encuentra la plataforma del controlador. El proceso de maceración se controla con los 5 botones Encendido, Reproducir, Pausa, Anterior y Siguiente.
+Directamente debajo del plan de maceración se encuentra el controller Deck. El proceso de maceración se controla con los 5 botones Encendido, Reproducir, Pausa, Anterior y Siguiente.
 
 ![Control](/docs/img/Buttons.jpg)
 
@@ -41,6 +41,6 @@ El botón Siguiente salta al siguiente paso del plan de maceración o, si fue el
 
 El botón Contraer contrae o colapsa la tabla del plan de maceración.
 
-![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
+![mashplan](/docs/img/Maischeplan-anzeigen.jpg)
 
 El botón de colapso permanece visible incluso después de que comienza la preparación. Todos los botones para editar el plan de macerado quedan ocultos una vez que comienza la preparación.

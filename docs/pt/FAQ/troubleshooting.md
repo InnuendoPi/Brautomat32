@@ -33,7 +33,7 @@ Chaleiras de fermentação muito bem isoladas exigem uma série de dados AutoTun
 ## Sensores e calibração
 
 Os sensores Dallas DS18B20 são oferecidos em muitas plataformas a preços muito diferentes. A calibração do sensor ajuda a minimizar desvios. Em qualquer caso, o sensor IDS deve ser calibrado porque são possíveis desvios de vários graus Celsius (dependendo da origem).\
-Se um sensor relatar regularmente erro de sensor (brindes) na interface da web, você deve primeiro tentar uma conexão diferente para o sensor. As três conexões na placa para os sensores são equivalentes e não possuem ordem pré-determinada. Se houver problemas no sensor, os pontos de solda dos 3 terminais de parafuso e a resistência de 4,7kOhm (na placa de circuito sob o ESP) devem ser verificados.
+Se um sensor relatar regularmente um erro de sensor (brindes) na interface da web, você deve primeiro tentar uma conexão diferente para o sensor. As três conexões na placa para os sensores são equivalentes e não possuem ordem pré-determinada. Se houver problemas no sensor, os pontos de solda dos 3 terminais de parafuso e a resistência de 4,7kOhm (na placa de circuito sob o ESP) devem ser verificados.
 
 ## Interrupção de pino GGM IDS
 

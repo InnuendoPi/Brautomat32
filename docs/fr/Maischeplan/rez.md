@@ -10,11 +10,11 @@ Le nom du plan de brassage peut être précisé dans les paramètres. Le nom du 
 
 Grâce au contrôle du temps, une journée nuptiale peut être planifiée et démarrée automatiquement.
 
-![Contrôle du temps](/docs/img/Time control.jpg)
+![Contrôle du temps](/docs/img/Zeitsteuerung.jpg)
 
 Avec l'élément DateTimerPicker, vous pouvez facilement sélectionner une date et une heure. Le nom de la recette est temporairement remplacé par l'heure de début spécifiée.
 
-![Contrôle du temps](/docs/img/Time control2.jpg)
+![Contrôle du temps](/docs/img/Zeitsteuerung2.jpg)
 
 Un contrôle horaire activé est enregistré dans la configuration. Lors du redémarrage de la machine à café, la date et l'heure réglées sont lues. Si ce début de préparation se situe dans le futur, la commande horaire est activée. Si le début de la distribution est passé, le contrôle horaire est désactivé.
 
@@ -61,9 +61,9 @@ Le plan de brassage sélectionné est supprimé de la mémoire flash.
 
 ## Importer par défaut
 
-![Importation prédéfinie](/docs/img/preset_import.jpg)
+![Importer par défaut](/docs/img/voreinstellung_import.jpg)
 
-Le Brautomat nécessite un Schmonté en purée (facultatif) et purée en une étape. En particulier, l'étape d'empâtage sert d'étape de séparation entre l'empâtage et la cuisson lorsque autonext est désactivé. Lors de l'importation, le Brautomat peut insérer des étapes de brassage et de brassage manquantes. De plus, les températures manquantes peuvent être fournies avec des spécifications.
+Le Brautomat nécessite une étape de brassage (facultatif) et une étape de brassage. DansEn particulier, l'étape d'empâtage sert d'étape de séparation entre l'empâtage et la cuisson lorsque autonext est désactivé. Lors de l'importation, le Brautomat peut insérer des étapes de brassage et de brassage manquantes. De plus, les températures manquantes peuvent être fournies avec des spécifications.
 
 ### Température par défaut pour les paramètres manquants
 

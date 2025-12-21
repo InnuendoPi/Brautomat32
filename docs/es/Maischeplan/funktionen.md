@@ -6,7 +6,7 @@ El plan de macerado tiene forma de mesa. Esta mesa es procesada de arriba a abaj
 
 ## Funciones básicas
 
-![Plan combinado](/docs/img/Brautomat.jpg)
+![mashplan](/docs/img/brautomat.jpg)
 
 A modo de orientación, se describe en primer lugar la estructura de las filas de la tabla. Una fila en el plan de mezcla representa un paso en el plan de mezcla. Cada fila de la tabla tiene estas columnas:
 
@@ -17,7 +17,7 @@ A modo de orientación, se describe en primer lugar la estructura de las filas d
 
 Después de estos cuatro detalles sobre el paso de maceración, hay botones de edición en cada línea con las siguientes funciones: (de izquierda a derecha)
 
-![Editar plan combinado](/docs/img/Brautomat-111.jpg)
+![Editar plan de mezcla](/docs/img/brautomat-111.jpg)
 
 * mover esta línea hacia arriba una posición
 * mover esta línea hacia abajo una posición
@@ -26,7 +26,7 @@ Después de estos cuatro detalles sobre el paso de maceración, hay botones de e
 
 El encabezado de la tabla contiene los siguientes botones (de izquierda a derecha)
 
-![Editar plan combinado](/docs/img/Brautomat-1.jpg)
+![Editar plan de mezcla](/docs/img/brautomat-1.jpg)
 
 * nueva línea: agrega un nuevo paso de mezcla al final de la tabla
 * Eliminar: eliminar toda la tabla (plan de mezcla vacío)
@@ -34,7 +34,7 @@ El encabezado de la tabla contiene los siguientes botones (de izquierda a derech
 * Base de datos: selección de planes de mezcla, importación, exportación y programador de planes de mezcla
 * Contraer: Contraer y expandir la tabla del plan de mezcla
 
-![Editar plan de mezcla](/docs/img/Brautomat-11.jpg)
+![Editar plan de mezcla](/docs/img/brautomat-11.jpg)
 
 Cuando se edita una fila de la tabla, los botones cambian.
 
@@ -55,17 +55,17 @@ Los aditivos como se muestra en la imagen _Levadura de cocina alimentaria 1gr_ s
 
 Un plan de mezcla se puede cambiar en Brautomat o recrearse por completo. El símbolo del lápiz coloca una línea en la tabla del plan de mezcla en modo editor.
 
-![Editar plan combinado](/docs/img/Brautomat-3.jpg)
+![Editar plan de mezcla](/docs/img/brautomat-3.jpg)
 
 Ahora se puede cambiar cualquier número de filas de la tabla, una tras otra. Tan pronto como se hace clic en un símbolo para editar el plan de maceración, el botón _Guardar_ cambia de verde a rojo. Una vez que se hayan realizado todos los cambios, el plan de maceración debe guardarse usando el botón _Guardar_. Alternativamente, todos los cambios se pueden descartar usando el botón _Salir_ para salir sin guardar.
 
 Tan pronto como se inicia un proceso de maceración usando el botón de encendido, la vista cambia:
 
-![Editar plan de mezcla](/docs/img/Brautomat-4.jpg)
+![Editar plan de mezcla](/docs/img/brautomat-4.jpg)
 
-Los botones de edición están ocultos. Para que esto vuelva a ser visible, se debe detener el proceso de maceración mediante el botón Pausa del control:
+Los botones de edición están ocultos. Para volver a hacerlos visibles,Se debe detener el proceso de maceración mediante el botón Pausa del control:
 
-![Editar plan de mezcla](/docs/img/Brautomat-5.jpg)
+![Editar plan de mezcla](/docs/img/brautomat-5.jpg)
 
 Cuando el proceso de maceración está en pausa, el botón Pausa en el control se muestra en rojo y se muestran las funciones de edición. La placa de inducción no se apaga. Se sigue manteniendo la temperatura de reposo. Si el temporizador de descanso está activo, se pausará. Si se cambia el plan de maceración (modo Editor), el botón Pausa para continuar el proceso de maceración y el botón de Encendido se desactivan y se muestran en gris hasta que los cambios en el plan de maceración se hayan guardado o descartado (Salir).
 
@@ -80,7 +80,7 @@ Al final del proceso de maceración, se utiliza una muestra de yodo para determi
 
 ## Función y aplicación de autonext
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext.jpg)
+![Plan de mezcla autonext](/docs/img/Maischeplan-autonext.jpg)
 
 El primer paso del plan de macerado denominado _Mashing 50°C_ tiene un tiempo de reposo de 10 minutos y un _autonext_ desactivado. La imagen muestra la situación cuando el temporizador de descanso ha llegado a los 10 minutos: El temporizador ha contado hasta las 00:00 del tiempo restante. El botón de reproducción cambia automáticamente a rojo. El mensaje del brindis "Haga clic en el botón de reproducción" aparece en la parte inferior derecha. La placa se apaga. El proceso de elaboración espera a que se haga clic en el botón de reproducción. La interfaz web muestra el siguiente paso, que se inicia haciendo clic en Reproducir.
 
@@ -90,7 +90,7 @@ El segundo paso de maceración, denominado _Maltoserast 63°C_, tiene una temper
 
 * Al finalizar un reposo con _autoext_ activado, el proceso de maceración continúa automáticamente y la placa permanece encendida.
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext2.jpg)
+![Plan de mezcla autonext](/docs/img/Maischeplan-autonext2.jpg)
 
 La propiedad _autonext_ en el séptimo paso _Mashing 78°C_ no está activada. Si el Brautomat encuentra un autonext desactivado, el Brautomat finaliza el descanso actual una vez transcurrido el tiempo de descanso y apaga la placa (0% de potencia). En este estado, el botón Reproducir se muestra en rojo. Para continuar con el proceso de preparación, se debe hacer clic en el botón Reproducir.
 
@@ -98,9 +98,9 @@ Mientras que en el primer ejemplo de _autonext_ generalmente se hace clic direct
 
 ## Diferencia autonext y ruptura
 
-Si autonext se desactiva al final del bloqueo, la placa se apaga. Con el botón de pausa se detiene el cronómetro de descanso,Sin embargo, la placa permanece encendida y Brautomat calcula la potencia requerida por la placa.
+Si autonext se desactiva al final del bloqueo, la placa se apaga. El botón de pausa detiene el temporizador de descanso, pero la placa permanece encendida y el Brautomat calcula la potencia requerida para la placa.
 
-Las siguientes secciones describen las funciones especiales opcionales. Brautomat los principiantes pueden omitir la descripción de las funciones especiales.
+Las siguientes secciones describen el Hijo opcionalSe describen las funciones. Brautomat los principiantes pueden omitir la descripción de las funciones especiales.
 
 ## Función especial 0°C reposo cuando se activa autonext
 
@@ -134,16 +134,14 @@ Una segunda función especial son los comandos de control para las placas de coc
 
 La alimentación puede estar encendida o apagada o un número entre 0 y 100%. El estado OFF corresponde al valor 0% y ON al valor 100%. El comando de control de la primera placa de inducción es IDS o MASH. El comando de control de la segunda placa de inducción es SUD. El comando de control para la refundición es HLT. El comando de control de un actuador es el nombre del actuador.
 
-![Comando de control del actor](/docs/img/Maischeplan-Aktoren.jpg)
+![Comando de control del actuador](/docs/img/Maischeplan-Aktoren.jpg)
 
 El plano de mezcla de la imagen conmuta los actuadores en tres lugares. El agitador se enciende desde el principio: Agitador:ON
 Poco antes del final del programa de maceración, el agitador se apaga: Agitador:OFF y el recambio se enciende: Refill:ON.
 
-El comando de control de un actuador se puede especificar con una potencia, p. BOMBA:60. A continuación se conecta la bomba actuadora con un 60 % de potencia. Esto supone que este actuador se ha activado para PWM. La temperatura de reposo y la RaLa duración de st debe establecerse en 0 para los comandos de control.
+El comando de control de un actuador se puede especificar con una potencia, p. BOMBA:60. A continuación se conecta la bomba actuadora con un 60 % de potencia. Esto supone que este actuador se ha activado para PWM. La temperatura de reposo y la duración del reposo deben establecerse en 0 para los comandos de control.
 
-El mando de control IDS:50 establece la potencia máxima de salida de la placa al 50%. La refundición también se puede encender al 75% de potencia con HLT:75.
-
-![Comando de control IDS](/docs/img/sonderfunktion_sud1.jpg)
+El mando de control IDS:50 establece la potencia máxima de salida de la placa al 50%. La refundición también se puede encender al 75% de potencia con HLT:75.![Comando de control IDS](/docs/img/sonderfunktion_sud1.jpg)
 
 El mando de control SUD: Cocer puré espeso con un tiempo de reposo de 10 minutos y una temperatura de reposo de 100 grados realiza un paso de puré en una segunda encimera. El temporizador de reposo se inicia tan pronto como se alcanza la temperatura de reposo.
 
@@ -153,7 +151,7 @@ El comando de control SUD: cocinar puré espeso con una temperatura de reposo de
 
 ![Comando de control SUD](/docs/img/sonderfunktion_sud3.jpg)
 
-La etapa de maceración y sacarificación a 72°C se realiza en la primera placa _Maische_. El controlador PID regula la potencia requerida para el hervidor de puré. Al mismo tiempo, el controlador PID regula la potencia requerida por la caldera _Sud_.
+La etapa de maceración y sacarificación a 72°C se realiza en la primera placa _Maische_. El controlador PID regula la potencia requerida para el macerador. Al mismo tiempo, el controlador PID regula la potencia requerida por la caldera _Sud_.
 
 Ejemplos:
 
@@ -173,13 +171,13 @@ _Nota: Los comandos de control se pueden utilizar para operar las calderas de pu
 
 A modo de ejemplo se da la siguiente configuración para el GGM IDS o la caldera MashSud:
 
-![Comando de control IDS](/docs/img/aktoren_schaltung4.jpg)
+![comando de control IDS](/docs/img/aktoren_schalten4.jpg)
 
 La potencia máxima de salida está preestablecida en 100%. La temperatura de “Transición a Cocción” es de 95°C. A partir de esta temperatura, la potencia máxima de salida del GGM IDS es sólo del 80%.
 
 El programa de macerado en la ilustración comienza con el paso "Calentar el vertido principal". La placa de inducción GGM IDS calentaría el agua con la potencia "Max. Power IDS" (parámetro en el registro de control de temperatura), es decir, con el 100%.
 
-![Comando de control IDS](/docs/img/aktoren_schaltung2.jpg)
+![Comando de control IDS](/docs/img/aktoren_schalten2.jpg)
 
 El cronómetro de descanso comienza a 59°C. El tiempo de descanso es de cero minutos. El Brautomat salta a la siguiente línea del paso 2.
 El comando de control IDS:65 fija la potencia máxima del IDS al 65%. El Brautomat salta a la siguiente línea del paso 3.
@@ -187,7 +185,7 @@ Ahora la temperatura se calienta desde 59°C hasta la temperatura objetivo en el
 
 La potencia de salida máxima del 65 % se mantiene en los siguientes pasos de maceración. Hasta que Brautomat cumpla con el comando de control IDS:100 después del paso de maceración.
 
-![Comando de control IDS](/docs/img/aktoren_schaltung3.jpg)
+![Comando de control IDS](/docs/img/aktoren_schalten3.jpg)
 
 El comando de control cambia la potencia de salida máxima del IDS al 100%. Ahora el mosto se calienta al 100% de potencia hasta la temperatura de “transición a ebullición” de 95°C (ver arriba). A partir de 95°C el GGM IDS pasa al 80% de potencia. El 80% corresponde al parámetro "Potencia desde transición".
 
@@ -207,7 +205,7 @@ Con la ayuda de la función especial IDS: <Potencia en %> se puede ajustar la po
 
 ![Comando de control MASH power](/docs/img/IDS-Sonderfunktion.jpg)
 
-_ExplicaPara obtener información sobre el método de cálculo, consulte: Parámetros del GGM IDS - Control de temperatura - Máximo rendimiento del IDS._
+_Para explicaciones del método de cálculo, ver: Parámetros del GGM IDS - Control de temperatura - Máximo rendimiento del IDS._
 
 ```json
 
@@ -234,7 +232,7 @@ PERFIL DE IDS:Profil36l
 
 Con este comando especial se intercambian todos los parámetros de una caldera. De esta manera se pueden almacenar diferentes perfiles de hardware. En el proceso de elaboración de decocción, el comando especial ofrece una manera fácil de utilizar parámetros ajustados con la misma caldera y menor volumen.
 
-Los comandos especiales IDS: e IDSPROFIL: tienen diferentes efectos: El comando especial IDS: cambia la potencia máxima de salida. Todos los demás parámetros siguen siendo los mismos.
+Los comandos especiales IDS: e IDSPROFIL: tienen efectos diferentes: El comando especial IDS: cambia la potencia máxima de salida. Todos los demás parámetros siguen siendo los mismos.
 
 _Nota: el comando especial IDSPROFILE en el plan de mezcla se cancela si el tipo de dispositivo (IDS1, IDS2 o relé) no es idéntico._
 
@@ -254,15 +252,15 @@ Dos actores:
 
 El plan de puré:
 
-![ejemplo del día de preparación del plan de maceración](/docs/img/example_control_commands1.jpg)
+![ejemplo del día de preparación del plan de macerado](/docs/img/example_control_commands1.jpg)
 
 El ejemplo muestra lo fácil que es encender y apagar los actuadores mediante comandos especiales o cómo se integran comandos especiales en el plan de maceración. En el primer paso de maceración se conecta el agitador. El Brautomat ejecuta el comando especial e inmediatamente salta al siguiente paso en el plan de mezcla. El paso de maceración se configuró con una duración de 1 minuto y autonext se deshabilitó. En este paso se añade la malta al agua de elaboración. El paso dura más de un minuto, pero dependiendo del relleno, no se sabe de antemano cuánto tiempo durará el macerado. Después de macerar durante un minuto, el Brautomat apaga la placa y muestra el botón de reproducción en rojo (desactivado autonext). El Brautomat ahora "espera" hasta que se complete el paso y se haga clic en el botón de reproducción. Cuando se apaga la placa y se agrega la malta, la temperatura de mezcla para el puré será inferior a 55°C. Este procedimiento es adecuado, por ejemplo, para una adición lenta y relajada de las maltas o para un breve descanso de proteínas.
 
 _Alternativa:_ active la propiedad autonext y establezca el período de descanso en 5 minutos. En este caso, el Brautomat mantendría la temperatura de maceración durante 5 minutos (maceración) y luego calentaría automáticamente para el siguiente reposo.
 
-El siguiente paso es el reposo de maltosa. El PID El controlador regula la potencia necesaria para alcanzar la temperatura objetivo en el macerado y mantenerla por un período de 40 minutos. En la línea 4, la recarga se activa mediante un comando especial. La temperatura objetivo para la recarga es de 75°C y la duración es de 0 minutos. El Brautomat inicia el controlador PID para la refundición de la caldera y regula en segundo plano la potencia requerida. En este punto del plan de macerado, hay dos controladores PID activos: un controlador PID para el hervidor de macerado y un controlador PID para el vertido posterior. El Brautomat salta directamente al siguiente paso después del encendido.
+El siguiente paso es el reposo de maltosa. El controlador PID regula la potencia necesaria para alcanzar la temperatura objetivo en el macerado y mantenerla por un periodo de 40 minutos. En la línea 4, la recarga se activa mediante un comando especial. La temperatura objetivo para la recarga es de 75°C y la duración es de 0 minutos. El Brautomat inicia el controlador PID para la refundición de la caldera y regula en segundo plano la potencia requerida. AEn este punto del plan de macerado, hay dos controladores PID activos: un controlador PID para el hervidor de macerado y un controlador PID para el vertido posterior. El Brautomat salta directamente al siguiente paso después del encendido.
 
-En el plan de maceración, el actuador del elemento calefactor anular se enciende o se conecta una vez con el comando especial _RHE:ON_ y una vez con _RHE:50_. ON traduce Brautomat con un rendimiento del 100 %, mientras que 50 se procesa en consecuencia con un rendimiento del 50 %. La tetera MashSud tiene un volumen máximo de 70 litros. La resistencia de anillo sostiene la placa durante la cocción con un 50 % de potencia para una cocción vigorosa: placa de cocción al 100 % de potencia (3,5 kW) más resistencia de anillo de 1,75 kW (50 %). Al final de la cocción, la resistencia circular se apaga con el comando especial _RHE:OFF_.
+En el plan de maceración, el actuador del elemento calefactor anular se enciende o se conecta una vez con el comando especial _RHE:ON_ y una vez con _RHE:50_. ON traduce el Brautomat con un rendimiento del 100 %, mientras que 50 se procesa en consecuencia con un rendimiento del 50 %. La tetera MashSud tiene un volumen máximo de 70 litros. La resistencia de anillo sostiene la placa durante la cocción con un 50 % de potencia para una cocción vigorosa: placa de cocción al 100 % de potencia (3,5 kW) más resistencia de anillo de 1,75 kW (50 %). Al final de la cocción, la resistencia anular se apaga con el comando especial _RHE:OFF_.
 
 El momento de la adición de lúpulo se calcula en función de su tiempo de cocción. El programa de puré tiene un tiempo total de cocción de 90 minutos. De este se hierve 30 minutos sin añadir lúpulo. El tiempo total de cocción de las adiciones individuales de lúpulo se suma. Es decir. la primera incorporación de lúpulo _Hall. Tradición 6,0% 37,2g_ se cocina durante un total de 60 minutos:
 
@@ -278,7 +276,7 @@ Si bien herramientas como kleineBrauhelfer, BrewFather o MMum siempre indican el
 
 _Extensión:_ Se amplía la explicación de las dosis de lúpulo para incluir dos o más dosis al mismo tiempo:
 
-![ejemplo del día de preparación del plan de maceración](/docs/img/example_control_commands3.jpg)
+![ejemplo del día de elaboración del plan de macerado](/docs/img/example_control_commands3.jpg)
 
 El lúpulo se debe añadir 10 minutos antes de que finalice la ebullición. Al mismo tiempo se añaden al mosto Tradition 6,0% 30g_ y levadura alimenticia _levadura nutritiva_. La ilustración muestra lo sencillo que es el procedimiento: se administran dosis simultáneas con una duración de 0 minutos antes de una dosis con una duración.
 
@@ -286,4 +284,4 @@ El penúltimo paso posterior a la isomerización utiliza la función especial de
 
 El gráfico del plan de maceración:
 
-![ejemplo del día de elaboración del plan de maceración](/docs/img/example_control_commands2.jpg)
+![ejemplo del día de preparación del plan de macerado](/docs/img/example_control_commands2.jpg)

@@ -10,11 +10,11 @@ Navnet på mash-planen kan spesifiseres i innstillingene. Filnavnet er avledet f
 
 Ved hjelp av tidskontroll kan en brudedag planlegges og startes automatisk.
 
-![Tidskontroll](/docs/img/Time control.jpg)
+![Tidskontroll](/docs/img/Zeitsteuerung.jpg)
 
 Med DateTimerPicker-elementet kan du enkelt velge dato og klokkeslett. Oppskriftsnavnet erstattes midlertidig av den angitte starttiden.
 
-![Tidskontroll](/docs/img/Time control2.jpg)
+![Tidskontroll](/docs/img/Zeitsteuerung2.jpg)
 
 En aktivert tidskontroll lagres i konfigurasjonen. Når bryggemaskinen startes på nytt, leses innstilt dato og klokkeslett. Dersom denne bryggestarten er i fremtiden, aktiveres tidsstyringen. Hvis bryggestarten er i fortiden, er tidskontrollen deaktivert.
 
@@ -61,9 +61,9 @@ Den valgte mash-planen fjernes fra flash-minnet.
 
 ## Import standard
 
-![Forhåndsinnstilt import](/docs/img/preset_import.jpg)
+![Import standard](/docs/img/voreinstellung_import.jpg)
 
-Brautomat krever en Schred mesking inn (valgfritt) og ettstegs mesking. Spesielt fungerer mesketrinnet som et skilletrinn mellom mesking og matlaging når autonext er deaktivert. Ved import kan Brautomat legge inn manglende meske- og mesketrinn. I tillegg kan manglende temperaturer leveres med spesifikasjoner.
+Brautomat krever et mesketrinn (valgfritt) og et mesketrinn. ISpesielt fungerer mesketrinnet som et skilletrinn mellom mesking og matlaging når autonext er deaktivert. Ved import kan Brautomat legge inn manglende meske- og mesketrinn. I tillegg kan manglende temperaturer leveres med spesifikasjoner.
 
 ### Temperaturstandarder for manglende parametere
 

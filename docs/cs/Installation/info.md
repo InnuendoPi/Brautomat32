@@ -16,9 +16,9 @@ Operační systém MS Windows automaticky vytvoří sériový COM port při při
 
 Na obrázku bylo nalezeno zařízení ESP na COM7. V ojedinělých případech není sériový COM port pod MS Windows automaticky poskytnut. Ovladače USB pro mikrokontroléry ESP jsou k dispozici na následujících webových stránkách: (MS Win a macOS)
 
-[!"
+[![ESP32 Ovladače](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-Skript Flashen.cmd používá nástroj esptool.exe <https://github.com/espressif/esptool>. ESPTool je volně dostupný pro různé operační systémy (macOS, Linux). V archivu ZIP je zahrnuta verze Windows 64bit. ESPTool je licencován pod GPL v2. Kopii naleznete v přiloženém [souboru LICENCE] (https://github.com/espressif/esptool/blob/master/LICENSE).
+Skript Flashen.cmd používá nástroj esptool.exe <https://github.com/espressif/esptool>. ESPTool je volně dostupný pro různé operační systémy (macOS, Linux). V archivu ZIP je zahrnuta verze Windows 64bit. ESPTool je licencován pod GPL v2. Kopii naleznete v přiloženém [souboru LICENCE](https://github.com/espressif/esptool/blob/master/LICENSE).
 
 ### Ruční flashování MS Windows, macOS a Linux
 
@@ -61,11 +61,11 @@ Konfigurace WLAN se zobrazí pomocí tlačítka „Konfigurovat WiFi“.
 
 Zde je třeba zadat WLAN (SSID a heslo). Pomocí _Save_ se Brautomat restartuje a připojí k WLAN. Webové rozhraní Brautomat je dostupné v místní síti WLAN přes adresu <http://Brautomat.local>.
 
-Tím je základní instalace dokončena. Proces flashování firmwaru a konfigurace WLAN stačí provést pouze jednou. Nyní je třeba nakonfigurovat Brautomat. Konfigurace je popsána v části _Basic Setupung_ popsal. Následující část _Update_ lze zpočátku přeskočit.
+Tím je základní instalace dokončena. Proces flashování firmwaru a konfigurace WLAN stačí provést pouze jednou. Nyní je třeba nakonfigurovat Brautomat. Konfigurace je popsána v části _Základní nastavení_. Následující část _Update_ lze zpočátku přeskočit.
 
 > **Poznámka:**\
-Brautomat32 se snaží navázat spojení s konfigurací WLAN (SSID a heslo) po dobu až 20 sekund. Pokud nelze navázat spojení, například pokud bylo heslo zadáno nesprávně, Brautomat32 se restartuje v režimu AccessPoint.\
-V ojedinělých případech a obvykle pouze při slabém signálu WLAN Brautomat32 nenalezne vhodnou WLAN a také se spustí v AccessPoint Mode po cca. 20 sekund. V tomto případě pomůže pouze restartování Brautomat32.
+Brautomat32 se snaží navázat spojení s konfigurací WLAN (SSID a heslo) po dobu až 20 sekund. Pokud nelze navázat spojení, například pokud je heslo zadáno nesprávněbyl použit, pak se Brautomat32 znovu spustí v režimu AccessPoint.\
+Ve vzácných případech a obvykle pouze při slabém signálu WLAN Brautomat32 nenalezne vhodnou WLAN a také se spustí v režimu AccessPoint po cca. 20 sekund. V tomto případě pomůže pouze restartování Brautomat32.
 
 ##Aktualizace
 
@@ -88,11 +88,11 @@ Aktualizace firmwaru pomocí volby FileUpdate probíhá v několika krocích:
 Nejprve je nutné stáhnout aktuální firmware. Archiv ZIP se poté rozbalí.\
 Ve webovém rozhraní Brautomat vyberte položku nabídky Aktualizovat a poté FileUpdate. Zobrazí se jednoduchá webová stránka s aktualizací (obrázek 1):
 
-![FileUpdate](/docs/img/fileupdate2.jpg)
+![FileUpdate](/docs/img/dateiupdate2.jpg)
 
 V části Firmware pomocí tlačítka „Vybrat soubor“ je nyní nutné vybrat soubor _firmware.bin_ z archivu ZIP (na obrázku 2). Kliknutím na Update Firmware spustíte aktualizaci.
 
 Systém souborů Brautomat lze také aktualizovat.
 
 > **Poznámka:**\
-Funkce Update FileSystem znovu sestaví systém souborů. Update FileSystem přepíše všechna nastavení a konfigurace. Kromě konfigurace to zahrnuje také profily a receptury bojleru na kaši. Téměř ve všech případech je správnou volbou firmware aktualizace souborů následovaný aktualizací WebUpdate, protože aktualizace WebUpdate aktualizuje jednotlivé soubory v systému souborů po aktualizaci firmwaru.
+Funkce Update FileSystem znovu sestaví systém souborů. Update FileSystem přepíše všechna nastavení a konfigurace. Kromě konfigurace to zahrnuje také profily a receptury bojleru na kaši. Téměř ve všech případech je správnou volbou aktualizace firmwaru souborů následovaná aktualizací WebUpdate, protože aktualizace WebUpdate aktualizuje jednotlivé soubory v systému souborů po aktualizaci firmwaru.

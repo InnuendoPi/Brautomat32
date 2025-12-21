@@ -4,9 +4,9 @@ Brautomat lze volitelně ovládat pomocí dotykového displeje. Podporován je 3
 
 | Nextion Display | Firmware |
 | ---------------- | --------- |
-| NX4832T035 (základní řada) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832T035.tft) |
-| NX4832K035 (Rozšířená řada) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832K035.tft) |
-| NX4832F035 (Discovery Series) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832F035.tft) |
+| NX4832T035 (základní řada) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832T035.tft) |
+| NX4832K035 (Rozšířená řada) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832K035.tft) |
+| NX4832F035 (Discovery Series) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832F035.tft) |
 
 Displej vyžaduje firmware, aby fungoval s Brautomat. Firmware, který odpovídá typu displeje, je uveden v tabulce. Viz také blikání zobrazovaného souboru.
 
@@ -15,7 +15,7 @@ Displej vyžaduje firmware, aby fungoval s Brautomat. Firmware, který odpovíd�
 Displej je k desce připojen 4 kabely
 
 | Kabel | Nextion Display | Připojovací svorkovnice |
-| ------------- | ---------------- | ------------------------- |
+| -------------- | ---------------- | ------------------------- |
 |     červená | Aktuální + | Vcc |
 |   černá | Elektřina - | GND |
 |    modrá | TX | SDL (D1) |
@@ -29,7 +29,7 @@ Displej musí být připraven před prvním uvedením do provozu. K tomu se z ta
 
 ## Zobrazit kaši
 
-![MaischeSud](/docs/img/brewpage-sm.jpg)
+![MashSud](/docs/img/brewpage-sm.jpg)
 
 Strana MashSud je preferovanou stranou při vaření. Informace se na displeji zobrazují každou sekundu
 
@@ -41,7 +41,7 @@ zobrazeno. Ve spodním řádku se zobrazí i další odpočinek. Čas vlevo je �
 
 ## Zobrazit přehled kotle
 
-![Přehled konvice](/docs/img/kettlepage-sm.jpg)
+![Přehled kotle](/docs/img/kettlepage-sm.jpg)
 
 Přehled bojleru zobrazuje bojler na vaření rmutu a případně bojler na vaření a přelévání s informacemi o skutečné a cílové teplotě.
 

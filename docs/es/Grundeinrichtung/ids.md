@@ -22,7 +22,7 @@ A continuación, se debe asignar un sensor de temperatura al hervidor MashBud. L
 
 _Nota_: _A una placa de cocción se le debe asignar permanentemente un sensor de temperatura. El valor del sensor se denomina temperatura real o temperatura actual y se compara continuamente con la temperatura de reposo (temperatura objetivo) durante el proceso de maceración._
 
-![Configurar caldera de maceración](/docs/img/IDS-configure.jpg)
+![Configurar caldera de macerado](/docs/img/IDS-konfigurieren.jpg)
 
 Los parámetros de la pestaña "Control de temperatura" se explican detalladamente en la sección "Todos los parámetros". Para la configuración básica, inicialmente se adoptan los valores predeterminados.
 

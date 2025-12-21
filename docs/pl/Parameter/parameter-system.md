@@ -29,27 +29,27 @@ Za pomocą tego parametru można obsługiwać 3,5-calowy wyświetlacz Nextion HM
 W tym widoku wyświetlane są IDS i temperatura po odlewaniu z temperaturą rzeczywistą i docelową. Wyświetlany jest bieżący i następny odpoczynek wraz z czasem trwania.
 Długość czerwonego paska pod widokiem IDS i przekształceniem pokazuje czas odpoczynku, który upłynął.
 
-![Display](/docs/img/kettlepage-sm.jpg)
+![Wyświetlacz](/docs/img/kettlepage-sm.jpg)
 
 #### MashBud
 
-Ten widok przedstawia pierwszą płytę grzejną. Wyświetlany jest aktualny czas odpoczynku z temperaturą rzeczywistą i docelową, a także bieżącym pozostałym czasem. Długość czerwonego paska pod temperaturami pokazuje postęp aktualnego odpoczynku. Symbol po prawej stronie pozostałego czasu pokazuje, czy następna przerwa rozpocznie się automatycznie (autonext): zielony oznacza automatyczną, czerwony oznacza przerwę. Dodatkowo wyświetlany jest panel kontrolny z odpowiednimi funkcjami.
+Ten widok przedstawia pierwszą płytę grzejną. Wyświetlany jest aktualny czas odpoczynku z temperaturą rzeczywistą i docelową, a także bieżącym pozostałym czasem. Długość czerwonego paska pod temperaturami pokazuje postęp aktualnego odpoczynku. Symbol po prawej stronie pozostałego czasu pokazuje, czy następna przerwa rozpocznie się automatycznie (autonext): zielony oznacza automatyczną, czerwony oznacza przerwę. Dodatkowo wyświetlany jest controller Deck z odpowiednimi funkcjami.
 
-![Display](/docs/img/brewpage-sm.jpg)
+![Wyświetlacz](/docs/img/brewpage-sm.jpg)
 
 #### Tryb ręczny (tylko dla GGM IDS2)
 
 Widok ten służy do ręcznego sterowania płytą indukcyjną. W trybie ręcznym dostępnych jest 6 poziomów mocy: 0, 20, 40, 60, 80 i 100% mocy. Tryb ręczny jest odpowiedni tylko dla GGM IDS2. (IDS1 nie testowany!)
 
-![Display](/docs/img/induction-mode-sm.jpg)
+![Wyświetlacz](/docs/img/induction-mode-sm.jpg)
 
 Wyświetlacz jest opcjonalny. Brautomat obsługuje tylko 3,5-calowe wyświetlacze dotykowe Nextion HMI (serie Basic i Discovery).
 
 Wyświetlacz konfiguruje się za pomocą karty SD. Plik TFT z folderu Info odpowiadający wyświetlaczowi jest kopiowany na kartę SD i umieszczany w wyświetlaczu. Po włączeniu wyświetlacza rozpoczyna się konfiguracja. Proces trwa około minuty. Postęp jest pokazywany na wyświetlaczu. Po zakończeniu konfiguracji wyświetlacz wyłączy się, a karta SD zostanie wyjęta. Wyświetlacz jest teraz gotowy do użycia.
 
-Należy zauważyć, że SDA, SCL naPINy D1, D2 muszą być obsługiwane.
+Należy zaznaczyć, że SDA, SCL muszą być obsługiwane na PINach D1, D2.
 
-### Czujniki PT100x MAX31865 Aktywuj wzmacniacz
+### Czujniki PT100x MAX31865 AmplAktywuj tutaj
 
 Jeżeli stosowane są analogowe czujniki PT100x, należy aktywować ten przełącznik. Czujnik analogowy PT100x wymaga przetwornika RTD na cyfrowy w celu połączenia z mikrokontrolerem ESP. Wzmacniacz MAX31865 to przetwornik cyfrowy RTD w postaci małej dodatkowej płytki.
 
@@ -59,9 +59,9 @@ Multicast DNS służy do tłumaczenia nazw hostów na adresy IP w małych siecia
 
 Uwaga: Nazwa mDNS jest konfigurowana bez protokołu (http://) i domeny najwyższego poziomu (.local) w ustawieniach systemu (Brautomat).
 
-### Pulpit nawigacyjny
+### Dashboard
 
-Elementy można łatwo pokazywać i ukrywać za pomocą pulpitu nawigacyjnego. Na przykład, jeśli nie jest używane żadne przekształcenie, element Przekształcenie powinien być dezaktywowany dla pulpitu nawigacyjnego. Wyłączone elementy zmniejszają ruch.
+Za pomocą Dashboard możesz łatwo pokazywać i ukrywać elementy. Na przykład, jeśli nie jest używane przekształcenie, element Przekształcenie dla Dashboard powinien być dezaktywowany. Wyłączone elementy zmniejszają ruch.
 
 ### Rejestrowanie
 
@@ -107,8 +107,7 @@ Strefa czasowa służy do określenia prawidłowego czasu, włączając czas let
 |Afryka/Dakar |GMT0 |
 |Afryka/Dar_es_Salaam |EAT-3 |
 |Afryka/Dżibuti |EAT-3 |
-|Afryka/Douala |WAT-1 |
-|Afryka/El_Aaiun |<+01>-1 |
+|Afryka/Duala |WAT-1 ||Afryka/El_Aaiun |<+01>-1 |
 |Afryka/Wolne Miasto |GMT0 |
 |Afryka/Gaborone |CAT-2 |
 |Afryka/Harare |CAT-2 |
@@ -158,8 +157,8 @@ Strefa czasowa służy do określenia prawidłowego czasu, włączając czas let
 |Ameryka/Argentyna/Tucuman |<-03>3 |
 |Ameryka/Argentyna/Ushuaia |<-03>3 |
 |Ameryka/Aruba |AST4 |
-|Ameryka/Asuncion|<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
-|Ameryka/Atikokan |EST5 |
+|Ameryka/Asuncion |<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
+|Ameryka/Atikokan|EST5 |
 |Ameryka/Bahia |<-03>3 |
 |Ameryka/Bahia_Banderas |CST6 |
 |Ameryka/Barbados |AST4 |
@@ -260,8 +259,8 @@ Strefa czasowa służy do określenia prawidłowego czasu, włączając czas let
 |Ameryka/Portoryko |AST4 |
 |Ameryka/Punta_Arenas |<-03>3 |
 |Ameryka/Rzeka_Deszczowa |CST6CDT,M3.2.0,M11.1.0 |
-|Ameryka/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0|
-|Ameryka/Recife |<-03>3 |
+|Ameryka/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0 |
+|Ameryka/Recife |<-03>3|
 |Ameryka/Regina |CST6 |
 |Ameryka/Resolute |CST6CDT,M3.2.0,M11.1.0 |
 |Ameryka/Rio_Branco |<-05>5 |
@@ -312,8 +311,8 @@ Strefa czasowa służy do określenia prawidłowego czasu, włączając czas let
 |Azja/Bagdad |<+03>-3 |
 |Azja/Bahrajn |<+03>-3 |
 |Azja/Baku |<+04>-4 |
-|Azja/Bangkok|<+07>-7 |
-|Azja/Barnauł |<+07>-7 |
+|Azja/Bangkok |<+07>-7 |
+|Azja/Stodołaaul |<+07>-7 |
 |Azja/Bejrut |EET-2EEST,M3.5.0/0,M10.5.0/0 |
 |Azja/Biszkek |<+06>-6 |
 |Azja/Brunei |<+08>-8 |
@@ -363,7 +362,7 @@ Strefa czasowa służy do określenia prawidłowego czasu, włączając czas let
 |Azja/Riyad |<+03>-3 |
 |Azja/Sachalin |<+11>-11 |
 |Azja/Samarkanda |<+05>-5 |
-|Azja/Seul |KST-9|
+|Azja/Seul |KST-9 |
 |Azja/Szanghaj |CST-8 |
 |Azja/Singapur |<+08>-8 |
 |Azja/Srednekolymsk |<+11>-11 |
@@ -414,7 +413,7 @@ Strefa czasowa służy do określenia prawidłowego czasu, włączając czas let
 |Europa/Bratysława |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Bruksela |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Bukareszt |EET-2EEST,M3.5.0/3,M10.5.0/4 |
-|Europa/Budapeszt |CET-1CEST,M3.5.0,M10.5.0/3|
+|Europa/Budapeszt |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Busingen |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Kiszyniów |EET-2EEST,M3.5.0,M10.5.0/3 |
 |Europa/Kopenhaga |CET-1CEST,M3.5.0,M10.5.0/3 |
@@ -466,7 +465,7 @@ Strefa czasowa służy do określenia prawidłowego czasu, włączając czas let
 |Europa/Zaporoże |EET-2EEST,M3.5.0/3,M10.5.0/4 |
 |Europa/Zurych |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Indyjskie/Antananarywa |EAT-3 |
-|Indianin/Chagos |<+06>-6 |
+|Indyjski/Chagos |<+06>-6|
 |Indyjski/Boże Narodzenie |<+07>-7 |
 |Indyjskie/Kokosowe |<+0630>-6:30 |
 |Indyjski/Komoro |EAT-3 |
@@ -514,11 +513,11 @@ Strefa czasowa służy do określenia prawidłowego czasu, włączając czas let
 |Pacyfik/Tongatapu |<+13>-13 |
 |Pacyfik/Wake |<+12>-12 |
 |Pacyfik/Wallis |<+12>-12 |
-|Itp./GMT |GMT0 |
+|Itd./GMT |GMT0 |
 |Itd./GMT-0 |GMT0 |
 |Itd./GMT-1 |<+01>-1 |
-|Itd./GMT-2|<+02>-2 |
-|Itd./GMT-3 |<+03>-3 |
+|Itd./GMT-2 |<+02>-2 |
+|Itd./GMT-3|<+03>-3 |
 |Itd./GMT-4 |<+04>-4 |
 |Itd./GMT-5 |<+05>-5 |
 |Itd./GMT-6 |<+06>-6 |

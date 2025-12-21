@@ -26,7 +26,7 @@ Alternativně může být Brautomat provozován s 5V DC napájecím zdrojem. V t
 Brautomat podporuje až tři teplotní senzory DS18B20. Konektor je na obrázku desky označen DS18B20-1 až DS18B20-3. Barvy senzorových kabelů jsou různé. U velmi levných snímačů bez označení nebo popisu je barevné schéma obvykle černá - červená - žlutá.
 
 | Typ | Barva | Připojení |
-| ------------- | ---------------- | ------------------------- |
+| -------------- | ---------------- | ------------------------- |
 | Napětí + | zelená nebo červená | Vcc |
 | Datová linka | bílá nebo žlutá | Údaje |
 | Napětí - | hnědá nebo černá | GND |
@@ -53,7 +53,7 @@ Musí být dodržena sekvence CS0 až CS2 pro připojení snímačů PT100x.
 ## Připojte displej
 
 | Kabel | Nextion Display | Připojení |
-| ------------- | ---------------- | ------------------------- |
+| -------------- | ---------------- | ------------------------- |
 |     červená | Aktuální + | Vcc |
 |   černá | Elektřina - | GND |
 |    modrá | TX | D1 |

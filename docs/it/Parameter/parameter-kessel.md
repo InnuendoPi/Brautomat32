@@ -18,15 +18,15 @@ Questo parametro descrive la temperatura alla quale il controller PID dovrebbe r
 
 ### Potenza dalla transizione [%]
 
-Questo parametro descrive la potenza erogata dal piano cottura dal passaggio della temperatura alla cottura. Il valore predefinito è 100%. Il parametro "Transizione alla cottura" è stato utilizzato per impostare una temperatura alla quale il controller PID è disattivato. Il parametro “Potenza dalla transizione” ora specifica la potenza di uscita fissa per il piano cottura. Se viene utilizzato un bollitore con un volume di 35 litri o più, il valore predefinito del 100% è una scelta adatta. Nelle cucine dei birrifici con piccoli bollitori, l'approvvigionamento energetico al 100% può causare traboccamento. In questo caso l'apporto energetico massimo può essere ridotto, ad esempio, al 75% utilizzando questo parametro.
+Questo parametro descrive la potenza erogata dal piano cottura dal passaggio della temperatura alla cottura. Il valore predefinito è 100%. Il parametro "Transizione alla cottura" è stato utilizzato per impostare una temperatura alla quale il controller PID è disattivato. Il parametro “Potenza dalla transizione” ora specifica la potenza di uscita fissa per il piano cottura. Se viene utilizzato un bollitore con un volume di 35 litri o più, il valore predefinito del 100% è una scelta adatta. Nelle cucine dei birrifici con piccoli bollitori, l'approvvigionamento energetico al 100% può causare traboccamento. In questo caso con questo parametro è possibile ridurre l'apporto massimo di energia, ad esempio, al 75%.
 
 ### Disattiva PID per la cottura [on/off]
 
 Questo parametro determina il comportamento del controller PID durante la cottura quando la temperatura effettiva è superiore alla temperatura target. Esempio: nel piano di ammostamento la temperatura di cottura è stata impostata su 98°C. Il parametro "Potenza dalla transizione" disattiva il calcolo del PID dalla temperatura "Transizione all'ebollizione". Se il parametro "Disattiva PID per l'ebollizione" è attivato (predefinito), il regolatore PID rimane spento anche al di sopra della temperatura nominale di 98°C del piano di ammostamento e viene utilizzata la potenza del parametro "Potenza dalla transizione". Questo parametro è attivato di default e abilita la cottura rolling.
 
-Se il parametro "Disattivare PID per la cottura" non è attivato, la potenza necessaria viene calcolata dal regolatore PID una volta raggiunta la temperatura target (qui 98°C). La prestazione calcolata è superiore all'obiettivo-La temperatura è 0%. Se necessario, il piano cottura si spegne e impedisce il traboccamento.
+Se il parametro "Disattivare PID per la cottura" non è attivato, la potenza necessaria viene calcolata dal regolatore PID una volta raggiunta la temperatura target (qui 98°C). La potenza calcolata al di sopra della temperatura target è 0%. Se necessario, il piano cottura si spegne e impedisce il traboccamento.
 
-### Prestazioni errore sensore [0-100%]
+### Prestazioniin caso di errore del sensore [0-100%]
 
 Se si verifica un errore del sensore, ad esempio un sensore non è collegato o è difettoso, è possibile regolare la potenza del piano cottura per gestire questo errore. Un valore del 100% ignora l'errore del sensore.
 
@@ -72,7 +72,7 @@ _Questi 10 parametri devono essere impostati individualmente per ciascun sistema
 
 Il Brautomat può gestire i profili hardware. I profili possono essere utilizzati se sono presenti caldaie diverse. Gli utenti con bollitori di diverse dimensioni possono utilizzare i profili per selezionare il bollitore per il giorno di produzione della birra invece di dover reinserire manualmente tutti i parametri. Un profilo hardware contiene tutte le impostazioni di una caldaia.
 
-I profili vengono salvati nella cartella /Profiles. I profili consentono un'operazione semplice e velocePassare da una caldaia all'altra. La funzione Salva crea un file di profilo con i parametri sopra indicati, mentre la funzione Elimina rimuove il file di profilo dalla memoria flash.
+I profili vengono salvati nella cartella /Profiles. I profili consentono il passaggio rapido e semplice tra diverse caldaie. La funzione Salva crea un file di profilo con den sopra i parametri, mentre la funzione Elimina rimuove il file del profilo dalla memoria flash.
 
 Il profilo predefinito all'avvio della macchina per il pane è sempre l'ultimo profilo selezionato.
 
@@ -151,4 +151,4 @@ La capacità termica specifica qui utilizzata 3600 ha una tolleranza di errore d
 9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 162194,8 / 44 = 3686,25 J per kg per grado Celsius
 ```
 
-Vedi anche [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+Vedi anche [Rivista sulla produzione di birra](https://braumagazin.de/article/berechnungen-in-der-brauerei/)

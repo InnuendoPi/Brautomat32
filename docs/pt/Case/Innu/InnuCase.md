@@ -39,7 +39,7 @@ O InnuCase está disponível em dois tamanhos. Os arquivos de impressão são ar
 O InnuCase #2 destina-se a uma máquina de pão automática com display e sensor. Se não for utilizado nenhum display, a abertura do display pode ser fechada com uma tampa cega.
 
 Conexões de plugue adequadas para furos M12 incluem [Plugue de aviação GX12](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_6Z58FR08HC6VACCZPY83). Os Conjuntos de Aviação GX12 estão disponíveis em 2 pinos (atuadores), 3 pinos (DS18B20) e 4 pinos (PT100x).
-Um interruptor de alimentação adequado é, entre outras coisas, um [pressostato LED](https://www.amazon.de/dp/B09WXPJQN3?psc=1&ref=ppx_yo2ov_dt_b_product_details). O InnuCase-1 pode acomodar dois módulos PWM. O recorte para um módulo PWM pode ser fechado com uma tampa cega.
+Um interruptor de alimentação adequado é, entre outras coisas, um [interruptor de pressão de LED](https://www.amazon.de/dp/B09WXPJQN3?psc=1&ref=ppx_yo2ov_dt_b_product_details) travado. O InnuCase-1 pode acomodar dois [Módulos PWM](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_56603DDHC44WFNJ0BFM4). O recorte para um módulo PWM pode ser fechado com uma tampa cega.
 
 ## Cobertura da caixa
 
@@ -56,34 +56,34 @@ Um interruptor de alimentação adequado é, entre outras coisas, um [pressostat
 
 ## Conexão roscada da carcaça
 
-A caixa possui vários suportes para conexão aparafusada [Rosca inserções](https://www.amazon.de/dp/B0BZVGQ91H/?coliid=I1EM9CS796PWGZ&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_64ER38VQR1H02DJ4WZ4A). Os furos nas almofadas têm um diâmetro de 4,6 mm. As inserções roscadas são derretidas no orifício da almofada usando um ferro de solda. Os insertos roscados M3 estão interligados.
+A caixa possui vários suportes para segurar [inserções roscadas](https://www.amazon.de/dp/B0BZVGQ91H/?coliid=I1EM9CS796PWGZ&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_64ER38VQR1H02DJ4WZ4A) para uma conexão roscada. Os furos nas almofadas têm um diâmetro de 4,6 mm. As inserções roscadas são derretidas no orifício da almofada usando um [ferro de solda](https://www.amazon.de/gp/product/B0CDBSGSXY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1). Os insertos roscados M3 estão interligados.
 
-![Inserções encadeadas](/docs/img/Gewindeeinseiten.jpg)
+![Inserções de thread](/docs/img/Gewindeeinsätze.jpg)
 
 ## Porta-placa de circuito
 
-A placa de circuito é parafusada em uma placa de suporte. A placa de suporte é montada atrás do display usando [mangas distanciadoras](https://www.reichelt.de/distanzhuelsen-metall-6-kant-m3-15mm-da-15mm-p7018.html?CCOUNTRY=445&LANGUAGE=de&trstct=pos_0&nbc=1&&r=1). Mangas espaçadoras hexagonais M3 com comprimento de 15 mm estão unidas.
+A placa de circuito é parafusada em uma placa de suporte. A placa de suporte é montada atrás do display usando [luvas espaçadoras](https://www.reichelt.de/distanzhuelsen-metall-6-kant-m3-15mm-da-15mm-p7018.html?CCOUNTRY=445&LANGUAGE=de&trstct=pos_0&nbc=1&&r=1). Mangas espaçadoras hexagonais M3 com comprimento de 15 mm estão unidas.
 
-![Platinenträger](/docs/img/Platinenträger-1.jpg) ![Portador de placa MAX31865](/docs/img/Platinenträger-2.jpg)
+![Porta-placa](/docs/img/Platinenträger-1.jpg) ![Porta-placa MAX31865](/docs/img/Platinenträger-2.jpg)
 
 A figura mostra 2 suportes de placa de circuito:
 
 * a placa de suporte menor inferior é para máquinas de fazer pão automáticas com sensores DS18B20
 * a placa de suporte superior e maior é para máquinas de pão automáticas com sensores PT100x (orifícios adicionais para segurar 2 placas MAX31865)
 
-A placa transportadora permite um mon completodias no alojamento. Nenhum componente ou cabo Brautomat está conectado à tampa da caixa.
+A placa de suporte permite a montagem completa na caixa. Nenhum componente ou cabo Brautomat está conectado à tampa da caixa.
 
 ## Colchete
 
 Estão disponíveis suportes simples para fixar a caixa. O suporte é parafusado na parte traseira, atrás da tampa.
 
-![Suporte](/docs/img/Holder.jpg)
+![Colchetes](/docs/img/Halterung.jpg)
 
 ## Capa cega
 
 A tampa cega fecha a abertura do display na caixa quando nenhum display está inserido.
 
-![Blindlid](/docs/img/Blindlid.jpg)
+![Capa cega](/docs/img/Blinddeckel.jpg)
 
 ## Imagens
 

@@ -33,7 +33,7 @@ Délka červeného pruhu pod zobrazením IDS a překreslením ukazuje uplynulou 
 
 #### MashBud
 
-Tento pohled ukazuje první varnou desku. Zobrazí se aktuální doba odpočinku se skutečnou a cílovou teplotou a také aktuální zbývající čas. Délka červeného pruhu pod teplotami ukazuje průběh aktuálního odpočinku. Symbol napravo od zbývajícího času ukazuje, zda se další přestávka spustí automaticky (autonext): zelená znamená automaticky, červená znamená přestávku. Kromě toho se zobrazí ovládací panel s odpovídajícími funkcemi.
+Tento pohled ukazuje první varnou desku. Zobrazí se aktuální doba odpočinku se skutečnou a cílovou teplotou a také aktuální zbývající čas. Délka červeného pruhu pod teplotami ukazuje průběh aktuálního odpočinku. Symbol napravo od zbývajícího času ukazuje, zda se další přestávka spustí automaticky (autonext): zelená znamená automaticky, červená znamená přestávku. Kromě toho se zobrazí controller Deck s odpovídajícími funkcemi.
 
 ![Zobrazení](/docs/img/brewpage-sm.jpg)
 
@@ -41,15 +41,15 @@ Tento pohled ukazuje první varnou desku. Zobrazí se aktuální doba odpočinku
 
 Toto zobrazení se používá k ručnímu ovládání indukční varné desky. V manuálním režimu je k dispozici 6 úrovní výkonu: 0, 20, 40, 60, 80 a 100 % výkonu. Manuální režim je vhodný pouze pro GGM IDS2. (IDS1 netestováno!)
 
-![Display](/docs/img/induction-mode-sm.jpg)
+![Zobrazení](/docs/img/induction-mode-sm.jpg)
 
 Displej je volitelný. Brautomat podporuje pouze 3,5palcové dotykové displeje Nextion HMI (řady Basic a Discovery).
 
 Displej se konfiguruje pomocí SD karty. Soubor TFT ze složky Info, který odpovídá zobrazení, se zkopíruje na kartu SD a vloží se do displeje. Jakmile se zapne displej, začne konfigurace. Proces trvá asi minutu. Průběh se zobrazuje na displeji. Po dokončení konfigurace se displej vypne a SD karta se vyjme. Displej je nyní připraven k použití.
 
-Je třeba poznamenat, že SDA, SCL naJe nutné obsluhovat PINy D1, D2.
+Je třeba poznamenat, že SDA, SCL musí být provozovány na PINech D1, D2.
 
-### Senzory PT100x MAX31865 Aktivujte zesilovač
+### Senzory PT100x MAX31865 AmplAktivujte zde
 
 Pokud jsou použity analogové snímače PT100x, musí být tento spínač aktivován. Analogový snímač PT100x vyžaduje RTD na digitální převodník pro připojení k mikrokontroléru ESP. MAX31865 zesilovač je RTD digitální převodník ve formě malé přídavné desky.
 
@@ -59,9 +59,9 @@ Multicast DNS se používá k překladu názvů hostitelů na IP adresy v malýc
 
 Poznámka: Název mDNS je konfigurován bez protokolu (http://) a bez domény nejvyšší úrovně (.local) v nastavení systému (Brautomat).
 
-### Ovládací panel
+### Dashboard
 
-Prvky lze snadno zobrazit a skrýt prostřednictvím palubní desky. Pokud se například nepoužívá žádné přetypování, měl by být prvek Recasting pro řídicí panel deaktivován. Deaktivované položky snižují provoz.
+Pomocí Dashboard můžete snadno zobrazit a skrýt prvky. Pokud se například nepoužívá žádné přetypování, měl by být prvek Recasting pro Dashboard deaktivován. Deaktivované položky snižují provoz.
 
 ### Protokolování
 
@@ -107,8 +107,7 @@ Network Time Protocol (NTP) pravidelně synchronizuje čas s časovým serverem.
 |Afrika/Dakar |GMT0 |
 |Afrika/Dar_es_Salaam |EAT-3 |
 |Afrika/Džibutsko |EAT-3 |
-|Afrika/Douala |WAT-1 |
-|Afrika/El_Aaiun |<+01>-1 |
+|Afrika/Douala |WAT-1 ||Afrika/El_Aaiun |<+01>-1 |
 |Afrika/Freetown |GMT0 |
 |Afrika/Gaborone |CAT-2 |
 |Afrika/Harare |CAT-2 |
@@ -158,8 +157,8 @@ Network Time Protocol (NTP) pravidelně synchronizuje čas s časovým serverem.
 |Amerika/Argentina/Tucuman |<-03>3 |
 |Amerika/Argentina/Ushuaia |<-03>3 |
 |Amerika/Aruba |AST4 |
-|Amerika/Asuncion|<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
-|Amerika/Atikokan |EST5 |
+|Amerika/Asuncion |<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
+|Amerika/Atikokan|EST5 |
 |Amerika/Bahia |<-03>3 |
 |Amerika/Bahia_Banderas |CST6 |
 |Amerika/Barbados |AST4 |
@@ -260,8 +259,8 @@ Network Time Protocol (NTP) pravidelně synchronizuje čas s časovým serverem.
 |Amerika/Portoriko |AST4 |
 |Amerika/Punta_Arenas |<-03>3 |
 |Amerika/Rainy_River |CST6CDT,M3.2.0,M11.1.0 |
-|Amerika/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0|
-|Amerika/Recife |<-03>3 |
+|Amerika/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0 |
+|Amerika/Recife |<-03>3|
 |Amerika/Regina |CST6 |
 |Amerika/Resolute |CST6CDT,M3.2.0,M11.1.0 |
 |Amerika/Rio_Branco |<-05>5 |
@@ -312,8 +311,8 @@ Network Time Protocol (NTP) pravidelně synchronizuje čas s časovým serverem.
 |Asie/Bagdád |<+03>-3 |
 |Asie/Bahrajn |<+03>-3 |
 |Asie/Baku |<+04>-4 |
-|Asie/Bangkok|<+07>-7 |
-|Asie/Barnaul |<+07>-7 |
+|Asie/Bangkok |<+07>-7 |
+|Asie/Stodolaaul |<+07>-7 |
 |Asie/Bejrút |EET-2EEST,M3.5.0/0,M10.5.0/0 |
 |Asie/Bishkek |<+06>-6 |
 |Asie/Brunej |<+08>-8 |
@@ -363,7 +362,7 @@ Network Time Protocol (NTP) pravidelně synchronizuje čas s časovým serverem.
 |Asie/Rijád |<+03>-3 |
 |Asie/Sachalin |<+11>-11 |
 |Asie/Samarkand |<+05>-5 |
-|Asie/Soul |KST-9|
+|Asie/Soul |KST-9 |
 |Asie/Šanghaj |CST-8 |
 |Asie/Singapur |<+08>-8 |
 |Asie/Sredněkolymsk |<+11>-11 |
@@ -414,7 +413,7 @@ Network Time Protocol (NTP) pravidelně synchronizuje čas s časovým serverem.
 |Evropa/Bratislava |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Evropa/Brusel |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Evropa/Bukurešť |EET-2EEST,M3.5.0/3,M10.5.0/4 |
-|Evropa/Budapešť |CET-1CEST,M3.5.0,M10.5.0/3|
+|Evropa/Budapešť |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Evropa/Busingen |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Evropa/Kišiněv |EET-2EEST,M3.5.0,M10.5.0/3 |
 |Evropa/Kodaň |CET-1CEST,M3.5.0,M10.5.0/3 |
@@ -466,7 +465,7 @@ Network Time Protocol (NTP) pravidelně synchronizuje čas s časovým serverem.
 |Evropa/Zaporozhye |EET-2EEST,M3.5.0/3,M10.5.0/4 |
 |Evropa/Curych |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Ind/Antananarivo |EAT-3 |
-|Ind/Chagos |<+06>-6 |
+|Ind/Chagos |<+06>-6|
 |Indické/Vánoce |<+07>-7 |
 |Indické/Kokosové |<+0630>-6:30 |
 |Ind/Comoro |EAT-3 |
@@ -517,8 +516,8 @@ Network Time Protocol (NTP) pravidelně synchronizuje čas s časovým serverem.
 |Etc/GMT |GMT0 |
 |Etc/GMT-0 |GMT0 |
 |Etc/GMT-1 |<+01>-1 |
-|Etc/GMT-2|<+02>-2 |
-|Etc/GMT-3 |<+03>-3 |
+|Etc/GMT-2 |<+02>-2 |
+|Etc/GMT-3|<+03>-3 |
 |Etc/GMT-4 |<+04>-4 |
 |Etc/GMT-5 |<+05>-5 |
 |Etc/GMT-6 |<+06>-6 |

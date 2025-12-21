@@ -10,11 +10,11 @@ The name of the mash plan can be specified in the settings. The file name is der
 
 With the help of time control, a bridal day can be planned and started automatically.
 
-![Time control](/docs/img/Time control.jpg)
+![Time control](/docs/img/Zeitsteuerung.jpg)
 
 With the DateTimerPicker element you can easily select a date and time. The recipe name is temporarily replaced by the specified start time.
 
-![Time control](/docs/img/Time control2.jpg)
+![Time control](/docs/img/Zeitsteuerung2.jpg)
 
 An activated time control is saved in the configuration. When the brewing machine is restarted, the set date and time are read in. If this brewing start is in the future, the time control is activated. If the brewing start is in the past, the time control is deactivated.
 
@@ -61,9 +61,9 @@ The selected mash plan is removed from flash memory.
 
 ## Import default
 
-![Preset Import](/docs/img/preset_import.jpg)
+![Import default](/docs/img/voreinstellung_import.jpg)
 
-The Brautomat requires a Schrode mashing in (optional) and one step mashing. In particular, the mashing step serves as a separating step between mashing and cooking when autonext is deactivated. When importing, the Brautomat can insert missing mashing and mashing steps. In addition, missing temperatures can be provided with specifications.
+The Brautomat requires a mashing step (optional) and a mashing step. InIn particular, the mashing step serves as a separating step between mashing and cooking when autonext is deactivated. When importing, the Brautomat can insert missing mashing and mashing steps. In addition, missing temperatures can be provided with specifications.
 
 ### Temperature defaults for missing parameters
 

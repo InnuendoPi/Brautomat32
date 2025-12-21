@@ -22,7 +22,7 @@ Użycie przycisku Usuń powoduje usunięcie całej tabeli. Należy pamiętać, �
 
 ### Przycisk +
 
-Nowa linia jest dodawana za pomocą przycisku plus. Należy pamiętać, że nowy wiersz w tabeli należy zaakceptować poprzez kliknięcie niebieskiego symbolu zapisu w wierszu tabeli, a na koniec tabela zostanie zapisana poprzez kliknięcie zielonego symbolu zapisu.
+Nowa linia jest dodawana za pomocą przycisku plus. Należy pamiętać, że nowy wiersz w tabeli należy zaakceptować poprzez kliknięcie niebieskiego symbolu zapisu w wierszu tabeli i na koniec zapisanie tabeli poprzez kliknięcie zielonego symbolu zapisu.
 
 ### Przycisk Wykres
 
@@ -50,7 +50,7 @@ Przycisk wykresu może służyć do pokazywania i ukrywania wizualnej reprezenta
 
 ### Przycisk planu zacierania ustawień (przycisk bazy danych)
 
-W ustawieniach planu mashowego, oprócz kontroli nazwy i czasu planu mashowego, dostępne są również zmiany planu mashowego, importowanie, eksportowanie i usuwanie planów mashowych.
+W ustawieniach planu zacierania, oprócz kontroli nazwy i czasu planu zacierania, dostępne są również zmiany planu zacierania, importowanie, eksportowanie i usuwanie planów zacierania.
 
 ### Przycisk Pokaż plan zacierania (przycisk zwinięcia)
 

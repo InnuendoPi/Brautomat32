@@ -1,8 +1,8 @@
 # Mode fermenteur
 
-En mode fermenteur, le Brautomat32 traite le plan de fermentation de haut en bas de la même manière que le plan de brassage. La platine contrôleur a les mêmes fonctions.
+En mode fermenteur, le Brautomat32 traite le plan de fermentation de haut en bas de la même manière que le plan de brassage. Le controller Deck a les mêmes fonctions.
 
-![Tableau de bord du fermenteur](/docs/img/fermenter_dash.jpg)
+![Fermenteur Dashboard](/docs/img/fermenter_dash.jpg)
 
 Le traitement des étapes présente une différence importante :
 

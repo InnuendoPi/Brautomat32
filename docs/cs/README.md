@@ -30,7 +30,7 @@ Tato příručka je rozdělena do tří tematických oblastí:
   * 3D pouzdro
   * další hardware
 * Informace a často kladené dotazy
-  * malý pomocník při vaření piva2
+  * malý pomocník při vaření2
   * zařízení MQTT
 
 Tématická oblast _Software_ je zakončena souhrnem _Přehled parametrů_. Podrobnosti a informace jsou uvedeny pro mnoho parametrů pro zjednodušení konfigurace a použití.

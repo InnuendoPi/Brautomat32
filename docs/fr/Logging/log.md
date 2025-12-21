@@ -4,7 +4,7 @@
 
 La journalisation n'est disponible que dans la version de développement. La journalisation intégrée facilite le dépannage, à la fois pour les erreurs du micrologiciel Brautomat32 et pour les erreurs des utilisateurs. Un moniteur série est requis pour la sortie. Ce qui suit montre Microsoft Visual Studio Code avec l’extension Microsoft Serial Monitor. Microsoft Visual Code est gratuit et disponible en version autonome (aucune installation requise).
 
-Le moniteur série doit être réglé sur un débit en bauds de 115 200 et CRLF en plus du port COM.
+Le moniteur série doit être réglé sur un débit en bauds de 115 200 et CRLF en plus du port COM.
 
 ![Code Microsoft Visual Studio](/docs/img/vscode.jpg)
 
@@ -34,7 +34,7 @@ Le canal n'envoie pas de journal à la console série.
 Le type de sortie de débogage Erreur enregistre uniquement les erreurs. Dans VSCode, le type d'ERREUR est affiché en rouge.
 
 ```json
-[E][SENSOREN.cpp:1600] setSenErr() : Erreur du capteur de test : #0 État d'erreur Sensor_Sud : 1
+[E][SENSOREN.cpp:1600] setSenErr() : Erreur du capteur de test : #0 État d'erreur Sensor_Sud : 1
 [E][SENSOREN.cpp:76] Update() : Sen : l'erreur Sensor_Sud n°1 n'a pas pu lire les données de température
 ```
 
@@ -91,10 +91,10 @@ Lorsque le Brautomat est connecté à une console série, la sortie suivante app
 ```json
 05:42:16.904 > [I][SYSINFO] démarrage de Brautomat32 V 1.56
 05:42:22.467 > [I][SYSINFO] monter le système de fichiers LittleFS : ok, mémoire de tas libre : 192924
-05:42:28.384 > [I][SYSINFO] mDNS http://Brautomat.adresse IP locale 192.168.100.112 heure : 05:42:27 RSSI : -83
+05:42:28.384 > [I][SYSINFO] mDNS http://Brautomat.adresse IP locale 192.168.100.112 heure : 05:42:27 RSSI : -83
 ```
 
-En plus de la version de Brautomat, le nom MDNS et l'adresse IP actuelle sont affichés. La ligne _mount filesystem LittleFS: ok, free heap mem:_ indique que le système de fichiers a été monté.
+En plus der version de Brautomat, le nom MDNS et l'adresse IP actuelle sont affichés. La ligne _mount filesystem LittleFS: ok, free heap mem:_ indique que le système de fichiers a été monté.
 
 ## Erreur du capteur de test
 

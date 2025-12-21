@@ -4,7 +4,7 @@
 
 V první sekci _Maischeplan_ je kotel MashSud vytvořen pomocí ozubeného kola vpravo nahoře.
 
-![Vytvořit kotlík na vaření kaše](/docs/img/IDS-einrichten.jpg)
+![Vytvořit varnou konvici](/docs/img/IDS-einrichten.jpg)
 
 ## Konfigurace varné desky
 
@@ -22,7 +22,7 @@ Dále je třeba ke kotli MashBud přiřadit teplotní senzor. Výběr se provád
 
 _Poznámka_: _Čidlo teploty musí být trvale přiřazeno varné desce. Hodnota čidla se označuje jako skutečná teplota nebo aktuální teplota a během procesu rmutování se průběžně porovnává se klidovou teplotou (cílovou teplotou)._
 
-![Konfigurovat kotel na vaření kaše](/docs/img/IDS-configure.jpg)
+![Konfigurovat kotel na vaření kaše](/docs/img/IDS-konfigurieren.jpg)
 
 Parametry v záložce "Řízení teploty" jsou podrobně vysvětleny v části "Všechny parametry". Pro základní nastavení se zpočátku převezmou výchozí hodnoty.
 

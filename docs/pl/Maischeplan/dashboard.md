@@ -24,4 +24,4 @@ Jeśli Dashboard jest aktywowany, Brautomat automatycznie zmienia swój wygląd 
 * Następny etap zacierania jest wyświetlany nad grafiką krzywej temperatury
 * następny krok zacierania jest wyświetlany z czerwonym lub zielonym symbolem w zależności od autonext.
 
-Wszystkie elementy sterujące płytami grzewczymi i siłownikami pozostają w Dashboard. Plan zacieru można w każdej chwili otworzyć ponownie za pomocą przycisku zwijania. Kliknięcie przycisku pauzy powoduje automatyczne otwarcie planu zacierania. Ukryte elementy można również wyświetlić ponownie podczas procesu parzenia za pomocą ustawień systemowych.
+Wszystkie elementy sterujące płytami grzewczymi i siłownikami pozostają w Dashboard. Plan zacieru można w każdej chwili otworzyć ponownie za pomocą przycisku zwijania. Jeśli klikniesz przycisk pauzy, plan zacierania zostanie automatycznie otwarty. Ukryte elementy można również wyświetlić ponownie podczas procesu parzenia za pomocą ustawień systemowych.

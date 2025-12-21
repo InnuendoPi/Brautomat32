@@ -1,6 +1,6 @@
 # Les contrôles
 
-Directement sous le plan de brassage se trouve le contrôleur. Le processus de brassage est contrôlé avec les 5 boutons Alimentation, Lecture, Pause, Précédent et Suivant.
+Directement sous le plan de purée se trouve le controller Deck. Le processus de brassage est contrôlé avec les 5 boutons Alimentation, Lecture, Pause, Précédent et Suivant.
 
 ![Contrôle](/docs/img/Buttons.jpg)
 
@@ -41,6 +41,6 @@ Le bouton Suivant permet de passer à l'étape suivante du plan de brassage ou, 
 
 Le bouton Réduire réduit ou réduit le tableau du plan de brassage.
 
-![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
+![mashplan]([[CHEMIN_1]])
 
 Le bouton d'effondrement reste visible même après le début de la préparation. Tous les boutons permettant de modifier le plan de brassage sont masqués après le démarrage du brassage.

@@ -33,7 +33,7 @@ La longitud de la barra roja debajo de la vista IDS y refundida muestra el tiemp
 
 #### MashBud
 
-Esta vista muestra la primera placa. Se muestra el tiempo de descanso actual con las temperaturas real y objetivo, así como el tiempo restante actual. La longitud de la barra roja debajo de las temperaturas muestra el progreso del descanso actual. El símbolo a la derecha del tiempo restante muestra si el próximo descanso comenzará automáticamente (autonext): verde significa automático, rojo significa descanso. Además, se muestra la plataforma del controlador con las funciones correspondientes.
+Esta vista muestra la primera placa. Se muestra el tiempo de descanso actual con las temperaturas real y objetivo, así como el tiempo restante actual. La longitud de la barra roja debajo de las temperaturas muestra el progreso del descanso actual. El símbolo a la derecha del tiempo restante muestra si el próximo descanso comenzará automáticamente (autonext): verde significa automático, rojo significa descanso. Además, se muestra el controller Deck con las funciones correspondientes.
 
 ![Pantalla](/docs/img/brewpage-sm.jpg)
 
@@ -47,9 +47,9 @@ Una pantalla es opcional. El Brautomat solo admite pantallas táctiles Nextion H
 
 La pantalla se configura mediante una tarjeta SD. El archivo TFT de la carpeta Información que coincide con la pantalla se copia a la tarjeta SD y se inserta en la pantalla. Tan pronto como se enciende la pantalla, comienza la configuración. El proceso dura aproximadamente un minuto. El progreso se muestra en la pantalla. Una vez completada la configuración, la pantalla se apagará y se retirará la tarjeta SD. La pantalla ya está lista para su uso.
 
-Cabe señalar que SDA, SCL en elSe deben utilizar los PIN D1, D2.
+Cabe señalar que SDA, SCL debe operarse en los PIN D1, D2.
 
-### Sensores PT100x MAX31865 Activar amplificador
+### Sensores PT100x MAX31865 Ampl.Activar aquí
 
 Si se utilizan sensores analógicos PT100x, este interruptor debe estar activado. Un sensor analógico PT100x requiere un convertidor RTD a digital para conectarse a un microcontrolador ESP. Un amplificador MAX31865 es un conversor digital RTD en forma de una pequeña placa adicional.
 
@@ -59,9 +59,9 @@ El DNS de multidifusión se utiliza para resolver nombres de host en direcciones
 
 Nota: El nombre mDNS se configura sin protocolo (http://) y sin dominio de nivel superior (.local) en la configuración del sistema (Brautomat).
 
-### Panel de control
+### Dashboard
 
-Los elementos se pueden mostrar y ocultar fácilmente a través del panel. Por ejemplo, si no se utiliza ninguna refundición, el elemento Recasting debe desactivarse para el tablero. Los elementos deshabilitados reducen el tráfico.
+Usando Dashboard puedes mostrar y ocultar elementos fácilmente. Por ejemplo, si no se utiliza ninguna refundición, el elemento de refundición para Dashboard debe desactivarse. Los elementos deshabilitados reducen el tráfico.
 
 ### Registro
 
@@ -107,8 +107,7 @@ La zona horaria se utiliza para determinar la hora correcta, incluidos los horar
 |África/Dakar |GMT0 |
 |África/Dar_es_Salaam |EAT-3 |
 |África/Djibouti |EAT-3 |
-|África/Douala |WAT-1 |
-|África/El_Aaiun |<+01>-1 |
+|África/Douala |WAT-1 ||África/El_Aaiun |<+01>-1 |
 |África/Freetown |GMT0 |
 |África/Gaborone |CAT-2 |
 |África/Harare |CAT-2 |
@@ -158,8 +157,8 @@ La zona horaria se utiliza para determinar la hora correcta, incluidos los horar
 |América/Argentina/Tucumán |<-03>3 |
 |América/Argentina/Ushuaia |<-03>3 |
 |América/Aruba |AST4 |
-|América/Asunción|<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
-|América/Atikokan |EST5 |
+|América/Asunción |<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
+|América/Atikokan|EST5 |
 |América/Bahía |<-03>3 |
 |América/Bahía_Banderas |CST6 |
 |América/Barbados |AST4 |
@@ -260,8 +259,8 @@ La zona horaria se utiliza para determinar la hora correcta, incluidos los horar
 |América/Puerto_Rico |AST4 |
 |América/Punta_Arenas |<-03>3 |
 |América/Río_lluvioso |CST6CDT,M3.2.0,M11.1.0 |
-|América/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0|
-|América/Recife |<-03>3 |
+|América/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0 |
+|América/Recife |<-03>3|
 |América/Regina |CST6 |
 |América/Decidida |CST6CDT,M3.2.0,M11.1.0 |
 |América/Rio_Branco |<-05>5 |
@@ -312,8 +311,8 @@ La zona horaria se utiliza para determinar la hora correcta, incluidos los horar
 |Asia/Bagdad |<+03>-3 |
 |Asia/Bahréin |<+03>-3 |
 |Asia/Bakú |<+04>-4 |
-|Asia/Bangkok|<+07>-7 |
-|Asia/Barnaúl |<+07>-7 |
+|Asia/Bangkok |<+07>-7 |
+|Asia/Graneroaúl |<+07>-7 |
 |Asia/Beirut |EET-2EEST,M3.5.0/0,M10.5.0/0 |
 |Asia/Bishkek |<+06>-6 |
 |Asia/Brunéi |<+08>-8 |
@@ -363,7 +362,7 @@ La zona horaria se utiliza para determinar la hora correcta, incluidos los horar
 |Asia/Riad |<+03>-3 |
 |Asia/Sajalín |<+11>-11 |
 |Asia/Samarcanda |<+05>-5 |
-|Asia/Seúl |KST-9|
+|Asia/Seúl |KST-9 |
 |Asia/Shanghái |CST-8 |
 |Asia/Singapur |<+08>-8 |
 |Asia/Srednekolimsk |<+11>-11 |
@@ -414,7 +413,7 @@ La zona horaria se utiliza para determinar la hora correcta, incluidos los horar
 |Europa/Bratislava |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Bruselas |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Bucarest |EET-2EEST,M3.5.0/3,M10.5.0/4 |
-|Europa/Budapest |CET-1CEST,M3.5.0,M10.5.0/3|
+|Europa/Budapest |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Busingen |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Chisinau |EET-2EEST,M3.5.0,M10.5.0/3 |
 |Europa/Copenhague |CET-1CEST,M3.5.0,M10.5.0/3 |
@@ -466,7 +465,7 @@ La zona horaria se utiliza para determinar la hora correcta, incluidos los horar
 |Europa/Zaporozhye |EET-2EEST,M3.5.0/3,M10.5.0/4 |
 |Europa/Zúrich |CET-1CEST,M3.5.0,M10.5.0/3 |
 |India/Antananarivo |EAT-3 |
-|indio/Chagos |<+06>-6 |
+|India/Chagos |<+06>-6|
 |India/Navidad |<+07>-7 |
 |India/Cocos |<+0630>-6:30 |
 |India/Comoras |EAT-3 |
@@ -517,8 +516,8 @@ La zona horaria se utiliza para determinar la hora correcta, incluidos los horar
 |Etc/GMT |GMT0 |
 |Etc/GMT-0 |GMT0 |
 |Etc/GMT-1 |<+01>-1 |
-|Etc/GMT-2|<+02>-2 |
-|Etc/GMT-3 |<+03>-3 |
+|Etc/GMT-2 |<+02>-2 |
+|Etc/GMT-3|<+03>-3 |
 |Etc/GMT-4 |<+04>-4 |
 |Etc/GMT-5 |<+05>-5 |
 |Etc/GMT-6 |<+06>-6 |

@@ -1,6 +1,6 @@
 # Registrazione
 
-![media](/docs/img/logging.jpg)
+![supporto](/docs/img/logging.jpg)
 
 La registrazione è disponibile solo nella versione di sviluppo. La registrazione integrata aiuta nella risoluzione dei problemi, sia per errori nel firmware Brautomat32 che per errori dell'utente. Per l'output è necessario un monitor seriale. Di seguito viene mostrato Microsoft Visual Studio Code con l'estensione Microsoft Serial Monitor. Microsoft Visual Code è gratuito e disponibile come versione autonoma (non è richiesta alcuna installazione).
 
@@ -94,7 +94,7 @@ Quando il Brautomat è connesso a una console seriale, al momento dell'avvio vie
 05:42:28.384 > [I][SYSINFO] mDNS http://Brautomat.local indirizzo IP 192.168.100.112 ora: 05:42:27 RSSI: -83
 ```
 
-Oltre alla versione di Brautomat viene emesso il nome MDNS e l'indirizzo IP attuale. La riga _mount filesystem LittleFS: ok, free heap mem:_ indica che il file system è stato montato.
+Oltre a der di Brautomat vengono emessi il nome MDNS e l'indirizzo IP corrente. La riga _mount filesystem LittleFS: ok, free heap mem:_ indica che il file system è stato montato.
 
 ## Errore del sensore di prova
 

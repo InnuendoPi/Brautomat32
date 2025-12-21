@@ -10,11 +10,11 @@ Název rmutovacího plánu lze zadat v nastavení. Název souboru je odvozen od 
 
 S pomocí časového řízení lze svatební den naplánovat a spustit automaticky.
 
-![Kontrola času](/docs/img/Time control.jpg)
+![Řízení času](/docs/img/Zeitsteuerung.jpg)
 
 Pomocí prvku DateTimerPicker můžete snadno vybrat datum a čas. Název receptury je dočasně nahrazen zadaným časem spuštění.
 
-![Kontrola času](/docs/img/Time control2.jpg)
+![Řízení času](/docs/img/Zeitsteuerung2.jpg)
 
 Aktivované časové řízení je uloženo v konfiguraci. Po opětovném spuštění spařovacího stroje se načte nastavené datum a čas. Pokud je tento začátek vaření v budoucnosti, aktivuje se časové řízení. Pokud je začátek vaření v minulosti, časové ovládání je deaktivováno.
 
@@ -61,9 +61,9 @@ Vybraný plán mash je odstraněn z paměti flash.
 
 ## Výchozí import
 
-![Import předvolby](/docs/img/preset_import.jpg)
+![Výchozí nastavení importu](/docs/img/voreinstellung_import.jpg)
 
-Brautomat vyžaduje Schrmutování v jízdě (volitelné) a jednokrokové rmutování. Konkrétně krok rmutování slouží jako oddělovací krok mezi rmutováním a vařením, když je autonext deaktivováno. Při importu může Brautomat vložit chybějící rmutovací a rmutovací kroky. Chybějící teploty lze navíc doplnit specifikacemi.
+Brautomat vyžaduje krok rmutování (volitelné) a krok rmutování. VKonkrétně krok rmutování slouží jako oddělovací krok mezi rmutováním a vařením, když je autonext deaktivováno. Při importu může Brautomat vložit chybějící rmutovací a rmutovací kroky. Chybějící teploty lze navíc doplnit specifikacemi.
 
 ### Výchozí teplota pro chybějící parametry
 

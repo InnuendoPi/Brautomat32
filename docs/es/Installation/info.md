@@ -16,9 +16,9 @@ El sistema operativo MS Windows crea automáticamente un puerto COM serie al con
 
 Se encontró un dispositivo ESP en COM7 en la imagen. En casos excepcionales, MS Windows no proporciona automáticamente un puerto COM serie. Los controladores USB para microcontroladores ESP están disponibles en los siguientes sitios web: (MS Win y macOS)
 
-[!"
+[![ESP32 Controladores](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-El script Flashen.cmd utiliza la herramienta esptool.exe <https://github.com/espressif/esptool>. ESPTool está disponible gratuitamente para varios sistemas operativos (macOS, Linux). La versión de Windows de 64 bits está incluida en el archivo ZIP. ESPTool tiene licencia GPL v2. Consulte el [archivo de LICENCIA] adjunto (https://github.com/espressif/esptool/blob/master/LICENSE) para obtener una copia.
+El script Flashen.cmd utiliza la herramienta esptool.exe <https://github.com/espressif/esptool>. ESPTool está disponible gratuitamente para varios sistemas operativos (macOS, Linux). La versión de Windows de 64 bits está incluida en el archivo ZIP. ESPTool tiene licencia GPL v2. Consulte el [archivo de LICENCIA](https://github.com/espressif/esptool/blob/master/LICENSE) adjunto para obtener una copia.
 
 ### Actualización manual de MS Windows, macOS y Linux
 
@@ -61,10 +61,10 @@ La configuración WLAN se muestra mediante el botón “Configurar WiFi”
 
 Aquí se debe introducir la WLAN (SSID y contraseña). Con _Save_ el Brautomat se reinicia y se conecta a la WLAN. Se puede acceder a la interfaz web de Brautomat en la WLAN local a través de la dirección <http://Brautomat.local>.
 
-Esto completa la instalación básica. El proceso de actualización del firmware y configuración de WLAN sólo es necesario realizar una vez. El Brautomat ahora debe estar configurado. La configuración se describe en la sección _Configuración básica.ung_ descrito. La siguiente sección _Actualización_ se puede omitir inicialmente.
+Esto completa la instalación básica. El proceso de actualización del firmware y configuración de WLAN sólo es necesario realizar una vez. El Brautomat ahora debe estar configurado. La configuración se describe en la sección _Configuración básica_. La siguiente sección _Actualización_ se puede omitir inicialmente.
 
 > **Nota:**\
-El Brautomat32 intenta establecer una conexión con la configuración WLAN (SSID y contraseña) durante un máximo de 20 segundos. Si no se puede establecer ninguna conexión, por ejemplo si la contraseña se introdujo incorrectamente, el Brautomat32 se reiniciará en modo AccessPoint.\
+El Brautomat32 intenta establecer una conexión con la configuración WLAN (SSID y contraseña) durante un máximo de 20 segundos. Si no se puede establecer una conexión, por ejemplo si la contraseña se ingresa incorrectamentese utilizó, entonces el Brautomat32 se inicia nuevamente en modo AccessPoint.\
 En casos excepcionales y normalmente sólo cuando la señal WLAN es débil, el Brautomat32 no encuentra una WLAN adecuada y después de aprox. 20 segundos. En este caso, sólo será útil reiniciar el Brautomat32.
 
 ##Actualizaciones
@@ -88,7 +88,7 @@ La actualización del firmware mediante la selección FileUpdate se realiza en u
 Primero, se debe descargar el firmware actual. A continuación se descomprimirá el archivo ZIP.\
 En la interfaz web Brautomat, seleccione el elemento del menú Actualizar y luego FileUpdate. Se muestra un sitio web de actualización simple (imagen 1):
 
-![Actualización de archivo](/docs/img/fileupdate2.jpg)
+![Actualización de archivo](/docs/img/dateiupdate2.jpg)
 
 En Firmware con el botón "Seleccionar archivo", ahora se debe seleccionar el archivo _firmware.bin_ del archivo ZIP (en la Figura 2). Al hacer clic en Actualizar firmware se inicia la actualización.
 

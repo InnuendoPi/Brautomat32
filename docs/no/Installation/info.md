@@ -16,7 +16,7 @@ MS Windows-operativsystemet oppretter automatisk en seriell COM-port når ESP-mi
 
 En ESP-enhet ble funnet på COM7 på bildet. I sjeldne tilfeller leveres ikke en seriell COM-port automatisk under MS Windows. USB-drivere for ESP-mikrokontrollere er tilgjengelige på følgende nettsteder: (MS Win og macOS)
 
-[!"
+[![ESP32 Drivere](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
 Flashen.cmd-skriptet bruker verktøyet esptool.exe <https://github.com/espressif/esptool>. ESPTool er fritt tilgjengelig for ulike operativsystemer (macOS, Linux). Windows-versjonen 64bit er inkludert i ZIP-arkivet. ESPTool er lisensiert under GPL v2. Se den medfølgende [LISENS-filen](https://github.com/espressif/esptool/blob/master/LICENSE) for en kopi.
 
@@ -61,10 +61,10 @@ WLAN-konfigurasjonen vises ved å bruke knappen "Konfigurer WiFi".
 
 WLAN (SSID og passord) må angis her. Med _Lagre_ starter Brautomat på nytt og kobles til WLAN. Nettgrensesnittet til Brautomat kan nås i det lokale WLAN via adressen <http://Brautomat.local>.
 
-Dette fullfører den grunnleggende installasjonen. Fastvareblinkingen og WLAN-konfigurasjonsprosessen trenger bare å utføres én gang. Brautomat må nå konfigureres. Konfigurasjonen er beskrevet i delen _Grunnleggende oppsettung_ beskrevet. Følgende seksjon _Oppdater_ kan hoppes over til å begynne med.
+Dette fullfører den grunnleggende installasjonen. Fastvareblinkingen og WLAN-konfigurasjonsprosessen trenger bare å utføres én gang. Brautomat må nå konfigureres. Konfigurasjonen er beskrevet i delen _Grunnleggende oppsett_. Følgende seksjon _Oppdater_ kan hoppes over til å begynne med.
 
 > **Merk:**\
-Brautomat32 prøver å opprette en forbindelse med WLAN-konfigurasjonen (SSID og passord) i opptil 20 sekunder. Hvis ingen tilkobling kan opprettes, for eksempel hvis passordet ble skrevet inn feil, vil Brautomat32 starte på nytt i AccessPoint-modus.\
+Brautomat32 prøver å opprette en forbindelse med WLAN-konfigurasjonen (SSID og passord) i opptil 20 sekunder. Hvis en tilkobling ikke kan opprettes, for eksempel hvis passordet er angitt feilble brukt, starter Brautomat32 igjen i AccessPoint-modus.\
 I sjeldne tilfeller og vanligvis bare når WLAN-signalet er svakt, finner ikke Brautomat32 et passende WLAN og starter også i AccessPoint Mode etter ca. 20 sekunder. I dette tilfellet vil det bare hjelpe å starte Brautomat32 på nytt.
 
 ##Oppdateringer
@@ -88,7 +88,7 @@ En oppdatering av fastvaren via FileUpdate-valget skjer i noen få trinn:
 Først må gjeldende fastvare lastes ned. ZIP-arkivet vil da bli pakket ut.\
 I nettgrensesnittet Brautomat, velg menyelementet Oppdater og deretter FileUpdate. Et enkelt oppdateringsnettsted (bilde 1) vises:
 
-![FileUpdate](/docs/img/fileupdate2.jpg)
+![FileUpdate](/docs/img/dateiupdate2.jpg)
 
 Under Firmware med "Velg fil"-knappen må filen _firmware.bin_ nå velges fra ZIP-arkivet (i figur 2). Ved å klikke på Oppdater fastvare starter oppdateringen.
 

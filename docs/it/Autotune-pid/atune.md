@@ -1,10 +1,10 @@
 # processo AutoTune.
 
-Il processo AutoTune determina i parametri adatti per il sistema di produzione della birra in modo che il controllo della temperatura nel processo di ammostamento possa essere effettuato nel modo più preciso possibile. Il focus è sulle temperature EFFETTIVE e sulle corrispondenti temperature TARGET. In pratica ciò significa che il superamento e il mancato raggiungimento dovrebbero essere ridotti al minimo.
+Il processo AutoTune determina i parametri adatti per il sistema di produzione della birra in modo che il controllo della temperatura nel processo di ammostamento possa essere effettuato nel modo più accurato possibile. Il focus è sulle temperature EFFETTIVE e sulle corrispondenti temperature TARGET. In pratica ciò significa che il superamento e il mancato raggiungimento dovrebbero essere ridotti al minimo.
 
 Nota: un superamento (superamento della temperatura impostata) di 0,5°C è normale. A seconda dell'isolamento della caldaia e dell'energia di induzione fornita, la temperatura continuerà ad aumentare leggermente anche dopo lo spegnimento del piano cottura.
 
-![AutoTune4](/docs/img/IDS-AutoTune-target.jpg)
+![Sintonizzazione automatica4](/docs/img/IDS-AutoTune-Ziel.jpg)
 
 La seguente descrizione dei valori PID è intesa solo come aiuto nell'uso del firmware e può essere saltata. Il processo AutoTune è descritto partendo da "Il processo AutoTune: passo dopo passo."\
 Il controller PID controlla le prestazioni dei piani cottura. È importante determinare i valori P, I e D appropriati. I valori PID sono individuali per ciascun sistema e ambiente di produzione della birra. AutoTune è una procedura che aiuta a determinare i valori adatti. La potenza necessaria ai piani cottura per passare dalla temperatura effettiva alla temperatura target si calcola dalla somma dei tre valori: Potenza richiesta = P + I + D\

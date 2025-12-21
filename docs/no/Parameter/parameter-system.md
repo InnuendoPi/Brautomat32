@@ -33,7 +33,7 @@ Lengden på den røde linjen under IDS og omarbeidet visning viser medgått hvil
 
 #### MashBud
 
-Denne visningen viser den første koketoppen. Gjeldende hviletid vises med faktiske temperaturer og måltemperaturer samt gjeldende gjenværende tid. Lengden på den røde linjen under temperaturene viser fremdriften til den gjeldende hvilen. Symbolet til høyre for gjenværende tid viser om neste pause starter automatisk (autonext): grønt betyr automatisk, rødt betyr pause. I tillegg vises kontrollpanelet med tilhørende funksjoner.
+Denne visningen viser den første koketoppen. Gjeldende hviletid vises med faktiske temperaturer og måltemperaturer samt gjeldende gjenværende tid. Lengden på den røde linjen under temperaturene viser fremdriften til den gjeldende hvilen. Symbolet til høyre for gjenværende tid viser om neste pause starter automatisk (autonext): grønt betyr automatisk, rødt betyr pause. I tillegg vises controller Deck med tilhørende funksjoner.
 
 ![Display](/docs/img/brewpage-sm.jpg)
 
@@ -47,9 +47,9 @@ En skjerm er valgfri. Brautomat støtter bare Nextion HMI 3,5-tommers berørings
 
 Skjermen konfigureres via et SD-kort. TFT-filen fra Info-mappen som samsvarer med skjermen, kopieres til SD-kortet og settes inn i skjermen. Så snart displayet er slått på, starter konfigurasjonen. Prosessen tar omtrent ett minutt. Fremdriften vises på displayet. Når konfigurasjonen er fullført, vil skjermen slå seg av og SD-kortet fjernes. Skjermen er nå klar til bruk.
 
-Det skal bemerkes at SDA, SCL påPIN-kodene D1, D2 må betjenes.
+Det skal bemerkes at SDA, SCL må opereres på PIN-kodene D1, D2.
 
-### PT100x-sensorer MAX31865 Aktiver forsterker
+### PT100x-sensorer MAX31865 AmplAktiver her
 
 Hvis analoge PT100x-sensorer brukes, må denne bryteren aktiveres. En PT100x analog sensor krever en RTD til digital omformer for å koble til en ESP mikrokontroller. En MAX31865 forsterker er en RTD digital omformer i form av et lite tilleggskort.
 
@@ -61,7 +61,7 @@ Merk: mDNS-navnet er konfigurert uten en protokoll (http://) og uten et toppniv�
 
 ### Dashboard
 
-Elementer kan enkelt vises og skjules via dashbordet. For eksempel, hvis ingen omstøpning brukes, bør omstøpningselementet deaktiveres for dashbordet. Deaktiverte elementer reduserer trafikken.
+Ved å bruke Dashboard kan du enkelt vise og skjule elementer. For eksempel, hvis ingen omstøpning brukes, bør omstøpningselementet for Dashboard deaktiveres. Deaktiverte elementer reduserer trafikken.
 
 ### Logging
 
@@ -107,8 +107,7 @@ Tidssonen brukes til å bestemme riktig tid inkludert sommer- og vintertid.
 |Afrika/Dakar |GMT0 |
 |Afrika/Dar_es_Salaam |EAT-3 |
 |Afrika/Djibouti |EAT-3 |
-|Afrika/Douala |WAT-1 |
-|Afrika/El_Aaiun |<+01>-1 |
+|Afrika/Douala |WAT-1 ||Afrika/El_Aaiun |<+01>-1 |
 |Afrika/Freetown |GMT0 |
 |Afrika/Gaborone |CAT-2 |
 |Afrika/Harare |CAT-2 |
@@ -158,8 +157,8 @@ Tidssonen brukes til å bestemme riktig tid inkludert sommer- og vintertid.
 |Amerika/Argentina/Tucuman |<-03>3 |
 |Amerika/Argentina/Ushuaia |<-03>3 |
 |Amerika/Aruba |AST4 |
-|Amerika/Asuncion|<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
-|Amerika/Atikokan |EST5 |
+|Amerika/Asuncion |<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
+|Amerika/Atikokan|EST5 |
 |Amerika/Bahia |<-03>3 |
 |Amerika/Bahia_Banderas |CST6 |
 |Amerika/Barbados |AST4 |
@@ -260,8 +259,8 @@ Tidssonen brukes til å bestemme riktig tid inkludert sommer- og vintertid.
 |Amerika/Puerto_Rico |AST4 |
 |America/Punta_Arenas |<-03>3 |
 |Amerika/Rainy_River |CST6CDT,M3.2.0,M11.1.0 |
-|America/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0|
-|Amerika/Recife |<-03>3 |
+|America/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0 |
+|Amerika/Recife |<-03>3|
 |Amerika/Regina |CST6 |
 |Amerika/Resolute |CST6CDT,M3.2.0,M11.1.0 |
 |Amerika/Rio_Branco |<-05>5 |
@@ -312,8 +311,8 @@ Tidssonen brukes til å bestemme riktig tid inkludert sommer- og vintertid.
 |Asia/Bagdad |<+03>-3 |
 |Asia/Bahrain |<+03>-3 |
 |Asia/Baku |<+04>-4 |
-|Asia/Bangkok|<+07>-7 |
-|Asia/Barnaul |<+07>-7 |
+|Asia/Bangkok |<+07>-7 |
+|Asia/Fjøsaul |<+07>-7 |
 |Asia/Beirut |EET-2EEST,M3.5.0/0,M10.5.0/0 |
 |Asia/Bishkek |<+06>-6 |
 |Asia/Brunei |<+08>-8 |
@@ -363,7 +362,7 @@ Tidssonen brukes til å bestemme riktig tid inkludert sommer- og vintertid.
 |Asia/Riyadh |<+03>-3 |
 |Asia/Sakhalin |<+11>-11 |
 |Asia/Samarkand |<+05>-5 |
-|Asia/Seoul |KST-9|
+|Asia/Seoul |KST-9 |
 |Asia/Shanghai |CST-8 |
 |Asia/Singapore |<+08>-8 |
 |Asia/Srednekolymsk |<+11>-11 |
@@ -414,7 +413,7 @@ Tidssonen brukes til å bestemme riktig tid inkludert sommer- og vintertid.
 |Europa/Bratislava |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Brussel |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Bukarest |EET-2EEST,M3.5.0/3,M10.5.0/4 |
-|Europa/Budapest |CET-1CEST,M3.5.0,M10.5.0/3|
+|Europa/Budapest |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Busingen |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Chisinau |EET-2EEST,M3.5.0,M10.5.0/3 |
 |Europa/København |CET-1CEST,M3.5.0,M10.5.0/3 |
@@ -466,7 +465,7 @@ Tidssonen brukes til å bestemme riktig tid inkludert sommer- og vintertid.
 |Europa/Zaporozhye |EET-2EEST,M3.5.0/3,M10.5.0/4 |
 |Europa/Zürich |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Indisk/Antananarivo |EAT-3 |
-|Indisk/Chagos |<+06>-6 |
+|Indisk/Chagos |<+06>-6|
 |Indisk/jul |<+07>-7 |
 |Indisk/Cocos |<+0630>-6:30 |
 |Indisk/komoro |EAT-3 |
@@ -517,8 +516,8 @@ Tidssonen brukes til å bestemme riktig tid inkludert sommer- og vintertid.
 |Etc/GMT |GMT0 |
 |Etc/GMT-0 |GMT0 |
 |Etc/GMT-1 |<+01>-1 |
-|Etc/GMT-2|<+02>-2 |
-|Etc/GMT-3 |<+03>-3 |
+|Etc/GMT-2 |<+02>-2 |
+|Etc/GMT-3|<+03>-3 |
 |Etc/GMT-4 |<+04>-4 |
 |Etc/GMT-5 |<+05>-5 |
 |Etc/GMT-6 |<+06>-6 |

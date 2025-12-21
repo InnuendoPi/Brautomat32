@@ -4,9 +4,9 @@ Brautomat można opcjonalnie obsługiwać za pomocą wyświetlacza dotykowego. O
 
 | Następny wyświetlacz | Oprogramowanie sprzętowe |
 | --------------- | --------- |
-| NX4832T035 (seria podstawowa) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832T035.tft) |
-| NX4832K035 (seria wzmocniona) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832K035.tft) |
-| NX4832F035 (seria Discovery) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832F035.tft) |
+| NX4832T035 (seria podstawowa) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832T035.tft) |
+| NX4832K035 (seria wzmocniona) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832K035.tft) |
+| NX4832F035 (seria Discovery) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832F035.tft) |
 
 Wyświetlacz wymaga oprogramowania sprzętowego do działania z Brautomat. Link do oprogramowania sprzętowego odpowiadającego typowi wyświetlacza znajduje się w tabeli. Zobacz także flashowanie pliku ekranowego.
 
@@ -15,7 +15,7 @@ Wyświetlacz wymaga oprogramowania sprzętowego do działania z Brautomat. Link 
 Wyświetlacz jest podłączony do płytki za pomocą 4 kabli
 
 | Kabel | Następny wyświetlacz | Podłączenie listwy zaciskowej |
-| --------- | --------------- | ------------------------ |
+| -------------- | --------------- | ------------------------ |
 |     czerwony | Aktualny + | Vcc |
 |   czarny | Elektryczność - | GND |
 |    niebieski | Teksas | SDL (D1) |
@@ -29,7 +29,7 @@ Wyświetlacz należy przygotować przed pierwszym uruchomieniem. W tym celu nale
 
 ## Zobacz napar z zacieru
 
-![MaischeSud](/docs/img/brewpage-sm.jpg)
+![MashSud](/docs/img/brewpage-sm.jpg)
 
 Strona MashSud jest preferowaną stroną podczas warzenia. Informacje pojawiają się na wyświetlaczu co sekundę
 
@@ -41,7 +41,7 @@ wyświetlane. Następna reszta jest również wyświetlana w dolnym wierszu. Cza
 
 ## Wyświetl przegląd kotła
 
-![Przegląd czajnika](/docs/img/kettlepage-sm.jpg)
+![Przegląd kotła](/docs/img/kettlepage-sm.jpg)
 
 Przegląd kotła pokazuje kocioł do zaparzania zacieru oraz, jeśli jest dostępny, kocioł do zaparzania i zalewania z informacją o temperaturze rzeczywistej i docelowej.
 

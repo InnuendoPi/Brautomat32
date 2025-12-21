@@ -38,8 +38,8 @@ The InnuCase is available in two sizes. The print files are stored in the Housin
 
 The InnuCase #2 is intended for an automatic bread machine with a display and a sensor. If no display is used, the display opening can be closed with a blind cover.
 
-Suitable plug connections for M12 holes include [GX12 Aviation Plug](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_6Z58FR08HC6VACCZPY83). The GX12 Aviation Sets are available as 2-pin (actuators), 3-pin (DS18B20) and 4-pin (PT100x).
-A suitable power switch is, among other things, a [LED pressure switch](https://www.amazon.de/dp/B09WXPJQN3?psc=1&ref=ppx_yo2ov_dt_b_product_details). The InnuCase-1 can accommodate two PWM modules. The cutout for a PWM module can be closed with a blind cover.
+Suitable plug connections for M12 holes include [GX12 Aviation plug](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_6Z58FR08HC6VACCZPY83). The GX12 Aviation Sets are available as 2-pin (actuators), 3-pin (DS18B20) and 4-pin (PT100x).
+A suitable power switch is, among other things, a [LED pressure switch](https://www.amazon.de/dp/B09WXPJQN3?psc=1&ref=ppx_yo2ov_dt_b_product_details) latching. The InnuCase-1 can accommodate two [PWM Modules](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_56603DDHC44WFNJ0BFM4). The cutout for a PWM module can be closed with a blind cover.
 
 ## Housing cover
 
@@ -56,34 +56,34 @@ A suitable power switch is, among other things, a [LED pressure switch](https://
 
 ## Housing screw connection
 
-The housing has several pads for screw connection [Thread inserts](https://www.amazon.de/dp/B0BZVGQ91H/?coliid=I1EM9CS796PWGZ&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_64ER38VQR1H02DJ4WZ4A). The holes in the pads have a diameter of 4.6mm. The thread inserts are melted into the pad hole using a soldering iron. Threaded inserts M3 are linked.
+The housing has several pads for holding [threaded inserts](https://www.amazon.de/dp/B0BZVGQ91H/?coliid=I1EM9CS796PWGZ&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_64ER38VQR1H02DJ4WZ4A) for a screw connection. The holes in the pads have a diameter of 4.6mm. The thread inserts are melted into the pad hole using a [soldering iron](https://www.amazon.de/gp/product/B0CDBSGSXY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1). Threaded inserts M3 are linked.
 
-![Threaded inserts](/docs/img/Gewindeeinseiten.jpg)
+![Thread Inserts](/docs/img/Gewindeeinsätze.jpg)
 
 ## Circuit board carrier
 
-The circuit board is screwed onto a support plate. The carrier plate is mounted behind the display using [distance sleeves](https://www.reichelt.de/distanzhuelsen-metall-6-kant-m3-15mm-da-15mm-p7018.html?CCOUNTRY=445&LANGUAGE=de&trstct=pos_0&nbc=1&&r=1). Hexagonal M3 spacer sleeves with a length of 15mm are linked.
+The circuit board is screwed onto a support plate. The carrier plate is mounted behind the display using [spacer sleeves](https://www.reichelt.de/distanzhuelsen-metall-6-kant-m3-15mm-da-15mm-p7018.html?CCOUNTRY=445&LANGUAGE=de&trstct=pos_0&nbc=1&&r=1). Hexagonal M3 spacer sleeves with a length of 15mm are linked.
 
-![Platinenträger](/docs/img/Platinenträger-1.jpg) ![Board carrier MAX31865](/docs/img/Platinenträger-2.jpg)
+![Board carrier](/docs/img/Platinenträger-1.jpg) ![Board carrier MAX31865](/docs/img/Platinenträger-2.jpg)
 
 The figure shows 2 circuit board carriers:
 
 * the lower smaller support plate is for automatic bread machines with DS18B20 sensors
 * the upper, larger carrier plate is for automatic bread machines with PT100x sensors (additional holes for holding 2 MAX31865 boards)
 
-The carrier plate allows a complete mondays in the housing. No Brautomat components or cables are attached to the housing cover.
+The carrier plate allows for complete assembly in the housing. No Brautomat components or cables are attached to the housing cover.
 
 ## Bracket
 
 Simple holders are available to attach the housing. The holder is screwed onto the back behind the lid.
 
-![Holder](/docs/img/Holder.jpg)
+![Bracket](/docs/img/Halterung.jpg)
 
 ## Blind cover
 
 The blind cover closes the display opening in the housing when no display is inserted.
 
-![Blindlid](/docs/img/Blindlid.jpg)
+![Blind cover](/docs/img/Blinddeckel.jpg)
 
 ## Images
 

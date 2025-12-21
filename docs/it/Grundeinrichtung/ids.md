@@ -4,7 +4,7 @@
 
 Nella prima sezione _Maischeplan_ si crea la caldaia MashSud utilizzando l'ingranaggio in alto a destra.
 
-![Crea un bollitore per il mosto](/docs/img/IDS-einrichten.jpg)
+![Crea bollitore per il mosto](/docs/img/IDS-einrichten.jpg)
 
 ## Configurazione di un piano cottura
 
@@ -22,11 +22,11 @@ Successivamente, è necessario assegnare un sensore di temperatura al bollitore 
 
 _Nota_: _Un sensore di temperatura deve essere assegnato in modo permanente a un piano di cottura. Il valore del sensore viene chiamato temperatura effettiva o temperatura attuale e durante il processo di ammostamento viene continuamente confrontato con la temperatura residua (temperatura nominale)._
 
-![Configura la caldaia per il mosto](/docs/img/IDS-configure.jpg)
+![Configura caldaia per mosto](/docs/img/IDS-konfigurieren.jpg)
 
 I parametri della scheda "Controllo della temperatura" sono spiegati in dettaglio nella sezione "Tutti i parametri". Per la configurazione di base vengono inizialmente adottati i valori predefiniti.
 
-![Configura la caldaia per il mosto](/docs/img/IDS-temperaturen.jpg)
+![Configura caldaia per mosto](/docs/img/IDS-temperaturen.jpg)
 
 ## Configurazione del controller PID.
 
@@ -41,7 +41,7 @@ Da questi due valori si calcolano i parametri PID P, I e D. Questi parametri son
 
 Per questa configurazione di base vengono inseriti i seguenti valori per Ku e Pu. Viene quindi selezionata la regola di ottimizzazione PID _IDS PID Modalità_:
 
-![IDS](/docs/img/IDS-AutoTune-erg.jpg)
+![ID]([[PERCORSO_3]])
 
 Non appena vengono immessi i valori per Ku e Pu, l'algoritmo PID selezionato determina automaticamente i tre valori P, I e D. Una spiegazione dettagliata di tutti i parametri seguirà in seguito.
 

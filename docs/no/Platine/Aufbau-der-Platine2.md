@@ -4,7 +4,7 @@ Denne korte veiledningen beskriver styrets struktur. Styrestrukturen er ikke kre
 
 Delelisten til styret:
 
-![Deleliste](/docs/img/Aufbau1.jpg)
+![BOM](/docs/img/Aufbau1.jpg)
 
 Nummer 1: Motstand 4,7 kOhm\
 Nummer 2: JST-HX-sokkel (hvit) og 5-pinners skrueklemme\
@@ -17,17 +17,17 @@ JST-HX-sokkelposisjonen er et alternativ til den 5-pinners skrueklemmen. Kabelen
 
 | Nummer | Varenavn | Link til artikkel |
 | ------------------------------------------------------------ | ------------------------------------ | ---------------------------------- |
-| 3 | Skrueklemme 3-pin RM 2,54 | [amazon](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8J7CBBE7AD) |
+| 3 | Skrueklemme 3-pin RM 2,54 | [amazon](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 valgfri | Skrueklemme 3-pin RM 2,54 | |
-| 1 | Skrueklemme 5-pin RM 2,54 | [amazon](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J) |
+| 1 | Skrueklemme 5-pin RM 2,54 | [amazon](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 alternativ til skruklemmen 5-pins | JST-HX-sokkel 90° RM 2,54 | (voelkner D17526) |
-| 2 | Skrueklemme 8-pin RM 2,54 | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN48J7TBE7) |
-| 2 | Skrueklemme 12-pin RM 2,54| [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J) |
+| 2 | Skrueklemme 8-pin RM 2,54 | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 2 | Skrueklemme 12-pin RM 2,54| [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 | Pinnehode RM 2,54 | [amazon](https://www.amazon.de/dp/B01MQ5HJYQ?ref_=pe_27091401_487187591_302_E_DDE_dt_1) |
-| 1 | Motstand 4,7kOhm | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PHX9FJN3) |
+| 1 | Motstand 4,7kOhm | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
 | 1 valgfri | Passiv summer 12mm 3V | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
 | 1 ESP32 | ESP32 D1 mini | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
-| 1 valgfri | Nextion 3,5" skjerm
+| 1 valgfri | Vis Nextion 3.5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
 |                                                       |                                |                                   |
 
 _Merk: lenkene eller varenumrene som er oppført er rent informative og ikke knyttet til tilknyttede/markedsføringsprogrammer._
@@ -36,7 +36,7 @@ Nextion 3,5 tommers skjerm er tilgjengelig som Basic, Discovery eller Enhanced. 
 
 ## Hensyn før bygging
 
-Kretskortet kan variere avhengig av tilkoblingen til induksjonskomfyrenhfeld GGM IDS kan utstyres annerledes:
+Brettet kan utstyres forskjellig avhengig av tilkoblingen til GGM IDS induksjonstopp:
 
 1.1 Den originale kabelen fra GGM IDS kontrollpanel brukes
 
@@ -56,7 +56,7 @@ To merknader om å sette inn skrueklemmene:
 2. Skruklemmene festes med et loddepunkt. Riktig passform kontrolleres deretter. Alle loddepunkter loddes deretter.
 
 I det følgende settes skrueklemmene inn og loddes trinn for trinn.\
-I trinn nummer 1 settes de to 12-pins skruklemmene inn. GPIOene D9 til D19 fra ESP32 er koblet til de 12 skruklemmene.
+I trinn nummer 1 er zhvite 12-pins skrueklemmer brukt. GPIOene D9 til D19 fra ESP32 er koblet til de 12 skruklemmene.
 
 ![Skruklemme](/docs/img/Aufbau2.jpg)
 
@@ -72,7 +72,7 @@ Styret ser nå slik ut i denne statusen:
 
 I trinn nummer 3 settes de tre 3 skrueklemmene inn og loddes.
 
-![Skruklemme for sensorer](/docs/img/Aufbau5.jpg)
+![Skrueklemme for sensorer](/docs/img/Aufbau5.jpg)
 
 DS18B20 temperatursensorer er koblet til de tre koplingene. Det er ingen rekkefølge eller hierarki for disse tre forbindelsene. Hvis kun analoge PT100x-sensorer brukes, kan de tre skruklemmene utelates.
 
@@ -109,7 +109,7 @@ Bena på motstanden er bøyd 90° (f.eks. rundt en skrutrekker med spor). Motsta
 
 Motstandens ben er bøyd litt utover på baksiden og loddet. Bruk sidekuttere for å kutte av bena over loddeøyet.
 
-## Monter ESP-mikrokontrolleren på basenn
+## Monter ESP-mikrokontrolleren
 
 Ved å montere basen kan ESP-mikrokontrolleren fjernes fra brettet når som helst. Socket er også nyttig ved feilsøking.
 
@@ -129,4 +129,4 @@ Nå settes ESP på og fikses med et loddepunkt på hver side. Nå er passformen 
 
 ![ESP32](/docs/img/Aufbau15.jpg)
 
-Til slutt bør alle loddepunkter kontrolleres. Når alle loddepunkter er lukket, er Brautomat klar.
+Til slutt bør alle loddepunkter øvesbli sjekket. Når alle loddepunkter er lukket, er Brautomat klar.

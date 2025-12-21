@@ -1,8 +1,8 @@
 # Tryb fermentatora
 
-W trybie fermentatora Brautomat32 przetwarza plan fermentacji z góry na dół w taki sam sposób, jak plan zacieru. Pulpit kontrolera ma te same funkcje.
+W trybie fermentatora Brautomat32 przetwarza plan fermentacji z góry na dół w taki sam sposób, jak plan zacieru. controller Deck ma te same funkcje.
 
-![Panel fermentatora](/docs/img/fermenter_dash.jpg)
+![Fermentor Dashboard](/docs/img/fermenter_dash.jpg)
 
 Przetwarzanie kroków ma ważną różnicę:
 

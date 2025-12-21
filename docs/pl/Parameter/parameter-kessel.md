@@ -18,15 +18,15 @@ Parametr ten opisuje temperaturę, w której sterownik PID powinien wykryć wrze
 
 ### Moc z przejścia [%]
 
-Ten parametr opisuje moc wyjściową płyty od momentu przejścia temperatury do gotowania. Wartość domyślna to 100%. W parametrze „Przejście do gotowania” zastosowano ustawienie temperatury, przy której sterownik PID zostanie wyłączony. Parametr „Moc z przejścia” określa teraz stałą moc wyjściową płyty kuchennej. Jeśli używany jest czajnik do zaparzania o pojemności 35 l lub większej, odpowiednim wyborem będzie domyślna wartość 100%. W kuchniach browarniczych z małymi czajnikami 100% zasilania może powodować wykipienie. W takim przypadku za pomocą tego parametru można zmniejszyć maksymalny pobór energii np. do 75%.
+Ten parametr opisuje moc wyjściową płyty od momentu przejścia temperatury do gotowania. Wartość domyślna to 100%. W parametrze „Przejście do gotowania” zastosowano ustawienie temperatury, przy której sterownik PID zostanie wyłączony. Parametr „Moc z przejścia” określa teraz stałą moc wyjściową płyty kuchennej. Jeśli używany jest czajnik do zaparzania o pojemności 35 l lub większej, odpowiednim wyborem będzie domyślna wartość 100%. W kuchniach browarniczych z małymi czajnikami 100% zasilania może powodować wykipienie. W takim przypadku przy pomocy tego parametru można zmniejszyć maksymalny pobór energii np. do 75%.
 
 ### Wyłącz PID gotowanie [on/off]
 
 Parametr ten określa zachowanie sterownika PID podczas gotowania, gdy rzeczywista temperatura jest wyższa od temperatury docelowej. Przykład: w programie zacieru temperatura gotowania została ustawiona na 98°C. Parametr „Moc z przejścia” wyłącza obliczanie PID z temperatury „Przejścia do wrzenia”. Jeżeli parametr „Wyłącz PID do gotowania” jest włączony (domyślnie), wówczas sterownik PID pozostaje wyłączony nawet powyżej temperatury docelowej 98°C z planu zacieru i wykorzystywana jest moc z parametru „Moc z przejścia”. Parametr ten jest domyślnie włączony i umożliwia gotowanie rolowane.
 
-Jeżeli parametr „Wyłącz PID do gotowania” nie jest aktywny, wymagana moc jest obliczana przez sterownik PID po osiągnięciu temperatury docelowej (tutaj 98°C). Obliczona wydajność powyżej wartości docelowej-Temperatura wynosi 0%. Płyta wyłączy się i w razie potrzeby zapobiegnie wykipieniu.
+Jeżeli parametr „Wyłącz PID do gotowania” nie jest aktywny, wymagana moc jest obliczana przez sterownik PID po osiągnięciu temperatury docelowej (tutaj 98°C). Obliczona moc powyżej temperatury docelowej wynosi 0%. Płyta wyłączy się i w razie potrzeby zapobiegnie wykipieniu.
 
-### Błąd czujnika [0-100%]
+### Wydajnośćw przypadku błędu czujnika [0-100%]
 
 Jeśli wystąpi błąd czujnika, na przykład czujnik nie jest podłączony lub jest uszkodzony, moc płyty kuchennej można dostosować tak, aby zaradzić temu błędowi. Wartość 100% ignoruje błąd czujnika.
 
@@ -42,7 +42,7 @@ _Uwaga: maks. parametr mocy nie jest przekroczony przez parametr Błąd czujnika
 
 ### Interwał (Czas Próbki)
 
-Parametr ten wskazuje przedział czasu, w jakim obliczana jest wymagana moc. Wartość domyślna to 3000 ms. Przedział ten jest używany do obliczeń PID i w AutoTune. W kuchniach browarniczych o małych objętościach korzystny może być mniejszy odstęp. Im mniejszy odstęp, tym częściej obliczana jest wymagana moc. Prowadzi to do większego wykorzystania automatycznego brojlera. Zakres wartości 1000 - 7000 ms.
+Parametr ten wskazuje przedział czasu, w jakim obliczana jest wymagana moc. Wartość domyślna to 3000 ms. Przedział ten jest używany do obliczeń PID i w AutoTune. W kuchniach browarniczych o małych objętościach korzystny może być mniejszy odstęp. Im mniejszy odstęp, tym częściej obliczana jest wymagana moc. Prowadzi to do większego wykorzystania automatycznego brojlera. Zakres wartości 1000 - 7000ms.
 
 ### PID Algorytm
 
@@ -72,7 +72,7 @@ _Te 10 parametrów należy ustawić indywidualnie dla każdego systemu zaparzani
 
 Brautomat może zarządzać profilami sprzętowymi. Profile można stosować, jeśli istnieją różne kotły. Użytkownicy posiadający czajniki o różnej wielkości mogą za pomocą profili wybrać czajnik na dany dzień warzenia, zamiast konieczności ręcznego ponownego wprowadzania wszystkich parametrów. Profil sprzętowy zawiera wszystkie ustawienia kotła.
 
-Profile są zapisywane w folderze /Profiles. Profile pozwalają na szybkie i łatwePrzełączanie pomiędzy różnymi kotłami. Funkcja Zapisz tworzy plik profilu o powyższych parametrach, natomiast funkcja Usuń usuwa plik profilu z pamięci flash.
+Profile są zapisywane w folderze /Profiles. Profile umożliwiają szybkie i łatwe przełączanie pomiędzy różnymi kotłami. Funkcja Zapisz tworzy plik profilu z den powyższych parametrów, natomiast funkcja Usuń usuwa plik profilu z pamięci flash.
 
 Domyślnym profilem przy uruchomieniu automatu do pieczenia chleba jest zawsze ostatni wybrany profil.
 
@@ -151,4 +151,4 @@ Zastosowana tutaj specyfikacja Pojemność cieplna 3600 ma tolerancję błędu o
 9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 162194,8 / 44 = 3686,25 J na kg na stopień Celsjusza
 ```
 
-Zobacz także [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+Zobacz też [Magazyn Piwowarski](https://braumagazin.de/article/berechnungen-in-der-brauerei/)

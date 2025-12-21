@@ -1,6 +1,6 @@
 # The controls
 
-Directly below the mash plan is the controller deck. The mashing process is controlled with the 5 buttons Power, Play, Pause, Previous and Next.
+Directly below the mash plan is the controller Deck. The mashing process is controlled with the 5 buttons Power, Play, Pause, Previous and Next.
 
 ![Control](/docs/img/Buttons.jpg)
 
@@ -41,6 +41,6 @@ The Next button jumps to the next step in the mashing plan or, if it was the las
 
 The Collapse button collapses or collapses the mash plan table.
 
-![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
+![mashplan](/docs/img/Maischeplan-anzeigen.jpg)
 
 The collapse button remains visible even after the brewing starts. All buttons for editing the mash plan are hidden after brewing starts.

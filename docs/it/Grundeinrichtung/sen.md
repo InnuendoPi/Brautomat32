@@ -4,7 +4,7 @@
 
 Nella sezione _Sensori_ è possibile aggiungere un nuovo sensore facendo clic sul simbolo più.
 
-![Crea sensori](/docs/img/Sensor-setup.jpg)
+![Crea sensori](/docs/img/Sensor-einrichten.jpg)
 
 ## Imposta l'indirizzo e il nome del sensore
 
@@ -19,7 +19,7 @@ Ogni sensore necessita di un nome. In questa configurazione di base il sensore s
 
 _Nota: i nomi dei sensori possono contenere un massimo di 20 caratteri. I caratteri speciali consentiti sono # e spazi. L'input viene controllato automaticamente dall'interfaccia web._
 
-![Configura sensori](/docs/img/Sensor-settings.jpg)
+![Configura sensori](/docs/img/Sensor-einstellungen.jpg)
 
 ## Calibrazione del sensore (valori di offset)
 
@@ -29,9 +29,9 @@ Per questa configurazione base entrambi i valori rimangono invariati a 0,00.
 
 ## Salva e controlla il sensore
 
-Facendo clic su _salva_ il sensore viene creato e quindi visualizzato nella dashboard sotto _Sensori_.
+Facendo clic su _save_ il sensore viene creato e quindi visualizzato in Dashboard sotto _Sensori_.
 
-![Dashboard dei sensori](/docs/img/Sensor-dashboard.jpg)
+![Sensori Dashboard](/docs/img/Sensor-dashboard.jpg)
 
 > **Nota:**
 

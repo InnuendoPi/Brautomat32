@@ -14,10 +14,10 @@ Een pomp is een grote hulp bij het lauteren of transporteren naar de vergistings
 
 | Artikelnaam | Link naar artikel |
 | ------------------------------------------------- | ------------------------------- |
-| Minipomp 12V DC | [amazone].
-| Pneumatische connectoren 8mm x 1/2 inch 90° draaibaar | [amazon](https://amzn.to/3XmH2nP) |
+| Minipomp 12V DC | [amazon](https://www.amazon.de/dp/B01NCKXJ92/?coliid=I1I94V063T6GE6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_SSRMRQS5W49WYA43JZ7Z) |
+| Pneumatische connectoren 8mm x 1/2 inch 90° draaibaar | [amazone](https://amzn.to/3XmH2nP) |
 
-Verbindingen met [camlocks van Braubebo](https://www.braubebo.de/camlock/) zoals weergegeven op de eerste foto zijn ook erg goed en snel.
+Verbindingen met [Camlocks van Braubebo](https://www.braubebo.de/camlock/) zoals weergegeven in de eerste afbeelding zijn ook erg goed en snel.
 
 ### SSR solid-state relais
 
@@ -27,7 +27,7 @@ Met de Brautomat kunnen SSR's heel eenvoudig worden geschakeld. SSR- of solid-st
 
 | Artikelnaam | Link naar artikel |
 | -------------- | ------------------------------- |
-| Fotek SSR 40DA | [amazone].
+| Fotek SSR 40DA | [amazone](https://www.amazon.de/dp/B09KTV425X/?coliid=I37LH2D7XQ7AYU&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_018F1S8N63CZYRB6XE54) |
 
 Toepassingsvoorbeelden voor SSR: Als een SSR Fotek via de Brautomat 220V wordt ingeschakeld, kan aan het "andere uiteinde" van de 220V-lijn een stopcontact voor elk apparaat met een stekker worden aangesloten. Bijvoorbeeld voor de stroomvoorziening van het roerwerk. Of voor een navulkooktoestel. Of voor een ringverwarmingselement. Ook kan de stroomvoorziening van de Rotek pomp via een SSR worden in- en uitgeschakeld.
 
@@ -39,7 +39,7 @@ Niet alle consumenten hebben een krachtige SSR nodig. Met goedkope relaisborden 
 
 | Artikelnaam | Link naar artikel |
 | ------------------ | ------------------------------- |
-| Relaisbord Keenso 4 kanaals | [amazon](https://www.amazon.de/dp/B07QKHPBVP/?coliid=IW0L994AVYJSX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| Relaisbord Keenso 4 kanaals | [amazone](https://www.amazon.de/dp/B07QKHPBVP/?coliid=IW0L994AVYJSX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | Relaisbord Keenso 2 kanaals | [amazon](https://www.amazon.de/dp/B07PY7LF9Z/?coliid=IHJD818Z5259W&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 
 ### Ringverwarmingselementen
@@ -51,12 +51,12 @@ Een ringverwarmingselement is handig bij het koken van het wort als de prestatie
 | Artikelnaam | Link naar artikel |
 | ------------------ | ------------------------------- |
 | Snelheidsregelaar | [amazon](https://www.amazon.de/dp/B09PV11JM8/?coliid=IC6BIVO4B18X9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| Snelheidsregelaar | [amazon] (https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T)
+| Snelheidsregelaar | [amazon](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 
 ### Connectoren
 
 | Artikelnaam | Link naar artikel |
 | ------------------ | ------------------------------- |
-| GX 12 2-polig | [amazone](https://www.amazon.de/dp/B07YSBQWSX/?coliid=IU2GESEA54974&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1PA754W9JYVNX4G9PMV0) |
-| GX 12 3-polig | [amazon](https://www.amazon.de/dp/B07GBBNHM6/?coliid=I21Z8Z8ELJ9I5J&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |
-| GX 12 4-polig | [amazon](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |
+| GX 12 2-polig | [amazon](https://www.amazon.de/dp/B07YSBQWSX/?coliid=IU2GESEA54974&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1PA754W9JYVNX4G9PMV0) |
+| GX 12 3-polig | [amazone](https://www.amazon.de/dp/B07GBBNHM6/?coliid=I21Z8Z8ELJ9I5J&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |
+| GX 12 4-polig | [amazone](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |

@@ -1,6 +1,6 @@
 # KleinerBrauhelfer2
 
-À partir de la version 2.5.0, le programme [ kleineBrauhelfer2](https:// kleine-brauhelfer.de/) dispose d'un filtre d'exportation pour le Brautomat. Le développement et la conception de recettes sont possibles dans les moindres détails imaginables grâce à la petite aide au brassage2. Avec l'aide-mémoire, kbh2 propose un organigramme très efficace et utile pour une mise en œuvre pratique dans la cuisine de la brasserie. Avec le filtre d'exportation pour Brautomat, toutes les étapes peuvent être adoptées.
+Depuis la version 2.5.0, le programme [ kleineBrauhelfer2](https://kleiner-brauhelfer.de/) dispose d'un filtre d'exportation pour le Brautomat. Le développement et la conception de recettes sont possibles dans les moindres détails imaginables grâce à la petite aide au brassage2. Avec l'aide-mémoire, kbh2 propose un organigramme très efficace et utile pour une mise en œuvre pratique dans la cuisine de la brasserie. Avec le filtre d'exportation pour Brautomat, toutes les étapes peuvent être adoptées.
 
 ## Le plan de brassage de l'onglet kbh2
 
@@ -14,7 +14,7 @@ Dans l'onglet Mash Plan, le kbh2 propose quatre manières différentes d'ajouter
 
 ### Exemple 1 : kbh2 Processus de purée de cuisson Earl Scheidt
 
-[Earl Scheid](http://hb-tauschboerse.bplaced.net/Neues_Maischverfahren.htm)
+[Comte Scheid](http://hb-tauschboerse.bplaced.net/Neues_Maischverfahren.htm)
 
 Le processus de cuisson en purée d'Earl Scheid peut être très bien planifié avec le meineBrauhelfer2 et peut être réalisé très facilement et automatiquement à l'aide du Brautomat. Veuillez noter qu'une étape de brassage de brassage (versage principal et partie 2 du malt) est nécessaire entre les deux brassages partiels. En fonction du volume de malt 2, la procédure recommandée est de travailler avec autonext désactivé pour l'étape de brassage afin d'avoir suffisamment de temps pour l'empâtage dans le malt 2 avant le début du deuxième repos du maltose. Alternativement, env. 60 °C avec chauffage direct (autonext) jusqu'à 63 °C peut être sélectionné comme température cible dans le croisement de mélange entre la coulée principale/malt 1 et la coulée principale/malt 2.
 
@@ -33,15 +33,15 @@ La spécification de temps kbh2 « combien de temps l'ajout de houblon est-il cu
 
 ### Faites quelques allers-retours mathématiques
 
-L'ajout de houblon est montré sur l'image kbh2. Le premier houblon ajouté est « Hallertauer Perle 7% 2020 » avec un temps d'ébullition de 65 minutes. Un deuxième paramètre est important dans ce contexte : sur le côté gauche, le temps de cuisson total est marqué en vert comme 80 minutes. Le moût est donc bouilli sans houblon pendant 15 minutes. Le deuxième ajout de houblon est le houblon "Hallertauer Tradition 5,7% 2020" avec un temps d'ébullition de 15 minutes. Au cours des 15 dernières minutes de cuisson du moût, il reste encore au Hallertau Perle 15 minutes de cuisson sur les 65 minutes d'origine et le deuxième ajout de houblon Hallertau Tradition cuit pendant 15 minutes sur les 15 minutes de cuisson restantes. Le dernier ajout de houblon est ajouté pour le cognement, c'est-à-dire après l'ébullitionnde.
+L'ajout de houblon est montré sur l'image kbh2. Le premier houblon ajouté est « Hallertauer Perle 7% 2020 » avec un temps d'ébullition de 65 minutes. Un deuxième paramètre est important dans ce contexte : sur le côté gauche, le temps de cuisson total est marqué en vert comme 80 minutes. Le moût est donc bouilli sans houblon pendant 15 minutes. Le deuxième ajout de houblon est le houblon "Hallertauer Tradition 5,7% 2020" avec un temps d'ébullition de 15 minutes. Au cours des 15 dernières minutes de cuisson du moût, il reste encore au Hallertau Perle 15 minutes de cuisson sur les 65 minutes d'origine et le deuxième ajout de houblon Hallertau Tradition cuit pendant 15 minutes sur les 15 minutes de cuisson restantes. Le dernier ajout de houblon est ajouté pour le cognement, c'est-à-dire après la fin de l'ébullition.
 
-La tâche de Brautomat est d'indiquer l'heure à laquelle le houblon est ajouté pendant le brassage et, idéalement, de rappeler l'ajout de houblon avec un signal acoustique.
+La tâche de Brautomat est d'indiquer l'heure d'ajout de houblon pendant le brassage et idéalement avec un aktustiun petit signal pour vous rappeler l'ajout de houblon.
 
 Dans cet exemple, on précise un temps de cuisson total de 80 minutes et un premier ajout de houblon « Hallertauer Perle » avec un temps de cuisson de 65 minutes. Il en résulte une différence de temps de cuisson de 15 minutes sans ajout de houblon. La première étape, faire bouillir le moût, dure 15 minutes. Il faut maintenant effectuer le premier ajout de houblon. Le deuxième houblon « Hallertauer Tradition 5,7% 2020 » a un temps de cuisson de 15 minutes. Sur les 65 minutes, 15 minutes sont Hallertau Pearl et Hallertau Tradition réunies dans le moût. 65 minutes moins 15 minutes donnent un intervalle entre les ajouts de houblon de 50 minutes. L'ajout du houblon Hallertauer Perle doit être effectué 50 minutes avant l'ajout du houblon Hallertauer Tradition.
 
-Le dernier lot de houblon « Hallertauer Tradition 5,7% 2020 » est donné au coupage. Lorsque vous l'éteignez, la cuisson est terminée. L’ajout de houblon ne compte donc pas dans le temps total de cuisson.
+Le dernier lot de houblon « Hallertauer Tradition 5,7% 2020 » est donné au coupage. Lorsque vous l'éteignez, la cuisson est terminée. L’ajout de houblon ne compte donc pas dans le temps de cuisson total.
 
-![Cuisine](/docs/img/hopfenbaren.jpg)
+![Cuisine](/docs/img/hopfengaben.jpg)
 
 L'ajout de houblon se comporte de la même manière. Il y a un temps de post-isomérisation de 10 minutes. L'ajout du houblon « Hallertauer Tradition 5,7% 2020 » pour le battage avec un temps d'ébullition de -5 minutes fait partie de la post-isomérisation.
 

@@ -4,9 +4,9 @@ Brautomat kan valfritt styras med en pekskärm. 3,5-tums pekskärm från Nextion
 
 | Nextion Display | Firmware |
 | --------------- | ---------- |
-| NX4832T035 (Basic-serien) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832T035.tft) |
-| NX4832K035 (Enhanced Series) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832K035.tft) |
-| NX4832F035 (Discovery Series) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832F035.tft) |
+| NX4832T035 (Basic-serien) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832T035.tft) |
+| NX4832K035 (Enhanced Series) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832K035.tft) |
+| NX4832F035 (Discovery Series) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832F035.tft) |
 
 Skärmen kräver firmware för att fungera med Brautomat. Den fasta programvaran som matchar skärmtypen är länkad i tabellen. Se även blinkande visningsfil.
 
@@ -29,7 +29,7 @@ Displayen måste förberedas innan den tas i drift. För att göra detta laddas 
 
 ## Visa mäskbryggning
 
-![MaischeSud](/docs/img/brewpage-sm.jpg)
+![MashSud](/docs/img/brewpage-sm.jpg)
 
 MashSud-sidan är den föredragna sidan vid bryggning. Informationen visas på displayen varje sekund
 
@@ -41,7 +41,7 @@ visas. Nästa vila visas också på den nedersta raden. Tiden till vänster är 
 
 ## Visa pannöversikt
 
-![Kettle översikt](/docs/img/kettlepage-sm.jpg)
+![Pannaöversikt](/docs/img/kettlepage-sm.jpg)
 
 Pannöversikten visar mäskbryggan och, om tillgänglig, bryggningen och häll över pannan med information om den faktiska temperaturen och måltemperaturen.
 

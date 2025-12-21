@@ -1,6 +1,6 @@
 # Connessioni
 
-![Tavola 2](/docs/img/Anschluesse.jpg)
+![Scheda 2](/docs/img/Anschluesse.jpg)
 
 ## Collega l'ID GGM
 

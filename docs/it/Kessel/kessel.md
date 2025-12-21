@@ -4,7 +4,7 @@ Il Braautomat32 offre la possibilità di configurare fino a tre caldaie. La prim
 
 Le tre caldaie possono essere del tipo a induzione GGM o del tipo a relè. Una caldaia di tipo relè include una connessione webhook.
 
-![Configurazione Kessel](/docs/img/kessel_1.jpg)
+![Configurazione caldaia](/docs/img/kessel_1.jpg)
 
 I parametri sono descritti nel capitolo Configurazione di base e panoramica dei parametri - Parametri caldaia e sono identici per tutte e tre le caldaie.
 
@@ -32,15 +32,15 @@ La seconda e la terza caldaia possono essere accese e spente manualmente tramite
 
 Il secondo e il terzo bollitore possono essere commutati anche tramite il piano di ammostamento:
 
-![Configurazione Kessel](/docs/img/kessel_2.jpg)
+![Configurazione caldaia](/docs/img/kessel_2.jpg)
 
 In questo piano di ammostamento semplificato, la terza caldaia HLT viene accesa automaticamente nella riga 2. Il passo HLT:100 con una temperatura target di 78°C e una durata di 0 minuti accende il riempimento con una potenza del 100% e imposta la temperatura target a 78°C. Poiché la durata specificata è 0 minuti, la ricarica è sempre attiva. Il Brautomat passa direttamente alla fase successiva di ammostamento e lascia attiva la post-infusione. Il controller PID regola in modo permanente la potenza necessaria per raggiungere e mantenere la temperatura target. Nachguss:100 sarebbe identico al comando di controllo HLT:100. Se nelle impostazioni alla ricarica è stato assegnato il nome “Cooker”, è possibile utilizzare anche il comando di controllo COOKER:100.
 
-![Configurazione Kessel](/docs/img/kessel_3.jpg)
+![Configurazione caldaia](/docs/img/kessel_3.jpg)
 
 In questo piano di ammostamento, nella terza fase viene attivata la seconda preparazione del bollitore. A differenza dell'esempio precedente HLT, la caldaia SUD viene accesa per un periodo di 15 minuti con la temperatura nominale di 100°C. Il Brautomat rimane su questo passaggio fino al raggiungimento della temperatura target e al completamento del periodo di riposo di 10 minuti. Successivamente il bollitore SUD viene spento e il Brautomat passa alla fase successiva del piano di ammostamento.
 
-Il testo "Te"cooking ilmaische" è tradotto da Brautomat al 100%. Se non è presente alcun numero compreso tra 0 e 100 o l'informazione ON o OFF dopo i due punti, il Brautomat sostituisce il testo con una prestazione al 100%.
+Il testo "Cuoci poltiglia parziale" proviene da Brautomat traduce al 100%. Se non è presente alcun numero compreso tra 0 e 100 o l'informazione ON o OFF dopo i due punti, il Brautomat sostituisce il testo con una potenza del 100%.
 
 ## Esempio di prestazioni diverse
 

@@ -10,8 +10,8 @@ Huset är uppdelat i två enheter, husbasen och huskåpan. Varje montering har o
 * Endast display
 * utan utskärningar (ingen display, ingen PWM, ingen huvudströmbrytare)
 
-![Lock med display och PWM](/docs/img/Fregga_Deckel_voll.jpg)
-![Lock med display och två PWM](/docs/img/Fregga_Deckel_Aktoren.jpg) \
+![Täck med display och PWM](/docs/img/Fregga_Deckel_voll.jpg)
+![Omslag med display och två PWM](/docs/img/Fregga_Deckel_Aktoren.jpg) \
 ![Lock med display](/docs/img/FreggaCase_Deckel_Display.jpg)
 ![stängt lock](/docs/img/FreggaCase_Deckel_ohne.jpg)
 
@@ -22,9 +22,9 @@ Huset är uppdelat i två enheter, husbasen och huskåpan. Varje montering har o
 * med 2 anslutningar
 * utan anslutningar
 
-![Underdel med 4 anslutningar](/docs/img/FreggaCase_Unterteil_voll.jpg) ![Underdel med anslutningar](/docs/img/FreggaCase_Unterteil_drei.jpg)
+![Bas med 4 anslutningar](/docs/img/FreggaCase_Unterteil_voll.jpg) ![Bas med anslutningar](/docs/img/FreggaCase_Unterteil_drei.jpg)
 
-![Nedre del med 2 anslutningar](/docs/img/FreggaCase_Unterteil_zwei.jpg) ![Underdel utan anslutningar](/docs/img/FreggaCase_Unterteil_ohne.jpg)
+![Underdel med 2 anslutningar](/docs/img/FreggaCase_Unterteil_zwei.jpg) ![Underdel utan anslutningar](/docs/img/FreggaCase_Unterteil_ohne.jpg)
 
 ## Väggfäste för FreggaCase
 
@@ -34,9 +34,9 @@ Huset är uppdelat i två enheter, husbasen och huskåpan. Varje montering har o
 
 Cylindrisk skruv M5x25\
 Gänginsatser M5 och M3S\
-[Flygplugg SP13]. B6H27L/ref=sr_1_21?crid=30CZ33B7CJLY3&dib=eyJ2IjoiMSJ9.Jfzt-kvFhs9kL5qFCb5wUNWmk2NrGFhgRKnal0OardiJ6pmt9lv8FYYSR-vM_4Jh K55vKwoyakt7y9-6ltCzbzHtrOT7ceV7gVA9-DIgMesCxzpp4IRGFJ6KNXE3y1fw-jR9DeeLFE9kgv8MZtEKyA.YooKp7XlBYJe27--r9tj5MnV8dewdtx NksmMoxO1_1Y&dib_tag=se&keywords=aviation plug+sp13&qid=1705302837&sprefix=aviation plug+sp%2Caps%2C362&sr=8-21)\
-PWM-modulen
-[Relämodulen].
+[Aviation connector SP13](https://www.amazon.de/Anschlussstecker-Luftfahrtstecker-wasserdichte-Sto%C3%9Fverbinder-Au%C3%9Fenlampen/dp/B0B6B6H27L/ref=sr_1_21?crid=30CZ33B7CJLY3&dib=eyJ2IjoiMSJ9.Jfzt-kvFhs9kL5qFCb5wUNWmk2NrGFhgRKnal0OardiJ6pmt9lv8FYYSR-vM_4JhK55vKwoyakt7y9-6ltCzbzHtrOT7ceV7gVA9-DIgMesCxzpp4IRGFJ6KNXE3y1fw-jR9DeeLFE9kgv8MZtEKyA.YooKp7XlBYJe27--r9tj5MnV8dewdtxNksmMoxO1_1Y&dib_tag=se&keywords=luftfahrtstecker+sp13&qid=1705302837&sprefix=luftfahrtstecker+sp%2Caps%2C362&sr=8-21)\
+[PWM-modulen](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_56603DDHC44WFNJ0BFM4)\
+[Relämodulen](https://www.amazon.de/dp/B07PY7LF9Z/?coliid=IHJD818Z5259W&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_J3D8XGQB34CH8FXPD06G)
 
 ## Bilder
 

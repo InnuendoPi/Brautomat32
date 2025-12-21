@@ -33,7 +33,7 @@ Längden på den röda stapeln under IDS och omarbetad vyn visar den förflutna 
 
 #### MashBud
 
-Denna vy visar den första hällen. Den aktuella vilotiden visas med aktuell temperatur och måltemperatur samt aktuell återstående tid. Längden på den röda stapeln under temperaturerna visar förloppet för den aktuella vilan. Symbolen till höger om den återstående tiden visar om nästa paus startar automatiskt (autonext): grön betyder automatisk, röd betyder paus. Dessutom visas kontrollpanelen med motsvarande funktioner.
+Denna vy visar den första hällen. Den aktuella vilotiden visas med aktuell temperatur och måltemperatur samt aktuell återstående tid. Längden på den röda stapeln under temperaturerna visar förloppet för den aktuella vilan. Symbolen till höger om den återstående tiden visar om nästa paus startar automatiskt (autonext): grön betyder automatisk, röd betyder paus. Dessutom visas controller Deck med motsvarande funktioner.
 
 ![Display](/docs/img/brewpage-sm.jpg)
 
@@ -47,9 +47,9 @@ En display är valfri. Brautomat stöder endast Nextion HMI 3,5-tums pekskärmar
 
 Skärmen konfigureras via ett SD-kort. TFT-filen från Info-mappen som matchar displayen kopieras till SD-kortet och sätts in i displayen. Så snart displayen slås på börjar konfigurationen. Processen tar ungefär en minut. Förloppet visas på displayen. När konfigurationen är klar stängs skärmen av och SD-kortet tas bort. Displayen är nu klar att användas.
 
-Det bör noteras att SDA, SCL påPIN-koderna D1, D2 måste användas.
+Det bör noteras att SDA, SCL måste drivas på PIN-koderna D1, D2.
 
-### PT100x-sensorer MAX31865 Aktivera förstärkare
+### PT100x-sensorer MAX31865 AmplAktivera här
 
 Om analoga PT100x-givare används måste denna omkopplare aktiveras. En PT100x analog sensor kräver en RTD till digital omvandlare för att ansluta till en ESP mikrokontroller. En MAX31865-förstärkare är en RTD-digitalomvandlare i form av ett litet extra kort.
 
@@ -59,9 +59,9 @@ Multicast DNS används för att lösa värdnamn till IP-adresser i små nätverk
 
 Obs: mDNS-namnet är konfigurerat utan ett protokoll (http://) och utan en toppdomän (.local) i systeminställningarna (Brautomat).
 
-### Instrumentpanel
+### Dashboard
 
-Element kan enkelt visas och döljas via instrumentpanelen. Till exempel, om ingen omarbetning används, ska omarbetningselementet inaktiveras för instrumentpanelen. Inaktiverade objekt minskar trafiken.
+Med Dashboard kan du enkelt visa och dölja element. Till exempel, om ingen omarbetning används, ska omarbetningselementet för Dashboard avaktiveras. Inaktiverade objekt minskar trafiken.
 
 ### Loggning
 
@@ -107,8 +107,7 @@ Tidszonen används för att bestämma rätt tid inklusive sommar- och vintertid.
 |Afrika/Dakar |GMT0 |
 |Afrika/Dar_es_Salaam |ÄTA-3 |
 |Afrika/Djibouti |ÄTA-3 |
-|Afrika/Douala |WAT-1 |
-|Afrika/El_Aaiun |<+01>-1 |
+|Afrika/Douala |WAT-1 ||Afrika/El_Aaiun |<+01>-1 |
 |Afrika/Freetown |GMT0 |
 |Afrika/Gaborone |CAT-2 |
 |Afrika/Harare |CAT-2 |
@@ -158,8 +157,8 @@ Tidszonen används för att bestämma rätt tid inklusive sommar- och vintertid.
 |Amerika/Argentina/Tucuman |<-03>3 |
 |Amerika/Argentina/Ushuaia |<-03>3 |
 |Amerika/Aruba |AST4 |
-|Amerika/Asuncion|<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
-|Amerika/Atikokan |EST5 |
+|Amerika/Asuncion |<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
+|Amerika/Atikokan|EST5 |
 |Amerika/Bahia |<-03>3 |
 |Amerika/Bahia_Banderas |CST6 |
 |Amerika/Barbados |AST4 |
@@ -260,8 +259,8 @@ Tidszonen används för att bestämma rätt tid inklusive sommar- och vintertid.
 |Amerika/Puerto_Rico |AST4 |
 |America/Punta_Arenas |<-03>3 |
 |Amerika/Rainy_River |CST6CDT,M3.2.0,M11.1.0 |
-|America/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0|
-|Amerika/Recife |<-03>3 |
+|America/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0 |
+|Amerika/Recife |<-03>3|
 |Amerika/Regina |CST6 |
 |Amerika/Resolute |CST6CDT,M3.2.0,M11.1.0 |
 |Amerika/Rio_Branco |<-05>5 |
@@ -312,8 +311,8 @@ Tidszonen används för att bestämma rätt tid inklusive sommar- och vintertid.
 |Asien/Bagdad |<+03>-3 |
 |Asien/Bahrain |<+03>-3 |
 |Asien/Baku |<+04>-4 |
-|Asien/Bangkok|<+07>-7 |
-|Asien/Barnaul |<+07>-7 |
+|Asien/Bangkok |<+07>-7 |
+|Asien/Ladugårdaul |<+07>-7 |
 |Asien/Beirut |EET-2EEST,M3.5.0/0,M10.5.0/0 |
 |Asien/Bishkek |<+06>-6 |
 |Asien/Brunei |<+08>-8 |
@@ -363,7 +362,7 @@ Tidszonen används för att bestämma rätt tid inklusive sommar- och vintertid.
 |Asien/Riyadh |<+03>-3 |
 |Asien/Sakhalin |<+11>-11 |
 |Asien/Samarkand |<+05>-5 |
-|Asien/Seoul |KST-9|
+|Asien/Seoul |KST-9 |
 |Asien/Shanghai |CST-8 |
 |Asien/Singapore |<+08>-8 |
 |Asien/Srednekolymsk |<+11>-11 |
@@ -414,7 +413,7 @@ Tidszonen används för att bestämma rätt tid inklusive sommar- och vintertid.
 |Europa/Bratislava |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Bryssel |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Bukarest |EET-2EEST,M3.5.0/3,M10.5.0/4 |
-|Europa/Budapest |CET-1CEST,M3.5.0,M10.5.0/3|
+|Europa/Budapest |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Busingen |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Chisinau |EET-2EEST,M3.5.0,M10.5.0/3 |
 |Europa/Köpenhamn |CET-1CEST,M3.5.0,M10.5.0/3 |
@@ -466,7 +465,7 @@ Tidszonen används för att bestämma rätt tid inklusive sommar- och vintertid.
 |Europa/Zaporozhye |EET-2EEST,M3.5.0/3,M10.5.0/4 |
 |Europa/Zürich |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Indisk/Antananarivo |ÄTA-3 |
-|Indisk/Chagos |<+06>-6 |
+|Indian/Chagos |<+06>-6|
 |Indisk/jul |<+07>-7 |
 |Indian/Cocos |<+0630>-6:30 |
 |Indien/Komorerna |ÄTA-3 |
@@ -517,8 +516,8 @@ Tidszonen används för att bestämma rätt tid inklusive sommar- och vintertid.
 |Ettc/GMT |GMT0 |
 |Etc/GMT-0 |GMT0 |
 |Etc/GMT-1 |<+01>-1 |
-|Ettc/GMT-2|<+02>-2 |
-|Etc/GMT-3 |<+03>-3 |
+|Etc/GMT-2 |<+02>-2 |
+|Ettc/GMT-3|<+03>-3 |
 |Etc/GMT-4 |<+04>-4 |
 |Etc/GMT-5 |<+05>-5 |
 |Etc/GMT-6 |<+06>-6 |

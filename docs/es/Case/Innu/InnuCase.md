@@ -38,8 +38,8 @@ El InnuCase está disponible en dos tamaños. Los archivos de impresión se alma
 
 El InnuCase #2 está diseñado para una máquina de hacer pan automática con pantalla y sensor. Si no se utiliza ninguna pantalla, la abertura de la pantalla se puede cerrar con una tapa ciega.
 
-Las conexiones de enchufe adecuadas para orificios M12 incluyen [enchufe de aviación GX12] (https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_6Z58FR08HC6VACCZPY83). Los conjuntos de aviación GX12 están disponibles en versiones de 2 pines (actuadores), 3 pines (DS18B20) y 4 pines (PT100x).
-Un interruptor de alimentación adecuado es, entre otros, un [interruptor de presión LED](https://www.amazon.de/dp/B09WXPJQN3?psc=1&ref=ppx_yo2ov_dt_b_product_details). El InnuCase-1 puede acomodar dos módulos PWM. El hueco para un módulo PWM se puede cerrar con una tapa ciega.
+Las conexiones de enchufe adecuadas para orificios M12 incluyen [enchufe de aviación GX12](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_6Z58FR08HC6VACCZPY83). Los conjuntos de aviación GX12 están disponibles en versiones de 2 pines (actuadores), 3 pines (DS18B20) y 4 pines (PT100x).
+Un interruptor de alimentación adecuado es, entre otras cosas, un [interruptor de presión LED](https://www.amazon.de/dp/B09WXPJQN3?psc=1&ref=ppx_yo2ov_dt_b_product_details) enclavable. El InnuCase-1 puede acomodar dos [Módulos PWM](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_56603DDHC44WFNJ0BFM4). El hueco para un módulo PWM se puede cerrar con una tapa ciega.
 
 ## Cubierta de la carcasa
 
@@ -56,34 +56,34 @@ Un interruptor de alimentación adecuado es, entre otros, un [interruptor de pre
 
 ## Conexión por tornillo de la carcasa
 
-La carcasa tiene varias almohadillas para conexión por tornillo [Inserciones de rosca](https://www.amazon.de/dp/B0BZVGQ91H/?coliid=I1EM9CS796PWGZ&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_64ER38VQR1H02DJ4WZ4A). Los agujeros de las pastillas tienen un diámetro de 4,6 mm. Los insertos roscados se funden en el orificio de la almohadilla con un soldador. Los insertos roscados M3 están unidos.
+La carcasa tiene varias almohadillas para sujetar [insertos roscados](https://www.amazon.de/dp/B0BZVGQ91H/?coliid=I1EM9CS796PWGZ&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_64ER38VQR1H02DJ4WZ4A) para una conexión por tornillo. Los agujeros de las pastillas tienen un diámetro de 4,6 mm. Los insertos de rosca se funden en el orificio de la almohadilla usando un [soldador](https://www.amazon.de/gp/product/B0CDBSGSXY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1). Los insertos roscados M3 están unidos.
 
-![Inserciones roscadas](/docs/img/Gewindeeinseiten.jpg)
+![Inserciones de hilo](/docs/img/Gewindeeinsätze.jpg)
 
 ## Portador de placa de circuito
 
-La placa de circuito se atornilla a una placa de soporte. La placa de soporte se monta detrás de la pantalla mediante [casquillos distanciadores](https://www.reichelt.de/distanzhuelsen-metall-6-kant-m3-15mm-da-15mm-p7018.html?CCOUNTRY=445&LANGUAGE=de&trstct=pos_0&nbc=1&&r=1). Se unen casquillos distanciadores hexagonales M3 con una longitud de 15 mm.
+La placa de circuito se atornilla a una placa de soporte. La placa de soporte se monta detrás de la pantalla mediante [manguitos espaciadores](https://www.reichelt.de/distanzhuelsen-metall-6-kant-m3-15mm-da-15mm-p7018.html?CCOUNTRY=445&LANGUAGE=de&trstct=pos_0&nbc=1&&r=1). Se unen casquillos distanciadores hexagonales M3 con una longitud de 15 mm.
 
-![Platinenträger](/docs/img/Platinenträger-1.jpg) ![Portatarjetas MAX31865](/docs/img/Platinenträger-2.jpg)
+![Portador de placa](/docs/img/Platinenträger-1.jpg) ![Portador de placa MAX31865](/docs/img/Platinenträger-2.jpg)
 
 La figura muestra 2 soportes de placas de circuito:
 
 * la placa de soporte inferior más pequeña es para máquinas de pan automáticas con sensores DS18B20
 * la placa portadora superior, más grande, es para máquinas de pan automáticas con sensores PT100x (orificios adicionales para sujetar 2 placas MAX31865)
 
-La placa portadora permite un mon completodías en la vivienda. No hay Brautomat componentes ni cables conectados a la cubierta de la carcasa.
+La placa de soporte permite un montaje completo en la carcasa. No hay Brautomat componentes ni cables conectados a la cubierta de la carcasa.
 
-## soporte
+## Soporte
 
 Están disponibles soportes sencillos para fijar la carcasa. El soporte se atornilla en la parte trasera, detrás de la tapa.
 
-![Titular](/docs/img/Holder.jpg)
+![Soporte](/docs/img/Halterung.jpg)
 
 ## Tapa ciega
 
 La tapa ciega cierra la abertura de la pantalla en la carcasa cuando no hay ninguna pantalla insertada.
 
-![Blindlid](/docs/img/Blindlid.jpg)
+![Tapa ciega](/docs/img/Blinddeckel.jpg)
 
 ## Imágenes
 

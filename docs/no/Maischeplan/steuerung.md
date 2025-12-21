@@ -1,6 +1,6 @@
 # Kontrollene
 
-Rett under mash-planen er kontrollerdekket. Meskeprosessen styres med de 5 knappene Power, Play, Pause, Previous og Next.
+Rett under mash-planen er controller Deck. Meskeprosessen styres med de 5 knappene Power, Play, Pause, Previous og Next.
 
 ![Kontroll](/docs/img/Buttons.jpg)
 
@@ -41,6 +41,6 @@ Neste-knappen hopper til neste trinn i meskeplanen eller, hvis det var det siste
 
 Skjul-knappen skjuler eller skjuler mash-plantabellen.
 
-![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
+![mashplan](/docs/img/Maischeplan-anzeigen.jpg)
 
 Kollapsknappen forblir synlig selv etter at bryggingen starter. Alle knapper for å redigere mash-planen er skjult etter at bryggingen starter.

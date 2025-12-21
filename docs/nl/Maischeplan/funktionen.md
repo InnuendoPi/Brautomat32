@@ -6,7 +6,7 @@ Het maischplan heeft de vorm van een tabel. Deze tabel wordt op een brouwdag van
 
 ## Basisfuncties
 
-![Mashplan](/docs/img/Brautomat.jpg)
+![mashplan](/docs/img/brautomat.jpg)
 
 Ter oriëntatie wordt eerst de structuur van de tabelrijen beschreven. Een rij in het maischplan vertegenwoordigt een stap in het maischplan. Elke tabelrij heeft deze kolommen:
 
@@ -17,7 +17,7 @@ Ter oriëntatie wordt eerst de structuur van de tabelrijen beschreven. Een rij i
 
 Na deze vier details over de maischstap zijn er op elke regel bewerkingsknoppen met de volgende functies: (van links naar rechts)
 
-![Mashplan bewerken](/docs/img/Brautomat-111.jpg)
+![Mashplan bewerken](/docs/img/brautomat-111.jpg)
 
 * verplaats deze lijn één positie naar boven
 * verplaats deze lijn één positie naar beneden
@@ -26,7 +26,7 @@ Na deze vier details over de maischstap zijn er op elke regel bewerkingsknoppen 
 
 De tabelkop bevat de volgende knoppen (van links naar rechts)
 
-![Mashplan bewerken](/docs/img/Brautomat-1.jpg)
+![Mashplan bewerken](/docs/img/brautomat-1.jpg)
 
 * nieuwe regel: voeg een nieuwe maischstap toe aan het einde van de tabel
 * Verwijderen: verwijder de hele tabel (leeg maischplan)
@@ -34,7 +34,7 @@ De tabelkop bevat de volgende knoppen (van links naar rechts)
 * Database: selectie van mash-plannen, import, export en planner van mash-plannen
 * Samenvouwen: vouw de maischplantabel samen en vouw deze uit
 
-![Mashplan bewerken](/docs/img/Brautomat-11.jpg)
+![Mashplan bewerken](/docs/img/brautomat-11.jpg)
 
 Wanneer een tabelrij wordt bewerkt, veranderen de knoppen.
 
@@ -49,23 +49,23 @@ Samen met de bedieningselementen Aan/uit, Afspelen, Pauze, Vorige en Volgende is
 * Koken (zonder hop toe te voegen)
 * WPH: Whirlpoolhoppen
 
-Additieven zoals weergegeven in de afbeelding _Gistvoer koken 1gr_ worden vanuit de kleine Brauherlfer2 met het tijdstip van toediening en de hoeveelheid in het pureeplan geïmporteerd.
+Additieven zoals weergegeven in de afbeelding _Gistvoedsel koken 1gr_ worden vanuit de kleine Brauherlfer2 met het tijdstip van toediening en de hoeveelheid in het pureeplan geïmporteerd.
 
 ## Bewerk de maischplantabel
 
 Een mash-plan kan worden gewijzigd in Brautomat of volledig opnieuw worden gemaakt. Het potloodsymbool zet een lijn in de maischplantabel in de editormodus.
 
-![Mashplan bewerken](/docs/img/Brautomat-3.jpg)
+![Mashplan bewerken](/docs/img/brautomat-3.jpg)
 
 Een willekeurig aantal tabelrijen kan nu na elkaar worden gewijzigd. Zodra er op een symbool voor het bewerken van het maischplan is geklikt, verandert de knop _Opslaan_ van groen in rood. Nadat alle wijzigingen zijn aangebracht, moet het mashplan worden opgeslagen met behulp van de knop _Opslaan_. Als alternatief kunnen alle wijzigingen worden genegeerd met de knop _Exit_ om af te sluiten zonder op te slaan.
 
 Zodra via de aan/uit-knop een maischproces wordt gestart, verandert de weergave:
 
-![Bewerk het mash-plan](/docs/img/Brautomat-4.jpg)
+![Mashplan bewerken](/docs/img/brautomat-4.jpg)
 
-De knoppen voor bewerken zijn verborgen. Om dit weer zichtbaar te maken, moet het maischproces gestopt worden via de Pauzeknop op de besturing:
+De knoppen voor bewerken zijn verborgen. Om deze weer zichtbaar te maken,Het maischproces moet worden gestopt met de pauzeknop op de besturing:
 
-![Mashplan bewerken](/docs/img/Brautomat-5.jpg)
+![Mashplan bewerken](/docs/img/brautomat-5.jpg)
 
 Wanneer het maischproces wordt gepauzeerd, wordt de pauzeknop in de besturing rood weergegeven en worden de bewerkingsfuncties weergegeven. De inductiekookplaat gaat niet uit. De rusttemperatuur blijft behouden. Als de rusttimer actief is, wordt deze gepauzeerd. Als het maischplan wordt gewijzigd (editormodus), worden de pauzeknop om het maischproces voort te zetten en de aan/uit-knop gedeactiveerd en grijs weergegeven totdat de wijzigingen in het maischplan zijn opgeslagen of verwijderd (afsluiten).
 
@@ -80,7 +80,7 @@ Aan het eind van een maischproces wordt met een jodiummonster vastgesteld dat he
 
 ## Functie en toepassing van autonext
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext.jpg)
+![Mash-plan autonext](/docs/img/Maischeplan-autonext.jpg)
 
 De eerste stap van het maischplan genaamd _Mashing 50°C_ heeft een rusttijd van 10 minuten en een gedeactiveerde _autonext_. De afbeelding toont de situatie wanneer de rusttimer 10 minuten heeft bereikt: De timer heeft afgeteld tot 00:00 resterende tijd. De afspeelknop wordt automatisch rood. Rechtsonder verschijnt het toastbericht “Klik op de afspeelknop”. De kookplaat wordt uitgeschakeld. Het brouwproces wacht op een klik op de afspeelknop. De webinterface toont de volgende stap, die wordt gestart door op Afspelen te klikken.
 
@@ -90,7 +90,7 @@ De tweede maischstap, Maltoserast 63°C genaamd, heeft een rusttemperatuur van 6
 
 * Aan het einde van een rustperiode met _autoext_ geactiveerd, wordt het maischproces automatisch voortgezet en blijft de kookplaat ingeschakeld.
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext2.jpg)
+![Mash-plan autonext](/docs/img/Maischeplan-autonext2.jpg)
 
 De eigenschap _autonext_ in de zevende stap _Mashing 78°C_ is niet geactiveerd. Als de Brautomat een gedeactiveerde autonext tegenkomt, beëindigt de Brautomat de huidige rust nadat de rusttijd is verstreken en schakelt de kookplaat uit (0% vermogen). In deze status wordt de knop Afspelen rood weergegeven. Om het brouwproces voort te zetten, moet op de knop Afspelen worden geklikt.
 
@@ -98,9 +98,9 @@ Terwijl in het eerste voorbeeld van _autonext_ gewoonlijk direct op de knop Afsp
 
 ## Verschil autonext en breuk
 
-Als autonext aan het einde van de vergrendeling wordt gedeactiveerd, wordt de kookplaat uitgeschakeld. Met de pauzeknop wordt de rusttimer gestopt,De kookplaat blijft echter ingeschakeld en de Brautomat berekent het benodigde vermogen voor de kookplaat.
+Als autonext aan het einde van de vergrendeling wordt gedeactiveerd, wordt de kookplaat uitgeschakeld. De pauzeknop stopt de rusttimer, maar de kookplaat blijft ingeschakeld en de Brautomat berekent het benodigde vermogen voor de kookplaat.
 
-In de volgende paragrafen worden de optionele speciale functies beschreven. Brautomat beginners kunnen de beschrijving van de speciale functies overslaan.
+In de volgende secties wordt de optionele Son beschrevende functies worden beschreven. Brautomat beginners kunnen de beschrijving van de speciale functies overslaan.
 
 ## Speciale functie 0°C rust wanneer autonext is geactiveerd
 
@@ -134,26 +134,24 @@ Een tweede bijzondere functie zijn de besturingscommando's voor de kookplaten en
 
 Het vermogen kan AAN of UIT zijn, of een getal tussen 0 en 100%. De UIT-status komt overeen met de waarde 0% en AAN met de waarde 100%. Het bedieningscommando voor de eerste inductiekookplaat is IDS of MASH. Het bedieningscommando voor de tweede inductiekookplaat is SUD. Het besturingscommando voor de herschikking is HLT. Het besturingscommando voor een actor is de actornaam.
 
-![Actorbesturingscommando](/docs/img/Maischeplan-Aktoren.jpg)
+![Actuatorbesturingsopdracht](/docs/img/Maischeplan-Aktoren.jpg)
 
 Het maischplan op de afbeelding schakelt actuatoren op drie plaatsen. Het roerwerk wordt direct bij het begin ingeschakeld: Roerwerk:AAN
 Kort voor het einde van het maischschema wordt het roerwerk uitgeschakeld: Roerwerk:UIT en het bijvullen wordt ingeschakeld: Bijvullen:AAN.
 
-Het besturingscommando voor een actor kan worden gespecificeerd met een vermogen, b.v. POMP: 60. Vervolgens wordt de stelpomp met 60% vermogen ingeschakeld. Hierbij wordt ervan uitgegaan dat deze actuator is geactiveerd voor PWM. De rusttemperatuur en de Rast De duur moet voor besturingscommando's op 0 worden ingesteld.
+Het besturingscommando voor een actor kan worden gespecificeerd met een vermogen, b.v. POMP: 60. Vervolgens wordt de stelpomp met 60% vermogen ingeschakeld. Hierbij wordt ervan uitgegaan dat deze actuator is geactiveerd voor PWM. Voor stuurcommando's moeten de rusttemperatuur en de rustduur op 0 worden gezet.
 
-Met het bedieningscommando IDS:50 wordt het maximale uitgangsvermogen van de kookplaat ingesteld op 50%. Het hergieten kan ook worden ingeschakeld op 75% vermogen met HLT:75.
-
-![IDS-besturingsopdracht](/docs/img/sonderfunktion_sud1.jpg)
+Met het bedieningscommando IDS:50 wordt het maximale uitgangsvermogen van de kookplaat ingesteld op 50%. Het hergieten kan ook worden ingeschakeld op 75% vermogen met HLT:75.![IDS-besturingsopdracht](/docs/img/sonderfunktion_sud1.jpg)
 
 Het bedieningscommando SUD: Dikke puree koken met een rusttijd van 10 minuten en een rusttemperatuur van 100 graden voert een maischstap uit op een tweede kookplaat. De rusttimer wordt gestart zodra de rusttemperatuur is bereikt.
 
-![Besturingscommando SUD](/docs/img/sonderfunktion_sud2.jpg)
+![Besturingsopdracht SUD](/docs/img/sonderfunktion_sud2.jpg)
 
 Het bedieningscommando SUD: Dikke puree koken met een rusttemperatuur van 100 graden maar zonder rusttijd schakelt de tweede kookplaat in, start de PID-controller voor de kookplaat en springt direct naar de volgende stap in het maischplan.
 
-![Besturingscommando SUD](/docs/img/sonderfunktion_sud3.jpg)
+![Besturingsopdracht SUD](/docs/img/sonderfunktion_sud3.jpg)
 
-De maischstap, versuikering bij 72°C, wordt uitgevoerd op de eerste kookplaat _Maische_. De PID-controller regelt het benodigde vermogen voor de maischketel. Tegelijkertijd regelt de PID-controller het benodigde vermogen voor de ketel _Sud_.
+De maischstap, versuikering bij 72°C, wordt uitgevoerd op de eerste kookplaat _Maische_. De PID-controller regelt het benodigde vermogen voor de maischkuip. Tegelijkertijd regelt de PID-controller het benodigde vermogen voor de ketel _Sud_.
 
 Voorbeelden:
 
@@ -173,13 +171,13 @@ _Opmerking: Met de bedieningscommando's kunnen de maisch-, brouw- en HLT-ketels 
 
 Als voorbeeld wordt voor de GGM IDS of de MashSud ketel de volgende configuratie gegeven:
 
-![IDS-besturingsopdracht](/docs/img/aktoren_schaltung4.jpg)
+![IDS-besturingsopdracht](/docs/img/aktoren_schalten4.jpg)
 
 Het maximale uitgangsvermogen is vooraf ingesteld op 100%. De “Overgang naar Koken” temperatuur is 95°C. Vanaf deze temperatuur bedraagt ​​het maximale uitgangsvermogen van de GGM IDS slechts 80%.
 
 Het maischschema in de afbeelding begint met de stap “Verwarmen van de hoofdschenking”. De GGM IDS inductiekookplaat zou het water verwarmen met het vermogen "Max. Power IDS" (parameter in het temperatuurcontroleregister), d.w.z. met 100%.
 
-![IDS-besturingsopdracht](/docs/img/aktoren_schaltung2.jpg)
+![IDS-besturingsopdracht](/docs/img/aktoren_schalten2.jpg)
 
 De rusttimer begint bij 59°C. De rusttijd bedraagt ​​nul minuten. De Brautomat springt naar de volgende regel van stap 2.
 Het stuurcommando IDS:65 stelt het maximale vermogen van de IDS in op 65%. De Brautomat springt naar de volgende regel van stap 3.
@@ -187,7 +185,7 @@ Nu wordt de temperatuur in de stap “maischen” van 59°C naar de doeltemperat
 
 Bij de volgende maischstappen blijft het maximale uitgangsvermogen van 65% behouden. Totdat de Brautomat na de maischstap voldoet aan het besturingscommando IDS:100.
 
-![IDS-besturingsopdracht](/docs/img/aktoren_schaltung3.jpg)
+![IDS-besturingsopdracht](/docs/img/aktoren_schalten3.jpg)
 
 Het besturingscommando verandert het maximale uitgangsvermogen van de IDS naar 100%. Het wort wordt nu op 100% vermogen verwarmd tot de “overgang naar kooktemperatuur” van 95°C (zie hierboven). Vanaf 95°C schakelt de GGM IDS over naar 80% vermogen. 80% komt overeen met de parameter "Vermogen uit transitie".
 
@@ -207,7 +205,7 @@ Met behulp van de speciale functie IDS: <Vermogen in %> kan het vermogen van een
 
 ![Besturingscommando MASH power](/docs/img/IDS-Sonderfunktion.jpg)
 
-_VerklaartVoor informatie over de berekeningswijze, zie: Parameters van de GGM IDS - Temperatuurregeling - Maximale prestaties van de IDS._
+_Voor uitleg over de rekenwijze, zie: Parameters van de GGM IDS - Temperatuurregeling - Maximale prestaties van de IDS._
 
 ```Json
 
@@ -215,7 +213,7 @@ _VerklaartVoor informatie over de berekeningswijze, zie: Parameters van de GGM I
     De uitdrukking c * T / (t * w) wordt vervangen door de waarde 75 bij een rendement van 80% voor de inductiekookplaat
     De massa m bedraagt 35 kg
     P = 35 x 75 = 2625
-    2625W is 75% van het maximum. vermogen 3500W (2625 / 3500 * 100 = 75%)
+    2625W is 75% van het maximum. vermogen 3500W (2625/3500 * 100 = 75%)
 
 ```
 
@@ -254,13 +252,13 @@ Twee acteurs:
 
 Het maischplan:
 
-![voorbeeld mashplan brouwdag](/docs/img/example_control_commands1.jpg)
+![voorbeeld maischplan brouwdag](/docs/img/example_control_commands1.jpg)
 
 Het voorbeeld laat zien hoe eenvoudig het is om actoren in en uit te schakelen met speciale commando's of hoe speciale commando's in het mash-plan worden geïntegreerd. Bij de eerste maischstap wordt het roerwerk ingeschakeld. De Brautomat voert het speciale commando uit en springt onmiddellijk naar de volgende stap in het mash-plan. De mash-in-stap was geconfigureerd met een duur van 1 minuut en autonext uitgeschakeld. In deze stap wordt de mout aan het brouwwater toegevoegd. De stap duurt langer dan een minuut, maar afhankelijk van de vulling is vooraf niet bekend hoe lang het pureren zal duren. Na een minuut pureren schakelt de Brautomat de kookplaat uit en geeft de afspeelknop rood weer (gedeactiveerd autonext). De Brautomat “wacht” nu totdat de stap is voltooid en op de afspeelknop wordt geklikt. Wanneer de kookplaat wordt uitgeschakeld en er mout wordt toegevoegd, zal de mengtemperatuur voor het maisch onder de 55°C liggen. Deze procedure is bijvoorbeeld geschikt voor een ontspannen, langzame toevoeging van de mouten of voor een korte eiwitrust.
 
 _Alternatief:_ activeer de eigenschap autonext en stel de rustperiode in op 5 minuten. In dit geval handhaaft de Brautomat de maischtemperatuur gedurende 5 minuten (maischen) en warmt vervolgens automatisch op tot de volgende rest.
 
-De volgende stap is de maltoserust. De PID De controller regelt het vermogen dat nodig is om de doeltemperatuur in het maisch te bereiken en deze gedurende een periode van 40 minuten te behouden. In regel 4 wordt het bijvullen ingeschakeld met een speciaal commando. De doeltemperatuur voor het bijvullen is 75°C en de duur is 0 minuten. De Brautomat start de PID-controller voor het hergieten van de ketel en regelt het benodigde vermogen op de achtergrond. Op dit punt in het maischplan zijn twee PID-controllers actief: een PID-controller voor de maischbrouwketel en een PID-controller voor het nagieten. De Brautomat springt na het inschakelen direct naar de volgende stap.
+De volgende stap is de maltoserust. De PID-controller regelt het vermogen dat nodig is om de doeltemperatuur in het maisch te bereiken en houdt deze gedurende een periode van 40 minuten vast. In regel 4 wordt het bijvullen ingeschakeld met een speciaal commando. De doeltemperatuur voor het bijvullen is 75°C en de duur is 0 minuten. De Brautomat start de PID-controller voor het hergieten van de ketel en regelt het benodigde vermogen op de achtergrond. NaarOp dit punt in het maischplan zijn twee PID-controllers actief: een PID-controller voor de maischbrouwketel en een PID-controller voor het nagieten. De Brautomat springt na het inschakelen direct naar de volgende stap.
 
 In het maischplan wordt de ringverwarmingselementactuator één keer ingeschakeld of geschakeld met het speciale commando _RHE:ON_ en één keer met _RHE:50_. De ON vertaalt de Brautomat met 100% prestatie, terwijl 50 dienovereenkomstig wordt verwerkt met 50% prestatie. De MashSud waterkoker heeft een maximale inhoud van 70 liter. Het ringverwarmingselement ondersteunt de kookplaat tijdens het koken met 50% vermogen voor krachtig koken: 100% vermogen kookplaat (3,5 kW) plus 1,75 kW ringverwarmingselement (50%). Aan het einde van de bereiding wordt het ringverwarmingselement uitgeschakeld met het speciale commando _RHE:OFF_.
 
@@ -278,7 +276,7 @@ Terwijl tools als kleineBrauhelfer, BrewFather of MMum altijd de totale kooktijd
 
 _Uitbreiding:_ De uitleg over hopdoses is uitgebreid met twee of meer doseringen tegelijk:
 
-![voorbeeld mashplan brouwdag](/docs/img/example_control_commands3.jpg)
+![voorbeeld maischplan brouwdag](/docs/img/example_control_commands3.jpg)
 
 De hop moet 10 minuten voor het einde van het koken worden toegevoegd. Tradition 6,0% 30g_ en gistvoeding _Voedingsgist_ worden tegelijkertijd aan het wort toegevoegd. De illustratie laat zien hoe eenvoudig de procedure is: gelijktijdige doses met een duur van 0 minuten worden gegeven vóór een dosis met een duur.
 
@@ -286,4 +284,4 @@ De voorlaatste stap na de isomerisatie maakt gebruik van de speciale functie doe
 
 De grafiek voor het maischplan:
 
-![voorbeeld mashplan brouwdag](/docs/img/example_control_commands2.jpg)
+![voorbeeld maischplan brouwdag](/docs/img/example_control_commands2.jpg)

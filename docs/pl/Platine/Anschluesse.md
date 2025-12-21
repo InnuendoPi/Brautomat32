@@ -1,6 +1,6 @@
 # Połączenia
 
-![Tablica 2](/docs/img/Anschluesse.jpg)
+![Płyta 2](/docs/img/Anschluesse.jpg)
 
 ## Podłącz identyfikator GGM
 
@@ -32,7 +32,7 @@ Brautomat obsługuje do trzech czujników temperatury DS18B20. Złącze jest ozn
 | Napięcie - | brązowy lub czarny | GND |
 | |  | |
 
-Nie ma kolejności podłączania czujników cyfrowych Dallas DS18B20.
+W przypadku czujników cyfrowych Dallas DS18B20 nie ma kolejności połączeń.
 
 ## Podłącz czujniki temperatury PT100x i MAX31865.
 
@@ -53,7 +53,7 @@ Należy zachować kolejność CS0 do CS2 przy podłączaniu czujników PT100x.
 ## Podłącz wyświetlacz
 
 | Kabel | Następny wyświetlacz | Połączenie |
-| --------- | --------------- | ------------------------ |
+| -------------- | --------------- | ------------------------ |
 |     czerwony | Aktualny + | Vcc |
 |   czarny | Elektryczność - | GND |
 |    niebieski | Teksas | D1 |

@@ -18,15 +18,15 @@ Este parámetro describe la temperatura a la que el controlador PID debe detecta
 
 ### Potencia de transición [%]
 
-Este parámetro describe la potencia de salida de la placa desde la transición de temperatura hasta la cocción. El valor predeterminado es 100%. El parámetro "Transición a cocción" se ha utilizado para establecer una temperatura a la que se desactiva el controlador PID. El parámetro "Potencia de transición" ahora especifica la potencia de salida fija para la placa. Si se utiliza una tetera con un volumen de 35 litros o más, el valor predeterminado del 100% es una opción adecuada. En las cocinas de cervecerías con marmitas pequeñas, un suministro de energía del 100 % puede provocar un desbordamiento. En este caso, con este parámetro se puede reducir el suministro máximo de energía, por ejemplo, al 75 %.
+Este parámetro describe la potencia de salida de la placa desde la transición de temperatura hasta la cocción. El valor predeterminado es 100%. El parámetro "Transición a cocción" se ha utilizado para establecer una temperatura a la que se desactiva el controlador PID. El parámetro "Potencia de transición" ahora especifica la potencia de salida fija para la placa. Si se utiliza una tetera con un volumen de 35 litros o más, el valor predeterminado del 100% es una opción adecuada. En las cocinas de cervecerías con marmitas pequeñas, un suministro de energía del 100 % puede provocar un desbordamiento. En este caso, con este parámetro se puede reducir el suministro máximo de energía, por ejemplo, al 75%.
 
 ### Desactivar PID para cocinar [activar/desactivar]
 
 Este parámetro determina el comportamiento del controlador PID al cocinar cuando la temperatura real está por encima de la temperatura objetivo. Ejemplo: la temperatura de cocción se fijó en 98°C en el plan de puré. El parámetro "Potencia de transición" desactiva el cálculo PID de la temperatura de "Transición a ebullición". Si el parámetro "Desactivar PID para hervir" está activado (predeterminado), entonces el controlador PID permanece apagado incluso por encima de la temperatura objetivo de 98 °C del plan de macerado y se utiliza la energía del parámetro "Energía de transición". Este parámetro está activado por defecto y permite la cocción rodante.
 
-Si el parámetro "Desactivar PID para cocinar" no está activado, el controlador PID calcula la potencia requerida una vez que se alcanza la temperatura objetivo (aquí 98°C). El rendimiento calculado por encima del objetivo.-La temperatura es del 0%. La placa se apaga y evita que se desborde la cocción si es necesario.
+Si el parámetro "Desactivar PID para cocinar" no está activado, el controlador PID calcula la potencia requerida una vez que se alcanza la temperatura objetivo (aquí 98°C). La potencia calculada por encima de la temperatura objetivo es del 0%. La placa se apaga y evita que se desborde la cocción si es necesario.
 
-### Rendimiento de error del sensor [0-100%]
+### Rendimientoen caso de error del sensor [0-100%]
 
 Si se produce un error en el sensor, por ejemplo un sensor no conectado o un defecto, se puede ajustar la potencia de la placa para solucionar este error. Un valor del 100% ignora el error del sensor.
 
@@ -72,7 +72,7 @@ _Estos 10 parámetros deben configurarse individualmente para cada sistema de el
 
 El Brautomat puede administrar perfiles de hardware. Se pueden utilizar perfiles si hay diferentes calderas. Los usuarios con hervidores de diferentes tamaños pueden usar perfiles para seleccionar el hervidor para el día de preparación en lugar de tener que volver a ingresar manualmente todos los parámetros. Un perfil de hardware contiene todos los ajustes de una caldera.
 
-Los perfiles se guardan en la carpeta /Profiles. Los perfiles permiten una rápida y fácilCambiar entre diferentes calderas. La función Guardar crea un archivo de perfil con los parámetros anteriores, mientras que la función Eliminar elimina el archivo de perfil de la memoria flash.
+Los perfiles se guardan en la carpeta /Profiles. Los perfiles permiten un cambio rápido y sencillo entre diferentes calderas. La función Guardar crea un archivo de perfil con den los parámetros anteriores, mientras que la función Eliminar elimina el archivo de perfil de la memoria flash.
 
 El perfil predeterminado al iniciar la máquina de hacer pan es siempre el último perfil seleccionado.
 
@@ -151,4 +151,4 @@ La capacidad calorífica específica utilizada aquí 3600 tiene una tolerancia d
 9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 162194,8 / 44 = 3686,25 J por kg por grado Celsius
 ```
 
-Véase también [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+Véase también [Revista cervecera](https://braumagazin.de/article/berechnungen-in-der-brauerei/)

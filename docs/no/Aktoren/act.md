@@ -1,10 +1,10 @@
 # Skuespillere
 
-![Skuespillerinnstillinger](/docs/img/aktoren_settings.jpg)
+![Aktuatorinnstillinger](/docs/img/aktoren_einstellungen.jpg)
 
 Aktuatorer som røreverk, pumper eller ringvarmeelementer er konfigurert med et navn og en GPIO (bryter). Aktuatorer kan ha egenskapen PWM (pulsbreddemodulasjon). PWM i Brautomat er en timing av strøm (slå på og av eller strømmen flyter og strømmen flyter ikke). Oppføringen gjøres i prosent. Alltid på er 100 %. Når det gjelder en vannkoker, vil dette bety permanent maksimal ytelse. En PWM på 50 % vil være 50:50 strøm som flyter og strøm som ikke flyter. Pulsintervallet er 500ms. Strømmen kan endres under drift ved hjelp av de to knappene i aktuatortabellen. Strømskifteknappene er synlige for hver aktuator hvis PWM er aktivert for aktuatoren. PWM-funksjonen i Brautomat egner seg for eksempel for releer eller SSR-er. Funksjonen som motorstyring for røreverk er ikke egnet.
 
-![Oversikt over skuespillere](/docs/img/aktoren.jpg)
+![Oversikt over aktuatorer](/docs/img/aktoren.jpg)
 
 ## webhook
 

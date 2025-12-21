@@ -33,7 +33,7 @@ The length of the red bar under the IDS and recast view shows the elapsed rest t
 
 #### MashBud
 
-This view shows the first hob. The current rest time is displayed with the actual and target temperatures as well as the current remaining time. The length of the red bar under the temperatures shows the progress of the current rest. The symbol to the right of the remaining time shows whether the next break will start automatically (autonext): green means automatic, red means break. In addition, the controller deck is displayed with the corresponding functions.
+This view shows the first hob. The current rest time is displayed with the actual and target temperatures as well as the current remaining time. The length of the red bar under the temperatures shows the progress of the current rest. The symbol to the right of the remaining time shows whether the next break will start automatically (autonext): green means automatic, red means break. In addition, the controller Deck is displayed with the corresponding functions.
 
 ![Display](/docs/img/brewpage-sm.jpg)
 
@@ -47,9 +47,9 @@ A display is optional. The Brautomat only supports Nextion HMI 3.5 inch touch di
 
 The display is configured via an SD card. The TFT file from the Info folder that matches the display is copied to the SD card and inserted into the display. As soon as the display is switched on, the configuration begins. The process takes about a minute. The progress is shown on the display. Once configuration is complete, the display will turn off and the SD card will be removed. The display is now ready for use.
 
-It should be noted that SDA, SCL on thePINs D1, D2 must be operated.
+It should be noted that SDA, SCL must be operated on PINs D1, D2.
 
-### PT100x sensors MAX31865 Activate amplifier
+### PT100x sensors MAX31865 AmplActivate here
 
 If analog PT100x sensors are used, this switch must be activated. A PT100x analog sensor requires an RTD to digital converter to connect to an ESP microcontroller. A MAX31865 amplifier is an RTD digital converter in the form of a small additional board.
 
@@ -61,7 +61,7 @@ Note: The mDNS name is configured without a protocol (http://) and without a top
 
 ### Dashboard
 
-Elements can be easily shown and hidden via the dashboard. For example, if no recasting is used, the Recasting element should be deactivated for the dashboard. Disabled items reduce traffic.
+Using Dashboard you can easily show and hide elements. For example, if no recasting is used, the Recasting element for the Dashboard should be deactivated. Disabled items reduce traffic.
 
 ### Logging
 
@@ -107,8 +107,7 @@ The time zone is used to determine the correct time including summer and winter 
 |Africa/Dakar |GMT0 |
 |Africa/Dar_es_Salaam |EAT-3 |
 |Africa/Djibouti |EAT-3 |
-|Africa/Douala |WAT-1 |
-|Africa/El_Aaiun |<+01>-1 |
+|Africa/Douala |WAT-1 ||Africa/El_Aaiun |<+01>-1 |
 |Africa/Freetown |GMT0 |
 |Africa/Gaborone |CAT-2 |
 |Africa/Harare |CAT-2 |
@@ -158,8 +157,8 @@ The time zone is used to determine the correct time including summer and winter 
 |America/Argentina/Tucuman |<-03>3 |
 |America/Argentina/Ushuaia |<-03>3 |
 |America/Aruba |AST4 |
-|America/Asuncion|<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
-|America/Atikokan |EST5 |
+|America/Asuncion |<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
+|America/Atikokan|EST5 |
 |America/Bahia |<-03>3 |
 |America/Bahia_Banderas |CST6 |
 |America/Barbados |AST4 |
@@ -260,8 +259,8 @@ The time zone is used to determine the correct time including summer and winter 
 |America/Puerto_Rico |AST4 |
 |America/Punta_Arenas |<-03>3 |
 |America/Rainy_River |CST6CDT,M3.2.0,M11.1.0 |
-|America/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0|
-|America/Recife |<-03>3 |
+|America/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0 |
+|America/Recife |<-03>3|
 |America/Regina |CST6 |
 |America/Resolute |CST6CDT,M3.2.0,M11.1.0 |
 |America/Rio_Branco |<-05>5 |
@@ -312,7 +311,7 @@ The time zone is used to determine the correct time including summer and winter 
 |Asia/Baghdad |<+03>-3 |
 |Asia/Bahrain |<+03>-3 |
 |Asia/Baku |<+04>-4 |
-|Asia/Bangkok|<+07>-7 |
+|Asia/Bangkok |<+07>-7 |
 |Asia/Barnaul |<+07>-7 |
 |Asia/Beirut |EET-2EEST,M3.5.0/0,M10.5.0/0 |
 |Asia/Bishkek |<+06>-6 |
@@ -363,7 +362,7 @@ The time zone is used to determine the correct time including summer and winter 
 |Asia/Riyadh |<+03>-3 |
 |Asia/Sakhalin |<+11>-11 |
 |Asia/Samarkand |<+05>-5 |
-|Asia/Seoul |KST-9|
+|Asia/Seoul |KST-9 |
 |Asia/Shanghai |CST-8 |
 |Asia/Singapore |<+08>-8 |
 |Asia/Srednekolymsk |<+11>-11 |
@@ -414,7 +413,7 @@ The time zone is used to determine the correct time including summer and winter 
 |Europe/Bratislava |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europe/Brussels |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europe/Bucharest |EET-2EEST,M3.5.0/3,M10.5.0/4 |
-|Europe/Budapest |CET-1CEST,M3.5.0,M10.5.0/3|
+|Europe/Budapest |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europe/Busingen |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europe/Chisinau |EET-2EEST,M3.5.0,M10.5.0/3 |
 |Europe/Copenhagen |CET-1CEST,M3.5.0,M10.5.0/3 |
@@ -466,7 +465,7 @@ The time zone is used to determine the correct time including summer and winter 
 |Europe/Zaporozhye |EET-2EEST,M3.5.0/3,M10.5.0/4 |
 |Europe/Zurich |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Indian/Antananarivo |EAT-3 |
-|Indian/Chagos |<+06>-6 |
+|Indian/Chagos |<+06>-6|
 |Indian/Christmas |<+07>-7 |
 |Indian/Cocos |<+0630>-6:30 |
 |Indian/Comoro |EAT-3 |
@@ -517,8 +516,8 @@ The time zone is used to determine the correct time including summer and winter 
 |Etc/GMT |GMT0 |
 |Etc/GMT-0 |GMT0 |
 |Etc/GMT-1 |<+01>-1 |
-|Etc/GMT-2|<+02>-2 |
-|Etc/GMT-3 |<+03>-3 |
+|Etc/GMT-2 |<+02>-2 |
+|Etc/GMT-3|<+03>-3 |
 |Etc/GMT-4 |<+04>-4 |
 |Etc/GMT-5 |<+05>-5 |
 |Etc/GMT-6 |<+06>-6 |

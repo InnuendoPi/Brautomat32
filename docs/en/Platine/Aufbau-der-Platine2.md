@@ -4,7 +4,7 @@ This short guide describes the structure of the board. The board structure is no
 
 The parts list of the board:
 
-![Parts list](/docs/img/Aufbau1.jpg)
+![BOM](/docs/img/Aufbau1.jpg)
 
 Number 1: Resistor 4.7kOhm\
 Number 2: JST-HX socket (white) and 5-pin screw terminal block\
@@ -27,7 +27,7 @@ The JST-HX socket position is an alternative to the 5-pin screw terminal block. 
 | 1 | Resistance 4.7kOhm | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
 | 1 optional | Passive buzzer 12mm 3V | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
 | 1 ESP32 | ESP32 D1 mini | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
-| 1 optional | Nextion 3.5" display
+| 1 optional | Display Nextion 3.5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
 |                                                       |                                |                                   |
 
 _Note: the links or item numbers listed are purely informative and not linked to affiliate/marketing programs._
@@ -36,7 +36,7 @@ The Nextion 3.5 inch display is available as Basic, Discovery or Enhanced. The c
 
 ## Considerations before construction
 
-The circuit board can vary depending on the connection to the induction cookerhfeld GGM IDS can be equipped differently:
+The board can be equipped differently depending on the connection to the GGM IDS induction hob:
 
 1.1 The original cable from the GGM IDS control panel is used
 
@@ -56,7 +56,7 @@ Two notes on inserting the screw terminal blocks:
 2. The screw terminal blocks are fixed with a soldering point. The correct fit is then checked. All soldering points are then soldered.
 
 In the following, the screw terminal blocks are inserted and soldered step by step.\
-In step number 1, the two 12-pin screw terminal blocks are inserted. The GPIOs D9 to D19 from ESP32 are connected to the 12 screw terminal blocks.
+In step number 1 the zwhite 12-pin screw terminal blocks used. The GPIOs D9 to D19 from ESP32 are connected to the 12 screw terminal blocks.
 
 ![Screw terminal block](/docs/img/Aufbau2.jpg)
 
@@ -109,7 +109,7 @@ The legs on the resistance are bent through 90° (e.g. around a slotted screwdri
 
 The legs of the resistance are bent slightly outwards on the back and soldered. Use side cutters to cut off the legs above the soldering eye.
 
-## Mount the ESP microcontroller on the basen
+## Mount the ESP microcontroller
 
 By mounting the base, the ESP microcontroller can be removed from the board at any time. Socketing is also useful when troubleshooting.
 
@@ -117,7 +117,7 @@ By mounting the base, the ESP microcontroller can be removed from the board at a
 
 The scope of delivery of the ESP microcontrollers includes adapter number 1. In addition, a pin header number 2 with a pitch of 2.54mm is required.
 
-![Parts list](/docs/img/Aufbau11.jpg)
+![Parts List](/docs/img/Aufbau11.jpg)
 
 Adapters and pin headers are required for socketing. The pin header is first plugged into the adapter, as shown in number 3. Adapters with pin strips are then inserted into the circuit board, two on the left and two on the right
 
@@ -129,4 +129,4 @@ Now the ESP is put on and fixed with a soldering point on each side. Now the fit
 
 ![ESP32](/docs/img/Aufbau15.jpg)
 
-Finally, all soldering points should be checked. When all soldering points are closed, the Brautomat is ready.
+Finally, all soldering points should be practicedbe checked. When all soldering points are closed, the Brautomat is ready.

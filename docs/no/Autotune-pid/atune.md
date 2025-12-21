@@ -4,7 +4,7 @@ AutoTune-prosessen bestemmer passende parametere for bryggesystemet slik at temp
 
 Merk: En oversving (over settpunkttemperaturen) på 0,5°C er normalt. Avhengig av isolasjonen til kjelen og den tilførte induksjonsenergien, vil temperaturen fortsette å stige litt selv etter at koketoppen er slått av.
 
-![AutoTune4](/docs/img/IDS-AutoTune-target.jpg)
+![AutoTune4](/docs/img/IDS-AutoTune-Ziel.jpg)
 
 Følgende beskrivelse av PID-verdiene er kun ment som en hjelp til bruk av fastvaren og kan hoppes over. AutoTune-prosessen er beskrevet fra "AutoTune-prosessen: trinn for trinn."\
 Kontrolleren PID kontrollerer ytelsen til koketoppene. Det er viktig å bestemme passende P-, I- og D-verdier. PID-verdiene er individuelle for hvert bryggesystem og miljø. AutoTune er en prosedyre som hjelper til med å bestemme passende verdier. Den nødvendige effekten til kokeplatene for å komme fra den faktiske temperaturen til måltemperaturen beregnes ut fra summen av de tre verdiene: Nødvendig effekt = P + I + D\
