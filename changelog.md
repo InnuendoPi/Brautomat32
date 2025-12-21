@@ -2,13 +2,20 @@
 
 ESP32 Arduino 3.3.5 ESP-IDF v5.5.1\
 VSCode 1.107 pioarduino IDE 1.1.5\
-InnuAPID AutoTune PID lib 1.8\
-InnuTicker Task Scheduler lib 0.8\
-InnuNextion Display lib 0.8\
+InnuAPID AutoTune PID lib 1.10\
+InnuTask lib 0.10.12\
+InnuNextion Display lib 0.9\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
+
+Version 1.60.0 beta test
+
+* Neu:          Finite State Machine (FSM) - vollständige Konvertierung in unabhängige, non-blocking tasks
+* Neu:          Remote Control Transceiver (RMT) - Steuerung der GGM IDS ohne busy wait blocking
+* Neu:          InnuAPID 1.10 - lambda PID Controller
+* Neu:          Adaptive Kessel-Steuerung
 
 Version 1.59.9
 
