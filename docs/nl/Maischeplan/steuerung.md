@@ -1,8 +1,8 @@
 # De bedieningselementen
 
-Direct onder het mashplan bevindt zich het controllerdeck. Het maischproces wordt bestuurd met de 5 knoppen Power, Play, Pause, Previous en Next.
+Direct onder het mash-plan staat controller Deck. Het maischproces wordt bestuurd met de 5 knoppen Power, Play, Pause, Previous en Next.
 
-![Beheer](/docs/img/Buttons.jpg)
+![Besturing](/docs/img/Buttons.jpg)
 
 ## Aan/uit-knop
 
@@ -41,6 +41,6 @@ Met de knop Volgende springt u naar de volgende stap in het maischplan of beëin
 
 Met de knop Samenvouwen wordt de maischplantabel samengevouwen of samengevouwen.
 
-![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
+![mashplan](/docs/img/Maischeplan-anzeigen.jpg)
 
 De inklapknop blijft zichtbaar, zelfs nadat het koffiezetten is gestart. Alle knoppen voor het bewerken van het maischplan zijn verborgen nadat het brouwen is gestart.

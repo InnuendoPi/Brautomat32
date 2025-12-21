@@ -19,7 +19,7 @@ Offset #1 (lavere verdiområde) er forskjellen på 0,0°C (isbad) til gjennomsni
 
 ## Prosedyre kalibrering med klinisk termometer
 
-Et klinisk termometer er et godt egnet referansetermometer. Det øvre måleområdet til et klinisk termometer er begrenset til ca. 40°C. Utførelse av kalibreringen tilsvarer prosedyren for isbad og koketemperatur. Den eneste forskjellen: Velger du for eksempel 40°C som andre kalibreringspunkt, må koketoppen slås av så snart måltemperaturen er nådd og holdes konstant i ca. 60 sekunder(ingen svingninger). Først da kan kalibreringen, dvs. registrering av 60 måleprøver, startes.
+Et klinisk termometer er et godt egnet referansetermometer. Det øvre måleområdet til et klinisk termometer er begrenset til ca. 40°C. Utførelse av kalibreringen tilsvarer prosedyren for isbad og koketemperatur. Den eneste forskjellen: Velger du for eksempel 40°C som andre kalibreringspunkt, må koketoppen slås av så snart måltemperaturen er nådd og holdes konstant i ca. 60 sekunder (ingen svingninger). Først da kan dKalibreringen, dvs. registrering av 60 måleprøver, kan startes.
 
 ## Sensorkalibreringsloggfil
 

@@ -1,6 +1,6 @@
 # KleinerBrauhelfer2
 
-Od verze 2.5.0 má program [ kleineBrauhelfer2](https:// kleine-brauhelfer.de/) exportní filtr pro Brautomat. Vývoj a design receptury je možný v každém myslitelném detailu s malou pomůckou pro vaření piva2. S cheat sheet nabízí kbh2 velmi dobrý a užitečný vývojový diagram pro praktickou implementaci v pivovarské kuchyni. S exportním filtrem pro Brautomat lze převzít všechny kroky.
+Od verze 2.5.0 má program [ kleineBrauhelfer2](https://kleiner-brauhelfer.de/) exportní filtr pro Brautomat. Vývoj a design receptury je možný v každém myslitelném detailu s malou pomůckou pro vaření piva2. S cheat sheet nabízí kbh2 velmi dobrý a užitečný vývojový diagram pro praktickou implementaci v pivovarské kuchyni. S exportním filtrem pro Brautomat lze převzít všechny kroky.
 
 ## Plán rmutování karet kbh2
 
@@ -33,15 +33,15 @@ Brautomat podporuje poloautomatické dekokční procesy. Pokud byla například 
 
 ### Udělejte si trochu matematiky tam a zpět
 
-Přídavek skoku je znázorněn na obrázku kbh2. První chmelový přídavek je „Hallertauer Perle 7% 2020“ s dobou varu 65 minut. V této souvislosti je důležitý druhý parametr: na levé straně je celková doba vaření označena zeleně jako 80 minut. Takže sladina se vaří bez chmele po dobu 15 minut. Druhým přídavkem chmele je chmel "Hallertauer Tradition 5,7% 2020" s dobou varu 15 minut. V posledních 15 minutách vaření mladiny zbývá Hallertau Perle ještě 15 minut vaření z původních 65 minut a druhý přídavek chmele Hallertau Tradition se vaří 15 minut ze zbývajících 15 minut doby vaření. Poslední přídavek chmele se přidává na naklepání, tedy po uvařenínde.
+Přídavek skoku je znázorněn na obrázku kbh2. První chmelový přídavek je „Hallertauer Perle 7% 2020“ s dobou varu 65 minut. V této souvislosti je důležitý druhý parametr: na levé straně je celková doba vaření označena zeleně jako 80 minut. Takže sladina se vaří bez chmele po dobu 15 minut. Druhým přídavkem chmele je chmel "Hallertauer Tradition 5,7% 2020" s dobou varu 15 minut. V posledních 15 minutách vaření mladiny zbývá Hallertau Perle ještě 15 minut vaření z původních 65 minut a druhý přídavek chmele Hallertau Tradition se vaří 15 minut ze zbývajících 15 minut doby vaření. Poslední přídavek chmele se přidává na naklepání, tedy po ukončení varu.
 
-Úkolem Brautomat je udávat čas, kdy se přidává chmel během vaření a v ideálním případě připomínat přidání chmele akustickým signálem.
+Úkolem Brautomat je udávat čas přidávání chmele během vaření a ideálně s aktustimalý signál, který vám připomene přidání chmele.
 
 V tomto příkladu je uvedena celková doba vaření 80 minut a první přidání chmele „Hallertauer Perle“ s dobou vaření 65 minut. To má za následek rozdíl 15 minut doby vaření bez přidání chmele. První krok, vaření mladiny, trvá 15 minut. Nyní musí být provedeno první přidání chmele. Druhý chmelový přídavek „Hallertauer Tradition 5,7 % 2020“ má dobu vaření 15 minut. Z 65 minut je 15 minut Hallertau Pearl a Hallertau Tradition dohromady v mladině. 65 minut mínus 15 minut má za následek interval mezi přidáváním chmelu 50 minut. Přídavek chmele Hallertauer Perle musí být přidán 50 minut před přidáním chmele Hallertauer Tradition.
 
 Poslední várka chmele „Hallertauer Tradition 5,7 % 2020“ je dána k naklepání. Když ho vyklepnete, vaření je hotové. Přidání chmele se tedy nepočítá do celkové doby vaření.
 
-![Vaření](/docs/img/hopfenbaren.jpg)
+![Vaření](/docs/img/hopfengaben.jpg)
 
 Stejně se chová i přídavek chmele. Doba po izomeraci je 10 minut. Přidání chmele „Hallertauer Tradition 5,7 % 2020“ pro šlehání s dobou varu -5 minut je součástí post-izomerizace.
 

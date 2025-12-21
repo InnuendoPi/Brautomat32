@@ -19,7 +19,7 @@ Offset #1 (lower value range) is the difference of 0.0°C (ice bath) to the aver
 
 ## Procedure calibration with clinical thermometer
 
-A clinical thermometer is a well-suited reference thermometer. The upper measuring range of a clinical thermometer is limited to approx. 40°C. Carrying out the calibration corresponds to the procedure for ice bath and boiling temperature. The only difference: If you choose 40°C as the second calibration point, for example, the hob must be switched off as soon as the target temperature is reached and remains constant for approx. 60 seconds(no fluctuations). Only then can the calibration, i.e. the recording of 60 measurement samples, be started.
+A clinical thermometer is a well-suited reference thermometer. The upper measuring range of a clinical thermometer is limited to approx. 40°C. Carrying out the calibration corresponds to the procedure for ice bath and boiling temperature. The only difference: If you choose 40°C as the second calibration point, for example, the hob must be switched off as soon as the target temperature is reached and remains constant for approx. 60 seconds (no fluctuations). Only then can dThe calibration, i.e. the recording of 60 measurement samples, can be started.
 
 ## Sensor calibration log file
 

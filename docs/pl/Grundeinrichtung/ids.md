@@ -4,7 +4,7 @@
 
 W pierwszej sekcji _Maischeplan_ kocioł MashSud jest tworzony za pomocą koła zębatego w prawym górnym rogu.
 
-![Utwórz kocioł do zaparzania zacieru](/docs/img/IDS-einrichten.jpg)
+![Utwórz kocioł do parzenia zacieru](/docs/img/IDS-einrichten.jpg)
 
 ## Konfiguracja płyty kuchennej
 
@@ -22,11 +22,11 @@ Następnie do czajnika MashBud należy przypisać czujnik temperatury. Wyboru do
 
 _Uwaga_: _Czujnik temperatury musi być na stałe przypisany do płyty kuchennej. Wartość czujnika określana jest jako temperatura rzeczywista lub temperatura bieżąca i jest stale porównywana z temperaturą spoczynkową (temperaturą docelową) podczas procesu zacierania._
 
-![Konfiguruj kocioł do parzenia zacieru](/docs/img/IDS-configure.jpg)
+![Konfiguruj kocioł do parzenia zacieru](/docs/img/IDS-konfigurieren.jpg)
 
 Parametry w zakładce „Regulacja temperatury” zostały szczegółowo opisane w rozdziale „Wszystkie parametry”. W przypadku konfiguracji podstawowej początkowo przyjmowane są wartości domyślne.
 
-![Konfiguruj kocioł do zaparzania zacieru](/docs/img/IDS-temperaturen.jpg)
+![Konfiguruj kocioł do parzenia zacieru](/docs/img/IDS-temperaturen.jpg)
 
 ## Konfigurowanie kontrolera PID.
 

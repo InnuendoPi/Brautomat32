@@ -6,7 +6,7 @@ Logging er kun tilgjengelig i utviklingsversjonen. Den integrerte loggingen hjel
 
 Den serielle monitoren må settes til en overføringshastighet på 115200 og CRLF i tillegg til COM-porten.
 
-![Microsoft Visual Studio Code](/docs/img/vscode.jpg)
+![Microsoft Visual Studio-kode](/docs/img/vscode.jpg)
 
 ## Logginnstillinger
 
@@ -94,7 +94,7 @@ Når Brautomat er koblet til en seriell konsoll, vises følgende utgang ved opps
 05:42:28.384 > [I][SYSINFO] mDNS http://Brautomat.lokal IP-adresse 192.168.100.112 tid: 05:42:27 RSSI: -83
 ```
 
-I tillegg til versjonen av Brautomat, sendes MDNS-navnet og gjeldende IP-adresse ut. Linjen _mount filsystem LittleFS: ok, gratis heap mem:_ indikerer at filsystemet har blitt montert.
+I tillegg til der versjon av Brautomat MDNS-navnet og gjeldende IP-adresse sendes ut. Linjen _mount filsystem LittleFS: ok, gratis heap mem:_ indikerer at filsystemet har blitt montert.
 
 ## Test sensorfeil
 

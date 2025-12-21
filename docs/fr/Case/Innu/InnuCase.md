@@ -13,7 +13,7 @@ L'InnuCase est disponible en deux tailles. Les fichiers d'impression sont stock�
     > 3x fond M12 pour capteurs\
     > Dimensions du boîtier LxH 26x9cm\
     > Nom du fichier : InnuCase-1_Display_2PWM_Power.stl\
-    ![InnuCase #1](/docs/img/Case-1_Display_2PWM_Power.jpg)\
+    ![InnuCase #1]([[CHEMIN_0]])\
     > même boîtier avec afficheur et deux modules PWM sans interrupteur d'alimentation\
     > 2x façade M12 pour actionneurs\
     > 2x fond M12 pour actionneurs\
@@ -25,9 +25,9 @@ L'InnuCase est disponible en deux tailles. Les fichiers d'impression sont stock�
 
 * InnuCase #1 avec un module PWM
     > InnuCase-1_Display_1PWM_Power.stl\
-    ![InnuCase #1](/docs/img/Case-1_Display_1PWM_Power.jpg)\
+    ![InnuCase #1]([[CHEMIN_2]])\
     > InnuCase-1_Display_1PWM.stl\
-    ![InnuCase #1](/docs/img/Case-1_Display_1PWM.jpg)\
+    ![InnuCase #1]([[CHEMIN_3]])\
 
 *InnuCase #2
     > un boîtier plus petit avec affichage\
@@ -38,8 +38,8 @@ L'InnuCase est disponible en deux tailles. Les fichiers d'impression sont stock�
 
 L'InnuCase #2 est destinée à une machine à pain automatique dotée d'un afficheur et d'un capteur. Si aucun écran n'est utilisé, l'ouverture de l'écran peut être fermée avec un couvercle aveugle.
 
-Les connexions enfichables appropriées pour les trous M12 incluent [GX12 Aviation Plug](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_6Z58FR08HC6VACCZPY83). Les ensembles GX12 Aviation sont disponibles en version 2 broches (actionneurs), 3 broches (DS18B20) et 4 broches (PT100x).
-Un interrupteur d'alimentation approprié est, entre autres, un [pressostat LED](https://www.amazon.de/dp/B09WXPJQN3?psc=1&ref=ppx_yo2ov_dt_b_product_details). L'InnuCase-1 peut accueillir deux modules PWM. La découpe pour un module PWM peut être fermée avec un couvercle aveugle.
+Les connexions enfichables appropriées pour les trous M12 incluent [Fiche aviation GX12](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_6Z58FR08HC6VACCZPY83). Les ensembles GX12 Aviation sont disponibles en version 2 broches (actionneurs), 3 broches (DS18B20) et 4 broches (PT100x).
+Un interrupteur d'alimentation approprié est, entre autres, un [pressostat LED](https://www.amazon.de/dp/B09WXPJQN3?psc=1&ref=ppx_yo2ov_dt_b_product_details) à verrouillage. L'InnuCase-1 peut accueillir deux [Modules PWM](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_56603DDHC44WFNJ0BFM4). La découpe pour un module PWM peut être fermée avec un couvercle aveugle.
 
 ## Couverture du logement
 
@@ -56,34 +56,34 @@ Un interrupteur d'alimentation approprié est, entre autres, un [pressostat LED]
 
 ## Raccordement à vis du boîtier
 
-Le boîtier dispose de plusieurs patins pour le vissage [Inserts filetés](https://www.amazon.de/dp/B0BZVGQ91H/?coliid=I1EM9CS796PWGZ&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_64ER38VQR1H02DJ4WZ4A). Les trous des patins ont un diamètre de 4,6 mm. Les inserts filetés sont fondus dans le trou du tampon à l'aide d'un fer à souder. Les inserts filetés M3 sont liés.
+Le boîtier comporte plusieurs patins pour maintenir les [inserts filetés](https://www.amazon.de/dp/B0BZVGQ91H/?coliid=I1EM9CS796PWGZ&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_64ER38VQR1H02DJ4WZ4A) pour un raccordement à vis. Les trous des patins ont un diamètre de 4,6 mm. Les inserts filetés sont fondus dans le trou du tampon à l'aide d'un [fer à souder](https://www.amazon.de/gp/product/B0CDBSGSXY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1). Les inserts filetés M3 sont liés.
 
-![Inserts filetés](/docs/img/Gewindeeinseiten.jpg)
+![Insertions de fil](/docs/img/Gewindeeinsätze.jpg)
 
 ## Support de circuit imprimé
 
-Le circuit imprimé est vissé sur une plaque support. La plaque de support est montée derrière l'écran à l'aide de [manchons d'écartement](https://www.reichelt.de/distanzhuelsen-metall-6-kant-m3-15mm-da-15mm-p7018.html?CCOUNTRY=445&LANGUAGE=de&trstct=pos_0&nbc=1&&r=1). Des douilles entretoises hexagonales M3 d'une longueur de 15 mm sont reliées.
+Le circuit imprimé est vissé sur une plaque support. La plaque de support est montée derrière l'écran à l'aide de [manchons d'espacement](https://www.reichelt.de/distanzhuelsen-metall-6-kant-m3-15mm-da-15mm-p7018.html?CCOUNTRY=445&LANGUAGE=de&trstct=pos_0&nbc=1&&r=1). Des douilles entretoises hexagonales M3 d'une longueur de 15 mm sont reliées.
 
-![Platinenträger](/docs/img/Platinenträger-1.jpg) ![Support de carte MAX31865](/docs/img/Platinenträger-2.jpg)
+![Support de carte](/docs/img/Platinenträger-1.jpg) ![Support de carte MAX31865](/docs/img/Platinenträger-2.jpg)
 
 La figure montre 2 supports de circuits imprimés :
 
 * la petite plaque de support inférieure est destinée aux machines à pain automatiques avec capteurs DS18B20
 * la plaque de support supérieure, plus grande, est destinée aux machines à pain automatiques avec capteurs PT100x (trous supplémentaires pour le maintien de 2 planches MAX31865)
 
-La plaque de support permet un montage completjours dans le logement. Aucun composant ou câble Brautomat n'est fixé au couvercle du boîtier.
+La plaque support permet un montage complet dans le boîtier. Aucun composant ou câble Brautomat n'est fixé au couvercle du boîtier.
 
 ## Support
 
 Des supports simples sont disponibles pour fixer le boîtier. Le support est vissé au dos derrière le couvercle.
 
-![Titulaire](/docs/img/Holder.jpg)
+![Support](/docs/img/Halterung.jpg)
 
 ## Couverture aveugle
 
 Le couvercle aveugle ferme l'ouverture d'affichage dans le boîtier lorsqu'aucun écran n'est inséré.
 
-![Blindlid](/docs/img/Blindlid.jpg)
+![Couverture aveugle](/docs/img/Blinddeckel.jpg)
 
 ## Images
 

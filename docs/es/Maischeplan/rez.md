@@ -10,11 +10,11 @@ El nombre del plan de mezcla se puede especificar en la configuración. El nombr
 
 Con la ayuda del control del tiempo, se puede planificar e iniciar automáticamente un día nupcial.
 
-![Control de tiempo](/docs/img/Control de tiempo.jpg)
+![Control de tiempo](/docs/img/Zeitsteuerung.jpg)
 
 Con el elemento DateTimerPicker puedes seleccionar fácilmente una fecha y hora. El nombre de la receta se reemplaza temporalmente por la hora de inicio especificada.
 
-![Control de tiempo](/docs/img/Control de tiempo2.jpg)
+![Control de tiempo](/docs/img/Zeitsteuerung2.jpg)
 
 Un control de tiempo activado se guarda en la configuración. Cuando se reinicia la máquina de preparación, se leen la fecha y la hora ajustadas. Si este inicio de preparación es en el futuro, se activa el control de tiempo. Si el inicio de la preparación es posterior, el control de tiempo se desactiva.
 
@@ -61,9 +61,9 @@ El plan de mezcla seleccionado se elimina de la memoria flash.
 
 ## Importar valor predeterminado
 
-![Importación preestablecida](/docs/img/preset_import.jpg)
+![Importar valor predeterminado](/docs/img/voreinstellung_import.jpg)
 
-El Brautomat requiere un Schmontó macerado (opcional) y macerado en un paso. En particular, el paso de macerado sirve como paso de separación entre el macerado y la cocción cuando autonext está desactivado. Al importar, Brautomat puede insertar la maceración y los pasos de maceración que faltan. Además, las temperaturas que faltan se pueden proporcionar con especificaciones.
+El Brautomat requiere un paso de maceración (opcional) y un paso de maceración. EnEn particular, el paso de macerado sirve como paso de separación entre el macerado y la cocción cuando autonext está desactivado. Al importar, Brautomat puede insertar la maceración y los pasos de maceración que faltan. Además, las temperaturas que faltan se pueden proporcionar con especificaciones.
 
 ### Valores predeterminados de temperatura para parámetros faltantes
 

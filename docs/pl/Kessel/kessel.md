@@ -4,7 +4,7 @@ Brautomat32 oferuje możliwość ustawienia maksymalnie trzech kotłów. Pierwsz
 
 Trzy kotły mogą być płytą indukcyjną GGM lub typu przekaźnikowego. Kocioł typu przekaźnikowego zawiera połączenie webhook.
 
-![Konfiguracja Kessela](/docs/img/kessel_1.jpg)
+![Konfiguracja kotła](/docs/img/kessel_1.jpg)
 
 Parametry opisane są w rozdziale Konfiguracja podstawowa i parametry w skrócie – Parametry kotła i są identyczne dla wszystkich trzech kotłów.
 
@@ -32,15 +32,15 @@ Drugi i trzeci kocioł można włączać i wyłączać ręcznie za pośrednictwe
 
 Drugi i trzeci czajnik można również przełączać poprzez plan zacierania:
 
-![Konfiguracja Kessela](/docs/img/kessel_2.jpg)
+![Konfiguracja kotła](/docs/img/kessel_2.jpg)
 
 W tym uproszczonym planie zacierania trzeci kocioł HLT jest włączany automatycznie w linii 2. Stopień HLT:100 z temperaturą docelową 78°C i czasem trwania 0 minut włącza uzupełnienie ze 100% mocą i ustawia temperaturę docelową na 78°C. Ponieważ czas trwania jest określony jako 0 minut, uzupełnienie jest włączone na stałe. Brautomat przechodzi bezpośrednio do następnego etapu zacierania i pozostawia włączony zapar. Sterownik PID reguluje w sposób ciągły moc potrzebną do osiągnięcia i utrzymania temperatury docelowej. Nachguss:100 będzie identyczny z poleceniem sterującym HLT:100. Jeżeli wkładowi w ustawieniach nadano nazwę „Cooker”, wówczas można również użyć polecenia sterującego COOKER:100.
 
-![Konfiguracja Kessela](/docs/img/kessel_3.jpg)
+![Konfiguracja kotła](/docs/img/kessel_3.jpg)
 
 W tym planie zacierania w trzecim kroku włącza się drugi napar w kotle. W odróżnieniu od poprzedniego przykładu HLT, kocioł SUD zostaje włączony na okres 15 minut z temperaturą docelową 100°C. Brautomat pozostaje w tym kroku aż do osiągnięcia temperatury docelowej i zakończenia 10-minutowego okresu odpoczynku. Następnie czajnik SUD zostaje wyłączony, a Brautomat przechodzi do następnego kroku planu zacierania.
 
-Tekst „Te„gotowanie ilmaische” jest tłumaczone przez Brautomat na 100%. Jeśli po dwukropku nie ma liczby od 0 do 100 lub informacji ON lub OFF, wówczas Brautomat zastępuje tekst wydajnością 100%.
+Tekst „Ugotuj częściowy zacier” pochodzi z Brautomat tłumaczy w 100%. Jeśli po dwukropku nie ma liczby od 0 do 100 lub informacji ON lub OFF, wówczas Brautomat zastępuje tekst mocą 100%.
 
 ## Przykład innej wydajności
 

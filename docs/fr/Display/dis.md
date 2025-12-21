@@ -4,9 +4,9 @@ Le Brautomat peut en option être utilisé avec un écran tactile. L'écran tact
 
 | Affichage suivant | Micrologiciel |
 | --------------- | --------- |
-| NX4832T035 (série de base) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832T035.tft) |
-| NX4832K035 (série améliorée) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832K035.tft) |
-| NX4832F035 (Série Découverte) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832F035.tft) |
+| NX4832T035 (série de base) | [NX4832T035]([[CHEMIN_0]]) |
+| NX4832K035 (série améliorée) | [NX4832K035]([[CHEMIN_1]]) |
+| NX4832F035 (Série Découverte) | [NX4832F035]([[CHEMIN_2]]) |
 
 L'écran nécessite un micrologiciel pour fonctionner avec Brautomat. Le micrologiciel qui correspond au type d'affichage est lié dans le tableau. Voir aussi flasher le fichier d'affichage.
 
@@ -29,7 +29,7 @@ L'écran doit être préparé avant la première utilisation. Pour ce faire, le 
 
 ## Voir la purée
 
-![MaischeSud](/docs/img/brewpage-sm.jpg)
+![MashSud](/docs/img/brewpage-sm.jpg)
 
 Le côté MashSud est le côté préféré lors du brassage. Les informations s'affichent à l'écran toutes les secondes
 
@@ -41,7 +41,7 @@ affiché. Le reste suivant est également affiché dans la ligne du bas. L'heure
 
 ## Afficher l'aperçu de la chaudière
 
-![Présentation de la bouilloire](/docs/img/kettlepage-sm.jpg)
+![Aperçu de la chaudière](/docs/img/kettlepage-sm.jpg)
 
 L'aperçu de la chaudière montre la chaudière de brassage de purée et, si disponible, la chaudière de brassage et de versement avec les informations sur la température réelle et cible.
 

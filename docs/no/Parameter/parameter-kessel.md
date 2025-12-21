@@ -6,7 +6,7 @@
 
 Denne parameteren beskriver den maksimale utgangseffekten til koketoppen. Standardverdien er 100 %. Denne parameteren brukes hvis det brukes en liten vannkoker med for eksempel 20l volum på koketoppen. Ved å redusere kraften kan man unngå for hurtig oppvarming og overkoking. Parametrene "Maks. effekt" og "Kraft fra overgang" bør reduseres sammen ved bruk av små bryggekjeler.
 
-På slutten av dette kapittelet finner du [to eksempler for å beregne nødvendig effekt](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung).
+På slutten av dette kapittelet finner du [to eksempler for beregning av nødvendig effekt](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung).
 
 ### Temperatur delta til mål
 
@@ -18,15 +18,15 @@ Denne parameteren beskriver temperaturen ved hvilken PID-regulatoren skal oppdag
 
 ### Kraft fra overgang [%]
 
-Denne parameteren beskriver utgangseffekten for koketoppen fra temperaturovergang til matlaging. Standardverdien er 100 %. Parameteren "Overgang til matlaging" har blitt brukt til å stille inn en temperatur der PID-kontrolleren er deaktivert. Parameteren "Power from transition" spesifiserer nå den faste utgangseffekten for koketoppen. Hvis det brukes en bryggekjele med et volum på 35l eller mer, er standardverdien på 100 % et passende valg. På bryggerikjøkken med små vannkokere kan 100 % energitilførsel føre til overkoking. I dette tilfellet kan den maksimale energitilførselen reduseres til for eksempel 75 % ved hjelp av denne parameteren.
+Denne parameteren beskriver utgangseffekten for koketoppen fra temperaturovergang til matlaging. Standardverdien er 100 %. Parameteren "Overgang til matlaging" har blitt brukt til å stille inn en temperatur der PID-kontrolleren er deaktivert. Parameteren "Power from transition" spesifiserer nå den faste utgangseffekten for koketoppen. Hvis det brukes en bryggekjele med et volum på 35l eller mer, er standardverdien på 100 % et passende valg. På bryggerikjøkken med små vannkokere kan 100 % energitilførsel føre til overkoking. I dette tilfellet kan den maksimale energitilførselen reduseres til for eksempel 75 % med denne parameteren.
 
 ### Deaktiver PID for matlaging [på/av]
 
 Denne parameteren bestemmer oppførselen til PID-kontrolleren ved matlaging når den faktiske temperaturen er over måltemperaturen. Eksempel: koketemperaturen ble satt til 98°C i meskeplanen. Parameteren "Power from transition" slår av PID-beregningen fra "Transition to boiling"-temperaturen. Hvis parameteren "Deaktiver PID for koking" er aktivert (standard), forblir PID-regulatoren slått av selv over måltemperaturen på 98°C fra mash-planen og kraften fra parameteren "Power from transition" brukes. Denne parameteren er aktivert som standard og muliggjør rullende matlaging.
 
-Hvis parameteren "Deaktiver PID for matlaging ikke er aktivert, beregnes den nødvendige effekten av PID-kontrolleren når måltemperaturen (her 98°C) er nådd. Den beregnede ytelsen over målet- Temperaturen er 0 %. Koketoppen slår seg av og forhindrer overkoking om nødvendig.
+Hvis parameteren "Deaktiver PID for matlaging ikke er aktivert, beregnes den nødvendige effekten av PID-kontrolleren når måltemperaturen (her 98°C) er nådd. Den beregnede effekten over måltemperaturen er 0 %. Koketoppen slår seg av og forhindrer overkoking om nødvendig.
 
-### Sensorfeilytelse [0-100 %]
+### Ytelsei tilfelle sensorfeil [0-100 %]
 
 Hvis det oppstår en sensorfeil, for eksempel en sensor som ikke er tilkoblet eller en defekt, kan effekten på koketoppen justeres for å håndtere denne feilen. En verdi på 100 % ignorerer sensorfeilen.
 
@@ -72,7 +72,7 @@ _Disse 10 parameterne må stilles inn individuelt for hvert bryggesystem. Parame
 
 Brautomat kan administrere maskinvareprofiler. Profiler kan brukes hvis det er forskjellige kjeler. Brukere med vannkoker i forskjellige størrelser kan bruke profiler for å velge kjelen for bryggedagen i stedet for å måtte legge inn alle parametere manuelt på nytt. En maskinvareprofil inneholder alle innstillingene til en kjele.
 
-Profiler lagres i mappen /Profiles. Profiler gjør det raskt og enkeltBytt mellom ulike kjeler. Lagre-funksjonen oppretter en profilfil med parametrene ovenfor, mens Slett-funksjonen fjerner profilfilen fra flash-minnet.
+Profiler lagres i mappen /Profiles. Profiler gjør det raskt og enkelt å bytte mellom ulike kjeler. Lagre-funksjonen oppretter en profilfil med dno ovenfor parametere, mens Slett-funksjonen fjerner profilfilen fra flash-minnet.
 
 Standardprofilen når du starter brødmaskinen er alltid den sist valgte profilen.
 
@@ -151,4 +151,4 @@ Den spesifikke som brukes her Varmekapasitet 3600 har en feiltoleranse på ca. 2
 9 * 94 % * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 8 / 6 per 5 kg pr. Celsius
 ```
 
-Se også [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+Se også [Brewing Magazine](https://braumagazin.de/article/berechnungen-in-der-brauerei/)

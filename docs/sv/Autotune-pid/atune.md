@@ -4,7 +4,7 @@ Processen AutoTune bestämmer lämpliga parametrar för bryggsystemet så att te
 
 Obs: Ett överskridande (över börvärdestemperaturen) på 0,5°C är normalt. Beroende på pannans isolering och den tillförda induktionsenergin kommer temperaturen att fortsätta att stiga något även efter att hällen stängts av.
 
-![AutoTune4](/docs/img/IDS-AutoTune-target.jpg)
+![AutoTune4](/docs/img/IDS-AutoTune-Ziel.jpg)
 
 Följande beskrivning av PID-värdena är endast avsedd som en hjälp för att använda den fasta programvaran och kan hoppas över. AutoTune-processen beskrivs med början från "AutoTune-processen: steg för steg."\
 Kontrollenheten PID styr hällarnas prestanda. Det är viktigt att bestämma lämpliga P-, I- och D-värden. PID-värdena är individuella för varje bryggsystem och miljö. AutoTune är en procedur som hjälper till att fastställa lämpliga värden. Den effekt som krävs för hällarna för att komma från den faktiska temperaturen till måltemperaturen beräknas från summan av de tre värdena: Erforderlig effekt = P + I + D\
@@ -16,7 +16,7 @@ Denna parameter påverkar skillnaden mellan aktuell temperatur och måltemperatu
 
 ## Jag-värdet
 
-I-värdet ökar kontinuerligt från noll när hällen värms upp. Ju längre tid det tar att komma från den faktiska temperaturen till måltemperaturen, desto större blir I-värdet. Tillsammans med P-värdet resulterar följande tillägg: När måltemperaturen närmar sig blir P-värdet mindre och I-värdet ökar. Måltemperaturen uppnås endast via I-värdet. Över måltemperaturen blir I-värdet mindre igen. I-värdet skapar ett överskott.
+I-värdet ökar kontinuerligt från noll när hällen värms upp. Ju längre tid det tar att komma från den faktiska temperaturen till måltemperaturen, desto större blir I-värdet. Tillsammans med P-värdet resulterar följande tillägg: När måltemperaturen närmar sig blir P-värdet mindre och I-värdet ökar. Måltemperaturen uppnås endast via I-värdet. Över måltemperaturen blir I-värdet mindre igen. Jag-värdet skapar ett överskott.
 
 ## D-värdet
 

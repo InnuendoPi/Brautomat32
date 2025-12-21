@@ -6,7 +6,7 @@ O plano de mash tem a forma de uma tabela. Esta tabela é processada de cima par
 
 ## Funções básicas
 
-![Plano de mash](/docs/img/Brautomat.jpg)
+![mashplan](/docs/img/brautomat.jpg)
 
 Para fins de orientação, primeiro é descrita a estrutura das linhas da tabela. Uma linha no plano de mistura representa uma etapa no plano de mistura. Cada linha da tabela possui estas colunas:
 
@@ -17,7 +17,7 @@ Para fins de orientação, primeiro é descrita a estrutura das linhas da tabela
 
 Após esses quatro detalhes sobre a etapa de mosturação, existem botões de edição em cada linha com as seguintes funções: (da esquerda para a direita)
 
-![Editar plano de mash](/docs/img/Brautomat-111.jpg)
+![Editar plano de mash](/docs/img/brautomat-111.jpg)
 
 * mova esta linha uma posição para cima
 * mova esta linha para baixo uma posição
@@ -26,7 +26,7 @@ Após esses quatro detalhes sobre a etapa de mosturação, existem botões de ed
 
 O cabeçalho da tabela contém os seguintes botões (da esquerda para a direita)
 
-![Editar plano de mash](/docs/img/Brautomat-1.jpg)
+![Editar plano de mash](/docs/img/brautomat-1.jpg)
 
 * nova linha: adicione uma nova etapa de mash ao final da tabela
 * Excluir: exclua a tabela inteira (plano de mash vazio)
@@ -34,7 +34,7 @@ O cabeçalho da tabela contém os seguintes botões (da esquerda para a direita)
 * Banco de dados: seleção de plano de mash, importação, exportação e agendador de plano de mash
 * Recolher: Recolher e expandir a tabela do plano mash
 
-![Editar plano de mash](/docs/img/Brautomat-11.jpg)
+![Editar plano de mash](/docs/img/brautomat-11.jpg)
 
 Quando uma linha da tabela é editada, os botões mudam.
 
@@ -55,17 +55,17 @@ Os aditivos mostrados na imagem _Levedura alimentar 1gr_ são importados para o 
 
 Um plano mash pode ser alterado em Brautomat ou completamente recriado. O símbolo do lápis coloca uma linha na tabela do plano de mistura no modo editor.
 
-![Editar plano de mash](/docs/img/Brautomat-3.jpg)
+![Editar plano de mash](/docs/img/brautomat-3.jpg)
 
 Qualquer número de linhas da tabela agora pode ser alterado um após o outro. Assim que um símbolo para edição do plano de mistura for clicado, o botão _Salvar_ muda de verde para vermelho. Depois de feitas todas as alterações, o plano de mosturação deve ser salvo usando o botão _Salvar_. Alternativamente, todas as alterações podem ser descartadas usando o botão _Sair_ para sair sem salvar.
 
 Assim que um processo de mosturação for iniciado usando o botão liga/desliga, a visualização muda:
 
-![Editar plano de mash](/docs/img/Brautomat-4.jpg)
+![Editar plano de mash](/docs/img/brautomat-4.jpg)
 
-Os botões de edição estão ocultos. Para tornar isto visível novamente, o processo de mosturação deve ser interrompido usando o botão Pause no controle:
+Os botões de edição estão ocultos. Para torná-los visíveis novamente,O processo de mosturação deve ser interrompido usando o botão Pause no controle:
 
-![Editar plano de mash](/docs/img/Brautomat-5.jpg)
+![Editar plano de mash](/docs/img/brautomat-5.jpg)
 
 Quando o processo de mosturação é pausado, o botão Pause no controle é exibido em vermelho e as funções de edição são exibidas. A placa de indução não desliga. A temperatura de repouso continua a ser mantida. Se o temporizador de descanso estiver ativo, ele será pausado. Se o plano de mosturação for alterado (modo Editor), o botão Pausar para continuar o processo de mosturação e o botão Power serão desativados e exibidos em cinza até que as alterações no plano de mosturação tenham sido salvas ou descartadas (Sair).
 
@@ -80,7 +80,7 @@ No final do processo de mosturação, uma amostra de iodo é usada para determin
 
 ## Função e aplicação de autonext
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext.jpg)
+![Plano de mistura autonext](/docs/img/Maischeplan-autonext.jpg)
 
 A primeira etapa do plano de mosturação chamada _Mashing 50°C_ tem um tempo de descanso de 10 minutos e um _autonext_ desativado. A imagem mostra a situação quando o cronômetro de descanso atingiu 10 minutos: O cronômetro fez a contagem regressiva até 00:00 do tempo restante. O botão play muda automaticamente para vermelho. A mensagem do brinde “Clique no botão play” aparece no canto inferior direito. A placa desliga-se. O processo de fermentação aguarda um clique no botão play. A interface web mostra o próximo passo, que é iniciado clicando em Play.
 
@@ -90,7 +90,7 @@ A segunda etapa de mosturação, denominada _Maltoserast 63°C_, tem temperatura
 
 * No final de um descanso com _autoext_ ativado, o processo de mosturação continua automaticamente e a placa permanece ligada.
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext2.jpg)
+![Plano de mistura autonext](/docs/img/Maischeplan-autonext2.jpg)
 
 A propriedade _autonext_ no sétimo passo _Mashing 78°C_ não está ativada. Se o Brautomat encontrar um [[TERM_10] desativado, o Brautomat termina o descanso atual após o tempo de descanso ter expirado e desliga a placa (0% de potência). Neste estado, o botão Play é exibido em vermelho. Para continuar o processo de preparação, o botão Play deve ser clicado.
 
@@ -98,9 +98,9 @@ Enquanto no primeiro exemplo de _autonext_ o botão Play geralmente é clicado d
 
 ## Diferença autonext e quebra
 
-Se autonext estiver desativado no final do bloqueio, a placa é desligada. Com o botão de pausa o temporizador de descanso é interrompido,No entanto, a placa permanece ligada e o Brautomat calcula a potência necessária para a placa.
+Se autonext estiver desativado no final do bloqueio, a placa é desligada. O botão de pausa interrompe o temporizador de descanso, mas a placa permanece ligada e o Brautomat calcula a potência necessária para a placa.
 
-As seções a seguir descrevem as funções especiais opcionais. Brautomat iniciantes podem pular a descrição das funções especiais.
+As seções a seguir descrevem o Filho opcionalas funções são descritas. Brautomat iniciantes podem pular a descrição das funções especiais.
 
 ## Função especial 0°C descanso quando autonext é ativado
 
@@ -134,16 +134,14 @@ Uma segunda função especial são os comandos de controle para placas e atuador
 
 A alimentação pode estar LIGADA ou DESLIGADA ou um número entre 0 e 100%. O estado OFF corresponde ao valor 0% e ON ao valor 100%. O comando de controle para a primeira placa de indução é IDS ou MASH. O comando de controle para a segunda placa de indução é SUD. O comando de controle para a reformulação é HLT. O comando de controle para um atuador é o nome do atuador.
 
-![Comando de controle do ator](/docs/img/Maischeplan-Aktoren.jpg)
+![Comando de controle do atuador](/docs/img/Maischeplan-Aktoren.jpg)
 
 O plano mash na imagem alterna os atuadores em três locais. O agitador é ligado logo no início: Agitador:ON
 Pouco antes do final do programa de mosturação, o agitador é desligado: Agitador:OFF e a recarga é ligada: Refill:ON.
 
-O comando de controle para um atuador pode ser especificado com uma potência, por ex. BOMBA:60. A bomba do atuador é então ligada com 60% da potência. Isso pressupõe que este atuador foi ativado para PWM. A temperatura de repouso e o Rast A duração deve ser definida como 0 para comandos de controle.
+O comando de controle para um atuador pode ser especificado com uma potência, por ex. BOMBA:60. A bomba do atuador é então ligada com 60% da potência. Isso pressupõe que este atuador foi ativado para PWM. A temperatura de repouso e a duração do repouso devem ser definidas como 0 para comandos de controle.
 
-O comando de controle IDS:50 define a potência máxima de saída da placa para 50%. A reformulação também pode ser ligada para 75% da potência com HLT:75.
-
-![Comando de controle IDS](/docs/img/sonderfunktion_sud1.jpg)
+O comando de controle IDS:50 define a potência máxima de saída da placa para 50%. A reformulação também pode ser ligada para 75% da potência com HLT:75.![Comando de controle IDS](/docs/img/sonderfunktion_sud1.jpg)
 
 O comando de controle SUD: Cozinhe purê espesso com tempo de descanso de 10 minutos e temperatura de repouso de 100 graus realiza uma etapa de purê em um segundo fogão. O temporizador de repouso é iniciado assim que a temperatura de repouso é atingida.
 
@@ -153,7 +151,7 @@ O comando de controle SUD: Cozinhe purê espesso com temperatura de repouso de 1
 
 ![Comando de controle SUD](/docs/img/sonderfunktion_sud3.jpg)
 
-A etapa de sacarificação da mosturação a 72°C é realizada na primeira placa _Maische_. O controlador PID regula a potência necessária para a chaleira. Ao mesmo tempo, o controlador PID regula a potência necessária para a caldeira _Sud_.
+A etapa de sacarificação da mosturação a 72°C é realizada na primeira placa _Maische_. O controlador PID regula a potência necessária para o mash tun. Ao mesmo tempo, o controlador PID regula a potência necessária para a caldeira _Sud_.
 
 Exemplos:
 
@@ -173,13 +171,13 @@ _Nota: Os comandos de controle podem ser usados para operar as caldeiras de pur�
 
 A título de exemplo, é fornecida a seguinte configuração para o GGM IDS ou para a caldeira MashSud:
 
-![Comando de controle IDS](/docs/img/aktoren_schaltung4.jpg)
+![Comando de controle IDS](/docs/img/aktoren_schalten4.jpg)
 
 A potência máxima está predefinida em 100%. A temperatura de “transição para cozimento” é de 95°C. A partir desta temperatura, a potência máxima de saída do GGM IDS é de apenas 80%.
 
 O cronograma de mosturação na ilustração começa com a etapa “Aquecimento da mistura principal”. A placa de indução GGM IDS aqueceria a água com a potência “Max. Power IDS” (parâmetro no registo de controlo de temperatura), ou seja, com 100%.
 
-![Comando de controle IDS](/docs/img/aktoren_schaltung2.jpg)
+![Comando de controle IDS](/docs/img/aktoren_schalten2.jpg)
 
 O cronômetro de descanso começa em 59°C. O tempo de descanso é de zero minutos. O Brautomat salta para a próxima linha da etapa 2.
 O comando de controle IDS:65 ajusta a potência máxima do IDS para 65%. O Brautomat salta para a próxima linha da etapa 3.
@@ -187,7 +185,7 @@ Agora a temperatura é aquecida de 59°C até a temperatura alvo na etapa de “
 
 A potência máxima de saída de 65% é mantida nas etapas de mosturação seguintes. Até que Brautomat atenda ao comando de controle IDS:100 após a etapa de mosturação.
 
-![Comando de controle IDS](/docs/img/aktoren_schaltung3.jpg)
+![Comando de controle IDS](/docs/img/aktoren_schalten3.jpg)
 
 O comando de controle altera a potência máxima de saída do IDS para 100%. O mosto é agora aquecido a 100% da potência até à temperatura de “transição para ebulição” a 95°C (ver acima). A partir de 95°C o GGM IDS muda para 80% de potência. 80% corresponde ao parâmetro “Potência desde a transição”.
 
@@ -207,7 +205,7 @@ Com a ajuda da função especial IDS: <Potência em %>, a potência de uma placa
 
 ![Comando de controle MASH power](/docs/img/IDS-Sonderfunktion.jpg)
 
-_ExplicaPara informações sobre o método de cálculo, consulte: Parâmetros do IDS GGM - Controle de temperatura - Desempenho máximo do IDS._
+_Para explicações sobre o método de cálculo, consulte: Parâmetros do IDS GGM - Controle de temperatura - Desempenho máximo do IDS._
 
 ```json
 
@@ -254,13 +252,13 @@ Dois atores:
 
 O plano de purê:
 
-![exemplo de dia de preparo do plano de mash](/docs/img/example_control_commands1.jpg)
+![exemplo de dia de preparação do plano de purê](/docs/img/example_control_commands1.jpg)
 
 O exemplo mostra como é fácil ligar e desligar os atuadores usando comandos especiais ou como os comandos especiais são integrados ao plano de mistura. Na primeira etapa de mosturação, o agitador é ligado. O Brautomat executa o comando especial e salta imediatamente para a próxima etapa do plano de mash. O mash in step foi configurado com duração de 1 minuto e autonext desabilitado. Nesta etapa o malte é adicionado à água de infusão. A etapa leva mais de um minuto, mas dependendo do recheio não se sabe com antecedência quanto tempo levará a amassadura. Após um minuto de maceração, o Brautomat desliga a placa e exibe o botão play em vermelho (desativado autonext). O Brautomat agora “espera” até que a etapa seja concluída e o botão play seja clicado. Quando a placa é desligada e o malte é adicionado, a temperatura de mistura do mosto será inferior a 55°C. Este procedimento é adequado, por exemplo, para uma adição lenta e relaxada de maltes ou para um breve descanso proteico.
 
 _Alternativa:_ ativar a propriedade autonext e definir o período de descanso para 5 minutos. Neste caso, o Brautomat manteria a temperatura de mosturação por 5 minutos (mostragem) e depois aqueceria automaticamente para o próximo descanso.
 
-O próximo passo é o descanso da maltose. O PID O controlador regula a potência necessária para atingir a temperatura alvo no mosto e mantê-la por um período de 40 minutos. Na linha 4, o refil é ligado por meio de um comando especial. A temperatura alvo para a recarga é de 75°C e a duração é de 0 minutos. O Brautomat inicia o controlador PID para a remodelação da caldeira e regula a potência necessária em segundo plano. Neste ponto do plano de mosturação, dois controladores PID estão ativos: um controlador PID para a chaleira de fermentação do mosto e um controlador PID para o pós-despejo. O Brautomat salta diretamente para a próxima etapa após ligar.
+O próximo passo é o descanso da maltose. O controlador PID regula a potência necessária para atingir a temperatura alvo no mosto e mantê-la por um período de 40 minutos. Na linha 4, o refil é ligado por meio de um comando especial. A temperatura alvo para a recarga é de 75°C e a duração é de 0 minutos. O Brautomat inicia o controlador PID para a remodelação da caldeira e regula a potência necessária em segundo plano. ParaNeste ponto do plano de mosturação, dois controladores PID estão ativos: um controlador PID para a chaleira de fermentação do mosto e um controlador PID para o pós-despejo. O Brautomat salta diretamente para a próxima etapa após ligar.
 
 No plano mash, o atuador do elemento de aquecimento de anel é ligado ou ligado uma vez com o comando especial _RHE:ON_ e uma vez com _RHE:50_. O ON traduz o Brautomat com 100% de desempenho, enquanto 50 é processado de acordo com 50% de desempenho. A chaleira MashSud tem volume máximo de 70 litros. O elemento de aquecimento circular suporta a placa durante a cozedura com 50% de potência para uma cozedura vigorosa: placa com 100% de potência (3,5 kW) mais elemento de aquecimento circular de 1,75 kW (50%). No final da cozedura, a resistência circular é desligada com o comando especial _RHE:OFF_.
 
@@ -278,7 +276,7 @@ Embora ferramentas como kleineBrauhelfer, BrewFather ou MMum sempre indiquem o t
 
 _Extensão:_ A explicação das doses de lúpulo é ampliada para incluir duas ou mais doses ao mesmo tempo:
 
-![exemplo de dia de preparo do plano de mash](/docs/img/example_control_commands3.jpg)
+![exemplo de dia de preparo do plano de purê](/docs/img/example_control_commands3.jpg)
 
 O lúpulo deve ser adicionado 10 minutos antes do final da fervura. Tradição 6,0% 30g_ e fermento alimentar _Levedura nutritiva_ são adicionados ao mosto ao mesmo tempo. A ilustração mostra como o procedimento é simples: são administradas doses simultâneas com duração de 0 minutos antes de uma dose com duração.
 
@@ -286,4 +284,4 @@ A penúltima etapa pós-isomerização utiliza a função especial temperatura a
 
 O gráfico para o plano de mash:
 
-![exemplo de dia de preparo do plano de mash](/docs/img/example_control_commands2.jpg)
+![exemplo de dia de preparo do plano de purê](/docs/img/example_control_commands2.jpg)

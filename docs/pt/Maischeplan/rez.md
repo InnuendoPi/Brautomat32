@@ -10,11 +10,11 @@ O nome do plano mash pode ser especificado nas configurações. O nome do arquiv
 
 Com a ajuda do controle de tempo, o dia da noiva pode ser planejado e iniciado automaticamente.
 
-![Controle de tempo](/docs/img/Time control.jpg)
+![Controle de tempo](/docs/img/Zeitsteuerung.jpg)
 
 Com o elemento DateTimerPicker você pode selecionar facilmente uma data e hora. O nome da receita é temporariamente substituído pela hora de início especificada.
 
-![Controle de tempo](/docs/img/Time control2.jpg)
+![Controle de tempo](/docs/img/Zeitsteuerung2.jpg)
 
 Um controle de tempo ativado é salvo na configuração. Quando a máquina de infusão é reiniciada, a data e a hora definidas são lidas. Se o início da infusão ocorrer no futuro, o controle de tempo é ativado. Se o início da distribuição estiver no passado, o controle do tempo é desativado.
 
@@ -43,7 +43,7 @@ O Brautomat pode importar receitas de cerveja das seguintes fontes:
 
 Uma receita de cerveja importada torna-se um plano de mosturação Brautomat. Recomenda-se o gerenciamento e a criação de receitas com kbh2. O filtro de exportação "Brautomat" contém de forma otimizada todos os dados necessários para a fabricação de cerveja com o Brautomat.
 
-As receitas do MashMalzandMore também devem primeiro ser importadas para o pequeno auxiliar de fermentação2 e adaptadas aos valores individuais do sistema, matérias-primas, etc. Como o MMum não atribui nomes aos restos, é recomendado editá-lo no plano de mosturação KBH2.
+As receitas do MashMalzandMore também devem ser primeiro importadas para o pequeno auxiliar de fermentação2 e adaptadas aos valores individuais do sistema, matérias-primas, etc. Como o MMum não atribui nomes aos restos, é recomendado editá-lo no plano de mosturação KBH2.
 
 Receitas e cervejas podem ser importadas do BrewFather por meio de importação de arquivo ou por chamada de API. No BrewFather, os nomes dos restos podem conter um corpo de texto (de quase qualquer comprimento). O texto é reduzido para no máximo 50 caracteres. Brewfather permite números de ponto flutuante e texto como tempo de descanso. Os parâmetros são convertidos em números inteiros ou definidos como 0.
 
@@ -61,9 +61,9 @@ O plano de mash selecionado é removido da memória flash.
 
 ## Importar padrão
 
-![Importação predefinida](/docs/img/preset_import.jpg)
+![Padrão de importação](/docs/img/voreinstellung_import.jpg)
 
-O Brautomat requer um Schmontou esmagamento (opcional) e esmagamento em uma etapa. Em particular, a etapa de mosturação serve como uma etapa de separação entre a mosturação e o cozimento quando autonext está desativado. Ao importar, o Brautomat pode inserir etapas de mosturação e de mosturação ausentes. Além disso, as temperaturas faltantes podem ser fornecidas com especificações.
+O Brautomat requer uma etapa de mosturação (opcional) e uma etapa de mosturação. EmEm particular, a etapa de mosturação serve como uma etapa de separação entre a mosturação e o cozimento quando autonext está desativado. Ao importar, o Brautomat pode inserir etapas de mosturação e de mosturação ausentes. Além disso, as temperaturas faltantes podem ser fornecidas com especificações.
 
 ### Padrões de temperatura para parâmetros ausentes
 

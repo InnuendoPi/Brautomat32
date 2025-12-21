@@ -22,7 +22,7 @@ Vervolgens moet er een temperatuursensor aan de MashBud-waterkoker worden toegew
 
 _Opmerking_: _Een temperatuursensor moet permanent aan een kookplaat worden toegewezen. De sensorwaarde wordt de werkelijke temperatuur of huidige temperatuur genoemd en wordt tijdens het maischproces continu vergeleken met de resttemperatuur (doeltemperatuur)._
 
-![Configureer de maischbrouwketel](/docs/img/IDS-configure.jpg)
+![Configureer de maischbrouwketel](/docs/img/IDS-konfigurieren.jpg)
 
 De parameters op het tabblad "Temperatuurregeling" worden in het hoofdstuk "Alle parameters" gedetailleerd toegelicht. Voor de basisconfiguratie worden in eerste instantie de standaardwaarden overgenomen.
 

@@ -4,7 +4,7 @@ A Brautomat32 oferece a opção de configuração de até três caldeiras. A pri
 
 As três caldeiras podem ser de placa de indução GGM ou do tipo relé. Uma caldeira tipo relé inclui uma conexão webhook.
 
-![Configuração do Kessel](/docs/img/kessel_1.jpg)
+![Configuração da caldeira](/docs/img/kessel_1.jpg)
 
 Os parâmetros estão descritos no capítulo Configuração básica e visão geral dos parâmetros - Parâmetros da caldeira e são idênticos para as três caldeiras.
 
@@ -32,15 +32,15 @@ A segunda e terceira caldeiras podem ser ligadas e desligadas manualmente atrav�
 
 A segunda e terceira caldeiras também podem ser trocadas através do plano de mosturação:
 
-![Configuração do Kessel](/docs/img/kessel_2.jpg)
+![Configuração da caldeira](/docs/img/kessel_2.jpg)
 
 Neste plano de mosturação simplificado, a terceira caldeira HLT é ligada automaticamente na linha 2. A etapa HLT:100 com temperatura alvo de 78°C e duração de 0 minutos liga a recarga com 100% de potência e define a temperatura alvo para 78°C. Como a duração é especificada como 0 minutos, a recarga fica ligada permanentemente. O Brautomat vai diretamente para a próxima etapa de mosturação e deixa a pós-infusão ligada. O controlador PID regula permanentemente a potência necessária para atingir e manter a temperatura alvo. Nachguss:100 seria idêntico ao comando de controle HLT:100. Se a recarga tiver recebido o nome “Cooker” nas configurações, então o comando de controle COOKER:100 também pode ser usado.
 
-![Configuração do Kessel](/docs/img/kessel_3.jpg)
+![Configuração da caldeira](/docs/img/kessel_3.jpg)
 
 Neste plano de mosturação, a segunda preparação da chaleira é ativada na terceira etapa. Ao contrário do exemplo anterior HLT, a caldeira SUD é ligada por um período de 15 minutos com a temperatura alvo de 100°C. O Brautomat permanece nesta etapa até que a temperatura alvo seja atingida e o período de descanso de 10 minutos seja concluído. A chaleira SUD é então desligada e o Brautomat salta para a próxima etapa no plano de mosturação.
 
-O texto “Te"cooking ilmaische" é traduzido por Brautomat para 100%. Se não houver nenhum número entre 0 e 100 ou a informação ON ou OFF após os dois pontos, então o Brautomat substitui o texto com 100% de desempenho.
+O texto "Cozinhar purê parcial" é de Brautomat traduz 100%. Se não houver nenhum número entre 0 e 100 ou a informação ON ou OFF após os dois pontos, então o Brautomat substitui o texto por 100% de potência.
 
 ## Exemplo de desempenho diferente
 

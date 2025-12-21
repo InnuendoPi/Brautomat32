@@ -16,7 +16,7 @@ Het MS Windows-besturingssysteem creëert automatisch een seriële COM-poort wan
 
 Op de afbeelding is een ESP-apparaat gevonden op COM7. In zeldzame gevallen wordt onder MS Windows niet automatisch voorzien in een seriële COM-poort. USB-stuurprogramma's voor ESP-microcontrollers zijn beschikbaar op de volgende websites: (MS Win en macOS)
 
-[!"
+[![ESP32 Stuurprogramma's](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
 Het Flashen.cmd-script gebruikt de tool esptool.exe <https://github.com/espressif/esptool>. ESPTool is gratis beschikbaar voor verschillende besturingssystemen (macOS, Linux). De Windows-versie 64bit is opgenomen in het ZIP-archief. ESPTool is gelicentieerd onder GPL v2. Zie het begeleidende [LICENSE-bestand](https://github.com/espressif/esptool/blob/master/LICENSE) voor een kopie.
 
@@ -61,10 +61,10 @@ Met de knop “WiFi configureren” wordt de WLAN-configuratie weergegeven
 
 Hier moet het WLAN (SSID en wachtwoord) worden ingevoerd. Met _Save_ start de Brautomat opnieuw op en maakt verbinding met het WLAN. De webinterface van Brautomat is in het lokale WLAN te bereiken via het adres <http://Brautomat.local>.
 
-Hiermee is de basisinstallatie voltooid. Het flashen van de firmware en het WLAN-configuratieproces hoeven slechts één keer te worden uitgevoerd. De Brautomat moet nu worden geconfigureerd. De configuratie wordt beschreven in de sectie _Basisinstellingenung_ beschreven. De volgende sectie _Update_ kan in eerste instantie worden overgeslagen.
+Hiermee is de basisinstallatie voltooid. Het flashen van de firmware en het WLAN-configuratieproces hoeven slechts één keer te worden uitgevoerd. De Brautomat moet nu worden geconfigureerd. De configuratie wordt beschreven in de sectie _Basisinstellingen_. De volgende sectie _Update_ kan in eerste instantie worden overgeslagen.
 
 > **Opmerking:**\
-De Brautomat32 probeert gedurende maximaal 20 seconden verbinding te maken met de WLAN-configuratie (SSID en wachtwoord). Als er geen verbinding tot stand kan worden gebracht, bijvoorbeeld als het wachtwoord verkeerd is ingevoerd, zal de Brautomat32 opnieuw opstarten in AccessPoint-modus.\
+De Brautomat32 probeert gedurende maximaal 20 seconden verbinding te maken met de WLAN-configuratie (SSID en wachtwoord). Als er geen verbinding tot stand kan worden gebracht, bijvoorbeeld als het wachtwoord verkeerd is ingevoerdwerd gebruikt, dan start de Brautomat32 opnieuw in AccessPoint-modus.\
 In zeldzame gevallen en meestal alleen als het WLAN-signaal zwak is, vindt de Brautomat32 geen geschikt WLAN en start hij ook na ca. 20 minuten in de AccessPoint-modus. 20 seconden. In dit geval zal alleen het herstarten van de Brautomat32 helpen.
 
 ##Updates
@@ -88,7 +88,7 @@ Een update van de firmware via de FileUpdate-selectie vindt in slechts enkele st
 Eerst moet de huidige firmware worden gedownload. Het ZIP-archief wordt vervolgens uitgepakt.\
 Selecteer in de webinterface Brautomat het menu-item Update en vervolgens FileUpdate. Er wordt een eenvoudige updatewebsite (afbeelding 1) weergegeven:
 
-![BestandUpdate](/docs/img/fileupdate2.jpg)
+![Bestandupdate](/docs/img/dateiupdate2.jpg)
 
 Onder Firmware met de knop "Bestand selecteren" moet nu het bestand _firmware.bin_ uit het ZIP-archief worden geselecteerd (in Figuur 2). Als u op Update Firmware klikt, wordt de update gestart.
 

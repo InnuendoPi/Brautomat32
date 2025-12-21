@@ -10,11 +10,11 @@ Nazwę planu zacierania można określić w ustawieniach. Nazwa pliku pochodzi o
 
 Dzięki kontroli czasu dzień ślubu można zaplanować i rozpocząć automatycznie.
 
-![Kontrola czasu](/docs/img/Kontrola czasu.jpg)
+![Kontrola czasu](/docs/img/Zeitsteuerung.jpg)
 
 Za pomocą elementu DateTimerPicker możesz łatwo wybrać datę i godzinę. Nazwa przepisu zostaje tymczasowo zastąpiona określonym czasem rozpoczęcia.
 
-![Kontrola czasu](/docs/img/Kontrola czasu2.jpg)
+![Kontrola czasu](/docs/img/Zeitsteuerung2.jpg)
 
 Aktywowana kontrola czasu jest zapisana w konfiguracji. Po ponownym uruchomieniu zaparzacza wczytywana jest ustawiona data i godzina. Jeżeli start parzenia nastąpi w przyszłości, aktywowana jest kontrola czasu. Jeśli początek parzenia przypada w przeszłości, kontrola czasu jest wyłączona.
 
@@ -61,9 +61,9 @@ Wybrany plan zacierania zostanie usunięty z pamięci flash.
 
 ## Importuj domyślne
 
-![Import ustawień wstępnych](/docs/img/preset_import.jpg)
+![Domyślny import](/docs/img/voreinstellung_import.jpg)
 
-Brautomat wymaga Schjechałem zacierając (opcjonalnie) i jednoetapowo zacierając. W szczególności etap zacierania służy jako etap oddzielający zacieranie od gotowania, gdy opcja autonext jest wyłączona. Podczas importowania Brautomat może wstawić brakujące kroki zacierania i zacierania. Ponadto brakujące temperatury mogą zostać dostarczone wraz ze specyfikacjami.
+Brautomat wymaga etapu zacierania (opcjonalnie) i etapu zacierania. WW szczególności etap zacierania służy jako etap oddzielający zacieranie od gotowania, gdy opcja autonext jest wyłączona. Podczas importowania Brautomat może wstawić brakujące kroki zacierania i zacierania. Ponadto brakujące temperatury mogą zostać dostarczone wraz ze specyfikacjami.
 
 ### Domyślne temperatury dla brakujących parametrów
 

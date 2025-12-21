@@ -18,15 +18,15 @@ Ce paramètre décrit la température à laquelle le contrôleur PID doit détec
 
 ### Puissance issue de la transition [%]
 
-Ce paramètre décrit la puissance de sortie de la table de cuisson depuis la transition de température jusqu'à la cuisson. La valeur par défaut est 100 %. Le paramètre "Transition en cuisson" a été utilisé pour régler une température à laquelle le contrôleur PID est désactivé. Le paramètre « Puissance de transition » spécifie désormais la puissance de sortie fixe pour la table de cuisson. Si une bouilloire d'un volume de 35 litres ou plus est utilisée, la valeur par défaut de 100 % est un choix approprié. Dans les cuisines de brasserie équipées de petites bouilloires, un approvisionnement en énergie à 100 % peut provoquer un débordement. Dans ce cas, l'apport d'énergie maximum peut être réduit à, par exemple, 75 % grâce à ce paramètre.
+Ce paramètre décrit la puissance de sortie de la table de cuisson depuis la transition de température jusqu'à la cuisson. La valeur par défaut est 100 %. Le paramètre "Transition en cuisson" a été utilisé pour régler une température à laquelle le contrôleur PID est désactivé. Le paramètre « Puissance de transition » spécifie désormais la puissance de sortie fixe pour la table de cuisson. Si une bouilloire d'un volume de 35 litres ou plus est utilisée, la valeur par défaut de 100 % est un choix approprié. Dans les cuisines de brasserie équipées de petites bouilloires, un approvisionnement en énergie à 100 % peut provoquer un débordement. Dans ce cas, l'apport d'énergie maximum peut être réduit, par exemple, à 75 % grâce à ce paramètre.
 
 ### Désactiver PID pour la cuisson [on/off]
 
 Ce paramètre détermine le comportement du contrôleur PID lors de la cuisson lorsque la température réelle est supérieure à la température cible. Exemple : la température de cuisson a été réglée à 98°C dans le plan purée. Le paramètre « Puissance depuis la transition » désactive le calcul PID à partir de la température « Transition vers l'ébullition ». Si le paramètre « Désactiver PID pour l'ébullition » est activé (par défaut), le contrôleur PID reste éteint même au-dessus de la température cible de 98°C du plan de brassage et la puissance du paramètre « Puissance de transition » est utilisée. Ce paramètre est activé par défaut et permet une cuisson roulée.
 
-Si le paramètre "Désactiver PID pour la cuisson" n'est pas activé, la puissance nécessaire est calculée par le contrôleur PID une fois la température cible (ici 98°C) atteinte. La performance calculée au dessus de l’objectif-La température est de 0%. La table de cuisson s'éteint et évite le débordement si nécessaire.
+Si le paramètre "Désactiver PID pour la cuisson" n'est pas activé, la puissance nécessaire est calculée par le contrôleur PID une fois la température cible (ici 98°C) atteinte. La puissance calculée au-dessus de la température cible est de 0 %. La table de cuisson s'éteint et évite le débordement si nécessaire.
 
-### Performances d'erreur du capteur [0-100 %]
+### Performancesen cas d'erreur du capteur [0-100%]
 
 Si une erreur de capteur se produit, par exemple un capteur n'est pas connecté ou un défaut, la puissance de la table de cuisson peut être ajustée pour traiter cette erreur. Une valeur de 100 % ignore l'erreur du capteur.
 
@@ -72,7 +72,7 @@ _Ces 10 paramètres doivent être réglés individuellement pour chaque système
 
 Le Brautomat peut gérer les profils matériels. Des profils peuvent être utilisés s'il y a différentes chaudières. Les utilisateurs possédant des bouilloires de différentes tailles peuvent utiliser des profils pour sélectionner la bouilloire pour le jour d'infusion au lieu d'avoir à ressaisir manuellement tous les paramètres. Un profil matériel contient tous les paramètres d'une chaudière.
 
-Les profils sont enregistrés dans le dossier /Profiles. Les profils permettent une utilisation simple et rapideBasculez entre différentes chaudières. La fonction Enregistrer crée un fichier de profil avec les paramètres ci-dessus, tandis que la fonction Supprimer supprime le fichier de profil de la mémoire flash.
+Les profils sont enregistrés dans le dossier /Profiles. Les profils permettent une commutation rapide et facile entre différentes chaudières. La fonction Enregistrer crée un fichier de profil avec dfr les paramètres ci-dessus, tandis que la fonction Supprimer supprime le fichier de profil de la mémoire flash.
 
 Le profil par défaut au démarrage de la machine à pain est toujours le dernier profil sélectionné.
 
@@ -151,4 +151,4 @@ Le spécifique utilisé ici Capacité thermique 3600 a une tolérance d'erreur d
 9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 162194,8 / 44 = 3686,25 J par kg par degré degrés Celsius
 ```
 
-Voir aussi [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+Voir également [Brewing Magazine](https://braumagazin.de/article/berechnungen-in-der-brauerei/)

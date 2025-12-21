@@ -4,7 +4,7 @@
 
 V sekci _Sensors_ lze přidat nový senzor kliknutím na symbol plus.
 
-![Vytvořit senzory](/docs/img/Sensor-setup.jpg)
+![Vytvořit senzory](/docs/img/Sensor-einrichten.jpg)
 
 ## Nastavte adresu a název senzoru
 
@@ -19,7 +19,7 @@ Každý senzor potřebuje jméno. V tomto základním nastavení se senzor nazý
 
 _Poznámka: Názvy senzorů mohou obsahovat maximálně 20 znaků. Povolené speciální znaky jsou # a mezery. Zadání je automaticky kontrolováno webovým rozhraním._
 
-![Konfigurovat senzory](/docs/img/Sensor-settings.jpg)
+![Konfigurovat senzory](/docs/img/Sensor-einstellungen.jpg)
 
 ## Kalibrace senzoru (hodnoty offsetu)
 
@@ -29,9 +29,9 @@ Pro tuto základní konfiguraci zůstávají obě hodnoty nezměněny na 0,00.
 
 ## Uložte a zkontrolujte senzor
 
-Kliknutím na _save_ se vytvoří senzor a zobrazí se na řídicím panelu pod _Sensors_.
+Kliknutím na _save_ je senzor vytvořen a poté zobrazen v Dashboard pod _Sensors_.
 
-![Sensors Dashboard](/docs/img/Sensor-dashboard.jpg)
+![Sensory Dashboard](/docs/img/Sensor-dashboard.jpg)
 
 > **Poznámka:**
 

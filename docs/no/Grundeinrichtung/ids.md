@@ -22,11 +22,11 @@ Deretter må en temperatursensor tilordnes til MashBud-kjelen. Valget gjøres fr
 
 _Merk_: _En temperatursensor må være permanent tilordnet en koketopp. Sensorverdien refereres til som den faktiske temperaturen eller gjeldende temperatur og sammenlignes kontinuerlig med hviletemperaturen (måltemperaturen) under meskeprosessen._
 
-![Konfigurer mash brew boiler](/docs/img/IDS-configure.jpg)
+![Konfigurer mash brew-kjele](/docs/img/IDS-konfigurieren.jpg)
 
 Parametrene i fanen "Temperaturkontroll" er forklart i detalj i avsnittet "Alle parametere". For det grunnleggende oppsettet blir standardverdiene i utgangspunktet tatt i bruk.
 
-![Konfigurer mash brew boiler](/docs/img/IDS-temperaturen.jpg)
+![Konfigurer mash brew-kjele](/docs/img/IDS-temperaturen.jpg)
 
 ## Sette opp PID kontrolleren
 

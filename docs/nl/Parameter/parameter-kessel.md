@@ -6,11 +6,11 @@
 
 Deze parameter beschrijft het maximale uitgangsvermogen van de kookplaat. De standaardwaarde is 100%. Deze parameter wordt gebruikt als er een kleine waterkoker met een inhoud van bijvoorbeeld 20 liter op de kookplaat wordt gebruikt. Door het vermogen te verminderen kan een te snelle opwarming en overkoken worden vermeden. Bij gebruik van kleine brouwketels moeten de parameters "Max. vermogen" en "Vermogen uit overgang" samen worden verlaagd.
 
-Aan het einde van dit hoofdstuk vindt u [twee voorbeelden voor het berekenen van het vereiste vermogen](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung).
+Aan het einde van dit hoofdstuk vindt u [twee voorbeelden voor het berekenen van het benodigde vermogen](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung).
 
 ### Temperatuurdelta naar doel
 
-Deze parameter beschrijft het verschil met de rusttemperatuur (setpoint) waarbij de timer voor een rust moet starten. De standaardwaarde is 0,3°C. Tijdens het maischproces maakt de PID-controller een zeer nauwkeurige temperatuurregeling mogelijk. Een rusttemperatuur wordt met een nauwkeurigheid van +-0,2°C bereikt doordat de PID-controller de energietoevoer gecontroleerd reduceert voordat de rusttemperatuur wordt bereikt. Het verminderen van de energietoevoer heeft als neveneffect dat de laatste stap om de rusttemperatuur te bereiken langer duurt. Dit is precies waar de parameter 'Delta to target' een rol speelt: als er bijvoorbeeld een rusttemperatuur van 63°C moet worden bereikt en de huidige temperatuur 62,7°C is, dan zou de rusttimer starten bij een temperatuurverschil ten opzichte van de doelstelling van 0,3°C. Met betrekking tot het individuele zetsysteem kan delta worden gebruikt om een ​​ongewenste verlenging van de rusttijd te voorkomen.
+Deze parameter beschrijft het verschil met de rusttemperatuur (setpoint) waarbij de timer voor een rust moet starten. De standaardwaarde is 0,3°C. Tijdens het maischproces maakt de PID-controller een zeer nauwkeurige temperatuurregeling mogelijk. Een rusttemperatuur wordt met een nauwkeurigheid van +-0,2°C bereikt doordat de PID-controller de energietoevoer gecontroleerd reduceert voordat de rusttemperatuur wordt bereikt. Het verminderen van de energietoevoer heeft als neveneffect dat de laatste stap om de rusttemperatuur te bereiken langer duurt. Dit is precies waar de parameter 'Delta to target' in het spel komt: als er bijvoorbeeld een rusttemperatuur van 63°C moet worden bereikt en de huidige temperatuur is 62,7°C, dan zou de rusttimer starten bij een temperatuurverschil ten opzichte van de doelstelling van 0,3°C. Met betrekking tot het individuele zetsysteem kan delta worden gebruikt om een ​​ongewenste verlenging van de rusttijd te voorkomen.
 
 ### Overgang naar koken [°C]
 
@@ -24,9 +24,9 @@ Deze parameter beschrijft het uitgangsvermogen van de kookplaat vanaf de tempera
 
 Deze parameter bepaalt het gedrag van de PID-controller tijdens het koken wanneer de werkelijke temperatuur boven de doeltemperatuur ligt. Voorbeeld: in het maischplan is de kooktemperatuur ingesteld op 98°C. De parameter "Vermogen uit overgang" schakelt de berekening PID uit van de temperatuur "Overgang naar kookpunt". Als de parameter "[TERM_8]] deactiveren voor koken" is geactiveerd (standaard), dan blijft de PID-controller ook boven de doeltemperatuur van 98°C uit het maischplan uitgeschakeld en wordt het vermogen van de parameter "Vermogen uit transitie" gebruikt. Deze parameter is standaard geactiveerd en maakt rollend koken mogelijk.
 
-Als de parameter "[TERM_8]] deactiveren voor koken" niet is geactiveerd, wordt het benodigde vermogen door de PID-controller berekend zodra de doeltemperatuur (hier 98°C) is bereikt. De berekende prestatie boven het doel-Temperatuur bedraagt ​​0%. De kookplaat schakelt uit en voorkomt indien nodig overkoken.
+Als de parameter "[TERM_8]] deactiveren voor koken" niet is geactiveerd, wordt het benodigde vermogen door de PID-controller berekend zodra de doeltemperatuur (hier 98°C) is bereikt. Het berekende vermogen boven de doeltemperatuur is 0%. De kookplaat schakelt uit en voorkomt indien nodig overkoken.
 
-### Sensorfoutprestaties [0-100%]
+### Prestatiesbij sensorfout [0-100%]
 
 Als er een sensorfout optreedt, bijvoorbeeld als een sensor niet is aangesloten of als deze defect is, kan het vermogen van de kookplaat worden aangepast om deze fout op te lossen. Een waarde van 100% negeert de sensorfout.
 
@@ -58,7 +58,7 @@ Er zijn drie opties om uit te kiezen
 
 Deze parameter wordt gebruikt voor het detecteren van extreme waarden (Max, Min). AutoTune noiseband geeft de minimale verandering ten opzichte van de vorige gemeten waarde aan die aanwezig moet zijn om een ​​nieuwe extreme waarde te herkennen. De standaardwaarde voor de GGM IDS is 0,2. Voor een herschikt fornuis via een relais of SSR is de standaardwaarde 0,5. Waardebereik: 0,1 - 1,0
 
-### AutoTune Gegevensreeks (overzicht)
+### AutoTune Gegevensreeks (terugblik)
 
 Deze parameter specificeert met hoeveel meetwaarden rekening moet worden gehouden bij het bepalen van extreme waarden. De standaardwaarde is 50 metingen. Houd er rekening mee dat er maximaal 100 meetwaarden kunnen worden geconfigureerd. Voor zeer goed thermisch geïsoleerde brouwketels kan het vergroten van de datareeks tot 100 meetwaarden de detectie van extreme waarden in de afkoelfase van het AutoTune-proces verbeteren.
 
@@ -72,7 +72,7 @@ _Deze 10 parameters moeten voor elk zetsysteem afzonderlijk worden ingesteld. Ti
 
 De Brautomat kan hardwareprofielen beheren. Profielen kunnen worden gebruikt als er verschillende ketels zijn. Gebruikers met ketels van verschillende afmetingen kunnen profielen gebruiken om de ketel voor de brouwdag te selecteren in plaats van dat ze alle parameters handmatig opnieuw moeten invoeren. Een hardwareprofiel bevat alle instellingen van een ketel.
 
-Profielen worden opgeslagen in de map /Profiles. Profielen zorgen voor snel en eenvoudigSchakelen tussen verschillende ketels. De functie Opslaan creëert een profielbestand met de bovenstaande parameters, terwijl de functie Verwijderen het profielbestand uit het flashgeheugen verwijdert.
+Profielen worden opgeslagen in de map /Profiles. Profielen maken het mogelijk om snel en eenvoudig te schakelen tussen verschillende ketels. De functie Opslaan maakt een profielbestand aan met den bovenstaande parameters, terwijl de functie Verwijderen het profielbestand uit het flashgeheugen verwijdert.
 
 Het standaardprofiel bij het opstarten van de broodmachine is altijd het laatst geselecteerde profiel.
 
@@ -151,4 +151,4 @@ De hier gebruikte specifieke Warmtecapaciteit 3600 heeft een fouttolerantie van 
 9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 162194,8 / 44 = 3686,25 J per kg per graad Celsius
 ```
 
-Zie ook [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+Zie ook [Brewing Magazine](https://braumagazin.de/article/berechnungen-in-der-brauerei/)

@@ -19,7 +19,7 @@ Offset #1 (onderste waardebereik) is het verschil van 0,0°C (ijsbad) met de gem
 
 ## Procedurekalibratie met koortsthermometer
 
-Een koortsthermometer is een zeer geschikte referentiethermometer. Het bovenste meetbereik van een koortsthermometer is beperkt tot ca. 40°C. Het uitvoeren van de kalibratie komt overeen met de procedure voor ijsbad en kooktemperatuur. Het enige verschil: als u bijvoorbeeld 40°C als tweede kalibratiepunt kiest, moet de kookplaat worden uitgeschakeld zodra de doeltemperatuur is bereikt en blijft deze gedurende ca. 2 minuten constant. 60 seconden(geen schommelingen). Pas dan kan de kalibratie, d.w.z. de registratie van 60 meetmonsters, worden gestart.
+Een koortsthermometer is een zeer geschikte referentiethermometer. Het bovenste meetbereik van een koortsthermometer is beperkt tot ca. 40°C. Het uitvoeren van de kalibratie komt overeen met de procedure voor ijsbad en kooktemperatuur. Het enige verschil: als u bijvoorbeeld 40°C als tweede kalibratiepunt kiest, moet de kookplaat worden uitgeschakeld zodra de doeltemperatuur is bereikt en blijft deze gedurende ca. 2 minuten constant. 60 seconden (geen schommelingen). Alleen dan kan dDe kalibratie, d.w.z. de registratie van 60 meetmonsters, kan worden gestart.
 
 ## Sensorkalibratielogbestand
 

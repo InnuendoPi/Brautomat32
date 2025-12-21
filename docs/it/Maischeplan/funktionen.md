@@ -6,7 +6,7 @@ Il piano di mash è sotto forma di tabella. Questa tabella viene elaborata dall'
 
 ## Funzioni di base
 
-![Piano di mash](/docs/img/Brautomat.jpg)
+![mashplan](/docs/img/brautomat.jpg)
 
 A scopo orientativo viene dapprima descritta la struttura delle righe della tabella. Una riga nel piano di mash rappresenta un passaggio nel piano di mash. Ogni riga della tabella ha queste colonne:
 
@@ -17,7 +17,7 @@ A scopo orientativo viene dapprima descritta la struttura delle righe della tabe
 
 Dopo questi quattro dettagli sulla fase di ammostamento, in ogni riga sono presenti pulsanti di modifica con le seguenti funzioni: (da sinistra a destra)
 
-![Modifica piano di mash](/docs/img/Brautomat-111.jpg)
+![Modifica piano di mash](/docs/img/brautomat-111.jpg)
 
 * sposta questa riga in alto di una posizione
 * sposta questa linea verso il basso di una posizione
@@ -26,7 +26,7 @@ Dopo questi quattro dettagli sulla fase di ammostamento, in ogni riga sono prese
 
 L'intestazione della tabella contiene i seguenti pulsanti (da sinistra a destra)
 
-![Modifica piano di mash](/docs/img/Brautomat-1.jpg)
+![Modifica piano di mash](/docs/img/brautomat-1.jpg)
 
 * nuova riga: aggiungi un nuovo passaggio di mash alla fine della tabella
 * Elimina: elimina l'intera tabella (piano di mash vuoto)
@@ -34,7 +34,7 @@ L'intestazione della tabella contiene i seguenti pulsanti (da sinistra a destra)
 * Database: selezione del piano di mash, importazione, esportazione e pianificazione del piano di mash
 * Comprimi: comprimi ed espandi la tabella del piano di mash
 
-![Modifica piano di mash](/docs/img/Brautomat-11.jpg)
+![Modifica piano di mash](/docs/img/brautomat-11.jpg)
 
 Quando viene modificata una riga della tabella, i pulsanti cambiano.
 
@@ -55,17 +55,17 @@ Gli additivi come mostrato nell'immagine _Lievito alimentare da cucina 1gr_ veng
 
 Un piano di mash può essere modificato in Brautomat o completamente ricreato. Il simbolo della matita mette una linea nella tabella del piano di mash in modalità editor.
 
-![Modifica piano di mash](/docs/img/Brautomat-3.jpg)
+![Modifica piano di mash](/docs/img/brautomat-3.jpg)
 
 Ora è possibile modificare un numero qualsiasi di righe della tabella una dopo l'altra. Non appena si clicca sul simbolo per la modifica del piano di mash, il pulsante _Salva_ cambia da verde a rosso. Una volta apportate tutte le modifiche, il piano di mash deve essere salvato utilizzando il pulsante _Salva_. In alternativa, tutte le modifiche possono essere annullate utilizzando il pulsante _Esci_ per uscire senza salvare.
 
 Non appena viene avviato un processo di ammostamento utilizzando il pulsante di accensione, la visualizzazione cambia:
 
-![Modifica piano di mash](/docs/img/Brautomat-4.jpg)
+![Modifica piano di mash](/docs/img/brautomat-4.jpg)
 
-I pulsanti per la modifica sono nascosti. Per renderlo nuovamente visibile, il processo di ammostamento deve essere interrotto utilizzando il pulsante Pausa sul controllo:
+I pulsanti per la modifica sono nascosti. Per renderli nuovamente visibili,Il processo di ammostamento deve essere interrotto utilizzando il pulsante Pausa sul controllo:
 
-![Modifica piano di mash](/docs/img/Brautomat-5.jpg)
+![Modifica piano di mash](/docs/img/brautomat-5.jpg)
 
 Quando il processo di ammostamento è in pausa, il pulsante Pausa nel controllo viene visualizzato in rosso e vengono visualizzate le funzioni di modifica. Il piano cottura a induzione non si spegne. La temperatura di riposo continua a essere mantenuta. Se il timer di riposo è attivo, verrà messo in pausa. Se il piano di mash viene modificato (modalità Editor), il pulsante Pausa per continuare il processo di mash e il pulsante di accensione vengono disattivati ​​e visualizzati in grigio finché le modifiche nel piano di mash non vengono salvate o annullate (Esci).
 
@@ -80,7 +80,7 @@ Alla fine del processo di ammostamento, viene utilizzato un campione di iodio pe
 
 ## Funzione e applicazione di autonext
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext.jpg)
+![Piano di mash autonext](/docs/img/Maischeplan-autonext.jpg)
 
 La prima fase del piano di ammostamento chiamata _Mashing 50°C_ prevede un tempo di riposo di 10 minuti e un _autonext_ disattivato. L'immagine mostra la situazione in cui il timer di riposo ha raggiunto i 10 minuti: il timer ha effettuato il conto alla rovescia fino a 00:00. Il pulsante di riproduzione diventa automaticamente rosso. Il messaggio di avviso "Fai clic sul pulsante di riproduzione" viene visualizzato in basso a destra. Il piano cottura si spegne. Il processo di preparazione attende un clic sul pulsante di riproduzione. L'interfaccia web mostra il passaggio successivo, che viene avviato facendo clic su Riproduci.
 
@@ -90,7 +90,7 @@ La seconda fase di ammostamento, denominata _Maltoserast 63°C_, ha una temperat
 
 * Al termine del riposo con _autoext_ attivato, il processo di ammostamento continua automaticamente e il piano cottura rimane acceso.
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext2.jpg)
+![Piano di mash autonext](/docs/img/Maischeplan-autonext2.jpg)
 
 La proprietà _autonext_ nella settima fase _Mashing 78°C_ non è attivata. Se il Brautomat incontra un autonext disattivato, il Brautomat termina il riposo corrente allo scadere del tempo di riposo e spegne il piano di cottura (potenza 0%). In questo stato il pulsante Riproduci viene visualizzato in rosso. Per continuare il processo di preparazione è necessario fare clic sul pulsante Riproduci.
 
@@ -98,9 +98,9 @@ Mentre nel primo esempio di _autonext_ solitamente si clicca direttamente sul pu
 
 ## Differenza autonext e interruzione
 
-Se autonext viene disattivato allo scadere del blocco, il piano cottura viene spento. Con il pulsante pausa il timer di riposo viene fermato,Il piano cottura resta comunque acceso e il Brautomat calcola la potenza necessaria per il piano cottura.
+Se autonext viene disattivato allo scadere del blocco, il piano cottura viene spento. Il pulsante Pausa interrompe il timer di riposo, ma il piano cottura rimane acceso e il Brautomat calcola la potenza richiesta per il piano cottura.
 
-Le sezioni seguenti descrivono le funzioni speciali opzionali. I Brautomat principianti possono saltare la descrizione delle funzioni speciali.
+Le sezioni seguenti descrivono il Son opzionalele funzioni sono descritte. I Brautomat principianti possono saltare la descrizione delle funzioni speciali.
 
 ## Funzione speciale 0°C riposo quando autonext è attivato
 
@@ -134,16 +134,14 @@ Una seconda funzione speciale sono i comandi di controllo dei piani cottura e de
 
 L'alimentazione può essere ON o OFF oppure un numero compreso tra 0 e 100%. Lo stato OFF corrisponde al valore 0% e ON al valore 100%. Il comando di controllo per il primo piano cottura a induzione è IDS o MASH. Il comando di controllo per il secondo piano cottura a induzione è SUD. Il comando di controllo per la rifusione è HLT. Il comando di controllo per un attuatore è il nome dell'attuatore.
 
-![Comando controllo attore](/docs/img/Maischeplan-Aktoren.jpg)
+![Comando di controllo attuatore](/docs/img/Maischeplan-Aktoren.jpg)
 
 Il piano di ammostamento nell'immagine commuta gli attuatori in tre punti. L'agitatore è acceso fin dall'inizio: Agitatore:ON
 Poco prima della fine del programma di ammostamento, l'agitatore viene spento: Agitatore:OFF e il riempimento viene attivato: Refill:ON.
 
-Il comando di controllo per un attuatore può essere specificato con una potenza, ad es. POMPA:60. La pompa dell'attuatore viene quindi accesa con una potenza del 60%. Ciò presuppone che questo attuatore sia stato attivato per PWM. La temperatura di riposo e la Rast La durata deve essere impostata su 0 per i comandi di controllo.
+Il comando di controllo per un attuatore può essere specificato con una potenza, ad es. POMPA:60. La pompa dell'attuatore viene quindi accesa con una potenza del 60%. Ciò presuppone che questo attuatore sia stato attivato per PWM. La temperatura di riposo e la durata del riposo devono essere impostate su 0 per i comandi di controllo.
 
-Il comando di controllo IDS:50 imposta la potenza di uscita massima del piano cottura al 50%. La rifusione può anche essere attivata al 75% della potenza con HLT:75.
-
-![Comando di controllo IDS](/docs/img/sonderfunktion_sud1.jpg)
+Il comando di controllo IDS:50 imposta la potenza di uscita massima del piano cottura al 50%. La rifusione può anche essere attivata al 75% della potenza con HLT:75.![Comando di controllo IDS](/docs/img/sonderfunktion_sud1.jpg)
 
 Il comando di controllo SUD: Cuocere un mosto denso con un tempo di riposo di 10 minuti e una temperatura di riposo di 100 gradi esegue una fase di mosto su un secondo piano di cottura. Il timer di riposo viene avviato non appena viene raggiunta la temperatura di riposo.
 
@@ -153,7 +151,7 @@ Il comando di controllo SUD: Cuocere una purea densa con una temperatura di ripo
 
 ![Comando di controllo SUD](/docs/img/sonderfunktion_sud3.jpg)
 
-La fase di ammostamento, saccarificazione a 72°C, viene effettuata sul primo piano di cottura _Maische_. Il controller PID regola la potenza necessaria per il bollitore. Allo stesso tempo il regolatore PID regola la potenza necessaria per la caldaia _Sud_.
+La fase di ammostamento, saccarificazione a 72°C, viene effettuata sul primo piano di cottura _Maische_. Il regolatore PID regola la potenza necessaria per il mash tun. Allo stesso tempo il regolatore PID regola la potenza necessaria per la caldaia _Sud_.
 
 Esempi:
 
@@ -173,13 +171,13 @@ _Nota: i comandi di controllo possono essere utilizzati per azionare contemporan
 
 A titolo di esempio per la caldaia GGM IDS o MashSud è riportata la seguente configurazione:
 
-![Comando di controllo IDS](/docs/img/aktoren_schaltung4.jpg)
+![Comando di controllo IDS](/docs/img/aktoren_schalten4.jpg)
 
 La potenza massima è preimpostata al 100%. La temperatura di “Transizione alla Cottura” è di 95°C. A partire da questa temperatura la potenza massima in uscita dal GGM IDS è solo dell'80%.
 
 Il programma di ammostamento nell'illustrazione inizia con la fase "Riscaldamento della colata principale". Il piano cottura a induzione GGM IDS riscalderebbe l'acqua con la potenza "Max. Power IDS" (parametro nel registro di controllo della temperatura), cioè con il 100%.
 
-![Comando di controllo IDS](/docs/img/aktoren_schaltung2.jpg)
+![Comando di controllo IDS](/docs/img/aktoren_schalten2.jpg)
 
 Il timer di riposo inizia a 59°C. Il tempo di riposo è pari a zero minuti. Il Brautomat passa alla riga successiva al passaggio 2.
 Il comando di controllo IDS:65 imposta la potenza massima dell'IDS al 65%. Il Brautomat passa alla riga successiva al passaggio 3.
@@ -187,7 +185,7 @@ Ora la temperatura viene riscaldata da 59°C alla temperatura target nella fase 
 
 La potenza di uscita massima del 65% viene mantenuta nelle successive fasi di ammostamento. Fino a quando il Brautomat non incontra il comando di controllo IDS:100 dopo la fase di ammostamento.
 
-![Comando di controllo IDS](/docs/img/aktoren_schaltung3.jpg)
+![Comando di controllo IDS](/docs/img/aktoren_schalten3.jpg)
 
 Il comando di controllo modifica la potenza di uscita massima dell'IDS al 100%. Il mosto viene ora riscaldato al 100% della potenza fino alla temperatura di “transizione all'ebollizione” a 95°C (vedi sopra). A partire da 95°C il GGM IDS passa all'80% di potenza. L'80% corrisponde al parametro "Potenza da transizione".
 
@@ -207,7 +205,7 @@ Con l'aiuto della funzione speciale IDS: <Potenza in %> è possibile regolare la
 
 ![Comando di controllo potenza MASH](/docs/img/IDS-Sonderfunktion.jpg)
 
-_SpiegaPer informazioni sul metodo di calcolo vedere: Parametri del GGM IDS - Termoregolazione - Prestazioni massime dell'IDS._
+_Per spiegazioni sul metodo di calcolo vedere: Parametri del GGM IDS - Regolazione della temperatura - Prestazioni massime dell'IDS._
 
 ```json
 
@@ -215,7 +213,7 @@ _SpiegaPer informazioni sul metodo di calcolo vedere: Parametri del GGM IDS - Te
     L'espressione c*T/(t*w) è sostituita dal valore 75 con un rendimento dell'80% per il piano cottura a induzione
     La massa m è 35 kg
     P = 35 x 75 = 2625
-    2625 W rappresentano il 75% della potenza massima. potenza 3500W (2625/3500*100=75%)
+    2625 W rappresentano il 75% della potenza massima. potenza 3500W (2625/3500 * 100 = 75%)
 
 ```
 
@@ -254,13 +252,13 @@ Due attori:
 
 Il piano di mash:
 
-![esempio di giorno di preparazione del piano di ammostamento](/docs/img/example_control_commands1.jpg)
+![esempio giorno di preparazione del piano di ammostamento](/docs/img/example_control_commands1.jpg)
 
 L'esempio mostra quanto sia semplice accendere e spegnere gli attuatori utilizzando comandi speciali o come i comandi speciali siano integrati nel piano di mash. Nella prima fase di ammostamento l'agitatore è acceso. Il Brautomat esegue il comando speciale e salta immediatamente al passaggio successivo nel piano di mash. Il mash in step è stato configurato con una durata di 1 minuto e autonext disabilitato. In questa fase il malto viene aggiunto all'acqua della birra. La fase dura più di un minuto, ma non si sa in anticipo quanto tempo durerà l'ammostamento, a seconda del ripieno. Dopo aver tritato per un minuto, il Brautomat spegne il piano cottura e visualizza il pulsante di riproduzione in rosso (disattivato autonext). Il Brautomat ora "attende" finché il passaggio non viene completato e viene fatto clic sul pulsante di riproduzione. Quando il piano cottura viene spento e viene aggiunto il malto, la temperatura di miscelazione del mosto sarà inferiore a 55°C. Questa procedura è adatta, ad esempio, per un'aggiunta rilassata e lenta dei malti o per un breve riposo proteico.
 
 _Alternativa:_ attiva la proprietà autonext e imposta il periodo di riposo a 5 minuti. In questo caso il Brautomat manterrebbe la temperatura di ammostamento per 5 minuti (ammostamento) per poi riscaldarsi automaticamente fino al riposo successivo.
 
-Il passo successivo è il resto del maltosio. IL PID Il controller regola la potenza necessaria per raggiungere la temperatura target nel mosto e mantenerla per un periodo di 40 minuti. Nella riga 4 l'accensione della ricarica avviene tramite un apposito comando. La temperatura target per la ricarica è 75°C e la durata è 0 minuti. Il Brautomat avvia il regolatore PID per la rifusione della caldaia e regola in background la potenza richiesta. A questo punto del piano di ammostamento sono attivi due controller PID: un controller PID per il bollitore di ammostamento e un controller PID per il post-versamento. Il Brautomat salta direttamente al passaggio successivo dopo l'accensione.
+Il passo successivo è il resto del maltosio. Il controller PID regola la potenza necessaria per raggiungere la temperatura target nel mosto e mantenerla per un periodo di 40 minuti. Nella riga 4 l'accensione della ricarica avviene tramite un apposito comando. La temperatura target per la ricarica è 75°C e la durata è 0 minuti. Il Brautomat avvia il regolatore PID per la rifusione della caldaia e regola in background la potenza richiesta. AA questo punto del piano di ammostamento sono attivi due controller PID: un controller PID per il bollitore di ammostamento e un controller PID per il post-versamento. Il Brautomat salta direttamente al passaggio successivo dopo l'accensione.
 
 Nel piano di ammostamento l'attuatore dell'elemento riscaldante anulare viene attivato oppure attivato una volta con il comando speciale _RHE:ON_ e una volta con _RHE:50_. ON traduce il Brautomat con una prestazione del 100%, mentre 50 viene elaborato di conseguenza con una prestazione del 50%. Il bollitore MashSud ha un volume massimo di 70 litri. L'elemento riscaldante ad anello supporta il piano cottura durante la cottura con il 50% di potenza per cotture vigorose: piano cottura al 100% di potenza (3,5kW) più elemento riscaldante ad anello da 1,75kW (50%). Al termine della cottura la resistenza circolare viene spenta con l'apposito comando _RHE:OFF_.
 
@@ -278,7 +276,7 @@ Mentre strumenti come kleineBrauhelfer, BrewFather o MMum indicano sempre il tem
 
 _Estensione:_ La spiegazione delle dosi di luppolo viene ampliata per includere due o più dosi contemporaneamente:
 
-![esempio di giorno di preparazione del piano di ammostamento](/docs/img/example_control_commands3.jpg)
+![esempio giorno di preparazione del piano di ammostamento](/docs/img/example_control_commands3.jpg)
 
 Il luppolo va aggiunto 10 minuti prima della fine della bollitura. Al mosto vengono aggiunti contemporaneamente Tradition 6,0% 30g_ e lievito alimentare _lievito nutriente_. L'illustrazione mostra quanto sia semplice la procedura: dosi simultanee della durata di 0 minuti vengono somministrate prima di una dose di durata.
 
@@ -286,4 +284,4 @@ La penultima fase post-isomerizzazione utilizza la funzione speciale temperatura
 
 Il grafico per il piano di mash:
 
-![esempio di giorno di preparazione del piano di ammostamento](/docs/img/example_control_commands2.jpg)
+![esempio giorno di preparazione del piano di ammostamento](/docs/img/example_control_commands2.jpg)

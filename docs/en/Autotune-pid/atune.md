@@ -1,10 +1,10 @@
 # AutoTune process
 
-The AutoTune process determines suitable parameters for the brewing system so that the temperature control in the mashing process can be carried out as precisely as possible. The focus is on the ACTUAL temperatures and the corresponding TARGET temperatures. In practice this means that overshoot and undershoot should be minimized.
+The AutoTune process determines suitable parameters for the brewing system so that the temperature control in the mashing process can be carried out as accurately as possible. The focus is on the ACTUAL temperatures and the corresponding TARGET temperatures. In practice this means that overshoot and undershoot should be minimized.
 
 Note: An overshoot (exceeding the setpoint temperature) of 0.5°C is normal. Depending on the insulation of the boiler and the induction energy supplied, the temperature will continue to rise slightly even after the hob is switched off.
 
-![AutoTune4](/docs/img/IDS-AutoTune-target.jpg)
+![AutoTune4](/docs/img/IDS-AutoTune-Ziel.jpg)
 
 The following description of the PID values is intended only as an aid to using the firmware and can be skipped. The AutoTune process is described starting from "The AutoTune process: step by step."\
 The PID controller controls the performance of the hobs. It is important to determine appropriate P, I and D values. The PID values ​​are individual for each brewing system and environment. AutoTune is a procedure that helps determine suitable values. The required power of the hobs to get from the actual temperature to the target temperature is calculated from the sum of the three values: Required power = P + I + D\

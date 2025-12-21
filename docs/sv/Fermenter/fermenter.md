@@ -1,8 +1,8 @@
 # Fermenteringsläge
 
-I jäsningsläge bearbetar Brautomat32 jäsplanen uppifrån och ned på samma sätt som mäskplanen. Kontrollpanelen har samma funktioner.
+I jäsningsläge bearbetar Brautomat32 jäsplanen uppifrån och ned på samma sätt som mäskplanen. controller Deck har samma funktioner.
 
-![Fermenter dashboard](/docs/img/fermenter_dash.jpg)
+![Jäsare Dashboard](/docs/img/fermenter_dash.jpg)
 
 Bearbetningen av stegen har en viktig skillnad:
 
@@ -10,7 +10,7 @@ Det första steget i jäsningsplanen startas när måltemperaturen uppnås. Dett
 
 För att ställa in den kan en GPIO ställas in för kylning och en GPIO för uppvärmning. Antingen kyla eller uppvärmning är valfritt.
 
-![Fermenterinställningar](/docs/img/fermenter_set.jpg)
+![Fermenteringsinställningar](/docs/img/fermenter_set.jpg)
 
 Fermentorn har tre olika tillstånd: kylning, uppvärmning och tomgång. När statusen för kylning eller uppvärmning ändras, startar en paus. Under pausen ändras inte fermentorns status.
 

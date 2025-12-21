@@ -1,8 +1,8 @@
 # Modo fermentador
 
-En el modo fermentador, el Brautomat32 procesa el plan de fermentación de arriba hacia abajo del mismo modo que el plan de maceración. La plataforma del controlador tiene las mismas funciones.
+En el modo fermentador, el Brautomat32 procesa el plan de fermentación de arriba hacia abajo del mismo modo que el plan de maceración. El controller Deck tiene las mismas funciones.
 
-![Panel del fermentador](/docs/img/fermenter_dash.jpg)
+![Fermentador Dashboard](/docs/img/fermenter_dash.jpg)
 
 El procesamiento de los pasos tiene una diferencia importante:
 

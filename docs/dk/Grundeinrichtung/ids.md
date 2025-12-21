@@ -22,7 +22,7 @@ Next, a temperature sensor must be assigned to the MashBud kettle. The selection
 
 _Note_: _A temperature sensor must be permanently assigned to a hob. The sensor value is referred to as the actual temperature or current temperature and is continuously compared with the rest temperature (target temperature) during the mashing process._
 
-![Configure mash brew boiler](/docs/img/IDS-configure.jpg)
+![Configure mash brew boiler](/docs/img/IDS-konfigurieren.jpg)
 
 The parameters in the "Temperature control" tab are explained in detail in the "All parameters" section. For the basic setup, the default values ​​are initially adopted.
 

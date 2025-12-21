@@ -14,20 +14,20 @@ En pump är till stor hjälp när man laterar eller transporterar den till jäsn
 
 | Artikelnamn | Länk till artikel |
 | -------------------------------------------------------------- | ---------------------------------- |
-| Minipump 12V DC | [amazon].
+| Minipump 12V DC | [amazon](https://www.amazon.de/dp/B01NCKXJ92/?coliid=I1I94V063T6GE6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_SSRMRQS5W49WYA43JZ7Z) |
 | Pneumatiska kontakter 8 mm x 1/2 tum 90° roterbara | [amazon](https://amzn.to/3XmH2nP) |
 
-Anslutningar med [camlocks från Braubebo](https://www.braubebo.de/camlock/) som visas på den första bilden är också mycket bra och snabba.
+Anslutningar med [Camlocks från Braubebo](https://www.braubebo.de/camlock/) som visas på den första bilden är också mycket bra och snabba.
 
 ### SSR halvledarrelä
 
 Med Brautomat kan SSR:er växlas mycket enkelt. SSR eller halvledarreläer slår på eller av 220V AC-kretsen med 3-5V DC från Brautomat. Fotek SSRs är idealiska för temperaturkontroll och kontroll via Brautomat.
 
-![fotok](/docs/img/fotok.jpg)
+![foto](/docs/img/fotek.jpg)
 
 | Artikelnamn | Länk till artikel |
 | -------------- | ---------------------------------- |
-| Fotok SSR 40DA | [amazon].
+| Fotok SSR 40DA | [amazon](https://www.amazon.de/dp/B09KTV425X/?coliid=I37LH2D7XQ7AYU&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_018F1S8N63CZYRB6XE54) |
 
 Applikationsexempel för SSR: Om 220V kopplas på ett SSR Fotek via Brautomat, kan ett uttag för vilken enhet som helst med stickpropp anslutas till den "andra änden" av 220V-ledningen. Till exempel för strömförsörjningen av omröraren. Eller för en refill spis. Eller för ett ringvärmeelement. Rotek-pumpens strömförsörjning kan även slås på och av via en SSR.
 
@@ -39,8 +39,8 @@ Alla konsumenter behöver inte en kraftfull SSR. Till exempel kan manöverdon so
 
 | Artikelnamn | Länk till artikel |
 | ------------------ | ---------------------------------- |
-| Reläkort Keenso 4-kanals | [amazon](https://www.amazon.de/dp/B07QKHPBVP/?coliid=IW0L994AVYJSX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7T)7AD4J |
-| Reläkort Keenso 2 kanal | [amazon](https://www.amazon.de/dp/B07PY7LF9Z/?coliid=IHJD818Z5259W&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8J7CBBE7AD4AD) |
+| Reläkort Keenso 4-kanals | [amazon](https://www.amazon.de/dp/B07QKHPBVP/?coliid=IW0L994AVYJSX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| Reläkort Keenso 2 kanal | [amazon](https://www.amazon.de/dp/B07PY7LF9Z/?coliid=IHJD818Z5259W&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 
 ### Ringvärmeelement
 
@@ -50,13 +50,13 @@ Ett ringvärmeelement är användbart vid kokning av vörten om prestandan hos G
 
 | Artikelnamn | Länk till artikel |
 | ------------------ | ---------------------------------- |
-| Hastighetsregulator | [amazon](https://www.amazon.de/dp/B09PV11JM8/?coliid=IC6BIVO4B18X9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE)7AD47T) |
-| Hastighetsregulator | [amazon] (https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN48W7T7)
+| Hastighetsregulator | [amazon](https://www.amazon.de/dp/B09PV11JM8/?coliid=IC6BIVO4B18X9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| Hastighetsregulator | [amazon](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 
 ### Kontakter
 
 | Artikelnamn | Länk till artikel |
 | ------------------ | ---------------------------------- |
 | GX 12 2-stift | [amazon](https://www.amazon.de/dp/B07YSBQWSX/?coliid=IU2GESEA54974&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1PA754W9JYVNX4G9PMV0) |
-| GX 12 3-stift | [amazon](https://www.amazon.de/dp/B07GBBNHM6/?coliid=I21Z8Z8ELJ9I5J&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCGWDPJZP1) |
-| GX 12 4-polig | [amazon](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWDPJZP) |
+| GX 12 3-stift | [amazon](https://www.amazon.de/dp/B07GBBNHM6/?coliid=I21Z8Z8ELJ9I5J&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |
+| GX 12 4-polig | [amazon](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_9HAPWMCVWSHGYP1GDPJZ) |

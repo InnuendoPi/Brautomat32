@@ -1,6 +1,6 @@
 # KleinerBrauhelfer2
 
-A partir da versão 2.5.0 o programa [ kleineBrauhelfer2](https://kleine-brauhelfer.de/) possui um filtro de exportação para o Brautomat. O desenvolvimento e o design de receitas são possíveis em todos os detalhes imagináveis ​​com o pequeno auxiliar de preparo2. Com a folha de dicas, o kbh2 oferece um fluxograma muito bom e útil para implementação prática na cozinha da cervejaria. Com o filtro de exportação para Brautomat todas as etapas podem ser adotadas.
+A partir da versão 2.5.0 o programa [ kleineBrauhelfer2](https://kleiner-brauhelfer.de/) possui um filtro de exportação para o Brautomat. O desenvolvimento e o design de receitas são possíveis em todos os detalhes imagináveis ​​com o pequeno auxiliar de preparo2. Com a folha de dicas, o kbh2 oferece um fluxograma muito bom e útil para implementação prática na cozinha da cervejaria. Com o filtro de exportação para Brautomat todas as etapas podem ser adotadas.
 
 ## O plano de mistura de guias kbh2
 
@@ -33,15 +33,15 @@ A especificação de tempo kbh2 "por quanto tempo a adição de lúpulo é cozid
 
 ### Faça um pouco de matemática para frente e para trás
 
-A adição de lúpulo é mostrada na imagem kbh2. A primeira adição de lúpulo é “Hallertauer Perle 7% 2020” com tempo de fervura de 65 minutos. Um segundo parâmetro é importante neste contexto: no lado esquerdo, o tempo total de cozimento está marcado em verde como 80 minutos. Assim, o mosto é fervido sem lúpulo por 15 minutos. A segunda adição de lúpulo é o lúpulo "Hallertauer Tradition 5,7% 2020" com tempo de fervura de 15 minutos. Nos últimos 15 minutos de cozimento do mosto, o Hallertau Perle ainda tem 15 minutos restantes dos 65 minutos originais e a segunda adição de lúpulo Hallertau Tradition cozinha por 15 minutos dos 15 minutos restantes de cozimento. A última adição de lúpulo é feita para bater, ou seja, após a fervurand.
+A adição de lúpulo é mostrada na imagem kbh2. A primeira adição de lúpulo é “Hallertauer Perle 7% 2020” com tempo de fervura de 65 minutos. Um segundo parâmetro é importante neste contexto: no lado esquerdo, o tempo total de cozimento está marcado em verde como 80 minutos. Assim, o mosto é fervido sem lúpulo por 15 minutos. A segunda adição de lúpulo é o lúpulo "Hallertauer Tradition 5,7% 2020" com tempo de fervura de 15 minutos. Nos últimos 15 minutos de cozimento do mosto, o Hallertau Perle ainda tem 15 minutos restantes dos 65 minutos originais e a segunda adição de lúpulo Hallertau Tradition cozinha por 15 minutos dos 15 minutos restantes de cozimento. A última adição de lúpulo é feita para bater, ou seja, após o término da fervura.
 
-A tarefa do Brautomat é indicar o momento em que o lúpulo é adicionado durante a fermentação e, idealmente, lembrar as pessoas da adição de lúpulo com um sinal acústico.
+A tarefa de Brautomat é indicar o tempo de adição de lúpulo durante a fermentação e, idealmente, com um aktustium pequeno sinal para lembrá-lo da adição de lúpulo.
 
 Neste exemplo especifica-se um tempo total de cozedura de 80 minutos e uma primeira adição de lúpulo “Hallertauer Perle” com um tempo de cozedura de 65 minutos. Isso resulta em uma diferença de 15 minutos no tempo de cozimento sem adição de lúpulo. A primeira etapa, fervura do mosto, dura 15 minutos. Agora deve ser feita a primeira adição de lúpulo. A segunda adição de lúpulo “Hallertauer Tradition 5,7% 2020” tem um tempo de cozimento de 15 minutos. Dos 65 minutos, 15 minutos são Hallertau Pearl e Hallertau Tradition juntos no mosto. 65 minutos menos 15 minutos resultam em um intervalo entre adições de lúpulo de 50 minutos. A adição de lúpulo Hallertauer Perle deve ser dada 50 minutos antes da adição de lúpulo Hallertauer Tradition.
 
 O último lote de lúpulo “Hallertauer Tradition 5,7% 2020” é dado para bater. Quando você derrubá-lo, o cozimento estará concluído. Portanto a adição de lúpulo não conta para o tempo total de cozimento.
 
-![Cozinhando](/docs/img/hopfenbaren.jpg)
+![Cozinhando](/docs/img/hopfengaben.jpg)
 
 A adição de lúpulo comporta-se da mesma forma. Há um tempo de pós-isomerização de 10 minutos. A adição do lúpulo “Hallertauer Tradition 5,7% 2020” para bater com tempo de fervura de -5 minutos faz parte da pós-isomerização.
 

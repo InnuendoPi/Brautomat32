@@ -4,7 +4,7 @@
 
 I avsnittet _Sensorer_ kan en ny sensor läggas till genom att klicka på plussymbolen.
 
-![Skapa sensorer](/docs/img/Sensor-setup.jpg)
+![Skapa sensorer](/docs/img/Sensor-einrichten.jpg)
 
 ## Ställ in sensoradress och namn
 
@@ -19,7 +19,7 @@ Varje sensor behöver ett namn. I denna grundinställning kallas sensorn "Sensor
 
 _Obs: Sensornamn kan innehålla maximalt 20 tecken. Tillåtna specialtecken är # och mellanslag. Inmatningen kontrolleras automatiskt av webbgränssnittet._
 
-![Konfigurera sensorer](/docs/img/Sensor-settings.jpg)
+![Konfigurera sensorer](/docs/img/Sensor-einstellungen.jpg)
 
 ## Sensorkalibrering (offsetvärden)
 
@@ -29,9 +29,9 @@ För denna grundläggande konfiguration förblir båda värdena oförändrade vi
 
 ## Spara och kontrollera sensorn
 
-Genom att klicka på _spara_ skapas sensorn och visas sedan i instrumentpanelen under _Sensorer_.
+Genom att klicka på _spara_ skapas sensorn och visas sedan i Dashboard under _Sensors_.
 
-![Sensor Dashboard](/docs/img/Sensor-dashboard.jpg)
+![Sensorer Dashboard](/docs/img/Sensor-dashboard.jpg)
 
 > **Obs!**
 

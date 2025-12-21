@@ -4,9 +4,9 @@ Il Brautomat può essere utilizzato opzionalmente con un display touch. È suppo
 
 | Visualizzazione successiva | Firmware |
 | --------------- | --------- |
-| NX4832T035 (serie base) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832T035.tft) |
-| NX4832K035 (serie migliorata) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832K035.tft) |
-| NX4832F035 (serie Discovery) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832F035.tft) |
+| NX4832T035 (serie base) | [NX4832T035]([[PERCORSO_0]]) |
+| NX4832K035 (serie migliorata) | [NX4832K035]([[PERCORSO_1]]) |
+| NX4832F035 (serie Discovery) | [NX4832F035]([[PERCORSO_2]]) |
 
 Il display richiede il firmware per funzionare con Brautomat. Il firmware che corrisponde al tipo di display è collegato nella tabella. Vedi anche lampeggiare il file di visualizzazione.
 
@@ -29,7 +29,7 @@ Il display deve essere preparato prima della messa in funzione. Per fare ciò, i
 
 ## Visualizza il mash brew
 
-![MaischeSud](/docs/img/brewpage-sm.jpg)
+![MashSud](/docs/img/brewpage-sm.jpg)
 
 Il lato MashSud è il lato preferito durante la preparazione della birra. Le informazioni vengono visualizzate sul display ogni secondo
 
@@ -37,11 +37,11 @@ Il lato MashSud è il lato preferito durante la preparazione della birra. Le inf
 *Temperatura target (temperatura di riposo)
 *tempo di riposo rimanente
 
-visualizzato. Nella riga inferiore viene visualizzata anche la pausa successiva. L'ora a sinistra è l'ora in cui inizierà il riposo successivo. Il simbolo di riproduzione verde sulla destra indica che la pausa successiva inizia automaticamente (autonext).
+visualizzato. Nella riga inferiore viene visualizzata anche la pausa successiva. L'ora a sinistra è l'ora in cui inizierà il riposo successivo. Il simbolo di riproduzione verde a destra indica che la pausa successiva inizia automaticamente (autonext).
 
 ## Visualizza la panoramica della caldaia
 
-![Panoramica del bollitore](/docs/img/kettlepage-sm.jpg)
+![Panoramica caldaia](/docs/img/kettlepage-sm.jpg)
 
 La panoramica della caldaia mostra la caldaia per l'ammostamento e, se disponibile, la caldaia per l'infusione e il versamento con le informazioni sulla temperatura effettiva e nominale.
 

@@ -6,7 +6,7 @@ Le plan de purée se présente sous forme de tableau. Cette table est traitée d
 
 ## Fonctions de base
 
-![Plan de purée](/docs/img/Brautomat.jpg)
+![mashplan](/docs/img/brautomat.jpg)
 
 À des fins d’orientation, la structure des lignes du tableau est d’abord décrite. Une ligne dans le plan de brassage représente une étape du plan de brassage. Chaque ligne du tableau comporte ces colonnes :
 
@@ -17,7 +17,7 @@ Le plan de purée se présente sous forme de tableau. Cette table est traitée d
 
 Après ces quatre détails sur l'étape de brassage, il y a des boutons d'édition dans chaque ligne avec les fonctions suivantes : (de gauche à droite)
 
-![Modifier le plan de purée](/docs/img/Brautomat-111.jpg)
+![Modifier le plan de purée](/docs/img/brautomat-111.jpg)
 
 * déplacer cette ligne d'une position
 * déplacer cette ligne vers le bas d'une position
@@ -26,7 +26,7 @@ Après ces quatre détails sur l'étape de brassage, il y a des boutons d'éditi
 
 L'en-tête du tableau contient les boutons suivants (de gauche à droite)
 
-![Modifier le plan de purée](/docs/img/Brautomat-1.jpg)
+![Modifier le plan de purée](/docs/img/brautomat-1.jpg)
 
 * nouvelle ligne : ajoute une nouvelle étape de purée en fin de tableau
 * Supprimer : supprimer la table entière (plan de purée vide)
@@ -34,7 +34,7 @@ L'en-tête du tableau contient les boutons suivants (de gauche à droite)
 * Base de données : sélection du plan de brassage, import, export et planificateur du plan de brassage
 * Réduire : réduire et développer le tableau du plan de purée
 
-![Modifier le plan de purée](/docs/img/Brautomat-11.jpg)
+![Modifier le plan de purée](/docs/img/brautomat-11.jpg)
 
 Lorsqu'une ligne du tableau est modifiée, les boutons changent.
 
@@ -55,17 +55,17 @@ Les additifs comme indiqué sur l'image _Cuisson de la levure alimentaire 1gr_ s
 
 Un plan de brassage peut être modifié dans Brautomat ou entièrement recréé. Le symbole du crayon place une ligne dans le tableau du plan de brassage en mode éditeur.
 
-![Modifier le plan de purée](/docs/img/Brautomat-3.jpg)
+![Modifier le plan de purée](/docs/img/brautomat-3.jpg)
 
 N'importe quel nombre de lignes du tableau peut désormais être modifié l'une après l'autre. Dès qu'un symbole permettant de modifier le plan de brassage a été cliqué, le bouton _Enregistrer_ passe du vert au rouge. Une fois toutes les modifications effectuées, le plan de brassage doit être enregistré à l'aide du bouton _Enregistrer_. Alternativement, toutes les modifications peuvent être annulées en utilisant le bouton _Exit_ pour quitter sans enregistrer.
 
 Dès qu'un processus de brassage a été lancé à l'aide du bouton d'alimentation, l'affichage change :
 
-![Modifier le plan de brassage](/docs/img/Brautomat-4.jpg)
+![Modifier le plan de purée](/docs/img/brautomat-4.jpg)
 
-Les boutons d'édition sont masqués. Pour que cela soit à nouveau visible, le processus de brassage doit être arrêté à l'aide de la touche Pause de la commande :
+Les boutons d'édition sont masqués. Afin de les rendre à nouveau visibles,Le processus de brassage doit être arrêté à l'aide de la touche Pause de la commande :
 
-![Modifier le plan de purée](/docs/img/Brautomat-5.jpg)
+![Modifier le plan de purée](/docs/img/brautomat-5.jpg)
 
 Lorsque le processus de brassage est en pause, le bouton Pause de la commande s'affiche en rouge et les fonctions d'édition sont affichées. La plaque à induction ne s'éteint pas. La température de repos continue d'être maintenue. Si la minuterie de repos est active, elle sera mise en pause. Si le plan de brassage est modifié (mode Éditeur), le bouton Pause pour poursuivre le processus de brassage et le bouton d'alimentation sont désactivés et affichés en gris jusqu'à ce que les modifications apportées au plan de brassage soient enregistrées ou ignorées (Quitter).
 
@@ -80,7 +80,7 @@ Exemple d'application :\
 
 ## Fonction et application de autonext
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext.jpg)
+![Plan de purée autonext](/docs/img/Maischeplan-autonext.jpg)
 
 La première étape du plan de brassage appelée _Mashing 50°C_ a un temps de repos de 10 minutes et un _autonext_ désactivé. L'image montre la situation lorsque la minuterie de repos a atteint 10 minutes : La minuterie a décompté jusqu'à 00h00 du temps restant. Le bouton de lecture passe automatiquement au rouge. Le message toast « Cliquez sur le bouton de lecture » ​​apparaît en bas à droite. La table de cuisson s'éteint. Le processus de brassage attend un clic sur le bouton de lecture. L'interface Web affiche l'étape suivante, qui démarre en cliquant sur Play.
 
@@ -90,7 +90,7 @@ La deuxième étape d'empâtage, appelée _Maltoserast 63°C_, a une températur
 
 * A la fin d'un repos avec _autoext_ activé, le processus d'empâtage continue automatiquement et la table de cuisson reste allumée.
 
-![Maischeplan autonext](/docs/img/Maischeplan-autonext2.jpg)
+![Plan de purée autonext](/docs/img/Maischeplan-autonext2.jpg)
 
 La propriété _autonext_ dans la septième étape _Mashing 78°C_ n'est pas activée. Si le Brautomat rencontre un autonext désactivé, le Brautomat met fin au repos en cours une fois le temps de repos écoulé et éteint la table de cuisson (puissance 0 %). Dans cet état, le bouton Lecture s'affiche en rouge. Pour continuer le processus de préparation, vous devez cliquer sur le bouton Lecture.
 
@@ -98,9 +98,9 @@ Alors que dans le premier exemple de _autonext_, on clique généralement direct
 
 ## Différence autonext et pause
 
-Si autonext est désactivé à la fin du verrouillage, la table de cuisson est éteinte. Avec le bouton pause, la minuterie de repos est arrêtée,Cependant, la table de cuisson reste allumée et le Brautomat calcule la puissance nécessaire à la table de cuisson.
+Si autonext est désactivé à la fin du verrouillage, la table de cuisson est éteinte. Le bouton pause arrête la minuterie de repos, mais la table de cuisson reste allumée et le Brautomat calcule la puissance requise pour la table de cuisson.
 
-Les sections suivantes décrivent les fonctions spéciales facultatives. Brautomat les débutants peuvent ignorer la description des fonctions spéciales.
+Les sections suivantes décrivent le Son facultatifles fonctions sont décrites. Brautomat les débutants peuvent ignorer la description des fonctions spéciales.
 
 ## Fonction spéciale repos 0°C lorsque autonext est activé
 
@@ -134,16 +134,14 @@ Une deuxième fonction spéciale concerne les commandes de contrôle des plaques
 
 L'alimentation peut être allumée ou éteinte ou un nombre compris entre 0 et 100 %. L'état OFF correspond à la valeur 0% et ON à la valeur 100%. La commande de contrôle de la première plaque à induction est IDS ou MASH. La commande de contrôle de la deuxième plaque à induction est SUD. La commande de contrôle pour la refonte est HLT. La commande de contrôle d'un actionneur est le nom de l'actionneur.
 
-![Commande de contrôle des acteurs](/docs/img/Maischeplan-Aktoren.jpg)
+![Commande de contrôle de l'actionneur](/docs/img/Maischeplan-Aktoren.jpg)
 
 Le plan de brassage sur la photo commute les actionneurs à trois endroits. L'agitateur est activé dès le début : Agitateur : ON
 Peu avant la fin du programme de brassage, l'agitateur est éteint : Agitateur : OFF et la recharge est activée : Recharge : ON.
 
-La commande de contrôle d'un actionneur peut être spécifiée avec une puissance, par ex. POMPE :60. La pompe actionneur est ensuite mise en marche avec une puissance de 60 %. Cela suppose que cet actionneur a été activé pour PWM. La température de repos et le Rast La durée doit être définie sur 0 pour les commandes de contrôle.
+La commande de contrôle d'un actionneur peut être spécifiée avec une puissance, par ex. POMPE :60. La pompe actionneur est ensuite mise en marche avec une puissance de 60 %. Cela suppose que cet actionneur a été activé pour PWM. La température de repos et la durée de repos doivent être réglées à 0 pour les commandes de contrôle.
 
-La commande de contrôle IDS:50 règle la puissance de sortie maximale de la table de cuisson à 50 %. La refonte peut également être activée à 75 % de puissance avec HLT:75.
-
-![Commande de contrôle IDS](/docs/img/sonderfunktion_sud1.jpg)
+La commande de contrôle IDS:50 règle la puissance de sortie maximale de la table de cuisson à 50 %. La refonte peut également être activée à 75 % de puissance avec HLT:75.![Commande de contrôle IDS](/docs/img/sonderfunktion_sud1.jpg)
 
 La commande de contrôle SUD : Cuire une purée épaisse avec un temps de repos de 10 minutes et une température de repos de 100 degrés réalise une étape purée sur une deuxième plaque de cuisson. La minuterie de repos démarre dès que la température de repos est atteinte.
 
@@ -173,13 +171,13 @@ _Remarque : Les commandes de contrôle peuvent être utilisées pour faire fonc
 
 A titre d'exemple, la configuration suivante est donnée pour le GGM IDS ou la chaudière MashSud :
 
-![Commande de contrôle IDS](/docs/img/aktoren_schaltung4.jpg)
+![Commande de contrôle IDS](/docs/img/aktoren_schalten4.jpg)
 
 La puissance maximale est préréglée à 100 %. La température « Passage en Cuisson » est de 95°C. A partir de cette température, la puissance de sortie maximale du GGM IDS n'est plus que de 80 %.
 
 Le programme de brassage dans l'illustration commence par l'étape « Chauffage de la coulée principale ». La table de cuisson à induction GGM IDS chaufferait l'eau avec la puissance "Max. Power IDS" (paramètre dans le registre de contrôle de température), c'est-à-dire à 100 %.
 
-![Commande de contrôle IDS](/docs/img/aktoren_schaltung2.jpg)
+![Commande de contrôle IDS](/docs/img/aktoren_schalten2.jpg)
 
 La minuterie de repos démarre à 59°C. Le temps de repos est de zéro minute. Le Brautomat passe à la ligne suivante jusqu'à l'étape 2.
 La commande de contrôle IDS:65 fixe la puissance maximale de l'IDS à 65 %. Le Brautomat passe à la ligne suivante jusqu'à l'étape 3.
@@ -187,7 +185,7 @@ La température passe maintenant de 59°C à la température cible lors de l'ét
 
 La puissance de sortie maximale de 65 % est maintenue dans les étapes de brassage suivantes. Jusqu'à ce que Brautomat réponde à la commande de contrôle IDS:100 après l'étape de brassage.
 
-![Commande de contrôle IDS](/docs/img/aktoren_schaltung3.jpg)
+![Commande de contrôle IDS](/docs/img/aktoren_schalten3.jpg)
 
 La commande de contrôle modifie la puissance de sortie maximale de l'IDS à 100 %. Le moût est maintenant chauffé à 100% de puissance jusqu'à la température de « passage à l'ébullition » à 95°C (voir ci-dessus). A partir de 95°C le GGM IDS passe à 80% de puissance. 80% correspond au paramètre "Puissance de transition".
 
@@ -207,7 +205,7 @@ A l'aide de la fonction spéciale IDS : <Puissance en %>, la puissance d'une tab
 
 ![Commande de contrôle MASH power](/docs/img/IDS-Sonderfunktion.jpg)
 
-_ExpliquePour plus d'informations sur la méthode de calcul, voir : Paramètres du GGM IDS - Contrôle de température - Performance maximale de l'IDS._
+_Pour les explications de la méthode de calcul, voir : Paramètres du GGM IDS - Contrôle de température - Performance maximale de l'IDS._
 
 ```json
 
@@ -215,7 +213,7 @@ _ExpliquePour plus d'informations sur la méthode de calcul, voir : Paramètres 
     L'expression c*T/(t*w) est remplacée par la valeur 75 à un rendement de 80% pour la plaque à induction
     La masse m est de 35kg
     P = 35x75 = 2625
-    2625W représente 75% du maximum. puissance 3500W (2625 / 3500 * 100 = 75%)
+    2625W représente 75% du maximum. puissance 3500W (2625/3500 * 100 = 75%)
 
 ```
 
@@ -254,13 +252,13 @@ Deux acteurs :
 
 Le plan de purée :
 
-![exemple de jour de brassage de plan de purée](/docs/img/example_control_commands1.jpg)
+![exemple de plan de purée pour une journée de brassage](/docs/img/example_control_commands1.jpg)
 
 L'exemple montre à quel point il est facile d'allumer et d'éteindre les actionneurs à l'aide de commandes spéciales ou comment des commandes spéciales sont intégrées dans le plan de brassage. Lors de la première étape de brassage, l'agitateur est mis en marche. Le Brautomat exécute la commande spéciale et passe immédiatement à l'étape suivante du plan de purée. L'étape de brassage a été configurée avec une durée de 1 minute et autonext désactivée. Lors de cette étape, le malt est ajouté à l'eau de brassage. L’étape dure plus d’une minute, mais en fonction du remplissage, on ne sait pas à l’avance combien de temps prendra l’empâtage. Après une minute d'écrasement, le Brautomat éteint la table de cuisson et affiche le bouton play en rouge (désactivé autonext). Le Brautomat « attend » désormais que l’étape soit terminée et que le bouton de lecture soit cliqué. Lorsque la table de cuisson est éteinte et que du malt est ajouté, la température de mélange de la purée sera inférieure à 55°C. Ce procédé convient par exemple à un ajout lent et détendu des malts ou à un court repos protéique.
 
 _Alternative :_ activez la propriété autonext et définissez la période de repos sur 5 minutes. Dans ce cas, le Brautomat maintiendrait la température de purée pendant 5 minutes (purée), puis chaufferait automatiquement jusqu'au prochain repos.
 
-La prochaine étape est le reste du maltose. Le PID Le contrôleur régule la puissance nécessaire pour atteindre la température cible dans la purée et la maintenir pendant une période de 40 minutes. Dans la ligne 4, la recharge est activée à l'aide d'une commande spéciale. La température cible pour la recharge est de 75°C et la durée est de 0 minute. Le Brautomat démarre le contrôleur PID pour la refonte de la chaudière et régule la puissance requise en arrière-plan. À ce stade du plan de brassage, deux contrôleurs PID sont actifs : un contrôleur PID pour la cuve de brassage et un contrôleur PID pour l'après-coulage. Le Brautomat passe directement à l'étape suivante après la mise sous tension.
+La prochaine étape est le reste du maltose. Le contrôleur PID régule la puissance nécessaire pour atteindre la température cible dans la purée et la maintenir pendant une période de 40 minutes. Dans la ligne 4, la recharge est activée à l'aide d'une commande spéciale. La température cible pour la recharge est de 75°C et la durée est de 0 minute. Le Brautomat démarre le contrôleur PID pour la refonte de la chaudière et régule la puissance requise en arrière-plan. ÀÀ ce stade du plan de brassage, deux contrôleurs PID sont actifs : un contrôleur PID pour la cuve de brassage et un contrôleur PID pour l'après-coulage. Le Brautomat passe directement à l'étape suivante après la mise sous tension.
 
 Dans le plan de brassage, l'actionneur de l'élément chauffant annulaire est activé ou activé une fois avec la commande spéciale _RHE:ON_ et une fois avec _RHE:50_. Le ON traduit le Brautomat avec des performances de 100 %, tandis que 50 est traité en conséquence avec des performances de 50 %. La bouilloire MashSud a un volume maximum de 70 litres. L'élément chauffant annulaire soutient la table de cuisson pendant la cuisson avec 50 % de puissance pour une cuisson vigoureuse : plaque de cuisson 100 % de puissance (3,5 kW) plus élément chauffant annulaire de 1,75 kW (50 %). En fin de cuisson, l'élément chauffant annulaire est éteint avec la commande spéciale _RHE:OFF_.
 
@@ -278,7 +276,7 @@ Alors que des outils comme kleineBrauhelfer, BrewFather ou MMum indiquent toujou
 
 _Extension :_ L'explication des doses de houblon est étendue pour inclure deux ou plusieurs doses en même temps :
 
-![exemple de plan de brassage pour une journée de brassage](/docs/img/example_control_commands3.jpg)
+![exemple de plan de purée pour une journée de brassage](/docs/img/example_control_commands3.jpg)
 
 Le houblon doit être ajouté 10 minutes avant la fin de l'ébullition. Tradition 6,0% 30g_ et la levure alimentaire _Levure nutritive_ sont ajoutés au moût en même temps. L'illustration montre à quel point la procédure est simple : des doses simultanées d'une durée de 0 minute sont administrées avant une dose d'une durée.
 
@@ -286,4 +284,4 @@ L'avant-dernière étape après l'isomérisation utilise la fonction spéciale t
 
 Le graphique du plan de purée :
 
-![exemple de jour de brassage de plan de purée](/docs/img/example_control_commands2.jpg)
+![exemple de plan de purée pour une journée de brassage](/docs/img/example_control_commands2.jpg)

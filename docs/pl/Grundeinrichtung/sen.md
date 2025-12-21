@@ -4,7 +4,7 @@
 
 W sekcji _Czujniki_ można dodać nowy czujnik klikając na symbol plusa.
 
-![Utwórz czujniki](/docs/img/Sensor-setup.jpg)
+![Utwórz czujniki](/docs/img/Sensor-einrichten.jpg)
 
 ## Ustaw adres i nazwę czujnika
 
@@ -19,7 +19,7 @@ Każdy czujnik potrzebuje nazwy. W tej podstawowej konfiguracji czujnik nosi naz
 
 _Uwaga: Nazwy czujników mogą zawierać maksymalnie 20 znaków. Dozwolone znaki specjalne to # i spacje. Wprowadzone dane są automatycznie sprawdzane przez interfejs sieciowy._
 
-![Konfiguruj czujniki](/docs/img/Sensor-settings.jpg)
+![Konfiguruj czujniki](/docs/img/Sensor-einstellungen.jpg)
 
 ## Kalibracja czujnika (wartości przesunięcia)
 
@@ -29,9 +29,9 @@ W przypadku tej podstawowej konfiguracji obie wartości pozostają niezmienione 
 
 ## Zapisz i sprawdź czujnik
 
-Po kliknięciu _zapisz_ czujnik zostanie utworzony, a następnie wyświetlony na pulpicie nawigacyjnym w sekcji _Czujniki_.
+Klikając _zapisz_, czujnik zostanie utworzony, a następnie wyświetlony w Dashboard w sekcji _Czujniki_.
 
-![Panel czujników](/docs/img/Sensor-dashboard.jpg)
+![Czujniki Dashboard](/docs/img/Sensor-dashboard.jpg)
 
 > **Uwaga:**
 

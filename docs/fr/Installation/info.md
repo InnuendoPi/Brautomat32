@@ -16,7 +16,7 @@ Le système d'exploitation MS Windows crée automatiquement un port COM série l
 
 Un périphérique ESP a été trouvé sur COM7 dans l'image. Dans de rares cas, un port série COM n'est pas automatiquement fourni sous MS Windows. Les pilotes USB pour les microcontrôleurs ESP sont disponibles sur les sites Web suivants : (MS Win et macOS)
 
-[!"
+[![ESP32 Pilotes](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
 Le script Flashen.cmd utilise l'outil esptool.exe <https://github.com/espressif/esptool>. ESPTool est disponible gratuitement pour différents systèmes d'exploitation (macOS, Linux). La version Windows 64 bits est incluse dans l'archive ZIP. ESPTool est sous licence GPL v2. Consultez le [fichier LICENSE](https://github.com/espressif/esptool/blob/master/LICENSE) ci-joint pour en obtenir une copie.
 
@@ -42,7 +42,7 @@ Télécharger : [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/re
 
 Sur macOS, le flashage du firmware est divisé en deux étapes. Dans un premier temps, le firmware Brautomat.ino.bin est installé sur l'ESP à l'aide de l'outil pyflasher.
 
-![macOS](/docs/img/flashen_macos.png)
+![macOS]([[CHEMIN_5]])
 
 Le Brautomat doit ensuite être connecté au WLAN. Une fois le Brautomat connecté au WiFi, le système de fichiers doit être installé.\
 Ouvrir dans le navigateur : <http://Brautomat.local/update>
@@ -61,10 +61,10 @@ La configuration WLAN est affichée à l'aide du bouton « Configurer le WiFi 
 
 Le WLAN (SSID et mot de passe) doit être saisi ici. Avec _Save_, le Brautomat redémarre et se connecte au WLAN. L'interface Web de Brautomat est accessible dans le WLAN local via l'adresse <http://Brautomat.local>.
 
-Ceci termine l’installation de base. Le processus de flashage du firmware et de configuration WLAN ne doit être effectué qu’une seule fois. Le Brautomat doit maintenant être configuré. La configuration est décrite dans la section _Basic Setupung_ décrit. La section suivante _Update_ peut être ignorée dans un premier temps.
+Ceci termine l’installation de base. Le processus de flashage du firmware et de configuration WLAN ne doit être effectué qu’une seule fois. Le Brautomat doit maintenant être configuré. La configuration est décrite dans la section _Basic Setup_. La section suivante _Update_ peut être ignorée dans un premier temps.
 
 > **Remarque :**\
-Le Brautomat32 essaie d'établir une connexion avec la configuration WLAN (SSID et mot de passe) pendant 20 secondes maximum. Si aucune connexion ne peut être établie, par exemple si le mot de passe a été mal saisi, le Brautomat32 redémarrera en mode AccessPoint.\
+Le Brautomat32 essaie d'établir une connexion avec la configuration WLAN (SSID et mot de passe) pendant 20 secondes maximum. Si une connexion ne peut pas être établie, par exemple si le mot de passe est mal saisia été utilisé, le Brautomat32 redémarre en mode AccessPoint.\
 Dans de rares cas, et généralement uniquement lorsque le signal WLAN est faible, le Brautomat32 ne trouve pas de WLAN approprié et démarre également en mode AccessPoint après environ 1 minute. 20 secondes. Dans ce cas, seul le redémarrage du Brautomat32 sera utile.
 
 ##Mises à jour
@@ -75,7 +75,7 @@ La zone mémoire d'un microcontrôleur ESP est divisée en firmware et système 
 
 ### Mise à jour Web
 
-![WebUpdate](/docs/img/webupdate.jpg)
+![Mise à jourWeb](/docs/img/webupdate.jpg)
 
 Le WebUpdate redémarre le Brautomat plusieurs fois. Tout d'abord, le firmware est mis à jour. Après un autre redémarrage, le framework sera mis à jour. Le processus WebUpdate est enregistré dans le fichier webUpdateLog.txt.
 
@@ -88,7 +88,7 @@ Une mise à jour du firmware via la sélection FileUpdate s'effectue en quelques
 Tout d'abord, le firmware actuel doit être téléchargé. L'archive ZIP sera alors décompressée.\
 Dans l'interface Web Brautomat, sélectionnez l'élément de menu Mettre à jour puis FileUpdate. Un simple site de mise à jour (image 1) s'affiche :
 
-![FileUpdate](/docs/img/fileupdate2.jpg)
+![Mise à jour du fichier](/docs/img/dateiupdate2.jpg)
 
 Sous Firmware avec le bouton "Sélectionner un fichier", le fichier _firmware.bin_ doit maintenant être sélectionné dans l'archive ZIP (dans la figure 2). Cliquer sur Mettre à jour le micrologiciel démarre la mise à jour.
 

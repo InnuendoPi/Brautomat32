@@ -4,7 +4,7 @@
 
 In the _Sensors_ section, a new sensor can be added by clicking on the plus symbol.
 
-![Create sensors](/docs/img/Sensor-setup.jpg)
+![Create sensors](/docs/img/Sensor-einrichten.jpg)
 
 ## Set sensor address and name
 
@@ -19,7 +19,7 @@ Each sensor needs a name. In this basic setup the sensor is called “Sensor IDS
 
 _Note: Sensor names can contain a maximum of 20 characters. Allowed special characters are # and spaces. The input is automatically checked by the web interface._
 
-![Configure sensors](/docs/img/Sensor-settings.jpg)
+![Configure sensors](/docs/img/Sensor-einstellungen.jpg)
 
 ## Sensor calibration (offset values)
 
@@ -29,7 +29,7 @@ For this basic configuration, both values ​​remain unchanged at 0.00.
 
 ## Save and check sensor
 
-By clicking on _save_ the sensor is created and then displayed in the dashboard under _Sensors_.
+By clicking on _save_ the sensor is created and then displayed in Dashboard under _Sensors_.
 
 ![Sensors Dashboard](/docs/img/Sensor-dashboard.jpg)
 

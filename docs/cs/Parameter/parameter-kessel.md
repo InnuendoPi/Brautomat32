@@ -18,15 +18,15 @@ Tento parametr popisuje teplotu, při které by měl regulátor PID detekovat, �
 
 ### Výkon z přechodu [%]
 
-Tento parametr popisuje výstupní výkon varné desky od přechodu teploty do vaření. Výchozí hodnota je 100 %. Parametr "Přechod na vaření" byl použit k nastavení teploty, při které se deaktivuje ovladač PID. Parametr „Výkon z přechodu“ nyní určuje pevný výstupní výkon varné desky. V případě použití varné konvice o objemu 35l a více je vhodnou volbou výchozí hodnota 100%. V pivovarských kuchyních s malými varnými konvicemi může 100% dodávka energie způsobit převaření. V tomto případě lze maximální dodávku energie pomocí tohoto parametru snížit například na 75 %.
+Tento parametr popisuje výstupní výkon varné desky od přechodu teploty do vaření. Výchozí hodnota je 100 %. Parametr "Přechod na vaření" byl použit k nastavení teploty, při které se deaktivuje ovladač PID. Parametr „Výkon z přechodu“ nyní určuje pevný výstupní výkon varné desky. V případě použití varné konvice o objemu 35l a více je vhodnou volbou výchozí hodnota 100%. V pivovarských kuchyních s malými varnými konvicemi může 100% dodávka energie způsobit převaření. V tomto případě lze maximální dodávku energie tímto parametrem snížit například na 75 %.
 
 ### Zakázat PID pro vaření [zapnuto/vypnuto]
 
 Tento parametr určuje chování ovladače PID při vaření, když je skutečná teplota vyšší než cílová teplota. Příklad: teplota vaření byla v plánu rmutování nastavena na 98°C. Parametr "Výkon z přechodu" vypne výpočet PID z teploty "Přechod do varu". Pokud je aktivován parametr "Deaktivovat PID pro var" (výchozí), pak zůstává regulátor PID vypnutý i nad cílovou teplotou 98°C z rmutovacího plánu a je využíván výkon z parametru "Výkon z přechodu". Tento parametr je ve výchozím nastavení aktivován a umožňuje válcování.
 
-Pokud parametr "Deaktivovat PID pro vaření" není aktivován, vypočítá požadovaný výkon regulátor PID po dosažení cílové teploty (zde 98°C). Vypočítaný výkon nad cílem-Teplota je 0%. Varná deska se v případě potřeby vypne a zabrání vyvaření.
+Pokud parametr "Deaktivovat PID pro vaření" není aktivován, vypočítá požadovaný výkon regulátor PID po dosažení cílové teploty (zde 98°C). Vypočtený výkon nad cílovou teplotou je 0 %. Varná deska se v případě potřeby vypne a zabrání vyvaření.
 
-### Výkon chyby snímače [0–100 %]
+### Výkonv případě chyby senzoru [0-100%]
 
 Pokud dojde k chybě snímače, například snímač není připojen nebo dojde k závadě, lze výkon varné desky upravit tak, aby se s touto chybou vyrovnal. Hodnota 100 % ignoruje chybu snímače.
 
@@ -72,7 +72,7 @@ _Těchto 10 parametrů musí být nastaveno individuálně pro každý spařovac
 
 Brautomat může spravovat hardwarové profily. Profily lze použít, pokud existují různé kotle. Uživatelé s konvicemi různých velikostí mohou pomocí profilů vybrat konvici pro den vaření, aniž by museli ručně znovu zadávat všechny parametry. Hardwarový profil obsahuje všechna nastavení kotle.
 
-Profily se ukládají do složky /Profiles. Profily umožňují rychlé a snadnéPřepínání mezi různými kotli. Funkce Uložit vytvoří soubor profilu s výše uvedenými parametry, zatímco funkce Odstranit odstraní soubor profilu z paměti flash.
+Profily se ukládají do složky /Profiles. Profily umožňují rychlé a snadné přepínání mezi různými kotli. Funkce Uložit vytvoří soubor profilu s dcs výše uvedené parametry, zatímco funkce Delete odstraní soubor profilu z paměti flash.
 
 Výchozí profil při spuštění pekárny je vždy naposledy vybraný profil.
 
@@ -151,4 +151,4 @@ Zde použitý specifikum Tepelná kapacita 3600 má toleranci chyby přibližně
 9 * 94 % * 1570 + (35 + 9 * 6 %) * 4190 = 8,97 * 1,57 + 35,54 * 4,19 = 14,08 + 148,91 = 13282,2 + 148912,6 = 1853648 = 1853648 na stupeň na 6,6 Celsia
 ```
 
-Viz také [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+Viz také [Brewing Magazine](https://braumagazin.de/article/berechnungen-in-der-brauerei/)

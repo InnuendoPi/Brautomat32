@@ -1,8 +1,8 @@
 # Fermenter mode
 
-In fermenter mode, the Brautomat32 processes the fermentation plan top down in the same way as the mash plan. The controller deck has the same functions.
+In fermenter mode, the Brautomat32 processes the fermentation plan top down in the same way as the mash plan. The controller Deck has the same functions.
 
-![Fermenter dashboard](/docs/img/fermenter_dash.jpg)
+![Fermenter Dashboard](/docs/img/fermenter_dash.jpg)
 
 The processing of the steps has an important difference:
 

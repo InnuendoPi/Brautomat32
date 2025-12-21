@@ -4,13 +4,13 @@ Proces AutoTune určuje vhodné parametry pro varný systém tak, aby regulace t
 
 Poznámka: Překmit (překročení nastavené teploty) o 0,5 °C je normální. V závislosti na izolaci kotle a dodané indukční energii bude teplota nadále mírně stoupat i po vypnutí varné desky.
 
-![AutoTune4](/docs/img/IDS-AutoTune-target.jpg)
+![AutoTune4](/docs/img/IDS-AutoTune-Ziel.jpg)
 
 Následující popis hodnot PID slouží pouze jako pomůcka při používání firmwaru a lze jej přeskočit. Proces AutoTune je popsán od "Proces AutoTune: krok za krokem."\
 Ovladač PID ovládá výkon varných desek. Je důležité určit vhodné hodnoty P, I a D. Hodnoty PID jsou individuální pro každý varný systém a prostředí. AutoTune je postup, který pomáhá určit vhodné hodnoty. Potřebný výkon varných desek, aby se dostaly ze skutečné teploty na cílovou teplotu, se vypočítá ze součtu tří hodnot: Požadovaný výkon = P + I + D\
 Po určení vhodných hodnot PID se parametr Interval (SampleTime) použije k určení časových intervalů, ve kterých by se měl vypočítat požadovaný výkon.
 
-## P-hodnota
+## Hodnota P
 
 Tento parametr ovlivňuje rozdíl mezi skutečnou a cílovou teplotou. Čím větší je rozdíl mezi skutečnou a cílovou teplotou, tím více varná deska topí P složkou. Pokud je cílová teplota dosažena nebo překročena, složka P je rovna 0. Velmi vysoká hodnota P způsobuje silný překmit nebo podkmit.
 

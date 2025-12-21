@@ -14,10 +14,10 @@ Pompa jest bardzo pomocna podczas oczyszczania lub transportu do zbiornika ferme
 
 | Nazwa przedmiotu | Link do artykułu |
 | ------------------------------------------------------ | ---------------------------------- |
-| Minipompa 12V DC | [Amazonka].
+| Minipompa 12V DC | [amazon](https://www.amazon.de/dp/B01NCKXJ92/?coliid=I1I94V063T6GE6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_SSRMRQS5W49WYA43JZ7Z) |
 | Złącza pneumatyczne 8mm x 1/2 cala obrotowe o 90° | [amazon](https://amzn.to/3XmH2nP) |
 
-Połączenia z [camlockami firmy Braubebo](https://www.braubebo.de/camlock/) jak pokazano na pierwszym zdjęciu są również bardzo dobre i szybkie.
+Połączenia z [Camlockami firmy Braubebo](https://www.braubebo.de/camlock/) jak widać na pierwszym obrazku również są bardzo dobre i szybkie.
 
 ### Przekaźnik półprzewodnikowy SSR
 
@@ -27,7 +27,7 @@ Za pomocą Brautomat SSR można bardzo łatwo przełączać. Przekaźniki SSR lu
 
 | Nazwa przedmiotu | Link do artykułu |
 | -------------- | ---------------------------------- |
-| Fotek SSR 40DA | [Amazonka].
+| Fotek SSR 40DA | [amazon](https://www.amazon.de/dp/B09KTV425X/?coliid=I37LH2D7XQ7AYU&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_018F1S8N63CZYRB6XE54) |
 
 Przykłady zastosowań SSR: Jeżeli do SSR Fotek zostanie włączone napięcie 220V poprzez Brautomat, to na „drugim końcu” linii 220V można podłączyć gniazdo dla dowolnego urządzenia z wtyczką. Np. do zasilania mieszadła. Lub do kuchenki uzupełniającej. Lub dla pierścieniowego elementu grzejnego. Zasilanie pompy Rotek można także włączać i wyłączać za pomocą SSR.
 
@@ -44,14 +44,14 @@ Nie wszyscy konsumenci potrzebują potężnego SSR. Na przykład siłowniki, tak
 
 ### Pierścieniowe elementy grzejne
 
-Pierścieniowy element grzejny jest przydatny podczas gotowania brzeczki, jeśli wydajność GGM IDS nie jest już wystarczająca lub jest wystarczająca do zagotowania brzeczki do momentu pojawienia się bąbelków. Duży wybór pierścieniowych elementów grzejnych jest dostępny w firmie [Douglas firmy Crafthardware] (https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel).
+Pierścieniowy element grzejny jest przydatny podczas gotowania brzeczki, jeśli wydajność GGM IDS nie jest już wystarczająca lub jest wystarczająca do zagotowania brzeczki do momentu pojawienia się bąbelków. Duży wybór pierścieniowych elementów grzejnych oferuje firma [Douglas from Crafthardware](https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel).
 
 ### PWM
 
 | Nazwa przedmiotu | Link do artykułu |
 | ------------------ | ---------------------------------- |
 | Kontroler prędkości | [amazon](https://www.amazon.de/dp/B09PV11JM8/?coliid=IC6BIVO4B18X9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| Kontroler prędkości | [amazon] (https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T)
+| Kontroler prędkości | [amazon](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 
 ### Złącza
 

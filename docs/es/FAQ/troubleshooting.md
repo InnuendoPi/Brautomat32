@@ -50,7 +50,7 @@ Sección de salida en serie sobre interrupción de pin:
 10:00:01:554 -> 0000 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 0 1 1 1 1 
 ```
 
-La salida en serie en la interrupción del pin muestra claramente que la placa de inducción envía constantemente "todo ok". Sin embargo, el Brautomat interrumpe su trabajo mientras elabora café con cada interrupción (aproximadamente cada 300 ms) y verifica la condición de la interrupción. Por lo tanto, la interrupción del pin sólo debe utilizarse para solucionar problemas.
+La salida en serie en la interrupción del pin muestra claramente que la placa de inducción envía constantemente "todo ok". Sin embargo, el Brautomat interrumpe su trabajo mientras elabora cerveza con cada interrupción (aproximadamente cada 300 ms) y verifica la condición de la interrupción. Por lo tanto, la interrupción del pin sólo debe utilizarse para solucionar problemas.
 
 Las siguientes interrupciones se describen en el manual del GGM IDS2:
 

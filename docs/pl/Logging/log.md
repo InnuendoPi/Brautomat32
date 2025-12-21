@@ -94,7 +94,7 @@ Gdy Brautomat jest podłączony do konsoli szeregowej, podczas uruchamiania poja
 05:42:28.384 > [I][SYSINFO] mDNS http://Brautomat.lokalny adres IP 192.168.100.112 czas: 05:42:27 RSSI: -83
 ```
 
-Oprócz wersji Brautomat wyświetlana jest nazwa MDNS i aktualny adres IP. Linia _mount system plików LittleFS: ok, wolna sterta mem:_ wskazuje, że system plików został zamontowany.
+Oprócz der wersja Brautomat wyświetlana jest nazwa MDNS i aktualny adres IP. Linia _mount system plików LittleFS: ok, wolna sterta mem:_ wskazuje, że system plików został zamontowany.
 
 ## Błąd czujnika testowego
 

@@ -26,7 +26,7 @@ Denna guide är indelad i tre ämnesområden:
   * Kretskortets struktur och anslutningar
   * Displayen
   * 3D-hus
-  * ytterligare hårdvara
+  * extra hårdvara
 * Info och vanliga frågor
   * liten brygghjälpare2
   * MQTT-enheten

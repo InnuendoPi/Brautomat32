@@ -4,7 +4,7 @@
 
 In het gedeelte _Sensoren_ kan een nieuwe sensor worden toegevoegd door op het plusteken te klikken.
 
-![Creëer sensoren](/docs/img/Sensor-setup.jpg)
+![Maak sensoren](/docs/img/Sensor-einrichten.jpg)
 
 ## Sensoradres en naam instellen
 
@@ -19,7 +19,7 @@ Elke sensor heeft een naam nodig. In deze basisopstelling wordt de sensor “Sen
 
 _Opmerking: Sensornamen kunnen maximaal 20 tekens bevatten. Toegestane speciale tekens zijn # en spaties. De invoer wordt automatisch gecontroleerd door de webinterface._
 
-![Sensoren configureren](/docs/img/Sensor-settings.jpg)
+![Sensoren configureren](/docs/img/Sensor-einstellungen.jpg)
 
 ## Sensorkalibratie (offsetwaarden)
 
@@ -29,9 +29,9 @@ Voor deze basisconfiguratie blijven beide waarden ongewijzigd op 0,00.
 
 ## Sensor opslaan en controleren
 
-Door op _opslaan_ te klikken wordt de sensor aangemaakt en vervolgens in het dashboard weergegeven onder _Sensoren_.
+Door op _save_ te klikken wordt de sensor aangemaakt en vervolgens weergegeven in Dashboard onder _Sensors_.
 
-![Sensorsdashboard](/docs/img/Sensor-dashboard.jpg)
+![Sensoren Dashboard](/docs/img/Sensor-dashboard.jpg)
 
 > **Opmerking:**
 

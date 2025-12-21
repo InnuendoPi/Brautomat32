@@ -4,7 +4,7 @@ W tym krótkim przewodniku opisano budowę planszy. Konstrukcja deski nie jest w
 
 Lista części płytki:
 
-![Lista części](/docs/img/Aufbau1.jpg)
+![BOM](/docs/img/Aufbau1.jpg)
 
 Numer 1: Rezystor 4,7 kOhm\
 Numer 2: gniazdo JST-HX (białe) i 5-pinowa listwa zaciskowa śrubowa\
@@ -27,16 +27,16 @@ Pozycja gniazda JST-HX jest alternatywą dla 5-pinowej listwy zaciskowej śrubow
 | 1 | Rezystancja 4,7 kOhm | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
 | 1 opcjonalny | Brzęczyk pasywny 12mm 3V | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
 | 1 ESP32 | ESP32 D1 mini | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
-| 1 opcjonalny | Wyświetlacz Nextion o przekątnej 3,5 cala
+| 1 opcjonalny | Wyświetlacz Nextion 3,5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
 |                                                       |                                |                                   |
 
 _Uwaga: podane linki lub numery pozycji mają wyłącznie charakter informacyjny i nie są powiązane z programami partnerskimi/marketingowymi._
 
-Wyświetlacz Nextion o przekątnej 3,5 cala jest dostępny w wersji Basic, Discovery i Enhanced. Aktualnie najtańszy model można wybrać dla Brautomat. Wyświetlacze o przekątnej 2,8 cala lub mniejszej oraz 4 cali i większej mają inną rozdzielczość pikseli i nie są obsługiwane przez Brautomat!
+Wyświetlacz Nextion o przekątnej 3,5 cala jest dostępny w wersji Basic, Discovery lub Enhanced. Aktualnie najtańszy model można wybrać dla Brautomat. Wyświetlacze o przekątnej 2,8 cala lub mniejszej oraz 4 cali i większej mają inną rozdzielczość pikseli i nie są obsługiwane przez Brautomat!
 
 ## Rozważania przed budową
 
-Płytka drukowana może się różnić w zależności od podłączenia do kuchenki indukcyjnejhfeld GGM IDS można wyposażyć w różny sposób:
+Płyta może być różnie wyposażona w zależności od podłączenia do płyty indukcyjnej GGM IDS:
 
 1.1 Używany jest oryginalny kabel z centrali GGM IDS
 
@@ -56,7 +56,7 @@ Dwie uwagi dotyczące wkładania listew zaciskowych śrubowych:
 2. Listwy zaciskowe śrubowe mocuje się za pomocą punktu lutowniczego. Następnie sprawdzane jest prawidłowe dopasowanie. Następnie lutowane są wszystkie punkty lutownicze.
 
 Poniżej przedstawiono krok po kroku wkładanie i lutowanie złączek śrubowych.\
-W kroku numer 1 wkładane są dwie 12-pinowe listwy zacisków śrubowych. GPIO D9 do D19 z ESP32 są podłączone do 12 bloków zacisków śrubowych.
+W kroku numer 1 zZastosowano białe 12-pinowe bloki zacisków śrubowych. GPIO D9 do D19 z ESP32 są podłączone do 12 bloków zacisków śrubowych.
 
 ![Zaciski śrubowe](/docs/img/Aufbau2.jpg)
 
@@ -72,7 +72,7 @@ Płytka wygląda teraz tak w tym statusie:
 
 W kroku 3 trzy 3-śrubowe listwy zaciskowe są wkładane i lutowane.
 
-![Zaciski śrubowe do czujników](/docs/img/Aufbau5.jpg)
+![Zaciski śrubowe dla czujników](/docs/img/Aufbau5.jpg)
 
 Do trzech przyłączy podłącza się czujniki temperatury DS18B20. Dla tych trzech połączeń nie ma porządku ani hierarchii. Jeżeli stosowane są wyłącznie analogowe czujniki PT100x, można pominąć trzy listwy zaciskowe śrubowe.
 
@@ -109,11 +109,11 @@ Rezystor 4,7 kOhm z 5 pierścieniami: żółty - fioletowy - czarny - brązowy -
 
 Nogi rezystora są z tyłu lekko wygięte na zewnątrz i przylutowane. Za pomocą obcinaków bocznych odetnij nóżki nad oczkiem lutowniczym.
 
-## Zamontuj mikrokontroler ESP na podstawierz
+## Zamontuj mikrokontroler ESP
 
 Dzięki zamontowaniu podstawy, mikrokontroler ESP można w każdej chwili wyjąć z płytki. Socketing jest również przydatny przy rozwiązywaniu problemów.
 
-![Socket](/docs/img/Aufbau14.jpg)
+![Gniazdo](/docs/img/Aufbau14.jpg)
 
 W zakres dostawy mikrokontrolerów ESP wchodzi adapter nr 1. Dodatkowo wymagane jest złącze pinowe nr 2 o rastrze 2,54 mm.
 
@@ -123,10 +123,10 @@ Do podłączenia gniazd wymagane są adaptery i listwy pinowe. Najpierw do adapt
 
 _Wskazówka: listwa pinowa jest dostarczana jako listwa 40-pinowa. Do adaptera włożona jest cała długość listwy pinowej. Zwis nad adapterem jest zagięty na końcu._
 
-![Socket](/docs/img/Aufbau12.jpg)
+![Gniazdo](/docs/img/Aufbau12.jpg)
 
 Teraz ESP jest zakładany i mocowany za pomocą punktu lutowniczego z każdej strony. Teraz sprawdzane jest dopasowanie podstaw. Następnie lutowane są wszystkie punkty lutownicze.
 
 ![ESP32](/docs/img/Aufbau15.jpg)
 
-Na koniec należy sprawdzić wszystkie punkty lutownicze. Kiedy wszystkie punkty lutownicze zostaną zamknięte, Brautomat jest gotowy.
+Na koniec należy przećwiczyć wszystkie punkty lutowaniazostać sprawdzone. Kiedy wszystkie punkty lutownicze zostaną zamknięte, Brautomat jest gotowy.

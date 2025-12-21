@@ -4,7 +4,7 @@ W procesie AutoTune ustalane są odpowiednie parametry układu zaparzania, tak a
 
 Uwaga: Przeregulowanie (przekroczenie temperatury zadanej) o 0,5°C jest normalne. W zależności od izolacji kotła i dostarczonej energii indukcyjnej, temperatura będzie nieznacznie rosnąć nawet po wyłączeniu płyty.
 
-![AutoTune4](/docs/img/IDS-AutoTune-target.jpg)
+![AutoTune4](/docs/img/IDS-AutoTune-Ziel.jpg)
 
 Poniższy opis wartości PID ma jedynie charakter pomocniczy w obsłudze oprogramowania sprzętowego i można go pominąć. Proces AutoTune opisano zaczynając od „Proces AutoTune: krok po kroku.”\
 Kontroler PID kontroluje wydajność płyt grzewczych. Ważne jest określenie odpowiednich wartości P, I i D. Wartości PID są indywidualne dla każdego systemu zaparzania i środowiska. AutoTune to procedura pomagająca określić odpowiednie wartości. Moc płyt wymaganą do osiągnięcia temperatury rzeczywistej do temperatury docelowej oblicza się z sumy trzech wartości: Wymagana moc = P + I + D\

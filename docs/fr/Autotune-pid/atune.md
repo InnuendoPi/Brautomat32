@@ -4,7 +4,7 @@ Le processus AutoTune détermine les paramètres appropriés pour le système de
 
 Remarque : Un dépassement (dépassement de la température de consigne) de 0,5 °C est normal. En fonction de l'isolation de la chaudière et de l'énergie d'induction fournie, la température continuera à augmenter légèrement même après l'arrêt de la table de cuisson.
 
-![AutoTune4](/docs/img/IDS-AutoTune-target.jpg)
+![AutoTune4](/docs/img/IDS-AutoTune-Ziel.jpg)
 
 La description suivante des valeurs PID est uniquement destinée à vous aider à utiliser le micrologiciel et peut être ignorée. Le processus AutoTune est décrit à partir de "Le processus AutoTune : étape par étape."\
 Le contrôleur PID contrôle les performances des tables de cuisson. Il est important de déterminer les valeurs P, I et D appropriées. Les valeurs PID sont individuelles pour chaque système de brassage et environnement. AutoTune est une procédure qui permet de déterminer les valeurs appropriées. La puissance nécessaire des plaques de cuisson pour passer de la température réelle à la température souhaitée est calculée à partir de la somme des trois valeurs : Puissance requise = P + I + D\

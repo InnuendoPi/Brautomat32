@@ -14,10 +14,10 @@ Una pompa è di grande aiuto durante la filtrazione o il trasporto nel serbatoio
 
 | Nome articolo | Collegamento all'articolo |
 | ------------------------------------------------------ | --------------------------------- |
-| Minipompa 12V CC | [Amazzonia].
+| Minipompa 12V CC | [amazon](https://www.amazon.de/dp/B01NCKXJ92/?coliid=I1I94V063T6GE6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_SSRMRQS5W49WYA43JZ7Z) |
 | Connettori pneumatici 8 mm x 1/2 pollici ruotabili di 90° | [amazon](https://amzn.to/3XmH2nP) |
 
-Anche i collegamenti con [camlock di Braubebo](https://www.braubebo.de/camlock/) come mostrato nella prima immagine sono molto buoni e veloci.
+Anche i collegamenti con [Camlocks di Braubebo](https://www.braubebo.de/camlock/) come mostrato nella prima immagine sono molto buoni e veloci.
 
 ### Relè a stato solido SSR
 
@@ -27,7 +27,7 @@ Con il Brautomat gli SSR possono essere commutati molto facilmente. I relè SSR 
 
 | Nome articolo | Collegamento all'articolo |
 | -------------- | --------------------------------- |
-| Fotek SSR 40DA | [Amazzonia].
+| Fotek SSR 40DA | [amazon](https://www.amazon.de/dp/B09KTV425X/?coliid=I37LH2D7XQ7AYU&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_018F1S8N63CZYRB6XE54) |
 
 Esempi di applicazione per SSR: Se si accende 220 V su un SSR Fotek tramite il Brautomat, è possibile collegare una presa per qualsiasi dispositivo con una spina all'"altra estremità" della linea 220 V. Ad esempio per l'alimentazione dell'agitatore. O per un fornello di ricarica. O per un elemento riscaldante ad anello. L'alimentazione elettrica della pompa Rotek può essere attivata e disattivata anche tramite un SSR.
 
@@ -35,7 +35,7 @@ Esempi di applicazione per SSR: Se si accende 220 V su un SSR Fotek tramite il B
 
 Non tutti i consumatori hanno bisogno di un potente SSR. Ad esempio, attuatori come agitatori o pompe possono essere commutati con schede relè economiche. Un'ottima scheda relè è la scheda relè accoppiatore ottico Keenso a 4 canali.
 
-![keenso](/docs/img/keenso.jpg)
+![cazzo](/docs/img/keenso.jpg)
 
 | Nome articolo | Collegamento all'articolo |
 | ------------------ | --------------------------------- |
@@ -51,7 +51,7 @@ Un elemento riscaldante ad anello è utile quando si fa bollire il mosto se le p
 | Nome articolo | Collegamento all'articolo |
 | ------------------ | --------------------------------- |
 | Regolatore di velocità | [amazon](https://www.amazon.de/dp/B09PV11JM8/?coliid=IC6BIVO4B18X9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| Regolatore di velocità | [amazon] (https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T)
+| Regolatore di velocità | [amazon](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 
 ### Connettori
 

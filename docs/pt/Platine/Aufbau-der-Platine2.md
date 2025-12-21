@@ -4,7 +4,7 @@ Este breve guia descreve a estrutura do conselho. A estrutura do conselho não �
 
 A lista de peças da placa:
 
-![Lista de peças](/docs/img/Aufbau1.jpg)
+![BOM](/docs/img/Aufbau1.jpg)
 
 Número 1: Resistor 4,7kOhm\
 Número 2: soquete JST-HX (branco) e bloco terminal de parafuso de 5 pinos\
@@ -21,13 +21,13 @@ A posição do soquete JST-HX é uma alternativa ao bloco terminal de parafuso d
 | 1 opcional | Bloco terminal de parafuso 3 pinos RM 2.54 | |
 | 1 | Bloco de terminais de parafuso 5 pinos RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 alternativa ao bloco terminal de parafuso de 5 pinos | Soquete JST-HX 90° RM 2,54 | (voelkner D17526) |
-| 2 | Bloco terminal de parafuso 8 pinos RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&coid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 2 | Bloco terminal de parafuso 8 pinos RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 2 | Bloco terminal de parafuso 12 pinos RM 2.54| [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 | Cabeçalho de pino RM 2,54 | [amazon](https://www.amazon.de/dp/B01MQ5HJYQ?ref_=pe_27091401_487187591_302_E_DDE_dt_1) |
 | 1 | Resistência 4,7kOhm | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
 | 1 opcional | Campainha passiva 12mm 3V | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
 | 1 ESP32 | ESP32 D1 mini | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
-| 1 opcional | Tela Nextion de 3,5"
+| 1 opcional | Exibir Nextion 3,5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
 |                                                       |                                |                                   |
 
 _Observação: os links ou números de itens listados são meramente informativos e não vinculados a programas de afiliados/marketing._
@@ -36,7 +36,7 @@ A tela Nextion de 3,5 polegadas está disponível como Basic, Discovery ou Enhan
 
 ## Considerações antes da construção
 
-A placa de circuito pode variar dependendo da conexão ao fogão de induçãohfeld GGM IDS pode ser equipado de forma diferente:
+A placa pode ser equipada de forma diferente dependendo da ligação à placa de indução GGM IDS:
 
 1.1 É utilizado o cabo original da central GGM IDS
 
@@ -56,13 +56,13 @@ Duas notas sobre a inserção dos blocos de terminais de parafuso:
 2. Os terminais de parafuso são fixados com um ponto de solda. O ajuste correto é então verificado. Todos os pontos de solda são então soldados.
 
 A seguir, os blocos de terminais de parafuso são inseridos e soldados passo a passo.\
-Na etapa número 1, os dois blocos terminais de parafuso de 12 pinos são inseridos. Os GPIOs D9 a D19 de ESP32 são conectados aos 12 blocos de terminais de parafuso.
+Na etapa número 1, o zblocos de terminais de parafuso brancos de 12 pinos usados. Os GPIOs D9 a D19 de ESP32 são conectados aos 12 blocos terminais de parafuso.
 
 ![Bloco de terminais de parafuso](/docs/img/Aufbau2.jpg)
 
 Agora vire a placa e fixe cada bloco terminal de parafuso com um ponto de solda. Agora verifique se os blocos de terminais de parafuso estão corretamente assentados. Todos os pinos devem ser inseridos corretamente nos pontos de solda. Todos os pinos são então soldados.
 
-Na etapa número 2, os dois blocos terminais de parafuso de 8 pinos são inseridos. Os GPIOs D0 a D8 de ESP32 são conectados aos 8 blocos terminais de parafuso.
+Na etapa número 2, os dois blocos terminais de parafuso de 8 pinos são inseridos. Os GPIOs D0 a D8 de ESP32 são conectados aos 8 blocos de terminais de parafuso.
 
 ![Blocos de terminais de parafuso](/docs/img/Aufbau3.jpg)
 
@@ -109,7 +109,7 @@ Resistor de 4,7kOhm com 5 anéis: amarelo - violeta - preto - marrom - [tolerân
 
 As pernas da resistência são dobradas ligeiramente para fora na parte traseira e soldadas. Use cortadores laterais para cortar as pernas acima do olho de solda.
 
-## Monte o microcontrolador ESP na basen
+## Monte o microcontrolador ESP
 
 Ao montar a base, o microcontrolador ESP pode ser removido da placa a qualquer momento. O soquete também é útil na solução de problemas.
 
@@ -129,4 +129,4 @@ Agora o ESP é colocado e fixado com um ponto de solda em cada lado. Agora o aju
 
 ![ESP32](/docs/img/Aufbau15.jpg)
 
-Finalmente, todos os pontos de solda devem ser verificados. Quando todos os pontos de solda estiverem fechados, o Brautomat estará pronto.
+Finalmente, todos os pontos de solda devem ser praticadosser verificado. Quando todos os pontos de solda estiverem fechados, o Brautomat estará pronto.

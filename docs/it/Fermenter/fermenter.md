@@ -1,8 +1,8 @@
 # Modalità fermentatore
 
-In modalità fermentatore, il Brautomat32 elabora il piano di fermentazione dall'alto verso il basso allo stesso modo del piano di ammostamento. Il controller deck ha le stesse funzioni.
+In modalità fermentatore, il Brautomat32 elabora il piano di fermentazione dall'alto verso il basso allo stesso modo del piano di ammostamento. Il controller Deck ha le stesse funzioni.
 
-![Dashboard del fermentatore](/docs/img/fermenter_dash.jpg)
+![Fermentatore Dashboard](/docs/img/fermenter_dash.jpg)
 
 L'elaborazione dei passaggi presenta un'importante differenza:
 

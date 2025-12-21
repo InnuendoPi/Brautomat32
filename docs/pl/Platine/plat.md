@@ -7,4 +7,4 @@ Płytka jest płytką zaciskową dla mikrokontrolerów ESP8266 i ESP32. Do liste
 * GPIO D3 z rezystorem 4k7 przeznaczony jest do czujników Dallas DS18B20.
 * GPIO D8 jest podłączone do złącza brzęczyka piezoelektrycznego na płycie
 
-![Tablica 2](/docs/img/Platine21.jpg)
+![Płyta 2](/docs/img/Platine21.jpg)

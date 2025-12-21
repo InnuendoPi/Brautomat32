@@ -19,7 +19,7 @@ Przesunięcie nr 1 (dolny zakres wartości) to różnica 0,0°C (łaźnia lodowa
 
 ## Kalibracja procedury za pomocą termometru klinicznego
 
-Termometr kliniczny jest dobrze dopasowanym termometrem referencyjnym. Górny zakres pomiarowy termometru klinicznego jest ograniczony do ok. 40°C. Przeprowadzenie kalibracji odpowiada procedurze dla łaźni lodowej i temperatury wrzenia. Jedyna różnica: jeśli na przykład jako drugi punkt kalibracji wybierzesz 40°C, płyta kuchenna musi zostać wyłączona natychmiast po osiągnięciu temperatury docelowej i pozostaje stała przez ok. 60 sekund(bez wahań). Dopiero wtedy można rozpocząć kalibrację, czyli rejestrację 60 próbek pomiarowych.
+Termometr kliniczny jest dobrze dopasowanym termometrem referencyjnym. Górny zakres pomiarowy termometru klinicznego jest ograniczony do ok. 40°C. Przeprowadzenie kalibracji odpowiada procedurze dla łaźni lodowej i temperatury wrzenia. Jedyna różnica: jeśli na przykład jako drugi punkt kalibracji wybierzesz 40°C, płyta kuchenna musi zostać wyłączona natychmiast po osiągnięciu temperatury docelowej i pozostaje stała przez ok. 60 sekund (bez wahań). Dopiero wtedy można dMożna rozpocząć kalibrację, czyli rejestrację 60 próbek pomiarowych.
 
 ## Plik dziennika kalibracji czujnika
 

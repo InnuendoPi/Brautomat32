@@ -1,6 +1,6 @@
 # De Brautomat
 
-![ESP32](https://img.shields.io/static/v1?label=Arduino&message=ESP32&logo=arduino&logoColor=white&color=blauw)
+![ESP32](https://img.shields.io/static/v1?label=Arduino&message=ESP32&logo=arduino&logoColor=white&color=blue)
 
 De Brautomat is een zetregelaar voor de ESP32 D1 mini. De Brautomat wordt gebruikt in de brouwerij en biedt een intuïtieve, gebruiksvriendelijke bediening. Tijdens het maischen worden de rusttemperaturen automatisch bereikt en worden de rusttijden aangehouden. De Brautomat ondersteunt ook het koken van wort en het toevoegen van hop en ingrediënten. Bij het oplopende infusieproces kan de Brautomat het maischproces volledig automatiseren.
 

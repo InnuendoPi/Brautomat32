@@ -6,7 +6,7 @@ Protokolování je dostupné pouze ve vývojové verzi. Integrované protokolov�
 
 Sériový monitor musí být kromě COM portu nastaven na přenosovou rychlost 115200 a CRLF.
 
-![Microsoft Visual Studio Code](/docs/img/vscode.jpg)
+![Kód Microsoft Visual Studio](/docs/img/vscode.jpg)
 
 ## Nastavení protokolování
 
@@ -25,7 +25,7 @@ Prostřednictvím nastavení systému lze aktivovat různé kanály pro sériov�
 
 Každý kanál má možnosti off, error, info a verbose.
 
-* Vypnuto - žádné protokolování.
+* Vypnuto – žádné protokolování.
 
 Kanál nevydává protokol do sériové konzoly.
 
@@ -94,7 +94,7 @@ Když je Brautomat připojen k sériové konzoli, při spouštění se objeví n
 05:42:28.384 > [I][SYSINFO] mDNS http://Brautomat.local IP adresa 192.168.100.112 čas: 05:42:27 RSSI: -83
 ```
 
-Kromě verze Brautomat je na výstupu také název MDNS a aktuální IP adresa. Řádek _připojit souborový systém LittleFS: ok, volná halda mem:_ označuje, že souborový systém byl připojen.
+Kromě der verze Brautomat se zobrazí název MDNS a aktuální IP adresa. Řádek _připojit souborový systém LittleFS: ok, volná halda mem:_ označuje, že souborový systém byl připojen.
 
 ## Chyba testu snímače
 
@@ -112,7 +112,7 @@ Pomocí tohoto testu chyby snímače lze velmi snadno zkontrolovat parametr „C
 
 Microsoft VSCode lze nastavit pro přihlášení v několika krocích. Není potřeba instalovat Microsoft VSCode; stačí přenosná verze.
 
-Stáhněte si Microsoft VSCode jako soubor ZIP: [Microsoft VSCode](https://code.visualstudio.com/docs/?dv=winzip)
+Stáhnout Microsoft VSCode jako soubor ZIP: [Microsoft VSCode](https://code.visualstudio.com/docs/?dv=winzip)
 
 Extrahujte soubor ZIP do libovolného adresáře. Přejděte do adresáře v průzkumníku souborů a vytvořte složku s názvem data. Složka data přepne MS VScode do přenosného režimu a lze ji používat bez instalace.
 

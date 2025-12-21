@@ -4,9 +4,9 @@ The Brautomat can optionally be operated with a touch display. 3.5 inch touch di
 
 | Nextion Display | Firmware |
 | --------------- | --------- |
-| NX4832T035 (Basic Series) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832T035.tft) |
-| NX4832K035 (Enhanced Series) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832K035.tft) |
-| NX4832F035 (Discovery Series) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/Brautomat-NX4832F035.tft) |
+| NX4832T035 (Basic Series) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832T035.tft) |
+| NX4832K035 (Enhanced Series) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832K035.tft) |
+| NX4832F035 (Discovery Series) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832F035.tft) |
 
 The display requires firmware to operate with Brautomat. The firmware that matches the display type is linked in the table. See also flashing the display file.
 
@@ -29,7 +29,7 @@ The display must be prepared before initial operation. To do this, the appropria
 
 ## View mash brew
 
-![MaischeSud](/docs/img/brewpage-sm.jpg)
+![MashSud](/docs/img/brewpage-sm.jpg)
 
 The MashSud side is the preferred side when brewing. The information is shown on the display every second
 
@@ -41,7 +41,7 @@ displayed. The next rest is also displayed in the bottom line. The time on the l
 
 ## View boiler overview
 
-![Kettle overview](/docs/img/kettlepage-sm.jpg)
+![Boiler overview](/docs/img/kettlepage-sm.jpg)
 
 The boiler overview shows the mash brew boiler and, if available, the brew and pour over boiler with the information about the actual and target temperature.
 

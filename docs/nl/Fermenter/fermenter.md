@@ -1,8 +1,8 @@
 # Vergistermodus
 
-In de vergistermodus verwerkt de Brautomat32 het fermentatieplan van boven naar beneden op dezelfde manier als het maischplan. Het controllerdeck heeft dezelfde functies.
+In de vergistermodus verwerkt de Brautomat32 het fermentatieplan van boven naar beneden op dezelfde manier als het maischplan. De controller Deck heeft dezelfde functies.
 
-![Fermenter-dashboard](/docs/img/fermenter_dash.jpg)
+![Vergister Dashboard](/docs/img/fermenter_dash.jpg)
 
 De verwerking van de stappen kent een belangrijk verschil:
 
@@ -10,7 +10,7 @@ De eerste stap in het fermentatieplan wordt gestart wanneer de doeltemperatuur i
 
 Om het in te stellen kan één GPIO worden ingesteld voor koeling en één GPIO voor verwarming. Koelen of verwarmen is optioneel.
 
-![Instellingen voor vergister](/docs/img/fermenter_set.jpg)
+![Instellingen van de vergister](/docs/img/fermenter_set.jpg)
 
 De vergister heeft drie verschillende statussen: koelen, verwarmen en inactief. Wanneer de status van koelen of verwarmen verandert, start er een pauze. Tijdens de pauze verandert de status van de vergister niet.
 

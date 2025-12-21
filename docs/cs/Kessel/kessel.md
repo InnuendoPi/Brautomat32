@@ -4,7 +4,7 @@ Brautomat32 nabízí možnost nastavení až tří kotlů. První kotel má inte
 
 Tyto tři kotle mohou být buď indukční varná deska GGM, nebo relé. Kotel reléového typu obsahuje připojení webhooku.
 
-![Konfigurace Kessel](/docs/img/kessel_1.jpg)
+![Konfigurace kotle](/docs/img/kessel_1.jpg)
 
 Parametry jsou popsány v kapitole Základní nastavení a parametry v přehledu - Parametry kotle a jsou shodné pro všechny tři kotle.
 
@@ -32,15 +32,15 @@ Druhý a třetí kotel lze zapnout a vypnout ručně přes webové rozhraní pom
 
 Druhou a třetí konvici lze také přepínat pomocí rmutovacího plánu:
 
-![Konfigurace Kessel](/docs/img/kessel_2.jpg)
+![Konfigurace kotle](/docs/img/kessel_2.jpg)
 
 V tomto zjednodušeném rmutovacím plánu se třetí kotel HLT zapíná automaticky v řádku 2. Krok HLT:100 s cílovou teplotou 78°C a dobou trvání 0 minut zapíná doplňování se 100% výkonem a nastavuje cílovou teplotu na 78°C. Protože doba trvání je zadána jako 0 minut, je doplňování zapnuto trvale. Brautomat přejde přímo k dalšímu kroku kaše a nechá zapnutou poinfuzi. Regulátor PID trvale reguluje výkon potřebný k dosažení a udržení cílové teploty. Nachguss:100 by byl identický s řídicím příkazem HLT:100. Pokud má náplň v nastavení název „Vařič“, lze také použít ovládací příkaz VAŘIČ:100.
 
-![Konfigurace Kessel](/docs/img/kessel_3.jpg)
+![Konfigurace kotle](/docs/img/kessel_3.jpg)
 
 V tomto rmutovacím plánu se ve třetím kroku zapne druhá varná konvice. Na rozdíl od předchozího příkladu HLT se kotel SUD zapíná na dobu 15 minut s cílovou teplotou 100°C. Brautomat zůstává v tomto kroku, dokud není dosaženo cílové teploty a není dokončena 10minutová přestávka. Poté se kotlík SUD vypne a Brautomat přeskočí na další krok v plánu kaše.
 
-Text „Te"cooking ilmaische" je přeloženo Brautomat na 100 %. Pokud za dvojtečkou není žádné číslo mezi 0 a 100 nebo informace ON nebo OFF, pak Brautomat nahradí text se 100% výkonem.
+Text „Vařit částečnou kaši“ pochází z Brautomat překládá 100 %. Pokud za dvojtečkou není žádné číslo mezi 0 a 100 nebo informace ON nebo OFF, pak Brautomat nahradí text se 100% mocninou.
 
 ## Příklad jiného výkonu
 

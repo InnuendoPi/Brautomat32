@@ -4,7 +4,7 @@ Deze korte handleiding beschrijft de structuur van het bestuur. De bestuursstruc
 
 De onderdelenlijst van het bord:
 
-![Onderdelenlijst](/docs/img/Aufbau1.jpg)
+![BOM](/docs/img/Aufbau1.jpg)
 
 Nummer 1: Weerstand 4,7 kOhm\
 Nummer 2: JST-HX-bus (wit) en 5-polig schroefklemmenblok\
@@ -17,17 +17,17 @@ De JST-HX-aansluiting is een alternatief voor het 5-polige schroefklemmenblok. D
 
 | Nummer | Artikelnaam | Link naar artikel |
 | ------------------------------------------------ | ---------------------------- | ------------------------------- |
-| 3 | Schroefklemmenblok 3-polig RM 2.54 | [amazon](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 3 | Schroefklemmenblok 3-polig RM 2.54 | [amazone](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 optioneel | Schroefklemmenblok 3-polig RM 2.54 | |
 | 1 | Schroefklemmenblok 5-polig RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 alternatief voor het schroefklemmenblok 5-polig | JST-HX-fitting 90° RM 2,54 | (voelkner D17526) |
-| 2 | Schroefklemmenblok 8-polig RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| 2 | Schroefklemmenblok 12-polig RM 2.54| [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| 1 | Pinheader RM 2,54 | [amazon](https://www.amazon.de/dp/B01MQ5HJYQ?ref_=pe_27091401_487187591_302_E_DDE_dt_1) |
-| 1 | Weerstand 4,7 kOhm | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
-| 1 optioneel | Passieve zoemer 12mm 3V | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
-| 1 ESP32 | ESP32 D1 mini | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
-| 1 optioneel | Nextion-scherm van 3,5 inch
+| 2 | Schroefklemmenblok 8-polig RM 2.54 | [amazone](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 2 | Schroefklemmenblok 12-polig RM 2.54| [amazone](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 1 | Pinheader RM 2,54 | [amazone](https://www.amazon.de/dp/B01MQ5HJYQ?ref_=pe_27091401_487187591_302_E_DDE_dt_1) |
+| 1 | Weerstand 4,7 kOhm | [amazone](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
+| 1 optioneel | Passieve zoemer 12mm 3V | [amazone](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
+| 1 ESP32 | ESP32 D1 mini | [amazone](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
+| 1 optioneel | Volgende weergave 3,5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
 |                                                       |                                |                                   |
 
 _Let op: de vermelde links of artikelnummers zijn louter informatief en niet gekoppeld aan affiliate-/marketingprogramma's._
@@ -36,7 +36,7 @@ Het Nextion 3,5 inch display is verkrijgbaar als Basic, Discovery of Enhanced. H
 
 ## Overwegingen vóór de bouw
 
-De printplaat kan variëren afhankelijk van de aansluiting op de inductiekookplaathfeld GGM IDS kan op verschillende manieren worden uitgerust:
+Afhankelijk van de aansluiting op de GGM IDS inductiekookplaat kan de plaat verschillend worden uitgerust:
 
 1.1 Er wordt gebruik gemaakt van de originele kabel van het GGM IDS-bedieningspaneel
 
@@ -56,13 +56,13 @@ Twee opmerkingen over het plaatsen van de schroefklemmenblokken:
 2. De schroefklemmenblokken worden met een soldeerpunt vastgezet. Vervolgens wordt de juiste pasvorm gecontroleerd. Vervolgens worden alle soldeerpunten gesoldeerd.
 
 Hieronder worden de schroefklemmen stap voor stap geplaatst en gesoldeerd.\
-In stap nummer 1 worden de twee 12-polige schroefklemmenblokken geplaatst. De GPIO's D9 tot D19 van ESP32 zijn aangesloten op de 12 schroefklemmenblokken.
+In stap nummer 1 wordt de zEr worden witte 12-polige schroefklemmenblokken gebruikt. De GPIO's D9 t/m D19 van ESP32 zijn aangesloten op de 12 schroefklemmenblokken.
 
 ![Schroefklemmenblok](/docs/img/Aufbau2.jpg)
 
 Draai nu de printplaat om en bevestig elk schroefklemmenblok met een soldeerpunt. Controleer nu of de schroefklemmenblokken correct zijn geplaatst. Alle pinnen moeten correct door de soldeerpunten worden gestoken. Vervolgens worden alle pinnen gesoldeerd.
 
-In stap nummer 2 worden de twee 8-polige schroefklemmenblokken geplaatst. De GPIO's D0 tot en met D8 van ESP32 zijn aangesloten op de 8 schroefklemmenblokken.
+In stap nummer 2 worden de twee 8-polige schroefklemmenblokken geplaatst. De GPIO's D0 t/m D8 van ESP32 zijn aangesloten op de 8 schroefklemmenblokken.
 
 ![Schroefklemmenblokken](/docs/img/Aufbau3.jpg)
 
@@ -76,7 +76,7 @@ In stap nummer 3 worden de drie drie schroefklemmenblokken geplaatst en gesoldee
 
 Op de drie aansluitingen worden DS18B20 temperatuursensoren aangesloten. Er bestaat geen volgorde of hiërarchie voor deze drie verbindingen. Als alleen analoge PT100x-sensoren worden gebruikt, kunnen de drie schroefklemmenblokken worden weggelaten.
 
-Met versie 2.1 van de kaart kan een optioneel klemmenblok met 3 schroeven worden gebruikt op de GND-positie naast de 3 schroefklemmenblokken voor sensoren. De extra GND-aansluitingen zijn handig wanneer actuatoren (pompen, roerwerken, enz.) worden gebruikt. Als er geen aandrijvingen worden gebruikt, kan het schroefklemmenblok worden weggelaten.
+Met versie 2.1 van de kaart kan een optioneel klemmenblok met 3 schroeven worden gebruikt op de GND-positie naast de 3 schroefklemmenblokken voor sensoren. De extra GND-aansluitingen zijn handig wanneer actuatoren (pompen, roerwerken, etc.) worden gebruikt. Als er geen aandrijvingen worden gebruikt, kan het schroefklemmenblok worden weggelaten.
 
 In stap nummer 4 wordt ofwel de JST-HX-aansluiting voor de originele kabel of een klemmenblok met 5 schroeven voor de vervangende kabel geplaatst en gesoldeerd: (zie overwegingen vóór montage).
 
@@ -109,7 +109,7 @@ De poten van de weerstand zijn 90° gebogen (bijvoorbeeld rond een sleufschroeve
 
 De poten van de weerstand zijn aan de achterkant iets naar buiten gebogen en gesoldeerd. Gebruik een zijsnijder om de pootjes boven het soldeeroog af te snijden.
 
-## Monteer de ESP-microcontroller op de basisn
+## Monteer de ESP-microcontroller
 
 Door de basis te monteren kan de ESP-microcontroller op elk moment van het bord worden verwijderd. Socketing is ook handig bij het oplossen van problemen.
 
@@ -125,8 +125,8 @@ _Tip: de pinheader wordt geleverd als 40-pins header. De volledige lengte van de
 
 ![Socket](/docs/img/Aufbau12.jpg)
 
-Nu wordt de ESP erop gezet en vastgezet met een soldeerpunt aan elke kant. Nu wordt de pasvorm van de basis gecontroleerd. Vervolgens worden alle soldeerpunten gesoldeerd.
+Nu wordt de ESP erop gezet en vastgezet met een soldeerpunt aan elke kant. Nu wordt de pasvorm van de bases gecontroleerd. Vervolgens worden alle soldeerpunten gesoldeerd.
 
 ![ESP32](/docs/img/Aufbau15.jpg)
 
-Ten slotte moeten alle soldeerpunten worden gecontroleerd. Als alle soldeerpunten gesloten zijn, is de Brautomat gereed.
+Ten slotte moeten alle soldeerpunten worden geoefendgecontroleerd worden. Als alle soldeerpunten gesloten zijn, is de Brautomat gereed.

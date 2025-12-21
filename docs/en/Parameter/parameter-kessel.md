@@ -18,15 +18,15 @@ This parameter describes the temperature at which the PID controller should dete
 
 ### Power from transition [%]
 
-This parameter describes the output power for the hob from the temperature transition to cooking. The default value is 100%. The "Transition to cooking" parameter has been used to set a temperature at which the PID controller is deactivated. The “Power from transition” parameter now specifies the fixed output power for the hob. If a brewing kettle with a volume of 35l or more is used, the default value of 100% is a suitable choice. In brewery kitchens with small kettles, 100% energy supply can cause boiling over. In this case, the maximum energy supply can be reduced to, for example, 75% using this parameter.
+This parameter describes the output power for the hob from the temperature transition to cooking. The default value is 100%. The "Transition to cooking" parameter has been used to set a temperature at which the PID controller is deactivated. The “Power from transition” parameter now specifies the fixed output power for the hob. If a brewing kettle with a volume of 35l or more is used, the default value of 100% is a suitable choice. In brewery kitchens with small kettles, 100% energy supply can cause boiling over. In this case, the maximum energy supply can be reduced to, for example, 75% with this parameter.
 
 ### Disable PID for cooking [on/off]
 
 This parameter determines the behavior of the PID controller when cooking when the actual temperature is above the target temperature. Example: the cooking temperature was set to 98°C in the mash plan. The "Power from transition" parameter switches off the PID calculation from the "Transition to boiling" temperature. If the "Deactivate PID for boiling" parameter is activated (default), then the PID controller remains switched off even above the target temperature of 98°C from the mash plan and the power from the "Power from transition" parameter is used. This parameter is activated by default and enables rolling cooking.
 
-If the parameter "Deactivate PID for cooking" is not activated, the required power is calculated by the PID controller once the target temperature (here 98°C) is reached. The calculated performance above the target-Temperature is 0%. The hob switches off and prevents boiling over if necessary.
+If the parameter "Deactivate PID for cooking" is not activated, the required power is calculated by the PID controller once the target temperature (here 98°C) is reached. The calculated power above the target temperature is 0%. The hob switches off and prevents boiling over if necessary.
 
-### Sensor error performance [0-100%]
+### Perfomancein case of sensor error [0-100%]
 
 If a sensor error occurs, for example a sensor is not connected or a defect, the power of the hob can be adjusted to deal with this error. A value of 100% ignores the sensor error.
 
@@ -72,7 +72,7 @@ _These 10 parameters must be set individually for each brewing system. The param
 
 The Brautomat can manage hardware profiles. Profiles can be used if there are different boilers. Users with kettles of different sizes can use profiles to select the kettle for the brewing day instead of having to manually re-enter all the parameters. A hardware profile contains all the settings of a boiler.
 
-Profiles are saved in the /Profiles folder. Profiles allow for quick and easySwitch between different boilers. The Save function creates a profile file with the above parameters, while the Delete function removes the profile file from flash memory.
+Profiles are saved in the /Profiles folder. Profiles enable quick and easy switching between different boilers. The Save function creates a profile file with den above parameters, while the Delete function removes the profile file from the flash memory.
 
 The default profile when starting the bread machine is always the last profile selected.
 
@@ -151,4 +151,4 @@ The specific used here Heat capacity 3600 has an error tolerance of approximatel
 9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8.97 * 1.57 + 35.54 * 4.19 = 14.08 + 148.91 = 13282.2 + 148912.6 = 162194.8 / 44 = 3686.25 J per kg per degree Celsius
 ```
 
-See also [Braumagazin](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+See also [Brewing Magazine](https://braumagazin.de/article/berechnungen-in-der-brauerei/)

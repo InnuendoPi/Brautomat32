@@ -4,7 +4,7 @@ Den här korta guiden beskriver styrelsens struktur. Styrelsestrukturen är inte
 
 Tavlans dellista:
 
-![Delarlista](/docs/img/Aufbau1.jpg)
+![BOM](/docs/img/Aufbau1.jpg)
 
 Nummer 1: Motstånd 4,7 kOhm\
 Nummer 2: JST-HX-sockel (vit) och 5-polig skruvplint\
@@ -17,17 +17,17 @@ JST-HX-uttagets position är ett alternativ till 5-polig skruvplint. Kabeln frå
 
 | Nummer | Artikelnamn | Länk till artikel |
 | ------------------------------------------------------------ | ------------------------------------ | ---------------------------------- |
-| 3 | Skruvplint 3-polig RM 2,54 | [amazon](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8J7CBBE7AD4AD) |
+| 3 | Skruvplint 3-polig RM 2,54 | [amazon](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 valfri | Skruvplint 3-polig RM 2,54 | |
-| 1 | Skruvplint 5-polig RM 2,54 | [amazon](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE)7AD4J |
+| 1 | Skruvplint 5-polig RM 2,54 | [amazon](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 alternativ till skruvplint 5-polig | JST-HX uttag 90° RM 2,54 | (voelkner D17526) |
-| 2 | Skruvplint 8-polig RM 2,54 | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8J7TBE7AD) |
-| 2 | Skruvplint 12-polig RM 2,54| [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7T)7AD4J |
+| 2 | Skruvplint 8-polig RM 2,54 | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 2 | Skruvplint 12-polig RM 2,54| [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 | Stifthuvud RM 2,54 | [amazon](https://www.amazon.de/dp/B01MQ5HJYQ?ref_=pe_27091401_487187591_302_E_DDE_dt_1) |
-| 1 | Motstånd 4,7kOhm | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PHX9FJN3) |
+| 1 | Motstånd 4,7kOhm | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
 | 1 valfri | Passiv summer 12mm 3V | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
 | 1 ESP32 | ESP32 D1 mini | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
-| 1 valfri | Nextion 3,5" skärm
+| 1 valfri | Visa Nextion 3,5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
 |                                                       |                                |                                   |
 
 _Obs: länkarna eller artikelnumren som anges är endast informativa och inte kopplade till affiliate-/marknadsföringsprogram._
@@ -36,7 +36,7 @@ Nextion 3,5-tumsskärm är tillgänglig som Basic, Discovery eller Enhanced. Den
 
 ## Överväganden före konstruktion
 
-Kretskortet kan variera beroende på anslutningen till induktionsspisenhfeld GGM IDS kan utrustas på olika sätt:
+Kortet kan utrustas på olika sätt beroende på anslutningen till GGM IDS induktionshäll:
 
 1.1 Originalkabeln från GGM IDS kontrollpanel används
 
@@ -56,7 +56,7 @@ Två anmärkningar om att sätta i skruvplintarna:
 2. Skruvplintarna är fixerade med en lödpunkt. Rätt passform kontrolleras sedan. Alla lödpunkter löds sedan.
 
 I det följande sätts och löds skruvplintarna steg för steg.\
-I steg nummer 1 sätts de två 12-poliga skruvplintarna in. GPIO:erna D9 till D19 från ESP32 är anslutna till de 12 skruvplintarna.
+I steg nummer 1 är zvita 12-poliga skruvplintar som används. GPIO:erna D9 till D19 från ESP32 är anslutna till de 12 skruvplintarna.
 
 ![Skruvplint](/docs/img/Aufbau2.jpg)
 
@@ -68,7 +68,7 @@ I steg nummer 2 sätts de två 8-poliga skruvplintarna in. GPIO:erna D0 till D8 
 
 Styrelsen ser nu ut så här i denna status:
 
-![Skruvanslutningsplintar](/docs/img/Aufbau4.jpg)
+![Skruvkopplingsplintar](/docs/img/Aufbau4.jpg)
 
 I steg nummer 3 sätts de tre 3 skruvplintarna in och löds fast.
 
@@ -87,7 +87,7 @@ I steg nummer 4 sätts och löds antingen JST-HX-uttaget för originalkabeln ell
 Piezo-summern är tillval. Detta steg kan hoppas över om akustiska signaler inte önskas.\
 Piezosummern har ett plus- och en minuspol
 
-![Buzzer Plus Minus](/docs/img/Aufbau8.jpg)
+![Summer Plus Minus](/docs/img/Aufbau8.jpg)
 
 Den positiva polen sätts in i D8-markeringen och följaktligen den negativa polen i GND-markeringen.
 
@@ -109,7 +109,7 @@ Benen på motståndet är böjda 90° (t.ex. runt en slitsad skruvmejsel). Motst
 
 Motståndets ben är böjda något utåt på baksidan och lödda. Använd sidoskärare för att skära av benen ovanför lödöglan.
 
-## Montera ESP-mikrokontrollern på basenn
+## Montera ESP-mikrokontrollern
 
 Genom att montera basen kan ESP-mikrokontrollern tas bort från kortet när som helst. Socket är också användbart vid felsökning.
 
@@ -117,7 +117,7 @@ Genom att montera basen kan ESP-mikrokontrollern tas bort från kortet när som 
 
 Leveransen av ESP-mikrokontroller inkluderar adapter nummer 1. Dessutom krävs ett stifthuvud nummer 2 med en stigning på 2,54 mm.
 
-![Dellista](/docs/img/Aufbau11.jpg)
+![Delarlista](/docs/img/Aufbau11.jpg)
 
 Adaptrar och stifthuvuden krävs för uttag. Stifthuvudet sätts först in i adaptern, som visas i nummer 3. Adaptrar med stiftlister sätts sedan in i kretskortet, två till vänster och två till höger
 
@@ -125,8 +125,8 @@ _Tips: stifthuvudet levereras som ett 40-stiftshuvud. Hela längden av stifthuvu
 
 ![Socket](/docs/img/Aufbau12.jpg)
 
-Nu sätts ESP på och fixeras med en lödpunkt på varje sida. Nu kontrolleras basens passform. Alla lödpunkter löds sedan.
+Nu sätts ESP på och fixeras med en lödpunkt på varje sida. Nu är basens passform kontrollerad. Alla lödpunkter löds sedan.
 
 ![ESP32](/docs/img/Aufbau15.jpg)
 
-Slutligen bör alla lödpunkter kontrolleras. När alla lödpunkter är stängda är Brautomat klar.
+Slutligen bör alla lödpunkter tränaskontrolleras. När alla lödpunkter är stängda är Brautomat klar.

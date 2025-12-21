@@ -33,7 +33,7 @@ De lengte van de rode balk onder de IDS- en herschikkingsweergave toont de verst
 
 #### MashBud
 
-Deze weergave toont de eerste kookplaat. De huidige rusttijd wordt weergegeven met de werkelijke temperatuur, de doeltemperatuur en de huidige resterende tijd. De lengte van de rode balk onder de temperaturen toont de voortgang van de huidige rust. Het symbool rechts van de resterende tijd geeft aan of de volgende pauze automatisch begint (autonext): groen betekent automatisch, rood betekent pauze. Bovendien wordt het controllerdeck weergegeven met de bijbehorende functies.
+Deze weergave toont de eerste kookplaat. De huidige rusttijd wordt weergegeven met de werkelijke temperatuur, de doeltemperatuur en de huidige resterende tijd. De lengte van de rode balk onder de temperaturen toont de voortgang van de huidige rust. Het symbool rechts van de resterende tijd geeft aan of de volgende pauze automatisch begint (autonext): groen betekent automatisch, rood betekent pauze. Bovendien wordt de controller Deck weergegeven met de bijbehorende functies.
 
 ![Weergave](/docs/img/brewpage-sm.jpg)
 
@@ -45,11 +45,11 @@ Deze weergave wordt gebruikt om de inductiekookplaat handmatig te bedienen. In d
 
 Een display is optioneel. De Brautomat ondersteunt alleen Nextion HMI 3,5 inch aanraakschermen (Basic- en Discovery-serie).
 
-Het display wordt geconfigureerd via een SD-kaart. Het TFT-bestand uit de Info-map dat overeenkomt met het display wordt naar de SD-kaart gekopieerd en in het display geplaatst. Zodra het display wordt ingeschakeld, begint de configuratie. Het proces duurt ongeveer een minuut. De voortgang wordt weergegeven op het display. Zodra de configuratie is voltooid, wordt het display uitgeschakeld en wordt de SD-kaart verwijderd. Het display is nu klaar voor gebruik.
+Het display wordt geconfigureerd via een SD-kaart. Het TFT-bestand uit de map Info dat overeenkomt met het display wordt naar de SD-kaart gekopieerd en in het display geplaatst. Zodra het display wordt ingeschakeld, begint de configuratie. Het proces duurt ongeveer een minuut. De voortgang wordt weergegeven op het display. Zodra de configuratie is voltooid, wordt het display uitgeschakeld en wordt de SD-kaart verwijderd. Het display is nu klaar voor gebruik.
 
-Opgemerkt moet worden dat SDA, SCL op dePIN's D1, D2 moeten worden bediend.
+Opgemerkt moet worden dat SDA, SCL moeten worden gebruikt op de pincodes D1, D2.
 
-### PT100x-sensoren MAX31865 Versterker activeren
+### PT100x-sensoren MAX31865 AmplActiveer hier
 
 Als analoge PT100x-sensoren worden gebruikt, moet deze schakelaar worden geactiveerd. Een analoge PT100x-sensor vereist een RTD-naar-digitaal-omzetter om verbinding te maken met een ESP-microcontroller. Een MAX31865-versterker is een digitale RTD-omzetter in de vorm van een klein extra bord.
 
@@ -61,7 +61,7 @@ Opmerking: De mDNS-naam wordt geconfigureerd zonder protocol (http://) en zonder
 
 ### Dashboard
 
-Via het dashboard kunnen elementen eenvoudig worden getoond en verborgen. Als er bijvoorbeeld geen herschikking wordt gebruikt, moet het element Herschikking voor het dashboard worden gedeactiveerd. Uitgeschakelde items verminderen het verkeer.
+Met Dashboard kun je eenvoudig elementen weergeven en verbergen. Als er bijvoorbeeld geen herschikking wordt gebruikt, moet het herschikkingselement voor de Dashboard worden gedeactiveerd. Uitgeschakelde items verminderen het verkeer.
 
 ### Loggen
 
@@ -107,8 +107,7 @@ De tijdzone wordt gebruikt om de juiste tijd te bepalen, inclusief zomer- en win
 |Afrika/Dakar |GMT0 |
 |Afrika/Dar_es_Salaam |EAT-3 |
 |Afrika/Djibouti |EAT-3 |
-|Afrika/Douala |WAT-1 |
-|Afrika/El_Aaiun |<+01>-1 |
+|Afrika/Douala |WAT-1 ||Afrika/El_Aaiun |<+01>-1 |
 |Afrika/Vrijstad |GMT0 |
 |Afrika/Gaborone |CAT-2 |
 |Afrika/Harare |CAT-2 |
@@ -158,8 +157,8 @@ De tijdzone wordt gebruikt om de juiste tijd te bepalen, inclusief zomer- en win
 |Amerika/Argentinië/Tucuman |<-03>3 |
 |Amerika/Argentinië/Ushuaia |<-03>3 |
 |Amerika/Aruba |AST4 |
-|Amerika/Asunción|<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
-|Amerika/Atikokan |EST5 |
+|Amerika/Asuncion |<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
+|Amerika/Atikokan|EST5 |
 |Amerika/Bahia |<-03>3 |
 |Amerika/Bahia_Banderas |CST6 |
 |Amerika/Barbados |AST4 |
@@ -260,10 +259,10 @@ De tijdzone wordt gebruikt om de juiste tijd te bepalen, inclusief zomer- en win
 |Amerika/Puerto_Rico |AST4 |
 |Amerika/Punta_Arenas |<-03>3 |
 |Amerika/Rainy_River |CST6CDT,M3.2.0,M11.1.0 |
-|Amerika/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0|
-|Amerika/Recife |<-03>3 |
+|Amerika/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0 |
+|Amerika/Recife |<-03>3|
 |Amerika/Regina |CST6 |
-|Amerika/Resoluut |CST6CDT,M3.2.0,M11.1.0 |
+|Amerika/Resolute |CST6CDT,M3.2.0,M11.1.0 |
 |Amerika/Rio_Branco |<-05>5 |
 |Amerika/Santarem |<-03>3 |
 |Amerika/Santiago |<-04>4<-03>,M9.1.6/24,M4.1.6/24 |
@@ -312,8 +311,8 @@ De tijdzone wordt gebruikt om de juiste tijd te bepalen, inclusief zomer- en win
 |Azië/Bagdad |<+03>-3 |
 |Azië/Bahrein |<+03>-3 |
 |Azië/Bakoe |<+04>-4 |
-|Azië/Bangkok|<+07>-7 |
-|Azië/Barnaul |<+07>-7 |
+|Azië/Bangkok |<+07>-7 |
+|Azië/Schuuraul |<+07>-7 |
 |Azië/Beiroet |EET-2EEST,M3.5.0/0,M10.5.0/0 |
 |Azië/Bisjkek |<+06>-6 |
 |Azië/Brunei |<+08>-8 |
@@ -363,7 +362,7 @@ De tijdzone wordt gebruikt om de juiste tijd te bepalen, inclusief zomer- en win
 |Azië/Riyad |<+03>-3 |
 |Azië/Sachalin |<+11>-11 |
 |Azië/Samarkand |<+05>-5 |
-|Azië/Seoel |KST-9|
+|Azië/Seoel |KST-9 |
 |Azië/Shanghai |CST-8 |
 |Azië/Singapore |<+08>-8 |
 |Azië/Srednekolymsk |<+11>-11 |
@@ -414,7 +413,7 @@ De tijdzone wordt gebruikt om de juiste tijd te bepalen, inclusief zomer- en win
 |Europa/Bratislava |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Brussel |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Boekarest |EET-2EEST,M3.5.0/3,M10.5.0/4 |
-|Europa/Boedapest |CET-1CEST,M3.5.0,M10.5.0/3|
+|Europa/Boedapest |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Busingen |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Chisinau |EET-2EEST,M3.5.0,M10.5.0/3 |
 |Europa/Kopenhagen |CET-1CEST,M3.5.0,M10.5.0/3 |
@@ -466,7 +465,7 @@ De tijdzone wordt gebruikt om de juiste tijd te bepalen, inclusief zomer- en win
 |Europa/Zaporozhye |EET-2EEST,M3.5.0/3,M10.5.0/4 |
 |Europa/Zürich |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Indiaas/Antananarivo |EAT-3 |
-|Indisch/Chagos |<+06>-6 |
+|Indisch/Chagos |<+06>-6|
 |Indiaas/Kerstmis |<+07>-7 |
 |Indiaas/Cocos |<+0630>-6:30 |
 |Indiaas/Comoro |EAT-3 |
@@ -517,8 +516,8 @@ De tijdzone wordt gebruikt om de juiste tijd te bepalen, inclusief zomer- en win
 |Enz./GMT |GMT0 |
 |Enz/GMT-0 |GMT0 |
 |Enz/GMT-1 |<+01>-1 |
-|Enz./GMT-2|<+02>-2 |
-|Enz/GMT-3 |<+03>-3 |
+|Enz/GMT-2 |<+02>-2 |
+|Enz./GMT-3|<+03>-3 |
 |Enz/GMT-4 |<+04>-4 |
 |Enz/GMT-5 |<+05>-5 |
 |Enz/GMT-6 |<+06>-6 |

@@ -1,6 +1,6 @@
 # KleinerBrauhelfer2
 
-Från version 2.5.0 har programmet [ kleineBrauhelfer2](https:// kleine-brauhelfer.de/) ett exportfilter för Brautomat. Receptutveckling och design är möjlig i alla tänkbara detaljer med det lilla brygghjälpen2. Med fuskbladet erbjuder kbh2 ett mycket bra och hjälpsamt flödesschema för praktisk implementering i bryggeriköket. Med exportfiltret för Brautomat kan alla steg användas.
+Från version 2.5.0 har programmet [ kleineBrauhelfer2](https://kleiner-brauhelfer.de/) ett exportfilter för Brautomat. Receptutveckling och design är möjlig i alla tänkbara detaljer med det lilla brygghjälpen2. Med fuskbladet erbjuder kbh2 ett mycket bra och hjälpsamt flödesschema för praktisk implementering i bryggeriköket. Med exportfiltret för Brautomat kan alla steg användas.
 
 ## Kbh2-flikens mäskningsplan
 
@@ -33,18 +33,18 @@ kbh2 tidsspecifikationen "hur länge är humletillsatsen tillagad" omvandlas til
 
 ### Gör lite fram och tillbaka matematik
 
-Humletillsatsen visas i bild kbh2. Den första humletillsatsen är "Hallertauer Perle 7% 2020" med en koktid på 65 minuter. En andra parameter är viktig i detta sammanhang: på vänster sida är den totala tillagningstiden grönmarkerad som 80 minuter. Så vörten kokas utan humle i 15 minuter. Den andra tillsatsen av humle är "Hallertauer Tradition 5,7% 2020" humle med en koktid på 15 minuter. Under de sista 15 minuterna av tillagningen av vörten har Hallertau Perle fortfarande 15 minuters tillagningstid kvar av de ursprungliga 65 minuterna och den andra tillsatsen av Hallertau Tradition-humle tillagas i 15 minuter av de återstående 15 minuterna av tillagningstiden. Den sista tillsatsen av humle tillsätts för knackning, d.v.s. efter kokningnde.
+Humletillsatsen visas i bild kbh2. Den första humletillsatsen är "Hallertauer Perle 7% 2020" med en koktid på 65 minuter. En andra parameter är viktig i detta sammanhang: på vänster sida är den totala tillagningstiden grönmarkerad som 80 minuter. Så vörten kokas utan humle i 15 minuter. Den andra tillsatsen av humle är "Hallertauer Tradition 5,7% 2020" humle med en koktid på 15 minuter. Under de sista 15 minuterna av tillagningen av vörten har Hallertau Perle fortfarande 15 minuters tillagningstid kvar av de ursprungliga 65 minuterna och den andra tillsatsen av Hallertau Tradition-humle tillagas i 15 minuter av de återstående 15 minuterna av tillagningstiden. Den sista tillsatsen av humle tillsätts för knackning, d.v.s. efter avslutad kokning.
 
-Uppgiften för Brautomat är att indikera tidpunkten då humle tillsätts under bryggning och, idealiskt, att påminna människor om tillsatsen av humle med en akustisk signal.
+Uppgiften för Brautomat är att ange tidpunkten för tillsättning av humle under bryggning och helst med en aktustien liten signal för att påminna dig om tillsatsen av humle.
 
-I detta exempel anges en total tillagningstid på 80 minuter och en första tillsats av "Hallertauer Perle"-humle med en tillagningstid på 65 minuter. Detta resulterar i en skillnad på 15 minuters tillagningstid utan att tillsätta humle. Det första steget, kokning av vörten, varar i 15 minuter. Nu ska den första tillsatsen av humle göras. Den andra humletillsatsen "Hallertauer Tradition 5,7% 2020" har en tillagningstid på 15 minuter. Av de 65 minuterna är 15 minuter Hallertau Pearl och Hallertau Tradition tillsammans i vörten. 65 minuter minus 15 minuter ger ett intervall mellan humletillsatserna på 50 minuter. Hallertauer Perle humletillsatsen måste ges 50 minuter före Hallertauer Tradition humletillsatsen.
+I det här exemplet anges en total tillagningstid på 80 minuter och en första tillsats av "Hallertauer Perle"-humle med en tillagningstid på 65 minuter. Detta resulterar i en skillnad på 15 minuters tillagningstid utan att tillsätta humle. Det första steget, kokning av vörten, varar i 15 minuter. Nu ska den första tillsatsen av humle göras. Den andra humletillsatsen "Hallertauer Tradition 5,7% 2020" har en tillagningstid på 15 minuter. Av de 65 minuterna är 15 minuter Hallertau Pearl och Hallertau Tradition tillsammans i vörten. 65 minuter minus 15 minuter ger ett intervall mellan humletillsatserna på 50 minuter. Hallertauer Perle humletillsatsen måste ges 50 minuter före Hallertauer Tradition humletillsatsen.
 
 Den sista satsen humle "Hallertauer Tradition 5,7% 2020" ges för att knacka. När du slår ut den är tillagningen klar. Så tillsatsen av humle räknas inte in i den totala tillagningstiden.
 
-![Matlagning](/docs/img/hopfenbaren.jpg)
+![Matlagning](/docs/img/hopfengaben.jpg)
 
 Tillsatsen av humle beter sig på samma sätt. Det finns en efter-isomeriseringstid på 10 minuter. Att lägga till "Hallertauer Tradition 5,7% 2020" humle för vispning med en koktid på -5 minuter är en del av efter-isomeriseringen.
 
-_Tips: Om två tillsats av humle läggs till samtidigt, ställs den första tillsatstiden för humle till 0 minuter och den andra tillsatsen av humle ställs in på den faktiska tillsatstiden. Logiken är enkel enligt beräkningen ovan: intervallet mellan två hopptillägg till samma nollpunkt är 0 minuter._
+_Tips: Om två humletillsatser läggs till samtidigt, ställs den första humletillsatstiden in på 0 minuter och den andra humletillsatsen ställs in på den faktiska tillsatstiden. Logiken är enkel enligt beräkningen ovan: intervallet mellan två hopptillägg till samma nollpunkt är 0 minuter._
 
 Tilläggen från kbh2 från flikarna Mashing och Boiling beter sig på samma sätt som humletillsatserna. Tillsatser från kbh2-flikarna vattenbehandling och jäsning stöds inte.

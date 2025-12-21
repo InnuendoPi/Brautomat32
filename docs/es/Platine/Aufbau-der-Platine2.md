@@ -4,7 +4,7 @@ Esta breve guía describe la estructura del tablero. La estructura del consejo n
 
 La lista de piezas de la placa:
 
-![Lista de piezas](/docs/img/Aufbau1.jpg)
+![BOM](/docs/img/Aufbau1.jpg)
 
 Número 1: Resistencia 4,7kOhm\
 Número 2: conector JST-HX (blanco) y bloque de terminales de tornillo de 5 pines\
@@ -17,17 +17,17 @@ La posición del zócalo JST-HX es una alternativa al bloque de terminales de to
 
 | Número | Nombre del artículo | Enlace al artículo |
 | ----------------------------------------------- | ------------------------------ | --------------------------------- |
-| 3 | Bloque de terminales de tornillo de 3 pines RM 2,54 | [amazon](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 3 | Bloque de terminales de tornillo de 3 pines RM 2,54 | [amazonas](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 opcional | Bloque de terminales de tornillo de 3 pines RM 2,54 | |
-| 1 | Bloque de terminales de tornillo de 5 pines RM 2,54 | [amazon](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 1 | Bloque de terminales de tornillo de 5 pines RM 2,54 | [amazonas](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 alternativa al bloque de terminales de tornillo de 5 pines | JST-HX casquillo 90° RM 2,54 | (voelkner D17526) |
-| 2 | Bloque de terminales de tornillo de 8 pines RM 2,54 | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| 2 | Bloque de terminales de tornillo 12 pines RM 2.54| [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| 1 | Cabezal de pasador RM 2,54 | [amazon](https://www.amazon.de/dp/B01MQ5HJYQ?ref_=pe_27091401_487187591_302_E_DDE_dt_1) |
-| 1 | Resistencia 4,7kOhm | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
-| 1 opcional | Zumbador pasivo 12mm 3V | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
-| 1 ESP32 | ESP32 D1 mini | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
-| 1 opcional | Pantalla Nextion de 3,5"
+| 2 | Bloque de terminales de tornillo de 8 pines RM 2,54 | [amazonas](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 2 | Bloque de terminales de tornillo 12 pines RM 2.54| [amazonas](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 1 | Cabezal de pasador RM 2,54 | [amazonas](https://www.amazon.de/dp/B01MQ5HJYQ?ref_=pe_27091401_487187591_302_E_DDE_dt_1) |
+| 1 | Resistencia 4,7kOhm | [amazonas](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
+| 1 opcional | Zumbador pasivo 12mm 3V | [amazonas](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
+| 1 ESP32 | ESP32 D1 mini | [amazonas](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
+| 1 opcional | Pantalla Nextion 3,5" | [amazon]https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
 |                                                       |                                |                                   |
 
 _Nota: los enlaces o números de artículos enumerados son puramente informativos y no están vinculados a programas de marketing o afiliados._
@@ -36,7 +36,7 @@ La pantalla Nextion de 3,5 pulgadas está disponible en versión Básica, Discov
 
 ## Consideraciones antes de la construcción
 
-La placa de circuito puede variar dependiendo de la conexión a la cocina de inducción.hfeld GGM IDS se puede equipar de diferentes maneras:
+La placa se puede equipar de forma diferente según la conexión a la placa de inducción GGM IDS:
 
 1.1 Se utiliza el cable original de la central GGM IDS
 
@@ -56,7 +56,7 @@ Dos notas sobre la inserción de los bloques de terminales de tornillo:
 2. Los bloques de terminales de tornillo se fijan con un punto de soldadura. A continuación se comprueba el ajuste correcto. A continuación se sueldan todos los puntos de soldadura.
 
 A continuación, los bloques de terminales de tornillo se insertan y sueldan paso a paso.\
-En el paso número 1, se insertan los dos bloques de terminales de tornillo de 12 pines. Los GPIO D9 a D19 de ESP32 están conectados a los 12 bloques de terminales de tornillo.
+En el paso número 1 la zSe utilizan bloques de terminales de tornillo blancos de 12 pines. Los GPIO D9 a D19 de ESP32 están conectados a los 12 bloques de terminales de tornillo.
 
 ![Bloque de terminales de tornillo](/docs/img/Aufbau2.jpg)
 
@@ -87,7 +87,7 @@ En el paso número 4, se inserta y suelda ya sea el zócalo JST-HX para el cable
 El zumbador piezoeléctrico es opcional. Este paso se puede omitir si no se desean señales acústicas.\
 El zumbador piezoeléctrico tiene un polo positivo y negativo.
 
-![Zumbador más menos](/docs/img/Aufbau8.jpg)
+![Zumbador Más Menos](/docs/img/Aufbau8.jpg)
 
 El polo positivo se inserta en la marca D8 y, en consecuencia, el polo negativo en la marca GND.
 
@@ -109,11 +109,11 @@ Resistencia de 4,7kOhm con 5 anillos: amarillo - violeta - negro - marrón - [to
 
 Las patas de la resistencia se doblan ligeramente hacia afuera por la parte posterior y se sueldan. Utilice cortadores laterales para cortar las patas por encima del ojo de soldadura.
 
-## Monte el microcontrolador ESP en la basenorte
+## Monte el microcontrolador ESP
 
 Al montar la base, el microcontrolador ESP se puede retirar de la placa en cualquier momento. El socketing también es útil para solucionar problemas.
 
-![Enchufe](/docs/img/Aufbau14.jpg)
+![Socket](/docs/img/Aufbau14.jpg)
 
 El volumen de suministro de los microcontroladores ESP incluye el adaptador número 1. Además, se requiere un cabezal de clavija número 2 con un paso de 2,54 mm.
 
@@ -123,10 +123,10 @@ Para el enchufe se necesitan adaptadores y cabezales de clavija. Primero se cone
 
 _Consejo: el cabezal de clavija se entrega como cabezal de 40 clavijas. La longitud total del cabezal del pasador se inserta en el adaptador. El saliente del adaptador está doblado en el extremo._
 
-![Enchufe](/docs/img/Aufbau12.jpg)
+![Socket](/docs/img/Aufbau12.jpg)
 
 Ahora se coloca el ESP y se fija con un punto de soldadura a cada lado. Ahora se comprueba el ajuste de las bases. A continuación se sueldan todos los puntos de soldadura.
 
 ![ESP32](/docs/img/Aufbau15.jpg)
 
-Por último, se deben comprobar todos los puntos de soldadura. Cuando todos los puntos de soldadura estén cerrados, el Brautomat estará listo.
+Finalmente, se deben practicar todos los puntos de soldadura.ser revisado. Cuando todos los puntos de soldadura estén cerrados, el Brautomat estará listo.

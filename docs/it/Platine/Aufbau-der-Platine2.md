@@ -4,7 +4,7 @@ Questa breve guida descrive la struttura del tabellone. La struttura del consigl
 
 L'elenco delle parti della scheda:
 
-![Elenco dei componenti](/docs/img/Aufbau1.jpg)
+![BOM](/docs/img/Aufbau1.jpg)
 
 Numero 1: resistenza 4,7 kOhm\
 Numero 2: presa JST-HX (bianca) e morsettiera a vite a 5 pin\
@@ -27,7 +27,7 @@ La posizione della presa JST-HX è un'alternativa alla morsettiera a vite a 5 pi
 | 1| Resistenza 4,7kOhm | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
 | 1 opzionale | Cicalino passivo 12mm 3V | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
 | 1 ESP32 | ESP32 D1 mini | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
-| 1 opzionale | Display successivo da 3,5".
+| 1 opzionale | Visualizza Nextion 3.5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
 |                                                       |                                |                                   |
 
 _Nota: i link o i numeri degli articoli elencati sono puramente informativi e non collegati a programmi di affiliazione/marketing._
@@ -36,7 +36,7 @@ Il display Nextion da 3,5 pollici è disponibile nelle versioni Basic, Discovery
 
 ## Considerazioni prima della costruzione
 
-La scheda elettronica può variare a seconda del collegamento al piano cottura a induzionehfeld GGM IDS può essere equipaggiato in diversi modi:
+Il piano può essere attrezzato diversamente a seconda del collegamento al piano ad induzione GGM IDS:
 
 1.1 Viene utilizzato il cavo originale del pannello di controllo GGM IDS
 
@@ -56,7 +56,7 @@ Due note sull'inserimento delle morsettiere a vite:
 2. Le morsettiere a vite sono fissate con un punto di saldatura. Successivamente viene controllato il corretto adattamento. Tutti i punti di saldatura vengono quindi saldati.
 
 Di seguito i morsetti a vite vengono inseriti e saldati passo dopo passo.\
-Nella fase numero 1 vengono inserite le due morsettiere a vite a 12 pin. I GPIO da D9 a D19 da ESP32 sono collegati alle 12 morsettiere a vite.
+Nel passaggio numero 1 zmorsettiere a vite bianche a 12 pin utilizzate. I GPIO da D9 a D19 da ESP32 sono collegati alle 12 morsettiere a vite.
 
 ![Morsettiera a vite](/docs/img/Aufbau2.jpg)
 
@@ -109,24 +109,24 @@ Resistenza da 4,7kOhm con 5 anelli: giallo - viola - nero - marrone - [tolleranz
 
 Le gambe della resistenza sono piegate leggermente verso l'esterno sul retro e saldate. Usa le taglierine laterali per tagliare le gambe sopra l'occhiello di saldatura.
 
-## Monta il microcontrollore ESP sulla basenn
+## Montare il microcontrollore ESP
 
 Montando la base, il microcontrollore ESP può essere rimosso dalla scheda in qualsiasi momento. Il socketing è utile anche durante la risoluzione dei problemi.
 
-![Presa](/docs/img/Aufbau14.jpg)
+![Socket](/docs/img/Aufbau14.jpg)
 
-La fornitura dei microcontrollori ESP comprende l'adattatore numero 1. Inoltre è necessaria un'intestazione pin numero 2 con un passo di 2,54 mm.
+La fornitura dei microcontrollori ESP comprende l'adattatore numero 1. Inoltre è necessaria una basetta pin numero 2 con un passo di 2,54 mm.
 
-![Elenco dei componenti](/docs/img/Aufbau11.jpg)
+![Elenco parti](/docs/img/Aufbau11.jpg)
 
-Per il socket sono necessari adattatori e connettori maschio. Il connettore pin viene prima inserito nell'adattatore, come mostrato al punto 3. Successivamente vengono inseriti gli adattatori con pin strip nel circuito stampato, due a sinistra e due a destra
+Per il socket sono necessari adattatori e connettori maschio. Il connettore pin viene prima inserito nell'adattatore, come mostrato nel numero 3. Successivamente vengono inseriti gli adattatori con pin strip nel circuito stampato, due a sinistra e due a destra
 
 _Suggerimento: l'intestazione del pin viene fornita come intestazione da 40 pin. L'intera lunghezza dell'intestazione del pin viene inserita nell'adattatore. La sporgenza dell'adattatore è piegata all'estremità._
 
-![Presa](/docs/img/Aufbau12.jpg)
+![Socket](/docs/img/Aufbau12.jpg)
 
 Ora l'ESP è montato e fissato con un punto di saldatura su ciascun lato. Ora viene controllato l'adattamento delle basi. Tutti i punti di saldatura vengono quindi saldati.
 
-![ESP32](/docs/img/Aufbau15.jpg)
+![ESP32]([[PERCORSO_22]])
 
-Infine, tutti i punti di saldatura dovrebbero essere controllati. Quando tutti i punti di saldatura sono chiusi, il Brautomat è pronto.
+Infine, tutti i punti di saldatura dovrebbero essere praticatiessere controllato. Quando tutti i punti di saldatura sono chiusi, il Brautomat è pronto.

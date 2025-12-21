@@ -1,10 +1,10 @@
 #AutoTune processo
 
-O processo AutoTune determina parâmetros adequados para o sistema de fermentação, para que o controle de temperatura no processo de mosturação possa ser realizado com a maior precisão possível. O foco está nas temperaturas REAIS e nas temperaturas ALVO correspondentes. Na prática, isto significa que o overshoot e o undershoot devem ser minimizados.
+O processo AutoTune determina parâmetros adequados para o sistema de fermentação para que o controle de temperatura no processo de mosturação possa ser realizado com a maior precisão possível. O foco está nas temperaturas REAIS e nas temperaturas ALVO correspondentes. Na prática, isto significa que o overshoot e o undershoot devem ser minimizados.
 
 Nota: Uma ultrapassagem (excedendo a temperatura nominal) de 0,5°C é normal. Dependendo do isolamento da caldeira e da energia de indução fornecida, a temperatura continuará a subir ligeiramente mesmo depois de desligar a placa.
 
-![AutoTune4](/docs/img/IDS-AutoTune-target.jpg)
+![AutoTune4](/docs/img/IDS-AutoTune-Ziel.jpg)
 
 A seguinte descrição dos valores PID destina-se apenas como uma ajuda para usar o firmware e pode ser ignorada. O processo AutoTune é descrito a partir de "O processo AutoTune: passo a passo."\
 O controlador PID controla o desempenho das placas. É importante determinar valores apropriados de P, I e D. Os valores PID são individuais para cada sistema de preparo e ambiente. AutoTune é um procedimento que ajuda a determinar valores adequados. A potência necessária das placas para passar da temperatura real à temperatura alvo é calculada a partir da soma dos três valores: Potência necessária = P + I + D\

@@ -1,6 +1,6 @@
 #KleinerBrauhelfer2
 
-Od wersji 2.5.0 program [kleineBrauhelfer2](https://kleine-brauhelfer.de/) posiada filtr eksportu dla Brautomat. Dzięki małemu urządzeniu do parzenia2 możliwe jest opracowywanie receptur i projektowanie w każdym możliwym szczególe. Dzięki ściągawce kbh2 oferuje bardzo dobry i pomocny schemat blokowy do praktycznego wdrożenia w kuchni browaru. Za pomocą filtra eksportu dla Brautomat można zastosować wszystkie kroki.
+Od wersji 2.5.0 program [ kleineBrauhelfer2](https://kleiner-brauhelfer.de/) posiada filtr eksportu dla Brautomat. Dzięki małemu urządzeniu do parzenia2 możliwe jest opracowywanie receptur i projektowanie w każdym możliwym szczególe. Dzięki ściągawce kbh2 oferuje bardzo dobry i pomocny schemat blokowy do praktycznego wdrożenia w kuchni browaru. Za pomocą filtra eksportu dla Brautomat można zastosować wszystkie kroki.
 
 ## Plan mieszania zakładek kbh2
 
@@ -33,15 +33,15 @@ Specyfikacja czasu kbh2 „jak długo gotowany jest dodatek chmielu” jest konw
 
 ### Wykonaj trochę obliczeń matematycznych w tę i z powrotem
 
-Dodatek chmielu pokazano na rysunku kbh2. Pierwszym dodatkiem chmielowym jest „Hallertauer Perle 7% 2020” z czasem gotowania 65 minut. W tym kontekście ważny jest drugi parametr: po lewej stronie całkowity czas gotowania zaznaczony jest na zielono i wynosi 80 minut. Tak więc brzeczkę gotuje się bez chmielu przez 15 minut. Drugim dodatkiem chmielu jest chmiel „Hallertauer Tradition 5,7% 2020” z czasem gotowania 15 minut. W ciągu ostatnich 15 minut gotowania brzeczki Hallertau Perle pozostało jeszcze 15 minut gotowania z pierwotnych 65 minut, a drugi dodatek chmielu Hallertau Tradition gotuje się przez 15 minut z pozostałych 15 minut gotowania. Ostatni dodatek chmielu dodaje się do pukania, czyli po ugotowaniunie.
+Dodatek chmielu pokazano na rysunku kbh2. Pierwszym dodatkiem chmielowym jest „Hallertauer Perle 7% 2020” z czasem gotowania 65 minut. W tym kontekście ważny jest drugi parametr: po lewej stronie całkowity czas gotowania zaznaczony jest na zielono i wynosi 80 minut. Tak więc brzeczkę gotuje się bez chmielu przez 15 minut. Drugim dodatkiem chmielu jest chmiel „Hallertauer Tradition 5,7% 2020” z czasem gotowania 15 minut. W ciągu ostatnich 15 minut gotowania brzeczki Hallertau Perle pozostało jeszcze 15 minut gotowania z pierwotnych 65 minut, a drugi dodatek chmielu Hallertau Tradition gotuje się przez 15 minut z pozostałych 15 minut gotowania. Ostatni dodatek chmielu dodaje się do pukania, czyli po zakończeniu gotowania.
 
-Zadaniem Brautomat jest wskazanie momentu dodania chmielu podczas warzenia, a w idealnym przypadku przypomnienie o dodaniu chmielu sygnałem dźwiękowym.
+Zadaniem Brautomat jest wskazanie czasu dodania chmielu podczas warzenia, a najlepiej z aktustimały sygnał przypominający o dodaniu chmielu.
 
 W tym przykładzie podano całkowity czas gotowania wynoszący 80 minut i pierwszy dodatek chmielu „Hallertauer Perle” o czasie gotowania wynoszącym 65 minut. Skutkuje to różnicą 15 minut czasu gotowania bez dodatku chmielu. Pierwszy etap, gotowanie brzeczki, trwa 15 minut. Teraz należy dokonać pierwszego dodatku chmielu. Czas gotowania drugiego dodatku chmielowego „Hallertauer Tradition 5,7% 2020” wynosi 15 minut. Z 65 minut 15 minut to Hallertau Pearl i Hallertau Tradition razem w brzeczce. 65 minut minus 15 minut skutkuje 50-minutową przerwą między dodawaniami chmielu. Dodatek chmielu Hallertauer Perle należy podać 50 minut przed dodaniem chmielu Hallertauer Tradition.
 
 Ostatnia partia chmielu „Hallertauer Tradition 5,7% 2020” oddawana jest do pukania. Po wybiciu gotowanie jest zakończone. Zatem dodatek chmielu nie wlicza się do całkowitego czasu gotowania.
 
-![Gotowanie](/docs/img/hopfenbaren.jpg)
+![Gotowanie](/docs/img/hopfengaben.jpg)
 
 Dodatek chmielu zachowuje się w ten sam sposób. Czas po izomeryzacji wynosi 10 minut. Dodanie chmielu „Hallertauer Tradition 5,7% 2020” do ubijania z czasem wrzenia wynoszącym -5 minut jest częścią postizomeryzacji.
 

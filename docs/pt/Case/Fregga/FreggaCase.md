@@ -10,8 +10,8 @@ A caixa é dividida em dois conjuntos, a base da caixa e a tampa da caixa. Cada 
 * Somente exibição
 * sem recortes (sem display, sem PWM, sem interruptor principal)
 
-![Tampa com display e PWM](/docs/img/Fregga_Deckel_voll.jpg)
-![Tampa com display e dois PWM](/docs/img/Fregga_Deckel_Aktoren.jpg) \
+![Capa com display e PWM](/docs/img/Fregga_Deckel_voll.jpg)
+![Capa com display e dois PWM](/docs/img/Fregga_Deckel_Aktoren.jpg) \
 ![Tampa com display](/docs/img/FreggaCase_Deckel_Display.jpg)
 ![tampa fechada](/docs/img/FreggaCase_Deckel_ohne.jpg)
 
@@ -22,7 +22,7 @@ A caixa é dividida em dois conjuntos, a base da caixa e a tampa da caixa. Cada 
 * com 2 conexões
 * sem conexões
 
-![Parte inferior com 4 conexões](/docs/img/FreggaCase_Unterteil_voll.jpg) ![Parte inferior com conexões](/docs/img/FreggaCase_Unterteil_drei.jpg)
+![Base com 4 conexões](/docs/img/FreggaCase_Unterteil_voll.jpg) ![Base com conexões](/docs/img/FreggaCase_Unterteil_drei.jpg)
 
 ![Parte inferior com 2 conexões](/docs/img/FreggaCase_Unterteil_zwei.jpg) ![Parte inferior sem conexões](/docs/img/FreggaCase_Unterteil_ohne.jpg)
 
@@ -34,9 +34,9 @@ A caixa é dividida em dois conjuntos, a base da caixa e a tampa da caixa. Cada 
 
 Parafuso cilíndrico M5x25\
 Inserções roscadas M5 e M3S\
-[Plugue de aviação SP13]. B6H27L/ref=sr_1_21?crid=30CZ33B7CJLY3&dib=eyJ2IjoiMSJ9.Jfzt-kvFhs9kL5qFCb5wUNWmk2NrGFhgRKnal0OardiJ6pmt9lv8FYYSR-vM_4Jh K55vKwoyakt7y9-6ltCzbzHtrOT7ceV7gVA9-DIgMesCxzpp4IRGFJ6KNXE3y1fw-jR9DeeLFE9kgv8MZtEKyA.YooKp7XlBYJe27--r9tj5MnV8dewdtx NksmMoxO1_1Y&dib_tag=se&keywords=plugue de aviação+sp13&qid=1705302837&sprefix=plugue de aviação+sp%2Caps%2C362&sr=8-21)\
-O módulo PWM
-[O módulo de relé].
+[Conector de aviação SP13](https://www.amazon.de/Anschlussstecker-Luftfahrtstecker-wasserdichte-Sto%C3%9Fverbinder-Au%C3%9Fenlampen/dp/B0B6B6H27L/ref=sr_1_21?crid=30CZ33B7CJLY3&dib=eyJ2IjoiMSJ9.Jfzt-kvFhs9kL5qFCb5wUNWmk2NrGFhgRKnal0OardiJ6pmt9lv8FYYSR-vM_4JhK55vKwoyakt7y9-6ltCzbzHtrOT7ceV7gVA9-DIgMesCxzpp4IRGFJ6KNXE3y1fw-jR9DeeLFE9kgv8MZtEKyA.YooKp7XlBYJe27--r9tj5MnV8dewdtxNksmMoxO1_1Y&dib_tag=se&keywords=luftfahrtstecker+sp13&qid=1705302837&sprefix=luftfahrtstecker+sp%2Caps%2C362&sr=8-21)\
+[O módulo PWM](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_56603DDHC44WFNJ0BFM4)\
+[O módulo de relé](https://www.amazon.de/dp/B07PY7LF9Z/?coliid=IHJD818Z5259W&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_J3D8XGQB34CH8FXPD06G)
 
 ## Imagens
 

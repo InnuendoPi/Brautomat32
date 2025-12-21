@@ -1,8 +1,8 @@
 # Režim fermentace
 
-V režimu fermentoru zpracovává Brautomat32 plán fermentace shora dolů stejným způsobem jako plán rmutu. Ovládací panel má stejné funkce.
+V režimu fermentoru zpracovává Brautomat32 plán fermentace shora dolů stejným způsobem jako plán rmutu. controller Deck má stejné funkce.
 
-![Dashboard Fermenter](/docs/img/fermenter_dash.jpg)
+![Fermenter Dashboard](/docs/img/fermenter_dash.jpg)
 
 Zpracování kroků má důležitý rozdíl:
 

@@ -16,7 +16,7 @@ L'audio mp3 richiede un "gesto dell'utente" sui dispositivi iOS, come un evento 
 
 Tutti i principali browser come MS Edge, Chrome o Firefox dispongono di opzioni per la riproduzione multimediale automatica nelle impostazioni sotto le autorizzazioni del sito web. Si consiglia di aggiungere il sito Web da Brautomat all'elenco Consenti. Nell'immagine seguente, la pagina Web da Brautomat è stata aggiunta con il nome mDNS nel browser Microsoft Edge. In alternativa è possibile inserire anche l'indirizzo IP
 
-![media](/docs/img/autoplay-media.jpg)
+![supporto](/docs/img/autoplay-media.jpg)
 
 Con questa impostazione, gli allarmi mp3 possono sostituire un cicalino piezoelettrico.
 
@@ -33,9 +33,9 @@ La lunghezza della barra rossa sotto la vista IDS e Recast mostra il tempo di ri
 
 #### MashBud
 
-Questa vista mostra il primo piano cottura. Viene visualizzato il tempo di riposo attuale con la temperatura effettiva e quella nominale, nonché il tempo rimanente attuale. La lunghezza della barra rossa sotto le temperature mostra l'andamento del riposo attuale. Il simbolo a destra del tempo rimanente mostra se la pausa successiva inizierà automaticamente (autonext): verde significa automatico, rosso significa pausa. Inoltre, viene visualizzato il controller deck con le funzioni corrispondenti.
+Questa vista mostra il primo piano cottura. Viene visualizzato il tempo di riposo attuale con la temperatura effettiva e quella nominale, nonché il tempo rimanente attuale. La lunghezza della barra rossa sotto le temperature mostra l'andamento del riposo attuale. Il simbolo a destra del tempo rimanente mostra se la prossima pausa inizierà automaticamente (autonext): verde significa automatico, rosso significa pausa. Inoltre viene visualizzato il controller Deck con le funzioni corrispondenti.
 
-![Visualizza](/docs/img/brewpage-sm.jpg)
+![Visualizza]([[PERCORSO_2]])
 
 #### Modalità manuale (solo per GGM IDS2)
 
@@ -47,9 +47,9 @@ Un display è opzionale. Il Brautomat supporta solo i display touch Nextion HMI 
 
 La configurazione del display avviene tramite scheda SD. Il file TFT della cartella Info che corrisponde al display viene copiato sulla scheda SD e inserito nel display. Non appena si accende il display inizia la configurazione. Il processo dura circa un minuto. L'avanzamento viene visualizzato sul display. Una volta completata la configurazione, il display si spegnerà e la scheda SD verrà rimossa. Il display è ora pronto per l'uso.
 
-Va notato che SDA, SCL sulI PIN D1, D2 devono essere utilizzati.
+Si tenga presente che SDA, SCL devono essere gestiti sui PIN D1, D2.
 
-### Sensori PT100x MAX31865 Attiva l'amplificatore
+### Sensori PT100x MAX31865 AmplAttiva qui
 
 Se si utilizzano sensori analogici PT100x, questo interruttore deve essere attivato. Un sensore analogico PT100x richiede un convertitore da RTD a digitale per connettersi a un microcontrollore ESP. Un amplificatore MAX31865 è un convertitore digitale RTD sotto forma di una piccola scheda aggiuntiva.
 
@@ -59,9 +59,9 @@ Il DNS multicast viene utilizzato per risolvere i nomi host in indirizzi IP nell
 
 Nota: il nome mDNS è configurato nelle impostazioni di sistema (Brautomat) senza protocollo (http://) e senza dominio di primo livello (.local).
 
-### Cruscotto
+### Dashboard
 
-Gli elementi possono essere facilmente visualizzati e nascosti tramite la dashboard. Ad esempio, se non viene utilizzata alcuna rifusione, l'elemento Rifusione deve essere disattivato per il dashboard. Gli articoli disabilitati riducono il traffico.
+Utilizzando Dashboard puoi facilmente mostrare e nascondere gli elementi. Ad esempio, se non viene utilizzata alcuna rifusione, l'elemento Rifusione per il Dashboard dovrebbe essere disattivato. Gli articoli disabilitati riducono il traffico.
 
 ### Registrazione
 
@@ -107,8 +107,7 @@ Il fuso orario viene utilizzato per determinare l'ora corretta, inclusa l'ora le
 |Africa/Dakar |GMT0 |
 |Africa/Dar_es_Salaam |EAT-3 |
 |Africa/Gibuti |EAT-3 |
-|Africa/Douala |WAT-1 |
-|Africa/El_Aaiun |<+01>-1 |
+|Africa/Douala |WAT-1 ||Africa/El_Aaiun |<+01>-1 |
 |Africa/Freetown |GMT0 |
 |Africa/Gaborone |CAT-2 |
 |Africa/Harare |CAT-2 |
@@ -147,7 +146,7 @@ Il fuso orario viene utilizzato per determinare l'ora corretta, inclusa l'ora le
 |America/Araguaina |<-03>3 |
 |America/Argentina/Buenos_Aires|<-03>3 |
 |America/Argentina/Catamarca |<-03>3 |
-|America/Argentina/Cordoba |<-03>3 |
+|America/Argentina/Cordova |<-03>3 |
 |America/Argentina/Jujuy |<-03>3 |
 |America/Argentina/La_Rioja |<-03>3 |
 |America/Argentina/Mendoza |<-03>3 |
@@ -158,8 +157,8 @@ Il fuso orario viene utilizzato per determinare l'ora corretta, inclusa l'ora le
 |America/Argentina/Tucuman |<-03>3 |
 |America/Argentina/Ushuaia |<-03>3 |
 |America/Aruba |AST4 |
-|America/Asunción|<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
-|America/Atikokan |EST5 |
+|America/Asunción |<-04>4<-03>,M10.1.0/0,M3.4.0/0 |
+|America/Atikokan|EST5 |
 |America/Bahia |<-03>3 |
 |America/Bahia_Banderas |CST6 |
 |America/Barbados |AST4 |
@@ -209,7 +208,7 @@ Il fuso orario viene utilizzato per determinare l'ora corretta, inclusa l'ora le
 |America/Indiana/Marengo |EST5EDT,M3.2.0,M11.1.0 |
 |America/Indiana/Pietroburgo |EST5EDT,M3.2.0,M11.1.0 |
 |America/Indiana/Tell_City |CST6CDT,M3.2.0,M11.1.0 |
-|America/Indiana/Vevay |EST5EDT,M3.2.0,M11.1.0|
+|America/Indiana/Vevay |EST5EDT,M3.2.0,M11.1.0 |
 |America/Indiana/Vincennes |EST5EDT,M3.2.0,M11.1.0 |
 |America/Indiana/Winamac |EST5EDT,M3.2.0,M11.1.0 |
 |America/Inuvik |MST7MDT,M3.2.0,M11.1.0 |
@@ -260,8 +259,8 @@ Il fuso orario viene utilizzato per determinare l'ora corretta, inclusa l'ora le
 |America/Porto_Rico |AST4 |
 |America/Punta_Arenas |<-03>3 |
 |America/Rainy_River |CST6CDT,M3.2.0,M11.1.0 |
-|America/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0|
-|America/Recife |<-03>3 |
+|America/Rankin_Inlet |CST6CDT,M3.2.0,M11.1.0 |
+|America/Recife |<-03>3|
 |America/Regina |CST6 |
 |America/Risoluto |CST6CDT,M3.2.0,M11.1.0 |
 |America/Rio_Branco |<-05>5 |
@@ -312,8 +311,8 @@ Il fuso orario viene utilizzato per determinare l'ora corretta, inclusa l'ora le
 |Asia/Baghdad |<+03>-3 |
 |Asia/Bahrein |<+03>-3 |
 |Asia/Baku |<+04>-4 |
-|Asia/Bangkok|<+07>-7 |
-|Asia/Barnaul |<+07>-7 |
+|Asia/Bangkok |<+07>-7 |
+|Asia/Fienileaul |<+07>-7 |
 |Asia/Beirut |EET-2EEST,M3.5.0/0,M10.5.0/0 |
 |Asia/Bishkek |<+06>-6 |
 |Asia/Brunei |<+08>-8 |
@@ -332,7 +331,7 @@ Il fuso orario viene utilizzato per determinare l'ora corretta, inclusa l'ora le
 |Asia/Hong_Kong |HKT-8 |
 |Asia/Hovd |<+07>-7 |
 |Asia/Irkutsk |<+08>-8 |
-|Asia/Giakarta |WIB-7 |
+|Asia/Giacarta |WIB-7 |
 |Asia/Jayapura |WIT-9 |
 |Asia/Gerusalemme |IST-2IDT,M3.4.4/26,M10.5.0 |
 |Asia/Kabul |<+0430>-4:30 |
@@ -363,7 +362,7 @@ Il fuso orario viene utilizzato per determinare l'ora corretta, inclusa l'ora le
 |Asia/Riad |<+03>-3 |
 |Asia/Sachalin |<+11>-11 |
 |Asia/Samarcanda |<+05>-5 |
-|Asia/Seul |KST-9|
+|Asia/Seul |KST-9 |
 |Asia/Shanghai |CST-8 |
 |Asia/Singapore |<+08>-8 |
 |Asia/Srednekolymsk |<+11>-11 |
@@ -414,7 +413,7 @@ Il fuso orario viene utilizzato per determinare l'ora corretta, inclusa l'ora le
 |Europa/Bratislava |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Bruxelles |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Bucarest |EET-2EEST,M3.5.0/3,M10.5.0/4 |
-|Europa/Budapest |CET-1CEST,M3.5.0,M10.5.0/3|
+|Europa/Budapest |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Busingen |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Europa/Chisinau |EET-2EEST,M3.5.0,M10.5.0/3 |
 |Europa/Copenaghen |CET-1CEST,M3.5.0,M10.5.0/3 |
@@ -466,10 +465,10 @@ Il fuso orario viene utilizzato per determinare l'ora corretta, inclusa l'ora le
 |Europa/Zaporozhye |EET-2EEST,M3.5.0/3,M10.5.0/4 |
 |Europa/Zurigo |CET-1CEST,M3.5.0,M10.5.0/3 |
 |Indiano/Antananarivo |EAT-3 |
-|Indiano/Chagos |<+06>-6 |
+|Indiano/Chagos |<+06>-6|
 |Indiano/Natale |<+07>-7 |
 |Indiano/Cocos |<+0630>-6:30 |
-|Indiano/Comore |EAT-3 |
+|Indiano/Comoro |EAT-3 |
 |Indiano/Kerguelen |<+05>-5 |
 |Indiano/Mahe |<+04>-4 |
 |Indiano/Maldive |<+05>-5 |
@@ -517,8 +516,8 @@ Il fuso orario viene utilizzato per determinare l'ora corretta, inclusa l'ora le
 |Ecc/GMT |GMT0 |
 |Ecc/GMT-0 |GMT0 |
 |Ecc/GMT-1 |<+01>-1 |
-|Ecc/GMT-2|<+02>-2 |
-|Ecc/GMT-3 |<+03>-3 |
+|Ecc/GMT-2 |<+02>-2 |
+|Ecc/GMT-3|<+03>-3 |
 |Ecc/GMT-4 |<+04>-4 |
 |Ecc/GMT-5 |<+05>-5 |
 |Ecc/GMT-6 |<+06>-6 |

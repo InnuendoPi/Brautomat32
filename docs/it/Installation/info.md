@@ -12,13 +12,13 @@ Il firmware viene installato utilizzando lo script "Flashen.cmd" contenuto nell'
 
 Il sistema operativo MS Windows crea automaticamente una porta COM seriale quando si collega il microcontrollore ESP ad una porta USB del PC o del notebook.
 
-![Gestione dispositivi Windows](/docs/img/com.jpg)
+![Gestione dispositivi di Windows](/docs/img/com.jpg)
 
 È stato trovato un dispositivo ESP sulla COM7 nell'immagine. In rari casi in MS Windows non viene messa a disposizione automaticamente una porta COM seriale. I driver USB per i microcontrollori ESP sono disponibili sui seguenti siti Web: (MS Win e macOS)
 
-[!"
+[![ESP32 Driver](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-Lo script Flashen.cmd utilizza lo strumento esptool.exe <https://github.com/espressif/esptool>. ESPTool è disponibile gratuitamente per vari sistemi operativi (macOS, Linux). La versione di Windows a 64 bit è inclusa nell'archivio ZIP. ESPTool è concesso in licenza con GPL v2. Consultare il [file LICENZA](https://github.com/espressif/esptool/blob/master/LICENSE) allegato per averne una copia.
+Lo script Flashen.cmd utilizza lo strumento esptool.exe <https://github.com/espressif/esptool>. ESPTool è disponibile gratuitamente per vari sistemi operativi (macOS, Linux). La versione di Windows a 64 bit è inclusa nell'archivio ZIP. ESPTool è concesso in licenza con GPL v2. Per una copia, consultare il [file di LICENZA](https://github.com/espressif/esptool/blob/master/LICENSE) allegato.
 
 ### Flash manuale di MS Windows, macOS e Linux
 
@@ -61,10 +61,10 @@ La configurazione WLAN viene visualizzata utilizzando il pulsante "Configura WiF
 
 Qui è necessario inserire la WLAN (SSID e password). Con _Salva_ il Brautomat si riavvia e si connette alla WLAN. L'interfaccia web di Brautomat è raggiungibile nella WLAN locale tramite l'indirizzo <http://Brautomat.local>.
 
-Questo completa l'installazione di base. Il processo di flashing del firmware e di configurazione WLAN deve essere eseguito solo una volta. Il Brautomat deve ora essere configurato. La configurazione è descritta nella sezione _Impostazioni di baseung_ descritto. Inizialmente è possibile saltare la sezione successiva _Aggiornamento_.
+Questo completa l'installazione di base. Il processo di flashing del firmware e di configurazione WLAN deve essere eseguito solo una volta. Il Brautomat deve ora essere configurato. La configurazione è descritta nella sezione _Configurazione di base_. Inizialmente è possibile saltare la sezione successiva _Aggiornamento_.
 
 > **Nota:**\
-Il Braautomat32 tenta di stabilire una connessione con la configurazione WLAN (SSID e password) per un massimo di 20 secondi. Se non è possibile stabilire una connessione, ad esempio se la password è stata inserita in modo errato, il Brautomat32 si riavvierà in modalità AccessPoint.\
+Il Braautomat32 tenta di stabilire una connessione con la configurazione WLAN (SSID e password) per un massimo di 20 secondi. Se non è possibile stabilire una connessione, ad esempio se la password è stata inserita in modo erratoè stato utilizzato, il Braautomat32 si riavvia in modalità AccessPoint.\
 In rari casi e di solito solo quando il segnale WLAN è debole, il Braautomat32 non trova una WLAN adatta e si avvia anche in modalità AccessPoint dopo ca. 20 secondi. In questo caso sarà utile solo riavviare il Braautomat32.
 
 ##Aggiornamenti
@@ -75,7 +75,7 @@ L'area di memoria di un microcontrollore ESP è divisa in firmware e file system
 
 ### Aggiornamento Web
 
-![WebUpdate](/docs/img/webupdate.jpg)
+![AggiornamentoWeb](/docs/img/webupdate.jpg)
 
 Il WebUpdate riavvia il Brautomat più volte. Innanzitutto, il firmware viene aggiornato. Dopo un altro riavvio, il framework verrà aggiornato. Il processo WebUpdate viene registrato nel file webUpdateLog.txt.
 
@@ -88,7 +88,7 @@ Un aggiornamento del firmware tramite la selezione FileUpdate avviene in pochi p
 Innanzitutto è necessario scaricare il firmware attuale. L'archivio ZIP verrà quindi decompresso.\
 Nell'interfaccia web Brautomat selezionare la voce di menu Aggiorna e quindi FileUpdate. Viene visualizzato un semplice sito Web di aggiornamento (immagine 1):
 
-![AggiornamentoFile](/docs/img/fileupdate2.jpg)
+![AggiornamentoFile](/docs/img/dateiupdate2.jpg)
 
 In Firmware con il pulsante "Seleziona file" è ora necessario selezionare il file _firmware.bin_ dall'archivio ZIP (nella Figura 2). Facendo clic su Aggiorna firmware si avvia l'aggiornamento.
 

@@ -1,6 +1,6 @@
 #KleinerBrauhelfer2
 
-A partire dalla versione 2.5.0 il programma [kleineBrauhelfer2](https://kleine-brauhelfer.de/) dispone di un filtro di esportazione per il Brautomat. Lo sviluppo e la progettazione delle ricette sono possibili in ogni dettaglio immaginabile con il piccolo ausilio per la preparazione della birra2. Con il cheat sheet, kbh2 offre un diagramma di flusso molto valido e utile per l'implementazione pratica nella cucina del birrificio. Con il filtro di esportazione per Brautomat è possibile adottare tutti i passaggi.
+A partire dalla versione 2.5.0 il programma [ kleineBrauhelfer2](https://kleiner-brauhelfer.de/) dispone di un filtro di esportazione per il Brautomat. Lo sviluppo e la progettazione delle ricette sono possibili in ogni dettaglio immaginabile con il piccolo ausilio per la preparazione della birra2. Con il cheat sheet, kbh2 offre un diagramma di flusso molto valido e utile per l'implementazione pratica nella cucina del birrificio. Con il filtro di esportazione per Brautomat è possibile adottare tutti i passaggi.
 
 ## Il piano di schiacciamento delle schede kbh2
 
@@ -33,15 +33,15 @@ La specifica temporale kbh2 "per quanto tempo viene cotta l'aggiunta di luppolo"
 
 ### Fai un po' di calcoli avanti e indietro
 
-L'aggiunta del luppolo è mostrata nella figura kbh2. La prima aggiunta di luppolo è “Hallertauer Perle 7% 2020” con un tempo di bollitura di 65 minuti. Un secondo parametro è importante in questo contesto: sul lato sinistro è segnato in verde il tempo totale di cottura pari a 80 minuti. Quindi il mosto viene fatto bollire senza luppolo per 15 minuti. La seconda aggiunta di luppolo è il luppolo "Hallertauer Tradition 5,7% 2020" con un tempo di bollitura di 15 minuti. Negli ultimi 15 minuti di cottura del mosto, all'Hallertau Perle restano ancora 15 minuti di tempo di cottura dei 65 minuti originali e la seconda aggiunta di luppolo Hallertau Tradition cuoce per 15 minuti dei restanti 15 minuti di cottura. L'ultima aggiunta di luppolo viene effettuata per battitura, cioè dopo la bolliturande.
+L'aggiunta del luppolo è mostrata nella figura kbh2. La prima aggiunta di luppolo è “Hallertauer Perle 7% 2020” con un tempo di bollitura di 65 minuti. Un secondo parametro è importante in questo contesto: sul lato sinistro è segnato in verde il tempo totale di cottura pari a 80 minuti. Quindi il mosto viene fatto bollire senza luppolo per 15 minuti. La seconda aggiunta di luppolo è il luppolo "Hallertauer Tradition 5,7% 2020" con un tempo di bollitura di 15 minuti. Negli ultimi 15 minuti di cottura del mosto, all'Hallertau Perle restano ancora 15 minuti di tempo di cottura dei 65 minuti originali e la seconda aggiunta di luppolo Hallertau Tradition cuoce per 15 minuti dei restanti 15 minuti di cottura. L'ultima aggiunta di luppolo viene effettuata per battitura, cioè dopo la fine della bollitura.
 
-Il compito di Brautomat è quello di indicare il momento in cui viene aggiunto il luppolo durante la preparazione della birra e, idealmente, di ricordare alle persone l'aggiunta del luppolo con un segnale acustico.
+Il compito di Brautomat è quello di indicare il momento in cui aggiungere il luppolo durante la preparazione della birra e idealmente con un aktustiun piccolo segnale per ricordarvi l'aggiunta del luppolo.
 
 In questo esempio viene specificato un tempo di cottura totale di 80 minuti e una prima aggiunta di luppolo “Hallertauer Perle” con un tempo di cottura di 65 minuti. Ciò si traduce in una differenza di 15 minuti di tempo di cottura senza aggiungere luppolo. Il primo passaggio, la bollitura del mosto, dura 15 minuti. Ora bisogna fare la prima aggiunta di luppolo. La seconda aggiunta di luppolo “Hallertauer Tradition 5,7% 2020” ha un tempo di cottura di 15 minuti. Dei 65 minuti, 15 minuti sono Hallertau Pearl e Hallertau Tradition insieme nel mosto. 65 minuti meno 15 minuti danno come risultato un intervallo tra le aggiunte di luppolo di 50 minuti. L'aggiunta di luppolo Hallertauer Perle deve essere somministrata 50 minuti prima dell'aggiunta di luppolo Hallertauer Tradition.
 
 L'ultimo lotto di luppolo “Hallertauer Tradition 5,7% 2020” viene dato per bussare. Quando lo spegni, la cottura è terminata. Quindi l'aggiunta del luppolo non conta nel tempo totale di cottura.
 
-![Cucina](/docs/img/hopfenbaren.jpg)
+![Cucina](/docs/img/hopfengaben.jpg)
 
 L'aggiunta del luppolo si comporta allo stesso modo. C'è un tempo di post-isomerizzazione di 10 minuti. L'aggiunta del luppolo “Hallertauer Tradition 5.7% 2020” per la battitura con un tempo di ebollizione di -5 minuti fa parte della post-isomerizzazione.
 

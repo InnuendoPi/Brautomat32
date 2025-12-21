@@ -1,6 +1,6 @@
 # I controlli
 
-Direttamente sotto il piano di mash c'è il deck controller. Il processo di ammostamento è controllato con i 5 pulsanti Power, Play, Pause, Previous e Next.
+Direttamente sotto il piano di mash c'è il controller Deck. Il processo di ammostamento è controllato con i 5 pulsanti Power, Play, Pause, Previous e Next.
 
 ![Controllo](/docs/img/Buttons.jpg)
 
@@ -41,6 +41,6 @@ Il pulsante Successivo salta al passaggio successivo del piano di ammostamento o
 
 Il pulsante Comprimi comprime o comprime la tabella del piano di mash.
 
-![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
+![mashplan](/docs/img/Maischeplan-anzeigen.jpg)
 
 Il pulsante di chiusura rimane visibile anche dopo l'avvio dell'erogazione. Tutti i pulsanti per modificare il piano di ammostamento vengono nascosti dopo l'avvio della preparazione.

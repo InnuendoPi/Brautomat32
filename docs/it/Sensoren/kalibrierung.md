@@ -19,7 +19,7 @@ L'offset n. 1 (intervallo di valori inferiore) è la differenza di 0,0°C (bagno
 
 ## Calibrazione della procedura con termometro clinico
 
-Un termometro clinico è un termometro di riferimento adatto. Il campo di misurazione superiore di un termometro clinico è limitato a ca. 40°C. L'esecuzione della calibrazione corrisponde alla procedura per il bagno di ghiaccio e la temperatura di ebollizione. L'unica differenza: se si sceglie ad esempio 40°C come secondo punto di calibrazione, il piano cottura deve essere spento non appena viene raggiunta la temperatura nominale e rimane costante per ca. 60 secondi(nessuna fluttuazione). Solo allora è possibile avviare la calibrazione, ovvero la registrazione di 60 campioni di misurazione.
+Un termometro clinico è un termometro di riferimento adatto. Il campo di misurazione superiore di un termometro clinico è limitato a ca. 40°C. L'esecuzione della calibrazione corrisponde alla procedura per il bagno di ghiaccio e la temperatura di ebollizione. L'unica differenza: se si sceglie ad esempio 40°C come secondo punto di calibrazione, il piano cottura deve essere spento non appena viene raggiunta la temperatura nominale e rimane costante per ca. 60 secondi (nessuna fluttuazione). Solo allora il dÈ possibile avviare la calibrazione, ovvero la registrazione di 60 campioni di misurazione.
 
 ## File di registro della calibrazione del sensore
 

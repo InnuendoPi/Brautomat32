@@ -13,7 +13,7 @@ Instrukcje te są stale rozszerzane, poprawiane i udoskonalane. Pierwotnie w pro
 
 ## Układ tego przewodnika
 
-Instrukcje te nie są uporządkowane i nie trzeba ich czytać od góry do dołu. Obszar tematyczny _Oprogramowanie_, zwłaszcza rozdział _Plan zacierania_, zaleca się wprowadzić do Brautomat. W rozdziale _Plan zacieru_ na końcu objaśnień funkcji znajduje się przykładowy dzień warzenia.
+Instrukcje te nie są uporządkowane i nie trzeba ich czytać od góry do dołu. Obszar tematyczny _Oprogramowanie_, w szczególności rozdział _Plan zacierania_, zaleca się wprowadzić do Brautomat. W rozdziale _Plan zacieru_ na końcu objaśnień funkcji znajduje się przykładowy dzień warzenia.
 
 Niniejszy przewodnik jest podzielony na trzy obszary tematyczne:
 

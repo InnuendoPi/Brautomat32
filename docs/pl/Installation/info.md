@@ -16,9 +16,9 @@ System operacyjny MS Windows automatycznie tworzy port szeregowy COM podczas pod
 
 Na obrazie na COM7 znaleziono urządzenie ESP. W rzadkich przypadkach port szeregowy COM nie jest automatycznie udostępniany w systemie MS Windows. Sterowniki USB do mikrokontrolerów ESP dostępne są na stronach: (MS Win i macOS)
 
-[!"
+[![ESP32 Sterowniki](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-Skrypt Flashen.cmd wykorzystuje narzędzie esptool.exe <https://github.com/espressif/esptool>. ESPTool jest bezpłatnie dostępny dla różnych systemów operacyjnych (macOS, Linux). Wersja 64-bitowa systemu Windows jest zawarta w archiwum ZIP. ESPTool jest objęty licencją GPL v2. Kopia znajduje się w załączonym [pliku LICENCJI](https://github.com/espressif/esptool/blob/master/LICENSE).
+Skrypt Flashen.cmd wykorzystuje narzędzie esptool.exe <https://github.com/espressif/esptool>. ESPTool jest bezpłatnie dostępny dla różnych systemów operacyjnych (macOS, Linux). Wersja 64-bitowa systemu Windows jest zawarta w archiwum ZIP. ESPTool jest objęty licencją GPL v2. Zobacz załączony [plik LICENCJI](https://github.com/espressif/esptool/blob/master/LICENSE), aby uzyskać kopię.
 
 ### Ręczne flashowanie MS Windows, macOS i Linux
 
@@ -61,10 +61,10 @@ Konfiguracja sieci WLAN wyświetlana jest za pomocą przycisku „Konfiguruj WiF
 
 Tutaj należy wprowadzić sieć WLAN (SSID i hasło). Po wybraniu _Zapisz_ Brautomat uruchamia się ponownie i łączy z siecią WLAN. Interfejs sieciowy Brautomat jest dostępny w lokalnej sieci WLAN pod adresem <http://Brautomat.local>.
 
-Na tym kończy się podstawowa instalacja. Proces aktualizacji oprogramowania sprzętowego i konfiguracji sieci WLAN wystarczy wykonać tylko raz. Należy teraz skonfigurować Brautomat. Konfiguracja jest opisana w sekcji _Podstawowa konfiguracjanie_ opisane. Następną sekcję _Aktualizacja_ można początkowo pominąć.
+Na tym kończy się podstawowa instalacja. Proces aktualizacji oprogramowania sprzętowego i konfiguracji sieci WLAN wystarczy wykonać tylko raz. Należy teraz skonfigurować Brautomat. Konfiguracja jest opisana w rozdziale _Podstawowa konfiguracja_. Następną sekcję _Aktualizacja_ można początkowo pominąć.
 
 > **Uwaga:**\
-Brautomat32 próbuje nawiązać połączenie z konfiguracją WLAN (SSID i hasło) przez maksymalnie 20 sekund. Jeśli nie można nawiązać połączenia, na przykład jeśli hasło zostało wprowadzone niepoprawnie, Brautomat32 uruchomi się ponownie w trybie AccessPoint.\
+Brautomat32 próbuje nawiązać połączenie z konfiguracją WLAN (SSID i hasło) przez maksymalnie 20 sekund. Jeśli nie można nawiązać połączenia, na przykład w przypadku nieprawidłowego wprowadzenia hasłazostał użyty, wówczas Brautomat32 uruchamia się ponownie w trybie AccessPoint.\
 W rzadkich przypadkach i zwykle tylko wtedy, gdy sygnał WLAN jest słaby, Brautomat32 nie znajduje odpowiedniej sieci WLAN i uruchamia się również w trybie AccessPoint po ok. 20 sekund. W takim przypadku pomoże jedynie ponowne uruchomienie Brautomat32.
 
 ##Aktualizacje
@@ -88,9 +88,9 @@ Aktualizacja oprogramowania sprzętowego poprzez wybór FileUpdate odbywa się w
 Najpierw należy pobrać aktualne oprogramowanie sprzętowe. Następnie archiwum ZIP zostanie rozpakowane.\
 W interfejsie internetowym Brautomat wybierz pozycję menu Aktualizacja, a następnie FileUpdate. Wyświetli się prosta strona aktualizacji (rysunek 1):
 
-![FileUpdate](/docs/img/fileupdate2.jpg)
+![Aktualizacja pliku](/docs/img/dateiupdate2.jpg)
 
-W obszarze Firmware za pomocą przycisku „Wybierz plik” należy teraz wybrać plik _firmware.bin_ z archiwum ZIP (na rysunku 2). Kliknięcie Aktualizuj oprogramowanie sprzętowe rozpoczyna aktualizację.
+W obszarze Firmware za pomocą przycisku „Wybierz plik” należy teraz wybrać plik _firmware.bin_ z archiwum ZIP (na rysunku 2). Kliknięcie przycisku Aktualizuj oprogramowanie sprzętowe rozpoczyna aktualizację.
 
 Można także zaktualizować system plików Brautomat.
 
