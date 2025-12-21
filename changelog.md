@@ -1,20 +1,21 @@
 # Changelog
 
-ESP32 Arduino 3.3.4 ESP-IDF v5.5.1\
-VSCode 1.105 pioarduino IDE 1.1.5\
+ESP32 Arduino 3.3.5 ESP-IDF v5.5.1\
+VSCode 1.107 pioarduino IDE 1.1.5\
 InnuAPID AutoTune PID lib 1.8\
-InnuTicker Task Scheduler lib 0.7\
-InnuNextion Display lib 0.7\
+InnuTicker Task Scheduler lib 0.8\
+InnuNextion Display lib 0.8\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.59.8 RC2
+Version 1.59.9
 
+* Update:       Arduino 3.3.5
+* Fix:          Eingabeüberprüfung für Dateinamen erweitert (Sonderzeichen div. Sprachen)
 * Fix:          WiFi ConfigPortal WIFI_MODE korrigiert. Der AP Mode wurde nicht verlassen
 * Fix:          WiFi ConfigPortal minmiales Fallback, falls Dateisystem oder JS/CSS nicht verfügbar
-* Brautest:     Maischeplan mit GGM IDS2 feherlfrei durchlaufen (dev vTask sendCommand, ISR Interrupt)
 * Neu:          WiFi Setup Brautomat32 Captive Portal
 * Entfernt:     WiFiManager 2.0
 * Patch         WiFiManager 2.0 ESPAsyncWebserver 3.9
