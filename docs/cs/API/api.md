@@ -112,7 +112,7 @@ console.log(data);
 |-----------|----------|--------------|
 | `/reqKettle?id=${kettleid}` | ZÍSKEJTE | Vrací aktuální data kotle |
 | `/reqKettlePID?id=${kettleid}` | ZÍSKEJTE | Dotaz na parametry PID |
-| `/setKettle?id=${kettleid}` | PŘÍSPĚVEK | Změna údajů kotle |
+| `/setKettle?id=${kettleid}` | PŘÍSPĚVEK | Změnit údaje kotle |
 | `/setKettlePID?id=${kettleid}` | PŘÍSPĚVEK | PID změna parametru |
 | `/handlePower?id=${kettleid}` | PŘÍSPĚVEK | Povolit/zakázat výkon |
 

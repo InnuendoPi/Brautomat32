@@ -119,7 +119,7 @@ konsola.log(dane);
 | czajnik | Opis |
 |----------|----------|
 | 0 | Czajnik do zacieru |
-| 1 | Czajnik do parzenia |
+| 1 | Czajnik |
 | 2 | LDS |
 | 3 | Fermentator |
 
@@ -143,7 +143,7 @@ konsola.log(dane);
 | czajnik | Opis |
 |----------|----------|
 | 0 | Czajnik do zacieru |
-| 1 | Czajnik do parzenia |
+| 1 | Czajnik |
 | 2 | LDS |
 | 3 | Fermentator |
 | nazwa | Nazwa profilu |

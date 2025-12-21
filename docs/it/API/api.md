@@ -52,8 +52,8 @@ Brautomat Endpoint HTTP. Il server Web utilizza CORS e supporta le richieste **H
 
 | Punto finale | Metodo | Descrizione |
 |-----------|----------|--------------|
-| `/` | OTTIENI | Carica la homepage |
-| `/index`, `/index.htm`, `/index.html` | OTTIENI | Percorsi alternativi per la home page |
+| `/` | OTTIENI | Carica la home page |
+| `/index`, `/index.htm`, `/index.html` | OTTIENI | Percorsi alternativi per la homepage |
 
 ---
 

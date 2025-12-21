@@ -1,6 +1,6 @@
 # Ketelconfiguratie en gebruik
 
-De Brautomat32 biedt de mogelijkheid om maximaal drie ketels op te stellen. De eerste ketel heeft de interne aanduiding MASH en alternatief IDS. Deze ketel is nodig voor het maischproces. De twee andere ketels zijn optioneel. De tweede ketel heeft de interne aanduiding SUD, alternatief MLT en de derde ketel heeft de aanduiding HLT of Nachguss.
+De Brautomat32 biedt de mogelijkheid om maximaal drie ketels op te stellen. De eerste ketel heeft de interne aanduiding MASH en alternatief IDS. Deze ketel is nodig voor het maischen. De twee andere ketels zijn optioneel. De tweede ketel heeft de interne aanduiding SUD, alternatief MLT en de derde ketel heeft de aanduiding HLT of Nachguss.
 
 De drie ketels kunnen van het GGM-inductiekookplaat- of relaistype zijn. Een ketel van het relaistype is voorzien van een webhookverbinding.
 
@@ -77,54 +77,3 @@ Schakel Shelly uit om 13.00 uur: <http://192.168.1.5/relay/0?turn=off>
 De webhook-URL voor Shelly 1PM is: <http://192.168.1.5/relay/0?turn=> (zonder aan en uit). De parameter voor de webhookschakelaar moet worden ingesteld op 'aan/uit'.
 
 URL Tasmota: <http://192.168.x.x/cm?cmnd=Power1%201>
-
-## 🔧 Ketelregeling – direct vs. hybride
-
-Afhankelijk van de structuur kan de Brautomat worden gebruikt met **1 tot 3 ketels**. Elke ketel bestuurt zijn eigen kookplaat via een GPIO.  
-De Brautomat is ontworpen om automatisch stabiel te werken in alle omgevingen.
-
-### ⚙️ Twee mogelijke besturingstypes
-
-| Variant | Beschrijving | Voordelen | Opmerkingen |
-|-----------|---------------|-----------|-----------|
-| **Directe controle** | Het commando naar de kookplaat wordt direct uitgevoerd. Alle signalen worden rechtstreeks naar de uitgang van het hoofdprogramma gestuurd (bijvoorbeeld `loop()` of ticker). | • Eenvoudigste structuur<br>• Geen extra geheugen vereist<br>• Maximale snelheid | • Blokkeert de CPU kort (ca. 5 ms per commando)<br>• Niet geschikt voor meerdere ketels tegelijk |
-| **Hybride besturing** | Commando's worden via een interne **wachtrij** doorgegeven aan een afzonderlijke taak. De taak verwerkt alle opdrachten na elkaar. | • Stabiel met meerdere ketels<br>• Geen signaalbotsingen<br>• Achtergrondverwerking zonder CPU-blokkering | • Minimale extra geheugenvereiste (~4 kB)<br> |
-
-### 💡 Implementatie
-
-De Brautomat maakt gebruik van **Hybride besturing**. Deze is universeel inzetbaar en werkt inalle omgevingen, vooral in omgevingen met 2 of 3 inductiekookplaten:
-
-| Milieu | Aanbevolen variant | Rechtvaardiging |
-|-----------|--------------------|------------|
-| **1 ketel** | Hybride | dezelfde functie als directe modus, zonder nadeel |
-| **2 ketels** | Hybride | veilige buffering van opdrachten |
-| **3 ketels** | Hybride | voorkomt signaaloverlay |
-
-> 🔸Directe regeling is alleen geschikt voor speciale, zeer eenvoudige opstellingen (bijvoorbeeld enkele ketels met minimale code).  
->
-> 🔹 De hybride oplossing is de **standaard en aanbevolen variant** voor alle moderne ESP32-assemblages.
-
-### 📊 Technische vergelijking
-
-| Kenmerk | **Direct** | **Hybride** |
-|----------|------------|------------|
-| Geheugengebruik | ~0 kB | ~4 kB |
-| CPU-blokkering | ja (ca. 5 ms) | nee |
-| Stabiliteit (meerdere ketels) | beperkt | hoog |
-| Timingbeveiliging | hoog (1 ketel) | zeer hoog (1–3 ketels) |
-| Uitbreidbaarheid | laag | zeer goed |
-| Aanbevolen gebruik | eenvoudige individuele systemen | universele meerketelsystemen |
-
----
-
-### 🔍 Samenvatting
-
-Hybride bediening is de **aanbevolen en standaard geactiveerde modus**.  
-Het zorgt ervoor dat alle signalen op een gecoördineerde, veilige en tijdige manier worden verzonden, zelfs bij meerdere ketels -  
-zonder het hoofdproces te blokkeren.
-
-> ✅ **In het kort:**  
->
-> * Voor **1 ketel**: geen nadeel, zelfde prestatie  
-> * Voor **2-3 ketels**: volledige stabiliteit  
-> * Eén software voor alle varianten
