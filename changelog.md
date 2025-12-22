@@ -10,6 +10,13 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.1
+
+* Geändert:     PIN Interrupt deaktiviert (GGM IDS)
+* Geändert:     AutoTune Prozess: lambda R ist erst gültig, wenn ausreichend Temperaturdifferenz vorliegt
+* Geändert:     AutoTune Prozess: lambda R ist erst gültig, wenn die Messwerte in einem gültigen Bereich liegen
+* Geändert:     AutoTune Prozess: Extremwerte vom Temperatursensor werden entschärft
+
 Version 1.60.0 beta test
 
 * Neu:          Finite State Machine (FSM) - vollständige Konvertierung in unabhängige, non-blocking tasks
