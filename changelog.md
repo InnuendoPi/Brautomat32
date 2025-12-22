@@ -10,8 +10,18 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.2
+
+* Korrektur:    typo Debug log PID/AutoTune
+
+Änderungen verursachten zu häufig failed AutoTune:
+* Revert:       AutoTune Prozess: lambda R ist erst gültig, wenn ausreichend Temperaturdifferenz vorliegt
+* Revert:       AutoTune Prozess: lambda R ist erst gültig, wenn die Messwerte in einem gültigen Bereich liegen
+* Revert:       AutoTune Prozess: Extremwerte vom Temperatursensor werden entschärft
+
 Version 1.60.1
 
+* Korrektur:    typo Debug log PID/AutoTune
 * Geändert:     PIN Interrupt deaktiviert (GGM IDS)
 * Geändert:     AutoTune Prozess: lambda R ist erst gültig, wenn ausreichend Temperaturdifferenz vorliegt
 * Geändert:     AutoTune Prozess: lambda R ist erst gültig, wenn die Messwerte in einem gültigen Bereich liegen
