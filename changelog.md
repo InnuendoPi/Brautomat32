@@ -10,6 +10,10 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.5
+
+* Korrektur:    PID Relais/SSR Fehlerkorrektur powerSampleTime
+
 Version 1.60.4
 
 * Geändert:     das aktive Hardware Profil bei allen Kettels wird im Tab Profile angezeigt
