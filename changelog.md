@@ -10,14 +10,19 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.60.2
+Version 1.60.3
+
+* Korrektur:    AutoTune Messwert lambda L (Totzeit)
+* Geändert:     Anzahl valider Messwerte lambda R auf 45 erhöht
+* Geändert:     Start Messreihe lambda R ab 60 Sekunden
+* Geändert:     Mindestlaufzeit Messreihe lambda R erhöht auf 240 Sekunden
+* Geändert:     maximale Dauer Messreige lambda R auf 6 Minuten erhöht (failed)
+* Geändert:     Konvergenzkriterium angepasst
+* Korrektur:    Debuglog Ausgaben
+
+Version 1.60.2 (revert)
 
 * Korrektur:    typo Debug log PID/AutoTune
-
-Änderungen verursachten zu häufig failed AutoTune:
-* Revert:       AutoTune Prozess: lambda R ist erst gültig, wenn ausreichend Temperaturdifferenz vorliegt
-* Revert:       AutoTune Prozess: lambda R ist erst gültig, wenn die Messwerte in einem gültigen Bereich liegen
-* Revert:       AutoTune Prozess: Extremwerte vom Temperatursensor werden entschärft
 
 Version 1.60.1
 
