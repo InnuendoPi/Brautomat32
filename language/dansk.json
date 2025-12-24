@@ -476,5 +476,6 @@
   "SUD_HEATMIN": "Enzymområde start [0]",
   "TAB_AKT_STEP_9": "AutoTune startede",
   "TAB_AKT_TIMER_6": "vent venligst...",
-  "TAB_AKT_TIMER_7": "Fortsæt med Play-knappen"
+  "TAB_AKT_TIMER_7": "Fortsæt med Play-knappen",
+  "IDS_APROF": "Aktiv profil:"
 }

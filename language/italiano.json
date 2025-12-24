@@ -476,5 +476,6 @@
   "SUD_HEATMIN": "Inizio gamma enzimatica [0]",
   "TAB_AKT_TIMER_6": "attendere prego...",
   "TAB_AKT_STEP_9": "La sintonizzazione automatica è iniziata",
-  "TAB_AKT_TIMER_7": "Continua con il pulsante Riproduci"
+  "TAB_AKT_TIMER_7": "Continua con il pulsante Riproduci",
+  "IDS_APROF": "Profilo attivo:"
 }

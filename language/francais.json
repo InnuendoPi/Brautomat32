@@ -476,5 +476,6 @@
   "SUD_HEATMAX": "Fin de la plage des enzymes [0]",
   "TAB_AKT_TIMER_6": "S'il vous plaît, attendez...",
   "TAB_AKT_STEP_9": "Le réglage automatique a démarré",
-  "TAB_AKT_TIMER_7": "Continuer avec le bouton de lecture"
+  "TAB_AKT_TIMER_7": "Continuer avec le bouton de lecture",
+  "IDS_APROF": "Profil actif :"
 }

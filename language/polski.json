@@ -476,5 +476,6 @@
   "TAB_AKT_TIMER_6": "proszę czekać...",
   "TAB_AKT_STEP_9": "Rozpoczęło się automatyczne dostrajanie",
   "SUD_HEATMIN": "Początek zakresu enzymów [0]",
-  "TAB_AKT_TIMER_7": "Kontynuuj za pomocą przycisku odtwarzania"
+  "TAB_AKT_TIMER_7": "Kontynuuj za pomocą przycisku odtwarzania",
+  "IDS_APROF": "Aktywny profil:"
 }

@@ -476,5 +476,6 @@
   "SUD_HEATMIN": "Start av enzymområde [0]",
   "SUD_HEATMAX": "Enzymområde slutt [0]",
   "TAB_AKT_TIMER_6": "vennligst vent...",
-  "TAB_AKT_TIMER_7": "Fortsett med Play-knappen"
+  "TAB_AKT_TIMER_7": "Fortsett med Play-knappen",
+  "IDS_APROF": "Aktiv profil:"
 }

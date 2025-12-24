@@ -476,5 +476,6 @@
   "SUD_HEATMAX": "Enzyme range end [0]",
   "TAB_AKT_STEP_9": "AutoTune started",
   "TAB_AKT_TIMER_6": "please wait...",
-  "TAB_AKT_TIMER_7": "Continue with Play Button"
+  "TAB_AKT_TIMER_7": "Continue with Play Button",
+  "IDS_APROF": "Active profile:"
 }

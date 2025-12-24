@@ -476,5 +476,6 @@
   "SUD_HEATMIN": "Inicio del rango de enzimas [0]",
   "TAB_AKT_STEP_9": "AutoTune iniciado",
   "TAB_AKT_TIMER_6": "espere por favor...",
-  "TAB_AKT_TIMER_7": "Continuar con el botón Reproducir"
+  "TAB_AKT_TIMER_7": "Continuar con el botón Reproducir",
+  "IDS_APROF": "Perfil activo:"
 }

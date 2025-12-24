@@ -476,5 +476,6 @@
   "TAB_AKT_STEP_9": "AutoTune startade",
   "SUD_HEATMIN": "Start av enzymintervall [0]",
   "TAB_AKT_TIMER_6": "snälla vänta...",
-  "TAB_AKT_TIMER_7": "Fortsätt med Play-knappen"
+  "TAB_AKT_TIMER_7": "Fortsätt med Play-knappen",
+  "IDS_APROF": "Aktiv profil:"
 }

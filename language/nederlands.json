@@ -476,5 +476,6 @@
   "SUD_HEATMIN": "Begin van het enzymbereik [0]",
   "TAB_AKT_TIMER_7": "Ga verder met de afspeelknop",
   "TAB_AKT_STEP_9": "AutoTune is gestart",
-  "TAB_AKT_TIMER_6": "even geduld a.u.b...."
+  "TAB_AKT_TIMER_6": "even geduld a.u.b....",
+  "IDS_APROF": "Actief profiel:"
 }

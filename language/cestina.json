@@ -476,5 +476,6 @@
   "MISC_LOG_PID": "PID a AutoTune",
   "TAB_AKT_TIMER_6": "prosím čekejte...",
   "TAB_AKT_STEP_9": "AutoTune bylo spuštěno",
-  "TAB_AKT_TIMER_7": "Pokračujte tlačítkem Play"
+  "TAB_AKT_TIMER_7": "Pokračujte tlačítkem Play",
+  "IDS_APROF": "Aktivní profil:"
 }
