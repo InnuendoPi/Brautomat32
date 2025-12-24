@@ -254,6 +254,7 @@
     "IDS_DUTY": "Schaltzyklus [5000]",
     "IDS_DUTY_FERM": "Schaltzyklus [120000]",
     "IDS_NOPID": "Deaktiviere PID Würzekochen [on]",
+    "IDS_APROF": "Aktives Profil:",
     "IDS_HYST": "Hysteresis",
     "IDS_TT_HYST": "Hysteresis 0.0 - 1.0",
     "IDS_TT_SEN": "Sensorauswahl an MaischeSud Kessel",

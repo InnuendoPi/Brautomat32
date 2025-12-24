@@ -1,6 +1,6 @@
 {
-  "version": "1.60.3",
-  "release_date": "2025-12-23",
+  "version": "1.60.4",
+  "release_date": "2025-12-24",
   "type": "Development",
-  "notes": "beta test"
+  "notes": "new AutoTune proccess"
 }

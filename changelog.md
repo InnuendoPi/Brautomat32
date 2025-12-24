@@ -2,13 +2,18 @@
 
 ESP32 Arduino 3.3.5 ESP-IDF v5.5.1\
 VSCode 1.107 pioarduino IDE 1.1.5\
-InnuAPID AutoTune PID lib 1.10\
+InnuAPID AutoTune PID lib 1.10.14\
 InnuTask lib 0.10.12\
 InnuNextion Display lib 0.9\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
+
+Version 1.60.4
+
+* Geändert:     das aktive Hardware Profil bei allen Kettels wird im Tab Profile angezeigt
+* Korrektur:    type atune
 
 Version 1.60.3
 
