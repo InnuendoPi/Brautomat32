@@ -19,6 +19,7 @@ Version 1.60.6
 * Korrektur:    Web Interface Anzeige Elemente im Fermenter Modus
 * Geändert:     Anpassungen InnuAPID für den Kesseltyp webhook (größerer Schaltzyklus)
 * Geändert:     webhook timeout auf 2000ms für den Kesseltyp webhook reduziert
+* Korrektur:    AutoTune Start Messreihe lambda L für webhook
 
 Version 1.60.4
 
