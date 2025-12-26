@@ -10,9 +10,15 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.60.5
+Version 1.60.6
 
 * Korrektur:    PID Relais/SSR Fehlerkorrektur powerSampleTime
+* Korrektur:    Auswahl Webhook Power typo
+* Korrektur:    2-Punkte Kalibrierung Sensoren
+* Entfernt:     doppeltes Eingabefeld dutyCycle im Web Interface entfernt
+* Korrektur:    Web Interface Anzeige Elemente im Fermenter Modus
+* Geändert:     Anpassungen InnuAPID für den Kesseltyp webhook (größerer Schaltzyklus)
+* Geändert:     webhook timeout auf 2000ms für den Kesseltyp webhook reduziert
 
 Version 1.60.4
 
