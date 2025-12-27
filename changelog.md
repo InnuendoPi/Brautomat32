@@ -10,6 +10,12 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.7
+
+* Korrektur:    doppelter Aufruf AutoTune Start entfernt
+* Korrektur:    Web Interface Anzeige noiseband und Tooltipp korrigiert
+* Korrektur:    Kochen mit Hopfengabe 0 Minuten Dauer wurde nicht korrekt durchgeführt
+
 Version 1.60.6
 
 * Korrektur:    PID Relais/SSR Fehlerkorrektur powerSampleTime
@@ -24,7 +30,7 @@ Version 1.60.6
 Version 1.60.4
 
 * Geändert:     das aktive Hardware Profil bei allen Kettels wird im Tab Profile angezeigt
-* Korrektur:    type atune
+* Korrektur:    typo autotune
 
 Version 1.60.3
 
