@@ -1,14 +1,27 @@
 # Changelog
 
-ESP32 Arduino 3.3.5 ESP-IDF v5.5.1\
+ESP32 Arduino 3.3.5 ESP-IDF v5.5.2\
 VSCode 1.107 pioarduino IDE 1.1.5\
-InnuAPID AutoTune PID lib 1.10.14\
+InnuAPID AutoTune PID lib 1.10.15\
 InnuTask lib 0.10.12\
 InnuNextion Display lib 0.9\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
+
+Version 1.60.8
+
+* Korrektur:    Anzeigefehler Web If und Display bei einer Stepdauer über 72 Minuten behoben
+* Korrektur:    Click event für Kessel HLT und Sud wurden manchmal nicht korrekt ausgeführt
+* Korrektur:    die Click Fläche für Kessel HLT und Sud wurde auf die Zelle (td) vergrößert, statt wie bislang nur auf das Power Icon
+* Korrektur:    ds Power Icon Sud und HLT hat im Zustand OFF die Farbe primary und im Zustand ON die Farbe success (konsistent mit allen anderen Buttons)
+* Neu:          Mit einem Ausrufezeichen als letztes Zeichen im Stepnamen kann ein Quittieren von Toast Nachrichten erzwungen werden (Kochen Hopfen Hall.Perle!)
+* Geändert:     Wenn das Logging System auf VERBOSE gesetzt wird, werden in der Browser Konsole apiGET und apiPOST debug Ausgaben protokolliert (nur develop)
+* Korrektur:    sendAlarm ON/OFF für Kessel HLT und Sud bei Power Click wurde nicht ausgeführt
+* Entfernt:     veraltetes Flag "Ignoriere SPI Fehler für PT100x Sensoren" gelöscht
+* Geändert:     bei einem Fehler SPI MAX31865 (PT100x Sensor err) wird zusätzlich zum clear ein soft recover durchgeführt
+* Korrektur:    der Kesselname wurde durch das Sprachfile überschrieben (mismatch)
 
 Version 1.60.7
 
