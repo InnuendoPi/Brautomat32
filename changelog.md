@@ -10,6 +10,11 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.9
+
+* Neu:          mit dem Sonderbefehl IDSTHRESOUT bzw. MAISCHETHRESOUT kann die noPIDBoil Leistung im Maischeplan eingestellt werden
+* Korrektur:    Sensoren EMA Filter und MAX31865 glitches Filter
+
 Version 1.60.8
 
 * Korrektur:    Anzeigefehler Web If und Display bei einer Stepdauer über 72 Minuten behoben
