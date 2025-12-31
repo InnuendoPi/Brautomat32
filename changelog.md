@@ -10,6 +10,10 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.11 RC1
+
+* Korrektur:    Status Power und Play Button nach dem letzten Step im Masiche/Fermenterplan korrigiert
+
 Version 1.60.10 RC1
 
 * Korrektur:    wenn der Brauvorgang beendet wurde, wurde der Eeprom Braustatus korrekt gelöscht, aber Step 0 hinterlegt
