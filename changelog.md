@@ -10,6 +10,21 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.10 RC1
+
+* Korrektur:    wenn der Brauvorgang beendet wurde, wurde der Eeprom Braustatus korrekt gelöscht, aber Step 0 hinterlegt
+* Korrektur:    Maischesteps mit 0°C und einer Dauer über 0min wurden nicht ausgeführt (bspw. Nachisomerisierung)
+* Korrektur:    Lüfternachlauf/Relais off für IDS korrigiert
+* Korrektur:    AutoTune hat zu konservative Thresout Leistung berechnet (Leistung ab Übergang Kochen)
+* Korrektur:    wurde der Brauvorgang pausiert, um die PID Einstellungen anzupassen, wurde der PID Controller nicht korrekt neu gestartet
+* Korrektur:    Kessel Sud und Kessel HLT konnten bei Braustart eingeschaltet werden, wenn ein setpoint konfiguriert war
+* Korrektur:    im Maischeplan kann nun autonext direkt editiert werden
+* Korrektur:    im Maischeplan kann nun wieder mit Tab durch die Tabellentzellen gesprungen werden
+* Korrektur:    wurde eine Pause während des Brauens beendet, wurde der Maischeplan nicht automatisch wieder eingeklappt
+* Geändert:     DisplayTask auf Core 1 mit Prio 3
+* Geändert:     ChartTask auf Core 1 mit Prio 1
+* Geändert:     CFGTask auf Core 1 mit Prio 2
+
 Version 1.60.9
 
 * Neu:          mit dem Sonderbefehl IDSTHRESOUT bzw. MAISCHETHRESOUT kann die noPIDBoil Leistung im Maischeplan eingestellt werden
