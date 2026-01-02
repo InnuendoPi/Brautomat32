@@ -10,6 +10,27 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.14 RC2
+
+* Korrektur:    Nextion Display manueller Modus Fix Teil 1 (sync mit Web If folgt zeitnah)
+* Korrektur:    WLAN disconnect entfernt
+* Bereinigung:  code cleanup Teil 2
+
+Version 1.60.13 RC2
+
+* Korrektur:    WLAN connection timeout vergrößert (Mesh und DHCP)
+* Korrektur:    WLAN AP-Mode timeout implementiert. Nach 3 Minuten wird der Brautmat neu gestartet
+* Korrektur:    WLAN Stabilität optimiert
+* Geändert:     idsTxTask (RMT) auf Core 1 mit Prio 2
+* Bereinigung:  code cleanup Teil 1
+
+Version 1.60.12 RC1
+
+* Korrektur:    AutoTune hat für sampleTime und powerSampleTime zu konservative Werte ermittelt
+* Korrektur:    Anpassung der Messpunkte für sampleTime und powerSampletime abhängig vom Kesseltyp (IDS, Relais, webhook)
+* Korrektur:    engere Grenzen für sampleTime und PowerSampletime (clamp)
+* Korrektur:    AutoTune Induktion IDS: die Messreihe L startet nun exakt mit dem ersten burst command
+
 Version 1.60.11 RC1
 
 * Korrektur:    Status Power und Play Button nach dem letzten Step im Masiche/Fermenterplan korrigiert
@@ -26,7 +47,7 @@ Version 1.60.10 RC1
 * Korrektur:    im Maischeplan kann nun wieder mit Tab durch die Tabellentzellen gesprungen werden
 * Korrektur:    wurde eine Pause während des Brauens beendet, wurde der Maischeplan nicht automatisch wieder eingeklappt
 * Geändert:     DisplayTask auf Core 1 mit Prio 3
-* Geändert:     ChartTask auf Core 1 mit Prio 1
+* Geändert:     ChartTask auf Core 0 mit Prio 2
 * Geändert:     CFGTask auf Core 1 mit Prio 2
 
 Version 1.60.9
