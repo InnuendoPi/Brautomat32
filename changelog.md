@@ -10,6 +10,17 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.16 RC2
+
+* Korrektur:    AutoTune Messreihe L wird erkannt, wenn am Sensor eine stabile positive Steigung über ein Fenster sichtbar ist
+* Geändert:     Ki Term passend zur neuen Messreihe L leicht reduziert
+
+Version 1.60.15 RC2
+
+* Korrektur:    AutoTune Induktion IDS: die Messreihe L startet nun exakt mit dem ersten burst command
+* Geändert:     idsTxTask (RMT) auf Core 1 mit Prio 4
+* Geändert:     AutoTune log Ausgaben angepasst (/autotune_log.txt)
+
 Version 1.60.14 RC2
 
 * Korrektur:    Nextion Display manueller Modus Fix Teil 1 (sync mit Web If folgt zeitnah)
