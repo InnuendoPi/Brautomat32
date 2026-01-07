@@ -10,6 +10,12 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.17 RC3
+
+* Korrektur:    Berechnung der Rastzeit nach Beenden einer Pause im Maischeprozess korrigiert
+* Korrektur:    Fehler Abbruch Autotune über Power Button behoben
+* Korrektur:    es war möglich, dass die Mash-Queue mit Temp_Ticks geflutet wurde
+
 Version 1.60.16 RC2
 
 * Korrektur:    AutoTune Messreihe L wird erkannt, wenn am Sensor eine stabile positive Steigung über ein Fenster sichtbar ist
