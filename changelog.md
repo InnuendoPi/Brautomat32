@@ -10,6 +10,11 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.18 RC3
+
+* Korrektur:    Es war möglich, dass AutoTune doppelt gestartet wurde (AutoTune hing in einer Endlosschleife)
+* Korrektur:    die Chart wird bei AutoTune nun auch befüllt
+
 Version 1.60.17 RC3
 
 * Korrektur:    Berechnung der Rastzeit nach Beenden einer Pause im Maischeprozess korrigiert
