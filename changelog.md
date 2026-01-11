@@ -2,13 +2,17 @@
 
 ESP32 Arduino 3.3.5 ESP-IDF v5.5.2\
 VSCode 1.107 pioarduino IDE 1.1.5\
-InnuAPID AutoTune PID lib 1.10.15\
-InnuTask lib 0.10.12\
+InnuAPID AutoTune PID lib 1.10.18\
+InnuTask lib 0.10.14\
 InnuNextion Display lib 0.9\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
+
+Version 1.60.19 RC3
+
+* Korrektur:    Anzeigefehler Zieltemperatur im Display nach Next/Prev Step über Controller Deck behoben
 
 Version 1.60.18 RC3
 
