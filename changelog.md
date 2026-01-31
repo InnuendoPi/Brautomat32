@@ -1,6 +1,6 @@
 # Changelog
 
-ESP32 Arduino 3.3.5 ESP-IDF v5.5.2\
+ESP32 Arduino 3.3.6 ESP-IDF v5.5.2\
 VSCode 1.107 pioarduino IDE 1.1.5\
 InnuAPID AutoTune PID lib 1.10.18\
 InnuTask lib 0.10.14\
@@ -9,6 +9,16 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
+
+Version 1.60.20 RC3
+
+* Update:       Arduino 3.3.6 ESP-IDF v5.5.2
+* Update:       ESPTool 4.11.0
+* Korrektur:    MAX31865/PT100(x) transiente Faults werden bei plausiblem Messwert (Δ ≤ 0,7 °C) weiterverwendet
+* Korrektur:    MAX31865/PT100(x) Burst-Faults führen nicht mehr sofort zu permanent ERR, sondern zeitbasiert Streak-Reset + erhöhte Hard-Schwelle
+* Korrektur:    bei Reboot wurde ohne aktiven Brauvorgang ein Chart Dot (Zeitstempel) erstellt
+* Korrektur:    nach der Konfiguration WLAN wurde nicht korrekt auf brautomat.local weitergeleitet
+* Bereinigung:  code cleanup Teil 3
 
 Version 1.60.19 RC3
 
