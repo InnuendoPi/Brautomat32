@@ -10,6 +10,10 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.21 RC3
+
+* Revert:       Arduino 3.3.6 to 3.3.5: heap memory error verursacht WiFi Abbruch und exceptions
+
 Version 1.60.20 RC3
 
 * Update:       Arduino 3.3.6 ESP-IDF v5.5.2
