@@ -10,6 +10,10 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.22 RC4
+
+* Korrektur:    Fehler Chart Target -1 behoben
+
 Version 1.60.21 RC3
 
 * Revert:       Arduino 3.3.6 to 3.3.5: heap memory error verursacht WiFi Abbruch und exceptions
