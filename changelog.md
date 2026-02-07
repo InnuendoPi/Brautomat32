@@ -1,7 +1,7 @@
 # Changelog
 
-ESP32 Arduino 3.3.6 ESP-IDF v5.5.2\
-VSCode 1.107 pioarduino IDE 1.1.5\
+ESP32 Arduino 3.3.5 ESP-IDF v5.5.2\
+VSCode 1.109 pioarduino IDE 1.1.5\
 InnuAPID AutoTune PID lib 1.10.18\
 InnuTask lib 0.10.14\
 InnuNextion Display lib 0.9\
@@ -9,6 +9,12 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
+
+Version 1.60.23 RC4
+
+* Korrektur:    Fix Exception BrewFather receipe und batche list TLS (OOM)
+* Korrektur:    Funktion replyJSONdoc Überprüfung JSON erweitert
+* Korrektur:    JS BrewFather Rezeptliste wird beim Schließen Modal Sud gelöscht. Die Auswahl BrewFather wird auf deaktiviert zurückgesetzt
 
 Version 1.60.22 RC4
 

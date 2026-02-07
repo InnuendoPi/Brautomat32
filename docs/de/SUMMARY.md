@@ -14,6 +14,7 @@
   * [AutoTune Prozess](Autotune-pid/atune.md)
   * [AutoTune Schritt für Schritt](Autotune-pid/steps.md)
 * [Kessel Konfiguration und Einsatz](Kessel/kessel.md)
+  * [Adaptive Kessellogik](Kessel/adaptive_kessellogik.md)
 * [Sensoren](Sensoren/info.md)
   * [Kalibrierung](Sensoren/kalibrierung.md)
 * [Aktoren](Aktoren/act.md)
