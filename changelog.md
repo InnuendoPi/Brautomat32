@@ -10,6 +10,18 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.25 RC4
+
+* Korrektur:    Korrektur löschen letzter Sensor/Aktor. Im Web Interface wurden die letzten Elemente bis zum nächsten Reload weiterhin angezeigt
+* Korrektur:    Korrketur Anzeige Web Interface erster Aktor
+* Korrektur:    Speichern von Profilen: PID Parameter (type mismatch)
+* Korrektur:    Speichern von Profilen: das Update Intervall wurde nicht korrekt neu berechnet
+* Korrektur:    Speichern und Wechseln von Profilen: der Name vom aktiven Profil wurde nicht korrekt angezeigt
+
+Version 1.60.24 RC4
+
+* Korrektur:    interleaving Problem im Modul Logging behoben (atomic)
+
 Version 1.60.23 RC4
 
 * Korrektur:    Fix Exception BrewFather receipe und batche list TLS (OOM)
