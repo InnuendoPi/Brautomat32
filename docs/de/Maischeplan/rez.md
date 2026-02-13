@@ -6,20 +6,6 @@ Der Brautomat bietet eine einfache Verwaltung von Maischeplänen. Neben Importie
 
 In den Einstellungen kann der Name des Maischeplans festgelegt werden. Aus dem Maischeplannamen wird der Dateiname abgeleitet. Die Parameter *Gesamtkochzeit* und *Nachisomerisierungszeit* werden nur zur Information angezeigt und können nicht editiert werden. Diese Parameter werden beim Rezeptimport eingelesen. Wird ein Maischplan manuell erstellt, sind die Werte Kochdauer und Nachisomerisierung ohne Bedeutung, da der Brautomat keine Bittereinheiten berechnet.
 
-## Zeitsteuerung
-
-Mit Hilfe der Zeitsteuerung kann ein Brauttag geplant und automatisch gestartet werden.
-
-![Zeitsteuerung](/docs/img/Zeitsteuerung.jpg)
-
-Mit dem Element DateTimerPicker kann sehr einfach ein Datum und eine Uhrzeit ausgewählt werden. Der Rezeptname wird temporär durch den angegebenen Startzeitpunkt ersetzt.
-
-![Zeitsteuerung](/docs/img/Zeitsteuerung2.jpg)
-
-Eine aktivierte Zeitsteuerung wird in der Konfiguration abgespeichert. Bei einem Neustart des Brauautomaten wird das eingestellte Datum und die Uhrzeit eingelesen. Liegt dieser Braustart in der Zukunft, ist die Zeitsteuerung aktiviert. Liegt der Braustart in der Vergangenheit, ist die Zeitsteuerung deaktiviert.
-
-## Maischepläne verwalten
-
 ### Maischeplan erstellen
 
 Im Eingabefeld ist der Name des Maischeplans einzugeben. Mit *OK* wird ein neuer leerer Maischeplan angelegt.

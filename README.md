@@ -9,7 +9,7 @@
 The **Brautomat32** is a brewing and fermenting controller for ESP32.  
 It provides an intuitive, easy-to-use control deck directly in your preferred web browser.
 
-**breaking changes version 1.60 PID controller:** when updateing from previous versions 1.59 and below please rerun AutoTune!
+**breaking changes version 1.60 PID controller:** when updateing from previous versions 1.59 and below you must run AutoTune!
 
 ![WebInterface](docs/img/dashboard160.jpg)
 

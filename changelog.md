@@ -1,14 +1,24 @@
 # Changelog
 
-ESP32 Arduino 3.3.5 ESP-IDF v5.5.2\
+ESP32 Arduino 3.3.7 ESP-IDF v5.5.2\
 VSCode 1.109 pioarduino IDE 1.1.5\
 InnuAPID AutoTune PID lib 1.10.18\
-InnuTask lib 0.10.14\
+InnuTask lib 0.10.16\
 InnuNextion Display lib 0.9\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
+
+Version 1.60.26 RC4
+
+* Update:       Arduino 3.3.7 ESP-IDF 5.5.260206
+* removed:      die Timer Funktion (zeitgesteuererter Braustart) wurde temporär komplett entfernt. Die Funktion wird im Release 1.60 nicht enthalten sein
+* Optimiert:    heap und stack size/watermarks im Lastfall ermittelt (AsyncTCP, FreeRTOS Tasks, BrewFather Rezeptliste)
+* Korrektur:    Speicher Fragmentierung nach Boot durch zwei große String arrays behoben
+* Korrektur:    CFGTask periodischer Aufruf writeflash konnte auch im idle Modus aufgerufen werden
+* Optimiert:    Anzeige nächster Step Maischeplan im Dashboard um Temperatur und Dauer erweitert
+* Optimiert:    Der Button GET Brewfather Daten wird nur auf dem Tab BrewFather API angezeigt. Auf allen anderen Tabs ist der Button nicht mehr sichtbar
 
 Version 1.60.25 RC4
 
