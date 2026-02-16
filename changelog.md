@@ -10,6 +10,11 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.27 RC4
+
+* Korrektur:    Fehler im FSM in der Funktion mashCheckTempGate beim handling von Sonderbefehlen behoben
+* Korrektur:    WLAN reload brautomat.local nach initialem Setup auf 10s erhöht.
+
 Version 1.60.26 RC4
 
 * Update:       Arduino 3.3.7 ESP-IDF 5.5.260206
