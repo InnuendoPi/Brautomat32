@@ -10,6 +10,43 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.60.28 final RC
+
+* Breaking:     Finale Anpassung für WebUpdates von Version 1.59 oder älter
+                die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
+                die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden.
+
+* Korrektur:    Sensorzugriffe zwischen Tasks, Web und Kalibrierung wurden über Mutex/Snapshots abgesichert (stabilere Parallelzugriffe)
+* Geändert:     SSE-, Web- und Display-Ausgaben lesen Sensor-/Kesselwerte über Snapshot-Helper statt über direkte Feldzugriffe
+* Geändert:     Kesselwerte (`Input`, `Setpoint`, `Output`) wurden auf atomare Cross-Core-Snapshots (Seqlock) umgestellt
+* Korrektur:    Mehrere Grenzprüfungen im Maische-/Fermenter-Ablauf korrigiert (`>= maxActMashSteps`, invalid ID Checks)
+* Optimiert:    Mash-Event-Queue entlastet (TEMP_TICK-Coalescing) und STOP-Events priorisiert, um Verzögerungen bei Last zu vermeiden
+* Korrektur:    Task-Benachrichtigungen für ISR- und Task-Kontext vereinheitlicht (`FromISR`-sicher für Sensor/Actor/Display/CFG/Chart/Sys/Kettle)
+* Optimiert:    AutoNext-Schrittlogik auf iterative Verarbeitung umgestellt (kein rekursiver Ablauf, geringeres Stack-Risiko)
+* Korrektur:    Kettle-User-Events behandeln volle Queue robuster; `OFF`-Events haben Fallback für sichere Abschaltung
+* Korrektur:    Display zeigt bei kurzzeitig ungültigen/fehlenden Sensorwerten den letzten gültigen Temperaturwert statt leerer Anzeige
+* Optimiert:    Task-Diagnose erweitert (`Stack-Watermark`, Status, Core, Priorität, optional CPU-Anteil) für präzisere Laufzeitanalyse
+* Geändert:     `DisplayTask` bleibt fest auf Core 1 mit Priorität 5, um Anzeige-Artefakte unter WiFi/AsyncTCP-Last zu vermeiden
+* Optimiert:    `KettleTask`-Priorität auf 6 erhöht, damit Kessel-/Regelpfade unter Last schneller bedient werden
+* Korrektur:    Wiederaufnahme nach Reset/Powerloss führt die Restzeit korrekt fort statt den Step-Timer auf volle Dauer zurückzusetzen
+* Korrektur:    Bei Unterbrechungen länger als die Restzeit wird die Restzeit auf `0` gesetzt (kein sichtbarer Timer-Neustart)
+* Optimiert:    Persistenz der Restzeit im laufenden Prozess robuster gemacht (aktuelle Laufzeit als Quelle, konsistente Grenzwerte)
+* Korrektur:    Periodisches Speichern bleibt auch bei Actor-/Sofort-Schritten aktiv, damit der Resume-Zustand stabil bleibt
+* Geändert:     Alarm-Auslösung schützt gegen inaktive Alarm-Task/Queue und vermeidet wirkungslose Trigger
+* Optimiert:    Webhook-Worker wird direkt beim Task-Start initialisiert und reagiert dadurch konsistenter nach Systemstart
+* Korrektur:    Nach Reset/Reboot wird im HMI der korrekt wiederhergestellte Stepname angezeigt statt dauerhaft der Name des ersten Steps
+* Geändert:     Das automatische Ein-/Ausklappen des Maischeplans ist nur aktiv, wenn das Dashboard sichtbar ist
+* Geändert:     Aufteilung der Tasks auf die CPU Kerne und deren Prioritäten angepasst
+* Geändert:     der Status Brautomat wird nun alle 30s im Flash/NVS gespeichert (vorher 10s)
+* Korrektur:    im Fermentermodus wird changeCFGDelayTicks nun mit der korrekten Vorgabe initialisiert (15min)
+* Korrektur:    Fermenter Resume hat falschen Modus gesetzt (MODE_MASH statt MODE_FERM)
+* Korrektur:    Überprüfung DS18B20 conversion completed wurde aktiviert (zu Debugzwecken deaktiviert)
+* Korrektur:    MODE_MANUAL beendet doPID() check state nicht und ruft handleKettle doppelt auf
+* Korrektur:    taskMashHandle und kettelUserTaskHandle korrekt gesetzt und initialisiert
+* Korrektur:    mashStartTimer mindestdauer für Step wurde gesetzt, aber im Ablauf vorzeitig verlassen (toter Code)
+* Korrektur:    im Fermenter Modus konnte eine Sensorabfrage eine out of bound exception produzieren
+* Korrektur:    Boil-Latch darf nicht über Sud-Grenzen hinweg erhalten bleiben. Wird bei START/STOP zurückgesetzt
+
 Version 1.60.27 RC4
 
 * Korrektur:    Fehler im FSM in der Funktion mashCheckTempGate beim handling von Sonderbefehlen behoben

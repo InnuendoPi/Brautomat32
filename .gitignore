@@ -99,6 +99,7 @@ sdkconfig.wemos_d1_mini32_IDF5
 .vscode/ipch
 .vscode/
 .dummy/
+.claude/*
 lib/
 include/
 managed_components/
