@@ -47,7 +47,6 @@
 *.ori
 *.alt
 *.cache
-
 build/core
 build/sketch
 build/libraries
@@ -63,7 +62,6 @@ build/file_opts
 build/includes.cache
 build/partitions.csv
 build/libraries.cache
-
 data/config.txt
 tools/boot_app0.bin
 tools/Brautomat32.ino.bin

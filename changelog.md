@@ -12,7 +12,7 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 * Breaking:     Finale Anpassung für WebUpdates von Version 1.59 oder älter
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
-                die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden.
+                die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
 Version 1.60.29 final RC
 
