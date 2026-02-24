@@ -1,14 +1,16 @@
-# Hardware
+﻿# Hardware
 
-The examples shown here are just a small selection of ideas. The links point to external content for which the respective providers are responsible. The links are not linked to any affiliate program, trading or similar. You are welcome to add further ideas and images here.
+The examples below are practical ideas from the community. External links point to third-party content and products.
 
-## Examples of actors
+## Actuator examples
 
 ### Pumps
 
 ![Actors](/docs/img/Pumpe1.jpg)
 
-A pump is a great help when lautering or transporting it to the fermentation tank. The pump used must be food-safe and suitable for temperatures up to 100°C. The mini pumps from Rotekt are very suitable for use in the brewery kitchen:
+A pump is useful for lautering and transfers to the fermenter. Use only food-safe pumps rated up to 100°C.
+
+The small Rotekt 12V pumps are commonly used in homebrewing setups:
 
 ![Actors](/docs/img/Pumpe2.jpg)
 
@@ -17,11 +19,11 @@ A pump is a great help when lautering or transporting it to the fermentation tan
 | Mini pump 12V DC | [amazon](https://www.amazon.de/dp/B01NCKXJ92/?coliid=I1I94V063T6GE6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_SSRMRQS5W49WYA43JZ7Z) |
 | Pneumatic connectors 8mm x 1/2 inch 90° rotatable | [amazon](https://amzn.to/3XmH2nP) |
 
-Connections with [Camlocks from Braubebo](https://www.braubebo.de/camlock/) as shown in the first picture are also very good and quick.
+Camlock fittings from [Braubebo](https://www.braubebo.de/camlock/) are also a solid option.
 
-### SSR solid state relay
+### SSR (solid state relay)
 
-With the Brautomat SSRs can be switched very easily. SSR or solid state relays switch the 220V AC circuit on or off with 3-5V DC from Brautomat. The Fotek SSRs are ideal for temperature control and control via the Brautomat.
+Brautomat can switch SSRs directly. SSRs switch a 230V AC load using a 3-5V DC control signal from Brautomat.
 
 ![fotek](/docs/img/fotek.jpg)
 
@@ -29,11 +31,16 @@ With the Brautomat SSRs can be switched very easily. SSR or solid state relays s
 | -------------- | --------------------------------- |
 | Fotek SSR 40DA | [amazon](https://www.amazon.de/dp/B09KTV425X/?coliid=I37LH2D7XQ7AYU&colid=I7GQB171JGLX&psc=0&ref_=cm_sw_r_cp_ud_lstpd_018F1S8N63CZYRB6XE54) |
 
-Application examples for SSR: If 220V is switched on an SSR Fotek via the Brautomat, a socket for any device with a plug can be attached to the "other end" of the 220V line. For example for the power supply of the agitator. Or for a refill cooker. Or for a ring heating element. The Rotek pump's power supply can also be switched on and off via an SSR.
+Typical SSR use cases:
 
-### Relay module
+* switch a socket for an agitator power supply
+* switch a NACHGUSS/sparge-water heater
+* switch a ring heater
+* switch a pump power supply
 
-Not all consumers need a powerful SSR. For example, actuators such as agitators or pumps can be switched with inexpensive relay boards. A very good relay board is the Keenso 4 channel optocoupler relay board.
+### Relay modules
+
+Not every load needs a high-power SSR. Agitators and pumps are often fine with low-cost relay boards.
 
 ![keenso](/docs/img/keenso.jpg)
 
@@ -44,14 +51,17 @@ Not all consumers need a powerful SSR. For example, actuators such as agitators 
 
 ### Ring heating elements
 
-A ring heating element is useful when boiling the wort if the performance of the GGM IDS is no longer or only just enough to boil the wort until it bubbles. A good selection of ring heating elements is available from [Douglas from Crafthardware](https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel).
+A ring heater can help during boil if IDS power is not enough for a strong rolling boil.
 
-### PWM
+Example source:
+[Douglas from Crafthardware](https://www.crafthardware.de/products/ringheizelement-3-5-kw-fuer-45-cm-kessel)
+
+### PWM modules
 
 | Item name | Link to article |
 | ------------------ | --------------------------------- |
-| Speed ​​controller | [amazon](https://www.amazon.de/dp/B09PV11JM8/?coliid=IC6BIVO4B18X9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| Speed ​​controller | [amazon](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| Speed controller | [amazon](https://www.amazon.de/dp/B09PV11JM8/?coliid=IC6BIVO4B18X9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| Speed controller | [amazon](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 
 ### Connectors
 

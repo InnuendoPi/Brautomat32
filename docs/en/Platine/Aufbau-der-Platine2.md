@@ -1,8 +1,8 @@
-# Structure of the board version 2
+﻿# Structure of the board version 2
 
-This short guide describes the structure of the board. The board structure is not demanding. This short description is intended as an aid for the inexperienced hobbyist and is not aimed at electrical engineers. Information about soldering, suitable soldering irons and solder can be found on YouTube or similar channels.
+This short guide describes the structure of the board. Board assembly is straightforward. This short description is intended as an aid for the inexperienced hobbyist and is not aimed at electrical engineers. Information about soldering, suitable soldering irons and solder can be found on YouTube or similar channels.
 
-The parts list of the board:
+Board parts overview:
 
 ![BOM](/docs/img/Aufbau1.jpg)
 
@@ -13,7 +13,7 @@ Number 4: Screw terminal blocks with a pitch of 2.54mm
 
 ## Parts list for version 2 board
 
-The JST-HX socket position is an alternative to the 5-pin screw terminal block. The cable from the control panel of the GGM IDS2 has the appropriate plug for a JST-HX socket. If a replacement cable is used instead of the original cable, the connection is easier with a 5 screw terminal block.
+The JST-HX socket position is an alternative to the 5-pin screw terminal block. The original GGM IDS2 panel cable matches the JST-HX socket. If a replacement cable is used, wiring is usually easier with the 5-pin screw terminal block.
 
 | Number | Item name | Link to article |
 | ----------------------------------------------------- | ------------------------------ | --------------------------------- |
@@ -40,13 +40,13 @@ The board can be equipped differently depending on the connection to the GGM IDS
 
 1.1 The original cable from the GGM IDS control panel is used
 
-In this case, the white JST-HX socket is required (number 2 in the picture). The 5 screw terminal block in the picture directly next to the JST-HX socket is then not used.
+In this case, the white JST-HX socket is required (number 2 in the picture). The 5-pin screw terminal block in the picture directly next to the JST-HX socket is then not used.
 
 1.2 A replacement cable is used
 
-In this case the white JST-HX socket is not used, but the 5 screw terminal block.
+In this case the white JST-HX socket is not used, but the 5-pin screw terminal block.
 
-So either the JST-HX socket or the 5 screw terminal block is inserted into the board.
+So either the JST-HX socket or the 5-pin screw terminal block is inserted into the board.
 
 ## Insert the screw terminal blocks
 
@@ -55,14 +55,14 @@ Two notes on inserting the screw terminal blocks:
 1. The opening of the screw terminal blocks always faces outwards (away from the circuit board).
 2. The screw terminal blocks are fixed with a soldering point. The correct fit is then checked. All soldering points are then soldered.
 
-In the following, the screw terminal blocks are inserted and soldered step by step.\
-In step number 1 the zwhite 12-pin screw terminal blocks used. The GPIOs D9 to D19 from ESP32 are connected to the 12 screw terminal blocks.
+The next steps show screw terminal installation and soldering.\
+In step 1, install the two 12-pin screw terminal blocks. The GPIOs D9 to D19 from ESP32 are connected to the 12 screw terminal blocks.
 
 ![Screw terminal block](/docs/img/Aufbau2.jpg)
 
 Now turn the board over and fix each screw terminal block with a soldering point. Now check that the screw terminal blocks are correctly seated. All pins must be correctly inserted through the soldering points. All pins are then soldered.
 
-In step number 2, the two 8-pin screw terminal blocks are inserted. The GPIOs D0 to D8 from ESP32 are connected to the 8 screw terminal blocks.
+In step 2, install the two 8-pin screw terminal blocks. The GPIOs D0 to D8 from ESP32 are connected to the 8 screw terminal blocks.
 
 ![Screw terminal blocks](/docs/img/Aufbau3.jpg)
 
@@ -70,22 +70,22 @@ The board now looks like this in this status:
 
 ![Screw terminal blocks](/docs/img/Aufbau4.jpg)
 
-In step number 3, the three 3 screw terminal blocks are inserted and soldered.
+In step 3, install and solder the three 3-pin screw terminal blocks.
 
 ![Screw terminal block for sensors](/docs/img/Aufbau5.jpg)
 
 DS18B20 temperature sensors are connected to the three connections. There is no order or hierarchy for these three connections. If only analog PT100x sensors are used, the three screw terminal blocks can be omitted.
 
-With version 2.1 of the board, an optional 3 screw terminal block can be used at the GND position next to the 3 screw terminal blocks for sensors. The additional GND connections are useful when actuators (pumps, agitators, etc.) are used. If no actuators are used, the screw terminal block can be omitted.
+On board version 2.1, an optional additional 3-pin terminal can be installed at the GND position next to the sensor terminals. The additional GND connections are useful when actuators (pumps, agitators, etc.) are used. If no actuators are used, the screw terminal block can be omitted.
 
-In step number 4, either the JST-HX socket for the original cable or a 5 screw terminal block for the replacement cable is inserted and soldered: (see considerations before assembly).
+In step 4, install and solder either the JST-HX socket (original cable) or the 5-pin screw terminal block (replacement cable), as described above.
 
 ![JST-HX or screw terminal block](/docs/img/Aufbau6.jpg)
 
 ## The piezo buzzer
 
 The piezo buzzer is optional. This step can be skipped if acoustic signals are not desired.\
-The piezo buzzer has a plus and a minus pole
+The piezo buzzer has a positive and a negative pin.
 
 ![Buzzer Plus Minus](/docs/img/Aufbau8.jpg)
 
@@ -95,11 +95,11 @@ The positive pole is inserted into the D8 marking and, accordingly, the negative
 
 ## The 4.7kOhm resistor
 
-The 4.7kOhm resistor is mandatory for the Dallas DS18B20 temperature sensors. If only analog PT100x sensors are used, the resistor can be omitted.
+The 4.7kOhm resistor is required for Dallas DS18B20 sensors. If only analog PT100x sensors are used, the resistor can be omitted.
 
 ![Resistance](/docs/img/Aufbau9.jpg)
 
-The legs on the resistance are bent through 90° (e.g. around a slotted screwdriver). The resistor is then inserted into the position labeled “4k7”. The direction does not have to be taken into account. The basic color of resistors is often blue or sand-colored. The colored rings show the electrical resistance:
+Bend the resistor legs by 90° (for example around a screwdriver). Insert the resistor at the position marked `4k7`. Orientation does not matter. The basic color of resistors is often blue or sand-colored. The colored rings show the electrical resistance:
 
 4.7kOhm resistor with 4 rings: yellow - violet - red - [tolerance]
 
@@ -107,7 +107,7 @@ The legs on the resistance are bent through 90° (e.g. around a slotted screwdri
 
 ![Resistance](/docs/img/Aufbau10.jpg)
 
-The legs of the resistance are bent slightly outwards on the back and soldered. Use side cutters to cut off the legs above the soldering eye.
+On the back side, bend the resistor legs slightly outward and solder them. Trim excess leg length with side cutters.
 
 ## Mount the ESP microcontroller
 
@@ -129,4 +129,5 @@ Now the ESP is put on and fixed with a soldering point on each side. Now the fit
 
 ![ESP32](/docs/img/Aufbau15.jpg)
 
-Finally, all soldering points should be practicedbe checked. When all soldering points are closed, the Brautomat is ready.
+Finally, check all solder joints carefully. When all soldering points are closed, the Brautomat is ready.
+

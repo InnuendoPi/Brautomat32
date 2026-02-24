@@ -1,79 +1,135 @@
-# Boiler configuration and use
+﻿# Kettle Configuration and Usage
 
-The Brautomat32 offers the option of setting up up to three boilers. The first boiler has the internal designation MASH and alternatively IDS. This kettle is required for the mashing process. The two other boilers are optional. The second boiler has the internal designation SUD, alternatively MLT and the third boiler has the designation HLT or Nachguss.
+Brautomat32 supports up to three kettles.
 
-The three boilers can be either GGM induction hob or relay type. A relay type boiler includes a webhook connection.
+- Kettle 1 (required): `MAISCHE` / `IDS`
+- Kettle 2 (optional): `SUD` / `MLT`
+- Kettle 3 (optional): `HLT` / `NACHGUSS`
 
-![Boiler configuration](/docs/img/kessel_1.jpg)
+Each kettle can be configured either as:
 
-The parameters are described in the chapter Basic setup and parameters at a glance - Boiler parameters and are identical for all three boilers.
+- GGM induction hob
+- relay-based device (including webhook support)
 
-However, the use of the three kettles is different, especially the use of the mash plan. The mash plan is always linked to the first boiler of mash brew as long as no other boiler is specified in the mash plan via a control command. Control commands are also explained in the mash plan special function and control commands section.
+![Kettle configuration](/docs/img/kessel_1.jpg)
 
-## Boiler control commands
+All kettle parameters are described in:
 
-This section only considers boiler control commands. Control commands for actuators are structured identically, but are explained in the mash plan special function and control commands section. A control command always contains a colon in the rest name. The Brautomat only recognizes from the colon that this rest should be treated as a control command. The format is device:maximum power. This means that the colon separates the device name from the maximum performance.
+- Basic Setup
+- Parameter Overview -> Kettle Parameters
 
-The following names are defined internally as device names for the three boilers:
+## Kettle Control Commands
 
-* MASH or IDS for the first kettle
-* MLT or SUD for the second boiler
-* HLT or REGUSS for the third boiler
+A control command is detected by a colon in the step name:
 
-Each boiler is assigned a name in the settings. This name can also be used as a device name for a control command.
+`DEVICE:POWER`
 
-Numbers between 0 and 100 are permitted as maximum performance. The value corresponds to the maximum power parameter in the boiler settings and is given in percent. The specification ON corresponds to 100% and OFF corresponds to 0%.
+Examples of valid device names:
 
-### Option 1: switching the boiler manually
+- `MAISCHE` or `IDS`
+- `SUD` or `MLT`
+- `HLT` or `NACHGUSS`
 
-The second and third boilers can be switched on and off manually via the web interface using the respective power button. For example, if a boiler is set up for re-infusion, the target temperature can be set to 78°C in the boiler settings and the boiler can be switched on on the brewing day if necessary.
+A custom kettle name from settings can also be used.
 
-### Option 2: automatic switching of the boiler
+`POWER` can be:
 
-The second and third kettles can also be switched via the mash plan:
+- number `0..100`
+- `ON` (=100)
+- `OFF` (=0)
 
-![Boiler configuration](/docs/img/kessel_2.jpg)
+From version 1.60, power at boil transition can also be set with special commands:
 
-In this simplified mash plan, the third boiler HLT is switched on automatically in line 2. The step HLT:100 with a target temperature of 78°C and a duration of 0 minutes switches on the refill with 100% power and sets the target temperature to 78°C. Because the duration is specified as 0 minutes, the refill is switched on permanently. The Brautomat goes directly to the next mash step and leaves the after-infusion switched on. The PID controller permanently regulates the power required to reach and maintain the target temperature. Nachguss:100 would be identical to the control command HLT:100. If the refill has been given the name “Cooker” in the settings, then the control command COOKER:100 can also be used.
+- `IDSTHRESOUT:80`
+- `MAISCHETHRESOUT:80`
 
-![Boiler configuration](/docs/img/kessel_3.jpg)
+## Option 1: Manual Kettle Control
 
-In this mash plan, the second kettle brew is switched on in the third step. In contrast to the previous example HLT, the SUD boiler is switched on for a period of 15 minutes with the target temperature of 100°C. The Brautomat remains on this step until the target temperature is reached and the rest period of 10 minutes is completed. The kettle SUD is then switched off and the Brautomat jumps to the next step in the mash plan.
+Kettle 2 and kettle 3 can be switched manually via their power buttons in the web interface.
+Example: configure NACHGUSS target temperature to 78°C and switch it on when needed.
 
-The text "Cook partial mash" is from Brautomat translates 100%. If there is no number between 0 and 100 or the information ON or OFF after the colon, then the Brautomat replaces the text with 100% power.
+## Option 2: Automatic Kettle Control via Mash Plan
 
-## Example different performance
+![Kettle configuration](/docs/img/kessel_2.jpg)
 
-The control commands can be used to adjust the maximum power during the brewing process. For example, if the induction hob has a maximum output of 3.5kW and the brewing kettle used has a volume of 20 liters, then the control command MASH:75 can be used to reduce the maximum output power from the induction hob to 75% power. The rest with the control command MASH:75 is created with a target temperature of 0°C and a duration of 0 minutes with autonext activated.
+Example in line 2:
 
-## Example decoction
+- `HLT:100`
+- target temperature 78°C
+- duration 0 minutes
 
-As described above, a rest from the mash plan is always assigned to the first boiler (MASH) if no control command (colon in the rest name) assigns the rest to another boiler. A control command can either switch the second boiler on/off with a target temperature and jump directly to the next rest or integrate it into the mashing process with a rest period.
+Result:
 
-In the decoction brewing process, partial mash is cooked while the remaining mash is kept at a desired temperature. Decoction with the Brautomat would look like this:
+- NACHGUSS is switched on at 100%
+- target temperature is set to 78°C
+- Brautomat moves immediately to the next step
+- NACHGUSS stays active and PID controls it in the background
 
-* Pull the remaining mash into the second kettle. Pulling a rest of remaining mash with autonext deactivated fulfills this task.
-* then switch the second boiler on permanently to a desired temperature with a rest period of zero minutes. autonext is activated.
-* Cook partial mash in the first kettle for the desired resting time. autonext is activated.
-* Add remaining mash from the second kettle to the partial mash in the first kettle. autonext is disabled.
+Equivalent commands:
 
-The rests in a mash plan in a 2 or 3 kettle environment have the following principle:
+- `HLT:100`
+- `NACHGUSS:100`
+- custom kettle name, e.g. `COOKER:100`
 
-* Partial mash to be cooked is assigned to the first boiler
-* Residual mash with temperature maintenance is assigned to the second or third boiler
-* The refill is always assigned to the second or third kettle
+![Kettle configuration](/docs/img/kessel_3.jpg)
 
-## webhook
+Another example:
 
-The PIN white relay parameter must be set to "-" so that the webhook elements are displayed in the web interface. In addition, the webhook URL and the sound command are required:
+- `SUD` kettle is enabled with 100°C target and 15-minute duration
+- Brautomat stays on this step until target temperature is reached and the 15-minute rest is complete
+- then SUD is switched off and the process continues
+
+If the value after `:` is not numeric and not ON/OFF (for example `SUD:Cook partial mash`), Brautomat interprets it as `100%`.
+
+## Example: Dynamic Power Adjustment
+
+You can adapt power during the process.
+If your induction hob has 3.5kW and your kettle is small (for example 20l), use `MAISCHE:75` to reduce maximum output and avoid aggressive heating.
+
+Typical setup for this kind of command step:
+
+- target temperature: `0°C`
+- duration: `0 min`
+- `autonext`: enabled
+
+## Example: Decoction
+
+Without explicit command, mash steps always run on kettle 1 (`MAISCHE`).
+With command steps, you can control additional kettles.
+
+Decoction workflow example:
+
+1. Move remaining mash into kettle 2 (manual step, `autonext` off).
+2. Keep kettle 2 at temperature (`duration 0`, `autonext` on).
+3. Boil partial mash in kettle 1 (`autonext` on).
+4. Merge mash back (`autonext` off).
+
+Practical principle in multi-kettle setups:
+
+- boil partial mash in kettle 1
+- hold temperature of remaining mash in kettle 2/3
+- run NACHGUSS on kettle 2/3
+
+## Webhook
+
+To use webhook controls:
+
+- set `PIN white relay` to `-`
+- configure webhook URL and switch mode
 
 ![webhook](/docs/img/kessel_webhook1.jpg)
 
 Example Shelly 1PM:
 
-Turn on Shelly 1PM: <http://192.168.1.5/relay/0?turn=on>\
-Turn off Shelly 1PM: <http://192.168.1.5/relay/0?turn=off>
+- ON: <http://192.168.1.5/relay/0?turn=on>
+- OFF: <http://192.168.1.5/relay/0?turn=off>
 
-The webhook URL for Shelly 1PM is: <http://192.168.1.5/relay/0?turn=> (without on and off). The webhook switch parameter must be set to "on/off".
+Webhook base URL:
 
-URL Tasmota: <http://192.168.x.x/cm?cmnd=Power1%201>
+<http://192.168.1.5/relay/0?turn=>
+
+Set webhook switch parameter to `on/off`.
+
+Tasmota example:
+
+<http://192.168.x.x/cm?cmnd=Power1%201>

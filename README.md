@@ -1,4 +1,4 @@
-# Brautomat32
+﻿# Brautomat32
 
 <!-- ![Sprache: Deutsch](https://img.shields.io/badge/Sprache-de-red.svg) -->
 [![de](https://img.shields.io/badge/Deutsch-de-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.de.md)
@@ -6,125 +6,126 @@
 ![Framework](https://img.shields.io/badge/framework-Arduino-green)
 ![Version](https://img.shields.io/github/v/release/InnuendoPi/Brautomat32)
 
-The **Brautomat32** is a brewing and fermenting controller for ESP32.  
-It provides an intuitive, easy-to-use control deck directly in your preferred web browser.
+**Brautomat32** is a brewing and fermenting controller for ESP32.
+It provides a practical, browser-based control interface for brew day and fermentation.
+
+**Important for version 1.60:**
+When updating from version 1.59 or older, run **AutoTune** once after the update.
 
 ![WebInterface](docs/img/dashboard160.jpg)
 
 ---
 
-## 💿 Download
+## Download
 
-| Release Type | Download |
-|---------------|-----------|
+| Release type | Download |
+|--------------|----------|
 | **Release** | [![Stable](https://img.shields.io/static/v1?label=Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) |
 | **Development** | [![Dev](https://img.shields.io/static/v1?label=Development%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Brautomat32.zip) |
 
 ---
 
-## ▶️ Installation
+## Installation (quick start)
 
-* Download **Brautomat ESP32**
-* Unzip the downloaded file
-* Double-click **Flashen.cmd**
+1. Download **Brautomat ESP32**.
+2. Unzip the file.
+3. Run **Flashen.cmd**.
 
-The ZIP file includes [esptool](https://github.com/espressif/esptool).  
+The ZIP archive already includes [esptool](https://github.com/espressif/esptool).
 
-In most cases not required:  
-**CP210x USB to UART Bridge Virtual COM Port (VCP)** driver – [Silicon Labs Download](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
-
----
-
-## 📓 Features
-
-Brautomat is a standalone brewing device and offers:
-
-* Induction hob controller  
-* Relay controller  
-* Webhook controller  
-* Integrated PID-Controller  
-* Digital sensors DS18B20  
-* Analog sensors PT100x with MAX31865 amplifier  
-* PID-AutoTune  
-* Mash plan management  
-  * Automatic temperature reach and hold  
-  * Automated rest duration timer  
-  * Actor management within mash plan  
-  * Up to 30 mash steps  
-* Control up to 3 kettles  
-  * Mash  
-  * MLT  
-  * HLT  
-* Kettle hardware profiles  
-* Fermenter mode  
-* Control actors like agitator, pumps, etc.  
-* PWM for heating elements  
-* Temperature progression chart  
-* MP3 alerts  
-* Toast messages  
-* Recipe import  
-  * kleinerBrauhelfer2  
-  * Maische Malz und Mehr  
-  * BrewFather  
-* Recipe export  
-* BrewFather recipes and batches API support  
-* Backup and Restore  
-* Nextion 3.5" HMI Touchdisplay (optional)  
-* WebUpdate for firmware updates  
-* Multilingual support  
-* **[NEW] Dashboard**  
-* And much more...
+Usually not required, but sometimes needed on Windows:
+**CP210x USB to UART Bridge Virtual COM Port (VCP)** driver - [Silicon Labs Download](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
 ---
 
-## 📚 Documentation
+## Features
 
-* 📘 [Instructions & Description](https://innuendopi.gitbook.io/brautomat32/)  
-* 💬 [Forum Hobbybrauer (German)](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)  
-* 🕓 [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
+Brautomat is a standalone brewing controller with support for:
+
+* GGM induction cooker control
+* Relay-based heater control
+* Webhook-based control
+* Integrated PID control
+* PID AutoTune
+* DS18B20 digital sensors
+* PT100x analog sensors via MAX31865
+* Mash plan management
+  * automatic heat-up and hold
+  * automatic rest timer handling
+  * actuator actions in mash steps
+  * up to 30 mash steps
+* Up to 3 kettle channels
+  * mash kettle
+  * SUD/MLT kettle
+  * HLT/NACHGUSS kettle
+* Kettle hardware profiles
+* Fermenter mode (beta)
+* Actuator control (agitators, pumps, etc.)
+* PWM output control
+* Temperature charting
+* MP3 alarms and toast messages
+* Recipe import
+  * kleinerBrauhelfer2
+  * Maische Malz und Mehr
+  * BrewFather
+* Recipe export
+* BrewFather recipe/batch API support
+* Backup and restore
+* Nextion 3.5" HMI touch display (optional)
+* WebUpdate for firmware updates
+* Multilingual UI support
+* Dashboard mode (1.60+)
 
 ---
 
-## 📰 Web Interface
+## Documentation
 
-The Brautomat is operated via any modern web browser. You can use your tablet, smartphone, or PC.
+* [Instructions & description](https://innuendopi.gitbook.io/brautomat32/)
+* [Forum Hobbybrauer (German)](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
+* [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
+
+---
+
+## Web interface
+
+Brautomat runs in modern browsers on tablet, smartphone, and PC.
 
 <!-- markdownlint-disable-next-line MD033 -->
 <details>
 <!-- markdownlint-disable-next-line MD033 -->
 <summary>Show Web Interface screenshots</summary>
 
-![WebInterface](docs/img/brautomat160.jpg)  
+![WebInterface](docs/img/brautomat160.jpg)
 ![WebInterface](docs/img/brautomat160-2.jpg)
 
 </details>
 
 ---
 
-## 💻 Nextion HMI Touchdisplay (optional)
+## Nextion HMI touch display (optional)
 
-Brautomat offers three different display views:
+Brautomat provides three display views:
 
-* **Overview** – all kettles are displayed  
-* **Mash tun** – displays the Maische/Sud kettle (first kettle)  
-* **Manual Control (GGM IDS2)** – for direct hob control  
+* **Overview** - shows all configured kettles
+* **Mash view** - shows kettle 1 process data
+* **Manual control (GGM IDS2)** - direct power control
 
 <!-- markdownlint-disable-next-line MD033 -->
 <details>
 <!-- markdownlint-disable-next-line MD033 -->
 <summary>Show display screenshots</summary>
 
-![Overview](docs/img/kettlepage-sm.jpg)  
-![Mash tun](docs/img/brewpage-sm.jpg)  
+![Overview](docs/img/kettlepage-sm.jpg)
+![Mash view](docs/img/brewpage-sm.jpg)
 ![Manual control](docs/img/induction-mode-sm.jpg)
 
-_Note: The display is an optional extension. Only Nextion ITEAD HMI 3.5" touch displays are supported._
+_Note: Display support is optional. Supported models are Nextion ITEAD HMI 3.5" (Basic/Enhanced/Discovery series)._
 
 </details>
 
 ---
 
-## 🗺️ Multilingual
+## Multilingual
 
 ![de](https://img.shields.io/badge/Deutsch-de-red.svg)
 ![en](https://img.shields.io/badge/English-en-blue.svg)
@@ -139,13 +140,13 @@ _Note: The display is an optional extension. Only Nextion ITEAD HMI 3.5" touch d
 ![dk](https://img.shields.io/badge/Dansk-dk-blueviolet.svg)
 ![cs](https://img.shields.io/badge/Čeština-cs-orange.svg)
 
-Brautomat32 supports (almost) any number of languages.  
+Brautomat32 supports (almost) any number of languages.
 
-💡 _Support this project — translate Brautomat into a new language or help improve existing translations!_
+Support the project by adding a new language or improving existing translations.
 
 ---
 
-## 📙 Circuit Board 2.1
+## Circuit board 2.1
 
 <!-- markdownlint-disable-next-line MD033 -->
 <details>
@@ -156,33 +157,38 @@ Brautomat32 supports (almost) any number of languages.
 
 </details>
 
-A **circuit board** for the ESP32 D1 Mini NodeMCU is available.  
-It offers screw terminals for GPIOs, a dedicated GGM IDS interface, and three DS18B20 sensor ports.  
-Gerber files are stored in the `Gehaeuse` folder.  
+A dedicated **circuit board** for ESP32 D1 Mini NodeMCU is available.
+It includes:
+
+* screw terminals for GPIOs
+* dedicated GGM IDS interface
+* three DS18B20 sensor ports
+
+Gerber files are stored in the `Gehaeuse` folder.
 
 [![Gerber files](https://img.shields.io/static/v1?label=Gerber%20Files&message=Download&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Gehaeuse/Brautomat-2.1-Gerber_2024-04-03.zip)
 
 ---
 
-## 📗 Case
+## Case
 
 <!-- markdownlint-disable-next-line MD033 -->
 <details>
 <!-- markdownlint-disable-next-line MD033 -->
 <summary>Show case screenshots</summary>
 
-![Case Front](docs/img/brautomat_01.jpg)  
+![Case Front](docs/img/brautomat_01.jpg)
 ![Case Inside](docs/img/brautomat_02.jpg)
 
 </details>
 
 ---
 
-## 📈 Pinout
+## Pinout
 
-The following pin assignment applies to the **ESP32 D1 Mini NodeMCU** (e.g. from [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)):
+The following assignment applies to **ESP32 D1 Mini NodeMCU** boards (for example [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)).
 
-### GPIO Mapping
+### GPIO mapping
 
 <!-- markdownlint-disable-next-line MD033 -->
 <details>
@@ -217,23 +223,24 @@ The following pin assignment applies to the **ESP32 D1 Mini NodeMCU** (e.g. from
 | D19 | GPIO013 | ok | ok | |
 | D20 | GPIO010 | (ok) | (ok) | SD3 SPI flash |
 
-⚠️ Pins connected to onboard flash (CMD, CLK, SD0–SD3) are not recommended for GPIO use.
+Pins connected to onboard flash (CMD, CLK, SD0-SD3) are not recommended for regular GPIO use.
 
 ---
 
-## 🔉 MP3 Files
+## MP3 files
 
-_Legal note:_  
-“Boxing Bell” (info), “Short School Bell” (error), “Ding sound effect” (warning), and “Success sound effect” (success) are from **Free Sounds Library**  
-🔗 [freesoundslibrary.com](http://www.freesoundslibrary.com)  
-📜 License: **Attribution 4.0 International (CC BY 4.0)** — free for commercial and non-commercial use.
+Legal note:
+"Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning), and "Success sound effect" (success) are from **Free Sounds Library**.
+
+* Source: [freesoundslibrary.com](http://www.freesoundslibrary.com)
+* License: **Attribution 4.0 International (CC BY 4.0)** (commercial and non-commercial use)
 
 ---
 
-## 💬 Community & Support
+## Community and support
 
-* [GitHub Discussions](https://github.com/InnuendoPi/Brautomat32/discussions)  
-* [Report an Issue](https://github.com/InnuendoPi/Brautomat32/issues)  
-* ⭐ _If you like this project, please consider giving it a star!_
+* [GitHub Discussions](https://github.com/InnuendoPi/Brautomat32/discussions)
+* [Report an issue](https://github.com/InnuendoPi/Brautomat32/issues)
+* If you like this project, consider giving it a star.
 
 ---

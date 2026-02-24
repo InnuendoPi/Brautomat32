@@ -1,35 +1,38 @@
-# Create a new language file
+﻿# Create a new language file
 
-Make a copy of the language file data/language/de.json and rename the file with two characters to a new language file:
+To add a new UI language:
 
-Spanish: es.json\
-French: fr.json\
-Danish: dk.json\
-Dutch: nl.json\
-etc.
+1. Copy `data/language/de.json`.
+2. Rename it with a two-letter code, for example:
+   * Spanish: `es.json`
+   * French: `fr.json`
+   * Danish: `dk.json`
+   * Dutch: `nl.json`
 
-Translate all words starting from the colon in each line:
-
-```bash
- {
-   "SAVE": "archivo",
-   "CLOSE": "cerca",
-   ...
- }
-```
-
-Open Explorer in the web interface of Brautomat. Copy the new language file to the /language folder on your Brautomat. Finally, the new language file must be made known to Brautomat: edit the file /lang.js
+Translate the values (text after `:`) in the new file:
 
 ```bash
-const supportedLocales = ["de", "en"];  // language files 
+{
+  "SAVE": "archivo",
+  "CLOSE": "cerrar"
+}
 ```
 
-For example, if you added a Spanish language file es.json, then edit the /lang.js file as follows:
+Upload the new file to `/language` on Brautomat via the file explorer in the web interface.
+
+Then register the locale in `/lang.js`:
 
 ```bash
-const supportedLocales = ["de", "en", "es"];  // language files 
+const supportedLocales = ["de", "en"];  // language files
 ```
 
-Save the file with the keyboard shortcut Ctrl-S and restart Brautomat. Now you can select the new language in the web interface.
+Example for Spanish:
 
-_Share a new language file with other users! Send me your language file or your correction._
+```bash
+const supportedLocales = ["de", "en", "es"];  // language files
+```
+
+Save (`Ctrl+S`) and restart Brautomat.
+The new language can then be selected in the web interface.
+
+If you want to share your translation, send the language file or a correction patch.

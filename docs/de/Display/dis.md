@@ -43,7 +43,7 @@ angezeigt. In der unteren Zeile wird zusätzlich die nächste Rast angezeigt. Di
 
 ![Kesselübersicht](/docs/img/kettlepage-sm.jpg)
 
-Die Kesselübersicht zeigt den MaischeSud Kessel und falls vorhanden den Sud und Nachguss Kessel mit den Informationen Ist- und Ziel-Temnperatur an.
+Die Kesselübersicht zeigt den MaischeSud Kessel und falls vorhanden den Sud- und Nachguss-Kessel mit den Informationen Ist- und Ziel-Temperatur an.
 
 _Hinweis: die Ansicht Kesselübersicht zeigt in der unteren Zeile die Adresse vom Brautomat: entweder den mDNS Namen oder die IP Adresse._
 

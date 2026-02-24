@@ -20,11 +20,16 @@ Dieser Parameter beschreibt die Temperatur, ab der der PID Controller das Kochen
 
 Dieser Parameter beschreibt die Ausgangsleistung für das Kochfeld ab der Temperatur Übergang zum Kochen. Der Standardwert ist 100%. Mit dem Parameter "Übergang zum Kochen" ist eine Temperatur festgelegt worden, ab der der PID Controller deaktiviert wird. Mit dem Parameter "Leistung ab Übergang" wird nun die feste Ausgangsleistung für das Kochfeld vorgegeben. Wird ein Braukessel mit einem Volumen über 35l oder mehr eingesetzt, ist der Standardwert 100% eine passende Wahl. In Brauküchen mit kleinen Kesseln kann 100% Energiezufuhr ein Überkochen bewirken. In diesem Fall kann die maximale Energiezufuhr mit diesem Parameter auf bspw. 75% reduziert werden.
 
+Ab Version 1.60 kann diese Leistung zusätzlich direkt im Maischeplan per Sonderbefehl gesetzt werden:
+
+* `IDSTHRESOUT:80`
+* `MAISCHETHRESOUT:80`
+
 ### Deaktiviere PID zum Kochen [on/off]
 
-Dieser Parameter bestimmt das Verhalten vom PID Controller beim Kochen, wenn die Ist-Temperatur über der Ziel-Temperatur liegt. Beispiel: die Kochtemperatur wurde im Maischeplan auf 98°C festgelegt. Der Parameter "Leistung ab Übergang" schaltet die PID Berechnung ab der Temperatur "Übergang zum Kochen" aus. Wenn der Parameter "Deaktivere PID zum Kochen" aktiviert ist (Standard), dann bleibt der PID Controller auch über der Ziel-Temperatur von 98°C aus dem Maischeplan ausgeschaltet und die Leistung aus dem Parameter "Leistung ab Übergang" wird verwendet. Dieser Parameter ist in der Voreinstellung aktiviert und ermöglicht ein wallendes Kochen.
+Dieser Parameter bestimmt das Verhalten vom PID Controller beim Kochen, wenn die Ist-Temperatur über der Ziel-Temperatur liegt. Beispiel: die Kochtemperatur wurde im Maischeplan auf 98°C festgelegt. Der Parameter "Leistung ab Übergang" schaltet die PID Berechnung ab der Temperatur "Übergang zum Kochen" aus. Wenn der Parameter "Deaktiviere PID zum Kochen" aktiviert ist (Standard), dann bleibt der PID Controller auch über der Ziel-Temperatur von 98°C aus dem Maischeplan ausgeschaltet und die Leistung aus dem Parameter "Leistung ab Übergang" wird verwendet. Dieser Parameter ist in der Voreinstellung aktiviert und ermöglicht ein wallendes Kochen.
 
-Wenn der Parameter "Deaktiviere PID zum Kochen" nicht aktiviert ist, wird die benötigte Leistung ab Erreichen der Ziel-Temepratur (hier 98°C) durch den PID Controller berechnet. Die berechnete Leistung oberhalb der Ziel-Temperatur ist 0%. Das Kochfeld schaltet ab und verhindert ggfs. ein Überkochen.
+Wenn der Parameter "Deaktiviere PID zum Kochen" nicht aktiviert ist, wird die benötigte Leistung ab Erreichen der Ziel-Temperatur (hier 98°C) durch den PID Controller berechnet. Die berechnete Leistung oberhalb der Ziel-Temperatur ist 0%. Das Kochfeld schaltet ab und verhindert ggfs. ein Überkochen.
 
 ### Leistung bei Sensorfehler [0-100%]
 
@@ -32,7 +37,7 @@ Tritt ein Sensorfehler auf, bspw. ein Sensor ist nicht verbunden oder ein Defekt
 
 Wird die Leistung bei Sensorfehler auf 0% eingestellt, dann pausiert der Brautomat den Maischeprozess. Das Kochfeld wird abgeschaltet. Ist der Rasttimer gestartet, wird der Timer angehalten.
 
-Der Brautomat startet nach 3 aufeinanderfolgenden fehlerhaften Sensorwerten die Fehlerbehandlung. Die Sensoren werden ca. alle 2000ms abgefragt. D.h. es vergehen zwischen Toast Nachricht Sensorfehler und Start der Fehlerbehandlung ca. 6 Sekunden.
+Der Brautomat startet nach 3 aufeinanderfolgenden fehlerhaften Sensorwerten die Fehlerbehandlung. Die Sensoren werden ca. alle 2000ms abgefragt. Das heißt, es vergehen zwischen der Toast-Nachricht Sensorfehler und dem Start der Fehlerbehandlung ca. 6 Sekunden.
 
 Meldet ein fehlerhafter Sensor wieder korrekte Sensorwerte, führt der Brautomat den Maischeprozess automatisch fort.
 
@@ -42,21 +47,21 @@ _Hinweis: der Parameter Max. Leistung wird durch den Parameter Leistung bei Sens
 
 ### Intervall (SampleTime)
 
-Dieser Parameter gibt an, in welchem zeitlichen Abstand eine Berechnung der benötigten Leistung ermittelt werden. Der Standardwert ist 3000ms. Das Intervall wird zur PID Berechnung und im AutoTune eingesetzt. In Brauküchen mit kleinem Volumen ist ein kleineres Intervall ggfs. vorteilhaft. Je kleiner das Intervall, desto häufiger wird die benötigte Leistung berechnet. Dies führt zur einer höheren Auslastung des Brautomaten. Wertebereich 1000 - 7000ms.
+Dieser Parameter gibt an, in welchem zeitlichen Abstand die benötigte Leistung berechnet wird. Der Standardwert ist 3000ms. Das Intervall wird für die PID-Berechnung und im AutoTune eingesetzt. In Brauküchen mit kleinem Volumen ist ein kleineres Intervall ggfs. vorteilhaft. Je kleiner das Intervall, desto häufiger wird die benötigte Leistung berechnet. Dies führt zu einer höheren Auslastung des Brautomaten. Wertebereich 1000 - 7000ms.
 
 ### PID Algorithmus
 
-Es stehen drei Option zur Auswahl
+Es stehen drei Optionen zur Auswahl
 
-* manualler PID Modus: diese Auswahl erlaubt die Verwendung eigener Kp, Ki and Kd Werte
+* manueller PID Modus: diese Auswahl erlaubt die Verwendung eigener Kp-, Ki- und Kd-Werte
 * IDS PID Modus: diese Auswahl berechnet anhand der Werte Ku und Pu aus dem AutoTune Prozess die Werte für Kp, Ki und Kd für GGM IDS Induktionskochfelder
-* Relay PID mode: diese Auswahl berechnet anhand der Werte Ku und Pu aus dem AutoTune Prozess die Werte für Kp, Ki und Kd für Relais basierte Kochfelder
+* Relay PID Modus: diese Auswahl berechnet anhand der Werte Ku und Pu aus dem AutoTune Prozess die Werte für Kp, Ki und Kd für relaisbasierte Kochfelder
 
 ## AutoTune
 
 ### AutoTune noiseband
 
-Dieser Parameter wird für die Erkennung von Extremwerten (Max, Min) verwendet. AutoTune noiseband gibt an, welche Mindeständeurng zum vorherigen Messwert vorhanden sein muss, um einen neuen Extremalwert zu erkennen. Der Standardwert für die GGM IDS beträgt 0.2. Für einen Nachguss Kocher über ein Relais oder SSR beträgt der Standardwert 0.5. Wertebereich: 0.1 - 1.0
+Dieser Parameter wird für die Erkennung von Extremwerten (Max, Min) verwendet. AutoTune noiseband gibt an, welche Mindeständerung zum vorherigen Messwert vorhanden sein muss, um einen neuen Extremalwert zu erkennen. Der Standardwert für die GGM IDS beträgt 0.2. Für einen Nachgusskocher über ein Relais oder SSR beträgt der Standardwert 0.5. Wertebereich: 0.1 - 1.0
 
 ### AutoTune Datenreihe (lookback)
 
@@ -64,15 +69,15 @@ Dieser Parameter gibt an, wie viele Messwerte für die Ermittlung von Extremalwe
 
 ### AutoTune debug
 
-Dieser Schalter aktiviert das AutoTune Protokoll. Das Protokoll bietet Hinweise, wenn der AutoTune Prozess nciht erfolgreich abgeschlossen werden kann. Bei aktiviertem AutoTune debug steht das Protokoll auch beim Brauen zur Verfügung.
+Dieser Schalter aktiviert das AutoTune Protokoll. Das Protokoll bietet Hinweise, wenn der AutoTune Prozess nicht erfolgreich abgeschlossen werden kann. Bei aktiviertem AutoTune debug steht das Protokoll auch beim Brauen zur Verfügung.
 
-_Diese 10 Parameter sind je Brauanlage individuell einzustellen. Die Parameter können während eines Maischeprozesses geändert werden. Mit einem Testlauf mit einer typischen Menge Wasser können die Paramter vor einem Brautag leicht ermittelt werden._
+_Diese 10 Parameter sind je Brauanlage individuell einzustellen. Die Parameter können während eines Maischeprozesses geändert werden. Mit einem Testlauf mit einer typischen Menge Wasser können die Parameter vor einem Brautag leicht ermittelt werden._
 
 ## Profile
 
 Der Brautomat kann Hardware Profile verwalten. Profile können verwendet werden, wenn unterschiedliche Kessel vorhanden sind. Anwender mit unterschiedlich großen Kesseln können über Profile den Kessel für den Brautag auswählen, anstatt manuell alle Parameter neu eingeben zu müssen. Ein Hardware Profil beinhaltet alle  Einstellungen von einem Kessel.
 
-Profile werden im Ordner /Profile gespeichert. Profile ermöglichen einen schnellen und einfachen Wechsel zwischen verschiedenen Kesseln. Die Funktion Speichern erstellt eine Profildatei mit den o.g. Paramter, während die Funktion Löschen die Profildatei aus dem Flash-Speicher entfernt.
+Profile werden im Ordner /Profile gespeichert. Profile ermöglichen einen schnellen und einfachen Wechsel zwischen verschiedenen Kesseln. Die Funktion Speichern erstellt eine Profildatei mit den o.g. Parametern, während die Funktion Löschen die Profildatei aus dem Flash-Speicher entfernt.
 
 Das Standardprofil beim Start des Brautomaten ist immer das zuletzt ausgewählte Profil.
 
@@ -80,7 +85,7 @@ Das Standardprofil beim Start des Brautomaten ist immer das zuletzt ausgewählte
 
 _Der folgende Absatz beschreibt ein optionales Thema._
 
-Beim Maischen ist ein Anstieg der Maischetemperatzur von 1°C pro Minute erwünscht. Die benötigte Leistung P der GGM IDS kann wie folgt berechnet werden:
+Beim Maischen ist ein Anstieg der Maischetemperatur von 1°C pro Minute erwünscht. Die benötigte Leistung P der GGM IDS kann wie folgt berechnet werden:
 
 erforderliche Leistung P = m[kg] * 75\
 vorhandene Leistung der GGM IDS P = 3500\
@@ -100,7 +105,7 @@ Die Masse m = 44 setzen wir in die vereinfachte Formel ein:
 P = 44 * 75 = 3300
 ```
 
-Es sind näherungsweise 3300 W/min erforderlich, um ein Volumen von 44kg pro Minute um 1°C zu erhitzen. Wird die GGM IDS mit 100% Leistung betrieben, also 3500W, wird die die Temperaturdifferenz von 1°C in der Maische in weniger als 60 Sekunden erreicht. Um Das Ziel 1°C Temperaturanstieg in der Maische pro Minute zu erreichen, muss die maximale Leistung der GGM IDS reduziert werden:
+Es sind näherungsweise 3300 W/min erforderlich, um ein Volumen von 44kg pro Minute um 1°C zu erhitzen. Wird die GGM IDS mit 100% Leistung betrieben, also 3500W, wird die Temperaturdifferenz von 1°C in der Maische in weniger als 60 Sekunden erreicht. Um das Ziel 1°C Temperaturanstieg in der Maische pro Minute zu erreichen, muss die maximale Leistung der GGM IDS reduziert werden:
 
 ```json
 3300 : 3500 = 0,94 das entspricht 94%
@@ -132,10 +137,10 @@ P = m[kg] * c * T / (t * w)
 ```
 
 m   entspricht Masse Hauptguss + Schüttung\
-c   entspricht der spezifischen Wärmekapazität Maische. Der wert 3600 wird eingesetzt (Einheit Joule/(kg * °C))\
+c   entspricht der spezifischen Wärmekapazität Maische. Der Wert 3600 wird eingesetzt (Einheit Joule/(kg * °C))\
 T   entspricht der Temperaturdifferenz. Wir verwenden 1°C Differenz\
 t   entspricht der Zeit. Wir setzen als Zeit 60sek in die Gleichung ein\
-w   der Wirkungsrad Induktion (80-90%). Es wird der Wert 0.8 in die Gleichtung eingesetzt
+w   der Wirkungsgrad Induktion (80-90%). Es wird der Wert 0.8 in die Gleichung eingesetzt
 
 ```json
 c * T / (t * w) = 3600 * 1 / (60 * 0.8) = 75

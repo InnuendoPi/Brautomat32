@@ -2,7 +2,7 @@
 
 ![media](/docs/img/logging.jpg)
 
-Das Logging ist nur in der Development Version verfügbar. Das integrierte Logging hilft bei der Fehlersuche, sowohl bei Fehlern in der Firmware Brautomat32 als auch bei Anwenderfehlern. Für die Ausgabe wird ein serieller Monitor benötigt. Im Folgenden wird Microsoft Visual Studio Code mit der Erweiterung Microsoft Serial Monitor gezeigt. Microsoft Visual Code ist kostenfrei und als eigenständige Version verfügbar (keine Installation erforderlich).
+Das Logging ist nur in der Development Version verfügbar. Das integrierte Logging hilft bei der Fehlersuche, sowohl bei Fehlern in der Firmware Brautomat32 als auch bei Anwenderfehlern. Für die Ausgabe wird ein serieller Monitor benötigt. Im Folgenden wird Microsoft Visual Studio Code mit der Erweiterung Microsoft Serial Monitor gezeigt. Microsoft Visual Studio Code ist kostenfrei und als eigenständige Version verfügbar (keine Installation erforderlich).
 
 Der serielle Monitor muss zusätzlich zum COM-Port auf eine Baudrate von 115200 und CRLF eingestellt werden.
 
@@ -58,7 +58,7 @@ Debug Ausgaben vom Typ Verbose enthalten alle vorhergehenden Typen. Zusätzlich 
 [V][SYSTEM.cpp:839] SSEBroadcastJson(): kettle mash: {"power":0,"stepnr":0,"tempvalue":"50.4","target":0,"step":6,"timer":3}
 ```
 
-Zusätzlich wird in der Einstellung System - verbose eine curl ähnliche Protokollierung aller WebServer GET und POST requests ausgegeben.
+Zusätzlich wird in der Einstellung System - verbose eine curl-ähnliche Protokollierung aller WebServer GET- und POST-Requests ausgegeben.
 
 Eine Ausgabe auf der seriellen Konsole hat eine feste Formatierung. Beispiel:
 
@@ -73,7 +73,7 @@ Die Einzelteile:
 ```
 
 ```json
-[SYSTEM.cpp:839] Die aufrundende Quellcodestelle
+[SYSTEM.cpp:839] Die aufrufende Quellcodestelle
 ```
 
 ```json
@@ -86,10 +86,10 @@ Es folgt nach dem Doppelpunkt die eigentliche Debug Nachricht:
 kettle mash: {"power":0,"stepnr":0,"tempvalue":"50.4","target":0,"step":6,"timer":3}
 ```
 
-Wenn der Brautomat mit einer seriellen Konsiole verbunden ist, erscheint beim Boot die folgende Ausgabe
+Wenn der Brautomat mit einer seriellen Konsole verbunden ist, erscheint beim Boot eine Ausgabe wie im folgenden Beispiel:
 
 ```json
-05:42:16.904 > [I][SYSINFO] starting Brautomat32 V 1.56 Release
+05:42:16.904 > [I][SYSINFO] starting Brautomat32 V 1.60.x Release
 05:42:22.467 > [I][SYSINFO] mount filesystem LittleFS: ok, free heap mem: 192924
 05:42:28.384 > [I][SYSINFO] mDNS http://Brautomat.local IP address 192.168.100.112 time: 05:42:27 RSSI: -83
 ```

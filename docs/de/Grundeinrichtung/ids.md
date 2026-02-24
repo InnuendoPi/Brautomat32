@@ -14,9 +14,9 @@ Die erste Einstellung betrifft den IDS-Typ, bei dem IDS1 oder IDS2 ausgewählt w
 
 * PIN weiß [Relais] - Standard: D7
 * PIN gelb [Command] - Standard: D6
-* PIN blau [Interrupt] - Standard: - (unbelegt) oder D5
+* PIN blau [Interrupt] - Standard: - (unbelegt)
 
-Diese GPIOs (D5, D6 und D7) sind für das GGM IDS-Anschlusskabel mit JST-HX-Buchse bzw. den Schraubklemmblock vorkonfiguriert.
+Diese GPIOs (D6 und D7) sind für das GGM IDS-Anschlusskabel mit JST-HX-Buchse bzw. den Schraubklemmblock vorkonfiguriert. Der Interrupt-Pin bleibt in der Regel unbelegt und wird nur zur Fehlersuche verwendet.
 
 Als nächstes muss ein Temperatursensor dem MaischeSud-Kessel zugewiesen werden. Die Auswahl erfolgt aus einer Liste bereits eingerichteter Sensoren. In dieser Grundeinrichtung ist nur der Sensor _Sensor IDS2_ vorhanden, der entsprechend ausgewählt wird.
 
@@ -32,37 +32,4 @@ Die Parameter im Reiter "Temperatursteuerung" werden im Abschnitt "Alle Paramete
 
 Nach der Grundkonfiguration muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID Controller berechnet automatisch die erforderliche Leistung für das Kochfeld, um die Maische-Temperatur (Ist-Temperatur) auf die Rast-Temperatur zu bringen. Eine präzise PID-Konfiguration sorgt dafür, dass die Rast-Temperatur über die gesamte Rast-Dauer konstant bleibt.
 
-Der PID-Controller wird mit zwei Parametern eingestellt:
-
-* Ku (ultimate gain) – Verstärkungsfaktor
-* Pu (ultimate period) – Periodendauer
-
-Aus diesen beiden Werten werden die PID-Parameter P, I und D berechnet. Diese Parameter sind für jede Brauanlage individuell und werden mit dem AutoTune Prozess ermittelt. Der AutoTune-Prozess wird im Abschnitt "AutoTune Schritt für Schritt" ausführlich beschrieben.
-
-Für diese Grundeinrichtung werden die folgenden Werte für Ku und Pu eingetragen. Danach wird die PID-Tuning-Regel _IDS PID Modus_ ausgewählt:
-
-![IDS](/docs/img/IDS-AutoTune-erg.jpg)
-
-Sobald die Werte für Ku und Pu eingetragen sind, ermittelt der ausgewählte PID-Algorithmus automatisch die drei Werte P, I und D. Eine detaillierte Erklärung aller Parameter erfolgt später.
-
-## Startwerte für verschiedene Kesselgrößen
-
-Für einen 36L-Kessel mit etwa 20L Maischevolumen:
-
-```text
-Verstärkungsfaktor Ku (ultimate gain):      182
-Periodendauer Pu (ultimate period):         2245
-```
-
-Für einen 70L-Kessel mit über 50L Maischevolumen:
-
-```text
-Verstärkungsfaktor Ku (ultimate gain):      225
-Periodendauer Pu (ultimate period):         1500
-```
-
-## Abschluss der Grundkonfiguration
-
-Nach dem Speichern der Einstellungen ist die Grundkonfiguration abgeschlossen. Mit einem Temperatursensor und einem MaischeSud-Kessel kann nun gebraut werden.
-
-_Hinweis: Zum eigentlichen Brauvorgang wird zusätzlich ein Maischeplan benötigt._
+Im Abschnitt AutoTune PID wird Schritt für Schritt erläutert, wie die PID-Parameter ermittelt werden.

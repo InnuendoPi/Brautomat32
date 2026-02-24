@@ -1,51 +1,32 @@
-# AutoTune Step by step
+﻿# AutoTune step by step
 
-The practical procedure AutoTune looks like this:
+The practical AutoTune workflow:
 
 ![AutoTune](/docs/img/IDS-AutoTune.jpg)
 
-1. Fill your mash brew kettle with a typical amount of water
-
-    a. A typical amount corresponds to a boiler filling consisting of main casting and fill
-
-    Example: 20l main casting and 5kg fill results in a typical amount of 25l water for the AutoTune process
-
-    b. Turn on the mixer
-2. Set a AutoTune target temperature
-
-    a. the target temperature should be 50°C or more.
-
-    b. The target temperature should be at least 10°C above the current actual temperature.
-
-3. Activate “PID AutoTune”
-4. Enable “AutoTune debug”
-5. Save this setting
-6. Clicking on the power button starts the AutoTune process.
+1. Fill the mash kettle with a typical brew-day amount of water.
+   a. Use your usual mash mass as reference (`strike water + grain bill`).
+   Example: 16 l strike water and 4 kg grain bill -> use about 20 l water for AutoTune.
+   b. Start temperature should be around 50°C (40°C to 55°C).
+   c. Turn on the agitator.
+2. Enter this value in `Kettle volume in liters`.
+3. Enable `PID AutoTune`.
+4. Enable `AutoTune debug`.
+5. Save settings.
+6. Start AutoTune with the power button.
 
 ![AutoTune2](/docs/img/IDS-AutoTune-start.jpg)
 
-The AutoTune process consists of two phases. Phase 1 is heating to the target temperature. When the target temperature is reached, the hob is switched off. The target temperature is sometimes significantly exceeded by 2-3°C. Significantly exceeding the target temperature is necessary for the AutoTune process. This is followed by a cooling phase below the target temperature. These two phases are repeated 5 times. Depending on the environment, the AutoTune process takes a relatively long time (90 minutes or more). Most of the time is needed during the cooling phases. The better a brew kettle is insulated, the longer the AutoTune process or the cooling phase lasts. The AutoTune process should be carried out at a typical mash temperature of approx. 60°C. The current status is displayed in the “AutoTune Process 0/5” column. The first number is the current step and the second number is the number of AutoTune steps expected to be required. Measured values ​​are determined during the AutoTune process. The measured values ​​are constantly checked. If a measured value shows a deviation, the measurement is repeated. If repeated, "AutoTune Process 6/5" is displayed. A maximum of 20 repetitions are carried out. The result of AutoTune is displayed in the GGM IDS settings in the PID Manager tab:
+AutoTune takes about 5 minutes and stops automatically. The detected system parameters are saved automatically.
 
-![AutoTune3](/docs/img/IDS-AutoTune-erg.jpg)
+The key AutoTune result is dead time `L` and slope `R`. PID values are then derived from these values.
 
-The AutoTune process is completed and the determined system parameters are saved automatically.\
-The result of AutoTune is the amplification factor Ku (ultimate gain) and the period duration (ultimate period). P, I and D are calculated from these two parameters. Various algorithms are available for calculating the PID values. The Brautomat uses a PID algorithm that is optimized for brewing (actually for heating liquids) and is also used, for example, in the CraftBeerPi addon PIDBoil.
+If `AutoTune debug` is enabled, you can review `AutoTune_log.txt` in the file browser.
 
-_Tip: After the AutoTune process, the configuration should be saved using a backup._
+Result files are also written as JSON:
 
-When the AutoTune process has ended and "AutoTune debug" has been activated, the log "AutoTune\_log.txt" can be viewed via Explorer. All information is recorded in this log file.\
-The result of AutoTune is saved in JSON format in the files "idsAutoTune.txt", "sudAutoTune.txt" or "hltAutoTune.txt". The files are purely informational and are not required for operation. In these files the PID values ​​are listed according to different calculation methods.
+* `idsAutoTune.txt`
+* `sudAutoTune.txt`
+* `hltAutoTune.txt`
 
-The following calculation methods are listed in the log:
-
-INTEGRAL PID\
-SOME OVERSHOOT PID\
-NO OVERSHOOT PID\
-ZIEGLER NICHOLS PID\
-ZIEGLER NICHOLS PI\
-TYREUS LUYBEN PID\
-TYREUS LUYBEN PI\
-CIANCONE MARLIN PID\
-CIANCONE MARLIN PI
-
-The calculated values of the different algorithms can be entered in the settings with the selection INDIVIDUAL_PID in lines P, I and D. However, this should only lead to better results in rare cases.
+These files are for diagnostics and documentation; they are not required for normal operation.

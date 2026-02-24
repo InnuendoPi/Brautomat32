@@ -1,6 +1,6 @@
 {
-  "version": "1.59.9",
-  "release_date": "2025-12-21",
+  "version": "1.60.29",
+  "release_date": "2026-02-24",
   "type": "Development",
-  "notes": "new Dashboard, ESPAsyncWebserver"
+  "notes": "Brautomat32 FSM rel"
 }

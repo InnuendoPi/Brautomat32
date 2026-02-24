@@ -2,7 +2,7 @@
 
 In der folgenden Beschreibung wird ein _erfundenes Beispielrezept_ verwendet. Diese Beschreibung hat nicht das Rezept zum Inhalt, sondern die Vorgehensweise beim Maischen mit dem Brautomat.
 
-Der Maischeplan hat die Form einer Tabelle. Diese Tabelle wird an einem Brautag von der Brauanlage von oben nach unten abgearbeitet. Im Beispielrezept ist die Zeile _Einmaischen 50°C_ der erste Maischeschritt und _WHP Hallertauer Tradition_ der letzte Maischeschritt. Eine sehr wichtige Funktion im Maischeplan ist die Eigenschaft in der Spalte _autoext_.
+Der Maischeplan hat die Form einer Tabelle. Diese Tabelle wird an einem Brautag von der Brauanlage von oben nach unten abgearbeitet. Im Beispielrezept ist die Zeile _Einmaischen 50°C_ der erste Maischeschritt und _WHP Hallertauer Tradition_ der letzte Maischeschritt. Eine sehr wichtige Funktion im Maischeplan ist die Eigenschaft in der Spalte _autonext_.
 
 ## Grundfunktionen
 
@@ -13,9 +13,9 @@ Zur Orientierung wird zunächst der Aufbau der Tabellenzeilen beschrieben. Eine 
 * Die Spalte "Rast" zeigt einen Namen für diesen Maischeschritt.
 * In der Spalte "Temperatur" steht die Rasttemperatur (in diesem Handbuch auch Ziel- oder Solltemperatur genannt).
 * In der Spalte "Dauer" steht die Rastzeit (Timer), wie lange der Brautomat die Rasttemperatur halten soll.
-* Die Spalte "autoext" gibt an, ob nach Ablauf der Rastzeit (Timer) automatisch zum nächsten Schritt übergegangen wird.
+* Die Spalte "autonext" gibt an, ob nach Ablauf der Rastzeit (Timer) automatisch zum nächsten Schritt übergegangen wird.
 
-Nach diesen vier Angaben zum Maischschritt befinden sich in jeder Zeile Editierbuttons mit folgenden Funktionen: (von links nach rechts)
+Nach diesen vier Angaben zum Maischschritt befinden sich in jeder Zeile Editierbuttons mit folgenden Funktionen (von links nach rechts):
 
 ![Maischeplan editieren](/docs/img/brautomat-111.jpg)
 
@@ -29,9 +29,9 @@ Im Tabellenkopf befinden sich folgende Buttons (von links nach rechts)
 ![Maischeplan editieren](/docs/img/brautomat-1.jpg)
 
 * neue Zeile: füge einen neuen Maischeschritt an das Ende der Tabelle an
-* Löschen: lösche die gesammte Tabelle (leerer Maischeplan)
+* Löschen: lösche die gesamte Tabelle (leerer Maischeplan)
 * Reload: lese das Rezept aus der Datei neu. Änderungen werden nicht gespeichert. Der Button wird blau angezeigt
-* Database: Maischeplan Auswahl, Import, Export und Maischeplan Zeitplaner
+* Database: Einstellungen, Auswahl, Import, Export und Löschen von Maischeplänen
 * Collapse: Maischeplan Tabelle ein- und ausklappen
 
 ![Maischeplan editieren](/docs/img/brautomat-11.jpg)
@@ -47,9 +47,9 @@ Zusammen mit den Steuerelementen Power, Play, Pause, Prev und Next ergibt sich e
 
 * VWH: Vorderwürzenhopfung
 * Kochen (ohne Hopfengaben)
-* WPH: Whirlpool Hopfung
+* WHP: Whirlpool Hopfung
 
-Zusätze wie im Bild dargestellt _Kochen Hefenahrung 1gr_ werden mit Zeitpunkt der Gabe und Menge in den Maischeplan aus dem kleinenBrauherlfer2 importiert.
+Zusätze wie im Bild dargestellt _Kochen Hefenahrung 1gr_ werden mit Zeitpunkt der Gabe und Menge in den Maischeplan aus dem kleinenBrauhelfer2 importiert.
 
 ## Tabelle Maischeplan editieren
 
@@ -67,16 +67,16 @@ Die Buttons zum Editieren werden ausgeblendet. Um diese wieder sichtbar zu mache
 
 ![Maischeplan editieren](/docs/img/brautomat-5.jpg)
 
-Wenn der Maischeprozess pausiert ist, wird der Button Pause in der Steuerung rot dargestellt und die Funktionen zum Editieren werden eingelendet. Das Induktionskochfeld wird nicht ausgeschaltet. Es wird weiterhin die Rasttemperatur gehalten. Wenn der Rast-Timer aktiv ist, wird er angehalten. Wird der Maischeplan verändert (Editormodus), werden der Pause Button zum Fortsetzen vom Maischeprozess und der Button Power deaktiviert und grau dargestellt, bis die Änderungen im Maischeplan entweder gespeichert oder verworfen (Exit) wurden.
+Wenn der Maischeprozess pausiert ist, wird der Button Pause in der Steuerung rot dargestellt und die Funktionen zum Editieren werden eingeblendet. Das Induktionskochfeld wird nicht ausgeschaltet. Es wird weiterhin die Rasttemperatur gehalten. Wenn der Rast-Timer aktiv ist, wird er angehalten. Wird der Maischeplan verändert (Editormodus), werden der Pause-Button zum Fortsetzen des Maischeprozesses und der Button Power deaktiviert und grau dargestellt, bis die Änderungen im Maischeplan entweder gespeichert oder verworfen (Exit) wurden.
 
 Anwendungsbeispiel:\
-Am Ende von einem Maischeprozess wird über eine Jodprobe festgestellt, dass die Maische noch nicht jodnormal ist und noch Stärke vorhanden ist. Die Rast Verzuckerung 72°C soll verlängert werden:
+Am Ende eines Maischeprozesses wird über eine Jodprobe festgestellt, dass die Maische noch nicht jodnormal ist und noch Stärke vorhanden ist. Die Rast Verzuckerung 72°C soll verlängert werden:
 
 * Maischeprozess pausieren
 * Das Stiftsymbol in der Zeile Verzuckerung 72°C anklicken
 * Rastdauer der 2. Verzuckerung um 5 Minuten verlängern
 * Speichern
-* Pause Button klicken und der Maischeprozess wird mit angepasster Rast-Dauer fortgesetzt.
+* Pause-Button klicken und der Maischeprozess wird mit angepasster Rastdauer fortgesetzt.
 
 ## Funktion und Anwendung von autonext
 
@@ -88,7 +88,7 @@ Der erste Schritt des Maischeplans mit dem Namen _Einmaischen 50°C_ hat eine Ra
 
 Der zweite Maischschritt mit der Bezeichnung _Maltoserast 63°C_ hat eine Rasttemperatur von 63°C und eine Rastzeit von 25 Minuten. In diesem Schritt steuert der Brautomat das Kochfeld zunächst auf 63°C. Sobald diese 63°C erreicht sind, startet der Brautomat den Timer. Ein Rasttimer ist eine Stoppuhr, die auf 00:00 (0 Minuten : 0 Sekunden) herunterzählt. Wenn dieser Timer die Rastzeit von 25 Minuten erreicht hat, überprüft der Brautomat die Eigenschaft _autonext_. Wenn _autonext_ aktiviert ist, springt der Brautomat automatisch zum nächsten Schritt im Maischeplan. In diesem Beispielrezept ist dies der Schritt _Verzuckerung 72°C_. Der Schritt Verzuckerung hat eine Rasttemperatur von 72°C. Der Brautomat erhöht automatisch die Leistung des Kochfeldes, um die neue Rasttemperatur zu erreichen.
 
-* Am Ende einer Rast mit aktiviertem _autoext_ wird der Maischprozess automatisch fortgesetzt und das Kochfeld bleibt eingeschaltet.
+* Am Ende einer Rast mit aktiviertem _autonext_ wird der Maischprozess automatisch fortgesetzt und das Kochfeld bleibt eingeschaltet.
 
 ![Maischeplan autonext](/docs/img/Maischeplan-autonext2.jpg)
 
@@ -112,13 +112,13 @@ Die Sonderfunktion _0°C Rasttemperatur mit aktiviertem autonext_ erfüllt genau
 
 ## Brauverfahren
 
-Das Grundprinzip des Brauautomaten ist die aufsteigende Infusion. Dies schließt Varianten wie z.B. das Earlsche Kochmaischverfahren ein. Durch die Eigenschaft "autonext" können auch andere Brauverfahren realisiert werden. Es ist jedoch zu beachten, dass der Brautomat bei anderen Brauverfahren nur mit "Halbautomatik" unterstützen kann. Ein auslösender Trigger für eine Aktion, wie z.B. das Ziehen von Teilmaischen, muss manuell durch den Bediener erfolgen. Manuell bedeutet beim Brautomat die Verwendung der Buttons Play und Pause. Als Auslöser für eine manuelle Aktion kann eine Rast von null Minuten mit deaktiviertem Autonext verwendet werden.
+Das Grundprinzip des Brautomaten ist die aufsteigende Infusion. Dies schließt Varianten wie z.B. das Earlsche Kochmaischverfahren ein. Durch die Eigenschaft "autonext" können auch andere Brauverfahren realisiert werden. Es ist jedoch zu beachten, dass der Brautomat bei anderen Brauverfahren nur halbautomatisch unterstützen kann. Ein auslösender Trigger für eine Aktion, wie z.B. das Ziehen von Teilmaischen, muss manuell durch den Bediener erfolgen. Manuell bedeutet beim Brautomat die Verwendung der Buttons Play und Pause. Als Auslöser für eine manuelle Aktion kann eine Rast von null Minuten mit deaktiviertem Autonext verwendet werden.
 
 Hinweis: Die folgenden Themen zu den Steuerbefehlen sind optional und für den Einstieg in den Brautomat nicht relevant.
 
 ## Braukessel
 
-Der Brautomat unterstützt bis zu drei Braukessel. Der erste Kessel ist für den Maischeprozess erforderlich. Ein zweiter Kessel ist optional und kann bspw. in Brauverfahren wie Dekoktion eingesetzt werden. Der dritte Kessel wird häufig als Nachguss eingesetzt und ist ebenfalls optional. Die Verwendung von 2. und 3. Kessel ist frei wählbar, lediglich der erste Kessel ist an den Maischeprozess und hier speziell an den Rast-Timer gebunden.
+Der Brautomat unterstützt bis zu drei Braukessel. Der erste Kessel ist für den Maischeprozess erforderlich. Ein zweiter Kessel ist optional und kann bspw. in Brauverfahren wie Dekoktion eingesetzt werden. Der dritte Kessel wird häufig als Nachguss eingesetzt und ist ebenfalls optional. Die Verwendung des 2. und 3. Kessels ist frei wählbar, lediglich der erste Kessel ist an den Maischeprozess und hier speziell an den Rast-Timer gebunden.
 
 Standardnamen für Steuerbefehle:
 
@@ -139,7 +139,7 @@ Die Leistung kann entweder ON oder OFF oder eine Zahl zwischen 0 und 100% sein. 
 Der Maischeplan im Bild schaltet an drei Stellen Aktoren. Gleich zu Beginn wird das Rührwerk eingeschaltet: Rührwerk:ON
 Kurz vor Ende des Maischeplans wird das Rührwerk ausgeschaltet: Ruehrwerk:OFF und der Nachguss eingeschaltet: Nachguss:ON.
 
-Der Steuerbefehl für einen Aktor kann mit einer Leistung angegeben werden, z.B. PUMPE:60. Der Aktor Pumpe wird dann mit 60% Leistung eingeschaltet. Dies setzt voraus, dass dieser Aktor für PWM aktiviert wurde. Die Rast-Temperatur und die Rast Dauer müssen bei Steuerbefehlen auf 0 gesetzt werden.
+Der Steuerbefehl für einen Aktor kann mit einer Leistung angegeben werden, z.B. PUMPE:60. Der Aktor Pumpe wird dann mit 60% Leistung eingeschaltet. Dies setzt voraus, dass dieser Aktor für PWM aktiviert wurde. Die Rast-Temperatur und die Rastdauer müssen bei Steuerbefehlen auf 0 gesetzt werden.
 
 Der Steuerbefehl IDS:50 setzt die maximale Ausgangsleistung des Kochfeldes auf 50%. Ebenso kann mit HLT:75 der Nachguss auf 75% Leistung eingeschaltet werden.
 
@@ -167,6 +167,15 @@ Beispiele:
 * SUD:Dickmaische kochen
 * SUD:60
 
+### Sonderbefehl Leistung ab Übergang (ab 1.60)
+
+Zusätzlich zur allgemeinen Leistungsbegrenzung (`IDS:75`) kann im Maischeplan auch die Leistung ab Übergang zum Kochen direkt gesetzt werden:
+
+* `IDSTHRESOUT:80`
+* `MAISCHETHRESOUT:80`
+
+Der Wert gilt in Prozent (0 bis 100) und steuert die feste Kochleistung ab dem eingestellten Übergang zum Kochen. Das ist besonders hilfreich, wenn beim Aufheizen 100% Leistung gewünscht sind, beim wallenden Kochen aber z. B. nur 70 bis 85% sinnvoll sind.
+
 _Hinweis: Mit den Steuerbefehlen können die Kessel Maische, Sud und HLT gleichzeitig betrieben werden. Es kann jedoch nur ein Rasttimer aktiv sein. Der Rasttimer ist immer mit dem ersten Kochfeld "Maische" verknüpft._
 
 ### Beispiel Steuerbefehl IDS
@@ -175,7 +184,7 @@ Als Beispiel wird die folgende Konfiguration für das GGM IDS bzw. den Kessel Ma
 
 ![IDS Steuerbefehl](/docs/img/aktoren_schalten4.jpg)
 
-Die maximale Leistungsabgabe ist auf 100% voreingestellt. Die Temperatur "Übergang zum KOchen" beträgt 95°C. Ab dieser Temperatur beträgt die maximale Ausgangsleistung des GGM IDS nur noch 80%.
+Die maximale Leistungsabgabe ist auf 100% voreingestellt. Die Temperatur "Übergang zum Kochen" beträgt 95°C. Ab dieser Temperatur beträgt die maximale Ausgangsleistung des GGM IDS nur noch 80%.
 
 Der Maischeplan in der Abbildung beginnt mit dem Schritt "Aufheizen des Hauptgusses". Das Induktionskochfeld GGM IDS würde das Wasser mit der Leistung "Max. Leistung IDS" (Parameter im Register Temperatursteuerung), also mit 100%, erhitzen.
 
@@ -225,14 +234,14 @@ _Hinweis: Der hier verwendete Wirkungsgrad von 80% für ein Induktionskochfeld i
 
 ## Sonderfunktion Profilwechsel
 
-Eine weitere Sonderfunktion ist der Profilwechsel. Der Befehle lautet IDSPROFIL, SUDPROFIL und HLTPROFIL. Hinter dem Doppelpunkt folgt der Profilname.
+Eine weitere Sonderfunktion ist der Profilwechsel. Der Befehl lautet IDSPROFIL, SUDPROFIL und HLTPROFIL. Hinter dem Doppelpunkt folgt der Profilname.
 
 Beispiele:
 
 IDSPROFIL:Profil68l\
 IDSPROFIL:Profil36l
 
-Mit diesem Sonderbefehl werden alle Parameter von einem Kessel ausgestauscht. Auf diese Weise können unterschiedliche Hardware Profile hinterlegt werden. Im Brauverfahren Dekoktion bietet der Sonderbefehl eine einfache Möglichkeit, bei gleichem Kessel und kleinerem Volumen angepasst Parameter einzusetzen.
+Mit diesem Sonderbefehl werden alle Parameter eines Kessels ausgetauscht. Auf diese Weise können unterschiedliche Hardware-Profile hinterlegt werden. Im Brauverfahren Dekoktion bietet der Sonderbefehl eine einfache Möglichkeit, bei gleichem Kessel und kleinerem Volumen angepasste Parameter einzusetzen.
 
 Die Sonderbefehle IDS: und IDSPROFIL: haben unterschiedliche Wirkungen: Der Sonderbefehl IDS: verändert die maximale Ausgangsleistung. Alle anderen Parameter bleiben gleich.
 
@@ -242,7 +251,7 @@ _Hinweis: der Sonderbefehl IDSPROFIL im Maischeplan wird abgebrochen, wenn der G
 
 Abschließend werden die Sonderbefehle, die Hopfengaben und das allgemeine Vorgehen anhand eines Brautages zusammengefasst. Dieses Beispiel basiert auf folgendem Setup:
 
-Zwei Kessel-Umgebung:
+Zwei-Kessel-Umgebung:
 
 * ein Maische-Sud-Kessel (Volumen 70l, GGM IDS2 mit 3.6kW)
 * ein Nachguss Kessel (Wasserkocher 35l, 2kW)
@@ -256,33 +265,33 @@ Der Maischeplan:
 
 ![example mash plan brewing day](/docs/img/example_control_commands1.jpg)
 
-Das Beispiel zeigt, wie einfach es ist, über Sonderbefehle Aktoren ein und auszuschalten bzw. wie Sonderbefehle in den Maischeplan eingebunden werden. Im ersten Maischeschritt wird das Rührwerk eingeschaltet. Der Brautomat führt den Sonderbefehl aus und springt sofort zum nächsten Schritt im Maischeplan. Der Schritt Einmaischen (mash in) wurde mit einer Dauer von 1 Minuten und deaktivierten autonext konfiguriert. In diesem Schritt wird das Malz zum Brauwasser gegeben. Der Schritt dauert länger als eine Minute, aber je nach Schüttung ist vorab gar nicht bekannt, wie lange das Einmaischen dauern wird. Nach einer Minute Einmaischen schaltet der Brautomat das Kochfeld ab und zeigt den Play Button in rot an (deaktiviertes autonext). Der Brautomat "wartet" nun, bis der Schritt abgeschlossen ist und der Play Button geklickt wird. Aus dem Zustand Kochfeld ausgeschaltet und Zugabe Malze ergibt sich eine Mischtemperatur für die Maische, die unterhalb von 55°C liegen wird. Dieses Vorgehen ist bspw. für ein ganz entspanntes langsames Zugeben der Malze oder auch für eine kurze Eiweißrast geeignet.
+Das Beispiel zeigt, wie einfach es ist, über Sonderbefehle Aktoren ein- und auszuschalten bzw. Sonderbefehle in den Maischeplan einzubinden. Im ersten Maischeschritt wird das Rührwerk eingeschaltet. Der Brautomat führt den Sonderbefehl aus und springt sofort zum nächsten Schritt im Maischeplan. Der Schritt Einmaischen (mash in) wurde mit einer Dauer von 1 Minute und deaktiviertem autonext konfiguriert. In diesem Schritt wird das Malz zum Brauwasser gegeben. Der Schritt dauert länger als eine Minute, aber je nach Schüttung ist vorab nicht bekannt, wie lange das Einmaischen dauern wird. Nach einer Minute Einmaischen schaltet der Brautomat das Kochfeld ab und zeigt den Play-Button in rot an (deaktiviertes autonext). Der Brautomat "wartet" nun, bis der Schritt abgeschlossen ist und der Play-Button geklickt wird. Aus dem Zustand Kochfeld ausgeschaltet und Zugabe Malze ergibt sich eine Mischtemperatur für die Maische, die unterhalb von 55°C liegen wird. Dieses Vorgehen ist bspw. für ein ruhiges, langsames Zugeben der Malze oder auch für eine kurze Eiweißrast geeignet.
 
-_Alternative:_ die Eigenschaft autonext aktivieren und die Rastdauer auf 5 Minuten setzen. In dem Fall würde der Brautomat die Einmaischtemperatur 5 Minute lang halten (Einmaischen) und anschließend automatisch zur nächsten Rast aufheizen.
+_Alternative:_ die Eigenschaft autonext aktivieren und die Rastdauer auf 5 Minuten setzen. In dem Fall würde der Brautomat die Einmaischtemperatur 5 Minuten lang halten (Einmaischen) und anschließend automatisch zur nächsten Rast aufheizen.
 
 Der nächste Schritt ist die Maltoserast. Der PID Controller regelt die benötigte Leistung, um die Zieltemperatur in der Maische zu erreichen und für die Dauer von 40 Minuten zu halten. In Zeile 4 wird per Sonderbefehl der Nachguss eingeschaltet. Die Zieltemperatur für den Nachguss beträgt 75°C und die Dauer beträgt 0 Minuten. Der Brautomat startet für den Kessel Nachguss den PID Controller und regelt die benötigte Leistung im Hintergrund. An dieser Stelle vom Maischeplan sind zwei PID Controller aktiv: ein PID Controller für den MaischeSud Kessel und ein PID Controller für den Nachguss. Der Brautomat springt nach dem Einschalten Nachguss direkt zum nächsten Schritt.
 
 Im Maischeplan wird der Aktor Ringheizelement einmal mit dem Sonderbefehl _RHE:ON_ und einmal mit _RHE:50_ eingeschaltet bzw. umgeschaltet. Das ON übersetzt der Brautomat mit 100% Leistung, während 50 dementsprechend mit 50% Leistung verarbeitet wird. Der MaischeSud Kessel hat ein max. Volumen von 70 Liter. Das Ringheizelement unterstützt das Kochfeld während des Kochens mit 50% Leistung für ein kräftig wallendes Kochen: 100% Leistung Kochfeld (3.5kW) plus 1.75kW Ringheizelement (50%). Zum Kochende wird das Ringheizelement mit dem Sonderbefehl _RHE:OFF_ ausgeschaltet.
 
-Der Zeitpunkt der Hopfengaben wird berechnet auf Basis ihrer Kochdauer. Der Maischeplan hat eine Gesamtkochdauer von 90 Minuten. Davon sind 30 Minuten Kochen ohne Hopfengaben. Die Gesamtkochdauer der einzelnen Hopfengaben summieren sich auf. D.h. die erste Hopfengabe _Hall. Tradition 6.0% 37.2g_ wird insgesamt 60 Minuten gekocht:
+Der Zeitpunkt der Hopfengaben wird auf Basis ihrer Kochdauer berechnet. Der Maischeplan hat eine Gesamtkochdauer von 90 Minuten. Davon sind 30 Minuten Kochen ohne Hopfengaben. Die Gesamtkochdauer der einzelnen Hopfengaben summiert sich auf. Das heißt, die erste Hopfengabe _Hall. Tradition 6.0% 37.2g_ wird insgesamt 60 Minuten gekocht:
 
 * Dauer Maischeschritt Hopfengabe Hall. Tradition 37.2g: 30 Minuten
 * Dauer Maischeschritt Hopfengabe Hall. Tradition 31g:   15 Minuten
-  * am Ende diese Maischeschritt ist die erste Hopfengabe (37.2g) 45 Minuten in der Würze
+  * am Ende dieses Maischeschritts ist die erste Hopfengabe (37.2g) 45 Minuten in der Würze
 * Dauer Maischeschritt Hopfengabe Hall. Tradition 30g:   10 Minuten
-  * am Ende diese Maischeschritt ist die erste Hopfengabe (37.2g) 55 Minuten und die zweite 25 Minuten in der Würze
+  * am Ende dieses Maischeschritts ist die erste Hopfengabe (37.2g) 55 Minuten und die zweite 25 Minuten in der Würze
 * Dauer Maischeschritt Hopfengabe Hall. Tradition 7g:     5 Minuten
-  * am Ende diese Maischeschritt ist die erste Hopfengabe (37.2g) 60 Minuten, die zweite 24 Minuten und die dritte 15 Minuten in der Würze
+  * am Ende dieses Maischeschritts ist die erste Hopfengabe (37.2g) 60 Minuten, die zweite 24 Minuten und die dritte 15 Minuten in der Würze
 
-Während Tools wie kleinerBrauhelfer, BrewFather oder MMum immer die Geamtkochdauer für jede einzelne Hopfengabe angeben, muss der Brautomat einen Alarm oder einen Hinweis geben, wann eine Hopfengabe während des Brauens zur Würze gegeben werden muss.
+Während Tools wie kleinerBrauhelfer, BrewFather oder MMum immer die Gesamtkochdauer für jede einzelne Hopfengabe angeben, muss der Brautomat einen Alarm oder Hinweis geben, wann eine Hopfengabe während des Brauens zur Würze gegeben werden muss.
 
 _Erweiterung:_ Die Erläuterung Hopfengaben wird um zwei oder mehr Gaben zum selben Zeitpunkt erweitert:
 
 ![example mash plan brewing day](/docs/img/example_control_commands3.jpg)
 
-10 Minuten vor Kochende soll die Hopfengabe _Hall. Tradition 6.0% 30g_ und Hefenahrung _Nutrient yeast_ zeitgleich zu Würze gegeben werden. Die Abbildung zeigt, wie einfach das Vorgehen ist: zeitgleiche Gaben werden mit 0 Minuten Dauer vor einer Gaben mit Dauer gesetzt.
+10 Minuten vor Kochende soll die Hopfengabe _Hall. Tradition 6.0% 30g_ und Hefenahrung _Nutrient yeast_ zeitgleich zur Würze gegeben werden. Die Abbildung zeigt, wie einfach das Vorgehen ist: zeitgleiche Gaben werden mit 0 Minuten Dauer vor einer Gabe mit Dauer gesetzt.
 
-Der vorletzte Schritt Nachisomerisierung (post isomerization) verwendet die Sonderfunktion Zieltemperatur 0°C. Das Kochfeld wird mit diesem Maischeschritt abgeschaltet. Die Sonderfunktion Rasttemperatur 0°C veranlasst den Brautomat, den Rasttimer 10 Minunten sofort zu starten. Die Würze hat zu diesem Zeitpunkt eine Temperatur von ca. 100°C und kühlt langsam ab. Weil der folgende Schritt eine Aromahopfengabe bei 78°C ist, wird die Würze während der Rastdauer von 10 Minuten Nachisomerisierung aktiv gekühlt.
+Der vorletzte Schritt Nachisomerisierung (post isomerization) verwendet die Sonderfunktion Zieltemperatur 0°C. Das Kochfeld wird mit diesem Maischeschritt abgeschaltet. Die Sonderfunktion Rasttemperatur 0°C veranlasst den Brautomat, den Rasttimer für 10 Minuten sofort zu starten. Die Würze hat zu diesem Zeitpunkt eine Temperatur von ca. 100°C und kühlt langsam ab. Weil der folgende Schritt eine Aromahopfengabe bei 78°C ist, wird die Würze während der Rastdauer von 10 Minuten Nachisomerisierung aktiv gekühlt.
 
 Der Graph zum Maischeplan:
 

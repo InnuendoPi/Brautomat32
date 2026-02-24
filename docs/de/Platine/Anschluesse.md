@@ -8,7 +8,7 @@ Die Voreinstellung für das Induktionskochfeld lautet:
 
 | Typ         | Farbe | Anschluss  |
 | ------------- | --------------- | ------------------------ |
-| Interrupt     | blau/grün | - (unbelegt) oder D5 |
+| Interrupt     | blau/grün | - (unbelegt) |
 | Command       | gelb | D6 |
 | Relay         | weiß | D7 |
 | Spannung +    | rot  | 5V/Vcc |
@@ -16,6 +16,8 @@ Die Voreinstellung für das Induktionskochfeld lautet:
 | |  | |
 
 Auf dem Schaltplan sind die 5 Anschlüsse für das Induktionskochfeld mit "GGM" gekennzeichnet. Das GGM-Anschlusskabel vom Bedienfeld hat ein blaues Kabel, während das Ersatzkabel ein grünes Kabel hat.
+
+Hinweis: Der Interrupt-Anschluss ist optional und für den normalen Braubetrieb nicht erforderlich. Er wird nur für spezielle Fehlersuche genutzt.
 
 Der Brautomat inklusive Display kann mit der Spannungsversorgung der GGM IDS betrieben werden. Dazu müssen nur das rote und das schwarze Kabel in die gekennzeichneten Schraubklemmen gesteckt werden. Eine weitere zusätzliche Spannungsversorgung darf in diesem Fall nicht an den ESP-Mikrocontroller angeschlossen werden.
 
@@ -48,7 +50,7 @@ Es gibt keine Reihenfolge bei den Anschlüssen für die digitalen Sensoren Dalla
 | GND | GND |
 | | |
 
-Die Reihenfolge CS0 bis CS2 für den Anschluss von anlagogen Sensoren PT100x muss beachtet werden.
+Die Reihenfolge CS0 bis CS2 für den Anschluss von analogen Sensoren PT100x muss beachtet werden.
 
 ## Display anschließen
 

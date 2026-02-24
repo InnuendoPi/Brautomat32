@@ -1,29 +1,63 @@
-# Calibration
+﻿# Calibration
 
-Dallas DS18B20 sensors sometimes exhibit deviations from the actual temperature. Manufacturers' technical specifications often state an accuracy of +-0.5°C in the range from -10°C to 85°C. Additionally, the sensors are referred to as calibrated.
+Dallas DS18B20 sensors can show small deviations from true temperature.
+Typical datasheet accuracy is about +/-0.5°C (from -10°C to 85°C).
 
-Deviations can be corrected using a 2-point calibration. The calibration by the Brautomat is a linear correction. A calibrated thermometer is required to calibrate the sensors. The brewing kettle is filled with a typical amount of water and heated to 40°C. The difference between the sensor value and the calibrated thermometer is entered into the "Offset 1 \[40°C]" parameter. This process is repeated at 78°C and the difference is entered into the “Offset 2 \[78°C]” parameter. In the future, all sensor measurements will be output with this correction.
+Brautomat supports linear 2-point calibration.
 
-For calibration, the temperature sensor is set to high resolution mode (12bit resolution or 0.0625°C). A calibration via the web interface consists of 60 measured values. The time required for a calibration is almost exactly 60 seconds. The result of the temperature measurement is the average of the 60 measured values. An offset is the difference between the actual temperature and the average.
+## 2-point calibration with reference thermometer
 
-In many cases, a 1-point calibration in an ice bath is sufficient because the offset of the DS18B20 sensors is usually constant.
+Use a calibrated reference thermometer.
 
-## Procedure for calibration without a reference thermometer
+1. Heat a typical kettle volume to 40°C.
+2. Enter the difference in `Offset 1 [40°C]`.
+3. Heat to 78°C.
+4. Enter the difference in `Offset 2 [78°C]`.
 
-If a reference thermometer is not available, calibration can be performed using an ice bath and a boil.
-For the lower measuring range, a container with 50% ice cubes and 50% cold water is required. An ice bath has a temperature of (almost exactly) 0.0 °C. The ice water must be stirred continuously, preferably with a magnetic stirrer. The calibration is started in an ice bath at 0 °C.
+Brautomat then applies this correction to future measurements.
 
-The second point for calibration can be determined via the altitude above sea level and the associated boiling point. At 0 m above sea level or an atmospheric pressure of 1,013 bar, the boiling temperature is 100.0°C. As altitude increases, the air pressure and thus the boiling temperature decreases. First, the local NHN must be determined, for example via Google Earth. For each meter above sea level, the boiling temperature drops by 0.003354°C. On the website of [rechneronline](https://rechneronline.de/barometer/siedepunkt.php) the boiling point is calculated based on the height above sea level. Many smartphones also offer altitude information in the compass or navigation app. The height above sea level should be determined with an accuracy of approx. +-20m. This corresponds to a change in boiling point temperature of 0.06708°C and is therefore far outside the accuracy of the Brautomat control. The second point calibration is carried out using a mash brew kettle, an agitator and the previously determined local boiling point. The target temperature is therefore the boiling point temperature. It is important to ensure that the boiling point temperature is reached and maintained for at least one minute before starting the upper range calibration. It is also very important that the hob remains on at constant power.
+During calibration, the sensor runs at 12-bit resolution (0.0625°C).
+Each calibration run records 60 samples (about 60 seconds), and the average is used.
 
-Offset #1 (lower value range) is the difference of 0.0°C (ice bath) to the average value of the first calibration run. Offset #2 (upper range) is the difference between the boiling point and the average from the second calibration run.
+In many setups, a 1-point calibration in an ice bath is already sufficient because DS18B20 offsets are often close to linear.
 
-## Procedure calibration with clinical thermometer
+## Calibration without reference thermometer
 
-A clinical thermometer is a well-suited reference thermometer. The upper measuring range of a clinical thermometer is limited to approx. 40°C. Carrying out the calibration corresponds to the procedure for ice bath and boiling temperature. The only difference: If you choose 40°C as the second calibration point, for example, the hob must be switched off as soon as the target temperature is reached and remains constant for approx. 60 seconds (no fluctuations). Only then can dThe calibration, i.e. the recording of 60 measurement samples, can be started.
+If no reference thermometer is available, use:
+
+* an ice bath (0°C)
+* boiling point at your local altitude
+
+For the low point, prepare an ice bath with about 50% ice and 50% cold water and stir continuously.
+
+For the high point, estimate local boiling point via altitude.
+At sea level (`0 m`, about `1.013 bar`), boiling point is `100.0°C`.
+Boiling point decreases by about `0.003354°C` per meter altitude.
+
+You can use tools such as:
+[rechneronline boiling point calculator](https://rechneronline.de/barometer/siedepunkt.php)
+
+For reliable results, keep boiling stable for at least one minute before starting the high-point calibration run.
+
+Offset definitions:
+
+* `Offset #1`: difference between 0.0°C and first-run average
+* `Offset #2`: difference between local boiling point and second-run average
+
+## Calibration with clinical thermometer
+
+A clinical thermometer can be used only in the lower range (up to about 40°C).
+
+If using 40°C as upper calibration point:
+
+1. Heat to 40°C.
+2. Switch heating off.
+3. Wait until temperature is stable for about 60 seconds.
+4. Start calibration sample run.
 
 ## Sensor calibration log file
 
-A log file is written for every calibration. Example:
+A log file is written for each calibration. Example:
 
 ```text
 13:22:37 Sensor calibration started

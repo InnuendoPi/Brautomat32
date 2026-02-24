@@ -1,154 +1,202 @@
-# Hob parameters
+﻿# Kettle parameters
 
 ## Temperature control
 
 ### Max power
 
-This parameter describes the maximum output power of the hob. The default value is 100%. This parameter is used if a small kettle with, for example, 20l volume is used on the hob. By reducing the power, heating up too quickly and boiling over can be avoided. The parameters "Max. power" and "Power from transition" should be reduced together when using small brewing kettles.
+Defines the maximum heating output for this kettle (default: `100%`).
 
-At the end of this chapter you will find [two examples for calculating the required power](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung).
+Use lower values for small kettle volumes (for example 20 l) to avoid aggressive heating and boil-over. In practice, reduce `Max power` and `Power from transition` together.
+
+At the end of this chapter you will find [two examples for calculating required power](https://innuendopi.gitbook.io/brautomat32/info-5/parameter-ggm-ids#berechnung-der-erforderlichen-leistung).
 
 ### Temperature delta to target
 
-This parameter describes the difference from the rest temperature (setpoint) at which the timer should start for a rest. The default value is 0.3°C. In the mashing process, the PID controller enables very precise temperature control. A rest temperature is achieved to an accuracy of +-0.2°C by the PID controller reducing the energy supply in a controlled manner before the rest temperature is reached. Reducing the energy supply has the side effect that the final step to reach the rest temperature takes longer. This is exactly where the "Delta to target" parameter comes into play: For example, if a rest temperature of 63°C is to be achieved and the current temperature is 62.7°C, then the rest timer would start at a temperature delta to the target of 0.3°C. In relation to the individual brewing system, delta can be used to avoid an unwanted extension of the rest time.
+Defines how close actual temperature must be to target before the rest timer starts (default: `0.3°C`).
+
+Example: target is 63.0°C, current temperature is 62.7°C. With delta `0.3°C`, the timer starts already at 62.7°C.
+
+This helps avoid unnecessary extension of rest time in slow final approach phases.
 
 ### Transition to cooking [°C]
 
-This parameter describes the temperature at which the PID controller should detect that the wort is boiling. The default value is 95°C. This parameter does not describe the temperature at which the wort begins to boil. This parameter describes the temperature at which the Brautomat deactivates the PID controller and controls the hob with a specified power "power from transition". In contrast to the rest temperatures, the aim of cooking is not to precisely reach and maintain the temperature, but rather to cook smoothly. So instead of reducing the power, the induction hob is operated at a constant power when cooking.
+Defines the temperature where Brautomat recognizes the transition into boil mode (default: `95°C`).
+
+This is not the physical boiling point. It is the threshold where PID can hand over to fixed-power boil control.
 
 ### Power from transition [%]
 
-This parameter describes the output power for the hob from the temperature transition to cooking. The default value is 100%. The "Transition to cooking" parameter has been used to set a temperature at which the PID controller is deactivated. The “Power from transition” parameter now specifies the fixed output power for the hob. If a brewing kettle with a volume of 35l or more is used, the default value of 100% is a suitable choice. In brewery kitchens with small kettles, 100% energy supply can cause boiling over. In this case, the maximum energy supply can be reduced to, for example, 75% with this parameter.
+Defines fixed output power after the transition threshold (default: `100%`).
+
+For large volumes (about 35 l and above), `100%` is often fine. For smaller kettles, reduce this value (for example to 75%) to reduce boil-over risk.
+
+From version 1.60, this can also be set directly in mash plan command steps:
+
+* `IDSTHRESOUT:80`
+* `MAISCHETHRESOUT:80`
 
 ### Disable PID for cooking [on/off]
 
-This parameter determines the behavior of the PID controller when cooking when the actual temperature is above the target temperature. Example: the cooking temperature was set to 98°C in the mash plan. The "Power from transition" parameter switches off the PID calculation from the "Transition to boiling" temperature. If the "Deactivate PID for boiling" parameter is activated (default), then the PID controller remains switched off even above the target temperature of 98°C from the mash plan and the power from the "Power from transition" parameter is used. This parameter is activated by default and enables rolling cooking.
+Defines PID behavior above boil target temperature.
 
-If the parameter "Deactivate PID for cooking" is not activated, the required power is calculated by the PID controller once the target temperature (here 98°C) is reached. The calculated power above the target temperature is 0%. The hob switches off and prevents boiling over if necessary.
+Typical example: boil target in mash plan is `98°C`.
 
-### Perfomancein case of sensor error [0-100%]
+If enabled (default), PID stays disabled above target and boil runs with `Power from transition`. This supports a stable rolling boil.
 
-If a sensor error occurs, for example a sensor is not connected or a defect, the power of the hob can be adjusted to deal with this error. A value of 100% ignores the sensor error.
+If disabled, PID is active again above target and can reduce output strongly (even to 0%), which may stop boil if overshoot occurs.
 
-If the power is set to 0% in the event of a sensor error, the Brautomat pauses the mashing process. The hob is switched off. Once the rest timer has started, the timer is stopped.
+### Sensor error power [0-100%]
 
-The Brautomat starts error handling after 3 consecutive incorrect sensor values. The sensors are queried approximately every 2000ms. This means that approx. 6 seconds pass between the toast message sensor error and the start of error handling.
+Defines fallback power if sensor errors occur.
 
-If a faulty sensor reports correct sensor values ​​again, the Brautomat automatically continues the mashing process.
+* `100%`: continue operation ignoring sensor error
+* `0%`: pause mash process and switch heating off
 
-_Note: the Max. power parameter is not exceeded by the Power on sensor error parameter. For example, if Max. Power IDS was configured to 75% and Power in case of sensor error to 100%, then the effective maximum output power is 75% even in the event of a sensor error._
+Brautomat starts sensor-error handling after 3 consecutive invalid sensor readings (about 6 seconds at 2 s scan interval).
+
+If the sensor recovers, Brautomat continues automatically.
+
+_Note: `Max power` still limits effective output. Example: Max power 75% and sensor error power 100% still results in max 75%._
 
 ## PID Manager
 
 ### Interval (SampleTime)
 
-This parameter indicates the time interval at which the required power is calculated. The default value is 3000ms. The interval is used for the PID calculation and in the AutoTune. In brewery kitchens with small volumes, a smaller interval may be advantageous. The smaller the interval, the more frequently the required power is calculated. This leads to a higher utilization of the automatic broiler. Value range 1000 - 7000ms.
+Defines how often required power is recalculated (default: `3000 ms`, range: `1000` to `7000 ms`).
 
-### PID Algorithm
+Smaller intervals react faster but increase controller activity.
 
-There are three options to choose from
+### PID algorithm
 
-* manual PID mode: this selection allows the use of your own Kp, Ki and Kd values
-* IDS PID mode: this selection calculates the values for Kp, Ki and Kd for GGM IDS induction hobs based on the Ku and Pu values from the AutoTune process
-* Relay PID mode: this selection calculates the values for Kp, Ki and Kd for relay-based hobs using the Ku and Pu values from the AutoTune process
+Available modes:
+
+* Manual PID mode: use custom `Kp`, `Ki`, `Kd`
+* IDS PID mode: calculate PID from AutoTune `Ku`/`Pu` for GGM IDS systems
+* Relay PID mode: calculate PID from AutoTune `Ku`/`Pu` for relay-driven systems
 
 ## AutoTune
 
 ### AutoTune noise band
 
-This parameter is used for detecting extreme values (Max, Min). AutoTune noiseband indicates the minimum change from the previous measured value that must be present in order to recognize a new extreme value. The default value for the GGM IDS is 0.2. For a recast cooker via a relay or SSR, the default value is 0.5. Value range: 0.1 - 1.0
+Used for extreme-value detection (min/max). It defines the minimum change required to detect a new extremum.
 
-### AutoTune Data series (lookback)
+Typical defaults:
 
-This parameter specifies how many measured values should be considered for determining extremal values. The default value is 50 readings. Please note that a maximum of 100 measured values ​​can be configured. For very well thermally insulated brewing kettles, increasing the data series to 100 measured values ​​can improve the detection of extreme values ​​in the cooling phase of the AutoTune process.
+* GGM IDS: `0.2`
+* relay/SSR NACHGUSS kettle: `0.5`
+
+Value range: `0.1` to `1.0`.
+
+### AutoTune data series (lookback)
+
+Defines how many measured values are used for extreme detection (default: `50`, max: `100`).
+
+Highly insulated kettles may benefit from a larger lookback during cooling phases.
 
 ### AutoTune debug
 
-This switch activates the AutoTune protocol. The log provides information if the AutoTune process cannot be completed successfully. If AutoTune debug is activated, the protocol is also available when brewing.
+Enables detailed AutoTune logs for diagnostics.
 
-_These 10 parameters must be set individually for each brewing system. The parameters can be changed during a mashing process. With a test run with a typical amount of water, the parameters can be easily determined before a brewing day._
+If enabled, logs are also available during brewing.
+
+_These parameters are setup-specific. You can tune them with a water-only test run before brew day._
 
 ## Profiles
 
-The Brautomat can manage hardware profiles. Profiles can be used if there are different boilers. Users with kettles of different sizes can use profiles to select the kettle for the brewing day instead of having to manually re-enter all the parameters. A hardware profile contains all the settings of a boiler.
+Brautomat can store hardware profiles for different kettle setups (for example small and large batch kettles).
 
-Profiles are saved in the /Profiles folder. Profiles enable quick and easy switching between different boilers. The Save function creates a profile file with den above parameters, while the Delete function removes the profile file from the flash memory.
+A profile includes all kettle-related parameters. Profiles are saved in the `/Profiles` folder.
 
-The default profile when starting the bread machine is always the last profile selected.
+* `Save` creates/updates a profile file
+* `Delete` removes the profile file from flash
 
-## Calculation of the required power
+At startup, Brautomat loads the last selected profile.
 
-_The following paragraph describes an optional topic._
+## Calculation of required power
 
-When mashing, an increase in the mash temperature of 1°C per minute is desired. The required power P of the GGM IDS can be calculated as follows:
+_This section is optional background information._
 
-required power P = m[kg] * 75\
-existing performance of the GGM IDS P = 3500\
-Factor in percent = required performance: existing performance
+For mash ramping, a target of about 1°C per minute is common.
+
+Simplified estimate:
+
+`required power P = m[kg] * 75`
+
+Where `m` is mash mass (`grain bill + strike water`).
+
+Assumed IDS max power:
+
+`Pmax = 3500 W`
+
+Power percentage:
+
+`required / available`
 
 ### Example 1
 
-In the first example there is a fill of 9kg and a main pour of 35l. This results in a total mass of
+Grain bill `9 kg`, strike water `35 l`:
 
 ```json
 m = 9 + 35 = 44
 ```
 
-We substitute the mass m = 44 into the simplified formula:
-
 ```json
 P = 44 * 75 = 3300
 ```
 
-Approximately 3300 W/min is required to heat a volume of 44kg by 1°C per minute. If the GGM IDS is operated with 100% power, i.e. 3500W, the temperature difference of 1°C in the mash is achieved in less than 60 seconds. In order to achieve the goal of 1°C temperature increase in the mash per minute, the maximum performance of the GGM IDS must be reduced:
+Needed: approx. 3300 W for about 1°C/min.
+With 3500 W available:
 
 ```json
-3300: 3500 = 0.94 which corresponds to 94%
+3300 / 3500 = 0.94 = 94%
 ```
 
-The GGM IDS would have to be operated with approx. 94-95% power (special function IDS:94).
+So IDS target power is about 94-95% (`IDS:94`).
 
 ### Example 2
 
-In the second example there is a fill of 5.9kg and a main pour of 26.5l. The total mass is 32.4kg.
+Grain bill `5.9 kg`, strike water `26.5 l`:
 
 ```json
 m = 5.9 + 26.5 = 32.4
 ```
 
-We substitute the mass m = 32.4 into the simplified formula:
-
 ```json
 P = 32.4 * 75 = 2430
-2430 : 3500 = 0.69
+2430 / 3500 = 0.69
 ```
 
-It takes approximately 2430 W/min to heat a volume of 32.4kg by 1°C per minute. The GGM IDS would have to be operated with approx. 69-70% power (special function IDS:70).
+So IDS target power is about 69-70% (`IDS:70`).
 
-### Simplification Mass * 75?
+### Why mass * 75?
+
+Base formula:
 
 ```json
 P = m[kg] * c * T / (t * w)
 ```
 
-m corresponds to mass of main casting + fill\
-c corresponds to the specific heat capacity of the mash. The value 3600 is used (unit Joule/(kg * °C))\
-T corresponds to the temperature difference. We use 1°C difference\
-t corresponds to time. We put 60 seconds into the equation as the time\
-w the induction efficiency (80-90%). The value 0.8 is inserted into the equation
+Variables:
+
+* `m`: mash mass (`strike water + grain bill`)
+* `c`: specific heat capacity of mash (approx. `3600 J/(kg*°C)`)
+* `T`: temperature increase (`1°C`)
+* `t`: time (`60 s`)
+* `w`: heater efficiency (`0.8` assumed)
 
 ```json
 c * T / (t * w) = 3600 * 1 / (60 * 0.8) = 75
 ```
 
-With this simplification we get the value 75.
+Hence the simplified factor `75`.
 
-### specific heat capacity
+### Specific heat capacity note
 
-The specific used here Heat capacity 3600 has an error tolerance of approximately 2% (depending on temperature and extract). Malt meal has a heat capacity of 1570 J/(kg*°C), water has a heat capacity of 4190 J/(kg*°C) in the temperature range 50-80°C. Assuming the water content in the malt meal is 6%: (Figures from Example 1)
+The simplified `3600` value has a small tolerance (about 2%, depending on extract and temperature).
 
-```json
-9 * 94% * 1570 + (35 + 9 * 6%) * 4190 = 8.97 * 1.57 + 35.54 * 4.19 = 14.08 + 148.91 = 13282.2 + 148912.6 = 162194.8 / 44 = 3686.25 J per kg per degree Celsius
-```
+Reference values:
 
-See also [Brewing Magazine](https://braumagazin.de/article/berechnungen-in-der-brauerei/)
+* malt grist: about `1570 J/(kg*°C)`
+* water (50-80°C): about `4190 J/(kg*°C)`
+
+See also [Brewing Magazine](https://braumagazin.de/article/berechnungen-in-der-brauerei/).

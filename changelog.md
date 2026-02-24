@@ -1,14 +1,258 @@
-# Changelog
+﻿# Changelog
 
-ESP32 Arduino 3.3.5 ESP-IDF v5.5.1\
-VSCode 1.107 pioarduino IDE 1.1.5\
-InnuAPID AutoTune PID lib 1.8\
-InnuTicker Task Scheduler lib 0.8\
-InnuNextion Display lib 0.8\
+ESP32 Arduino 3.3.7 ESP-IDF v5.5.2\
+VSCode 1.109 pioarduino IDE 1.1.5\
+InnuAPID AutoTune PID lib 1.10.18\
+InnuTask lib 0.10.16\
+InnuNextion Display lib 0.9\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
+
+* Breaking:     Finale Anpassung für WebUpdates von Version 1.59 oder älter
+                die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
+                die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden.
+
+Version 1.60.29 final RC
+
+* Geändert:     PID-Rechenkern vereinheitlicht: `KL/KR -> KP/KI/KD` wird nun gemeinsam von AutoTune und `/setKettlePID` genutzt
+* Neu:          WebIf `calcPID` für Maische, HLT und Sud (Recalc aus `KL/KR` inkl. `sa/psa/newo`)
+* Geändert:     `reqKettlePID` / `setKettlePID` konsistent erweitert (vollständige PID-Parameter + Recalc-Flags)
+* Korrektur:    Kleine PID-Fixes: Reset setzt `L` korrekt zurück; SUD-Label/Tooltip `KL/KR` korrigiert
+* Korrektur:    0-Minuten Kochsteps mit autonext starten im Kochkontext zuverlässig (TempGate Fast-Path inkl. NEXT_STEP-Pfad)
+* Korrektur:    Gate-Hänger bei deaktiviertem/ungültigem Step-Kessel behoben: Wechsel auf WAIT_USER mit Alarm/Toast statt stilles Warten in WAIT_TEMP
+* Korrektur:    PLAY in WAIT_USER bei temp=0/duration=0/autonext=false schaltet nun immer direkt zum nächsten Step (kein WAIT_USER-Loop bei Actor/User-Gate-Steps)
+* Korrektur:    Profil Sonderbefehle melden bei flaschen oder fehlendem Profil korrekt Fehler statt still weiterzulaufen
+* Korrektur:    Actor-Steps mit Fehler (bspw. falscher Aktorname) wechseln auf den Status WAIT_USER statt still weiterzulaufen
+* Korrektur:    Rezept-Import und API begrenzen Temperatur und Dauer auf gültige Bereiche (kein Negativ-/Overflow-Pfad mehr in Step-Timern)
+* Korrektur:    Fermenter-Start mit 0-min Dauer ohne gültigen Actor wechselt auf WAIT_USER mit Warnung statt still auf MASH_IDLE zu wechseln
+* Optimiert:    Mash-Event-Queue-Drops geben zusätzlich eine gedrosselte Toast-Warnung aus (bessere Sichtbarkeit bei Überlast)
+* Korrektur:    Brewfather-Import stabilisiert: Hopfenverarbeitung in gegen Array-Out-of-Bounds und Off-by-one abgesichert
+* Korrektur:    SSE-Versand gegen OOM-Abort gehärtet: Backpressure erweitert sowie konservative Heap-/Queue-Gates
+* Korrektur:    Der Rezeptimport ist nur im echten Idle Status erlaubt und wird bei aktivem Brauvorgang mit Fehler/Toast abgewiesen
+* Korrektur:    Rezeptimport (Brewfather + Upload) ist nur im Idle-Status erlaubt und wird bei aktivem Brauvorgang konsistent mit Error-Toast abgewiesen
+* Korrektur:    Rezept-Operationen werden bei aktivem Brauvorgang blockiert
+* Korrektur:    Tasks werden bei Importpfaden (Brewfather/Upload) temporär gestoppt und danach sauber neu gestartet
+
+Version 1.60.28 final RC
+
+* Korrektur:    Sensorzugriffe zwischen Tasks, Web und Kalibrierung wurden über Mutex/Snapshots abgesichert (stabilere Parallelzugriffe)
+* Geändert:     SSE-, Web- und Display-Ausgaben lesen Sensor-/Kesselwerte über Snapshot-Helper statt über direkte Feldzugriffe
+* Geändert:     Kesselwerte (`Input`, `Setpoint`, `Output`) wurden auf atomare Cross-Core-Snapshots (Seqlock) umgestellt
+* Korrektur:    Mehrere Grenzprüfungen im Maische-/Fermenter-Ablauf korrigiert (`>= maxActMashSteps`, invalid ID Checks)
+* Optimiert:    Mash-Event-Queue entlastet (TEMP_TICK-Coalescing) und STOP-Events priorisiert, um Verzögerungen bei Last zu vermeiden
+* Korrektur:    Task-Benachrichtigungen für ISR- und Task-Kontext vereinheitlicht (`FromISR`-sicher für Sensor/Actor/Display/CFG/Chart/Sys/Kettle)
+* Optimiert:    AutoNext-Schrittlogik auf iterative Verarbeitung umgestellt (kein rekursiver Ablauf, geringeres Stack-Risiko)
+* Korrektur:    Kettle-User-Events behandeln volle Queue robuster; `OFF`-Events haben Fallback für sichere Abschaltung
+* Korrektur:    Display zeigt bei kurzzeitig ungültigen/fehlenden Sensorwerten den letzten gültigen Temperaturwert statt leerer Anzeige
+* Optimiert:    Task-Diagnose erweitert (`Stack-Watermark`, Status, Core, Priorität, optional CPU-Anteil) für präzisere Laufzeitanalyse
+* Geändert:     `DisplayTask` bleibt fest auf Core 1 mit Priorität 5, um Anzeige-Artefakte unter WiFi/AsyncTCP-Last zu vermeiden
+* Optimiert:    `KettleTask`-Priorität auf 6 erhöht, damit Kessel-/Regelpfade unter Last schneller bedient werden
+* Korrektur:    Wiederaufnahme nach Reset/Powerloss führt die Restzeit korrekt fort statt den Step-Timer auf volle Dauer zurückzusetzen
+* Korrektur:    Bei Unterbrechungen länger als die Restzeit wird die Restzeit auf `0` gesetzt (kein sichtbarer Timer-Neustart)
+* Optimiert:    Persistenz der Restzeit im laufenden Prozess robuster gemacht (aktuelle Laufzeit als Quelle, konsistente Grenzwerte)
+* Korrektur:    Periodisches Speichern bleibt auch bei Actor-/Sofort-Schritten aktiv, damit der Resume-Zustand stabil bleibt
+* Geändert:     Alarm-Auslösung schützt gegen inaktive Alarm-Task/Queue und vermeidet wirkungslose Trigger
+* Optimiert:    Webhook-Worker wird direkt beim Task-Start initialisiert und reagiert dadurch konsistenter nach Systemstart
+* Korrektur:    Nach Reset/Reboot wird im HMI der korrekt wiederhergestellte Stepname angezeigt statt dauerhaft der Name des ersten Steps
+* Geändert:     Das automatische Ein-/Ausklappen des Maischeplans ist nur aktiv, wenn das Dashboard sichtbar ist
+* Geändert:     Aufteilung der Tasks auf die CPU Kerne und deren Prioritäten angepasst
+* Geändert:     der Status Brautomat wird nun alle 30s im Flash/NVS gespeichert (vorher 10s)
+* Korrektur:    im Fermentermodus wird changeCFGDelayTicks nun mit der korrekten Vorgabe initialisiert (15min)
+* Korrektur:    Fermenter Resume hat falschen Modus gesetzt (MODE_MASH statt MODE_FERM)
+* Korrektur:    Überprüfung DS18B20 conversion completed wurde aktiviert (zu Debugzwecken deaktiviert)
+* Korrektur:    MODE_MANUAL beendet doPID() check state nicht und ruft handleKettle doppelt auf
+* Korrektur:    taskMashHandle und kettelUserTaskHandle korrekt gesetzt und initialisiert
+* Korrektur:    mashStartTimer mindestdauer für Step wurde gesetzt, aber im Ablauf vorzeitig verlassen (toter Code)
+* Korrektur:    im Fermenter Modus konnte eine Sensorabfrage eine out of bound exception produzieren
+* Korrektur:    Boil-Latch darf nicht über Sud-Grenzen hinweg erhalten bleiben. Wird bei START/STOP zurückgesetzt
+
+Version 1.60.27 RC4
+
+* Korrektur:    Fehler im FSM in der Funktion mashCheckTempGate beim handling von Sonderbefehlen behoben
+* Korrektur:    WLAN reload brautomat.local nach initialem Setup auf 10s erhöht.
+
+Version 1.60.26 RC4
+
+* Update:       Arduino 3.3.7 ESP-IDF 5.5.260206
+* removed:      die Timer Funktion (zeitgesteuererter Braustart) wurde temporär komplett entfernt. Die Funktion wird im Release 1.60 nicht enthalten sein
+* Optimiert:    heap und stack size/watermarks im Lastfall ermittelt (AsyncTCP, FreeRTOS Tasks, BrewFather Rezeptliste)
+* Korrektur:    Speicher Fragmentierung nach Boot durch zwei große String arrays behoben
+* Korrektur:    CFGTask periodischer Aufruf writeflash konnte auch im idle Modus aufgerufen werden
+* Optimiert:    Anzeige nächster Step Maischeplan im Dashboard um Temperatur und Dauer erweitert
+* Optimiert:    Der Button GET Brewfather Daten wird nur auf dem Tab BrewFather API angezeigt. Auf allen anderen Tabs ist der Button nicht mehr sichtbar
+
+Version 1.60.25 RC4
+
+* Korrektur:    Korrektur löschen letzter Sensor/Aktor. Im Web Interface wurden die letzten Elemente bis zum nächsten Reload weiterhin angezeigt
+* Korrektur:    Korrketur Anzeige Web Interface erster Aktor
+* Korrektur:    Speichern von Profilen: PID Parameter (type mismatch)
+* Korrektur:    Speichern von Profilen: das Update Intervall wurde nicht korrekt neu berechnet
+* Korrektur:    Speichern und Wechseln von Profilen: der Name vom aktiven Profil wurde nicht korrekt angezeigt
+
+Version 1.60.24 RC4
+
+* Korrektur:    interleaving Problem im Modul Logging behoben (atomic)
+
+Version 1.60.23 RC4
+
+* Korrektur:    Fix Exception BrewFather receipe und batche list TLS (OOM)
+* Korrektur:    Funktion replyJSONdoc Überprüfung JSON erweitert
+* Korrektur:    JS BrewFather Rezeptliste wird beim Schließen Modal Sud gelöscht. Die Auswahl BrewFather wird auf deaktiviert zurückgesetzt
+
+Version 1.60.22 RC4
+
+* Korrektur:    Fehler Chart Target -1 behoben
+
+Version 1.60.21 RC3
+
+* Revert:       Arduino 3.3.6 to 3.3.5: heap memory error verursacht WiFi Abbruch und exceptions
+
+Version 1.60.20 RC3
+
+* Update:       Arduino 3.3.6 ESP-IDF v5.5.2
+* Update:       ESPTool 4.11.0
+* Korrektur:    MAX31865/PT100(x) transiente Faults werden bei plausiblem Messwert (Δ ≤ 0,7 °C) weiterverwendet
+* Korrektur:    MAX31865/PT100(x) Burst-Faults führen nicht mehr sofort zu permanent ERR, sondern zeitbasiert Streak-Reset + erhöhte Hard-Schwelle
+* Korrektur:    bei Reboot wurde ohne aktiven Brauvorgang ein Chart Dot (Zeitstempel) erstellt
+* Korrektur:    nach der Konfiguration WLAN wurde nicht korrekt auf brautomat.local weitergeleitet
+* Bereinigung:  code cleanup Teil 3
+
+Version 1.60.19 RC3
+
+* Korrektur:    Anzeigefehler Zieltemperatur im Display nach Next/Prev Step über Controller Deck behoben
+
+Version 1.60.18 RC3
+
+* Korrektur:    Es war möglich, dass AutoTune doppelt gestartet wurde (AutoTune hing in einer Endlosschleife)
+* Korrektur:    die Chart wird bei AutoTune nun auch befüllt
+
+Version 1.60.17 RC3
+
+* Korrektur:    Berechnung der Rastzeit nach Beenden einer Pause im Maischeprozess korrigiert
+* Korrektur:    Fehler Abbruch Autotune über Power Button behoben
+* Korrektur:    es war möglich, dass die Mash-Queue mit Temp_Ticks geflutet wurde
+
+Version 1.60.16 RC2
+
+* Korrektur:    AutoTune Messreihe L wird erkannt, wenn am Sensor eine stabile positive Steigung über ein Fenster sichtbar ist
+* Geändert:     Ki Term passend zur neuen Messreihe L leicht reduziert
+
+Version 1.60.15 RC2
+
+* Korrektur:    AutoTune Induktion IDS: die Messreihe L startet nun exakt mit dem ersten burst command
+* Geändert:     idsTxTask (RMT) auf Core 1 mit Prio 4
+* Geändert:     AutoTune log Ausgaben angepasst (/autotune_log.txt)
+
+Version 1.60.14 RC2
+
+* Korrektur:    Nextion Display manueller Modus Fix Teil 1 (sync mit Web If folgt zeitnah)
+* Korrektur:    WLAN disconnect entfernt
+* Bereinigung:  code cleanup Teil 2
+
+Version 1.60.13 RC2
+
+* Korrektur:    WLAN connection timeout vergrößert (Mesh und DHCP)
+* Korrektur:    WLAN AP-Mode timeout implementiert. Nach 3 Minuten wird der Brautmat neu gestartet
+* Korrektur:    WLAN Stabilität optimiert
+* Geändert:     idsTxTask (RMT) auf Core 1 mit Prio 2
+* Bereinigung:  code cleanup Teil 1
+
+Version 1.60.12 RC1
+
+* Korrektur:    AutoTune hat für sampleTime und powerSampleTime zu konservative Werte ermittelt
+* Korrektur:    Anpassung der Messpunkte für sampleTime und powerSampletime abhängig vom Kesseltyp (IDS, Relais, webhook)
+* Korrektur:    engere Grenzen für sampleTime und PowerSampletime (clamp)
+* Korrektur:    AutoTune Induktion IDS: die Messreihe L startet nun exakt mit dem ersten burst command
+
+Version 1.60.11 RC1
+
+* Korrektur:    Status Power und Play Button nach dem letzten Step im Masiche/Fermenterplan korrigiert
+
+Version 1.60.10 RC1
+
+* Korrektur:    wenn der Brauvorgang beendet wurde, wurde der Eeprom Braustatus korrekt gelöscht, aber Step 0 hinterlegt
+* Korrektur:    Maischesteps mit 0°C und einer Dauer über 0min wurden nicht ausgeführt (bspw. Nachisomerisierung)
+* Korrektur:    Lüfternachlauf/Relais off für IDS korrigiert
+* Korrektur:    AutoTune hat zu konservative Thresout Leistung berechnet (Leistung ab Übergang Kochen)
+* Korrektur:    wurde der Brauvorgang pausiert, um die PID Einstellungen anzupassen, wurde der PID Controller nicht korrekt neu gestartet
+* Korrektur:    Kessel Sud und Kessel HLT konnten bei Braustart eingeschaltet werden, wenn ein setpoint konfiguriert war
+* Korrektur:    im Maischeplan kann nun autonext direkt editiert werden
+* Korrektur:    im Maischeplan kann nun wieder mit Tab durch die Tabellentzellen gesprungen werden
+* Korrektur:    wurde eine Pause während des Brauens beendet, wurde der Maischeplan nicht automatisch wieder eingeklappt
+* Geändert:     DisplayTask auf Core 1 mit Prio 3
+* Geändert:     ChartTask auf Core 0 mit Prio 2
+* Geändert:     CFGTask auf Core 1 mit Prio 2
+
+Version 1.60.9
+
+* Neu:          mit dem Sonderbefehl IDSTHRESOUT bzw. MAISCHETHRESOUT kann die noPIDBoil Leistung im Maischeplan eingestellt werden
+* Korrektur:    Sensoren EMA Filter und MAX31865 glitches Filter
+
+Version 1.60.8
+
+* Korrektur:    Anzeigefehler Web If und Display bei einer Stepdauer über 72 Minuten behoben
+* Korrektur:    Click event für Kessel HLT und Sud wurden manchmal nicht korrekt ausgeführt
+* Korrektur:    die Click Fläche für Kessel HLT und Sud wurde auf die Zelle (td) vergrößert, statt wie bislang nur auf das Power Icon
+* Korrektur:    ds Power Icon Sud und HLT hat im Zustand OFF die Farbe primary und im Zustand ON die Farbe success (konsistent mit allen anderen Buttons)
+* Neu:          Mit einem Ausrufezeichen als letztes Zeichen im Stepnamen kann ein Quittieren von Toast Nachrichten erzwungen werden (Kochen Hopfen Hall.Perle!)
+* Geändert:     Wenn das Logging System auf VERBOSE gesetzt wird, werden in der Browser Konsole apiGET und apiPOST debug Ausgaben protokolliert (nur develop)
+* Korrektur:    sendAlarm ON/OFF für Kessel HLT und Sud bei Power Click wurde nicht ausgeführt
+* Entfernt:     veraltetes Flag "Ignoriere SPI Fehler für PT100x Sensoren" gelöscht
+* Geändert:     bei einem Fehler SPI MAX31865 (PT100x Sensor err) wird zusätzlich zum clear ein soft recover durchgeführt
+* Korrektur:    der Kesselname wurde durch das Sprachfile überschrieben (mismatch)
+
+Version 1.60.7
+
+* Korrektur:    doppelter Aufruf AutoTune Start entfernt
+* Korrektur:    Web Interface Anzeige noiseband und Tooltipp korrigiert
+* Korrektur:    Kochen mit Hopfengabe 0 Minuten Dauer wurde nicht korrekt durchgeführt
+
+Version 1.60.6
+
+* Korrektur:    PID Relais/SSR Fehlerkorrektur powerSampleTime
+* Korrektur:    Auswahl Webhook Power typo
+* Korrektur:    2-Punkte Kalibrierung Sensoren
+* Entfernt:     doppeltes Eingabefeld dutyCycle im Web Interface entfernt
+* Korrektur:    Web Interface Anzeige Elemente im Fermenter Modus
+* Geändert:     Anpassungen InnuAPID für den Kesseltyp webhook (größerer Schaltzyklus)
+* Geändert:     webhook timeout auf 2000ms für den Kesseltyp webhook reduziert
+* Korrektur:    AutoTune Start Messreihe lambda L für webhook
+
+Version 1.60.4
+
+* Geändert:     das aktive Hardware Profil bei allen Kettels wird im Tab Profile angezeigt
+* Korrektur:    typo autotune
+
+Version 1.60.3
+
+* Korrektur:    AutoTune Messwert lambda L (Totzeit)
+* Geändert:     Anzahl valider Messwerte lambda R auf 45 erhöht
+* Geändert:     Start Messreihe lambda R ab 60 Sekunden
+* Geändert:     Mindestlaufzeit Messreihe lambda R erhöht auf 240 Sekunden
+* Geändert:     maximale Dauer Messreige lambda R auf 6 Minuten erhöht (failed)
+* Geändert:     Konvergenzkriterium angepasst
+* Korrektur:    Debuglog Ausgaben
+
+Version 1.60.2 (revert)
+
+* Korrektur:    typo Debug log PID/AutoTune
+
+Version 1.60.1
+
+* Korrektur:    typo Debug log PID/AutoTune
+* Geändert:     PIN Interrupt deaktiviert (GGM IDS)
+* Geändert:     AutoTune Prozess: lambda R ist erst gültig, wenn ausreichend Temperaturdifferenz vorliegt
+* Geändert:     AutoTune Prozess: lambda R ist erst gültig, wenn die Messwerte in einem gültigen Bereich liegen
+* Geändert:     AutoTune Prozess: Extremwerte vom Temperatursensor werden entschärft
+
+Version 1.60.0 beta test
+
+* Neu:          Finite State Machine (FSM) - vollständige Konvertierung in unabhängige, non-blocking tasks
+* Neu:          Remote Control Transceiver (RMT) - Steuerung der GGM IDS ohne busy wait blocking
+* Neu:          InnuAPID 1.10 - lambda PID Controller
+* Neu:          Adaptive Kessel-Steuerung
 
 Version 1.59.9
 

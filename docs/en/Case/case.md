@@ -1,7 +1,7 @@
-# Brautomat Housing 3D printing
+﻿# Brautomat housing (3D print)
 
-There are currently two different housings available for the Brautomat:
+Three community housing designs are currently available for Brautomat:
 
-* the InnuCase
-* the FreggaCase
-* the RSteckCase
+* InnuCase
+* FreggaCase
+* RSteckCase
