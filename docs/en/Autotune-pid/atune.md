@@ -1,27 +1,49 @@
-# AutoTune process
+﻿# AutoTune process
 
-The AutoTune process determines suitable parameters for the brewing system so that the temperature control in the mashing process can be carried out as accurately as possible. The focus is on the ACTUAL temperatures and the corresponding TARGET temperatures. In practice this means that overshoot and undershoot should be minimized.
+AutoTune determines suitable control parameters for your specific brewing setup. The goal is stable temperature control with minimal overshoot and undershoot during mashing.
 
-Note: An overshoot (exceeding the setpoint temperature) of 0.5°C is normal. Depending on the insulation of the boiler and the induction energy supplied, the temperature will continue to rise slightly even after the hob is switched off.
+Note: A small overshoot of about 0.5°C is normal. Depending on insulation and stored heat in the kettle, temperature may still rise slightly after heating is switched off.
 
 ![AutoTune4](/docs/img/IDS-AutoTune-Ziel.jpg)
 
-The following description of the PID values is intended only as an aid to using the firmware and can be skipped. The AutoTune process is described starting from "The AutoTune process: step by step."\
-The PID controller controls the performance of the hobs. It is important to determine appropriate P, I and D values. The PID values ​​are individual for each brewing system and environment. AutoTune is a procedure that helps determine suitable values. The required power of the hobs to get from the actual temperature to the target temperature is calculated from the sum of the three values: Required power = P + I + D\
-Once suitable PID values have been determined, the Interval (SampleTime) parameter is used to determine the time intervals at which the required performance should be calculated.
+The next sections explain P, I, D, and interval behavior. If you only want practical setup, you can skip directly to the step-by-step chapter.
 
-## The P-value
+The controller calculates required power from:
 
-This parameter affects the difference between the actual and target temperature. The greater the difference between the actual and target temperature, the more the hob heats with the P component. If the target temperature is reached or exceeded, the P component is equal to 0. A very high P value causes a strong overshoot or undershoot.
+`Required power = P + I + D`
 
-## The I value
+After valid PID values are found, `SampleTime` defines how often power is recalculated.
 
-The I value increases continuously starting from zero as the hob heats up. The longer the ochfeld takes to get from the actual to the target temperature, the larger the I value becomes. Together with the P value, the following addition results: As the target temperature approaches, the P value becomes smaller and the I value increases. The target temperature is only achieved via the I value. Above the target temperature, the I value becomes smaller again. The I value creates an overshoot.
+## P value
 
-## The D value
+The P component reacts to the current difference between actual temperature and target temperature.
 
-The D value is a damper that dampens the oscillations of the first two parts P and I. Too much D slows down heating and cooling. This value can also be zero.
+* Large difference -> higher power contribution
+* Close to target -> lower power contribution
+* At/above target -> P contribution approaches 0
+
+A very high P value can cause strong overshoot and oscillation.
+
+## I value
+
+The I component accumulates over time while heating.
+
+* If heating takes longer, I grows more
+* Near target, P gets smaller while I often carries the final approach
+* Above target, I decreases again
+
+Too much I can cause overshoot.
+
+## D value
+
+The D component damps rapid changes and reduces oscillation.
+Too much D makes control sluggish.
 
 ## Interval (SampleTime)
 
-The PID calculation occurs continuously. The interval describes the cycle. In each interval, the difference between the actual and target temperature as well as the change in the actual temperature is continuously determined. An interval that is too small (e.g. 1000ms) leads to a "fluttering" of the actual temperature in the sense of rounding errors +- 0.0625°C at 12bit resolution. An interval that is too large (e.g. 7000ms) leads to sluggish behavior. An interval of 2000ms or 3000ms should work well in most environments. Only a multiple of 1000ms can be used as an interval size (1000, 2000, ... 7000).
+PID math runs continuously, but output updates happen at intervals.
+
+* Too short (for example 1000 ms): more noise and twitchy control
+* Too long (for example 7000 ms): slow reaction
+
+Typical useful values are 2000 ms to 3000 ms. Allowed values are 1000 to 7000 ms in 1000 ms steps.

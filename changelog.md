@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 ESP32 Arduino 3.3.7 ESP-IDF v5.5.2\
 VSCode 1.109 pioarduino IDE 1.1.5\
@@ -10,11 +10,32 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.60.28 final RC
-
 * Breaking:     Finale Anpassung für WebUpdates von Version 1.59 oder älter
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden.
+
+Version 1.60.29 final RC
+
+* Geändert:     PID-Rechenkern vereinheitlicht: `KL/KR -> KP/KI/KD` wird nun gemeinsam von AutoTune und `/setKettlePID` genutzt
+* Neu:          WebIf `calcPID` für Maische, HLT und Sud (Recalc aus `KL/KR` inkl. `sa/psa/newo`)
+* Geändert:     `reqKettlePID` / `setKettlePID` konsistent erweitert (vollständige PID-Parameter + Recalc-Flags)
+* Korrektur:    Kleine PID-Fixes: Reset setzt `L` korrekt zurück; SUD-Label/Tooltip `KL/KR` korrigiert
+* Korrektur:    0-Minuten Kochsteps mit autonext starten im Kochkontext zuverlässig (TempGate Fast-Path inkl. NEXT_STEP-Pfad)
+* Korrektur:    Gate-Hänger bei deaktiviertem/ungültigem Step-Kessel behoben: Wechsel auf WAIT_USER mit Alarm/Toast statt stilles Warten in WAIT_TEMP
+* Korrektur:    PLAY in WAIT_USER bei temp=0/duration=0/autonext=false schaltet nun immer direkt zum nächsten Step (kein WAIT_USER-Loop bei Actor/User-Gate-Steps)
+* Korrektur:    Profil Sonderbefehle melden bei flaschen oder fehlendem Profil korrekt Fehler statt still weiterzulaufen
+* Korrektur:    Actor-Steps mit Fehler (bspw. falscher Aktorname) wechseln auf den Status WAIT_USER statt still weiterzulaufen
+* Korrektur:    Rezept-Import und API begrenzen Temperatur und Dauer auf gültige Bereiche (kein Negativ-/Overflow-Pfad mehr in Step-Timern)
+* Korrektur:    Fermenter-Start mit 0-min Dauer ohne gültigen Actor wechselt auf WAIT_USER mit Warnung statt still auf MASH_IDLE zu wechseln
+* Optimiert:    Mash-Event-Queue-Drops geben zusätzlich eine gedrosselte Toast-Warnung aus (bessere Sichtbarkeit bei Überlast)
+* Korrektur:    Brewfather-Import stabilisiert: Hopfenverarbeitung in gegen Array-Out-of-Bounds und Off-by-one abgesichert
+* Korrektur:    SSE-Versand gegen OOM-Abort gehärtet: Backpressure erweitert sowie konservative Heap-/Queue-Gates
+* Korrektur:    Der Rezeptimport ist nur im echten Idle Status erlaubt und wird bei aktivem Brauvorgang mit Fehler/Toast abgewiesen
+* Korrektur:    Rezeptimport (Brewfather + Upload) ist nur im Idle-Status erlaubt und wird bei aktivem Brauvorgang konsistent mit Error-Toast abgewiesen
+* Korrektur:    Rezept-Operationen werden bei aktivem Brauvorgang blockiert
+* Korrektur:    Tasks werden bei Importpfaden (Brewfather/Upload) temporär gestoppt und danach sauber neu gestartet
+
+Version 1.60.28 final RC
 
 * Korrektur:    Sensorzugriffe zwischen Tasks, Web und Kalibrierung wurden über Mutex/Snapshots abgesichert (stabilere Parallelzugriffe)
 * Geändert:     SSE-, Web- und Display-Ausgaben lesen Sensor-/Kesselwerte über Snapshot-Helper statt über direkte Feldzugriffe

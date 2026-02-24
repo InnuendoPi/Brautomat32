@@ -1,31 +1,32 @@
-# AutoTune Step by step
+﻿# AutoTune step by step
 
-The practical procedure AutoTune looks like this:
+The practical AutoTune workflow:
 
 ![AutoTune](/docs/img/IDS-AutoTune.jpg)
 
-1. Fill your mash brew kettle with a typical amount of water
-
-    a. A typical amount corresponds to a boiler filling consisting of main casting and fill
-
-    Example: 20l main casting and 5kg fill results in a typical amount of 25l water for the AutoTune process
-
-    b. Turn on the mixer
-2. Set a AutoTune target temperature
-
-    a. the target temperature should be 50°C or more.
-
-    b. The target temperature should be at least 10°C above the current actual temperature.
-
-3. Activate “PID AutoTune”
-4. Enable “AutoTune debug”
-5. Save this setting
-6. Clicking on the power button starts the AutoTune process.
+1. Fill the mash kettle with a typical brew-day amount of water.
+   a. Use your usual mash mass as reference (`strike water + grain bill`).
+   Example: 16 l strike water and 4 kg grain bill -> use about 20 l water for AutoTune.
+   b. Start temperature should be around 50°C (40°C to 55°C).
+   c. Turn on the agitator.
+2. Enter this value in `Kettle volume in liters`.
+3. Enable `PID AutoTune`.
+4. Enable `AutoTune debug`.
+5. Save settings.
+6. Start AutoTune with the power button.
 
 ![AutoTune2](/docs/img/IDS-AutoTune-start.jpg)
 
-The AutoTune process takes approximately 6 minutes. The process ends automatically. The AutoTune process is completed and the determined system parameters are saved automatically.\
-The result of AutoTune is the dead time L and the climb rate R. P, I and D are calculated from these two parameters.
+AutoTune takes about 5 minutes and stops automatically. The detected system parameters are saved automatically.
 
-When the AutoTune process has ended and "AutoTune debug" has been activated, the log "AutoTune\_log.txt" can be viewed via Explorer. All information is recorded in this log file.\
-The result of AutoTune is saved in JSON format in the files "idsAutoTune.txt", "sudAutoTune.txt" or "hltAutoTune.txt". The files are purely informational and are not required for operation. In these files the PID values ​​are listed according to different calculation methods.
+The key AutoTune result is dead time `L` and slope `R`. PID values are then derived from these values.
+
+If `AutoTune debug` is enabled, you can review `AutoTune_log.txt` in the file browser.
+
+Result files are also written as JSON:
+
+* `idsAutoTune.txt`
+* `sudAutoTune.txt`
+* `hltAutoTune.txt`
+
+These files are for diagnostics and documentation; they are not required for normal operation.

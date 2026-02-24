@@ -1,7 +1,8 @@
-# Basic setup
+﻿# Basic setup
 
-The Brautomat requires at least one temperature sensor and either a GGM IDS induction hob or a relay-controlled hob. In the following basic setting, only the required parameters are configured, while optional settings are explained later.  
+Brautomat requires at least one temperature sensor and either a GGM IDS induction cooker or a relay-controlled heater. In this basic setup, only the required parameters are configured. Optional settings are explained in later chapters.  
 
-The basic setting is explained using the GGM IDS2 induction hob. For a relay-controlled hob, the configuration is analogous.  
+This section uses a GGM IDS2 as the example device. For relay-based setups, the workflow is basically the same.  
 
-This basic setting describes a brewing system with a mash brew kettle. Setting up additional boilers (e.g. brewing or HLT boilers) follows the same principle.
+This basic setup describes one mash kettle. Additional kettles (for example boil kettle or HLT/NACHGUSS) are configured the same way.
+

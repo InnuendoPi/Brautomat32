@@ -1,6 +1,6 @@
 # Einstellungen Maischeplan
 
-Der Brautomat bietet eine einfache Verwaltung von Maischeplänen. Neben Importieren und Exportieren kann zwischen gespeicherten Maischeplänen gewechselt werden. Eine Zeitsteuerung ist ebenfalls möglich. Mit diesem Kapitel ist die Beschreibung der Grundfunktionen abgeschlossen.
+Der Brautomat bietet eine einfache Verwaltung von Maischeplänen. Du kannst Pläne importieren, exportieren, umbenennen, wechseln und löschen. Mit diesem Kapitel sind die Grundfunktionen vollständig beschrieben.
 
 ## Maischeplan
 
@@ -31,7 +31,9 @@ Aus einem importierten Braurezept wird ein Brautomat Maischeplan. Empfohlen wird
 
 Rezepte aus MaischeMalzundMehr sollten ebenfalls zuerst in den kleinenBrauhelfer2 importiert und an die individuellen Anlagenwerte, Rohstoffe etc. angepasst werden. Da MMum keine Rastennamen vergibt, empfiehlt sich eine Bearbeitung im KBH2 Maischplan.
 
-Rezepte und Sude könne aus BrewFather per Datei Import oder per API Abruf importiert werden. Rastennamen können im BrewFather einen (fast beliebig) langen Fließtext enthalten. Der Text wird auf maximal 50 Zeichen gekürzt. Brewfather erlaubt Fließkommazahlen und Text als Rastzeit. Die Parameter werden in Ganzzahlen konvertiert oder auf 0 gesetzt.
+Rezepte und Sude können aus BrewFather per Datei-Import oder per API-Abruf importiert werden. Rastennamen dürfen in BrewFather sehr lang sein; der Brautomat kürzt sie auf maximal 50 Zeichen. Rastzeiten aus Fließkommazahlen oder Text werden beim Import in Ganzzahlen umgewandelt oder auf 0 gesetzt.
+
+*Wichtig (ab 1.60):* Rezept-Import, Umbenennen, Kopieren, Wechseln und Löschen sind nur im Idle-Zustand erlaubt. Während eines aktiven Brauvorgangs werden diese Aktionen blockiert.
 
 *Hinweis: Die ESP-Mikrocontroller haben einen kleinen RAM-Speicher. Rezepte mit sehr langen Texten, Bildern oder anderen Anhängen können unter Umständen nicht importiert werden. Der Brautomat filtert Rezepte vor dem Import. Trotzdem kann es erforderlich sein, dass Bilder und sehr lange Beschreibungen vor dem Import entfernt werden müssen.
 
@@ -49,7 +51,7 @@ Der ausgewählte Maischeplan wird aus dem Flashspeicher entfernt.
 
 ![Voreinstellung Import](/docs/img/voreinstellung_import.jpg)
 
-Der Brautomat benötigt einen Schritt Einmaischen (optional) und einen Schritt Abmaischen. Insbesondere der Step Abmaischen dient bei deaktiviertem autonext als Trennschritt zwischen Maischen und Kochen. Beim Importieren kann der Brautomat fehlende Einmaisch- und Abmaischschritte einfügen. Zusätzlich können fehlende Temperaturen mit Vorgaben versehen werden.
+Der Brautomat benötigt einen Schritt Einmaischen (optional) und einen Schritt Abmaischen. Insbesondere der Schritt Abmaischen dient bei deaktiviertem autonext als Trennschritt zwischen Maischen und Kochen. Beim Importieren kann der Brautomat fehlende Einmaisch- und Abmaischschritte einfügen. Zusätzlich können fehlende Temperaturen mit Vorgaben versehen werden.
 
 ### Temperaturvorgaben für fehlende Parameter
 
@@ -65,11 +67,11 @@ Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur
 
 ### Temperatur VWH [°C]
 
-Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Vorderwürzenhopfung. Häufig wird bei Rezepten keine Temperatur für die VWH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temnperatur angegeben, wird diese beim Import verwendet.
+Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Vorderwürzenhopfung. Häufig wird bei Rezepten keine Temperatur für die VWH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temperatur angegeben, wird diese beim Import verwendet.
 
 ### Temperatur WPH [°C]
 
-Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Whirlpoolhopfung. Häufig wird bei Rezepten keine Temperatur für die WPH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temnperatur angegeben, wird diese beim Import verwendet.
+Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Whirlpoolhopfung. Häufig wird bei Rezepten keine Temperatur für die WPH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temperatur angegeben, wird diese beim Import verwendet.
 
 ### Temperatur Kochen [°C]
 

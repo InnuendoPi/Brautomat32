@@ -1,4 +1,4 @@
-# ⚙️ API Brautomat32
+﻿# ⚙️ API Brautomat32
 
 These two Javascript functions make communication with the Brautomat32 easier.  
 They encapsulate `fetch()` calls, handle errors, JSON/text recognition, and optional user notifications (toast/alert).
@@ -36,7 +36,7 @@ console.log(misc);
 **Example:**  
 
 ```js
-await apiPOST('/setKettle', { temp: 65, PID: true }, true, false, true);
+await apiPOST('/setKettle', { temp: 65, pid: true }, true, false, true);
 console.log(misc);
 ```
 
@@ -64,9 +64,9 @@ Brautomat HTTP endpoints. The web server uses CORS and supports **HTTP GET**, **
 | `/reqSensors?id=${sensorid}` | GET | Returns a list of all sensors |
 | `/setSensor?id=${sensorid}` | POST | Adds a new sensor or modifies an existing one |
 | `/delSensor?id=${sensorid}` | POST | Deletes a sensor |
-| `/reqSearchSensorAddresses?id=${sensorid}` | GET | Searches available sensor addresses |
+| `/reqSearchSensorAdresses?id=${sensorid}` | GET | Searches available sensor addresses |
 | `/senkal` | POST | Performs sensor calibration |
-| `/setSenErr?id=${sensorid}` | POST | Sets sensor error status (debug) |
+| `/setSenErr?id=${sensorid}` | GET | Sets sensor error status (debug) |
 
 | sensorid | Description |
 |-----------|----------|
@@ -82,7 +82,7 @@ console.log(data);
 
 ---
 
-## ⚙️ Actors
+## ⚙️ Actuators
 
 | Endpoint | Method | Description |
 |-----------|----------|--------------|
@@ -110,17 +110,17 @@ console.log(data);
 
 | Endpoint | Method | Description |
 |-----------|----------|--------------|
-| `/reqKettle?id=${kettleid}` | GET | Returns current boiler data |
-| `/reqKettlePID?id=${kettleid}` | GET | Query PID parameters |
-| `/setKettle?id=${kettleid}` | POST | Change boiler data |
-| `/setKettlePID?id=${kettleid}` | POST | PID parameter change |
+| `/reqKettle?id=${kettleid}` | GET | Returns current kettle data |
+| `/reqKettlePID?id=${kettleid}` | GET | PID query parameters (`kl`,`kr`,`kp`,`ki`,`kd`,`sa`,`psa`,`newo`,`tun`,`vol`,`maxo`,...) |
+| `/setKettle?id=${kettleid}` | POST | Change kettle data |
+| `/setKettlePID?id=${kettleid}` | POST | PID parameters change or recalculate from `kl/kr` (`recalc`, `applyRecommended`) |
 | `/handlePower?id=${kettleid}` | POST | Enable/Disable Performance |
 
 | kettleid | Description |
 |-----------|----------|
 | 0 | Mash kettle |
 | 1 | Brew kettle |
-| 2 | LDS |
+| 2 | HLT |
 | 3 | Fermenter |
 
 **Example:**  
@@ -144,7 +144,7 @@ console.log(data);
 |-----------|----------|
 | 0 | Mash kettle |
 | 1 | Brew kettle |
-| 2 | LDS |
+| 2 | HLT |
 | 3 | Fermenter |
 | pname | Profile name |
 
@@ -163,13 +163,15 @@ console.log(data);
 |-----------|----------|--------------|
 | `/setSud` | POST | Configure existing brew |
 | `/setSudNew` | POST | Create new brew |
-| `/setSudRen` | POST | Rename Sud |
-| `/setSudCopy` | POST | Copy Sud |
+| `/setSudRen` | POST | Rename brew |
+| `/setSudCopy` | POST | Copy brew |
 | `/setSudCha` | POST | Change brew |
 | `/delSud` | POST | Delete brew |
-| `/reqSud` | GET | Get sud parameters |
+| `/reqSud` | GET | Get brew parameters |
 | `/reqSudname` | GET | Get current brew name |
-| `/reqBrauStart` | POST | Start the brewing process |
+| `/reqBrauStart` | GET | Start the brewing process |
+
+Note: Changes to recipes (import, change, rename, copy, delete) are only possible in the idle state.
 
 ---
 
@@ -180,8 +182,6 @@ console.log(data);
 | `/reboot` | POST | Restart the device |
 | `/reqMisc` | GET | General system information |
 | `/reqVis` | GET | Get visualization data |
-| `/reqMiscAlert` | GET | Query alerts |
-| `/reqBreakAlert` | GET | Query boil/break warnings |
 | `/setMisc` | POST | Change general settings |
 | `/setMiscLang` | POST | Set language |
 | `/rezimp` | POST | Import recipe |
@@ -195,14 +195,14 @@ console.log(data);
 
 | Endpoint | Method | Description |
 |-----------|----------|--------------|
-| `/Btn-Power` | POST | Trigger power button |
-| `/btn-break` | POST | Trigger pause button |
-| `/Btn-Play` | POST | Trigger start button |
-| `/Btn-Next-Step` | POST | Next step |
-| `/Btn-Prev-Step` | POST | Previous step |
+| `/Btn-Power` | GET | Trigger power button |
+| `/Btn-Pause` | GET | Trigger pause button |
+| `/Btn-Play` | GET | Trigger start button |
+| `/Btn-Next-Step` | GET | Next step |
+| `/Btn-Prev-Step` | GET | Previous step |
 | `/Btn-Edit` | POST | Activate edit mode |
 | `/manpow` | POST | Control manual power |
-| `/eraseFlash` | POST | Clear flash memory |
+| `/eraseFlash` | GET | Clear flash memory |
 
 ---
 
@@ -232,7 +232,7 @@ console.log(data);
 | Endpoint | Method | Description |
 |-----------|----------|--------------|
 | `/getbf` | GET | List of available BrewFather recipes |
-| `/bfRecipe` | GET | Get recipe details |
+| `/bfRecipe` | POST | Get recipe details |
 
 ---
 
@@ -240,7 +240,7 @@ console.log(data);
 
 | Endpoint | Method | Description |
 |-----------|----------|--------------|
-| `/backup` | GET | Create system backup |
+| `/backup` | POST | Create system backup |
 | `/restore` | POST | Restore backup |
 
 ---
@@ -268,3 +268,4 @@ console.log(data);
 | `/info.mp3`, `/success.mp3`, `/warning.mp3`, `/error.mp3` | Audio files for system messages |
 
 ---
+

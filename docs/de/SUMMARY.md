@@ -14,6 +14,7 @@
   * [Rezept](Maischeplan/rez.md)
 * [Kessel Konfiguration und Einsatz](Kessel/kessel.md)
   * [Adaptive Kessellogik](Kessel/adaptive_kessellogik.md)
+  * [PID-Anleitung](Kessel/PID-Anleitung.md)
 * [Sensoren](Sensoren/info.md)
   * [Kalibrierung](Sensoren/kalibrierung.md)
 * [Aktoren](Aktoren/act.md)

@@ -1,88 +1,81 @@
-# The InnuCase
+﻿# The InnuCase
 
-The InnuCase is available in two sizes. The print files are stored in the Housing/InnuCase folder.
+InnuCase is available in two sizes. Print files are in `Housing/InnuCase`.
 
-## Case shape
+## Variants
 
-* InnuCase #1
-    > a larger housing with display, two PWM modules and power switch\
-    > Power switch for an external power supply ESP microcontroller\
-    > 1x M12 front LED pressure switch, latching
-    > 2x M12 front for actuators\
-    > 2x M12 bottom for actuators\
-    > 3x M12 bottom for sensors\
-    > Housing dimensions WxH 26x9cm\
-    > File name: InnuCase-1_Display_2PWM_Power.stl\
-    ![InnuCase #1](/docs/img/Case-1_Display_2PWM_Power.jpg)\
-    > same housing with display and two PWM modules without power switch\
-    > 2x M12 front for actuators\
-    > 2x M12 bottom for actuators\
-    > 3x M12 bottom for sensors\
-    > Power supply ESP microcontroller via GGM IDS\
-    > Housing dimensions WxH 26x9cm\
-    > File name: InnuCase-1_Display_2PWM.stl\
-    ![InnuCase #1](/docs/img/Case-1_Display_2PWM.jpg)
+### InnuCase #1 (large)
 
-* InnuCase #1 with a PWM module
-    > InnuCase-1_Display_1PWM_Power.stl\
-    ![InnuCase #1](/docs/img/Case-1_Display_1PWM_Power.jpg)\
-    > InnuCase-1_Display_1PWM.stl\
-    ![InnuCase #1](/docs/img/Case-1_Display_1PWM.jpg)\
+Dimensions: 26 x 9 cm
 
-* InnuCase #2
-    > a smaller housing with display\
-    > 1x M12 bottom for sensor\
-    > Housing dimensions WxH 20x9cm\
-    > File name: InnuCase-2\
-    ![InnuCase #1](/docs/img/Case-2_Display.jpg)
+Typical options:
 
-The InnuCase #2 is intended for an automatic bread machine with a display and a sensor. If no display is used, the display opening can be closed with a blind cover.
+* display + 2 PWM modules + power switch (`InnuCase-1_Display_2PWM_Power.stl`)
+* display + 2 PWM modules, no power switch (`InnuCase-1_Display_2PWM.stl`)
+* display + 1 PWM module with/without power switch (`InnuCase-1_Display_1PWM*.stl`)
 
-Suitable plug connections for M12 holes include [GX12 Aviation plug](https://www.amazon.de/dp/B0C6SJK1KZ/?coliid=I25GPP716VQUBU&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_6Z58FR08HC6VACCZPY83). The GX12 Aviation Sets are available as 2-pin (actuators), 3-pin (DS18B20) and 4-pin (PT100x).
-A suitable power switch is, among other things, a [LED pressure switch](https://www.amazon.de/dp/B09WXPJQN3?psc=1&ref=ppx_yo2ov_dt_b_product_details) latching. The InnuCase-1 can accommodate two [PWM Modules](https://www.amazon.de/dp/B0B7X6Z34Z/?coliid=I1KLJXGJL47O5M&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_56603DDHC44WFNJ0BFM4). The cutout for a PWM module can be closed with a blind cover.
+Connections (depending on variant):
 
-## Housing cover
+* M12 front connectors for actuators
+* M12 bottom connectors for actuators and sensors
 
-* InnuCase #1
-    > a larger housing with display and two PWM modules\
-    > Lid dimensions WxH 26x9cm\
-    > File name: InnuCase-1\
-    ![InnuCase #1](/docs/img/Deckel-1_Display_2PWM.jpg)
-* InnuCase #2
-    > a smaller housing with display\
-    > Lid dimensions WxH 20x9cm\
-    > File name: InnuCase-2\
-    ![InnuCase #1](/docs/img/Deckel-2_Display.jpg)
+![InnuCase #1](/docs/img/Case-1_Display_2PWM_Power.jpg)
+![InnuCase #1](/docs/img/Case-1_Display_2PWM.jpg)
+![InnuCase #1](/docs/img/Case-1_Display_1PWM_Power.jpg)
+![InnuCase #1](/docs/img/Case-1_Display_1PWM.jpg)
 
-## Housing screw connection
+### InnuCase #2 (compact)
 
-The housing has several pads for holding [threaded inserts](https://www.amazon.de/dp/B0BZVGQ91H/?coliid=I1EM9CS796PWGZ&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_64ER38VQR1H02DJ4WZ4A) for a screw connection. The holes in the pads have a diameter of 4.6mm. The thread inserts are melted into the pad hole using a [soldering iron](https://www.amazon.de/gp/product/B0CDBSGSXY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1). Threaded inserts M3 are linked.
+Dimensions: 20 x 9 cm
+
+Designed for compact setups (display + one sensor).
+
+* File: `InnuCase-2`
+
+![InnuCase #2](/docs/img/Case-2_Display.jpg)
+
+If no display is used, close the opening with a blind cover.
+
+## Suggested components
+
+* GX12 aviation connectors (2-pin actuator, 3-pin DS18B20, 4-pin PT100x)
+* latching LED push switch
+* up to 2 PWM modules in InnuCase #1
+
+## Housing cover variants
+
+* InnuCase #1 lid (`Deckel-1_Display_2PWM.jpg`)
+* InnuCase #2 lid (`Deckel-2_Display.jpg`)
+
+![InnuCase #1 lid](/docs/img/Deckel-1_Display_2PWM.jpg)
+![InnuCase #2 lid](/docs/img/Deckel-2_Display.jpg)
+
+## Threaded inserts and mounting
+
+The housing includes pads for threaded inserts.
+Typical hole diameter in pads: 4.6 mm.
+Use a soldering iron to set inserts into the pads.
 
 ![Thread Inserts](/docs/img/Gewindeeinsätze.jpg)
 
-## Circuit board carrier
+## Board carrier plate
 
-The circuit board is screwed onto a support plate. The carrier plate is mounted behind the display using [spacer sleeves](https://www.reichelt.de/distanzhuelsen-metall-6-kant-m3-15mm-da-15mm-p7018.html?CCOUNTRY=445&LANGUAGE=de&trstct=pos_0&nbc=1&&r=1). Hexagonal M3 spacer sleeves with a length of 15mm are linked.
+The board is mounted on a carrier plate behind the display using M3 spacers (for example 15 mm).
 
-![Board carrier](/docs/img/Platinenträger-1.jpg) ![Board carrier MAX31865](/docs/img/Platinenträger-2.jpg)
+![Board carrier](/docs/img/Platinenträger-1.jpg)
+![Board carrier MAX31865](/docs/img/Platinenträger-2.jpg)
 
-The figure shows 2 circuit board carriers:
+Carrier variants:
 
-* the lower smaller support plate is for automatic bread machines with DS18B20 sensors
-* the upper, larger carrier plate is for automatic bread machines with PT100x sensors (additional holes for holding 2 MAX31865 boards)
+* smaller plate for DS18B20 setups
+* larger plate for PT100x setups (with holes for MAX31865 boards)
 
-The carrier plate allows for complete assembly in the housing. No Brautomat components or cables are attached to the housing cover.
+## Bracket and blind cover
 
-## Bracket
-
-Simple holders are available to attach the housing. The holder is screwed onto the back behind the lid.
+A rear bracket can be used for mounting.
+Blind covers are available for unused display openings.
 
 ![Bracket](/docs/img/Halterung.jpg)
-
-## Blind cover
-
-The blind cover closes the display opening in the housing when no display is inserted.
-
 ![Blind cover](/docs/img/Blinddeckel.jpg)
 
 ## Images

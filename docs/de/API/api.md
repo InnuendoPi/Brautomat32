@@ -67,7 +67,7 @@ Brautomat HTTP-Endpunkte. Der WebServer nutzt CORS und unterstützt **HTTP GET**
 | `/delSensor?id=${sensorid}` | POST | Löscht einen Sensor |
 | `/reqSearchSensorAdresses?id=${sensorid}` | GET | Durchsucht verfügbare Sensor-Adressen |
 | `/senkal` | POST | Führt eine Sensorkalibrierung durch |
-| `/setSenErr?id=${sensorid}` | POST | Setzt Sensorfehler-Status (debug) |
+| `/setSenErr?id=${sensorid}` | GET | Setzt Sensorfehler-Status (debug) |
 
 | sensorid | Beschreibung |
 |-----------|----------|
@@ -112,9 +112,9 @@ console.log(data);
 | Endpoint | Methode | Beschreibung |
 |-----------|----------|--------------|
 | `/reqKettle?id=${kettleid}` | GET | Gibt aktuelle Kesseldaten zurück |
-| `/reqKettlePID?id=${kettleid}` | GET | PID-Parameter abfragen |
+| `/reqKettlePID?id=${kettleid}` | GET | PID-Parameter abfragen (`kl`,`kr`,`kp`,`ki`,`kd`,`sa`,`psa`,`newo`,`tun`,`vol`,`maxo`,...) |
 | `/setKettle?id=${kettleid}` | POST | Kesseldaten ändern |
-| `/setKettlePID?id=${kettleid}` | POST | PID-Parameter ändern |
+| `/setKettlePID?id=${kettleid}` | POST | PID-Parameter ändern oder aus `kl/kr` neu berechnen (`recalc`, `applyRecommended`) |
 | `/handlePower?id=${kettleid}` | POST | Leistung aktivieren/deaktivieren |
 
 | kettleid | Beschreibung |
@@ -170,7 +170,9 @@ console.log(data);
 | `/delSud` | POST | Sud löschen |
 | `/reqSud` | GET | Sud-Parameter abrufen |
 | `/reqSudname` | GET | Aktuellen Sudnamen abrufen |
-| `/reqBrauStart` | POST | Brauvorgang starten |
+| `/reqBrauStart` | GET | Brauvorgang starten |
+
+Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Löschen) sind nur im Idle-Zustand möglich.
 
 ---
 
@@ -181,8 +183,6 @@ console.log(data);
 | `/reboot` | POST | Neustart des Geräts |
 | `/reqMisc` | GET | Allgemeine Systeminformationen |
 | `/reqVis` | GET | Visualisierungsdaten abrufen |
-| `/reqMiscAlert` | GET | Warnmeldungen abfragen |
-| `/reqBreakAlert` | GET | Koch-/Break-Warnungen abfragen |
 | `/setMisc` | POST | Allgemeine Einstellungen ändern |
 | `/setMiscLang` | POST | Sprache einstellen |
 | `/rezimp` | POST | Rezept importieren |
@@ -196,14 +196,14 @@ console.log(data);
 
 | Endpoint | Methode | Beschreibung |
 |-----------|----------|--------------|
-| `/Btn-Power` | POST | Power-Button auslösen |
-| `/Btn-Pause` | POST | Pause-Button auslösen |
-| `/Btn-Play` | POST | Start-Button auslösen |
-| `/Btn-Next-Step` | POST | Nächster Schritt |
-| `/Btn-Prev-Step` | POST | Vorheriger Schritt |
+| `/Btn-Power` | GET | Power-Button auslösen |
+| `/Btn-Pause` | GET | Pause-Button auslösen |
+| `/Btn-Play` | GET | Start-Button auslösen |
+| `/Btn-Next-Step` | GET | Nächster Schritt |
+| `/Btn-Prev-Step` | GET | Vorheriger Schritt |
 | `/Btn-Edit` | POST | Edit-Modus aktivieren |
 | `/manpow` | POST | Manuelle Leistung steuern |
-| `/eraseFlash` | POST | Flash-Speicher löschen |
+| `/eraseFlash` | GET | Flash-Speicher löschen |
 
 ---
 
@@ -233,7 +233,7 @@ console.log(data);
 | Endpoint | Methode | Beschreibung |
 |-----------|----------|--------------|
 | `/getbf` | GET | Liste verfügbarer BrewFather-Rezepte |
-| `/bfRecipe` | GET | Rezeptdetails abrufen |
+| `/bfRecipe` | POST | Rezeptdetails abrufen |
 
 ---
 
@@ -241,7 +241,7 @@ console.log(data);
 
 | Endpoint | Methode | Beschreibung |
 |-----------|----------|--------------|
-| `/backup` | GET | System-Backup erstellen |
+| `/backup` | POST | System-Backup erstellen |
 | `/restore` | POST | Backup wiederherstellen |
 
 ---

@@ -1,98 +1,139 @@
-# Installation
+﻿# Installation
 
-In order to use the Brautomat, the firmware must be flashed. Additionally, the ESP microcontroller needs to be connected to the local WiFi.
+To use Brautomat, you need to flash the firmware once and connect the ESP to your local Wi-Fi.
 
-## Flash firmware with MS Windows
+## Flash firmware on Windows
 
-The Brautomat32 version is for ESP32 and is based on the IDF5 framework.
+Brautomat32 runs on ESP32 and is based on the ESP-IDF5 framework.
 
 * [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip): Brautomat32.zip
 
-The firmware is installed using the “Flashen.cmd” script contained in the ZIP archive. The ZIP archive is unpacked in any folder. The ESP microcontroller is connected to the PC/notebook via a USB cable. Double-clicking on the Flashen.cmd script starts flashing the firmware.
+Firmware flashing is easiest with `Flashen.cmd` from the ZIP archive:
 
-The MS Windows operating system automatically creates a serial COM port when connecting the ESP microcontroller to a USB port on the PC or notebook.
+1. Unpack the ZIP archive.
+2. Connect ESP32 to your PC via USB.
+3. Run `Flashen.cmd`.
+
+Windows normally creates a COM port automatically when the ESP is connected.
 
 ![Windows Device Manager](/docs/img/com.jpg)
 
-An ESP device was found on COM7 in the image. In rare cases, a serial COM port is not automatically provided under MS Windows. USB drivers for ESP microcontrollers are available on the following websites: (MS Win and macOS)
+In the screenshot, the ESP appears on COM7.
+If no COM port appears, install USB drivers (Windows/macOS):
 
 [![ESP32 Drivers](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-The Flashen.cmd script uses the tool esptool.exe <https://github.com/espressif/esptool>. ESPTool is freely available for various operating systems (macOS, Linux). The Windows version 64bit is included in the ZIP archive. ESPTool is licensed under GPL v2. See the accompanying [LICENSE file](https://github.com/espressif/esptool/blob/master/LICENSE) for a copy.
+`Flashen.cmd` uses `esptool.exe`:
+<https://github.com/espressif/esptool>
 
-### Manual flashing MS Windows, macOS and Linux
+The 64-bit Windows binary is included in the ZIP archive.
 
-If the script cannot be used, the firmware can be transferred manually to the ESP microcontroller.
+### Manual flashing (Windows, macOS, Linux)
 
-ESP32 Step 1 Delete Flash:
+If the script cannot be used, flash manually.
+
+ESP32 step 1 - erase flash:
 
 ```json
 esptool.exe --chip ESP32 erase-flash
 ```
 
-ESP32 Step 2 Flash firmware:
+ESP32 step 2 - write firmware and filesystem:
 
 ```json
 esptool.exe --chip ESP32 --baud 921600 --before default-reset --after hard-reset write-flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x350000 LittleFS.bin
 ```
 
-### Flashing firmware with macOS
+### Flashing with macOS
 
 Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 
-On macOS, flashing the firmware is divided into two steps. In the first step, the firmware Brautomat.ino.bin is installed on the ESP using the pyflasher tool.
+On macOS, flashing is split into two steps.
+First flash firmware (`Brautomat.ino.bin`) with pyflasher.
 
 ![macOS](/docs/img/flashen_macos.png)
 
-The Brautomat must then be connected to the WLAN. Once the Brautomat is connected to the WiFi, the file system must be installed.\
-Open in browser: <http://Brautomat.local/update>
+Then connect Brautomat to Wi-Fi and open:
+<http://Brautomat.local/update>
 
-After clicking on the “File system” button, the file LittleFS.bin is selected and installed by clicking on Update file system.
+Use the `File system` button to upload `LittleFS.bin`.
 
-## WLAN configuration
+## Wi-Fi configuration
 
-After flashing the firmware, the Brautomat starts in AccessPoint Mode. An open WLAN with the name _Brautomat_ becomes visible. A connection must be established with this WLAN. Once the connection is established, the web browser opens the WLAN configuration portal. If the portal does not open automatically, the address <http://192.168.4.1> must be entered manually in the web browser.
+After flashing, Brautomat starts in Access Point mode.
+An open Wi-Fi named `Brautomat` appears.
 
-![WLAN configuration](/docs/img/wlan1.jpg)
+Connect to it, then open the Wi-Fi portal.
+If it does not open automatically, go to:
+<http://192.168.4.1>
 
-The WLAN configuration is displayed using the “Configure WiFi” button
+![WiFi configuration](/docs/img/wlan1.jpg)
 
-![WLAN configuration](/docs/img/wlan2.jpg)
+Open `Configure WiFi`:
 
-The WLAN (SSID and password) must be entered here. With _Save_ the Brautomat restarts and connects to the WLAN. The web interface of Brautomat can be reached in the local WLAN via the address <http://Brautomat.local>.
+![WiFi configuration](/docs/img/wlan2.jpg)
 
-This completes the basic installation. The firmware flashing and WLAN configuration process only needs to be carried out once. The Brautomat must now be configured. The configuration is described in the _Basic Setup_ section. The following section _Update_ can be skipped initially.
+Enter SSID and password, then click `Save`.
+Brautomat restarts and connects to your Wi-Fi.
+The web UI is then available at:
+<http://Brautomat.local>
 
-> **Note:**\
-The Brautomat32 tries to establish a connection with the WLAN configuration (SSID and password) for up to 20 seconds. If a connection cannot be established, for example if the password is entered incorrectlywas used, then the Brautomat32 starts again in AccessPoint Mode.\
-In rare cases and usually only when the WLAN signal is weak, the Brautomat32 does not find a suitable WLAN and also starts in AccessPoint Mode after approx. 20 seconds. In this case, only restarting the Brautomat32 will help.
+At this point, basic installation is complete. You can continue with _Basic Setup_.
 
-##Updates
+> **Note:**  
+> Brautomat32 tries to connect to configured Wi-Fi for about 20 seconds.  
+> If connection fails (for example wrong password), it returns to Access Point mode.
 
-Updates can be installed in Brautomat via the “Update” menu. A new firmware can be imported via “WebUpdate” or “File Update”. When updating the firmware via WebUpdate, the firmware downloads the current version from the Internet from the github repository. When updating via file update, the firmware is uploaded from the local PC. A USB cable or the script from the installation are not required.
+## Updates
 
-The memory area of ​​an ESP microcontroller is divided into firmware and file system. During ongoing operation, configurations, recipes and other files can only be saved or changed in the file system. The Firmware area can only be accessed for reading purposes. During an update, the firmware area is completely reinstalled and individual files are replaced in the file system.
+Use the `Update` menu for firmware updates.
+
+Available paths:
+
+* `WebUpdate`: download and install directly from GitHub
+* `FileUpdate`: upload update files from your local machine
+
+A USB cable is not required for these update paths.
+
+The ESP memory is split into firmware and filesystem.
+During normal operation, settings/recipes live in the filesystem.
+During updates, firmware is replaced and filesystem files can be updated.
+
+### Important when upgrading from 1.59 (or older) to 1.60
+
+* `config.txt` is saved as `config.old.txt`
+* PID parameters are reset to `0.0`
+* Run AutoTune once after update
+
+This ensures temperature control behaves correctly on 1.60.
 
 ### WebUpdate
 
 ![WebUpdate](/docs/img/webupdate.jpg)
 
-The WebUpdate restarts the Brautomat several times. First, the firmware is updated. After another restart, the framework will be updated. The WebUpdate process is logged in the webUpdateLog.txt file.
+WebUpdate restarts Brautomat multiple times.
+First firmware is updated, then framework/filesystem-related components.
+Progress is written to `webUpdateLog.txt`.
 
-If the _WebUpdate with trial version_ option is activated, the WebUpdate will be carried out with the current developer version. These are test versions. New functions in the firmware are (usually) initially stored as a test version in the github repository. Trial versions are not recommended for productive use.
+If `WebUpdate with trial version` is enabled, the current development build is installed.
+Use this only if you explicitly want to test new features.
+
+Note: this guide follows the release state on `main`. Local development branch behavior may differ.
 
 ### FileUpdate
 
-An update of the firmware via the FileUpdate selection takes place in just a few steps:
+Firmware FileUpdate workflow:
 
-First, the current firmware must be downloaded. The ZIP archive will then be unpacked.\
-In the web interface Brautomat, select the Update menu item and then FileUpdate. A simple update website (picture 1) is displayed:
+1. Download current ZIP release.
+2. Unpack the ZIP archive.
+3. Open Brautomat `Update` -> `FileUpdate`.
+4. Select `firmware.bin`.
+5. Click `Update Firmware`.
 
 ![FileUpdate](/docs/img/dateiupdate2.jpg)
 
-Under Firmware with the "Select file" button, the file _firmware.bin_ must now be selected from the ZIP archive (in Figure 2). Clicking on Update Firmware starts the update.
+You can also update the filesystem.
 
-The file system of Brautomat can also be updated.
-
-> **Note:**\
-The Update FileSystem function rebuilds the file system. Update FileSystem overwrites all settings and configurations. In addition to the configuration, this also includes mash brew boiler profiles and recipes. In almost all cases, a file update firmware followed by a WebUpdate is the right choice because the WebUpdate updates individual files in the file system after the firmware update.
+> **Note:**  
+> `Update FileSystem` rebuilds the filesystem and overwrites settings, profiles, and recipes.  
+> In most cases, update firmware first and then use WebUpdate for file-level updates.

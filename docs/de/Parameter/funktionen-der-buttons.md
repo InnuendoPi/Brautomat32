@@ -2,60 +2,44 @@
 
 ## Beschreibung aller Schaltflächen
 
-Der Maischeplan verfügt über Schaltflächen zum Bearbeiten, Verschieben oder Löschen einer Zeile.
+Der Maischeplan bietet Schaltflächen zum Bearbeiten, Verschieben, Speichern und Löschen von Schritten.
 
-### Der Speichern-Button des Maischeplans
+### Speichern (Tabelle)
 
-Der Speichern-Button in der Kopfzeile der Tabelle Maischeplan speichert den Inhalt der Tabelle in eine Datei (JSON).
+Der grüne Speichern-Button in der Kopfzeile speichert den aktuellen Maischeplan als JSON-Datei.
 
-### Der Button Maischeplan aktualisieren (Reload Button)
+### Reload / Aktualisieren
 
-Mit dieser Funktion wird die Tabelle aus der Datei neu eingelesen. Dabei ist zu beachten, dass alle nicht gespeicherten Änderungen (grüner Button) ohne Rückfrage verworfen werden. Dieser Button hat als zweite Funktion die Exit Editormodus Funktion.
+Der Reload-Button lädt den Maischeplan erneut aus der Datei. Nicht gespeicherte Änderungen werden dabei verworfen.
 
-### Der Exit-Button des Editors
+### Exit (Editor)
 
-Mit dieser Funktion wird der Editormodus verlassen, ohne die Änderungen im Maischeplan zu speichern.
+Mit Exit wird der Zeileneditor verlassen, ohne die Änderungen zu übernehmen.
 
-### Der Löschen-Button
+### Löschen (Tabelle)
 
-Mit dem Löschen-Button wird die gesamte Tabelle gelöscht. Es ist zu beachten, dass die Änderungen erst mit Klick auf Tabelle speichern (grüner Button) übernommen werden.
+Der Löschen-Button leert den kompletten Maischeplan. Erst mit anschließendem Speichern wird diese Änderung dauerhaft übernommen.
 
-### Die + Schaltfläche
+### Plus-Button
 
-Mit dem Plus-Button wird eine neue Zeile hinzugefügt. Es ist zu beachten, dass die neue Zeile in der Tabelle mit Klick auf das blaue Speichern-Symbol in der Tabellenzeile übernommen werden muss und abschließend mit Klick auf das grüne Speichern-Symbol die Tabelle gespeichert wird.
+Mit Plus wird eine neue Zeile hinzugefügt. Die Zeile wird zuerst in der Tabelle gespeichert (blaues Speichern-Symbol in der Zeile) und danach über den grünen Speichern-Button dauerhaft gesichert.
 
-### Der Graph Button
+### Graph-Button
 
-Mit dem Graph Button kann die visuelle Darstellung vom Temperaturverlauf ein- bzw. ausgeblendet werden. Zusätzlich können einzelne Graphen durch Klick auf den Graphnamen ein- und ausgeblendet werden. Die Standardeinstellung auf sichtbar eingestellt.
+Der Graph-Button blendet den Temperaturverlauf ein oder aus. Einzelne Kurven können über die Legende an- und abgewählt werden.
 
-*Tipp: Wenn der Temperaturverlauf nicht interessant ist, einfach auf den grünen Graph Button klicken. Sobald die Grafik ausgeblendet ist, einmal die Systemkonfiguration öffnen und auf Speichern klicken. So wird die Einstellung Grafik Temperaturverlauf aus- bzw. einblenden gespeichert.*
+Tipp: Wenn du die Grafik dauerhaft ausblenden möchtest, blende sie aus und speichere anschließend einmal die Systemeinstellungen.
 
-### Der Einstellungen Maischeplan Button (Database Button)
+### Einstellungen Maischeplan (Database-Button)
 
-In den Einstellungen zum Maischeplan sind neben dem Maischplan Namen und der Zeitsteuerung auch der Maischeplan Wechsel, der Import, der Export sowie das Löschen von Maischplänen verfügbar.
+Hier befinden sich die Funktionen für Maischeplan-Name, Wechsel, Import, Export und Löschen von Maischeplänen.
 
-### Der Maischeplan anzeigen Button (Collapse Button)
+Hinweis: Die frühere Zeitsteuerung (zeitgesteuerter Braustart) ist in 1.60 nicht enthalten.
 
-Der Button Maischeplan anzeigen hat eine collapse Funktion: während des Brauen verbraucht der Maischeplan unnötig viel Bildschirmfläche. Mit collapse lässt sich die Tabelle Maischeplan ein- und ausklappen.
+### Collapse Maischeplan
 
-### Der Chart anzeigen Button (Collapse Button)
+Blendet die Maischeplan-Tabelle ein oder aus. Das spart während des Brauens Platz auf kleinen Displays.
 
-Der Button Chart anzeigen hat eine collapse Funktion: während des Brauen verbraucht die Grafik unnötig viel Bildschirmfläche. Mit collapse lässt sich die Grafik ein- und ausklappen. Die Grafik wird im eingeklappten Zustand ebenfalls weiter aktualisiert.
+### Collapse Chart
 
-### Der Graph-Button
-
-Mit dem Graph Button kann die visuelle Darstellung des Temperaturverlaufs ein- und ausgeblendet werden. Zusätzlich können einzelne Graphiken durch Anklicken des Graphiknamens ein- und ausgeblendet werden. Die Voreinstellung ist sichtbar.
-
-*Tipp: Wenn der Temperaturverlauf nicht von Interesse ist, einfach auf den grünen Graph Button klicken. Sobald die Grafik ausgeblendet ist, einmal die Systemkonfiguration öffnen und auf Speichern klicken. Damit wird die Einstellung Grafik Temperaturverlauf aus- bzw. einblenden gespeichert*.
-
-### Einstellungen Maischeplan Button (Datenbank Button)
-
-In den Einstellungen zum Maischeplan stehen neben dem Maischeplannamen und der Zeitsteuerung auch der Maischeplanwechsel, das Importieren, Exportieren sowie das Löschen von Maischeplänen zur Verfügung.
-
-### Die Schaltfläche Maischeplan anzeigen (Collapse Button)
-
-Der Button Maischeplan anzeigen hat eine Klappfunktion: Während des Brauens nimmt der Maischeplan unnötig viel Bildschirmfläche ein. Mit collapse kann die Tabelle Maischeplan ein- und ausgeklappt werden.
-
-### Die Schaltfläche Diagramm anzeigen (Collapse Button)
-
-Der Button Chart anzeigen hat eine collapse Funktion: Während des Brauens nimmt die Grafik unnötig viel Bildschirmfläche ein. Mit collapse kann die Grafik ein- und ausgeklappt werden. Die Grafik wird auch im eingeklappten Zustand weiter aktualisiert.
+Blendet das Diagramm ein oder aus. Auch im eingeklappten Zustand wird das Diagramm weiter aktualisiert.

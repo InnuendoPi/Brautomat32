@@ -1,90 +1,69 @@
-# Adaptive boiler logic – precise temperature control with automatic interval control
+﻿# Adaptive kettle logic - stable temperature control with dynamic intervals
 
-The Brautomat uses an adaptive heating control to control the mash temperature stably and gently. The control does not work with simple on/off switches, but reacts intelligently to temperature behavior and dynamically adjusts the heating output.
+Brautomat does not use simple on/off heating. It continuously adapts power and interval timing based on temperature behavior.
 
-This allows:
+Benefits:
 
-- fast response times  
-- stable temperature control  
-- less fluctuations  
-- optimal enzyme work  
-- relaxed brewing without readjustments  
-
----
+- fast reaction
+- stable rest temperatures
+- less overshoot
+- repeatable mash profiles
+- less manual correction during brew day
 
 ## How adaptive logic works
 
-During mashing, the system continuously monitors:
+During mashing, the controller continuously evaluates:
 
-- the current temperature  
-- the temperature change over the last few minutes  
-- the distance to the target temperature  
-- the residual heat in the boiler  
-- the heating type (induction field, relay, fermenter)  
+- current temperature
+- recent temperature trend
+- distance to target temperature
+- residual heat in the kettle
+- heater type (induction, relay, fermenter)
 
-From these values, the control system continuously decides how much heating power is actually required.
+From these inputs, the controller continuously recalculates required power.
 
-### 1. Fast heating
+### 1. Fast heating phase
 
-If the target temperature is far away, it heats up at full power in order to reach the next rest quickly.
+If target temperature is still far away, heating runs with high power to reach the next rest quickly.
 
-### 2. Gentle approach
+### 2. Gentle approach to target
 
-The closer the target temperature comes, the further the system automatically reduces the heating output. This reliably prevents overshooting.
+As target temperature gets closer, output is reduced automatically. This prevents overshoot.
 
-### 3. Stable rest temperature  
+### 3. Stable rest hold
 
-Once the target temperature has been reached, the adaptive logic keeps the temperature constant with minimal, finely dosed heating power.
+At target, the controller keeps temperature stable with small, controlled output adjustments.
 
----
+## Ramping between 50°C and 78°C (approx. 1°C per minute)
 
-## Ramping in the range 50–78 °C (approx. 1 °C per minute)
-
-All important enzyme rests are between 50 °C and 78 °C.  
-In this temperature range, the software uses a gentle heating strategy:
-
-**The heating rate is automatically limited to approximately 1°C per minute.**
-
-This prevents severe overheating and ensures:
-
-- clean temperature transitions  
-- optimal enzyme activity  
-- more stable notches  
-- reproducible results  
-
----
+Most important enzyme rests are in this range. Brautomat can limit ramp speed to around 1°C per minute for cleaner transitions and better repeatability.
 
 ## Automatic interval adjustment
 
-In addition to the heating output and ramping, the adaptive logic also automatically adjusts the measuring and control intervals.
+Besides output power, adaptive logic also adjusts control intervals.
 
-## If the temperature is dynamic  
+### When temperature is dynamic
 
-(e.g. when heating up, stirring, pouring)
+(for example during heating, stirring, or adding water)
 
-→ The intervals are **shortened**  
-→ The temperature is updated more frequently  
-→ The system reacts faster
+- intervals become shorter
+- updates run more frequently
+- system reacts faster
 
-## When the temperature is stable  
+### When temperature is stable
 
-(e.g. during a rest)
+(for example during a rest)
 
-→ The intervals are **extended**  
-→ The control becomes quieter  
-→ Energy consumption decreases  
-→ The temperature remains stable without fluttering
+- intervals become longer
+- control becomes calmer
+- energy use decreases
 
-## When ramping (1 °C per minute)
+### Interval behavior during controlled ramping
 
-The interval length is adjusted dynamically:
+| Situation | Interval behavior |
+|----------|-------------------|
+| Temperature rises too fast | Intervals shorter -> earlier correction |
+| Temperature rises too slow | Intervals shorter -> stronger correction |
+| Temperature follows target cleanly | Intervals longer -> quiet operation |
 
-| Situation | Behavior of the control intervals |
-|----------|--------------------------------|
-| Temperature rises too quickly | Intervals shorter → earlier correction |
-| Temperature rises too slowly | Intervals shorter → performance is increased |
-| Temperature is exactly at target | Intervals longer → quiet operation |
-
-This enables a particularly uniform heating curve.
-
----
+This creates a smooth and reproducible heating curve.

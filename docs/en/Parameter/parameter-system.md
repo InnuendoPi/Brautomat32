@@ -1,89 +1,106 @@
-# Parameter system
+﻿# System parameters
 
 ## System
 
-### Activate piezo buzzer
+### Enable piezo buzzer
 
-A piezo buzzer can be activated with this parameter. By default the buzzer is connected to GPIO D8. This corresponds to the layout of board 2.1. Buzzer alarms support the mashing process with signal tones.
+Enables the piezo buzzer output. Default buzzer pin is `D8` (board layout 2.1).
+The buzzer can be used for brew-day signal tones.
 
-### Activate toasts and mp3 alarms
+### Enable toasts and MP3 alarms
 
-Toasts are small push messages. They appear as a tile in the bottom right of the browser. Except for error messages, toasts are automatically hidden after a few seconds. There are toast messages about the mashing process, toast messages from the system and textless mp3 alarms. The Toasts property has 3 options: Off, On and Error. The "Off" option switches off the alarm messages. The "On" option sends all toast messages and mp3 alarms. The "errors only" option only sends toast messages in case of system errors, but not messages about the mashing process.
+Toasts are small notification boxes shown in the lower right corner of the web UI.
 
-Toasts supports audio output. This means that toasts are displayed not only visually but also acoustically during the mashing process. The firmware contains the audio files info.mp3, success.mp3, warning.mp3 and error.mp3. The audio files (mp3) can be exchanged. Only the name has to stay the same. Autoplay Audio must be activated in the browser for the IP address of the bride machine.
+Toast modes:
 
-mp3 audio requires a "user gesture" on iOS devices, such as a click or touch event. Simply click on an element on the website and mp3 audio will be output. Without the user gesture, the audio output is blocked by the iOS system_.
+* `Off` - no toast/alarm output
+* `On` - all toast messages and MP3 alarms
+* `Error` - only system error messages
 
-All major browsers such as MS Edge, Chrome or Firefox have options for automatic media playback in the settings under website permissions. It is recommended to add the website from Brautomat to the Allow list. In the following image, the web page from Brautomat has been added with the mDNS name in the Microsoft Edge browser. Alternatively, the IP address can also be entered
+Brautomat includes `info.mp3`, `success.mp3`, `warning.mp3`, and `error.mp3`.
+You can replace these files as long as filenames stay the same.
+
+For browser audio output, autoplay permission must be allowed for the Brautomat page.
+On iOS, audio playback needs a user gesture (tap/click) first.
 
 ![media](/docs/img/autoplay-media.jpg)
 
-With this setting, mp3 alarms can replace a piezo buzzer.
+With browser audio enabled, MP3 alerts can replace a piezo buzzer.
 
-### Activate touch display
+### Enable touch display
 
-A Nextion HMI 3.5 inch display can be operated with this parameter. The Brautomat offers three views
+Brautomat supports optional 3.5 inch Nextion displays.
 
-#### Boiler overview
+#### Kettle overview
 
-In this view, IDS and post-casting are displayed with actual and target temperatures. The current and next rest are displayed with duration.
-The length of the red bar under the IDS and recast view shows the elapsed rest time.
+Shows mash/boil/NACHGUSS kettles (if configured) with actual and target temperatures.
+Current and next rest are shown with progress.
 
 ![Display](/docs/img/kettlepage-sm.jpg)
 
-#### MashBud
+#### Mash view
 
-This view shows the first hob. The current rest time is displayed with the actual and target temperatures as well as the current remaining time. The length of the red bar under the temperatures shows the progress of the current rest. The symbol to the right of the remaining time shows whether the next break will start automatically (autonext): green means automatic, red means break. In addition, the controller Deck is displayed with the corresponding functions.
+Shows the first kettle with actual/target temperature and remaining rest time.
+The icon next to remaining time shows `autonext` state:
+
+* green = automatic next step
+* red = manual pause behavior
 
 ![Display](/docs/img/brewpage-sm.jpg)
 
-#### Manual mode (only for GGM IDS2)
+#### Manual mode (GGM IDS2 only)
 
-This view is used to manually control the induction hob. In manual mode, 6 power levels are available: 0, 20, 40, 60, 80 and 100% power. Manual mode is only suitable for the GGM IDS2. (IDS1 not tested!)
+Manual mode allows fixed power levels: 0, 20, 40, 60, 80, 100%.
+Manual mode is intended for GGM IDS2.
 
 ![Display](/docs/img/induction-mode-sm.jpg)
 
-A display is optional. The Brautomat only supports Nextion HMI 3.5 inch touch displays (Basic and Discovery series).
+Display setup is done via SD card:
 
-The display is configured via an SD card. The TFT file from the Info folder that matches the display is copied to the SD card and inserted into the display. As soon as the display is switched on, the configuration begins. The process takes about a minute. The progress is shown on the display. Once configuration is complete, the display will turn off and the SD card will be removed. The display is now ready for use.
+1. Copy matching `.tft` file to SD card.
+2. Insert card into display.
+3. Power on.
+4. Wait until flashing is complete, then remove card.
 
-It should be noted that SDA, SCL must be operated on PINs D1, D2.
+Use pins `D1`/`D2` for SDA/SCL.
 
-### PT100x sensors MAX31865 AmplActivate here
+### Enable PT100x via MAX31865
 
-If analog PT100x sensors are used, this switch must be activated. A PT100x analog sensor requires an RTD to digital converter to connect to an ESP microcontroller. A MAX31865 amplifier is an RTD digital converter in the form of a small additional board.
+Enable this option when using analog PT100x sensors with a MAX31865 RTD converter board.
 
 ### Enable mDNS
 
-Multicast DNS is used to resolve hostnames to IP addresses in small networks. mDNS makes it possible to use a "speaking" name for the Brautomat. The default is the mDNS name “Brautomat”. The web interface can be reached via the address <http://Brautomat.local>. The hostname is limited to a maximum of 15 characters.
+mDNS resolves local hostnames without manually using IP addresses.
+Default hostname is `Brautomat`, reachable as:
 
-Note: The mDNS name is configured without a protocol (http://) and without a top-level domain (.local) in the system settings (Brautomat).
+<http://Brautomat.local>
+
+Hostname length is limited to 15 characters.
+Enter hostname in settings without `http://` and without `.local`.
 
 ### Dashboard
 
-Using Dashboard you can easily show and hide elements. For example, if no recasting is used, the Recasting element for the Dashboard should be deactivated. Disabled items reduce traffic.
+Dashboard lets you hide unused UI modules to reduce clutter and traffic.
+For example, if no NACHGUSS kettle is used, disable that dashboard element.
 
 ### Logging
 
-Logging is only activated in the development version. On the Logging tab, serial log output can be activated for all modules. The levels Error, Info, Verbose and Off are available for logging. A serial monitor is required, e.g. with the Arduino IDE, VSCODE etc. The baud rate is 115200.
-
-Error mode only outputs errors.
-
-The Info mode contains errors and also outputs information about the configuration in the serial monitor.
-
-Verbose mode includes error and info and also outputs information about data transfer (SSE broadcasts).
+Logging is available in development builds.
+Each module supports `Off`, `Error`, `Info`, `Verbose`.
+Use a serial monitor at `115200` baud.
 
 ### NTP time server
 
-The Network Time Protocol (NTP) regularly synchronizes the time with a time server. The default time server is europe.pool.ntp.org. If there is a time server on the local network, this should be used. If a local time server is configured, the Brautomat does not require Internet access. For example, fritz.box or the IP address of the standard gateway.
+NTP synchronizes system time.
+Default server is `europe.pool.ntp.org`.
+You can also use a local server (for example `fritz.box`) to avoid internet dependency.
 
 ### NTP time zone
 
-The time zone is determined from a table. The time zone Europe Berlin is preset:
+Time zone is selected from the table below.
+Default is Europe/Berlin:
 
-<CET-1CEST,M3.5.0,M10.5.0/3>
-
-The time zone is used to determine the correct time including summer and winter time.
+`<CET-1CEST,M3.5.0,M10.5.0/3>`
 
 #### Time zone table
 
@@ -107,7 +124,8 @@ The time zone is used to determine the correct time including summer and winter 
 |Africa/Dakar |GMT0 |
 |Africa/Dar_es_Salaam |EAT-3 |
 |Africa/Djibouti |EAT-3 |
-|Africa/Douala |WAT-1 ||Africa/El_Aaiun |<+01>-1 |
+|Africa/Douala |WAT-1 |
+|Africa/El_Aaiun |<+01>-1 |
 |Africa/Freetown |GMT0 |
 |Africa/Gaborone |CAT-2 |
 |Africa/Harare |CAT-2 |
@@ -548,3 +566,6 @@ The time zone is used to determine the correct time including summer and winter 
 |Etc/Greenwich |GMT0 |
 |Etc/Universal |UTC0 |
 |Etc/Zulu |UTC0 |
+
+
+
