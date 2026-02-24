@@ -14,7 +14,7 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
-Version 1.60.29 final RC
+Version 1.60 Release
 
 * Geändert:     PID-Rechenkern vereinheitlicht: `KL/KR -> KP/KI/KD` wird nun gemeinsam von AutoTune und `/setKettlePID` genutzt
 * Neu:          WebIf `calcPID` für Maische, HLT und Sud (Recalc aus `KL/KR` inkl. `sa/psa/newo`)
