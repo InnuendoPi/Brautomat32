@@ -127,18 +127,18 @@ _Note: Display support is optional. Supported models are Nextion ITEAD HMI 3.5" 
 
 ## Multilingual
 
-![de](https://img.shields.io/badge/Deutsch-de-red.svg)
-![en](https://img.shields.io/badge/English-en-blue.svg)
-![es](https://img.shields.io/badge/Español-es-yellow.svg)
-![fr](https://img.shields.io/badge/Français-fr-lightgrey.svg)
-![nl](https://img.shields.io/badge/Nederlands-nl-orange.svg)
-![no](https://img.shields.io/badge/Norsk-no-green.svg)
-![it](https://img.shields.io/badge/Italiano-it-lightblue.svg)
-![sv](https://img.shields.io/badge/Svenska-sv-yellowgreen.svg)
-![pl](https://img.shields.io/badge/Polski-pl-darkred.svg)
-![pt](https://img.shields.io/badge/Português-pt-lightgrey.svg)
-![dk](https://img.shields.io/badge/Dansk-dk-blueviolet.svg)
-![cs](https://img.shields.io/badge/Čeština-cs-orange.svg)
+[![de](https://img.shields.io/badge/Deutsch-de-red.svg)](data/language/deutsch.json)
+[![en](https://img.shields.io/badge/English-en-blue.svg)](language/english.json)
+[![es](https://img.shields.io/badge/Español-es-yellow.svg)](language/espanol.json)
+[![fr](https://img.shields.io/badge/Français-fr-lightgrey.svg)](language/francais.json)
+[![nl](https://img.shields.io/badge/Nederlands-nl-orange.svg)](language/nederlands.json)
+[![no](https://img.shields.io/badge/Norsk-no-green.svg)](language/norsk.json)
+[![it](https://img.shields.io/badge/Italiano-it-lightblue.svg)](language/italiano.json)
+[![sv](https://img.shields.io/badge/Svenska-sv-yellowgreen.svg)](language/svenska.json)
+[![pl](https://img.shields.io/badge/Polski-pl-darkred.svg)](language/polski.json)
+[![pt](https://img.shields.io/badge/Português-pt-lightgrey.svg)](language/portugues.json)
+[![dk](https://img.shields.io/badge/Dansk-dk-blueviolet.svg)](language/dansk.json)
+[![cs](https://img.shields.io/badge/Čeština-cs-orange.svg)](language/cestina.json)
 
 Brautomat32 supports (almost) any number of languages.
 
