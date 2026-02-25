@@ -16,6 +16,8 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 Version 1.60 Release
 
+* Geändert:     InnuLog auf Wrapper Class umgestellt (-8% Flash mem)
+* Geändert:     Debug_* Ausgaben sind jetzt vereinheitlicht und kompakter
 * Geändert:     PID-Rechenkern vereinheitlicht: `KL/KR -> KP/KI/KD` wird nun gemeinsam von AutoTune und `/setKettlePID` genutzt
 * Neu:          WebIf `calcPID` für Maische, HLT und Sud (Recalc aus `KL/KR` inkl. `sa/psa/newo`)
 * Geändert:     `reqKettlePID` / `setKettlePID` konsistent erweitert (vollständige PID-Parameter + Recalc-Flags)
