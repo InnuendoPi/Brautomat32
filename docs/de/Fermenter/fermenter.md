@@ -6,7 +6,7 @@ Im Fermenter Modus arbeitet der Brautomat32 den Gärplan in gleicher Weise wie b
 
 Die Verarbeitung der Steps hat einen wichtigen Untschied:
 
-der ersten Schritt im Gärplan wird gestartet, wenn die Zieltemperatur erreicht ist. Das ist meist der Zeitpunkt, wenn die Hefe zur Würze gegeben wird. Alle folgenden Schritte im Gärplan werden sofort gestartet, unabhängig von der Ist-Temperatur.
+Der erste Schritt im Gärplan wird sofort mit dem Prozessstart gestartet. Alle folgenden Schritte im Gärplan werden sofort gestartet, unabhängig von der Ist-Temperatur.
 
 Zur Einrichtung kann ein GPIO für eine Kühlung und ein GPIO für eine Heizung eingerichtet werden. Entweder die Kühlung oder die Heizung ist optional.
 

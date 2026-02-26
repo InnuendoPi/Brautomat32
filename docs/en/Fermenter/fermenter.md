@@ -6,7 +6,7 @@ In fermenter mode, Brautomat32 processes the fermentation plan from top to botto
 
 There is one important difference in step handling:
 
-The first fermentation step starts when the target temperature is reached. This is usually when yeast is pitched. All following steps start when the previous step ends, independent of actual temperature.
+The first fermentation step starts immediately when the process starts. All following steps start when the previous step ends, independent of actual temperature.
 
 For setup, you can configure one GPIO for cooling and one GPIO for heating. Either one can also be left unused.
 

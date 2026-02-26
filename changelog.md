@@ -36,6 +36,16 @@ Version 1.60 Release
 * Korrektur:    Rezeptimport (Brewfather + Upload) ist nur im Idle-Status erlaubt und wird bei aktivem Brauvorgang konsistent mit Error-Toast abgewiesen
 * Korrektur:    Rezept-Operationen werden bei aktivem Brauvorgang blockiert
 * Korrektur:    Tasks werden bei Importpfaden (Brewfather/Upload) temporär gestoppt und danach sauber neu gestartet
+* Korrektur:    Brewfather API: gemeinsamer TLS-Transport mit Lock verhindert parallele BF-Requests und reduziert Speicherfragmentierung
+* Korrektur:    Brewfather Liste: `emptyInput` wird robust als leere Liste behandelt (kein Folgefehler im Modal)
+* Korrektur:    SSE Versand bei Low-Heap weiter gehärtet (zusätzliche Heap-Gates, reduzierte Event-Last)
+* Korrektur:    Modal Sud: kein automatischer Brewfather-Load beim Öffnen; BF-Auswahlwechsel ist entprellt
+* Korrektur:    Brewfather Rezeptimport lädt den neuen Maischeplan wieder sofort aktiv; unnötiger Erfolgston beim Import entfernt
+* Korrektur:    Fermenter: `ramp` und `autonext` entkoppelt (`ramp` steuert nur die Sollwert-Rampe, Fermenter-Steps laufen standardmäßig automatisch weiter)
+* Korrektur:    Fermenter-FSM: AutoNext/Timeout führt Folgeschritte wieder zuverlässig aus (kein Hänger in `WAIT_TEMP` nach Stepwechsel)
+* Korrektur:    Resume nach Powerloss: bei `active_second=0` wird kein Step-Timer mehr auf volle Dauer zurückgesetzt (`WAIT_USER` statt Neustart)
+* Korrektur:    Rekonstruktion `breakDuration` beim Restore robuster gemacht (`epochTime`-Guard, konsistente Berechnung der Unterbrechung)
+* Geändert:     Fermenter-Dokumentation (DE/EN) an das tatsächliche Startverhalten angepasst (Step 1 startet sofort mit Prozessstart)
 
 Version 1.60.28 final RC
 
