@@ -15,6 +15,7 @@
 * [Kettle configuration and use](Kessel/kessel.md)
   * [Adaptive kettle logic](Kessel/adaptive_kessellogik.md)
   * [PID instructions](Kessel/PID-Anleitung.md)
+  * [Kettle configuration](Kessel/kessel.md)
 * [Sensors](Sensoren/info.md)
   * [Calibration](Sensoren/kalibrierung.md)
 * [Actuators](Aktoren/act.md)
@@ -37,4 +38,3 @@
 * [Translate the Brautomat](FAQ/sprache.md)
 * [Troubleshooting](FAQ/troubleshooting.md)
 * [API](API/api.md)
-

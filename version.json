@@ -1,6 +1,6 @@
 {
   "version": "1.60",
-  "release_date": "2026-02-26",
-  "type": "Release",
-  "notes": "Brautomat32 FSM, new PID Controller, Dashboard"
+  "release_date": "2026-02-27",
+  "type": "Development",
+  "notes": "Brautomat32 FSM Release"
 }

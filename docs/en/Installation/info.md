@@ -61,17 +61,13 @@ Use the `File system` button to upload `LittleFS.bin`.
 ## Wi-Fi configuration
 
 After flashing, Brautomat starts in Access Point mode.
-An open Wi-Fi named `Brautomat` appears.
+An open Wi-Fi named `Brautomat32` appears.
 
 Connect to it, then open the Wi-Fi portal.
 If it does not open automatically, go to:
 <http://192.168.4.1>
 
 ![WiFi configuration](/docs/img/wlan1.jpg)
-
-Open `Configure WiFi`:
-
-![WiFi configuration](/docs/img/wlan2.jpg)
 
 Enter SSID and password, then click `Save`.
 Brautomat restarts and connects to your Wi-Fi.

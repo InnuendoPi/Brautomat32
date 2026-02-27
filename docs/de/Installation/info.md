@@ -51,13 +51,9 @@ Nach einem Klick auf die Schaltfläche „Dateisystem“ wird die Datei LittleFS
 
 ## WLAN Konfiguration
 
-Nach dem Flashen der Firmware startet der Brautomat im AccessPoint-Mode. Ein offenes WLAN mit dem Namen _Brautomat_ wird sichtbar. Mit diesem WLAN muss eine Verbindung hergestellt werden. Sobald die Verbindung hergestellt ist, öffnet der Webbrowser das WLAN-Konfigurationsportal. Sollte sich das Portal nicht automatisch öffnen, muss die Adresse <http://192.168.4.1> manuell im Webbrowser eingegeben werden.
+Nach dem Flashen der Firmware startet der Brautomat im AccessPoint-Mode. Ein offenes WLAN mit dem Namen _Brautomat32_ wird sichtbar. Mit diesem WLAN muss eine Verbindung hergestellt werden. Sobald die Verbindung hergestellt ist, öffnet der Webbrowser das WLAN-Konfigurationsportal. Sollte sich das Portal nicht automatisch öffnen, muss die Adresse <http://192.168.4.1> manuell im Webbrowser eingegeben werden.
 
 ![WLAN Konfiguration](/docs/img/wlan1.jpg)
-
-Über den Button "Configure WiFi" wird die Konfiguration WLAN angezeigt
-
-![WLAN Konfiguration](/docs/img/wlan2.jpg)
 
 Hier müssen WLAN-Name (SSID) und Passwort eingegeben werden. Mit _Save_ startet der Brautomat neu und verbindet sich mit dem WLAN. Das WebInterface vom Brautomat ist im lokalen WLAN über die Adresse <http://brautomat.local> erreichbar.
 

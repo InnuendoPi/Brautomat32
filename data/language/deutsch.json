@@ -238,7 +238,7 @@
     "IDS_SETP": "AutoTune Zieltemperatur",
     "IDS_NOISE": "AutoTune noiseband [0.1]",
     "IDS_DEB": "AutoTune Log erstellen",
-    "IDS_VOL": "Kesselvolumen in Liter",
+    "IDS_VOL": "Maischevolumen in Liter",
     "IDS_TUNE": "Tuning Faktor [1.20]",
     "IDS_ENZYM": "Optimiere Maischeprozess",
     "IDS_TUNE_SLOW": "slow",
