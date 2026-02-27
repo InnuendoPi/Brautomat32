@@ -6,7 +6,7 @@ Um den Brautomat nutzen zu können, muss die Firmware geflasht werden. Außerdem
 
 Die Version Brautomat32 ist für den ESP32 und basiert auf dem Framework IDF5.
 
-* [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip): Brautomat32.zip
+[![Stable](https://img.shields.io/static/v1?label=Download%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) [![Dev](https://img.shields.io/static/v1?label=Download%20Develop&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32.zip)
 
 Die Installation der Firmware wird über das im ZIP Archiv enthaltene Script "Flashen.cmd" durchgeführt. Das ZIP Archiv wird in einem beliebigen Ordner entpackt. Der ESP Microcontroller wird per USB-Kabel mit dem PC/Notebook verbunden. Ein Doppelklick auf das Script Flashen.cmd startet das Flashen der Firmware.
 
