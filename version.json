@@ -1,6 +1,6 @@
 {
-  "version": "1.60",
+  "version": "1.60.1",
   "release_date": "2026-02-28",
-  "type": "Release",
-  "notes": "Brautomat32 FSM Release"
+  "type": "Development",
+  "notes": "Brautomat32 FSM Release, Hotfix 2026-02-28"
 }

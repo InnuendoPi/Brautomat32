@@ -14,6 +14,15 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
+Hotfix 2026-02-28
+
+* Korrektur:    WebIf `apiPOST` zeigt bei HTTP-Fehlern zusätzlich den Response-Body an (bessere Diagnose)
+* Geändert:     Cache-Strategie WebServer präzisiert: `index/language` mit `no-store`, `brautomat.min.css/js` mit `no-cache,must-revalidate`, `bootstrap.*` mit `max-age=86400`
+* Geändert:     CORS auf den bisherigen kompatiblen Stand zurückgestellt (`Access-Control-Allow-Origin: *`, Standard-Allow-Headers/Methods, `Max-Age=600`)
+* Korrektur:    Legacy-Kompatibilität ergänzt: `POST /bfbatche` wird auf den bestehenden Import-Handler gemappt
+* Korrektur:    Batch-Doppelklick im Brewfather-Tab läuft nicht mehr in `404 Not found`
+* Korrektur:    Backup-Schreiben stabilisiert (Datei-Iteration mit korrekten Pfaden und sauberem `file.close()/root.close()`)
+
 Version 1.60 Release
 
 * Geändert:     InnuLog auf Wrapper Class umgestellt (-8% Flash mem)
