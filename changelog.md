@@ -14,6 +14,10 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
+Hotfix 2026-03-02
+
+* Korrektur:    die Chart für Kessel Sud war an einem falschen visible flag gebunden
+
 Hotfix 2026-02-28
 
 * Korrektur:    WebIf `apiPOST` zeigt bei HTTP-Fehlern zusätzlich den Response-Body an (bessere Diagnose)
