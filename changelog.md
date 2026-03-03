@@ -14,11 +14,16 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
-Hotfix 2026-03-02
+Version 1.60.2 Hotfix 2026-03-03
+
+* Update:       ArduinoJSON 7.4.3 Fix a buffer overrun in as<T>() (issue #2220)
+* Geändert:     MMum Rezept Import werde  die Steps Ein- und Abmaischen bei validen Temperaturen immer erstellt
+
+Version 1.60.1 Hotfix 2026-03-02
 
 * Korrektur:    die Chart für Kessel Sud war an einem falschen visible flag gebunden
 
-Hotfix 2026-02-28
+Version 1.60.1 Hotfix 2026-02-28
 
 * Korrektur:    WebIf `apiPOST` zeigt bei HTTP-Fehlern zusätzlich den Response-Body an (bessere Diagnose)
 * Geändert:     Cache-Strategie WebServer präzisiert: `index/language` mit `no-store`, `brautomat.min.css/js` mit `no-cache,must-revalidate`, `bootstrap.*` mit `max-age=86400`
