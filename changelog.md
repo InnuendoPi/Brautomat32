@@ -22,7 +22,7 @@ Version 1.60.3 Hotfix 2026-03-04
 Version 1.60.2 Hotfix 2026-03-03
 
 * Update:       ArduinoJSON 7.4.3 Fix a buffer overrun in `as<T>()` (issue #2220)
-* Geändert:     MMum Rezept Import werde  die Steps Ein- und Abmaischen bei validen Temperaturen immer erstellt
+* Geändert:     MMum Rezept Import werden die Steps Ein- und Abmaischen bei validen Temperaturen immer erstellt
 
 Version 1.60.1 Hotfix 2026-03-02
 
