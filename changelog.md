@@ -14,6 +14,11 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
+Version 1.60.3 Hotfix 2026-03-04
+
+* Geändert:     Backup und Restore optimiert und korrigiert
+* Geändert:     globales File Objekt ersetzt (parallele Zugriffe)
+
 Version 1.60.2 Hotfix 2026-03-03
 
 * Update:       ArduinoJSON 7.4.3 Fix a buffer overrun in `as<T>()` (issue #2220)
