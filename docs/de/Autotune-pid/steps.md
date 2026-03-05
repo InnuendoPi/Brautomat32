@@ -38,4 +38,3 @@ In dieser Protokolldatei werden alle Informationen protokolliert.
 In den Dateien `idsAutoTune.txt`, `sudAutoTune.txt` bzw. `hltAutoTune.txt`
 wird das Ergebnis von AutoTune im JSON-Format gespeichert.
 Die Dateien sind rein informativ und werden für den Betrieb nicht benötigt.
-Dort sind die PID-Werte nach verschiedenen Berechnungsmethoden aufgelistet.

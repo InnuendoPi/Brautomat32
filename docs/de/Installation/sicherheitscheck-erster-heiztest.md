@@ -5,8 +5,7 @@ Führe den ersten Testlauf immer mit Wasser und unter Aufsicht durch.
 
 ## Checkliste vor dem Start
 
-- Anlage steht stabil, trocken und mit Abstand zu brennbaren Materialien.
-- Netzanschluss ist über geeignete Schutzmaßnahmen abgesichert (z. B. FI/RCD).
+- der Netzanschluss ist über geeignete Schutzmaßnahmen abgesichert (z. B. FI/RCD).
 - Gehäuse, Steckverbindungen und Leitungen sind unbeschädigt.
 - Sensor ist korrekt zugewiesen und liefert plausible Werte.
 - Not-Aus- oder Abschaltstrategie ist geklärt (Stecker/Schalter erreichbar).
@@ -22,7 +21,6 @@ Führe den ersten Testlauf immer mit Wasser und unter Aufsicht durch.
 
 ## Sofort abbrechen bei
 
-- auffälligem Geruch, Erwärmung an Steckern oder Kabeln
 - unplausiblen Temperatursprüngen
 - unerwartetem Dauerheizen oder fehlender Abschaltung
 
