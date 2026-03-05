@@ -87,7 +87,7 @@ Brautomat ist eine eigenständige Brausteuerung mit:
 
 Die ausführlichen technischen Hinweise findest du hier:
 
-* [Was ist neu 1.60.x (DE)](whats_new_160.de.md)
+* [Was ist neu 1.60.x](whats_new_160.de.md)
 
 Kernpunkte (Synchronisationscheck zur Codebasis v1.60.3):
 
@@ -105,8 +105,6 @@ Brautomat läuft in aktuellen Browsern auf PC, Tablet und Smartphone.
 ![WebInterface](docs/img/brautomat160.jpg)
 ![WebInterface](docs/img/brautomat160-2.jpg)
 
-</details>
-
 ---
 
 ## Nextion HMI-Touchdisplay (optional)
@@ -122,8 +120,6 @@ Brautomat bietet drei Display-Ansichten:
 ![Manuell](docs/img/induction-mode-sm.jpg)
 
 _Hinweis: Display-Unterstützung ist optional. Unterstützt werden Nextion ITEAD HMI 3,5" (Basic/Enhanced/Discovery-Serie)._
-
-</details>
 
 ---
 
@@ -152,8 +148,6 @@ Unterstütze das Projekt, indem du eine neue Sprache ergänzt oder bestehende Ü
 
 ![Platine](docs/img/Platine21.jpg)
 
-</details>
-
 Für den **ESP32 D1 Mini NodeMCU** gibt es eine eigene **Platine** mit:
 
 * Schraubklemmen für GPIOs
@@ -171,8 +165,6 @@ Die Gerber-Dateien liegen im Ordner `Gehaeuse`.
 ![Gehäuse außen](docs/img/brautomat_01.jpg)
 ![Gehäuse innen](docs/img/brautomat_02.jpg)
 
-</details>
-
 ---
 
 ## Pinbelegung
@@ -182,8 +174,6 @@ Die folgende Belegung gilt für **ESP32 D1 Mini NodeMCU** (z. B. [AZ-Delivery](h
 ### GPIO-Mapping
 
 ![ESP32 D1 Pinout-1](docs/img/ESP32-D1.pinout-1.jpg) ![ESP32 D1 Pinout-2](docs/img/ESP32-D1.pinout-2.jpg)
-
-</details>
 
 | Name | GPIO | Input | Output | Beschreibung |
 | ---- | ---- | ----- | ------ | ------------ |

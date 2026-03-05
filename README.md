@@ -88,7 +88,7 @@ Brautomat is a standalone brewing controller with support for:
 
 Detailed technical update notes are available here:
 
-* [What's New 1.60.x (EN)](whats_new_160.md)
+* [What's New 1.60.x](whats_new_160.md)
 
 Key points (sync check against codebase v1.60.3):
 
@@ -106,8 +106,6 @@ Brautomat runs in modern browsers on tablet, smartphone, and PC.
 ![WebInterface](docs/img/brautomat160.jpg)
 ![WebInterface](docs/img/brautomat160-2.jpg)
 
-</details>
-
 ---
 
 ## Nextion HMI touch display (optional)
@@ -123,8 +121,6 @@ Brautomat provides three display views:
 ![Manual control](docs/img/induction-mode-sm.jpg)
 
 _Note: Display support is optional. Supported models are Nextion ITEAD HMI 3.5" (Basic/Enhanced/Discovery series)._
-
-</details>
 
 ---
 
@@ -153,8 +149,6 @@ Support the project by adding a new language or improving existing translations.
 
 ![Platine](docs/img/Platine21.jpg)
 
-</details>
-
 A dedicated **circuit board** for ESP32 D1 Mini NodeMCU is available.
 It includes:
 
@@ -173,8 +167,6 @@ Gerber files are stored in the `Gehaeuse` folder.
 ![Case Front](docs/img/brautomat_01.jpg)
 ![Case Inside](docs/img/brautomat_02.jpg)
 
-</details>
-
 ---
 
 ## Pinout
@@ -184,8 +176,6 @@ The following assignment applies to **ESP32 D1 Mini NodeMCU** boards (for exampl
 ### GPIO mapping
 
 ![ESP32 D1 Pinout-1](docs/img/ESP32-D1.pinout-1.jpg) ![ESP32 D1 Pinout-2](docs/img/ESP32-D1.pinout-2.jpg)
-
-</details>
 
 | Name | GPIO | Input | Output | Notes |
 | ---- | ---- | ----- | ------ | ----- |
