@@ -18,7 +18,7 @@ Nach einem Update von Version 1.59 oder älter muss **AutoTune** einmal neu durc
 ## Download
 
 | Release-Typ | Download |
-|-------------|----------|
+| ----------- | -------- |
 | **Release** | [![Stable](https://img.shields.io/static/v1?label=Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) |
 | **Development** | [![Dev](https://img.shields.io/static/v1?label=Development%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip) |
 
@@ -83,16 +83,24 @@ Brautomat ist eine eigenständige Brausteuerung mit:
 * [Forum Hobbybrauer.de (Deutsch)](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
 * [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
 
+## Was ist neu 1.60.x
+
+Die ausführlichen technischen Hinweise findest du hier:
+
+* [Was ist neu 1.60.x (DE)](whats_new_160.de.md)
+
+Kernpunkte (Synchronisationscheck zur Codebasis v1.60.3):
+
+* Die Reihenfolge in `INNU_APID::Compute()` entspricht weiterhin der Doku (Modus, Kochen, Limiter, Ramping/Coasting, PID, Anti-Windup).
+* `thresOutput` (Code) und `thresOut` (UI/Doku) beschreiben dasselbe Kochleistungs-Konzept.
+* AutoTune nutzt weiterhin `WAIT_HEAT_COMMIT` und leitet Empfehlungen über `RecalculatePIDFromLR(...)` aus `L/R` ab.
+* Queue-Priorisierung und `TEMP_TICK`-Coalescing der FSM sind aktiv umgesetzt.
+
 ---
 
 ## Webinterface
 
 Brautomat läuft in aktuellen Browsern auf PC, Tablet und Smartphone.
-
-<!-- markdownlint-disable-next-line MD033 -->
-<details>
-<!-- markdownlint-disable-next-line MD033 -->
-<summary>Webinterface-Screenshots anzeigen</summary>
 
 ![WebInterface](docs/img/brautomat160.jpg)
 ![WebInterface](docs/img/brautomat160-2.jpg)
@@ -108,11 +116,6 @@ Brautomat bietet drei Display-Ansichten:
 * **Übersicht** - zeigt alle konfigurierten Kessel
 * **Maischeansicht** - zeigt Prozessdaten von Kessel 1
 * **Manuelle Steuerung (GGM IDS2)** - direkte Leistungssteuerung
-
-<!-- markdownlint-disable-next-line MD033 -->
-<details>
-<!-- markdownlint-disable-next-line MD033 -->
-<summary>Display-Screenshots anzeigen</summary>
 
 ![Übersicht](docs/img/kettlepage-sm.jpg)
 ![Maischeansicht](docs/img/brewpage-sm.jpg)
@@ -147,11 +150,6 @@ Unterstütze das Projekt, indem du eine neue Sprache ergänzt oder bestehende Ü
 
 ## Platine 2.1
 
-<!-- markdownlint-disable-next-line MD033 -->
-<details>
-<!-- markdownlint-disable-next-line MD033 -->
-<summary>Screenshot Platine anzeigen</summary>
-
 ![Platine](docs/img/Platine21.jpg)
 
 </details>
@@ -170,11 +168,6 @@ Die Gerber-Dateien liegen im Ordner `Gehaeuse`.
 
 ## Gehäuse
 
-<!-- markdownlint-disable-next-line MD033 -->
-<details>
-<!-- markdownlint-disable-next-line MD033 -->
-<summary>Gehäuse-Screenshots anzeigen</summary>
-
 ![Gehäuse außen](docs/img/brautomat_01.jpg)
 ![Gehäuse innen](docs/img/brautomat_02.jpg)
 
@@ -188,17 +181,12 @@ Die folgende Belegung gilt für **ESP32 D1 Mini NodeMCU** (z. B. [AZ-Delivery](h
 
 ### GPIO-Mapping
 
-<!-- markdownlint-disable-next-line MD033 -->
-<details>
-<!-- markdownlint-disable-next-line MD033 -->
-<summary>ESP32-Pinout-Screenshots anzeigen</summary>
-
 ![ESP32 D1 Pinout-1](docs/img/ESP32-D1.pinout-1.jpg) ![ESP32 D1 Pinout-2](docs/img/ESP32-D1.pinout-2.jpg)
 
 </details>
 
 | Name | GPIO | Input | Output | Beschreibung |
-|:------|:------:|:------:|:------:|:--------------------------------------------|
+| ---- | ---- | ----- | ------ | ------------ |
 | D0 | GPIO026 | ok | ok | |
 | D1 | GPIO022 | ok | ok | |
 | D2 | GPIO021 | ok | ok | |

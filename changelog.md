@@ -16,6 +16,7 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 Version 1.60.3 Hotfix 2026-03-04
 
+* Geändert:     Das Dateihandle für handleUploadLanguage hängt jetzt am Request (request->_tempFile). global/shared Objekt ersetzt
 * Geändert:     Backup und Restore optimiert und korrigiert
 * Geändert:     globales File Objekt ersetzt (parallele Zugriffe)
 

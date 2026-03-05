@@ -11,7 +11,6 @@ The order is intentional:
 
 This prevents terms from appearing "out of nowhere."
 
-
 ## 0) Sync check against current codebase (v1.60.3)
 
 This document revision was checked against the current firmware state (`version.json` = 1.60.3). Key confirmations:
@@ -165,7 +164,6 @@ For repeatable results, this sequence is recommended:
 
 Most problems are not "wrong math" but wrong boundary conditions: unrealistically low tuning volume, different pump state than in real brew operation, or too many parameter changes at once.
 
-
 ### 1.8 Practical brew-day guide (directly usable)
 
 This section is meant as an operating guide, not theory.
@@ -187,7 +185,7 @@ This section is meant as an operating guide, not theory.
 #### Starter profiles by setup (first run)
 
 | Setup | Starting point | First safe correction |
-|---|---|---|
+| --- | --- | --- |
 | 20-30 L, strong circulation, IDS | Keep AutoTune values + medium tuning factor | If overshoot occurs, lower tuning factor slightly first |
 | 40-60 L, relay/PWM, medium inertia | Keep AutoTune values + medium to slightly defensive tuning factor | If heat-up is too slow, raise tuning factor in small steps |
 | HLT / slow thermal system | AutoTune values + more defensive tuning factor | If hold oscillates, lower tuning factor slightly before touching `P/I/D` |
@@ -195,7 +193,7 @@ This section is meant as an operating guide, not theory.
 #### Symptom -> action matrix (brew operation)
 
 | Symptom | Likely cause | First action | Second action |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Overshoot > 0.5 K in enzyme range | Loop too aggressive or real inertia higher than tuning run | Lower tuning factor slightly | Review enzyme window/coasting, then fine-adjust `P/I/D` only if needed |
 | Heat-up clearly too slow | Over-defensive style or changed circulation/volume | Verify circulation and volume realism | Increase tuning factor moderately |
 | Rest hold is unstable (constant corrections) | Sensor placement/flow issue, implausible `sa`/`psa` | Check sensor location and mixing, validate `sa`/`psa` | Only then do small `I` correction |

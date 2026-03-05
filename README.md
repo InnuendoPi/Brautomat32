@@ -19,7 +19,7 @@ When updating from version 1.59 or older, run **AutoTune** once after the update
 ## Download
 
 | Release type | Download |
-|--------------|----------|
+| ------------ | -------- |
 | **Release** | [![Stable](https://img.shields.io/static/v1?label=Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) |
 | **Development** | [![Dev](https://img.shields.io/static/v1?label=Development%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip) |
 
@@ -84,16 +84,24 @@ Brautomat is a standalone brewing controller with support for:
 * [Forum Hobbybrauer (German)](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
 * [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
 
+## What's New 1.60.x
+
+Detailed technical update notes are available here:
+
+* [What's New 1.60.x (EN)](whats_new_160.md)
+
+Key points (sync check against codebase v1.60.3):
+
+* `INNU_APID::Compute()` sequence remains aligned with docs (mode, boil, limiter, ramp/coast, PID, anti-windup).
+* `thresOutput` (code) and `thresOut` (UI/docs) refer to the same boil-output concept.
+* AutoTune still uses `WAIT_HEAT_COMMIT` and derives recommendations from `L/R` via `RecalculatePIDFromLR(...)`.
+* FSM queue prioritization and `TEMP_TICK` coalescing are actively implemented.
+
 ---
 
 ## Web interface
 
 Brautomat runs in modern browsers on tablet, smartphone, and PC.
-
-<!-- markdownlint-disable-next-line MD033 -->
-<details>
-<!-- markdownlint-disable-next-line MD033 -->
-<summary>Show Web Interface screenshots</summary>
 
 ![WebInterface](docs/img/brautomat160.jpg)
 ![WebInterface](docs/img/brautomat160-2.jpg)
@@ -109,11 +117,6 @@ Brautomat provides three display views:
 * **Overview** - shows all configured kettles
 * **Mash view** - shows kettle 1 process data
 * **Manual control (GGM IDS2)** - direct power control
-
-<!-- markdownlint-disable-next-line MD033 -->
-<details>
-<!-- markdownlint-disable-next-line MD033 -->
-<summary>Show display screenshots</summary>
 
 ![Overview](docs/img/kettlepage-sm.jpg)
 ![Mash view](docs/img/brewpage-sm.jpg)
@@ -148,11 +151,6 @@ Support the project by adding a new language or improving existing translations.
 
 ## Circuit board 2.1
 
-<!-- markdownlint-disable-next-line MD033 -->
-<details>
-<!-- markdownlint-disable-next-line MD033 -->
-<summary>Show screenshot circuit board</summary>
-
 ![Platine](docs/img/Platine21.jpg)
 
 </details>
@@ -172,11 +170,6 @@ Gerber files are stored in the `Gehaeuse` folder.
 
 ## Case
 
-<!-- markdownlint-disable-next-line MD033 -->
-<details>
-<!-- markdownlint-disable-next-line MD033 -->
-<summary>Show case screenshots</summary>
-
 ![Case Front](docs/img/brautomat_01.jpg)
 ![Case Inside](docs/img/brautomat_02.jpg)
 
@@ -190,17 +183,12 @@ The following assignment applies to **ESP32 D1 Mini NodeMCU** boards (for exampl
 
 ### GPIO mapping
 
-<!-- markdownlint-disable-next-line MD033 -->
-<details>
-<!-- markdownlint-disable-next-line MD033 -->
-<summary>Show ESP32 pinout screenshots</summary>
-
 ![ESP32 D1 Pinout-1](docs/img/ESP32-D1.pinout-1.jpg) ![ESP32 D1 Pinout-2](docs/img/ESP32-D1.pinout-2.jpg)
 
 </details>
 
 | Name | GPIO | Input | Output | Notes |
-|:------|:------:|:------:|:------:|:--------------------------------------------|
+| ---- | ---- | ----- | ------ | ----- |
 | D0 | GPIO026 | ok | ok | |
 | D1 | GPIO022 | ok | ok | |
 | D2 | GPIO021 | ok | ok | |
