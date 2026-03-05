@@ -7,6 +7,7 @@
   * [Set up mash kettle](Grundeinrichtung/ids.md)
 * [AutoTune PID](Autotune-pid/info.md)
   * [AutoTune step by step](Autotune-pid/steps.md)
+  * [Brew-day quick guide](Autotune-pid/brew-day-quick-guide.md)
 * [The Mash Plan](Maischeplan/info.md)
   * [The Control](Maischeplan/steuerung.md)
   * [The Dashboard](Maischeplan/dashboard.md)
@@ -38,3 +39,4 @@
 * [Translate the Brautomat](FAQ/sprache.md)
 * [Troubleshooting](FAQ/troubleshooting.md)
 * [API](API/api.md)
+

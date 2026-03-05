@@ -62,3 +62,8 @@ Then adjust in small steps:
 If your setup behaves as PI control, keep `Kd = 0`.
 
 Repeat tests after each relevant change. If no agitator is present, stir occasionally during tests.
+
+
+## Brew-day decision aid
+
+For concrete brew-day decisions, use the [Brew-day quick guide](../Autotune-pid/brew-day-quick-guide.md).

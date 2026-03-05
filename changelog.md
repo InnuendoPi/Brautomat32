@@ -1,7 +1,7 @@
 ﻿# Changelog
 
 ESP32 Arduino 3.3.7 ESP-IDF v5.5.2\
-VSCode 1.109 pioarduino IDE 1.1.5\
+VSCode 1.110 pioarduino IDE 1.1.5\
 InnuAPID AutoTune PID lib 1.10.18\
 InnuTask lib 0.10.16\
 InnuNextion Display lib 0.9\

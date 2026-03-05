@@ -1,4 +1,4 @@
-# 🍺 Einfache Anleitung zur PID-Einstellung  
+﻿# 🍺 Einfache Anleitung zur PID-Einstellung  
 
 Hinweis: Anleitung PID-Einstellung ab Version 1.60
 
@@ -66,3 +66,8 @@ Anmerkung: bei einem PI-Controller wird Kd nicht verändert. Der D-Term bleibt 0
 Ersetze aufgewärmtes Wasser und wiederhole den Test. Es ist völlig normal, dass eine "Optimierung" das Verhalten auch mal verschlechtert. Wenn Du kein Rührwerk hast, solltest Du "immer mal wieder" umrühren. Das würdest Du an einem Brautag mit Malzen auch machen.
 
 ---
+
+
+## Praxishilfe Brautag
+
+Für konkrete Entscheidungen während des Brauens nutze den [Praxisleitfaden Brautag](../Autotune-pid/praxisleitfaden-brautag.md).

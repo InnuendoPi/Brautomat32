@@ -70,6 +70,8 @@ These actions are blocked during an active brew process.
 
 ## AutoTune
 
+Concrete brew-day guide: [Brew-day quick guide](../Autotune-pid/brew-day-quick-guide.md)
+
 Do not optimize for 0.1°C perfection.
 Real sensor tolerance is usually larger.
 
@@ -112,3 +114,4 @@ Use it only for diagnostics.
 - `EC` control panel fault
 
 Some binary sequences are derived from testing and may not be fully confirmed.
+

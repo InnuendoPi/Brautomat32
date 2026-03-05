@@ -1,4 +1,4 @@
-# Troubleshooting
+﻿# Troubleshooting
 
 Tipps & Tricks ... to be continued ...
 
@@ -28,6 +28,8 @@ Der Rezeptimport kann aufgrund des begrenzten Speichers keine Rezepte mit PDF, B
 Ab Version 1.60 gilt zusätzlich: Rezept-Import und Rezept-Operationen sind nur im Idle-Zustand erlaubt. Während eines aktiven Brauvorgangs werden Import, Wechsel, Umbenennen, Kopieren und Löschen blockiert.
 
 ## AutoTune
+
+Konkreter Brautag-Leitfaden: [Praxisleitfaden Brautag](../Autotune-pid/praxisleitfaden-brautag.md)
 
 Beim AutoTune-Prozess sollte der Fokus nicht auf Perfektion im Bereich von 0,1°C liegen. Die Abweichung der Sensoren ist meist größer. Der Parameter AutoTune noiseband (Streuung um den Zielwert) ist mit einem Wert von 0.3 ausreichend nah an der Zieltemperatur, um die Zieltemperatur sehr gut zu treffen und über die Rastdauer zu halten.\
 Sehr gut isolierte Maische-Sudkessel benötigen eine größere AutoTune-Datenreihe. In der Datenreihe werden Messwerte in zeitlicher Abfolge festgehalten. Am Anfang steht der aktuelle Messwert und ganz am Ende der Reihe der älteste Messwert. Der Wert AutoTune Datenreihe gibt an, auf wie viele Werte vor der aktuellen Messung der Brautomat zurückschaut, um eine Temperaturänderung von mindestens AutoTune noiseband (0.3) zu erkennen. Für einen gut isolierten Kessel sollte die Datenreihe mit 75 Messpunkten befüllt werden. Bei einem nicht isolierten Kessel reicht eine Datenreihe von 50 Messpunkten aus. Diese zwei Parameter müssen je nach Umgebung angepasst werden. Die Standardvorgaben liefern in den allermeisten Fällen sehr gute Werte.
@@ -69,3 +71,4 @@ EC Bedienfeld (1110 14)\
 Leider sind die binären Zeichenfolgen nicht bekannt. Lediglich E1 kein/leerer Kessel ist bekannt. Die Zeichenfolgen in den Klammern wurden durch Tests ermittelt, sind aber nicht sicher.
 
 Der Pin Interrupt sollte nur bei Problemen belegt werden. Für das erste Induktionskochfeld wurde früher häufig Pin D5 verwendet. Im normalen Braubetrieb bleibt der Pin Interrupt deaktiviert.
+

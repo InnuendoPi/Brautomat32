@@ -1,4 +1,4 @@
-# Table of contents
+﻿# Table of contents
 
 * [Brautomat](README.md)
 * [Installation](Installation/info.md)
@@ -7,6 +7,7 @@
   * [MaischeSud einrichten](Grundeinrichtung/ids.md)
 * [AutoTune PID](Autotune-pid/info.md)
   * [AutoTune Schritt für Schritt](Autotune-pid/steps.md)
+  * [Praxisleitfaden Brautag](Autotune-pid/praxisleitfaden-brautag.md)
 * [Der Maischeplan](Maischeplan/info.md)
   * [Die Steuerung](Maischeplan/steuerung.md)
   * [Das Dashboard](Maischeplan/dashboard.md)
@@ -38,3 +39,4 @@
 * [Übersetze den Brautomat](FAQ/sprache.md)
 * [Troubleshooting](FAQ/troubleshooting.md)
 * [API](API/api.md)
+
