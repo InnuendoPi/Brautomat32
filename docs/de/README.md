@@ -12,8 +12,7 @@ automatisch fahren.
 > Seit Version 1.48 sind auch Relais-Setups unterstützt.
 > Nur der manuelle Modus ist exklusiv für GGM IDS2.
 
-Stand der Anleitung: Release-Linie `main` (Version 1.60). Lokale
-Entwicklungs-Builds können abweichen.
+Stand der Anleitung: Release-Linie `main` (Version 1.60). Lokale Entwicklungs-Builds können abweichen.
 
 ## Empfohlener Einstieg
 
