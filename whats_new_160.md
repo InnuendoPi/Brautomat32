@@ -11,6 +11,18 @@ The order is intentional:
 
 This prevents terms from appearing "out of nowhere."
 
+
+## 0) Sync check against current codebase (v1.60.3)
+
+This document revision was checked against the current firmware state (`version.json` = 1.60.3). Key confirmations:
+
+- `INNU_APID::Compute()` still follows the described sequence: mode check, boil bypass, enzyme limiter, ramping/coasting, PID core, anti-windup/limits.
+- The implementation uses internal variable name `thresOutput`; UI/document wording often uses `thresOut`. Both refer to the same fixed boil output concept.
+- AutoTune still uses commit-protected start via `WAIT_HEAT_COMMIT` and derives recommendations via `RecalculatePIDFromLR(...)` from `L/R`.
+- FSM states/events are present in current `InnuTasks`; queue prioritization (stop to front) and `TEMP_TICK` coalescing are actively implemented.
+
+So the technical description remains aligned with code; practical extension proposals for brewers are added below.
+
 ## 1) Current PID Engine (current state)
 
 ### 1.1 Core idea of the current engine
@@ -152,6 +164,47 @@ For repeatable results, this sequence is recommended:
 4. Change `P/I/D` manually only in small isolated steps.
 
 Most problems are not "wrong math" but wrong boundary conditions: unrealistically low tuning volume, different pump state than in real brew operation, or too many parameter changes at once.
+
+
+### 1.8 Practical brew-day guide (directly usable)
+
+This section is meant as an operating guide, not theory.
+
+#### How to use this section
+
+1. Pick the matching symptom from the matrix below.
+2. Apply only the **first action** and observe for at least one rest or heat-up segment.
+3. Only if the symptom remains, apply the **second action**.
+4. Change only **one** control lever at a time (otherwise root cause stays unclear).
+
+#### 2-minute pre-start check
+
+- Volume matches AutoTune conditions (target: within about +/-10%).
+- Pump/stirrer state is the same as during AutoTune.
+- Sensor values are plausible (no jumps, no obvious outliers).
+- No plan to change multiple parameters in parallel for this brew.
+
+#### Starter profiles by setup (first run)
+
+| Setup | Starting point | First safe correction |
+|---|---|---|
+| 20-30 L, strong circulation, IDS | Keep AutoTune values + medium tuning factor | If overshoot occurs, lower tuning factor slightly first |
+| 40-60 L, relay/PWM, medium inertia | Keep AutoTune values + medium to slightly defensive tuning factor | If heat-up is too slow, raise tuning factor in small steps |
+| HLT / slow thermal system | AutoTune values + more defensive tuning factor | If hold oscillates, lower tuning factor slightly before touching `P/I/D` |
+
+#### Symptom -> action matrix (brew operation)
+
+| Symptom | Likely cause | First action | Second action |
+|---|---|---|---|
+| Overshoot > 0.5 K in enzyme range | Loop too aggressive or real inertia higher than tuning run | Lower tuning factor slightly | Review enzyme window/coasting, then fine-adjust `P/I/D` only if needed |
+| Heat-up clearly too slow | Over-defensive style or changed circulation/volume | Verify circulation and volume realism | Increase tuning factor moderately |
+| Rest hold is unstable (constant corrections) | Sensor placement/flow issue, implausible `sa`/`psa` | Check sensor location and mixing, validate `sa`/`psa` | Only then do small `I` correction |
+| Calm start, then oscillation near setpoint | Thermal delay underestimated | Check coasting behavior | Lower tuning factor slightly, optionally increase `D` carefully |
+| AutoTune looked good, brew day behaves differently | Tuning and production boundary conditions differ | Repeat AutoTune under real brew conditions | Apply manual PID correction only after retune |
+
+#### Limits of automation (important)
+
+If mixing is weak, sensors are mounted with high thermal lag, or heater power does not match volume, process physics dominates. In these cases, PID fine-tuning has limited effect. Fix process/setup first, then tune again.
 
 ## 2) FSM in the current engine
 
