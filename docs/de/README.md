@@ -15,7 +15,7 @@ automatisch fahren.
 Stand der Anleitung: Release-Linie `main` (Version 1.60). Lokale
 Entwicklungs-Builds können abweichen.
 
-## Empfohlener Einstieg (Erster Brautag)
+## Empfohlener Einstieg
 
 Für neue Nutzer ist diese Reihenfolge sinnvoll:
 

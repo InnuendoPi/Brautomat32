@@ -11,6 +11,17 @@ Die Reihenfolge ist bewusst gewählt:
 
 Damit tauchen Begriffe nicht "aus dem Nichts" auf.
 
+## 0) Synchronisationscheck zur aktuellen Codebasis (v1.60.3)
+
+Diese Version des Dokuments wurde gegen den aktuellen Stand der Firmware geprüft (`version.json` = 1.60.3). Wichtige Punkte:
+
+- Die Kernlogik in `INNU_APID::Compute()` entspricht der beschriebenen Reihenfolge aus Modusprüfung, Koch-Bypass, Enzym-Limiter, Ramping/Coasting, PID und Anti-Windup.
+- In der Implementierung heißt die interne Variable `thresOutput`; im UI-/Dokument-Kontext wird weiterhin oft `thresOut` verwendet. Beides beschreibt dieselbe feste Kochleistung.
+- AutoTune nutzt weiterhin den Commit-gesicherten Start über `WAIT_HEAT_COMMIT` und leitet Empfehlungen über `RecalculatePIDFromLR(...)` aus `L/R` ab.
+- Die FSM-Zustände/Events sind im aktuellen `InnuTasks`-Stand vorhanden; Queue-Priorisierung (Stop nach vorne) und `TEMP_TICK`-Coalescing sind aktiv implementiert.
+
+Damit ist der fachliche Inhalt auf den aktuellen Code abgeglichen; unten folgen ergänzend konkrete Verbesserungs-Vorschläge für mehr Praxisnutzen am Brautag.
+
 ## 1) Aktuelle PID-Engine (heutiger Stand)
 
 ### 1.1 Grundidee der aktuellen Engine
@@ -152,6 +163,46 @@ Für reproduzierbare Ergebnisse am Brautag ist diese Reihenfolge sinnvoll:
 4. Manuelle Eingriffe in `P/I/D` nur in kleinen Schritten und isoliert testen.
 
 Typische Fehler sind nicht "falsche Mathematik", sondern falsche Randbedingungen: zu wenig Volumen beim Tuning, andere Pumpensituation als im Braubetrieb oder viele gleichzeitige Parameteränderungen.
+
+### 1.8 Konkreter Praxisnutzen am Brautag (direkt anwendbar)
+
+Dieser Abschnitt ist als Arbeitsanleitung gedacht, nicht als Theorie.
+
+#### So verwendest du diesen Abschnitt
+
+1. Symptom in der Matrix unten auswählen.
+2. Nur die **erste Maßnahme** umsetzen und mindestens einen Rast- oder Heizabschnitt beobachten.
+3. Nur wenn das Symptom bleibt, die **zweite Maßnahme** ausführen.
+4. Immer nur **eine** Stellgröße gleichzeitig ändern (sonst ist keine Ursache eindeutig).
+
+#### 2-Minuten-Check vor dem Start
+
+- Volumen liegt im Bereich des AutoTune-Laufs (Ziel: innerhalb von etwa +/-10 %).
+- Pumpen-/Rührwerkszustand ist identisch zum AutoTune-Lauf.
+- Sensorwerte sind plausibel (keine Sprünge, keine offensichtlichen Ausreißer).
+- Für diesen Sud sind noch keine parallelen Änderungen an mehreren Parametern geplant.
+
+#### Startprofile nach Setup (für den ersten Lauf)
+
+| Setup | Startpunkt | Erste sichere Korrektur |
+|---|---|---|
+| 20-30 L, starke Umwälzung, IDS | AutoTune-Werte unverändert + mittlerer Tuning Factor | Bei Überschwingen zuerst Tuning Factor leicht senken |
+| 40-60 L, Relais/PWM, mittlere Trägheit | AutoTune-Werte unverändert + mittlerer bis leicht defensiver Tuning Factor | Bei trägem Aufheizen Tuning Factor in kleinen Schritten erhöhen |
+| HLT / träges System | AutoTune-Werte + eher defensiver Tuning Factor | Bei Pendeln im Haltebereich Tuning Factor leicht senken, erst danach `P/I/D` prüfen |
+
+#### Symptom -> Maßnahme (Braualltag)
+
+| Symptom | Wahrscheinliche Ursache | Erste Maßnahme | Zweite Maßnahme |
+|---|---|---|---|
+| Überschwingen > 0.5 K im Enzymbereich | Regler zu aggressiv oder reale Trägheit höher als beim Tuning | Tuning Factor leicht senken | Enzymfenster/Coasting prüfen, danach erst `P/I/D` fein anpassen |
+| Aufheizen deutlich zu langsam | Zu defensiver Fahrstil oder geänderte Umwälzung/Volumen | Umwälzung und Volumen-Realität prüfen | Tuning Factor moderat erhöhen |
+| Rast hält nicht stabil (ständiges Nachregeln) | Sensorposition/Strömung ungünstig, `sa`/`psa` unplausibel | Sensorlage und Durchmischung prüfen, `sa`/`psa` plausibilisieren | Danach erst `I` klein nachführen |
+| Ruhiger Start, später Schwingen nahe Soll | Thermische Verzögerung wurde unterschätzt | Coasting-Verhalten prüfen | Tuning Factor leicht senken, ggf. `D` vorsichtig anheben |
+| AutoTune passt, Brautag verhält sich anders | Randbedingungen zwischen Tuning und Produktion abweichend | AutoTune unter echten Braubedingungen wiederholen | Erst danach manuelle PID-Korrektur |
+
+#### Grenzen der Automatik (wichtig)
+
+Wenn Durchmischung schlecht ist, Sensoren träge montiert sind oder Heizleistung nicht zum Volumen passt, dominiert die Prozessphysik. Dann bringt PID-Feintuning nur wenig. In diesen Fällen zuerst die Anlage/Prozessführung verbessern, danach erneut tunen.
 
 ## 2) FSM in der aktuellen Engine
 
