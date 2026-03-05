@@ -24,7 +24,7 @@ Nach einem Update von Version 1.59 oder älter muss **AutoTune** einmal neu durc
 
 ---
 
-## Installation (Kurzstart)
+## Installation
 
 1. **Brautomat ESP32** herunterladen
 2. ZIP-Datei entpacken

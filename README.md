@@ -25,7 +25,7 @@ When updating from version 1.59 or older, run **AutoTune** once after the update
 
 ---
 
-## Installation (quick start)
+## Installation
 
 1. Download **Brautomat ESP32**.
 2. Unzip the file.
