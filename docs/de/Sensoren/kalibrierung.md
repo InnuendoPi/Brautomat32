@@ -1,4 +1,4 @@
-# Kalibrierung
+﻿# Kalibrierung
 
 Sensoren vom Typ Dallas DS18B20 weisen teilweise Abweichungen von der tatsächlichen Temperatur auf. In den technischen Spezifikationen der Hersteller wird oft eine Genauigkeit von +-0,5°C im Bereich von -10°C bis 85°C angegeben. Zusätzlich werden die Sensoren als kalibriert bezeichnet.
 

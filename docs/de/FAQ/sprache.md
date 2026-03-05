@@ -1,35 +1,41 @@
-# Erstelle eine neue Sprachdatei
+﻿# Neue Sprachdatei erstellen
 
-Erstelle eine Kopie der Sprachdatei data/language/de.json und benenne die Datei mit zwei Zeichen in eine neue Sprachdatei:
+Erstelle eine Kopie von `data/language/de.json` und benenne die Datei mit einem
+neuen Sprachcode (2 Zeichen), zum Beispiel:
 
-Spanisch: es.json\
-Französisch: fr.json\
-Dänisch: dk.json\
-Niederländisch: nl.json\
-etc.
+- Spanisch: `es.json`
+- Französisch: `fr.json`
+- Dänisch: `dk.json`
+- Niederländisch: `nl.json`
 
-Übersetze in jeder Zeile alle Wörter ab dem Doppelpunkt:
+Übersetze anschließend in jeder Zeile den Text rechts vom Doppelpunkt:
 
-```bash
- {
-   "SPEICHERN": " archivo",
-   "SCHLIESSEN": " cerca",
-   ...
- }
+```json
+{
+  "SPEICHERN": "guardar",
+  "SCHLIESSEN": "cerrar"
+}
 ```
 
-Öffne im Web Interface vom Brautomat den Explorer. Kopiere die neue Sprachdatei auf Deinen Brautomat in den Ordner /language. Abschließend muss die neue Sprachdatei dem Brautomat bekannt gemacht werden: editiere die Datei /lang.js
+## Sprachdatei auf den Brautomat kopieren
 
-```bash
-const supportedLocales = ["de", "en"];  // language files 
+1. Öffne im Webinterface den Explorer.
+2. Kopiere die neue Sprachdatei in den Ordner `/language`.
+3. Bearbeite die Datei `/lang.js`.
+
+Standard:
+
+```js
+const supportedLocales = ["de", "en"]; // language files
 ```
 
-Wenn Du bspw. eine spanische Sprachdatei es.json hinzugefügt hast, dann editiere die Datei /lang.js wie folgt:
+Mit zusätzlicher Sprache (`es`):
 
-```bash
-const supportedLocales = ["de", "en", "es"];  // language files 
+```js
+const supportedLocales = ["de", "en", "es"]; // language files
 ```
 
-Speichere die Datei mit der Tastenkombination Strg-S und starte den Brautomat neu. Nun kannst Du die neue Sprache im WebInterface auswählen.
+Speichere die Datei (`Strg+S`) und starte den Brautomat neu.
+Danach kannst du die neue Sprache im Webinterface auswählen.
 
-_Teile eine neue Sprachdatei mit anderen Usern! Sende mir Deine Sprachdatei oder Deine Korrektur._
+Teile neue Sprachdateien oder Korrekturen gern mit anderen Nutzern.

@@ -114,4 +114,3 @@ Use it only for diagnostics.
 - `EC` control panel fault
 
 Some binary sequences are derived from testing and may not be fully confirmed.
-

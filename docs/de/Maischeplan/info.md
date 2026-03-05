@@ -1,4 +1,4 @@
-# Der Maischeplan
+﻿# Der Maischeplan
 
 Der Brautomat arbeitet mit einem tabellarischen Maischplan. Dieser Plan wird zeilenweise von oben nach unten abgearbeitet. Jede Zeile steht für einen Maischeschritt. In den Spalten jeder Zeile stehen die Eigenschaften eines Maischeschrittes.
 

@@ -1,4 +1,4 @@
-# Die Steuerung
+﻿# Die Steuerung
 
 Direkt unter dem Maischeplan befindet sich das Controller Deck. Mit den 5 Tasten Power, Play, Pause, Previous und Next wird der Maischprozess gesteuert.
 

@@ -1,4 +1,4 @@
-# Fermenter Modus
+﻿# Fermenter Modus
 
 Im Fermenter Modus arbeitet der Brautomat32 den Gärplan in gleicher Weise wie beim Maischeplan top down ab. Das Controller Deck hat die gleichen Funktionen.
 

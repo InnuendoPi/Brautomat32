@@ -18,17 +18,16 @@ The JST-HX socket position is an alternative to the 5-pin screw terminal block. 
 | Number | Item name | Link to article |
 | ----------------------------------------------------- | ------------------------------ | --------------------------------- |
 | 3 | Screw terminal block 3-pin RM 2.54 | [amazon](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| 1 optional | Screw terminal block 3-pin RM 2.54 | |
+| 1 optional | Screw terminal block 3-pin RM 2.54 | - |
 | 1 | Screw terminal block 5-pin RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 alternative to the screw terminal block 5-pin | JST-HX socket 90° RM 2.54 | (voelkner D17526) |
 | 2 | Screw terminal block 8-pin RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| 2 | Screw terminal block 12-pin RM 2.54| [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 2 | Screw terminal block 12-pin RM 2.54 | [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
 | 1 | Pin header RM 2.54 | [amazon](https://www.amazon.de/dp/B01MQ5HJYQ?ref_=pe_27091401_487187591_302_E_DDE_dt_1) |
 | 1 | Resistance 4.7kOhm | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
 | 1 optional | Passive buzzer 12mm 3V | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
 | 1 ESP32 | ESP32 D1 mini | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
 | 1 optional | Display Nextion 3.5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
-|                                                       |                                |                                   |
 
 _Note: the links or item numbers listed are purely informative and not linked to affiliate/marketing programs._
 
@@ -130,4 +129,3 @@ Now the ESP is put on and fixed with a soldering point on each side. Now the fit
 ![ESP32](/docs/img/Aufbau15.jpg)
 
 Finally, check all solder joints carefully. When all soldering points are closed, the Brautomat is ready.
-

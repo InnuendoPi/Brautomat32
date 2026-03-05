@@ -1,4 +1,4 @@
-# Praxisleitfaden Brautag (Symptom -> Maßnahme)
+﻿# Praxisleitfaden Brautag (Symptom -> Maßnahme)
 
 Dieses Kapitel ist als Arbeitsanleitung für den Brautag gedacht.
 Nutze es direkt, wenn das Temperaturverhalten von der Erwartung abweicht.
@@ -22,7 +22,7 @@ Regel: Immer nur eine Stellgröße gleichzeitig ändern.
 ## Startprofile nach Setup (erster Lauf)
 
 | Setup | Startpunkt | Erste sichere Korrektur |
-|---|---|---|
+| --- | --- | --- |
 | 20-30 L, starke Umwälzung, IDS | AutoTune-Werte + mittlerer Tuning Factor | Bei Überschwingen zuerst Tuning Factor leicht senken |
 | 40-60 L, Relais/PWM, mittlere Trägheit | AutoTune-Werte + mittlerer bis defensiver Tuning Factor | Bei trägem Aufheizen Tuning Factor in kleinen Schritten erhöhen |
 | HLT oder träges System | AutoTune-Werte + defensiver Tuning Factor | Bei Pendeln im Haltebereich Tuning Factor leicht senken, dann erst `P/I/D` |
@@ -30,7 +30,7 @@ Regel: Immer nur eine Stellgröße gleichzeitig ändern.
 ## Symptom -> Ursache -> Maßnahme
 
 | Symptom | Wahrscheinliche Ursache | Erste Maßnahme | Zweite Maßnahme |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Überschwingen > 0.5 K im Enzymbereich | Regelung zu aggressiv oder reale Trägheit höher als beim Tuning | Tuning Factor leicht senken | Enzymfenster/Coasting prüfen, danach erst `P/I/D` fein anpassen |
 | Aufheizen deutlich zu langsam | Fahrstil zu defensiv oder geänderte Umwälzung/Volumen | Umwälzung und Volumen-Realität prüfen | Tuning Factor moderat erhöhen |
 | Rast hält nicht stabil (ständiges Nachregeln) | Sensorlage/Strömung ungünstig, `sa` oder `psa` unplausibel | Sensorlage und Durchmischung prüfen, `sa/psa` plausibilisieren | Danach erst `I` in kleinen Schritten korrigieren |
@@ -46,4 +46,4 @@ In diesem Fall zuerst Setup und Prozess verbessern, danach erneut tunen.
 
 - [AutoTune Schritt für Schritt](steps.md)
 - [PID-Anleitung](../Kessel/PID-Anleitung.md)
-- [Troubleshooting](../FAQ/troubleshooting.md)
+- [Fehlerbehebung](../FAQ/troubleshooting.md)

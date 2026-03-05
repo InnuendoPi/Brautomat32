@@ -1,5 +1,10 @@
 ﻿# Adaptive kettle logic - stable temperature control with dynamic intervals
 
+> **Note for onboarding:**  
+> This chapter is for advanced users.  
+> You can skip it during initial Brautomat setup and return later if needed.  
+> Start first with [AutoTune step by step](../Autotune-pid/steps.md) and [PID instructions](PID-Anleitung.md).
+
 Brautomat does not use simple on/off heating. It continuously adapts power and interval timing based on temperature behavior.
 
 Benefits:
@@ -61,9 +66,14 @@ Besides output power, adaptive logic also adjusts control intervals.
 ### Interval behavior during controlled ramping
 
 | Situation | Interval behavior |
-|----------|-------------------|
+| ---------- | ------------------- |
 | Temperature rises too fast | Intervals shorter -> earlier correction |
 | Temperature rises too slow | Intervals shorter -> stronger correction |
 | Temperature follows target cleanly | Intervals longer -> quiet operation |
 
 This creates a smooth and reproducible heating curve.
+
+## Deep dive (Power User)
+
+- [PID engine reference 1.60 (Power User)](pid-engine-160-reference.md)
+- [FSM process flow 1.60 (Power User)](fsm-process-flow-160.md)

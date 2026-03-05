@@ -1,5 +1,10 @@
 ﻿# AutoTune process
 
+> **Note for onboarding:**  
+> This chapter is for advanced users.  
+> You can skip it during initial Brautomat setup and return later if needed.  
+> Start first with [AutoTune step by step](steps.md) and [Brew-day quick guide](brew-day-quick-guide.md).
+
 AutoTune determines suitable control parameters for your specific brewing setup. The goal is stable temperature control with minimal overshoot and undershoot during mashing.
 
 Note: A small overshoot of about 0.5°C is normal. Depending on insulation and stored heat in the kettle, temperature may still rise slightly after heating is switched off.
@@ -47,3 +52,8 @@ PID math runs continuously, but output updates happen at intervals.
 * Too long (for example 7000 ms): slow reaction
 
 Typical useful values are 2000 ms to 3000 ms. Allowed values are 1000 to 7000 ms in 1000 ms steps.
+
+## Deep dive (Power User)
+
+Further details about 1.60 PID behavior, `Compute()` sequencing, and L/R-based derivation:
+[PID engine reference 1.60 (Power User)](../Kessel/pid-engine-160-reference.md)

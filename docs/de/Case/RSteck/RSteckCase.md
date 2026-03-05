@@ -1,4 +1,4 @@
-# Das RSteckCase
+﻿# Das RSteckCase
 
 Das RSteckCase wurde vom Hobbybrauer ralfsteck entworfen. Die 3D Druckdateien sind im Archiv Gehaeuse/RSteckCase/RSteckCase.zip hinterlegt.\
 Das Gehäuse ist unterteilt in die zwei Baugruppen Gehäuseunterteil und Gehäusedeckel.

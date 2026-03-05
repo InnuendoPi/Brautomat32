@@ -1,12 +1,12 @@
-# Display
+﻿# Display
 
 Der Brautomat kann optional mit einem Touchdisplay betrieben werden. Unterstützt werden 3.5 Zoll Touchdisplay von Nextion
 
-| Nextion Display | Firmware  |
+| Nextion Display | Firmware |
 | --------------- | --------- |
 | NX4832T035 (Basic Serie) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832T035.tft) |
 | NX4832K035 (Enhanced Serie) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832K035.tft) |
-| NX4832F035 (Discovery Serie) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832F035.tft)  |
+| NX4832F035 (Discovery Serie) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832F035.tft) |
 
 Das Display benötigt für den Betrieb mit dem Brautomat eine Firmware. In der Tabelle ist die zum Displaytyp passende Firmware verlinkt. Siehe auch Displaydatei flashen.
 
@@ -14,12 +14,12 @@ Das Display benötigt für den Betrieb mit dem Brautomat eine Firmware. In der T
 
 Das Display wird mit 4 Kabeln mit der Platine verbunden
 
-| Kabel         | Nextion Display | Anschlussklemme Platine  |
+| Kabel | Nextion Display | Anschlussklemme Platine |
 | ------------- | --------------- | ------------------------ |
-|     rot       | Strom + | Vcc |
-|   schwarz     | Strom - | GND |
-|    blau       | TX      | SDL (D1) |
-|    gelb       | RX      | SDA (D2) |
+| rot | Strom + | Vcc |
+| schwarz | Strom - | GND |
+| blau | TX | SDL (D1) |
+| gelb | RX | SDA (D2) |
 
 ![Anschluss](/docs/img/disp1.jpg)
 

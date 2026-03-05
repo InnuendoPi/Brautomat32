@@ -33,3 +33,8 @@ The parameters in the "Temperature control" tab are explained in detail in the p
 After the basic setup, open the PID Manager tab. PID calculates the required heating power to reach each rest temperature and keep it stable.
 
 The AutoTune PID chapter explains step by step how to determine suitable PID parameters.
+
+## Deep dive (Power User)
+
+Technical details about decoupled IDS send behavior from 1.60 onward:
+[IDS RMT send logic 1.60 (Power User)](ids-rmt-160.md)
