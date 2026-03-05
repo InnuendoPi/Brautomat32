@@ -1,4 +1,4 @@
-# Das Dashboard
+﻿# Das Dashboard
 
 ![Dashboard](/docs/img/dashboard160.jpg)
 
@@ -10,7 +10,7 @@ In den Systemeinstellungen wird das Dashboard aktiviert:
 
 ![Dashboard](/docs/img/dashboard160-1.jpg)
 
-Je nach vorhandener Konfiguration, können im Dashboard Kessel, Aktoren und Sensoren im Dashboard angezeigt werden. Das Web Interface vom Brautomat kann durch die im Bild dargestellte Auswahl verkleinert werden:
+Je nach vorhandener Konfiguration, können im Dashboard Kessel, Aktoren und Sensoren im Dashboard angezeigt werden. Das Webinterface vom Brautomat kann durch die im Bild dargestellte Auswahl verkleinert werden:
 
 * die Elemente zur Konfiguration von Kochfeldern, Aktoren und Sensoren sind deaktiviert
 * die Elemente Kochfeldern, Aktoren und Sensoren sind im Dashboard aktiviert

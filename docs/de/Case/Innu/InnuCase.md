@@ -1,4 +1,4 @@
-# Das InnuCase
+﻿# Das InnuCase
 
 Das InnuCase ist in zwei Größen verfügbar. Die Druckdateien sind im Ordner Gehaeuse/InnuCase hinterlegt.
 

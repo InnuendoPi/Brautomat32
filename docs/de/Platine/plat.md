@@ -1,4 +1,4 @@
-# Die Platine zum Projekt
+﻿# Die Platine zum Projekt
 
 Die Platine für das Projekt Brautomat macht den Aufbau und die Bedienung sehr einfach. Die GGM IDS, die Sensoren, die Aktoren und das Display werden an die Schraubklemmblöcken des Brautomats angeschlossen.
 

@@ -1,4 +1,4 @@
-# KleinerBrauhelfer2
+﻿# KleinerBrauhelfer2
 
 Ab Version 2.5.0 hat das Programm [kleinerBrauhelfer2](https://kleiner-brauhelfer.de/) einen Export Filter für den Brautomat. Die Rezeptentwicklung und Gestaltung ist mit dem kleinenBrauhelfer2 in allen erdenklichen Details möglich. Mit dem Spickzettel bietet der kbh2 einen sehr guten und hilfreichen Ablaufplan für die praktische Umsetzung in der Brauküche. Mit dem Export Filter für den Brautomat können alle Schritte übernommen werden.
 

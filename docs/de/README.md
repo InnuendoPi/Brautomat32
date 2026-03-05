@@ -1,44 +1,50 @@
-# Der Brautomat
+﻿# Der Brautomat
 
 ![ESP32](https://img.shields.io/static/v1?label=Arduino&message=ESP32&logo=arduino&logoColor=white&color=blue)
 
-Der Brautomat ist eine Brausteuerung für den ESP32 D1 mini. Der Brautomat wird im Sudhaus eingesetzt und bietet eine intuitiv einfach zu bedienende Steuerung. Beim Maischen werden Rast-Temperaturen automatisiert angefahren und die Rast-Zeiten eingehalten. Ebenso unterstützt der Brautomat das Würzekochen und die Hopfen- und Zutatengaben. Im Verfahren aufsteigende Infusion kann der Brautomat den Maischeprozess vollständig automatisieren.
+Der Brautomat ist eine Brausteuerung für den ESP32 D1 mini.
+Er automatisiert Rasttemperaturen und Rastzeiten, unterstützt das Würzekochen
+inklusive Hopfengaben und kann den Maischprozess im Infusionsverfahren weitgehend
+automatisch fahren.
 
-> **Hinweis:**\
-Diese Anleitung wird laufend erweitert und verbessert. Ursprünglich konnte im Projekt Brautomat nur das Induktionskochfeld GGM IDS2 gesteuert werden. Seit Version 1.48 können im Relais-Modus auch andere Kochfelder angeschlossen werden. Viele Beispiele in der Anleitung zeigen eine GGM IDS. Nur der manuelle Modus ist ausschließlich für die GGM IDS2 geeignet. Alle anderen Funktionen und Möglichkeiten sind auch mit anderen Kochfeldern nutzbar.
+> **Hinweis:**  
+> Diese Anleitung wird laufend erweitert. Viele Beispiele zeigen GGM IDS.
+> Seit Version 1.48 sind auch Relais-Setups unterstützt.
+> Nur der manuelle Modus ist exklusiv für GGM IDS2.
 
-Stand der Anleitung: Release-Linie `main` (Version 1.60). Lokale Development-Builds können davon abweichen.
+Stand der Anleitung: Release-Linie `main` (Version 1.60). Lokale
+Entwicklungs-Builds können abweichen.
 
- ---
+## Empfohlener Einstieg
 
-## Aufteilung dieser Anleitung
+Für neue Nutzer ist diese Reihenfolge sinnvoll:
 
-Diese Anleitung hat keine feste Reihenfolge und muss nicht von oben nach unten gelesen werden. Für den Einstieg ist der Themenbereich _Software_ mit dem Kapitel _Der Maischeplan_ besonders geeignet. Das Kapitel _Der Maischeplan_ beinhaltet am Ende der Funktionsbeschreibung einen Beispiel-Brautag.
+1. [Installation](Installation/info.md)
+2. [Sicherheits-Check vor erstem Heiztest](Installation/sicherheitscheck-erster-heiztest.md)
+3. [Grundeinrichtung](Grundeinrichtung/info.md)
+4. [AutoTune Schritt für Schritt](Autotune-pid/steps.md)
+5. [PID-Anleitung](Kessel/PID-Anleitung.md)
+6. [Der Maischeplan](Maischeplan/info.md)
+7. [Praxisleitfaden Brautag](Autotune-pid/praxisleitfaden-brautag.md)
+8. [Fehlerbehebung](FAQ/troubleshooting.md) bei Abweichungen
 
-Diese Anleitung unterteilt sich in drei Themenbereiche:
+Kapitel für Fortgeschrittene sind im Inhaltsverzeichnis explizit markiert und können beim
+Einstieg zunächst übersprungen werden.
 
-* Software: die Verwendung der Firmware Brautomat
-  * Installation
-  * Grundeinrichtung
-  * Der Maischeplan
-  * AutoTune PID
-  * Sensoren, Sudkessel, Nachguss und Aktoren
-  * Fermenter Modus
-* Hardware: die Platine und passende Erweiterungen
-  * Die Platine Aufbau und Anschlüsse
-  * Das Display
-  * 3D Gehäuse
-  * zus. Hardware
-* Infos und FAQs
-  * kleinerBrauhelfer2
-  * das MQTTDevice
+## Aufbau der Anleitung
 
-Der Themenbereich _Software_ wird mit einer Zusammenfassung _Parameter im Überblick_ abgeschlossen. Zu vielen Parametern werden Details und Informationen gegeben, um die Konfiguration und Anwendung zu vereinfachen.
+Die Dokumentation ist in drei Themenbereiche gegliedert:
+
+- Software: Installation, Grundeinrichtung, Maischeplan, AutoTune, Kessel/Sensoren/Aktoren
+- Hardware: Platine, Anschlüsse, Display, Gehäuse, Erweiterungen
+- Betrieb und Service: Parameter, Logging, MQTT, API, Fehlerbehebung
 
 ## Brautomat Release Version
 
-Die Release-Version vom Brautomat wird mit dem aktuellen stabilen Framework von Espressif kompiliert. Diese Version ist für den produktiven Einsatz vorgesehen. Die Release-Version wird ohne das Logging-Modul bereitgestellt und ist dadurch etwas schneller. Für den produktiven Betrieb sollte die Release-Version bevorzugt eingesetzt werden.
+Die Release-Version wird mit stabilem Espressif-Framework gebaut und ist für den
+produktiven Betrieb vorgesehen.
 
-## Brautomat Development Version
+## Brautomat Entwicklungs-Version
 
-Die Development-Version vom Brautomat wird ebenfalls mit dem aktuellen Espressif-Framework kompiliert. Diese Version enthält das Logging-Modul. Neue Funktionen und Fehlerkorrekturen erscheinen zuerst in der Development-Version. Sie kann produktiv genutzt werden, ist dafür aber nicht primär gedacht.
+Die Entwicklungs-Version enthält zusätzliche Diagnose-/Logging-Funktionalität.
+Neue Features und Fixes erscheinen hier zuerst.

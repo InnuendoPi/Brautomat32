@@ -1,84 +1,155 @@
-# Kessel Konfiguration und Einsatz
+﻿# Kessel-Konfiguration und Einsatz
 
-Der Brautomat32 bietet die Möglichkeit, bis zu drei Kessel einzurichten. Der erste Kessel hat intern die Bezeichnung MAISCHE, alternativ IDS. Dieser Kessel ist für den Maischeprozess erforderlich. Die beiden weiteren Kessel sind optional. Der zweite Kessel hat intern die Bezeichnung SUD, alternativ MLT, und der dritte Kessel die Bezeichnung HLT bzw. NACHGUSS.
+> **Sicherheits-Hinweis:**
+> Vor dem ersten Heizlauf bitte zuerst den
+> [Sicherheits-Check vor erstem Heiztest](../Installation/sicherheitscheck-erster-heiztest.md)
+> durchführen.
 
-Die drei Kessel können entweder vom Typ GGM Induktionskochfeld oder Relais sein. Ein Kessel vom Typ Relais beinhaltet eine webhook Anbindung.
+Brautomat32 unterstützt bis zu drei Kessel:
+
+- Kessel 1 (Pflicht): `MAISCHE` oder `IDS`
+- Kessel 2 (optional): `SUD` oder `MLT`
+- Kessel 3 (optional): `HLT` oder `NACHGUSS`
+
+Jeder Kessel kann als GGM-Induktionskochfeld oder als Relais-Gerät
+(einschließlich Webhook-Anbindung) betrieben werden.
 
 ![Kessel Konfiguration](/docs/img/kessel_1.jpg)
 
-Die Parameter sind im Kapitel Grundeinrichtung und Parameter im Überblick - Parameter Kessel beschrieben und sind für alle drei Kessel identisch.
+Die Parameter sind in [Grundeinrichtung](../Grundeinrichtung/info.md) und
+[Parameter Kessel](../Parameter/parameter-kessel.md) beschrieben.
 
-Der Einsatz der drei Kessel ist jedoch unterschiedlich, insbesondere der Einsatz über den Maischeplan. Der Maischeplan ist immer mit dem ersten Kessel MaischeSud verknüpft, solange kein anderer Kessel im Maischeplan über einen Steuerbefehl angegeben wird. Steuerbefehle werden auch im Abschnitt Maischeplan Sonderfunktion und Steuerbefehle erläutert.
+## Grundprinzip im Maischeplan
 
-## Steuerbefehle für Kessel
+Ohne expliziten Steuerbefehl läuft ein Maischeschritt immer auf Kessel 1
+(`MAISCHE`/`IDS`).
 
-In diesem Abschnitt werden nur Steuerbefehle für Kessel betrachtet. Steuerbefehle für Aktoren sind zwar identisch aufgebaut, werden aber im Abschnitt Maischeplan Sonderfunktion und Steuerbefehle erläutert. Ein Steuerbefehl beinhaltet immer einen Doppelpunkt im Rastnamen. Nur anhand des Doppelpunktes erkennt der Brautomat, dass diese Rast als Steuerbefehl zu behandeln ist. Das Format lautet Gerät:maximale Leistung. Das heißt: Der Doppelpunkt trennt den Gerätenamen von der maximalen Leistung.
+Sobald ein Schrittname einen Doppelpunkt enthält, wird er als Steuerbefehl
+interpretiert. Das Format lautet:
 
-Als Gerätenamen für die drei Kessel sind folgende Bezeichnungen intern definiert:
+`GERAET:LEISTUNG`
 
-* MAISCHE oder IDS für den ersten Kessel
-* MLT oder SUD für den zweiten Kessel
-* HLT oder NACHGUSS für den dritten Kessel
+Steuerbefehle für Aktoren sind im Kapitel
+[Maischeplan Funktionen](../Maischeplan/funktionen.md) beschrieben.
 
-Jedem Kessel wird in den Einstellungen ein Name zugewiesen. Dieser Name kann ebenfalls als Gerätename für einen Steuerbefehl genutzt werden.
+## Gültige Geräte und Leistung
 
-Als maximale Leistung sind Zahlen zwischen 0 und 100 erlaubt. Der Wert entspricht dem Parameter maximale Leistung in den Kessel Einstellungen und wird in Prozent angegeben. Die Angabe ON entspricht 100% und OFF 0%.
+Gerätenamen:
 
-Ab Version 1.60 kann zusätzlich die Leistung ab Übergang zum Kochen per Sonderbefehl gesetzt werden:
+- `MAISCHE` oder `IDS`
+- `SUD` oder `MLT`
+- `HLT` oder `NACHGUSS`
+- alternativ der in den Einstellungen vergebene Kesselname
 
-* `IDSTHRESOUT:80`
-* `MAISCHETHRESOUT:80`
+Leistung:
 
-### Möglichkeit 1: Manuelles Schalten von Kesseln
+- Zahl `0` bis `100`
+- `ON` = `100`
+- `OFF` = `0`
 
-Der zweite und dritte Kessel können über das WebInterface mit dem jeweiligen Power-Button manuell ein- und ausgeschaltet werden. Wird beispielsweise ein Kessel für den Nachguss eingerichtet, kann in den Kessel-Einstellungen die Zieltemperatur auf 78°C gesetzt werden und der Kessel bei Bedarf am Brautag geschaltet werden.
+Ab Version 1.60 sind zusätzlich möglich:
 
-### Möglichkeit 2: Automatisches Schalten von Kesseln
+- `IDSTHRESOUT:80`
+- `MAISCHETHRESOUT:80`
 
-Der zweite und dritte Kessel können auch über den Maischeplan geschaltet werden:
+## Wenn/Dann-Leitfaden
+
+Wenn du den Nachguss nur bei Bedarf schalten willst,
+dann nutze den Power-Button im Webinterface (manueller Betrieb).
+
+Wenn ein Zusatzkessel beim Maischen automatisch laufen soll,
+dann setze einen Steuerbefehl mit passender Zieltemperatur im Maischeplan.
+
+Wenn ein Schritt nur schalten und sofort weiterspringen soll,
+dann nutze `Dauer = 0 min` mit aktiviertem `autonext`.
+
+Wenn ein Kessel eine definierte Zeit gehalten werden soll,
+dann nutze eine echte Rastdauer (`> 0 min`).
+
+Wenn das Aufheizen zu aggressiv ist,
+dann reduziere die Maximalleistung über Befehle wie `MAISCHE:75`.
+
+## Praxisbeispiel 1: HLT dauerhaft im Hintergrund
 
 ![Kessel Konfiguration](/docs/img/kessel_2.jpg)
 
-In diesem vereinfachten Maischeplan wird in Zeile 2 der dritte Kessel HLT automatisch eingeschaltet. Der Schritt HLT:100 mit einer Zieltemperatur von 78°C und einer Dauer von 0 Minuten schaltet den Nachguss mit 100% Leistung ein und setzt die Zieltemperatur auf 78°C. Weil die Dauer mit 0 Minuten angegeben ist, bleibt der Nachguss dauerhaft eingeschaltet. Der Brautomat geht direkt zum nächsten Maischeschritt und belässt den Nachguss eingeschaltet. Der PID Controller regelt dauerhaft die benötigte Leistung für das Erreichen und Halten der Zieltemperatur. Identisch zum Steuerbefehl HLT:100 wäre NACHGUSS:100. Hat der Nachguss in den Einstellungen den Namen "Kocher", kann der Steuerbefehl KOCHER:100 ebenfalls verwendet werden.
+Beispielschritt:
+
+- `HLT:100`
+- Zieltemperatur `78 °C`
+- Dauer `0 min`
+
+Ergebnis:
+
+- HLT/Nachguss wird mit `100 %` aktiviert.
+- Brautomat springt sofort zur nächsten Rast.
+- Der Kessel bleibt aktiv, PID regelt im Hintergrund auf `78 °C`.
+
+Äquivalente Befehle:
+
+- `HLT:100`
+- `NACHGUSS:100`
+- benutzerdefinierter Name, z. B. `KOCHER:100`
+
+## Praxisbeispiel 2: SUD zeitgesteuert fahren
 
 ![Kessel Konfiguration](/docs/img/kessel_3.jpg)
 
-In diesem Maischeplan wird im dritten Schritt der zweite Kessel Sud eingeschaltet. Im Gegensatz zum vorherigen Beispiel HLT wird der Kessel SUD für die Dauer von 15 Minuten mit der Zieltemperatur 100°C eingeschaltet. Der Brautomat verbleibt so lange auf diesem Schritt, bis die Zieltemperatur erreicht und die Rastdauer von 15 Minuten abgeschlossen ist. Anschließend wird der Kessel SUD ausgeschaltet und der Brautomat springt zum nächsten Schritt im Maischeplan.
+Wenn `SUD` mit `100 °C` und `15 min` gesetzt ist,
+bleibt Brautomat auf diesem Schritt,
+bis Zieltemperatur und Rastdauer erreicht sind.
+Danach wird `SUD` ausgeschaltet und der Plan läuft weiter.
 
-Der Text "Teilmaische kochen" wird vom Brautomat als 100% interpretiert. Wenn nach dem Doppelpunkt keine Zahl zwischen 0 und 100 oder die Angaben ON bzw. OFF stehen, ersetzt der Brautomat den Text durch 100% Leistung.
+Hinweis:
+Wenn nach dem Doppelpunkt keine Zahl bzw. kein `ON/OFF` steht,
+interpretiert Brautomat den Eintrag als `100 %`.
 
-## Beispiel unterschiedliche Leistung
+## Beispiel: Leistung während des Brauens reduzieren
 
-Die Steuerbefehle können genutzt werden, um die maximale Leistung während des Brauprozesses anzupassen. Hat bspw. das Induktionskochfeld eine maximale Leistung von 3.5kW und der verwendete Braukessel ein Volumen von 20 Liter, dann kann der Steuerbefehl MAISCHE:75 genutzt werden, um die maximale Ausgangsleistung vom Induktionskochfeld auf 75% Leistung zu reduzieren. Die Rast mit dem Steuerbefehl MAISCHE:75 wird mit 0°C Zieltemperatur und 0 Minuten Dauer bei aktiviertem autonext erstellt.
+Wenn dein Induktionskochfeld z. B. `3.5 kW` hat und das Volumen klein ist,
+kann `MAISCHE:75` sinnvoll sein.
 
-## Beispiel Dekoktion
+Typischer Schrittrahmen:
 
-Wie oben beschrieben, wird eine Rast aus dem Maischeplan immer dem ersten Kessel (MAISCHE) zugewiesen, wenn kein Steuerbefehl (Doppelpunkt im Rastnamen) die Rast einem anderen Kessel zuweist. Ein Steuerbefehl kann den zweiten Kessel entweder mit einer Zieltemperatur ein-/ausschalten und direkt zur nächsten Rast springen oder mit einer Rastdauer in den Maischeprozess einbinden.
+- Zieltemperatur `0 °C`
+- Dauer `0 min`
+- `autonext` aktiviert
 
-Im Brauverfahren Dekoktion werden Teilmaischen gekocht, während die Restmaische auf einer gewünschten Temperatur gehalten wird. Dekoktion mit dem Brautomat sieht wie folgt aus:
+## Beispiel: Dekoktion
 
-* Restmaische in den zweiten Kessel ziehen. Eine Rast Restmaische ziehen mit deaktiviertem autonext erfüllt diese Aufgabe.
-* anschließend den zweiten Kessel auf eine gewünschte Temperatur mit einer Rastdauer von null Minuten dauerhaft einschalten. autonext ist aktiviert.
-* Teilmaische im ersten Kessel mit der gewünschten Rastdauer kochen. autonext ist aktiviert.
-* Restmaische aus dem zweiten Kessel zur Teilmaische in den ersten Kessel geben. autonext ist deaktiviert.
+Prinzip:
 
-Die Rasten in einem Maischeplan in einer 2 oder 3 Kesselumgebung haben folgendes Prinzip:
+- Teilmaische kocht in Kessel 1
+- Restmaische wird in Kessel 2/3 gehalten
+- Nachguss läuft typischerweise auf Kessel 2/3
 
-* zu kochende Teilmaischen werden dem ersten Kessel zugewiesen
-* Restmaischen mit Temperatur halten werden dem zweiten oder dritten Kessel zugewiesen
-* der Nachguss wird immer dem zweiten oder dritten Kessel zugewiesen
+Möglicher Ablauf:
 
-## webhook
+1. Restmaische in Kessel 2 ziehen (`autonext` aus).
+2. Kessel 2 auf Solltemperatur halten (`Dauer 0`, `autonext` an).
+3. Teilmaische in Kessel 1 kochen (`autonext` an).
+4. Restmaische zurückführen (`autonext` aus).
 
-Der Parameter PIN weiß Relay muss auf "-" eingestellt werden, damit die Webhook-Elemente im WebInterface angezeigt werden. Zusätzlich werden die Webhook-URL und das Schaltkommando benötigt:
+## Webhook
+
+Für Webhook-Steuerung:
+
+- Parameter `PIN weiß Relay` auf `-` setzen
+- Webhook-URL und Schaltmodus konfigurieren
 
 ![webhook](/docs/img/kessel_webhook1.jpg)
 
 Beispiel Shelly 1PM:
 
-Shelly 1PM einschalten: <http://192.168.1.5/relay/0?turn=on>\
-Shelly 1PM ausschalten: <http://192.168.1.5/relay/0?turn=off>
+- Ein: <http://192.168.1.5/relay/0?turn=on>
+- Aus: <http://192.168.1.5/relay/0?turn=off>
 
-Die webhook URL für Shelly 1PM lautet: <http://192.168.1.5/relay/0?turn=> (ohne on und off). Der Parameter webhook Schalter muss auf "on/off" eingestellt werden.
+Webhook-Basis-URL:
 
-URL Tasmota: <http://192.168.x.x/cm?cmnd=Power1%201>
+<http://192.168.1.5/relay/0?turn=>
+
+Schaltmodus im Webinterface: `on/off`
+
+Tasmota-Beispiel:
+
+<http://192.168.x.x/cm?cmnd=Power1%201>

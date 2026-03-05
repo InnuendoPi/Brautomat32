@@ -1,4 +1,4 @@
-# Einrichtung des Temperatursensors
+﻿# Einrichtung des Temperatursensors
 
 ## Neuen Sensor hinzufügen
 

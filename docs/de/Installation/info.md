@@ -1,38 +1,45 @@
-# Installation
+﻿# Installation
 
-Um den Brautomat nutzen zu können, muss die Firmware geflasht werden. Außerdem muss der ESP-Mikrocontroller mit dem lokalen WLAN verbunden werden.
+Um den Brautomat zu nutzen, musst du die Firmware flashen und den ESP32 mit
+deinem lokalen WLAN verbinden.
 
 ## Firmware flashen mit MS Windows
 
-Die Version Brautomat32 ist für den ESP32 und basiert auf dem Framework IDF5.
+Brautomat32 läuft auf ESP32 und basiert auf ESP-IDF5.
 
 [![Stable](https://img.shields.io/static/v1?label=Download%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) [![Dev](https://img.shields.io/static/v1?label=Download%20Develop&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip)
 
-Die Installation der Firmware wird über das im ZIP Archiv enthaltene Script "Flashen.cmd" durchgeführt. Das ZIP Archiv wird in einem beliebigen Ordner entpackt. Der ESP Microcontroller wird per USB-Kabel mit dem PC/Notebook verbunden. Ein Doppelklick auf das Script Flashen.cmd startet das Flashen der Firmware.
+Einfachster Weg unter Windows:
 
-Das Betriebssystem MS Windows erstellt beim Verbinden vom ESP Microcontroller mit einem USB Anschluss am PC oder Notebook automatisch einen seriellen COM Port.
+1. ZIP-Archiv entpacken.
+2. ESP32 per USB mit PC/Notebook verbinden.
+3. `Flashen.cmd` per Doppelklick starten.
+
+Windows legt beim Verbinden in der Regel automatisch einen seriellen COM-Port
+an.
 
 ![Windows Gerätemanager](/docs/img/com.jpg)
 
-Im Bild wurde ein ESP Device auf COM7 gefunden. In seltenen Fällen wird unter MS Windows kein serieller COM Port automatisch bereitgestellt. USB Treiber für ESP Microcontroller sind auf folgenden Webseiten verfügbar: (MS Win und macOS)
+Falls kein COM-Port erscheint, installiere passende USB-Treiber:
 
 [![ESP32 Treiber](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-Das Script Flashen.cmd nutzt das Tool esptool.exe <https://github.com/espressif/esptool>. ESPTool ist frei verfügbar für verschiedene Betriebssysteme (macOS, Linux). Die Windows-Version 64bit ist im ZIP Archiv enthalten. ESPTool is licensed under GPL v2. See the accompanying [LICENSE file](https://github.com/espressif/esptool/blob/master/LICENSE) for a copy.
+`Flashen.cmd` nutzt `esptool.exe`:
+<https://github.com/espressif/esptool>
 
-### Manuelles Flashen MS Windows, macOS und Linux
+### Manuelles Flashen (MS Windows, macOS, Linux)
 
-Falls das Script nicht genutzt werden kann, kann die Firmware manuell auf den ESP Microcontroller übertragen werden.
+Wenn das Skript nicht nutzbar ist, kannst du manuell flashen.
 
-ESP32 Step 1 Flash löschen:
+Schritt 1 - Flash löschen:
 
-```json
+```bash
 esptool.exe --chip esp32 erase-flash
 ```
 
-ESP32 Step 2 Firmware flashen:
+Schritt 2 - Firmware und Dateisystem schreiben:
 
-```json
+```bash
 esptool.exe --chip esp32 --baud 921600 --before default-reset --after hard-reset write-flash 0x1000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin 0x350000 LittleFS.bin
 ```
 
@@ -40,67 +47,98 @@ esptool.exe --chip esp32 --baud 921600 --before default-reset --after hard-reset
 
 Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 
-Unter macOS ist das Flashen der Firmware in zwei Schritte unterteilt. Im ersten Schritt wird die Firmware brautomat.ino.bin mit dem Tool pyflasher auf dem ESP installiert.
+Unter macOS ist das Flashen in zwei Schritte aufgeteilt:
+
+1. Firmware mit pyflasher installieren (`firmware.bin`).
+   Hinweis: Je nach Tool/Archiv kann die Datei auch als
+   `brautomat.ino.bin` bezeichnet sein.
+2. Nach WLAN-Verbindung das Dateisystem installieren (`LittleFS.bin`).
 
 ![macOS](/docs/img/flashen_macos.png)
 
-Der Brautomat muss dann mit dem WLAN verbunden werden. Sobald der Brautomat mit dem WLAN verbunden ist, muss das Dateisystem installiert werden.\
-Im Browser öffnen: <http://brautomat.local/update>
+Update-Seite im Browser:
+<http://brautomat.local/update>
 
-Nach einem Klick auf die Schaltfläche „Dateisystem“ wird die Datei LittleFS.bin ausgewählt und durch einen Klick auf Dateisystem aktualisieren installiert.
+## WLAN-Konfiguration
 
-## WLAN Konfiguration
+Nach dem Flashen startet Brautomat im Access-Point-Modus.
+Das offene WLAN `Brautomat32` wird sichtbar.
 
-Nach dem Flashen der Firmware startet der Brautomat im AccessPoint-Mode. Ein offenes WLAN mit dem Namen _Brautomat32_ wird sichtbar. Mit diesem WLAN muss eine Verbindung hergestellt werden. Sobald die Verbindung hergestellt ist, öffnet der Webbrowser das WLAN-Konfigurationsportal. Sollte sich das Portal nicht automatisch öffnen, muss die Adresse <http://192.168.4.1> manuell im Webbrowser eingegeben werden.
+1. Mit `Brautomat32` verbinden.
+2. Falls das Portal nicht automatisch öffnet, `http://192.168.4.1` aufrufen.
+3. SSID und Passwort eintragen.
+4. Mit `Save` speichern.
 
 ![WLAN Konfiguration](/docs/img/wlan1.jpg)
 
-Hier müssen WLAN-Name (SSID) und Passwort eingegeben werden. Mit _Save_ startet der Brautomat neu und verbindet sich mit dem WLAN. Das WebInterface vom Brautomat ist im lokalen WLAN über die Adresse <http://brautomat.local> erreichbar.
+Danach startet Brautomat neu und ist im lokalen WLAN erreichbar unter:
+<http://brautomat.local>
 
-Damit ist die Grundinstallation abgeschlossen. Der Vorgang Firmware flashen und WLAN-Konfiguration ist nur einmal durchzuführen. Der Brautomat muss nun konfiguriert werden. Die Konfiguration wird im Abschnitt _Grundeinrichtung_ beschrieben. Der folgende Abschnitt _Update_ kann zunächst übersprungen werden.
+Damit ist die Grundinstallation abgeschlossen.
 
-> **Hinweis:**\
-Der Brautomat32 versucht bis zu 20 Sekunden, mit der WLAN-Konfiguration (SSID und Passwort) eine Verbindung herzustellen. Kann keine Verbindung hergestellt werden, bspw. wenn das Passwort falsch eingegeben wurde, startet der Brautomat32 erneut im AccessPoint-Mode.\
-In seltenen Fällen und meist nur dann, wenn das WLAN-Signal schwach ist, findet der Brautomat32 kein geeignetes WLAN und startet ebenfalls nach ca. 20 Sekunden im AccessPoint-Mode. In diesem Fall hilft lediglich ein Neustart vom Brautomat32.
+Vor dem ersten Heiztest:
+[Sicherheits-Check vor erstem Heiztest](sicherheitscheck-erster-heiztest.md)
+
+Anschließend mit der [Grundeinrichtung](../Grundeinrichtung/info.md)
+weitermachen.
+
+> **Hinweis:**
+> Brautomat32 versucht bis zu 20 Sekunden, sich mit der gespeicherten WLAN-
+> Konfiguration zu verbinden.
+> Bei falschem Passwort oder zu schwachem Signal startet wieder der
+> Access-Point-Modus.
 
 ## Updates
 
-Updates können im Brautomat über das Menü "Update" eingespielt werden. Eine neue Firmware kann über "WebUpdate" oder "Datei Update" installiert werden. Bei einer Aktualisierung per WebUpdate lädt der Brautomat die aktuelle Version aus dem Internet aus dem GitHub-Repository. Bei der Aktualisierung per Datei-Update wird die Firmware per Upload vom lokalen PC geladen. Ein USB-Kabel oder das Skript aus der Installation sind nicht erforderlich.
+Updates können im Menü `Update` eingespielt werden:
 
-Der Speicherbereich eines ESP Microcontrollers unterteilt sich in Firmware und Dateisystem. Im laufenden Betrieb können nur im Dateisystem Konfigurationen, Rezepte und andere Dateien gespeichert bzw. verändert werden. Auf den Bereich Firmware kann nur lesend zugegriffen werden. Bei einem Update wird der Firmware-Bereich vollständig neu installiert und im Dateisystem werden einzelne Dateien ersetzt.
+- `WebUpdate`: aktuelle Version direkt aus GitHub laden
+- `DateiUpdate`: Firmwaredatei vom lokalen Rechner hochladen
 
-### Wichtig bei Update von 1.59 und älter auf 1.60
+USB-Kabel oder `Flashen.cmd` sind dafür nicht erforderlich.
 
-Beim Wechsel von Version 1.59 (oder älter) auf 1.60 gelten folgende Punkte:
+Der ESP32-Speicher ist in Firmware und Dateisystem getrennt.
+Bei einem Update wird die Firmware neu installiert.
+Im Dateisystem werden je nach Update einzelne Dateien ersetzt.
 
-* Die Konfigurationsdatei `config.txt` wird als `config.old.txt` gesichert.
-* Die PID-Parameter werden auf 0.0 zurückgesetzt.
-* AutoTune muss nach dem Update einmal neu durchgeführt werden.
+### Wichtig bei Update von 1.59 (oder älter) auf 1.60
 
-So ist sichergestellt, dass die Temperaturregelung mit dem 1.60-Stand sauber und stabil arbeitet.
+Beim Umstieg gelten folgende Punkte:
+
+- `config.txt` wird als `config.old.txt` gesichert.
+- PID-Parameter werden auf `0.0` zurückgesetzt.
+- AutoTune muss einmal neu durchgeführt werden.
+
+So wird eine saubere Regelung mit dem 1.60-Stand sichergestellt.
 
 ### WebUpdate
 
 ![WebUpdate](/docs/img/webupdate.jpg)
 
-Das WebUpdate startet den Brautomat mehrfach neu. Als Erstes wird die Firmware aktualisiert. Nach einem weiteren Neustart wird das Framework aktualisiert. Der Ablauf des WebUpdates wird in der Datei webUpdateLog.txt protokolliert.
+WebUpdate startet Brautomat mehrfach neu.
+Zuerst wird die Firmware aktualisiert, danach weitere Komponenten.
+Der Ablauf wird in `webUpdateLog.txt` protokolliert.
 
-Wenn die Option _WebUpdate mit Testversion_ aktiviert ist, wird das WebUpdate mit der aktuellen Entwicklerversion durchgeführt. Hierbei handelt es sich um Testversionen. Neue Funktionen in der Firmware werden (meistens) zunächst als Testversion im GitHub-Repository abgelegt. Für den produktiven Einsatz sind Testversionen nicht empfohlen.
-
-Hinweis: Diese Anleitung beschreibt den Release-Stand im `main`-Branch. Lokale Development-Builds im Entwicklungszweig können funktional abweichen.
+Mit aktivierter Option `WebUpdate mit Testversion` wird die aktuelle
+Entwicklerversion installiert.
+Für den produktiven Betrieb sind Testversionen nicht empfohlen.
 
 ### DateiUpdate
 
-Ein Update der Firmware über die Auswahl DateiUpdate erfolgt über wenige Schritte:
+Ablauf für Firmware-Update per Datei:
 
-Zunächst muss die aktuelle Firmware heruntergeladen werden. Das ZIP-Archiv wird anschließend entpackt.\
-Im WebInterface Brautomat den Menüpunkt Update und anschließend DateiUpdate auswählen. Es wird eine einfache Update Webseite (im Bild 1) angezeigt:
+1. Aktuelle ZIP-Version herunterladen.
+2. ZIP entpacken.
+3. Im Webinterface `Update -> DateiUpdate` öffnen.
+4. `firmware.bin` auswählen.
+5. `Update Firmware` starten.
 
 ![DateiUpdate](/docs/img/dateiupdate2.jpg)
 
-Unter Firmware mit dem Button "Datei auswählen" muss nun aus dem ZIP Archiv die Datei _firmware.bin_ ausgewählt werden (im Bild 2). Ein Klick auf Update Firmware startet das Update.
+Auch das Dateisystem kann aktualisiert werden.
 
-Auch das Dateisystem vom Brautomat kann aktualisiert werden.
-
-> **Hinweis:**\
-Die Funktion Update FileSystem erstellt das Dateisystem neu. Update FileSystem überschreibt alle Einstellungen und Konfigurationen. Das beinhaltet neben der Konfiguration auch MaischeSud-Kesselprofile und Rezepte. In nahezu allen Fällen ist ein DateiUpdate der Firmware, gefolgt von einem WebUpdate, die richtige Wahl, weil das WebUpdate nach dem Firmware-Update einzelne Dateien im Dateisystem aktualisiert.
+> **Hinweis:**
+> `Update FileSystem` erstellt das Dateisystem neu und überschreibt
+> Einstellungen, Profile und Rezepte.
+> In den meisten Fällen: zuerst Firmware per Datei aktualisieren, danach
+> WebUpdate ausführen.

@@ -1,4 +1,4 @@
-# Aktoren
+﻿# Aktoren
 
 ![Einstellungen Aktor](/docs/img/aktoren_einstellungen.jpg)
 
@@ -6,9 +6,9 @@ Aktoren wie Rührwerk, Pumpen oder Ringheizelemente werden mit einem Namen und e
 
 ![Übersicht Aktoren](/docs/img/aktoren.jpg)
 
-## webhook
+## Webhook
 
-Der Parameter Aktor GPIO muss auf "-" eingestellt werden, damit die Webhook-Elemente im WebInterface angezeigt werden. Zusätzlich werden die Webhook-URL und das Schaltkommando benötigt:
+Der Parameter Aktor GPIO muss auf "-" eingestellt werden, damit die Webhook-Elemente im Webinterface angezeigt werden. Zusätzlich werden die Webhook-URL und das Schaltkommando benötigt:
 
 ![webhook](/docs/img/aktoren_webhook1.jpg)
 
@@ -17,6 +17,6 @@ Beispiel Shelly 1PM:
 Shelly 1PM einschalten: <http://192.168.1.5/relay/0?turn=on>\
 Shelly 1PM ausschalten: <http://192.168.1.5/relay/0?turn=off>
 
-Die webhook URL für Shelly 1PM lautet: <http://192.168.1.5/relay/0?turn=> (ohne on und off). Der Parameter webhook Schalter muss auf "on/off" eingestellt werden.
+Die Webhook-URL für Shelly 1PM lautet: <http://192.168.1.5/relay/0?turn=> (ohne on und off). Der Parameter Webhook-Schalter muss auf "on/off" eingestellt werden.
 
 URL Tasmota: <http://192.168.1.5/cm?cmnd=Power1%201>

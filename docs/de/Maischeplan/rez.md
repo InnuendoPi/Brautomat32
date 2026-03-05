@@ -1,6 +1,6 @@
-# Einstellungen Maischeplan
+﻿# Einstellungen Maischeplan
 
-Der Brautomat bietet eine einfache Verwaltung von Maischeplänen. Du kannst Pläne importieren, exportieren, umbenennen, wechseln und löschen. Mit diesem Kapitel sind die Grundfunktionen vollständig beschrieben.
+Der Brautomat bietet eine einfache Verwaltung von Maischeplänen. Dabei kannst du Pläne importieren, exportieren, umbenennen, wechseln und löschen. Mit diesem Kapitel sind die Grundfunktionen vollständig beschrieben.
 
 ## Maischeplan
 

@@ -1,4 +1,4 @@
-# Parameter Kochfeld
+﻿# Parameter Kochfeld
 
 ## Temperaturregelung
 

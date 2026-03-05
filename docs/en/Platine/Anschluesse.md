@@ -7,7 +7,7 @@
 Default pin mapping for the induction cooker:
 
 | Type | Cable color | Connection |
-|------|-------------|------------|
+| ------ | ------------- | ------------ |
 | Interrupt | blue/green | - (optional) |
 | Command | yellow | D6 |
 | Relay | white | D7 |
@@ -32,7 +32,7 @@ Board labels: `DS18B20-1` to `DS18B20-3`.
 Typical cable colors (cheap probes may vary): black/red/yellow.
 
 | Type | Cable color | Connection |
-|------|-------------|------------|
+| ------ | ------------- | ------------ |
 | Supply + | green or red | Vcc |
 | Data | white or yellow | Data |
 | Supply - | brown or black | GND |
@@ -42,7 +42,7 @@ The three DS18B20 ports are equivalent; sensor order is assigned in software.
 ## Connect PT100x via MAX31865
 
 | Type | Connection |
-|------|------------|
+| ------ | ------------ |
 | SPI clock in | SCLK D9 |
 | SDO (MISO) | MISO D10 |
 | SDI (MOSI) | MOSI D11 |
@@ -57,7 +57,7 @@ For PT100x setups, keep CS assignment order (`CS0` to `CS2`).
 ## Connect display
 
 | Cable | Nextion display | Connection |
-|------|------------------|------------|
+| ------ | ------------------ | ------------ |
 | red | Power + | Vcc |
 | black | Power - | GND |
 | blue | TX | D1 |

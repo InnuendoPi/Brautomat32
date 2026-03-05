@@ -1,4 +1,9 @@
-# Adaptive Kessellogik – präzise Temperaturführung mit automatischer Intervallsteuerung
+﻿# Adaptive Kessellogik – präzise Temperaturführung mit automatischer Intervallsteuerung
+
+> **Hinweis für den Einstieg:**  
+> Dieses Kapitel ist für fortgeschrittene Nutzer.  
+> Für den Start mit dem Brautomat kannst du es zunächst überspringen und später bei Bedarf lesen.  
+> Einstieg zuerst: [AutoTune Schritt für Schritt](../Autotune-pid/steps.md) und [PID-Anleitung](PID-Anleitung.md).
 
 Der Brautomat nutzt eine adaptive Heizregelung, um die Maischetemperatur stabil und schonend zu steuern. Die Regelung arbeitet nicht mit einfachen Ein/Aus-Schaltungen, sondern reagiert intelligent auf Temperaturverhalten und passt die Heizleistung dynamisch an.
 
@@ -80,7 +85,7 @@ Die adaptive Logik passt zusätzlich zu Heizleistung und Ramping auch die Mess- 
 Die Intervalllänge wird dynamisch angepasst:
 
 | Situation | Verhalten der Regelintervalle |
-|----------|--------------------------------|
+| ---------- | -------------------------------- |
 | Temperatur steigt zu schnell | Intervalle kürzer → frühere Korrektur |
 | Temperatur steigt zu langsam | Intervalle kürzer → Leistung wird erhöht |
 | Temperatur ist genau im Soll | Intervalle länger → ruhiger Betrieb |
@@ -88,3 +93,8 @@ Die Intervalllänge wird dynamisch angepasst:
 Dies ermöglicht eine besonders gleichmäßige Aufheizkurve.
 
 ---
+
+## Vertiefung (Fortgeschrittene)
+
+- [PID-Engine Referenz 1.60 (Fortgeschrittene)](pid-engine-160-referenz.md)
+- [FSM Regelablauf 1.60 (Fortgeschrittene)](fsm-regelablauf-160.md)

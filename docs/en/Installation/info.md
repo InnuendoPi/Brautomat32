@@ -74,7 +74,11 @@ Brautomat restarts and connects to your Wi-Fi.
 The web UI is then available at:
 <http://Brautomat.local>
 
-At this point, basic installation is complete. You can continue with _Basic Setup_.
+At this point, basic installation is complete.
+
+Before the first heat run: [Safety check before first heat test](safety-check-first-heat-test.md)
+
+Then continue with _Basic Setup_.
 
 > **Note:**  
 > Brautomat32 tries to connect to configured Wi-Fi for about 20 seconds.  

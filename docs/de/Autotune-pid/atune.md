@@ -1,4 +1,9 @@
-# AutoTune Prozess
+﻿# AutoTune Prozess
+
+> **Hinweis für den Einstieg:**  
+> Dieses Kapitel ist für fortgeschrittene Nutzer.  
+> Für den Start mit dem Brautomat kannst du es zunächst überspringen und später bei Bedarf lesen.  
+> Einstieg zuerst: [AutoTune Schritt für Schritt](steps.md) und [Praxisleitfaden Brautag](praxisleitfaden-brautag.md).
 
 Der AutoTune-Prozess ermittelt geeignete Parameter für die Brauanlage, damit die Temperaturregelung im Maischprozess möglichst genau durchgeführt werden kann. Der Fokus liegt dabei auf den IST-Temperaturen und den dazugehörigen SOLL-Temperaturen. In der Praxis bedeutet dies, dass Über- und Unterschwingen minimiert werden sollen.
 
@@ -25,3 +30,8 @@ Der D-Wert ist ein Dämpfer, der die Schwingungen der ersten beiden Anteile P un
 ## Intervall (SampleTime)
 
 Die PID-Berechnung erfolgt kontinuierlich. Das Intervall beschreibt den Zyklus. In jedem Intervall wird die Differenz zwischen Ist- und Solltemperatur sowie die Änderung der Isttemperatur fortlaufend ermittelt. Ein zu kleines Intervall (z.B. 1000ms) führt zu einem "Flattern" der Isttemperatur im Sinne von Rundungsfehlern +- 0,0625°C bei 12bit Auflösung. Ein zu großes Intervall (z.B. 7000ms) führt zu einem trägen Verhalten. Ein Intervall von 2000ms oder 3000ms sollte in den meisten Umgebungen gut geeignet sein. Als Intervallgröße kann nur ein Vielfaches von 1000ms verwendet werden (1000, 2000, ... 7000).
+
+## Vertiefung (Fortgeschrittene)
+
+Weitere Details zur 1.60 PID-Engine, `Compute()`-Reihenfolge sowie L/R-basierter Ableitung:
+[PID-Engine Referenz 1.60 (Fortgeschrittene)](../Kessel/pid-engine-160-referenz.md)

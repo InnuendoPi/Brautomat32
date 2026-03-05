@@ -1,4 +1,4 @@
-# The board for the project
+﻿# The board for the project
 
 The board for the project Brautomat makes construction and operation very easy. The GGM IDS, the sensors, the actuators and the display are connected to the screw terminal blocks of the Brautomat.
 

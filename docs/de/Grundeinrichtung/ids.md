@@ -1,4 +1,4 @@
-# Kochfeld einrichten
+﻿# Kochfeld einrichten
 
 ## Anlegen des MaischeSud-Kessels
 
@@ -33,3 +33,8 @@ Die Parameter im Reiter "Temperatursteuerung" werden im Abschnitt "Alle Paramete
 Nach der Grundkonfiguration muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID Controller berechnet automatisch die erforderliche Leistung für das Kochfeld, um die Maische-Temperatur (Ist-Temperatur) auf die Rast-Temperatur zu bringen. Eine präzise PID-Konfiguration sorgt dafür, dass die Rast-Temperatur über die gesamte Rast-Dauer konstant bleibt.
 
 Im Abschnitt AutoTune PID wird Schritt für Schritt erläutert, wie die PID-Parameter ermittelt werden.
+
+## Vertiefung (Fortgeschrittene)
+
+Die technische Detailbeschreibung zur entkoppelten IDS-Sendelogik ab 1.60 findest du hier:
+[IDS RMT Sendelogik 1.60 (Fortgeschrittene)](ids-rmt-160.md)

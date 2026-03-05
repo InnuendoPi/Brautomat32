@@ -53,7 +53,7 @@ Then adjust in small steps:
 - once behavior improves, continue with 5% steps
 
 | Behavior | Correction |
-|----------|------------|
+| ---------- | ------------ |
 | Temperature rises too slowly | Increase `Kp`, increase `Ki` slightly |
 | Temperature overshoots target | Decrease `Kp`, increase `Kd` |
 | Temperature oscillates around target | Decrease `Ki`, increase `Kd` slightly |
@@ -62,7 +62,6 @@ Then adjust in small steps:
 If your setup behaves as PI control, keep `Kd = 0`.
 
 Repeat tests after each relevant change. If no agitator is present, stir occasionally during tests.
-
 
 ## Brew-day decision aid
 

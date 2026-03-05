@@ -76,5 +76,3 @@ This parameter is for recipe import and describes the default temperature for wh
 ### Cooking temperature [°C]
 
 This parameter describes the temperature at which the wort boils to a rolling boil. The standard value is 98°C and corresponds approximately to a location at 500m above sea level. For the recipe import, this parameter is used as the cooking temperature.
-
-

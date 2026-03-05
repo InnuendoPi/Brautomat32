@@ -1,4 +1,4 @@
-# Button functions
+﻿# Button functions
 
 ## Description of all buttons
 

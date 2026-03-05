@@ -1,12 +1,11 @@
-
-# ⚙️ API Brautomat32
+﻿# API Brautomat32
 
 Diese beiden Javascript Funktionen erleichtern die Kommunikation mit dem Brautomat32.  
 Sie kapseln `fetch()`-Aufrufe, behandeln Fehler, JSON/Text-Erkennung und optionale Benutzerhinweise (Toast/Alarm).
 
 ---
 
-## 🟢 apiGET(url, alarm, toast, log)
+## apiGET(url, alarm, toast, log)
 
 * @param {string} url - Endpoint-URL
 * @param {boolean} alarm - sendAlarm aktivieren, default false
@@ -23,7 +22,7 @@ console.log(misc);
 
 ---
 
-## 🔵 apiPOST(url, data, alarm, toast, log, postType, responseType)
+## apiPOST(url, data, alarm, toast, log, postType, responseType)
 
 * @param {string} url - Endpoint-URL
 * @param {Object} data - Daten, die gesendet werden (json oder txt)
@@ -43,25 +42,25 @@ console.log(misc);
 
 ---
 
-## 🌐 WebServer Handler Brautomat32
+## WebServer Handler Brautomat32
 
 Brautomat HTTP-Endpunkte. Der WebServer nutzt CORS und unterstützt **HTTP GET**, **POST**, **PUT**, und **DELETE** Requests.
 
 ---
 
-## 🏠 Basis-Endpunkte
+## Basis-Endpunkte
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/` | GET | Lädt die Startseite |
 | `/index`, `/index.htm`, `/index.html` | GET | Alternative Routen für die Startseite |
 
 ---
 
-## 🌡️ Sensoren
+## Sensoren
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/reqSensors?id=${sensorid}` | GET | Gibt eine Liste aller Sensoren zurück |
 | `/setSensor?id=${sensorid}` | POST | Fügt einen neuen Sensor hinzu oder ändert einen bestehenden |
 | `/delSensor?id=${sensorid}` | POST | Löscht einen Sensor |
@@ -70,7 +69,7 @@ Brautomat HTTP-Endpunkte. Der WebServer nutzt CORS und unterstützt **HTTP GET**
 | `/setSenErr?id=${sensorid}` | GET | Setzt Sensorfehler-Status (debug) |
 
 | sensorid | Beschreibung |
-|-----------|----------|
+| ----------- | ---------- |
 | -1 | ruft alle Sensoren ab |
 | 0 - 2 | Sensor ID |
 
@@ -83,10 +82,10 @@ console.log(data);
 
 ---
 
-## ⚙️ Aktoren
+## Aktoren
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/reqActors?id=${actorid}` | GET | Gibt eine Liste aller Aktoren zurück |
 | `/setActor?id=${actorid}` | POST | Erstellt oder ändert einen Aktor |
 | `/delActor?id=${actorid}` | POST | Löscht einen Aktor |
@@ -94,7 +93,7 @@ console.log(data);
 | `/actorPWM?id=${actorid}` | POST | Setzt PWM-Wert eines Aktors |
 
 | actorid | Beschreibung |
-|-----------|----------|
+| ----------- | ---------- |
 | -1 | ruft alle Aktoren ab |
 | 0 - 9 | Aktor ID |
 
@@ -107,10 +106,10 @@ console.log(data);
 
 ---
 
-## 🔥 Kessel (Kettle)
+## Kessel (Kettle)
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/reqKettle?id=${kettleid}` | GET | Gibt aktuelle Kesseldaten zurück |
 | `/reqKettlePID?id=${kettleid}` | GET | PID-Parameter abfragen (`kl`,`kr`,`kp`,`ki`,`kd`,`sa`,`psa`,`newo`,`tun`,`vol`,`maxo`,...) |
 | `/setKettle?id=${kettleid}` | POST | Kesseldaten ändern |
@@ -118,7 +117,7 @@ console.log(data);
 | `/handlePower?id=${kettleid}` | POST | Leistung aktivieren/deaktivieren |
 
 | kettleid | Beschreibung |
-|-----------|----------|
+| ----------- | ---------- |
 | 0 | Maische Kessel |
 | 1 | Sud Kessel |
 | 2 | HLT |
@@ -133,16 +132,16 @@ console.log(data);
 
 ---
 
-## 📈 Profile
+## Profile
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/setProfile` | POST | Neues Profil erstellen oder ändern |
 | `/changeProfile?id=${kettleid}&pname=${pname}` | POST | Aktives Profil wechseln |
 | `/delProfile?pname=${pname}` | POST | Profil löschen |
 
 | kettleid | Beschreibung |
-|-----------|----------|
+| ----------- | ---------- |
 | 0 | Maische Kessel |
 | 1 | Sud Kessel |
 | 2 | HLT |
@@ -158,10 +157,10 @@ console.log(data);
 
 ---
 
-## 🍺 Sud / Rezeptverwaltung
+## Sud / Rezeptverwaltung
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/setSud` | POST | Bestehenden Sud konfigurieren |
 | `/setSudNew` | POST | Neuen Sud anlegen |
 | `/setSudRen` | POST | Sud umbenennen |
@@ -176,10 +175,10 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 
 ---
 
-## ⚙️ Misc / Allgemeine Einstellungen
+## Misc / Allgemeine Einstellungen
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/reboot` | POST | Neustart des Geräts |
 | `/reqMisc` | GET | Allgemeine Systeminformationen |
 | `/reqVis` | GET | Visualisierungsdaten abrufen |
@@ -192,10 +191,10 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 
 ---
 
-## ▶️ Steuerung
+## Steuerung
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/Btn-Power` | GET | Power-Button auslösen |
 | `/Btn-Pause` | GET | Pause-Button auslösen |
 | `/Btn-Play` | GET | Start-Button auslösen |
@@ -207,10 +206,10 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 
 ---
 
-## 📡 Server-Sent Events (SSE)
+## Server-Sent Events (SSE)
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/channel` | GET | SSE-Kanal öffnen |
 | `/startSSE` | GET | Startet SSE-Verbindung |
 | `/checkAliveSSE` | GET | Prüft aktive SSE-Verbindungen |
@@ -219,37 +218,37 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 
 ---
 
-## 📊 Graph / Diagrammdaten
+## Graph / Diagrammdaten
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/getDots` | GET | Diagrammdaten abrufen |
 | `/removeDots` | POST | Diagrammdaten löschen |
 
 ---
 
-## 🍻 BrewFather Integration
+## BrewFather Integration
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/getbf` | GET | Liste verfügbarer BrewFather-Rezepte |
 | `/bfRecipe` | POST | Rezeptdetails abrufen |
 
 ---
 
-## 💾 Backup & Wiederherstellung
+## Backup & Wiederherstellung
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/backup` | POST | System-Backup erstellen |
 | `/restore` | POST | Backup wiederherstellen |
 
 ---
 
-## 📁 Dateiverwaltung (FSBrowser)
+## Dateiverwaltung (FSBrowser)
 
 | Endpoint | Methode | Beschreibung |
-|-----------|----------|--------------|
+| ----------- | ---------- | -------------- |
 | `/edit` | GET | Datei-Editor laden |
 | `/status` | GET | Systemstatus abrufen |
 | `/list` | GET | Dateiliste anzeigen |
@@ -259,10 +258,10 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 
 ---
 
-## 🧩 Statische Inhalte (Cache aktiviert)
+## Statische Inhalte (Cache aktiviert)
 
 | Dateien | Beschreibung |
-|----------|---------------|
+| ---------- | --------------- |
 | `/brautomat.min.css`, `/bootstrap.min.css`, `/bootstrap.min.js`, `/brautomat.min.js`, `/brautomat.ttf` | Web-Assets |
 | `/language/deutsch.json`, `/language/english.json`, `/language/norsk.json` | Sprachdateien |
 | `/lang.js`, `/favicon.ico` | Systemdateien |

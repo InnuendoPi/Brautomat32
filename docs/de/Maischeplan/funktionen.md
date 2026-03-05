@@ -1,4 +1,4 @@
-# Funktionen
+﻿# Funktionen
 
 In der folgenden Beschreibung wird ein _erfundenes Beispielrezept_ verwendet. Diese Beschreibung hat nicht das Rezept zum Inhalt, sondern die Vorgehensweise beim Maischen mit dem Brautomat.
 
@@ -82,7 +82,7 @@ Am Ende eines Maischeprozesses wird über eine Jodprobe festgestellt, dass die M
 
 ![Maischeplan autonext](/docs/img/Maischeplan-autonext.jpg)
 
-Der erste Schritt des Maischeplans mit dem Namen _Einmaischen 50°C_ hat eine Rastzeit von 10 Minuten und einen deaktivierten _autonext_. Das Bild zeigt die Situation, wenn der Rasttimer die 10 Minuten erreicht hat: Der Timer ist auf 00:00 Restzeit heruntergezählt. Der Play-Button wechselt automatisch auf rot. Unten rechts erscheint die Toastmeldung "Click play button". Das Kochfeld schaltet sich aus. Der Brauprozess wartet auf einen Klick auf den Play Button. Das WebInterface zeigt den nächsten Schritt an, welcher mit Klick auf Play gestartet wird.
+Der erste Schritt des Maischeplans mit dem Namen _Einmaischen 50°C_ hat eine Rastzeit von 10 Minuten und einen deaktivierten _autonext_. Das Bild zeigt die Situation, wenn der Rasttimer die 10 Minuten erreicht hat: Der Timer ist auf 00:00 Restzeit heruntergezählt. Der Play-Button wechselt automatisch auf rot. Unten rechts erscheint die Toastmeldung "Click play button". Das Kochfeld schaltet sich aus. Der Brauprozess wartet auf einen Klick auf den Play Button. Das Webinterface zeigt den nächsten Schritt an, welcher mit Klick auf Play gestartet wird.
 
 * Am Ende einer Pause mit deaktiviertem _autonext_ wird der Brauprozess gestoppt und das Kochfeld ausgeschaltet.
 

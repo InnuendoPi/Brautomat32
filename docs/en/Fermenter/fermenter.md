@@ -36,4 +36,3 @@ The relay switching cycle determines how long one of the cooling, heating or idl
 ## Display
 
 In fermenter mode, use the Mash view (page 2). Kettle overview and manual control view are not used in fermenter mode.
-

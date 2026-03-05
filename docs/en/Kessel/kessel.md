@@ -15,8 +15,8 @@ Each kettle can be configured either as:
 
 All kettle parameters are described in:
 
-- Basic Setup
-- Parameter Overview -> Kettle Parameters
+- [Basic setup](../Grundeinrichtung/info.md)
+- [Kettle parameters](../Parameter/parameter-kessel.md)
 
 ## Kettle Control Commands
 
@@ -95,7 +95,8 @@ Typical setup for this kind of command step:
 ## Example: Decoction
 
 Without explicit command, mash steps always run on kettle 1 (`MAISCHE`).
-With command steps, you can control additional kettles.
+With command steps, you can control additional kettles. See also:
+[Mash plan functions](../Maischeplan/funktionen.md).
 
 Decoction workflow example:
 

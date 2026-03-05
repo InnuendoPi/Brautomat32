@@ -1,4 +1,4 @@
-# Brew-day quick guide (symptom -> action)
+﻿# Brew-day quick guide (symptom -> action)
 
 This page is an operator guide for brew day.
 Use it directly when temperature behavior differs from expectation.
@@ -22,7 +22,7 @@ Rule: Change only one control lever at a time.
 ## Starter profiles by setup (first run)
 
 | Setup | Starting point | First safe correction |
-|---|---|---|
+| --- | --- | --- |
 | 20-30 L, strong circulation, IDS | AutoTune values + medium tuning factor | If overshoot appears, lower tuning factor slightly first |
 | 40-60 L, relay/PWM, medium inertia | AutoTune values + medium to defensive tuning factor | If heat-up is too slow, raise tuning factor in small steps |
 | HLT or slow thermal system | AutoTune values + defensive tuning factor | If hold oscillates, lower tuning factor slightly before touching `P/I/D` |
@@ -30,7 +30,7 @@ Rule: Change only one control lever at a time.
 ## Symptom -> cause -> action
 
 | Symptom | Likely cause | First action | Second action |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Overshoot > 0.5 K in enzyme range | Loop too aggressive or real inertia higher than tuning run | Lower tuning factor slightly | Review enzyme window/coasting, then fine-adjust `P/I/D` |
 | Heat-up clearly too slow | Control style too defensive or changed circulation/volume | Verify circulation and volume realism | Increase tuning factor moderately |
 | Rest hold unstable (constant corrections) | Sensor position/flow issue, implausible `sa` or `psa` | Check sensor location and mixing, validate `sa/psa` | Only then adjust `I` in small steps |
