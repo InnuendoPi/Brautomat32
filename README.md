@@ -84,18 +84,11 @@ Brautomat is a standalone brewing controller with support for:
 * [Forum Hobbybrauer (German)](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
 * [Changelog](https://github.com/InnuendoPi/Brautomat32/blob/main/changelog.md)
 
-## What's New 1.60.x
+## What's new in 1.60
 
 Detailed technical update notes are available here:
 
-* [What's New 1.60.x](whats_new_160.md)
-
-Key points (sync check against codebase v1.60.3):
-
-* `INNU_APID::Compute()` sequence remains aligned with docs (mode, boil, limiter, ramp/coast, PID, anti-windup).
-* `thresOutput` (code) and `thresOut` (UI/docs) refer to the same boil-output concept.
-* AutoTune still uses `WAIT_HEAT_COMMIT` and derives recommendations from `L/R` via `RecalculatePIDFromLR(...)`.
-* FSM queue prioritization and `TEMP_TICK` coalescing are actively implemented.
+* [What's new in 1.60](whats_new_160.md)
 
 ---
 

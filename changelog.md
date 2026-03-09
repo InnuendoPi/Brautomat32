@@ -1,10 +1,10 @@
 ﻿# Changelog
 
 ESP32 Arduino 3.3.7 ESP-IDF v5.5.2\
-VSCode 1.110 pioarduino IDE 1.1.5\
+VSCode 1.110 pioarduino IDE 1.1.6\
 InnuAPID AutoTune PID lib 1.10.18\
-InnuTask lib 0.10.16\
-InnuNextion Display lib 0.9\
+InnuTasks lib 0.10.16\
+InnuNextion Display lib 1.0\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
@@ -13,6 +13,34 @@ InnuFramework CSS/JS bootstrap 5.3.8
 * Breaking:     Finale Anpassung für WebUpdates von Version 1.59 oder älter
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
+
+Version 1.60.4
+
+* Optimiert:    Nextion auf Hardware-Serial überarbeitet. Deferred-Refresh Reste und Code Fragmente aus SoftSerial entfernt
+* Optimiert:    deutlich bessere Performance für das Senden und Empfangen von Dispaly-Daten
+* Korrektur:    SSE-Kanalvergabe reserviert freie Kanäle jetzt atomar bereits in `/channel`
+* Korrektur:    `checkAliveSSE()` arbeitet jetzt mit einem unter dem SSE-Kanal-Mux gezogenen Snapshot von Kanalstatus, Session-ID und Client-Status
+* Korrektur:    `checkAliveSSE()` stale Sessions werden nur nach Re-Check des aktuellen Zustands bereinigt
+* Korrektur:    Sensor-Adressscan im WebIf auf asynchronen Start/Status-Pfad umgestellt, der blockierende Legacy-Sync-Fallback wurde entfernt
+* Korrektur:    Sensor-Mutationen aktualisieren Runtime, SSE, Display und Kesselpfad konsistent; Sensorlöschungen ziehen alle betroffenen `senid`-Referenzen korrekt nach
+* Optimiert:    Sensor-Adressscan nur über echte Hardware Adressen statt über das Sensor Array (ermöglicht Doppelzuweisungen)
+* Korrektur:    Config-Save liest Sensoren über konsistente Snapshots; ungültige Sensorzuweisungen aus Config/Profilen werden auf `-1` bereinigt statt still falsch weiterzulaufen
+* Optimiert:    aktiver Sensor-SSE-Pfad reduziert unnötige `String`-Allokationen und formatiert zyklische Werte über feste C-Buffer
+* Korrektur:    Chart-Readback streamt `chartdots.json` in Teilstücken
+* Optimiert:    Backup-Erzeugung schreibt `backup.json` inkrementell auf LittleFS statt das Gesamtdokument vollständig im RAM zu erstellen
+* Optimiert:    Restore liest `config[]` schlüsselbasiert statt positionsabhängig
+* Optimiert:    Restore schützt den JSON-Import mit klaren Größen-/Heap-Grenzen und bricht zu große `restore.json`-Dateien mit Diagnose sauber ab
+* Optimiert:    Restore stoppt vor dem JSON-Parse zusätzlich FreeRTOS Tasks und pausiert SSE. Bei Restore-Fehler werden sie wieder sauber gestartet
+* Korrektur:    Captive-Portal WLAN-Scan läuft jetzt asynchron mit Ergebnis-Cache; `/scan` blockiert den Request nicht mehr und serialisiert SSIDs/JSON robust statt per String-Verkettung
+* Korrektur:    SSE-Kanäle werden bei echten Disconnects sofort freigegeben; getrennte Clients blockieren keine Event-Kanäle mehr bis zum nächsten Alive-Check
+* Korrektur:    Dateibrowser/FS-Editor verwendet für `/list`, `/download`, `/edit` und Uploads nun eine einheitliche Pfadnormalisierung
+* Korrektur:    Rekursives Löschen im FS-Editor entfernt verschachtelte Verzeichnisse wieder zuverlässig und meldet Fehler sauber an das WebIf zurück
+* Korrektur:    der FS-Editor hat auch bei fehlerhaften Uploads über `/edit` und `/language` 200 OK an das WebIf zurückgeliefert
+* Optimiert:    Dateischreibvorgänge für Konfigurationen, Profile, Maischeplan, Fermenter-, Import- und Logdateien robuster gemacht
+* Optimiert:    Backup-Erzeugung verschärft: unvollständige oder fehlerhafte Einträge führen nicht mehr zu stillschweigend unvollständigen Backups, sondern zu konsequentem Abbruch mit Cleanup
+* Optimiert:    Dateihandling im Maischeplan verbessert: offene Dateien werden zuverlässiger geschlossen, auch bei Formatkonvertierung oder Fehlerpfaden
+* Optimiert:    WLAN-Startlogik abgesichert: Fehler beim Zurücksetzen des BSSID-Locks werden erkannt und verhindern problematische Fallback-Verbindungen
+* Korrektur:    es war möglich, dass SNTP trotz fehlerhafter Rückmeldung einen erfolgreichen Zeitabgleich zurückliefert
 
 Version 1.60.3 Hotfix 2026-03-04
 
