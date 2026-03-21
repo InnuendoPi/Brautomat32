@@ -1,59 +1,79 @@
 # Firmware Test Suite
 
-The test badges in [README.md](../../../readme.md) and [README.de.md](../../../readme.de.md) show the current state of the firmware test suite.
+The indicators in [README.md](../../../readme.md) and
+[README.de.md](../../../readme.de.md) show the current state of the public
+firmware test suite.
 
-The badge summarizes four values:
+The currently published `complete-suite` includes:
 
-- `tests`: number of included checks
-- `pass`: number of successfully completed checks
-- `fail`: number of checks with a real failure
-- `skip`: number of intentionally skipped checks
+- `44` suite tests
+- `849` underlying checks
 
-A green badge means that the current firmware test suite completed without failures in the shown state.
+The indicator summarizes four values:
+
+- `tests`: number of included suite tests
+- `pass`: number of successfully completed suite tests
+- `fail`: number of suite tests with a real failure
+- `skip`: number of intentionally skipped suite tests
+
+A green indicator means that the current public firmware test suite completed
+without failures.
 
 ## What is tested?
 
-The current firmware test suite covers the main core functions of the firmware:
+The public firmware test suite covers the main core functions of the firmware:
 
-- basic backup and restore paths
+- release readiness before a publication
+- web assets prepared for LittleFS
+- firmware build and LittleFS build
+- packaging of the release artifacts
+- firmware flash and LittleFS flash
+- backup and restore after LittleFS flash
+- firmware and web interface self-update
 - restoring a clean baseline state
-- importing recipes from multiple sources
-- normal mash flow from start into active process steps
-- boil and hop paths
-- fermenter functions from entry into longer fermentation flows
-- controls such as `Play`, `Pause`, `Next`, and `Prev`
-- special commands inside mash steps
-- actuator step sequences
-- sensor errors and safety reactions
-- controlled stop and resume after reboot
+- recipe import from multiple sources
+- mash plan flow from start to normal finish
+- manual heating mode
+- actuators, special commands, and profile changes
+- sensor faults and safety reactions
+- stop, reboot, and resume
+- fermenter plan flow from entry up to reboot and resume cases
 
-The badges are therefore not a blanket promise for every possible hardware combination or edge case. They show the status of the main public core checks.
+These indicators are not a blanket quality promise for every possible hardware
+combination or edge case. They show the status of the main public core checks.
 
 ## Two kinds of tests
 
-Firmware status checks and end-user-focused checks serve different purposes:
+Firmware test status and end-user-oriented checks serve different purposes:
 
-- The README badge shows the status of the general firmware checks used before `develop` and `release` versions.
-- In addition, there are end-user-focused checks with real configurations, backups, and recipes.
+- The indicator in `README` describes the public firmware test suite used
+  before `develop` and `release` publications.
+- In addition, there are end-user-oriented checks with real configurations,
+  backups, and recipes.
 
-This second group does not only validate the firmware in general, but also real-world content such as:
+This second group does not only validate the firmware in general, but also
+real-world scenarios such as:
 
 - an existing `config.txt`
 - an existing backup
 - a single recipe
 - a combination of configuration and recipe
 
-This helps verify not only that the firmware works in principle, but also that concrete recipes and configurations are handled plausibly.
+This helps verify not only that the firmware works in principle, but also that
+concrete recipes and configurations are handled plausibly.
 
 Important:
 
-- The README badge describes the general firmware test status.
+- The indicator in `README` describes the general state of the public firmware
+  test suite.
 - End-user-oriented configuration and recipe checks are separate from that.
-- They are especially useful when an existing setup, backup, or specific recipe should be evaluated.
+- They are especially useful when an existing setup, backup, or specific
+  recipe should be evaluated.
 
 ## Short test run and longer extended runs
 
-The README badge refers to a compact firmware test run with broad functional coverage.
+The public firmware test suite is a compact complete run with broad functional
+coverage.
 
 In addition, there are longer extended runs that are especially useful for:
 
@@ -62,13 +82,27 @@ In addition, there are longer extended runs that are especially useful for:
 - special configuration and recipe cases
 - product-like checks with real hardware
 
-This means:
+The public firmware test suite shows:
 
-- The badge stands for the compact general core verification.
-- Longer extended runs complement that verification when needed.
-- Together, both types provide a more complete picture of real behavior.
+- the compact general core verification
+- longer extended runs complement that verification when needed
+- together, both types provide a more complete picture of real behavior
 
 ## Test areas
+
+### Release readiness
+
+- Web files are minified, compressed, and prepared for LittleFS.
+- Firmware and LittleFS can be built cleanly.
+- The release package is created completely.
+- Firmware and LittleFS can be flashed to the test device.
+- A full backup is restored after LittleFS flash.
+
+### System update
+
+- The firmware can perform its own firmware and web interface update.
+- The update path for firmware and LittleFS is checked as a real firmware
+  process.
 
 ### Backup, restore, and baseline
 
@@ -82,9 +116,10 @@ This means:
 - Recipes from kleinerBrauhelfer2 can be imported.
 - Recipes from Maische Malz und Mehr can be imported.
 - Recipes from Brewfather can be imported.
-- In addition, real end-user recipes can be checked specifically for readability and plausibility.
+- Real end-user recipes can also be checked specifically for readability and
+  plausibility.
 
-### Mashing, boiling, and step flow
+### Mash plan flow
 
 - A reference mash plan starts correctly.
 - The process moves into active running steps correctly.
@@ -92,28 +127,20 @@ This means:
 - The final step behaves correctly.
 - Replay into later steps works.
 
-### Fermenter
+### Manual mode
 
-- Fermenter mode is tested as its own process path.
-- Cooling and heating decisions are covered.
-- Resume behavior and longer fermentation runs were also verified.
+- Manual heating mode is verified as its own operator path.
+- Manual power on and off is validated.
 
-The badge tests therefore represent not only the mash path, but the core status of both brewing and fermentation.
-
-### Controls and operator actions
-
-- Pause and resume work during an active step.
-- A user-confirmed step can continue correctly.
-- `Next` is correctly blocked at the last step.
-
-### Actuators and special commands
+### Actuators, special commands, and profiles
 
 - Actuator step sequences are executed correctly.
 - Invalid actuator steps switch into a safe user-controlled state.
-- Public kettle special commands for mash, sud, and HLT are processed correctly.
-- Output limits and profile switches inside steps are applied correctly.
+- Public kettle special commands for mash, sud, and HLT are processed.
+- Output limits and profile changes inside steps are applied correctly.
 
-Within the firmware test suite, the following core special command families are covered:
+Within the firmware test suite, the following special command families are
+covered:
 
 - `HLT` and `NACHGUSS`
 - `MAISCHE` and `IDS`
@@ -123,46 +150,73 @@ Within the firmware test suite, the following core special command families are 
 - `SUDPROFIL` and `MLTPROFIL`
 - `HLTPROFIL` and `NACHGUSSPROFIL`
 
-### Sensor errors and safety behavior
+### Sensor faults and safety behavior
 
-- Sensor errors are detected.
-- Errors during heat-up escalate correctly.
-- Errors during an active running step hold the process safely.
+- Sensor faults are detected.
+- Faults during heat-up escalate correctly.
+- Faults during a running step hold the process in a controlled way.
 
 ### Stop, reboot, and resume
 
 - A controlled stop during an active boil step is handled correctly.
 - After reboot, an active boil step resumes correctly.
 
+### Fermenter plan flow
+
+- Fermenter mode is tested as its own process path.
+- Cooling and heating decisions are checked.
+- Automatic step transitions are checked.
+- Ramp steps are checked.
+- Multi-step fermenter plans are checked.
+- Resume behavior after reboot is checked.
+
+The suite therefore covers both the mash path and the fermenter plan flow.
+
 ## Complete list of tests
 
 | # | Area | Description |
 | - | ---- | ----------- |
-| 1 | Backup & Restore | Restore a defined clean baseline state |
-| 2 | Recipe import | Import a Brautomat recipe |
-| 3 | Recipe import | Import a kleinerBrauhelfer2 recipe |
-| 4 | Recipe import | Import an MMUM recipe |
-| 5 | Recipe import | Import a Brewfather recipe |
-| 6 | Reference flow | Reference mash plan from start into running step |
-| 7 | Reference flow | Reference mash plan through boil and hop path |
-| 8 | Controls | Pause and resume during an active running step |
-| 9 | Controls | User step, previous step, and continue with Play |
-| 10 | Controls | Operator step confirmation and continue behavior |
-| 11 | Replay | Replay directly into the boil step |
-| 12 | Replay | Replay directly into the hop step |
-| 13 | Endgame | Process finishes correctly at the end of the plan |
-| 14 | Endgame | Process with a manual final step |
-| 15 | Actuators | Actuator step sequence executes correctly |
-| 16 | Actuators | Invalid actuator step enters a safe user-controlled state |
-| 17 | Special command | HLT or sparge-water command handled inside a process step |
-| 18 | Special command | Mash or IDS command handled inside a process step |
-| 19 | Special command | Sud or MLT command handled inside a process step |
-| 20 | Special command | Output threshold for mash or IDS (`THRESOUT`) |
-| 21 | Special command | Profile switch for mash or IDS (`PROFIL`) |
-| 22 | Special command | Profile switch for sud or MLT (`PROFIL`) |
-| 23 | Special command | Profile switch for HLT or sparge-water (`PROFIL`) |
-| 24 | Sensor error | Sensor error hook |
-| 25 | Sensor error | Sensor error escalation during heat-up |
-| 26 | Sensor error | Controlled hold on sensor error during a running step |
-| 27 | Recovery | Controlled stop during an active boil step |
-| 28 | Recovery | Reboot and resume during an active boil step |
+| 1 | Release readiness | Web assets prepared for LittleFS |
+| 2 | Release readiness | Firmware build successful |
+| 3 | Release readiness | LittleFS build successful |
+| 4 | Release readiness | Release package assembled |
+| 5 | Release readiness | Firmware flash successful |
+| 6 | Release readiness | LittleFS flash successful |
+| 7 | Release readiness | Backup restore after LittleFS flash |
+| 8 | System update | Firmware and web interface self-update |
+| 9 | Backup & Restore | Defined baseline restored cleanly |
+| 10 | Recipe import | Import a Brautomat recipe |
+| 11 | Recipe import | Import a kleinerBrauhelfer2 recipe |
+| 12 | Recipe import | Import an MMUM recipe |
+| 13 | Recipe import | Import a Brewfather recipe |
+| 14 | Mash plan flow | Mash plan from start to running step |
+| 15 | Mash plan flow | Mash plan through boil and hop path |
+| 16 | Mash plan flow | Pause and resume in a running step |
+| 17 | Mash plan flow | Wait-user step, previous step, and continue with Play |
+| 18 | Mash plan flow | Last step blocks `Next` correctly |
+| 19 | Mash plan flow | Direct entry into the boil step |
+| 20 | Mash plan flow | Direct entry into the hop step |
+| 21 | Mash plan flow | Process finishes correctly at plan end |
+| 22 | Mash plan flow | Process with a manual final step |
+| 23 | Manual mode | Manual heating mode |
+| 24 | Actuators | Actuator step sequence executes correctly |
+| 25 | Actuators | Invalid actuator step enters safe user mode |
+| 26 | Special command | HLT or sparge-water command |
+| 27 | Special command | Mash or IDS command |
+| 28 | Special command | Sud or MLT command |
+| 29 | Special command | Output limit for mash or IDS |
+| 30 | Special command | Profile change for mash or IDS |
+| 31 | Special command | Profile change for sud or MLT |
+| 32 | Special command | Profile change for HLT or sparge water |
+| 33 | Sensor fault | Sensor error hook |
+| 34 | Sensor fault | Sensor fault escalation during heat-up |
+| 35 | Sensor fault | Controlled hold on sensor fault in a running step |
+| 36 | Recovery | Controlled stop in the final boil timer step |
+| 37 | Recovery | Reboot and resume in the final boil timer step |
+| 38 | Fermenter plan flow | Cooling control in fermenter mode |
+| 39 | Fermenter plan flow | Heating control in fermenter mode |
+| 40 | Fermenter plan flow | Automatic step transition |
+| 41 | Fermenter plan flow | Ramp-step transition |
+| 42 | Fermenter plan flow | Three-step fermenter sequence |
+| 43 | Fermenter plan flow | Reboot and resume in a ramp step |
+| 44 | Fermenter plan flow | Reboot and resume in the final step |
