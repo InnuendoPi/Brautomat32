@@ -9,8 +9,13 @@
 **Brautomat32** is a brewing and fermenting controller for ESP32.
 It provides a practical, browser-based control interface for brew day and fermentation.
 
-**Important for version 1.60:**
+## Important for version 1.60
+
 When updating from version 1.59 or older, run **AutoTune** once after the update.
+
+## Firmware test status
+
+[![Firmware Tests](https://img.shields.io/static/v1?label=firmware%20tests&message=44%20tests%20%7C%2044%20pass%20%7C%200%20fail%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
 
 ![WebInterface](docs/img/dashboard160.jpg)
 

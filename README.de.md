@@ -8,8 +8,13 @@
 **Brautomat32** ist eine Brau- und Gärsteuerung auf Basis des ESP32.
 Die Bedienung erfolgt direkt im Browser und ist für PC, Tablet und Smartphone ausgelegt.
 
-**Wichtig für Version 1.60:**
+## Wichtig für Version 1.60
+
 Nach einem Update von Version 1.59 oder älter muss **AutoTune** einmal neu durchgeführt werden.
+
+## Firmware-Teststatus
+
+[![Firmware-Tests](https://img.shields.io/static/v1?label=Firmware-Tests&message=44%20Tests%20%7C%2044%20erfolgreich%20%7C%200%20fehlerhaft%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
 
 ![WebInterface](docs/img/dashboard160.jpg)
 

@@ -1,10 +1,10 @@
 ﻿# Changelog
 
 ESP32 Arduino 3.3.7 ESP-IDF v5.5.2\
-VSCode 1.110 pioarduino IDE 1.1.6\
+VSCode 1.112 pioarduino IDE 1.3.1\
 InnuAPID AutoTune PID lib 1.10.18\
-InnuTasks lib 0.10.16\
-InnuNextion Display lib 1.0\
+InnuTask lib 0.10.16\
+InnuNextion Display lib 0.9\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
@@ -14,51 +14,48 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
-Version 1.60.4
+Version 1.61 RC1
 
-* Optimiert:    Nextion auf Hardware-Serial überarbeitet. Deferred-Refresh Reste und Code Fragmente aus SoftSerial entfernt
-* Optimiert:    deutlich bessere Performance für das Senden und Empfangen von Dispaly-Daten
-* Korrektur:    SSE-Kanalvergabe reserviert freie Kanäle jetzt atomar bereits in `/channel`
-* Korrektur:    `checkAliveSSE()` arbeitet jetzt mit einem unter dem SSE-Kanal-Mux gezogenen Snapshot von Kanalstatus, Session-ID und Client-Status
-* Korrektur:    `checkAliveSSE()` stale Sessions werden nur nach Re-Check des aktuellen Zustands bereinigt
+* Update:       ESPAsyncWebServer 3.10.3
+* Update:       pioarduino 1.3.1
+* Korrektur:    Off-by-one im `NEXT_STEP`-Pfad behoben. `NEXT` blockiert am letzten gültigen Maische-Schritt jetzt korrekt; zuvor konnte der Ablauf auf einen ungültigen Step-Index weiterlaufen
+* Korrektur:    Fermenter-Stop über `Btn-Power` räumt den Prozess jetzt sauber auf; `MODE_FERM -> MODE_NONE` ruft `stopFerm()` direkt auf statt `mashState` und Timer inkonsistent stehen zu lassen
+* Korrektur:    `setFerm(...)` persistiert den aktiven Fermenterplan jetzt direkt in `config.txt`; dadurch funktioniert Reboot-Resume im Ramp-Step und im finalen Step wieder konsistent
+* Korrektur:    `/setFerm` akzeptiert jetzt zusätzlich vollständige Fermenter-Planobjekte mit `misc[]`/`ferm[]`, übernimmt `Fername`, `duration` und `autonext` sauber und vermeidet damit leere Namen sowie fehleranfällige Zwischenkonvertierungen
+* Korrektur:    `/setFerm` schreibt Fermenterpläne explizit auf `/Fermenter/...`-Ziele
+* Korrektur:    `tempGateOk()` blockiert den Fortschritt in `WAIT_TEMP` jetzt bei ungültigem oder fehlerhaftem Step-Sensor zuverlässig; die bestehende `ErrOut`-Ausgangslogik bleibt dabei unverändert
+* Korrektur:    der alte automatische Sensorfehler-Pfad im Maischeprozess erzwingt in `RUNNING_STEP` kein implizites `MASH_PAUSED` und kein stilles Auto-Resume mehr; Ausgang und PID bleiben bei `ErrOut=0` weiter sicherheitsorientiert auf `0`
+* Korrektur:    `GET /Btn-Power?statePower=...` weist fehlende Parameter jetzt sauber mit `400` zurück statt still `200 OK` zu liefern
+* Korrektur:    JSON-POST-Routen wie `/setMisc` und `/setMiscLang` setzen ihre erlaubten HTTP-Methoden jetzt explizit; damit greifen die Handler trotz fehlerhafter Default-Initialisierung in der gebündelten `ESPAsyncWebServer`-Library wieder zuverlässig statt `404 Not found` zu liefern
+* Korrektur:    SSE-Kanalvergabe reserviert freie Kanäle jetzt atomar bereits in `/channel`; hängen gebliebene Reservierungen laufen per Timeout aus und verdrängen parallele Clients nicht mehr
+* Korrektur:    `checkAliveSSE()` arbeitet jetzt mit einem unter dem SSE-Kanal-Mux gezogenen Snapshot von Kanalstatus, Session-ID und Client-Status; stale Sessions werden nur nach Re-Check des aktuellen Zustands bereinigt
 * Korrektur:    Sensor-Adressscan im WebIf auf asynchronen Start/Status-Pfad umgestellt, der blockierende Legacy-Sync-Fallback wurde entfernt
 * Korrektur:    Sensor-Mutationen aktualisieren Runtime, SSE, Display und Kesselpfad konsistent; Sensorlöschungen ziehen alle betroffenen `senid`-Referenzen korrekt nach
-* Optimiert:    Sensor-Adressscan nur über echte Hardware Adressen statt über das Sensor Array (ermöglicht Doppelzuweisungen)
 * Korrektur:    Config-Save liest Sensoren über konsistente Snapshots; ungültige Sensorzuweisungen aus Config/Profilen werden auf `-1` bereinigt statt still falsch weiterzulaufen
 * Optimiert:    aktiver Sensor-SSE-Pfad reduziert unnötige `String`-Allokationen und formatiert zyklische Werte über feste C-Buffer
-* Korrektur:    Chart-Readback streamt `chartdots.json` in Teilstücken
-* Optimiert:    Backup-Erzeugung schreibt `backup.json` inkrementell auf LittleFS statt das Gesamtdokument vollständig im RAM zu erstellen
-* Optimiert:    Restore liest `config[]` schlüsselbasiert statt positionsabhängig
-* Optimiert:    Restore schützt den JSON-Import mit klaren Größen-/Heap-Grenzen und bricht zu große `restore.json`-Dateien mit Diagnose sauber ab
+* Korrektur:    `chartdots.json` wird für `/getDots` nur noch kurz unter Chart-Mutex eingelesen und vor dem Senden wieder geschlossen; Chart-Readback und Cleanup arbeiten dadurch robuster
+* Korrektur:    Backup-Erzeugung schreibt `backup.json` inkrementell auf LittleFS statt das Gesamtdokument vollständig im RAM zu erstellen
+* Korrektur:    Restore liest `config[]` schlüsselbasiert statt positionsabhängig
+* Korrektur:    Restore schützt den JSON-Import mit klaren Größen-/Heap-Grenzen und bricht zu große `restore.json`-Dateien mit Diagnose sauber ab
 * Optimiert:    Restore stoppt vor dem JSON-Parse zusätzlich FreeRTOS Tasks und pausiert SSE. Bei Restore-Fehler werden sie wieder sauber gestartet
 * Korrektur:    Captive-Portal WLAN-Scan läuft jetzt asynchron mit Ergebnis-Cache; `/scan` blockiert den Request nicht mehr und serialisiert SSIDs/JSON robust statt per String-Verkettung
 * Korrektur:    SSE-Kanäle werden bei echten Disconnects sofort freigegeben; getrennte Clients blockieren keine Event-Kanäle mehr bis zum nächsten Alive-Check
 * Korrektur:    Dateibrowser/FS-Editor verwendet für `/list`, `/download`, `/edit` und Uploads nun eine einheitliche Pfadnormalisierung
 * Korrektur:    Rekursives Löschen im FS-Editor entfernt verschachtelte Verzeichnisse wieder zuverlässig und meldet Fehler sauber an das WebIf zurück
 * Korrektur:    der FS-Editor hat auch bei fehlerhaften Uploads über `/edit` und `/language` 200 OK an das WebIf zurückgeliefert
-* Optimiert:    Dateischreibvorgänge für Konfigurationen, Profile, Maischeplan, Fermenter-, Import- und Logdateien robuster gemacht
-* Optimiert:    Backup-Erzeugung verschärft: unvollständige oder fehlerhafte Einträge führen nicht mehr zu stillschweigend unvollständigen Backups, sondern zu konsequentem Abbruch mit Cleanup
-* Optimiert:    Dateihandling im Maischeplan verbessert: offene Dateien werden zuverlässiger geschlossen, auch bei Formatkonvertierung oder Fehlerpfaden
-* Optimiert:    WLAN-Startlogik abgesichert: Fehler beim Zurücksetzen des BSSID-Locks werden erkannt und verhindern problematische Fallback-Verbindungen
-* Korrektur:    es war möglich, dass SNTP trotz fehlerhafter Rückmeldung einen erfolgreichen Zeitabgleich zurückliefert
-
-Version 1.60.3 Hotfix 2026-03-04
-
+* Korrektur:    Zugriffe auf `chartdots.json` sind jetzt serialisiert; `writeDotsAll()`, `removeDots()` und der Legacy-Dot-Pfad verwenden einen gemeinsamen Mutex und öffnen Dateien erst kurz vor dem eigentlichen Schreiben
+* Korrektur:    Dateischreibvorgänge für Konfigurationen, Profile, Maischeplan, Fermenter-, Import- und Logdateien prüfen jetzt vollständige JSON-Ausgabe; bei Fehlern werden defekte Dateien entfernt und Vorgänge sauber abgebrochen
+* Korrektur:    Backup-Erzeugung bricht bei unvollständigen oder fehlerhaften Einträgen jetzt konsequent mit Cleanup ab statt still unvollständige Backups zu erzeugen
+* Korrektur:    Dateihandling im Maischeplan schließt offene Dateien auch bei Formatkonvertierung und Fehlerpfaden zuverlässiger
+* Korrektur:    WLAN-Startlogik erkennt Fehler beim Zurücksetzen des BSSID-Locks und verhindert problematische Fallback-Verbindungen
+* Geändert:     Nextion auf Hardware-Serial überarbeitet. Deferred-Refresh Reste und Code Fragmente aus SoftSerial entfernt
+* Geändert:     Performance Steiergung für das Senden von Daten an das Display
 * Geändert:     Das Dateihandle für handleUploadLanguage hängt jetzt am Request (request->_tempFile). global/shared Objekt ersetzt
 * Geändert:     Backup und Restore optimiert und korrigiert
 * Geändert:     globales File Objekt ersetzt (parallele Zugriffe)
-
-Version 1.60.2 Hotfix 2026-03-03
-
 * Update:       ArduinoJSON 7.4.3 Fix a buffer overrun in `as<T>()` (issue #2220)
 * Geändert:     MMum Rezept Import werden die Steps Ein- und Abmaischen bei validen Temperaturen immer erstellt
-
-Version 1.60.1 Hotfix 2026-03-02
-
 * Korrektur:    die Chart für Kessel Sud war an einem falschen visible flag gebunden
-
-Version 1.60.1 Hotfix 2026-02-28
-
 * Korrektur:    WebIf `apiPOST` zeigt bei HTTP-Fehlern zusätzlich den Response-Body an (bessere Diagnose)
 * Geändert:     Cache-Strategie WebServer präzisiert: `index/language` mit `no-store`, `brautomat.min.css/js` mit `no-cache,must-revalidate`, `bootstrap.*` mit `max-age=86400`
 * Geändert:     CORS auf den bisherigen kompatiblen Stand zurückgestellt (`Access-Control-Allow-Origin: *`, Standard-Allow-Headers/Methods, `Max-Age=600`)
