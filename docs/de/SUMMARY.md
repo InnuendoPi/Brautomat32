@@ -42,5 +42,6 @@
 * [MQTTDevice](MQTTDevice/mqtt.md)
 * [Was ist neu 1.60.x](WhatsNew/whats-new-160.md)
 * [Übersetze den Brautomat](FAQ/sprache.md)
+* [Firmware-Testsuite](FAQ/firmware-testsuite.md)
 * [Fehlerbehebung](FAQ/troubleshooting.md)
 * [API](API/api.md)
