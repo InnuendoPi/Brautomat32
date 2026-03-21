@@ -37,6 +37,7 @@
 * [Gehäuse 3D Druck](Case/case.md)
   * [InnuCase](Case/Innu/InnuCase.md)
   * [FreggaCase](Case/Fregga/FreggaCase.md)
+  * [RSteckCase](Case/RSteck/RSteckCase.md)
 * [Hardware](Hardware/hw.md)
 * [KleinerBrauhelfer2](KBH2/kleinerbrauhelfer2.md)
 * [MQTTDevice](MQTTDevice/mqtt.md)
