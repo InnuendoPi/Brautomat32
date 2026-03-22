@@ -16,6 +16,7 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 Version 1.61 RC1
 
+* Korrektur:    gitbook links
 * Update:       ESPAsyncWebServer 3.10.3
 * Update:       pioarduino 1.3.1
 * Korrektur:    Off-by-one im `NEXT_STEP`-Pfad behoben. `NEXT` blockiert am letzten gültigen Maische-Schritt jetzt korrekt; zuvor konnte der Ablauf auf einen ungültigen Step-Index weiterlaufen
