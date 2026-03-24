@@ -39,6 +39,11 @@
 !/build/ESP32-IDF5/Brautomat32.zip
 !/build/ESP32-IDF5/Littlefs.bin
 !/build/ESP32-IDF5/firmware.bin
+!/build/ESP32-IDF5dev/
+/build/ESP32-IDF5dev/*
+!/build/ESP32-IDF5dev/Brautomat32dev.zip
+!/build/ESP32-IDF5dev/Littlefs.bin
+!/build/ESP32-IDF5dev/firmware.bin
 /mklittlefs.exe
 /tools/boot_app0.bin
 /tools/Brautomat32.ino.bin

@@ -14,8 +14,10 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
-Version 1.61 RC1
+Version 1.61 RC2
 
+* Optimiert:    WebIf-Initial- und Reload handling optimiert (`reqVis`, `cfgjson`, Plan-Header, `/channel`, `/checkAliveSSE`, Reconnect, Sichtbarkeit)
+* Optimiert:    WebIf-Listen und Modalpfade (`Actor`, `Sensor`, `Sud`, `System`, `Induction`, `HLT`, `Sud kettle`) optimiert. Select-Aufbau, Profil-Listen, PID-Tune-Init und Sichtbarkeitslogik sind kompakter und einheitlich. Redundanten SSE Informationen entfernt
 * Korrektur:    gitbook links
 * Update:       ESPAsyncWebServer 3.10.3
 * Update:       pioarduino 1.3.1

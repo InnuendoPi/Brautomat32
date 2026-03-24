@@ -14,7 +14,7 @@ Nach einem Update von Version 1.59 oder älter muss **AutoTune** einmal neu durc
 
 ## Firmware-Teststatus
 
-[![Firmware-Tests](https://img.shields.io/static/v1?label=Firmware-Tests&message=44%20Tests%20%7C%2044%20erfolgreich%20%7C%200%20fehlerhaft%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
+[![Firmware-Tests](https://img.shields.io/static/v1?label=Firmware-Tests&message=57%20Tests%20%7C%2057%20erfolgreich%20%7C%200%20fehlerhaft%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
 
 ![WebInterface](docs/img/dashboard160.jpg)
 
