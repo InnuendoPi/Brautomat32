@@ -54,7 +54,7 @@ Not included in this count:
 | 7 | Backup restore after filesystem flash | PASS |
 | 8 | Firmware and web interface self-update | PASS |
 | 9 | Backup and restore baseline | PASS |
-| 10 | Web interface reload core | WARN |
+| 10 | Web interface reload core | PASS |
 | 11 | Web interface dashboard core | PASS |
 | 12 | Web interface mash/fermenter view switch | PASS |
 | 13 | Web interface system save and reload | PASS |
