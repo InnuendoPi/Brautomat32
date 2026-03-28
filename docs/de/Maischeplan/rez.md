@@ -31,7 +31,7 @@ Aus einem importierten Braurezept wird ein Brautomat Maischeplan. Empfohlen wird
 
 Rezepte aus MaischeMalzundMehr sollten ebenfalls zuerst in den kleinenBrauhelfer2 importiert und an die individuellen Anlagenwerte, Rohstoffe etc. angepasst werden. Da MMum keine Rastennamen vergibt, empfiehlt sich eine Bearbeitung im KBH2 Maischplan.
 
-Rezepte und Sude können aus BrewFather per Datei-Import oder per API-Abruf importiert werden. Rastennamen dürfen in BrewFather sehr lang sein; der Brautomat kürzt sie auf maximal 50 Zeichen. Rastzeiten aus Fließkommazahlen oder Text werden beim Import in Ganzzahlen umgewandelt oder auf 0 gesetzt.
+Rezepte und Sude können aus BrewFather per Datei-Import oder per API-Abruf importiert werden. Rastennamen dürfen in BrewFather sehr lang sein; der Brautomat kürzt sie auf maximal 50 Zeichen. Rastzeiten aus Fließkommazahlen oder Text werden beim Import in Ganzzahlen umgewandelt oder auf 0 gesetzt. Über die BrewFather-API werden maximal 300 Rezepte oder Sude geladen.
 
 *Wichtig (ab 1.60):* Rezept-Import, Umbenennen, Kopieren, Wechseln und Löschen sind nur im Idle-Zustand erlaubt. Während eines aktiven Brauvorgangs werden diese Aktionen blockiert.
 

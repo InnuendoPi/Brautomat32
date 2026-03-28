@@ -234,3 +234,4 @@ The public firmware test suite shows:
 | 55 | Fermenter plan flow | Three-step fermenter sequence |
 | 56 | Fermenter plan flow | Reboot and resume in a ramp step |
 | 57 | Fermenter plan flow | Reboot and resume in the final step |
+
