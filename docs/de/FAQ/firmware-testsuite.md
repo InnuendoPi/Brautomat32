@@ -240,4 +240,3 @@ Die öffentliche Firmware-Testsuite zeigt:
 | 55 | Fermenter-Planfluss | Dreistufiger Fermenterplan |
 | 56 | Fermenter-Planfluss | Neustart und Wiederaufnahme im Rampenschritt |
 | 57 | Fermenter-Planfluss | Neustart und Wiederaufnahme im finalen Schritt |
-
