@@ -64,7 +64,8 @@ Automated real-case mash plan `runner_plain_real`:
 | 3 | Combined rest | `67 C` | `10 min` | `true` |
 | 4 | Mash-out | `78 C` | `1 min` | `true` |
 | 5 | Boil | `100 C` | `1 min` | `true` |
-| 6 | Boil Hallertauer Tradition 5.6% 12.4 g | `100 C` | `1 min` | `true` |
+| 6 | Boil hops | `100 C` | `1 min` | `true` |
+| 1 | Agitator OFF | `0 C` | `0 min` | `true` |
 
 ## Results
 
