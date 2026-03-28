@@ -14,7 +14,7 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
-Version 1.61 RC3
+Version 1.61 Release
 
 * Optimiert:    Sortierung BrewFather Rezepte und Sude über die Tabellenspalten implementiert
 * Optimiert:    Sortierung BrewFather Rezepte und Sude aus Firmware in den Browser verschoben
