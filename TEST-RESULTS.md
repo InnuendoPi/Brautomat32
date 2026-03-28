@@ -3,16 +3,15 @@
 Current status for the public firmware complete suite:
 
 - Suite: `complete-suite`
-- Firmware version: `1.61-RC2`
+- Firmware version: `1.61.3`
 - Suite tests: `57`
 - Underlying checks: `1023`
-- Test date: `2026-03-23`
-- Test time: `10:50:45 UTC`
-- Test duration: `50m 37s`
+- Test date: `2026-03-27`
+- Test time: `19:54:13 UTC`
+- Test duration: `48m 13s`
 - Pass: `57`
 - Fail: `0`
 - Skip: `0`
-- Warn: `0`
 
 ## Coverage in this published run
 

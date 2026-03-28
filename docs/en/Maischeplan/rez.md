@@ -31,7 +31,7 @@ An imported brewing recipe becomes a Brautomat mash plan. Recipe management and 
 
 Recipes from MaischeMalzundMehr should also first be imported into KleinerBrauhelfer2 and adapted to your individual setup values, ingredients, etc. Since MMum does not assign rest names, editing in the KBH2 mash plan is recommended.
 
-Recipes and brews can be imported from BrewFather via file import or via API call. Rest names can be very long in BrewFather; the Brautomat shortens it to a maximum of 50 characters. Rest times from floating point numbers or text are converted to integers or set to 0 during import.
+Recipes and brews can be imported from BrewFather via file import or via API call. Rest names can be very long in BrewFather; the Brautomat shortens it to a maximum of 50 characters. Rest times from floating point numbers or text are converted to integers or set to 0 during import. A maximum of 300 recipes or brews are loaded via the BrewFather API.
 
 *Important (from 1.60):* Recipe import, renaming, copying, changing and deleting are only permitted in the idle state. These actions are blocked during an active brewing process.
 

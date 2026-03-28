@@ -13,7 +13,7 @@ and can run infusion-style mash processes with minimal manual intervention.
 
 Guide status: release line `main` (version 1.60). Local development builds may differ.
 
-## Recommended onboarding (first brew day)
+## Recommended onboarding
 
 For new users, follow this order:
 

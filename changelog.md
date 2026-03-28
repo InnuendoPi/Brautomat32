@@ -1,7 +1,7 @@
 ﻿# Changelog
 
-ESP32 Arduino 3.3.7 ESP-IDF v5.5.2\
-VSCode 1.112 pioarduino IDE 1.3.1\
+ESP32 Arduino 3.3.7 ESP-IDF v5.5.4\
+VSCode 1.113 pioarduino IDE 1.3.2\
 InnuAPID AutoTune PID lib 1.10.18\
 InnuTask lib 0.10.16\
 InnuNextion Display lib 0.9\
@@ -14,8 +14,14 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
-Version 1.61 RC2
+Version 1.61 RC3
 
+* Optimiert:    Sortierung BrewFather Rezepte und Sude über die Tabellenspalten implementiert
+* Optimiert:    Sortierung BrewFather Rezepte und Sude aus Firmware in den Browser verschoben
+* Optimiert:    Pagination für BrewFather Rezepte und Sude an `start_after=<letzte_id>` angepasst
+* Korrektur:    maximale Anzahl an BrewFather Rezepten und Sude auf 300 beschränkt
+* Geändert:     Anpassungen BrewFather API aktualisiert (Stand 3.0.0 - 12.03.2026)
+* Update:       ESP-IDF 5.5.4
 * Optimiert:    WebIf-Initial- und Reload handling optimiert (`reqVis`, `cfgjson`, Plan-Header, `/channel`, `/checkAliveSSE`, Reconnect, Sichtbarkeit)
 * Optimiert:    WebIf-Listen und Modalpfade (`Actor`, `Sensor`, `Sud`, `System`, `Induction`, `HLT`, `Sud kettle`) optimiert. Select-Aufbau, Profil-Listen, PID-Tune-Init und Sichtbarkeitslogik sind kompakter und einheitlich. Redundanten SSE Informationen entfernt
 * Korrektur:    gitbook links

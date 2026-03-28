@@ -6,8 +6,8 @@ Firmware-Testsuite.
 
 Die aktuelle veröffentlichte `complete-suite` umfasst:
 
-- `44` Suite-Tests
-- `849` zugrunde liegende Einzelprüfungen
+- `57` Suite-Tests
+- `1023` zugrunde liegende Einzelprüfungen
 
 Die Anzeige fasst vier Werte zusammen:
 
@@ -17,7 +17,8 @@ Die Anzeige fasst vier Werte zusammen:
 - `skip`: Anzahl bewusst ausgelassener Suite-Tests
 
 Eine grüne Anzeige bedeutet: Die aktuelle öffentliche Firmware-Testsuite ist
-ohne Fehler durchgelaufen.
+ohne echte Fehler durchgelaufen. Gelbe Hinweise stehen für grenzwertige, aber
+nicht defekte Ergebnisse.
 
 ## Was wird geprüft?
 
@@ -32,6 +33,7 @@ Firmware ab:
 - Backup und Restore nach dem LittleFS-Flash
 - Firmware- und Weboberflächen-Selbstupdate
 - Wiederherstellung eines sauberen Ausgangszustands
+- Browser-UI-Core für Reload, SSE-Reconnect, Dashboard und wichtige Dialoge
 - Import von Rezepten aus mehreren Quellen
 - Maischeplanfluss vom Start bis zum regulären Ende
 - manueller Heizmodus
@@ -39,6 +41,11 @@ Firmware ab:
 - Sensorfehler und Sicherheitsreaktionen
 - Stop, Neustart und Wiederaufnahme
 - Fermenter-Planfluss vom Einstieg bis zu Neustart- und Resume-Fällen
+
+Die Testsuite ist in den letzten Versionen spürbar erweitert worden. Früher
+wurden viele Prüfungen manuell durchgeführt. Das war möglich, aber aufwendig,
+und kleine störende Randfehler konnten dabei leichter übersehen werden. Der
+ausgebaute interne Testpfad reduziert genau dieses Risiko.
 
 Die Anzeigen sind damit kein allgemeines Qualitätsversprechen für jede
 denkbare Hardware- oder Randkombination. Sie zeigen den Status der wichtigsten
@@ -116,14 +123,21 @@ Die öffentliche Firmware-Testsuite zeigt:
 - Brautomat startet aus einem sauberen Ausgangszustand.
 - Wichtige Grundeinstellungen lassen sich wiederherstellen.
 
+### Browser-UI-Core
+
+- Reload zeigt Firmware, Sprache, Plannamen und Tabellen korrekt an.
+- SSE-Reconnect wird geprüft.
+- Dashboard-Inhalte werden geprüft.
+- wichtige Dialoge für Induktion, HLT, Sud, System, Sensoren und Aktoren
+  werden geprüft.
+- Mash- und Fermenter-Ansicht werden geprüft.
+
 ### Rezeptimport
 
 - Brautomat-eigene Rezepte werden gelesen.
 - Rezepte aus kleinerBrauhelfer2 werden importiert.
 - Rezepte aus Maische Malz und Mehr werden importiert.
 - Rezepte aus Brewfather werden importiert.
-- Reale Enduser-Rezepte können zusätzlich gezielt auf Lesbarkeit und
-  Plausibilität geprüft werden.
 
 ### Maischeplanfluss
 
@@ -145,16 +159,6 @@ Die öffentliche Firmware-Testsuite zeigt:
 - Öffentliche Kessel-Sonderbefehle für Maische, Sud und HLT werden verarbeitet.
 - Leistungsbegrenzung und Profilwechsel in Schritten werden korrekt übernommen.
 
-In der Firmware-Testsuite werden dabei diese Sonderbefehl-Familien geprüft:
-
-- `HLT` beziehungsweise `NACHGUSS`
-- `MAISCHE` beziehungsweise `IDS`
-- `SUD` beziehungsweise `MLT`
-- `MAISCHETHRESOUT` beziehungsweise `IDSTHRESOUT`
-- `MAISCHEPROFIL` beziehungsweise `IDSPROFIL`
-- `SUDPROFIL` beziehungsweise `MLTPROFIL`
-- `HLTPROFIL` beziehungsweise `NACHGUSSPROFIL`
-
 ### Sensorfehler und Sicherheitsverhalten
 
 - Sensorfehler werden erkannt.
@@ -175,9 +179,6 @@ In der Firmware-Testsuite werden dabei diese Sonderbefehl-Familien geprüft:
 - Mehrstufige Fermenterpläne werden geprüft.
 - Resume-Verhalten nach Neustart wird geprüft.
 
-Die Testsuite deckt damit sowohl den Maischepfad als auch den
-Fermenter-Planfluss ab.
-
 ## Vollständige Liste der Tests
 
 | # | Testbereich | Beschreibung |
@@ -191,38 +192,51 @@ Fermenter-Planfluss ab.
 | 7 | Release-Readiness | Backup-Restore nach LittleFS-Flash |
 | 8 | System-Update | Firmware- und Weboberflächen-Selbstupdate |
 | 9 | Backup & Restore | Definierter Ausgangszustand wird wiederhergestellt |
-| 10 | Rezeptimport | Brautomat-Rezept importieren |
-| 11 | Rezeptimport | kleinerBrauhelfer2-Rezept importieren |
-| 12 | Rezeptimport | MMUM-Rezept importieren |
-| 13 | Rezeptimport | Brewfather-Rezept importieren |
-| 14 | Maischeplanfluss | Maischeplan vom Start bis in den laufenden Schritt |
-| 15 | Maischeplanfluss | Maischeplan bis Koch- und Hopfenpfad |
-| 16 | Maischeplanfluss | Pause und Fortsetzen im laufenden Schritt |
-| 17 | Maischeplanfluss | Benutzerschritt, vorheriger Schritt und Play |
-| 18 | Maischeplanfluss | Letzter Schritt blockiert `Next` korrekt |
-| 19 | Maischeplanfluss | Direkter Einstieg in den Kochschritt |
-| 20 | Maischeplanfluss | Direkter Einstieg in den Hopfenschritt |
-| 21 | Maischeplanfluss | Ablauf endet korrekt am Planende |
-| 22 | Maischeplanfluss | Ablauf mit manuellem letzten Schritt |
-| 23 | Manueller Modus | Manueller Heizmodus |
-| 24 | Aktoren | Aktor-Schrittfolge wird korrekt ausgeführt |
-| 25 | Aktoren | Ungültiger Aktor-Schritt führt in sicheren Benutzermodus |
-| 26 | Sonderbefehl | HLT- beziehungsweise Nachguss-Befehl |
-| 27 | Sonderbefehl | Maische- beziehungsweise IDS-Befehl |
-| 28 | Sonderbefehl | Sud- beziehungsweise MLT-Befehl |
-| 29 | Sonderbefehl | Leistungsbegrenzung für Maische beziehungsweise IDS |
-| 30 | Sonderbefehl | Profilwechsel für Maische beziehungsweise IDS |
-| 31 | Sonderbefehl | Profilwechsel für Sud beziehungsweise MLT |
-| 32 | Sonderbefehl | Profilwechsel für HLT beziehungsweise Nachguss |
-| 33 | Sensorfehler | Sensorfehler-Hook |
-| 34 | Sensorfehler | Eskalation eines Sensorfehlers in der Anheizphase |
-| 35 | Sensorfehler | Kontrolliertes Hold bei Sensorfehler im laufenden Schritt |
-| 36 | Recovery | Geordneter Stop im finalen Koch-Zeitstep |
-| 37 | Recovery | Neustart und Wiederaufnahme im finalen Koch-Zeitstep |
-| 38 | Fermenter-Planfluss | Kühlregelung im Fermenter |
-| 39 | Fermenter-Planfluss | Heizregelung im Fermenter |
-| 40 | Fermenter-Planfluss | Automatischer Schrittwechsel |
-| 41 | Fermenter-Planfluss | Rampenschritt-Übergang |
-| 42 | Fermenter-Planfluss | Dreistufiger Fermenterplan |
-| 43 | Fermenter-Planfluss | Neustart und Wiederaufnahme im Rampenschritt |
-| 44 | Fermenter-Planfluss | Neustart und Wiederaufnahme im finalen Schritt |
+| 10 | Browser-UI-Core | Webinterface Reload Core |
+| 11 | Browser-UI-Core | Webinterface Dashboard Core |
+| 12 | Browser-UI-Core | Mash-/Fermenter-View-Switch |
+| 13 | Browser-UI-Core | System speichern und Reload |
+| 14 | Browser-UI-Core | SSE-Reconnect-Stabilität |
+| 15 | Browser-UI-Core | Wiederholtes Öffnen von Modalen |
+| 16 | Browser-UI-Core | Reload Request- und Event-Budget |
+| 17 | Browser-UI-Core | Induktions-Dialog |
+| 18 | Browser-UI-Core | HLT-Dialog |
+| 19 | Browser-UI-Core | Sudkessel-Dialog |
+| 20 | Browser-UI-Core | Sud-Dialog |
+| 21 | Browser-UI-Core | System-Dialog |
+| 22 | Browser-UI-Core | Sensor-Dialog |
+| 23 | Browser-UI-Core | Aktor-Dialog |
+| 24 | Rezeptimport | Brautomat-Rezept importieren |
+| 25 | Rezeptimport | kleinerBrauhelfer2-Rezept importieren |
+| 26 | Rezeptimport | MMUM-Rezept importieren |
+| 27 | Rezeptimport | Brewfather-Rezept importieren |
+| 28 | Maischeplanfluss | Maischeplan vom Start bis in den laufenden Schritt |
+| 29 | Maischeplanfluss | Maischeplan bis Koch- und Hopfenpfad |
+| 30 | Maischeplanfluss | Pause und Fortsetzen im laufenden Schritt |
+| 31 | Maischeplanfluss | Benutzerschritt, vorheriger Schritt und Play |
+| 32 | Maischeplanfluss | Letzter Schritt blockiert `Next` korrekt |
+| 33 | Maischeplanfluss | Direkter Einstieg in den Kochschritt |
+| 34 | Maischeplanfluss | Ablauf endet korrekt am Planende |
+| 35 | Maischeplanfluss | Ablauf mit manuellem letzten Schritt |
+| 36 | Manueller Modus | Manueller Heizmodus |
+| 37 | Aktoren | Aktor-Schrittfolge wird korrekt ausgeführt |
+| 38 | Aktoren | Ungültiger Aktor-Schritt führt in sicheren Benutzermodus |
+| 39 | Sonderbefehl | HLT- beziehungsweise Nachguss-Befehl |
+| 40 | Sonderbefehl | Maische- beziehungsweise IDS-Befehl |
+| 41 | Sonderbefehl | Sud- beziehungsweise MLT-Befehl |
+| 42 | Sonderbefehl | Leistungsbegrenzung für Maische beziehungsweise IDS |
+| 43 | Sonderbefehl | Profilwechsel für Maische beziehungsweise IDS |
+| 44 | Sonderbefehl | Profilwechsel für Sud beziehungsweise MLT |
+| 45 | Sonderbefehl | Profilwechsel für HLT beziehungsweise Nachguss |
+| 46 | Sensorfehler | Sensorfehler-Hook |
+| 47 | Sensorfehler | Eskalation eines Sensorfehlers in der Anheizphase |
+| 48 | Sensorfehler | Kontrolliertes Hold bei Sensorfehler im laufenden Step |
+| 49 | Recovery | Geordneter Stop im finalen Koch-Zeitstep |
+| 50 | Recovery | Neustart und Wiederaufnahme im finalen Koch-Zeitstep |
+| 51 | Fermenter-Planfluss | Kühlregelung im Fermenter |
+| 52 | Fermenter-Planfluss | Heizregelung im Fermenter |
+| 53 | Fermenter-Planfluss | Automatischer Schrittwechsel |
+| 54 | Fermenter-Planfluss | Rampenschritt-Übergang |
+| 55 | Fermenter-Planfluss | Dreistufiger Fermenterplan |
+| 56 | Fermenter-Planfluss | Neustart und Wiederaufnahme im Rampenschritt |
+| 57 | Fermenter-Planfluss | Neustart und Wiederaufnahme im finalen Schritt |
