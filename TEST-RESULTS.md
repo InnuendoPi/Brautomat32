@@ -3,12 +3,12 @@
 Current status for the public firmware complete suite:
 
 - Suite: `complete-suite`
-- Firmware version: `1.61.3`
+- Firmware version: `1.61 Release`
 - Suite tests: `57`
 - Underlying checks: `1023`
-- Test date: `2026-03-27`
-- Test time: `19:54:13 UTC`
-- Test duration: `48m 13s`
+- Test date: `2026-03-28`
+- Test time: `11:07:31 UTC`
+- Test duration: `47m 53s`
 - Pass: `57`
 - Fail: `0`
 - Skip: `0`
@@ -39,6 +39,32 @@ Not included in this count:
 - Host stability and repeated regression runs
 - Enduser-specific config, backup, and recipe checks
 - Real hardware and kettle verification runs
+
+The only initially failing browser case was fixed and rechecked successfully
+on the release candidate state.
+
+## Additional documented hardware runs for release
+
+These release-specific hardware runs were executed successfully and are
+documented separately.
+They support the release assessment and are not included in the public
+57-test complete-suite count above.
+
+| Run | Result | Notes |
+| --- | ------ | ----- |
+| PT1000 live readiness | PASS | Productive device with PT1000; expected sensor types `DS18B20` and `PT1000` present; live value finite |
+| Full real mash plan with PT1000 and IDS2 | PASS | Documented productive setup (`36 l` kettle, `28 l` water, `IDS2`, `PT1000`, `DS18B20`, `pump`, `agitator`); testing time `1 h 08 min`; clean finish to `IDLE` |
+
+Automated real-case mash plan `runner_plain_real`:
+
+| Step | Name | Target | Timer | Auto |
+| --- | --- | --- | --- | --- |
+| 1 | Agitator ON | `0 C` | `0 min` | `true` |
+| 2 | Test wait | `30 C` | `1 min` | `false` |
+| 3 | Combined rest | `67 C` | `10 min` | `true` |
+| 4 | Mash-out | `78 C` | `1 min` | `true` |
+| 5 | Boil | `100 C` | `1 min` | `true` |
+| 6 | Boil Hallertauer Tradition 5.6% 12.4 g | `100 C` | `1 min` | `true` |
 
 ## Results
 
