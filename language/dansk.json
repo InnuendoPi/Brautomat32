@@ -472,5 +472,12 @@
   "TAB_AKT_STEP_9": "AutoTune startede",
   "TAB_AKT_TIMER_6": "vent venligst...",
   "TAB_AKT_TIMER_7": "Fortsæt med Play-knappen",
-  "IDS_APROF": "Aktiv profil:"
+  "IDS_APROF": "Aktiv profil:",
+  "DASH_STATE_CURRENT_STEP": "AKTUELLE TRIN",
+  "DASH_STATE_FINISHED": "FÆRDIG",
+  "DASH_STATE_NEXT_STEP": "NÆSTE TRIN",
+  "DASH_STATE_RUNNING_STEP": "TRIN LØB",
+  "DASH_STATE_WAIT_TEMP": "VENTER PÅ TEMPERATUR",
+  "DASH_STATE_PAUSED": "PAUSEDE",
+  "DASH_STATE_WAIT_USER": "VENTER PÅ BRUGER"
 }

@@ -1,4 +1,4 @@
-﻿# Kettle Configuration and Usage
+# Kettle Configuration and Usage
 
 Brautomat32 supports up to three kettles.
 

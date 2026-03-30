@@ -472,5 +472,12 @@
   "TAB_AKT_TIMER_6": "prosím čekejte...",
   "TAB_AKT_STEP_9": "AutoTune bylo spuštěno",
   "TAB_AKT_TIMER_7": "Pokračujte tlačítkem Play",
-  "IDS_APROF": "Aktivní profil:"
+  "IDS_APROF": "Aktivní profil:",
+  "DASH_STATE_FINISHED": "HOTOVO",
+  "DASH_STATE_NEXT_STEP": "DALŠÍ KROK",
+  "DASH_STATE_CURRENT_STEP": "AKTUÁLNÍ KROK",
+  "DASH_STATE_PAUSED": "PAUZOVÁNO",
+  "DASH_STATE_WAIT_USER": "ČEKÁNÍ NA UŽIVATELE",
+  "DASH_STATE_RUNNING_STEP": "KROK BĚH",
+  "DASH_STATE_WAIT_TEMP": "ČEKÁNÍ NA TEPLOTU"
 }

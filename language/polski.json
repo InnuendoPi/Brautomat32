@@ -472,5 +472,12 @@
   "TAB_AKT_STEP_9": "Rozpoczęło się automatyczne dostrajanie",
   "SUD_HEATMIN": "Początek zakresu enzymów [0]",
   "TAB_AKT_TIMER_7": "Kontynuuj za pomocą przycisku odtwarzania",
-  "IDS_APROF": "Aktywny profil:"
+  "IDS_APROF": "Aktywny profil:",
+  "DASH_STATE_FINISHED": "GOTOWY",
+  "DASH_STATE_NEXT_STEP": "NASTĘPNY KROK",
+  "DASH_STATE_CURRENT_STEP": "AKTUALNY KROK",
+  "DASH_STATE_PAUSED": "WSTRZYMANO",
+  "DASH_STATE_RUNNING_STEP": "BIEG KROKÓW",
+  "DASH_STATE_WAIT_USER": "CZEKAM NA UŻYTKOWNIKA",
+  "DASH_STATE_WAIT_TEMP": "OCZEKIWANIE NA TEMPERATUrę"
 }

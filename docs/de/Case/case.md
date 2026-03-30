@@ -1,4 +1,4 @@
-﻿# Brautomat Gehäuse 3D Druck
+# Brautomat Gehäuse 3D Druck
 
 Aktuell sind drei unterschiedliche Gehäuse für den Brautomat verfügbar:
 

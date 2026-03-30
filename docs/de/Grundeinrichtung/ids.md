@@ -1,4 +1,4 @@
-﻿# Kochfeld einrichten
+# Kochfeld einrichten
 
 ## Anlegen des MaischeSud-Kessels
 

@@ -1,4 +1,4 @@
-﻿# Das Dashboard
+# Das Dashboard
 
 ![Dashboard](/docs/img/dashboard160.jpg)
 
@@ -25,3 +25,15 @@ Wird das Dashboard aktiviert, ändert der Brautomat automatisch sein Aussehen, w
 * der nächste Maischeschritt wird abhängig von autonext mit einem roten oder grünen Symbol angezeigt
 
 Alle Elemente zur Steuerung von Kochfeldern und Aktoren bleiben im Dashboard erhalten. Der Maischeplan kann jederzeit über die Button collapse wieder aufgeklappt werden. Wird der Pause Button geklickt, wird der Maischeplan automatisch aufgeklappt. Ausgeblendete Elemente können auch während eines Brauvorgangs über die Systemeinstellung wieder eingeblendet werden.
+
+## Dashboard als Infoterminal
+
+Zusätzlich kann das Dashboard direkt über folgenden Pfad geöffnet werden:
+
+* `http://brautomat.local/dashboard`
+
+Diese Ansicht ist als reduziertes Info-Terminal gedacht:
+
+* es wird nur das Dashboard angezeigt
+* die übrigen Menüs und Bedienbereiche des Webinterfaces bleiben ausgeblendet
+* die Ansicht eignet sich für ein separates Display mit Webbrowser, das nur den aktuellen Braustatus zeigen soll

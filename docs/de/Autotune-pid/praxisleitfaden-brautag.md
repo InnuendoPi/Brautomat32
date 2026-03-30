@@ -1,4 +1,4 @@
-﻿# Praxisleitfaden Brautag (Symptom -> Maßnahme)
+# Praxisleitfaden Brautag (Symptom -> Maßnahme)
 
 Dieses Kapitel ist als Arbeitsanleitung für den Brautag gedacht.
 Nutze es direkt, wenn das Temperaturverhalten von der Erwartung abweicht.

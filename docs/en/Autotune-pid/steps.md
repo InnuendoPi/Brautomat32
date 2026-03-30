@@ -1,4 +1,4 @@
-﻿# AutoTune step by step
+# AutoTune step by step
 
 The practical AutoTune workflow:
 

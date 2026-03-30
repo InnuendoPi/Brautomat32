@@ -1,4 +1,4 @@
-﻿# Brew-day quick guide (symptom -> action)
+# Brew-day quick guide (symptom -> action)
 
 This page is an operator guide for brew day.
 Use it directly when temperature behavior differs from expectation.

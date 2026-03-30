@@ -472,5 +472,12 @@
   "TAB_AKT_TIMER_6": "attendere prego...",
   "TAB_AKT_STEP_9": "La sintonizzazione automatica è iniziata",
   "TAB_AKT_TIMER_7": "Continua con il pulsante Riproduci",
-  "IDS_APROF": "Profilo attivo:"
+  "IDS_APROF": "Profilo attivo:",
+  "DASH_STATE_FINISHED": "FINITO",
+  "DASH_STATE_CURRENT_STEP": "PASSO ATTUALE",
+  "DASH_STATE_PAUSED": "IN PAUSA",
+  "DASH_STATE_NEXT_STEP": "PROSSIMO PASSO",
+  "DASH_STATE_RUNNING_STEP": "PASSO IN CORSA",
+  "DASH_STATE_WAIT_TEMP": "ASPETTANDO LA TEMPERATURA",
+  "DASH_STATE_WAIT_USER": "ASPETTANDO UTENTE"
 }

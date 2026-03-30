@@ -1,4 +1,4 @@
-﻿# What's New 1.60.x
+# What's New 1.60.x
 
 This page is the high-level overview of structural changes in 1.60.x.
 Detailed explanations are maintained in the linked domain chapters.

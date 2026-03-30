@@ -1,4 +1,4 @@
-﻿# API Brautomat32
+# API Brautomat32
 
 Diese beiden Javascript Funktionen erleichtern die Kommunikation mit dem Brautomat32.  
 Sie kapseln `fetch()`-Aufrufe, behandeln Fehler, JSON/Text-Erkennung und optionale Benutzerhinweise (Toast/Alarm).
@@ -53,7 +53,8 @@ Brautomat HTTP-Endpunkte. Der WebServer nutzt CORS und unterstützt **HTTP GET**
 | Endpoint | Methode | Beschreibung |
 | ----------- | ---------- | -------------- |
 | `/` | GET | Lädt die Startseite |
-| `/index`, `/index.htm`, `/index.html` | GET | Alternative Routen für die Startseite |
+| `/index`, `/index.html` | GET | Alternative Routen für die Startseite |
+| `/dashboard`, `/dashboard/` | GET | Lädt die reduzierte Dashboard-Ansicht als Info-Terminal |
 
 ---
 
@@ -66,7 +67,6 @@ Brautomat HTTP-Endpunkte. Der WebServer nutzt CORS und unterstützt **HTTP GET**
 | `/delSensor?id=${sensorid}` | POST | Löscht einen Sensor |
 | `/reqSearchSensorAdresses?id=${sensorid}` | GET | Durchsucht verfügbare Sensor-Adressen |
 | `/senkal` | POST | Führt eine Sensorkalibrierung durch |
-| `/setSenErr?id=${sensorid}` | GET | Setzt Sensorfehler-Status (debug) |
 
 | sensorid | Beschreibung |
 | ----------- | ---------- |
@@ -182,9 +182,12 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 | `/reboot` | POST | Neustart des Geräts |
 | `/reqMisc` | GET | Allgemeine Systeminformationen |
 | `/reqVis` | GET | Visualisierungsdaten abrufen |
+| `/getLanguage` | GET | Aktuell gewählte Sprache abrufen |
 | `/setMisc` | POST | Allgemeine Einstellungen ändern |
 | `/setMiscLang` | POST | Sprache einstellen |
+| `/uploadLanguage` | POST | Sprachdatei hochladen |
 | `/rezimp` | POST | Rezept importieren |
+| `/upload` | POST | Rezeptdatei hochladen |
 | `/setMash` | POST | Maischplan setzen |
 | `/startHTTPUpdate` | POST | Firmware-Update starten |
 | `/setFerm` | POST | Gärparameter setzen |
@@ -202,7 +205,6 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 | `/Btn-Prev-Step` | GET | Vorheriger Schritt |
 | `/Btn-Edit` | POST | Edit-Modus aktivieren |
 | `/manpow` | POST | Manuelle Leistung steuern |
-| `/eraseFlash` | GET | Flash-Speicher löschen |
 
 ---
 
@@ -214,7 +216,6 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 | `/startSSE` | GET | Startet SSE-Verbindung |
 | `/checkAliveSSE` | GET | Prüft aktive SSE-Verbindungen |
 | `/reloadMashSSE` | GET | Lädt Maischdaten neu |
-| `/language` | GET | Sprachdatei abrufen |
 
 ---
 
@@ -233,6 +234,7 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 | ----------- | ---------- | -------------- |
 | `/getbf` | GET | Liste verfügbarer BrewFather-Rezepte |
 | `/bfRecipe` | POST | Rezeptdetails abrufen |
+| `/bfbatche` | POST | Legacy-/Frontend-Kompatibilität für Rezeptdetails im Batch-Kontext |
 
 ---
 
@@ -242,19 +244,17 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 | ----------- | ---------- | -------------- |
 | `/backup` | POST | System-Backup erstellen |
 | `/restore` | POST | Backup wiederherstellen |
+| `/config.txt` | GET | Aktuelle Text-Konfiguration herunterladen |
+| `/download?file=...` | GET | Beliebige Datei aus dem LittleFS herunterladen |
 
 ---
 
-## Dateiverwaltung (FSBrowser)
+## Dateisystem / Service
 
 | Endpoint | Methode | Beschreibung |
 | ----------- | ---------- | -------------- |
-| `/edit` | GET | Datei-Editor laden |
 | `/status` | GET | Systemstatus abrufen |
 | `/list` | GET | Dateiliste anzeigen |
-| `/edit` | PUT | Neue Datei erstellen |
-| `/edit` | DELETE | Datei löschen |
-| `/edit` | POST | Datei-Upload |
 
 ---
 
@@ -263,7 +263,7 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 | Dateien | Beschreibung |
 | ---------- | --------------- |
 | `/brautomat.min.css`, `/bootstrap.min.css`, `/bootstrap.min.js`, `/brautomat.min.js`, `/brautomat.ttf` | Web-Assets |
-| `/language/deutsch.json`, `/language/english.json`, `/language/norsk.json` | Sprachdateien |
+| `/language/<name>.json` | Sprachdateien |
 | `/lang.js`, `/favicon.ico` | Systemdateien |
 | `/info.mp3`, `/success.mp3`, `/warning.mp3`, `/error.mp3` | Audiodateien für Systemmeldungen |
 

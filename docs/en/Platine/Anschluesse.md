@@ -1,4 +1,4 @@
-﻿# Connections
+# Connections
 
 ![Board 2](/docs/img/Anschluesse.jpg)
 

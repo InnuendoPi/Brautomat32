@@ -1,4 +1,4 @@
-﻿# Troubleshooting
+# Troubleshooting
 
 Tips and practical fixes for common issues.
 

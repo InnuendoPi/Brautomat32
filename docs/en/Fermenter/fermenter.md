@@ -1,4 +1,4 @@
-﻿# Fermenter mode
+# Fermenter mode
 
 In fermenter mode, Brautomat32 processes the fermentation plan from top to bottom, similar to the mash plan. The control panel uses the same buttons.
 

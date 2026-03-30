@@ -3,12 +3,12 @@
 Current status for the public firmware complete suite:
 
 - Suite: `complete-suite`
-- Firmware version: `1.61 Release`
+- Firmware version: `1.61.1`
 - Suite tests: `57`
 - Underlying checks: `1023`
-- Test date: `2026-03-28`
-- Test time: `11:07:31 UTC`
-- Test duration: `47m 53s`
+- Test date: `2026-03-30`
+- Test time: `08:18:14 UTC`
+- Test duration: `50m 01s`
 - Pass: `57`
 - Fail: `0`
 - Skip: `0`
@@ -40,8 +40,7 @@ Not included in this count:
 - Enduser-specific config, backup, and recipe checks
 - Real hardware and kettle verification runs
 
-The only initially failing browser case was fixed and rechecked successfully
-on the release candidate state.
+The latest official complete-suite run completed fully green.
 
 ## Additional documented hardware runs for release
 
@@ -64,8 +63,7 @@ Automated real-case mash plan `runner_plain_real`:
 | 3 | Combined rest | `67 C` | `10 min` | `true` |
 | 4 | Mash-out | `78 C` | `1 min` | `true` |
 | 5 | Boil | `100 C` | `1 min` | `true` |
-| 6 | Boil hops | `100 C` | `1 min` | `true` |
-| 1 | Agitator OFF | `0 C` | `0 min` | `true` |
+| 6 | Boil Hallertauer Tradition 5.6% 12.4 g | `100 C` | `1 min` | `true` |
 
 ## Results
 

@@ -1,4 +1,4 @@
-﻿# Neue Sprachdatei erstellen
+# Neue Sprachdatei erstellen
 
 Erstelle eine Kopie von `data/language/de.json` und benenne die Datei mit einem
 neuen Sprachcode (2 Zeichen), zum Beispiel:

@@ -1,4 +1,4 @@
-﻿# Hardware
+# Hardware
 
 The examples below are practical ideas from the community. External links point to third-party content and products.
 

@@ -1,4 +1,4 @@
-﻿# FSM process flow 1.60 (Power User)
+# FSM process flow 1.60 (Power User)
 
 > **Note for onboarding:**  
 > This chapter is for advanced users.  

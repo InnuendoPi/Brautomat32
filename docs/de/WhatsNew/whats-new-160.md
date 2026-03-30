@@ -1,4 +1,4 @@
-﻿# Was ist neu 1.60.x
+# Was ist neu 1.60.x
 
 Dieses Kapitel ist die Übersicht der strukturellen Änderungen in 1.60.x.
 Die fachlichen Details liegen in den verlinkten Kapitel-Seiten der Anleitung.

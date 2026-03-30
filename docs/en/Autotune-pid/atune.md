@@ -1,4 +1,4 @@
-﻿# AutoTune process
+# AutoTune process
 
 > **Note for onboarding:**  
 > This chapter is for advanced users.  

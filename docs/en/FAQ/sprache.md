@@ -1,4 +1,4 @@
-﻿# Create a new language file
+# Create a new language file
 
 To add a new UI language:
 

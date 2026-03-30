@@ -1,4 +1,4 @@
-﻿# API Brautomat32
+# API Brautomat32
 
 These two Javascript functions make communication with the Brautomat32 easier.  
 They encapsulate `fetch()` calls, handle errors, JSON/text recognition, and optional user notifications (toast/alert).
@@ -53,7 +53,8 @@ Brautomat HTTP endpoints. The web server uses CORS and supports **HTTP GET**, **
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
 | `/` | GET | Loads the homepage |
-| `/index`, `/index.htm`, `/index.html` | GET | Alternative routes for the homepage |
+| `/index`, `/index.html` | GET | Alternative routes for the homepage |
+| `/dashboard`, `/dashboard/` | GET | Loads the reduced dashboard view as an info terminal |
 
 ---
 
@@ -66,7 +67,6 @@ Brautomat HTTP endpoints. The web server uses CORS and supports **HTTP GET**, **
 | `/delSensor?id=${sensorid}` | POST | Deletes a sensor |
 | `/reqSearchSensorAdresses?id=${sensorid}` | GET | Searches available sensor addresses |
 | `/senkal` | POST | Performs sensor calibration |
-| `/setSenErr?id=${sensorid}` | GET | Sets sensor error status (debug) |
 
 | sensorid | Description |
 | ----------- | ---------- |
@@ -182,9 +182,12 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 | `/reboot` | POST | Restart the device |
 | `/reqMisc` | GET | General system information |
 | `/reqVis` | GET | Get visualization data |
+| `/getLanguage` | GET | Get the currently selected language |
 | `/setMisc` | POST | Change general settings |
 | `/setMiscLang` | POST | Set language |
+| `/uploadLanguage` | POST | Upload a language file |
 | `/rezimp` | POST | Import recipe |
+| `/upload` | POST | Upload a recipe file |
 | `/setMash` | POST | Set mash plan |
 | `/startHTTPUpdate` | POST | Start firmware update |
 | `/setFerm` | POST | Set fermentation parameters |
@@ -202,7 +205,6 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 | `/Btn-Prev-Step` | GET | Previous step |
 | `/Btn-Edit` | POST | Activate edit mode |
 | `/manpow` | POST | Control manual power |
-| `/eraseFlash` | GET | Clear flash memory |
 
 ---
 
@@ -214,7 +216,6 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 | `/startSSE` | GET | Starts SSE connection |
 | `/checkAliveSSE` | GET | Checks active SSE connections |
 | `/reloadMashSSE` | GET | Reloads mash data |
-| `/language` | GET | Get language file |
 
 ---
 
@@ -233,6 +234,7 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 | ----------- | ---------- | -------------- |
 | `/getbf` | GET | List of available BrewFather recipes |
 | `/bfRecipe` | POST | Get recipe details |
+| `/bfbatche` | POST | Legacy/frontend compatibility for batch recipe detail lookup |
 
 ---
 
@@ -242,19 +244,17 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 | ----------- | ---------- | -------------- |
 | `/backup` | POST | Create system backup |
 | `/restore` | POST | Restore backup |
+| `/config.txt` | GET | Download the current text configuration |
+| `/download?file=...` | GET | Download any file from LittleFS |
 
 ---
 
-## File management (FSBrowser)
+## Filesystem / Service
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/edit` | GET | Load file editor |
 | `/status` | GET | Get system status |
 | `/list` | GET | Show file list |
-| `/edit` | PUT | Create new file |
-| `/edit` | DELETE | Delete file |
-| `/edit` | POST | File upload |
 
 ---
 
@@ -263,7 +263,7 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 | Files | Description |
 | ---------- | --------------- |
 | `/Brautomat.min.css`, `/bootstrap.min.css`, `/bootstrap.min.js`, `/Brautomat.min.js`, `/Brautomat.ttf` | Web assets |
-| `/language/deutsch.json`, `/language/english.json`, `/language/norsk.json` | Language files |
+| `/language/<name>.json` | Language files |
 | `/lang.js`, `/favicon.ico` | System files |
 | `/info.mp3`, `/success.mp3`, `/warning.mp3`, `/error.mp3` | Audio files for system messages |
 

@@ -1,4 +1,4 @@
-﻿# Parameter System
+# Parameter System
 
 ## System
 

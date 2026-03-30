@@ -1,4 +1,4 @@
-﻿# Funktionen der Schaltflächen
+# Funktionen der Schaltflächen
 
 ## Beschreibung aller Schaltflächen
 

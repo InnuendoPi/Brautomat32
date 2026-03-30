@@ -1,4 +1,4 @@
-﻿# Grundeinrichtung
+# Grundeinrichtung
 
 Der Brautomat benötigt mindestens einen Temperatursensor sowie entweder ein
 Induktionskochfeld GGM IDS oder ein relaisgesteuertes Kochfeld.

@@ -472,5 +472,12 @@
   "SUD_HEATMAX": "Enzymområde slutt [0]",
   "TAB_AKT_TIMER_6": "vennligst vent...",
   "TAB_AKT_TIMER_7": "Fortsett med Play-knappen",
-  "IDS_APROF": "Aktiv profil:"
+  "IDS_APROF": "Aktiv profil:",
+  "DASH_STATE_CURRENT_STEP": "GJELDENDE TRINN",
+  "DASH_STATE_NEXT_STEP": "NESTE TRINN",
+  "DASH_STATE_FINISHED": "FERDIG",
+  "DASH_STATE_WAIT_TEMP": "VENTER PÅ TEMPERATUR",
+  "DASH_STATE_RUNNING_STEP": "TRINN LØP",
+  "DASH_STATE_PAUSED": "PAUSE",
+  "DASH_STATE_WAIT_USER": "VENTER PÅ BRUKER"
 }

@@ -1,4 +1,4 @@
-﻿# The InnuCase
+# The InnuCase
 
 InnuCase is available in two sizes. Print files are in `Housing/InnuCase`.
 

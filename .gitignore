@@ -1,4 +1,4 @@
-# Allgemeine Build-Artefakte
+﻿# Allgemeine Build-Artefakte
 *.d
 *.slo
 *.lo
@@ -59,3 +59,7 @@
 
 # Lokale Tool-Caches
 /docs/.translation_cache.json
+/compile_commands.json
+/markdownlint-config-schema.json
+/.editorconfig
+/.markdownlint.jsonc

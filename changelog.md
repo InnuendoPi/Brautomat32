@@ -14,6 +14,13 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
+Version 1.61.1
+
+* Neu:          `http://brautomat.local/dashboard` stellt das Dashboard als reduzierte Full-Screen-Ansicht bereit, ohne restliches WebIf-Chrome
+* Korrektur:    Kochschritte werden intern jetzt über den Kesselparameter `thresTemp` (Übergang zum Kochen) erkannt statt nur über `kochenTemp`. Damit starten auch Rezept-Kochsteps korrekt, wenn `kochenTemp` auf Default `100°C` steht
+* Korrektur:    `brautomat.js` vereinheitlicht die Temperaturdarstellung im Dashboard für HLT und Sud. Der WebIf-Pfad nutzt jetzt denselben gecachten Sensor-String mit 2 Nachkommastellen
+* Korrektur:    Bei neuem SSE-Kanal lädt das WebIf den Chart-Verlauf jetzt vollständig über `/getDots` neu. Dadurch werden Zweitgeräte und Reconnects im aktiven Brau- oder Fermenterlauf robuster behandelt
+
 Version 1.61 Release
 
 * Optimiert:    Sortierung BrewFather Rezepte und Sude über die Tabellenspalten implementiert

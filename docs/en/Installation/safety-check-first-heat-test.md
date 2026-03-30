@@ -1,4 +1,4 @@
-﻿# Safety check before first heat test
+# Safety check before first heat test
 
 This is a mandatory pre-check before the first powered heating run.
 Run the first test with water only and under supervision.

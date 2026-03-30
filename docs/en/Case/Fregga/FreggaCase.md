@@ -1,4 +1,4 @@
-﻿# The FreggaCase
+# The FreggaCase
 
 FreggaCase was designed by hobby brewer Fregga.
 3D print files are in `Gehaeuse/FreggaCase/FreggaCase.zip`.

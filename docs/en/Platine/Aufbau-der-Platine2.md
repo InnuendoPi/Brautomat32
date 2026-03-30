@@ -1,4 +1,4 @@
-﻿# Structure of the board version 2
+# Structure of the board version 2
 
 This short guide describes the structure of the board. Board assembly is straightforward. This short description is intended as an aid for the inexperienced hobbyist and is not aimed at electrical engineers. Information about soldering, suitable soldering irons and solder can be found on YouTube or similar channels.
 

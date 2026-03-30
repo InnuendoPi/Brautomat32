@@ -1,4 +1,4 @@
-﻿# The controls
+# The controls
 
 The control panel is located directly below the mash plan.
 The mashing process is operated with five buttons: `Power`, `Play`, `Pause`, `Previous`, `Next`.

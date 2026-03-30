@@ -1,4 +1,4 @@
-﻿# Display
+# Display
 
 Der Brautomat kann optional mit einem Touchdisplay betrieben werden. Unterstützt werden 3.5 Zoll Touchdisplay von Nextion
 

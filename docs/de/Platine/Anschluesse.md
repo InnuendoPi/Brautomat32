@@ -1,4 +1,4 @@
-﻿# Anschlüsse
+# Anschlüsse
 
 ![Platine 2](/docs/img/Anschluesse.jpg)
 

@@ -1,4 +1,4 @@
-﻿# AutoTune Prozess
+# AutoTune Prozess
 
 > **Hinweis für den Einstieg:**  
 > Dieses Kapitel ist für fortgeschrittene Nutzer.  

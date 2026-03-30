@@ -472,5 +472,12 @@
   "TAB_AKT_TIMER_6": "S'il vous plaît, attendez...",
   "TAB_AKT_STEP_9": "Le réglage automatique a démarré",
   "TAB_AKT_TIMER_7": "Continuer avec le bouton de lecture",
-  "IDS_APROF": "Profil actif :"
+  "IDS_APROF": "Profil actif :",
+  "DASH_STATE_FINISHED": "FINI",
+  "DASH_STATE_NEXT_STEP": "PROCHAINE ÉTAPE",
+  "DASH_STATE_CURRENT_STEP": "ÉTAPE ACTUELLE",
+  "DASH_STATE_PAUSED": "EN PAUSE",
+  "DASH_STATE_RUNNING_STEP": "ÉTAPE EN COURS",
+  "DASH_STATE_WAIT_USER": "EN ATTENTE DE L'UTILISATEUR",
+  "DASH_STATE_WAIT_TEMP": "EN ATTENTE DE LA TEMPÉRATURE"
 }

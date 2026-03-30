@@ -1,4 +1,4 @@
-﻿# KleinerBrauhelfer2
+# KleinerBrauhelfer2
 
 From version 2.5.0, [KleinerBrauhelfer2](https://kleiner-brauhelfer.de/) includes an export filter for the Brautomat.
 You can build recipes in detail in KBH2 and transfer them directly into the Brautomat mash plan.

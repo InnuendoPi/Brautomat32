@@ -472,5 +472,12 @@
   "SUD_HEATMIN": "Start av enzymintervall [0]",
   "TAB_AKT_TIMER_6": "snälla vänta...",
   "TAB_AKT_TIMER_7": "Fortsätt med Play-knappen",
-  "IDS_APROF": "Aktiv profil:"
+  "IDS_APROF": "Aktiv profil:",
+  "DASH_STATE_FINISHED": "FÄRDIG",
+  "DASH_STATE_NEXT_STEP": "NÄSTA STEG",
+  "DASH_STATE_CURRENT_STEP": "AKTUELLT STEG",
+  "DASH_STATE_WAIT_TEMP": "VÄNTA PÅ TEMPERATUR",
+  "DASH_STATE_RUNNING_STEP": "STEG LÖPNING",
+  "DASH_STATE_PAUSED": "PAUS",
+  "DASH_STATE_WAIT_USER": "VÄNTAR PÅ ANVÄNDARE"
 }

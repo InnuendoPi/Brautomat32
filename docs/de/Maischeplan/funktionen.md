@@ -1,4 +1,4 @@
-﻿# Funktionen
+# Funktionen
 
 In der folgenden Beschreibung wird ein _erfundenes Beispielrezept_ verwendet. Diese Beschreibung hat nicht das Rezept zum Inhalt, sondern die Vorgehensweise beim Maischen mit dem Brautomat.
 

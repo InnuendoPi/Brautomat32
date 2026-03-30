@@ -472,5 +472,12 @@
   "TAB_AKT_TIMER_7": "Ga verder met de afspeelknop",
   "TAB_AKT_STEP_9": "AutoTune is gestart",
   "TAB_AKT_TIMER_6": "even geduld a.u.b....",
-  "IDS_APROF": "Actief profiel:"
+  "IDS_APROF": "Actief profiel:",
+  "DASH_STATE_FINISHED": "AFGEROND",
+  "DASH_STATE_NEXT_STEP": "VOLGENDE STAP",
+  "DASH_STATE_RUNNING_STEP": "STAP RENNEN",
+  "DASH_STATE_CURRENT_STEP": "HUIDIGE STAP",
+  "DASH_STATE_PAUSED": "GESLOTEN",
+  "DASH_STATE_WAIT_USER": "WACHTEN OP GEBRUIKER",
+  "DASH_STATE_WAIT_TEMP": "WACHTEN OP TEMPERATUUR"
 }

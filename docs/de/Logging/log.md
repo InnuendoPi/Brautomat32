@@ -1,4 +1,4 @@
-﻿# Logging
+# Logging
 
 ![media](/docs/img/logging.jpg)
 
