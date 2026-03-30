@@ -1,4 +1,4 @@
-﻿# PID engine reference 1.60 (Power User)
+# PID engine reference 1.60 (Power User)
 
 > **Note for onboarding:**  
 > This chapter is for advanced users.  

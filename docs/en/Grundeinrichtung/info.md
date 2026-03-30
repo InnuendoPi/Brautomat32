@@ -1,4 +1,4 @@
-﻿# Basic setup
+# Basic setup
 
 Brautomat requires at least one temperature sensor and either a GGM IDS
 induction cooker or a relay-controlled heater.

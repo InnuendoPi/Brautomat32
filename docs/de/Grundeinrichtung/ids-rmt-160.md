@@ -1,4 +1,4 @@
-﻿# IDS RMT Sendelogik 1.60 (Fortgeschrittene)
+# IDS RMT Sendelogik 1.60 (Fortgeschrittene)
 
 > **Hinweis für den Einstieg:**  
 > Dieses Kapitel ist für fortgeschrittene Nutzer.  

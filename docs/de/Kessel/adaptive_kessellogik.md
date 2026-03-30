@@ -1,4 +1,4 @@
-﻿# Adaptive Kessellogik – präzise Temperaturführung mit automatischer Intervallsteuerung
+# Adaptive Kessellogik – präzise Temperaturführung mit automatischer Intervallsteuerung
 
 > **Hinweis für den Einstieg:**  
 > Dieses Kapitel ist für fortgeschrittene Nutzer.  

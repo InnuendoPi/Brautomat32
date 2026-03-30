@@ -1,4 +1,4 @@
-﻿# The Brautomat
+# The Brautomat
 
 ![ESP32](https://img.shields.io/static/v1?label=Arduino&message=ESP32&logo=arduino&logoColor=white&color=blue)
 

@@ -1,4 +1,4 @@
-﻿# AutoTune PID
+# AutoTune PID
 
 AutoTune ermittelt für dein konkretes Setup automatisch passende Startwerte für
 `P`, `I` und `D`.

@@ -1,4 +1,4 @@
-﻿# Inhaltsverzeichnis
+# Inhaltsverzeichnis
 
 * [Brautomat](README.md)
 * [Installation](Installation/info.md)

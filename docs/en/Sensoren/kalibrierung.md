@@ -1,4 +1,4 @@
-﻿# Calibration
+# Calibration
 
 Dallas DS18B20 sensors can show small deviations from true temperature.
 Typical datasheet accuracy is about +/-0.5°C (from -10°C to 85°C).

@@ -1,4 +1,4 @@
-﻿# Parameter im Überblick
+# Parameter im Überblick
 
 Hier findest du die wichtigsten Parameter gruppiert nach Einsatzbereich.
 Wenn du neu einsteigst, arbeite zuerst mit den Standardwerten und ändere nur

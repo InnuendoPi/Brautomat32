@@ -39,6 +39,10 @@
 .vscode/c_cpp_properties.json
 
 #custom
+.editorconfig
+.markdownlint.jsonc
+compile_commands.json
+markdownlint-config-schema.json
 .DS_Store
 *.cmd
 *.ino

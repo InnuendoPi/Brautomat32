@@ -1,4 +1,4 @@
-﻿# FSM Regelablauf 1.60 (Fortgeschrittene)
+# FSM Regelablauf 1.60 (Fortgeschrittene)
 
 > **Hinweis für den Einstieg:**  
 > Dieses Kapitel ist für fortgeschrittene Nutzer.  

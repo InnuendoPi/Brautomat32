@@ -1,4 +1,4 @@
-﻿# Temperature sensor setup
+# Temperature sensor setup
 
 ## Add new sensor
 

@@ -1,4 +1,4 @@
-﻿# Easy guide to PID setup
+# Easy guide to PID setup
 
 Note: This guide applies to PID setup from version 1.60.
 

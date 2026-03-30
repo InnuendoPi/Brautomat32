@@ -1,4 +1,4 @@
-﻿# Installation
+# Installation
 
 Um den Brautomat zu nutzen, musst du die Firmware flashen und den ESP32 mit
 deinem lokalen WLAN verbinden.

@@ -1,4 +1,4 @@
-﻿# Kettle parameters
+# Kettle parameters
 
 ## Temperature control
 

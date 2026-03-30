@@ -1,4 +1,4 @@
-﻿# Display
+# Display
 
 The Brautomat can optionally be used with a touch display.
 Supported: Nextion 3.5-inch displays.

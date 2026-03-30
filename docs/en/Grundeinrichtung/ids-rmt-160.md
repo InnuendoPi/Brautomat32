@@ -1,4 +1,4 @@
-﻿# IDS RMT send logic 1.60 (Power User)
+# IDS RMT send logic 1.60 (Power User)
 
 > **Note for onboarding:**  
 > This chapter is for advanced users.  

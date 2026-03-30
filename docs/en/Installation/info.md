@@ -1,4 +1,4 @@
-﻿# Installation
+# Installation
 
 To use Brautomat, you need to flash the firmware once and connect the ESP to your local Wi-Fi.
 

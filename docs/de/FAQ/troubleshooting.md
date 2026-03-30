@@ -1,4 +1,4 @@
-﻿# Fehlerbehebung (Troubleshooting)
+# Fehlerbehebung (Troubleshooting)
 
 Praktische Maßnahmen bei typischen Problemen.
 

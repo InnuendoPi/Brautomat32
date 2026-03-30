@@ -1,4 +1,4 @@
-﻿# Aktoren
+# Aktoren
 
 ![Einstellungen Aktor](/docs/img/aktoren_einstellungen.jpg)
 

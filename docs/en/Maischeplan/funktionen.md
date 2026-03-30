@@ -1,4 +1,4 @@
-﻿# Functions
+# Functions
 
 The following description uses an _example recipe_.
 The focus is not the recipe itself, but the workflow when brewing with the Brautomat.

@@ -1,4 +1,4 @@
-﻿# Einfache Anleitung zur PID-Einstellung
+# Einfache Anleitung zur PID-Einstellung
 
 > **Sicherheits-Hinweis:**
 > Vor dem ersten Heizlauf bitte zuerst den

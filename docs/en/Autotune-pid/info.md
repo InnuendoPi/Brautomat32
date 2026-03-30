@@ -1,4 +1,4 @@
-﻿# AutoTune PID
+# AutoTune PID
 
 AutoTune determines suitable starting values for `P`, `I`, and `D` based on
 your real hardware and process behavior.

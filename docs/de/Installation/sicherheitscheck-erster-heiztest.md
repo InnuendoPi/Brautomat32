@@ -1,4 +1,4 @@
-﻿# Sicherheits-Check vor erstem Heiztest
+# Sicherheits-Check vor erstem Heiztest
 
 Dieses Kapitel ist ein Pflicht-Check vor dem ersten Heizen mit Leistung.
 Führe den ersten Testlauf immer mit Wasser und unter Aufsicht durch.

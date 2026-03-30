@@ -1,4 +1,4 @@
-﻿# The Dashboard
+# The Dashboard
 
 ![Dashboard](/docs/img/dashboard160.jpg)
 
@@ -25,3 +25,15 @@ When brewing starts, the UI automatically switches to dashboard-oriented layout:
 * next-step state reflects `autonext` (green/red indicator)
 
 You can reopen the mash plan at any time with the collapse button. During pause, the mash plan is also opened automatically. Hidden modules can still be re-enabled later in system settings.
+
+## Dashboard as an info terminal
+
+The dashboard can also be opened directly via:
+
+* `http://brautomat.local/dashboard`
+
+This view is intended as a reduced info terminal:
+
+* only the dashboard is shown
+* the remaining menus and control areas of the web interface stay hidden
+* this is useful for a separate display with a web browser that should only show the current brewing status

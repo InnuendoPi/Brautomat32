@@ -1,4 +1,4 @@
-﻿# AutoTune Schritt für Schritt
+# AutoTune Schritt für Schritt
 
 > **Sicherheits-Hinweis:**
 > Vor dem ersten Heizlauf bitte zuerst den

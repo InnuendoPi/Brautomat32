@@ -1,4 +1,4 @@
-﻿# Brautomat housing (3D print)
+# Brautomat housing (3D print)
 
 Three community housing designs are currently available for Brautomat:
 

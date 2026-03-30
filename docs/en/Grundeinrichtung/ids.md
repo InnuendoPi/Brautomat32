@@ -1,4 +1,4 @@
-﻿# Set up the cooker
+# Set up the cooker
 
 ## Create the mash kettle
 

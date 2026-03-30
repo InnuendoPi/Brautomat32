@@ -1,4 +1,4 @@
-﻿# Actuators
+# Actuators
 
 ![Actuator settings](/docs/img/aktoren_einstellungen.jpg)
 

@@ -1,4 +1,4 @@
-﻿# Adaptive kettle logic - stable temperature control with dynamic intervals
+# Adaptive kettle logic - stable temperature control with dynamic intervals
 
 > **Note for onboarding:**  
 > This chapter is for advanced users.  

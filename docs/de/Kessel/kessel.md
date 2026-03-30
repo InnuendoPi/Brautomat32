@@ -1,4 +1,4 @@
-﻿# Kessel-Konfiguration und Einsatz
+# Kessel-Konfiguration und Einsatz
 
 > **Sicherheits-Hinweis:**
 > Vor dem ersten Heizlauf bitte zuerst den

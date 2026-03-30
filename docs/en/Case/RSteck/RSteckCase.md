@@ -1,4 +1,4 @@
-﻿# The RSteckCase
+# The RSteckCase
 
 RSteckCase was designed by hobby brewer Ralf Steck.
 3D print files are in `Gehaeuse/RSteckCase/RSteckCase.zip`.

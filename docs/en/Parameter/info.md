@@ -1,4 +1,4 @@
-﻿# Parameters at a glance
+# Parameters at a glance
 
 This page groups the most relevant parameters by practical use.
 If you are new, keep defaults first and change only a few parameters per test

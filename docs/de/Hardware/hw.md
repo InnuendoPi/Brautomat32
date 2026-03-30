@@ -1,4 +1,4 @@
-﻿# Hardware
+# Hardware
 
 Die hier gezeigten Beispiele sind nur eine kleine Auswahl an Ideen. Die Links zeigen auf externe Inhalte, für die die jeweiligen Anbieter verantwortlich sind. Die Links sind mit keinem Affiliate Programm, Trading o. ä. verknüpft. Gerne können hier weitere Ideen und Bilder hinzugefügt werden.
 

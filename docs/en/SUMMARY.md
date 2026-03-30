@@ -1,4 +1,4 @@
-﻿# Table of contents
+# Table of contents
 
 * [Brautomat](README.md)
 * [Installation](Installation/info.md)
