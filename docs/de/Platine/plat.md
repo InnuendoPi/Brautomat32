@@ -1,6 +1,10 @@
 # Die Platine zum Projekt
 
-Die Platine für das Projekt Brautomat macht den Aufbau und die Bedienung sehr einfach. Die GGM IDS, die Sensoren, die Aktoren und das Display werden an die Schraubklemmblöcken des Brautomats angeschlossen.
+Die Platine für das Projekt Brautomat vereinfacht Aufbau und Anschluss der
+gesamten Anlage. Sensoren, Aktoren, Display und Heizquellen werden über die
+Schraubklemmblöcke bzw. die dafür vorgesehenen Anschlüsse mit dem Brautomat
+verbunden. Für GGM-IDS-Systeme gibt es dabei spezielle Anschlüsse, während
+relaisgesteuerte Heizquellen einfacher angebunden werden.
 
 Das Board ist ein Breakout Board für die Mikrocontroller ESP8266 und ESP32. An die Schraubklemmblöcke können Sensoren, Schalter etc. angeschlossen. Beide Boards sind universell einsetzbar und nicht auf die Projekte Braautomat oder MQTTDevice beschränkt. Zwei Anschlüsse sind fest vorgegeben:
 

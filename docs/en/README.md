@@ -35,7 +35,7 @@ The documentation is organized into three areas:
 
 - Software: installation, setup, mash plan, AutoTune, kettles/sensors/actuators
 - Hardware: board, connections, display, housing, extensions
-- Operations and service: parameters, logging, MQTT, API, troubleshooting
+- Operations and service: parameters, logging, API, troubleshooting
 
 ## Brautomat release version
 

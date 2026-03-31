@@ -8,15 +8,20 @@ In the _Mash Plan_ section, create the mash kettle via the gear icon at the top 
 
 ## Configure the cooker
 
-First, configure the cooker itself. This example uses a GGM IDS induction cooker.
+First, configure the heating source for the mash kettle. This chapter shows the
+setup of a supported GGM IDS system.
 
-The first setting is the IDS type (`IDS1` or `IDS2`). Then configure these control pins:
+The first setting is the IDS type. IDS1 and IDS5 use the same control method,
+while IDS2 is handled separately. Then configure these control pins:
 
 * PIN white [relay] - Default: D7
 * PIN yellow [Command] - Default: D6
 * PIN blue [Interrupt] - Default: - (unused)
 
-GPIO D6 and D7 are preconfigured for the GGM IDS cable (JST-HX) and also match the screw terminal layout. The interrupt pin is usually left unused and is mainly needed for troubleshooting.
+For a GGM IDS system, the active control connections are `relay` and
+`Command`. For normal first-time setup, the default values are sufficient.
+
+The `Interrupt` connection is currently not used.
 
 Next, assign a temperature sensor to the mash kettle. Choose it from the sensor list that already exists. In this basic setup, only _Sensor IDS2_ is available.
 
@@ -30,9 +35,12 @@ The parameters in the "Temperature control" tab are explained in detail in the p
 
 ## Set up PID control
 
-After the basic setup, open the PID Manager tab. PID calculates the required heating power to reach each rest temperature and keep it stable.
+After the basic setup, PID control must be configured. If you are new to
+Brautomat, start with the default values and run AutoTune afterward. Manual
+fine-tuning is not needed for the first test.
 
-The AutoTune PID chapter explains step by step how to determine suitable PID parameters.
+Step-by-step AutoTune instructions are available here:
+[AutoTune step by step](../Autotune-pid/steps.md)
 
 ## Deep dive (Power User)
 

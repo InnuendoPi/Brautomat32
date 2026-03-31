@@ -37,7 +37,7 @@ Die Dokumentation ist in drei Themenbereiche gegliedert:
 
 - Software: Installation, Grundeinrichtung, Maischeplan, AutoTune, Kessel/Sensoren/Aktoren
 - Hardware: Platine, Anschlüsse, Display, Gehäuse, Erweiterungen
-- Betrieb und Service: Parameter, Logging, MQTT, API, Fehlerbehebung
+- Betrieb und Service: Parameter, Logging, API, Fehlerbehebung
 
 ## Brautomat Release Version
 

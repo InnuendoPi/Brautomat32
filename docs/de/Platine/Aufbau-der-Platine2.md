@@ -1,6 +1,32 @@
 # Aufbau der Platine Version 2
 
-Diese kurze Anleitung beschreibt den Aufbau der Platine. Der Platinenaufbau ist nicht anspruchsvoll. Diese Kurzbeschreibung ist als Hilfe für den ungeübten Bastler gedacht und richtet sich nicht an Elektrotechniker. Informationen zum Löten, geeignete Lötkolben und Lötzin sind auf youtube oder ähnlichen Kanälen zu finden.
+Diese Anleitung beschreibt den Aufbau der Brautomat-Platine Schritt für
+Schritt. Sie richtet sich ausdrücklich an Hobbybrauer ohne Vorkenntnisse in
+Elektrotechnik.
+
+Du musst dafür nicht verstehen, wie die Elektronik im Detail funktioniert.
+Wichtig ist vor allem:
+
+- die richtigen Bauteile an der richtigen Position einsetzen
+- sauber löten
+- die Bilder mit jedem Schritt vergleichen
+- bei Unsicherheit lieber einmal mehr prüfen als weiterlöten
+
+Begriffe wie JST-HX, DS18B20 oder PT100x werden nur so weit erklärt, wie sie
+für den Aufbau nötig sind.
+
+## Vor dem Start
+
+Du brauchst:
+
+- die Platine
+- die Bauteile aus der Teileliste
+- einen Lötkolben mit feiner Spitze
+- Lötzinn
+- einen Seitenschneider
+- gutes Licht und etwas Zeit
+
+Wenn du noch nie gelötet hast, übe zuerst an einem einfachen Reststück.
 
 Die Stückliste der Platine:
 

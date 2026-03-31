@@ -8,15 +8,22 @@ Im ersten Abschnitt _Maischeplan_ wird der MaischeSud-Kessel über das Zahnrad o
 
 ## Konfiguration eines Kochfelds
 
-Zunächst muss ein Kochfeld konfiguriert werden. In dieser Grundeinrichtung wird ein GGM IDS Induktionskochfeld eingerichtet.
+Zunächst muss die Heizquelle für den MaischeSud-Kessel konfiguriert werden.
+In diesem Kapitel wird die Einrichtung eines unterstützten GGM-IDS-Systems
+gezeigt.
 
-Die erste Einstellung betrifft den IDS-Typ, bei dem IDS1 oder IDS2 ausgewählt werden kann. Anschließend folgen drei Steuerungsparameter:
+Die erste Einstellung betrifft den IDS-Typ. IDS1 und IDS5 werden identisch
+angesteuert, IDS2 separat. Anschließend folgen die zugehörigen
+Steuerungsparameter:
 
 * PIN weiß [Relais] - Standard: D7
 * PIN gelb [Command] - Standard: D6
 * PIN blau [Interrupt] - Standard: - (unbelegt)
 
-Diese GPIOs (D6 und D7) sind für das GGM IDS-Anschlusskabel mit JST-HX-Buchse bzw. den Schraubklemmblock vorkonfiguriert. Der Interrupt-Pin bleibt in der Regel unbelegt und wird nur zur Fehlersuche verwendet.
+Für ein GGM-IDS-System werden die aktiven Steueranschlüsse `Relais` und
+`Command` verwendet. Für den normalen Einstieg reichen die Standardwerte.
+
+Der Anschluss `Interrupt` wird aktuell nicht verwendet.
 
 Als nächstes muss ein Temperatursensor dem MaischeSud-Kessel zugewiesen werden. Die Auswahl erfolgt aus einer Liste bereits eingerichteter Sensoren. In dieser Grundeinrichtung ist nur der Sensor _Sensor IDS2_ vorhanden, der entsprechend ausgewählt wird.
 
@@ -30,9 +37,12 @@ Die Parameter im Reiter "Temperatursteuerung" werden im Abschnitt "Alle Paramete
 
 ## Einrichtung des PID-Controllers
 
-Nach der Grundkonfiguration muss der PID-Controller im Tab PID Manager eingerichtet werden. Der PID Controller berechnet automatisch die erforderliche Leistung für das Kochfeld, um die Maische-Temperatur (Ist-Temperatur) auf die Rast-Temperatur zu bringen. Eine präzise PID-Konfiguration sorgt dafür, dass die Rast-Temperatur über die gesamte Rast-Dauer konstant bleibt.
+Nach der Grundkonfiguration muss der PID-Controller eingerichtet werden. Wenn
+du neu einsteigst, arbeite zuerst mit den Standardwerten und führe danach
+AutoTune aus. Eigene Feineinstellungen sind für den ersten Test nicht nötig.
 
-Im Abschnitt AutoTune PID wird Schritt für Schritt erläutert, wie die PID-Parameter ermittelt werden.
+Wie AutoTune durchgeführt wird, ist hier Schritt für Schritt beschrieben:
+[AutoTune Schritt für Schritt](../Autotune-pid/steps.md)
 
 ## Vertiefung (Fortgeschrittene)
 

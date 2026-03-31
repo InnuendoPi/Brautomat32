@@ -1,6 +1,31 @@
 # Structure of the board version 2
 
-This short guide describes the structure of the board. Board assembly is straightforward. This short description is intended as an aid for the inexperienced hobbyist and is not aimed at electrical engineers. Information about soldering, suitable soldering irons and solder can be found on YouTube or similar channels.
+This guide explains how to assemble the Brautomat board step by step. It is
+written for hobby brewers without a background in electrical engineering.
+
+You do not need to understand all electronics details to build the board.
+What matters most is:
+
+- placing the correct parts in the correct positions
+- soldering cleanly
+- comparing each step with the photos
+- stopping and checking again if something looks unclear
+
+Terms such as JST-HX, DS18B20, or PT100x are explained only as far as needed
+for assembly.
+
+## Before you start
+
+You need:
+
+- the board
+- the parts from the list below
+- a soldering iron with a fine tip
+- solder
+- side cutters
+- good light and a bit of time
+
+If you have never soldered before, practice first on a simple scrap board.
 
 Board parts overview:
 

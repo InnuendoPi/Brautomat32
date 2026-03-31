@@ -1,7 +1,8 @@
 # Basic setup
 
-Brautomat requires at least one temperature sensor and either a GGM IDS
-induction cooker or a relay-controlled heater.
+Brautomat requires at least one temperature sensor and at least one suitable
+heating source. Depending on the setup, the currently supported options are
+the GGM models IDS1, IDS2, and IDS5, as well as relay-driven heaters.
 
 This chapter only covers required baseline setup steps.
 Optional and technical details are covered in later chapters.

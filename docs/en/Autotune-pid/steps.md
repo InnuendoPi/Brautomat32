@@ -11,9 +11,8 @@ The practical AutoTune workflow:
    c. Turn on the agitator.
 2. Enter this value in `Kettle volume in liters`.
 3. Enable `PID AutoTune`.
-4. Enable `AutoTune debug`.
-5. Save settings.
-6. Start AutoTune with the power button.
+4. Save settings.
+5. Start AutoTune with the power button.
 
 ![AutoTune2](/docs/img/IDS-AutoTune-start.jpg)
 
@@ -21,12 +20,12 @@ AutoTune takes about 5 minutes and stops automatically. The detected system para
 
 The key AutoTune result is dead time `L` and slope `R`. PID values are then derived from these values.
 
-If `AutoTune debug` is enabled, you can review `AutoTune_log.txt` in the file browser.
+## Optional: diagnostics if something looks wrong
 
-Result files are also written as JSON:
+Only if AutoTune does not behave plausibly or needs targeted checking:
 
-* `idsAutoTune.txt`
-* `sudAutoTune.txt`
-* `hltAutoTune.txt`
+- enable `AutoTune debug`
+- review `autotune_log.txt`
+- inspect `idsAutoTune.txt`, `sudAutoTune.txt`, or `hltAutoTune.txt` only when needed for diagnostics
 
-These files are for diagnostics and documentation; they are not required for normal operation.
+These files are informational only and are not required for normal operation.

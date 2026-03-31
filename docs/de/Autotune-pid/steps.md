@@ -20,9 +20,8 @@ Das praktische Vorgehen für AutoTune sieht wie folgt aus:
     c. Schalte das Rührwerk ein
 2. Trage das typische Volumen in das Eingabefeld "Kesselvolumen in Liter" ein
 3. Aktiviere „PID AutoTune“
-4. Aktiviere „AutoTune debug“
-5. Speichere diese Einstellung
-6. Mit einem Klick auf den Power-Button wird der AutoTune-Prozess gestartet.
+4. Speichere diese Einstellung
+5. Mit einem Klick auf den Power-Button wird der AutoTune-Prozess gestartet.
 
 ![AutoTune2](/docs/img/IDS-AutoTune-start.jpg)
 
@@ -32,9 +31,13 @@ automatisch gespeichert.
 Das Ergebnis von AutoTune sind die Totzeit `L` und die Steigrate `R`.
 Aus diesen beiden Parametern werden `P`, `I` und `D` berechnet.
 
-Wenn der AutoTune-Prozess beendet ist und "AutoTune debug" aktiviert wurde,
-kann über den Explorer das Protokoll `autotune_log.txt` eingesehen werden.
-In dieser Protokolldatei werden alle Informationen protokolliert.
-In den Dateien `idsAutoTune.txt`, `sudAutoTune.txt` bzw. `hltAutoTune.txt`
-wird das Ergebnis von AutoTune im JSON-Format gespeichert.
-Die Dateien sind rein informativ und werden für den Betrieb nicht benötigt.
+## Optional: Diagnose bei Problemen
+
+Nur wenn AutoTune nicht plausibel arbeitet oder gezielt geprüft werden soll:
+
+- „AutoTune debug“ aktivieren
+- das Protokoll `autotune_log.txt` prüfen
+- die Dateien `idsAutoTune.txt`, `sudAutoTune.txt` bzw. `hltAutoTune.txt`
+  nur bei Bedarf zur Diagnose ansehen
+
+Diese Dateien sind rein informativ und werden für den Betrieb nicht benötigt.
