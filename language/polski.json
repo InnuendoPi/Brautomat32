@@ -33,7 +33,7 @@
   "CARD_SEN_NAME": "Czujniki",
   "CLEARCHART_TT": "Usuń wykres",
   "BF_SELECT":["wyłączony", "Przepisy", "Napar w planowaniu", "Słodkie napary", "Zaparzać w fermentacji", "Sude ukończone", "Sude Wszystko"],
-  "DOWNCHART_TT": "Pobierz wykres w formacie JPEG",
+  "DOWNCHART_TT": "Pobierz wykres w formacie PNG",
   "COLLAPSECHART_TT": "Zwiń wykres",
   "CLEARMASH_TT": "usuń plan zacierania stołów",
   "EXPLORER": "Odkrywca",

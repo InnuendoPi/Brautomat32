@@ -145,7 +145,7 @@
   "MISC_TT_LANG": "Select language",
   "RELOADCHART_TT": "reload Chart",
   "CLEARCHART_TT": "erase Chart",
-  "DOWNCHART_TT": "download chart as JPEG",
+  "DOWNCHART_TT": "download chart as PNG",
   "COLLAPSECHART_TT": "Chart einklappen",
   "UP_TEXT1": "Firmware Update release branch",
   "UP_TEXT2": "device automatically restarts several times",

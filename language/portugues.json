@@ -34,7 +34,7 @@
   "BF_SELECT":["desabilitado", "Receitas", "Preparar no planejamento", "Cervejas doces", "Preparar em fermentação", "Sude Concluído", "Sude tudo"],
   "CLEARCHART_TT": "Excluir gráfico",
   "COLLAPSECHART_TT": "Recolher gráfico",
-  "DOWNCHART_TT": "Baixe o gráfico como JPEG",
+  "DOWNCHART_TT": "Baixe o gráfico como PNG",
   "CLEARMASH_TT": "excluir plano de mash de tabela",
   "EXPLORER": "Explorador",
   "EDITSUD_TT": "Configurações do plano Mash",

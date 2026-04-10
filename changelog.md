@@ -1,7 +1,7 @@
 ﻿# Changelog
 
 ESP32 Arduino 3.3.7 ESP-IDF v5.5.4\
-VSCode 1.113 pioarduino IDE 1.3.2\
+VSCode 1.115 pioarduino IDE 1.3.4\
 InnuAPID AutoTune PID lib 1.10.18\
 InnuTask lib 0.10.16\
 InnuNextion Display lib 0.9\
@@ -14,64 +14,48 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
+Version 1.61.2
+
+* Neu:          Dashboard-Chart unterstützt lose, nicht kesselgebundene Sensoren als Zusatzkurven
+* Optimiert:    Runtime-Snapshot und Controller-Deck für Power, Play, Pause, Prev und Next zentralisiert
+* Geändert:     FSM-owned Runtime-Core ersetzt die alten produktiven Laufzeit-Globals
+* Optimiert:    Upload-/Import-Randpfade und Sonderbefehl-Dispatch außerhalb von `Import.cpp` entdoppelt
+* Optimiert:    Import bereinigt, Altkommentare reduziert und kleine Shared-Helper eingeführt
+* Korrektur:    Dashboard-Chart-Legende und Chart-Download korrigiert; PNG-Export nutzt jetzt weißen Hintergrund
+
 Version 1.61.1
 
 * Neu:          `http://brautomat.local/dashboard` stellt das Dashboard als reduzierte Full-Screen-Ansicht bereit, ohne restliches WebIf-Chrome
-* Korrektur:    Kochschritte werden intern jetzt über den Kesselparameter `thresTemp` (Übergang zum Kochen) erkannt statt nur über `kochenTemp`. Damit starten auch Rezept-Kochsteps korrekt, wenn `kochenTemp` auf Default `100°C` steht
-* Korrektur:    `brautomat.js` vereinheitlicht die Temperaturdarstellung im Dashboard für HLT und Sud. Der WebIf-Pfad nutzt jetzt denselben gecachten Sensor-String mit 2 Nachkommastellen
-* Korrektur:    Bei neuem SSE-Kanal lädt das WebIf den Chart-Verlauf jetzt vollständig über `/getDots` neu. Dadurch werden Zweitgeräte und Reconnects im aktiven Brau- oder Fermenterlauf robuster behandelt
+* Korrektur:    Kochschritte werden intern jetzt über den Kesselparameter `thresTemp` erkannt statt nur über `kochenTemp`
+* Korrektur:    Das Dashboard vereinheitlicht die Temperaturdarstellung für HLT und Sud
+* Korrektur:    Bei neuem SSE-Kanal lädt das WebIf den Chart-Verlauf vollständig über `/getDots` neu
 
 Version 1.61 Release
 
-* Optimiert:    Sortierung BrewFather Rezepte und Sude über die Tabellenspalten implementiert
-* Optimiert:    Sortierung BrewFather Rezepte und Sude aus Firmware in den Browser verschoben
-* Optimiert:    Pagination für BrewFather Rezepte und Sude an `start_after=<letzte_id>` angepasst
-* Korrektur:    maximale Anzahl an BrewFather Rezepten und Sude auf 300 beschränkt
-* Geändert:     Anpassungen BrewFather API aktualisiert (Stand 3.0.0 - 12.03.2026)
 * Update:       ESP-IDF 5.5.4
-* Optimiert:    WebIf-Initial- und Reload handling optimiert (`reqVis`, `cfgjson`, Plan-Header, `/channel`, `/checkAliveSSE`, Reconnect, Sichtbarkeit)
-* Optimiert:    WebIf-Listen und Modalpfade (`Actor`, `Sensor`, `Sud`, `System`, `Induction`, `HLT`, `Sud kettle`) optimiert. Select-Aufbau, Profil-Listen, PID-Tune-Init und Sichtbarkeitslogik sind kompakter und einheitlich. Redundanten SSE Informationen entfernt
-* Korrektur:    gitbook links
-* Update:       ESPAsyncWebServer 3.10.3
-* Update:       pioarduino 1.3.1
-* Korrektur:    Off-by-one im `NEXT_STEP`-Pfad behoben. `NEXT` blockiert am letzten gültigen Maische-Schritt jetzt korrekt; zuvor konnte der Ablauf auf einen ungültigen Step-Index weiterlaufen
-* Korrektur:    Fermenter-Stop über `Btn-Power` räumt den Prozess jetzt sauber auf; `MODE_FERM -> MODE_NONE` ruft `stopFerm()` direkt auf statt `mashState` und Timer inkonsistent stehen zu lassen
-* Korrektur:    `setFerm(...)` persistiert den aktiven Fermenterplan jetzt direkt in `config.txt`; dadurch funktioniert Reboot-Resume im Ramp-Step und im finalen Step wieder konsistent
-* Korrektur:    `/setFerm` akzeptiert jetzt zusätzlich vollständige Fermenter-Planobjekte mit `misc[]`/`ferm[]`, übernimmt `Fername`, `duration` und `autonext` sauber und vermeidet damit leere Namen sowie fehleranfällige Zwischenkonvertierungen
-* Korrektur:    `/setFerm` schreibt Fermenterpläne explizit auf `/Fermenter/...`-Ziele
-* Korrektur:    `tempGateOk()` blockiert den Fortschritt in `WAIT_TEMP` jetzt bei ungültigem oder fehlerhaftem Step-Sensor zuverlässig; die bestehende `ErrOut`-Ausgangslogik bleibt dabei unverändert
-* Korrektur:    der alte automatische Sensorfehler-Pfad im Maischeprozess erzwingt in `RUNNING_STEP` kein implizites `MASH_PAUSED` und kein stilles Auto-Resume mehr; Ausgang und PID bleiben bei `ErrOut=0` weiter sicherheitsorientiert auf `0`
-* Korrektur:    `GET /Btn-Power?statePower=...` weist fehlende Parameter jetzt sauber mit `400` zurück statt still `200 OK` zu liefern
-* Korrektur:    JSON-POST-Routen wie `/setMisc` und `/setMiscLang` setzen ihre erlaubten HTTP-Methoden jetzt explizit; damit greifen die Handler trotz fehlerhafter Default-Initialisierung in der gebündelten `ESPAsyncWebServer`-Library wieder zuverlässig statt `404 Not found` zu liefern
-* Korrektur:    SSE-Kanalvergabe reserviert freie Kanäle jetzt atomar bereits in `/channel`; hängen gebliebene Reservierungen laufen per Timeout aus und verdrängen parallele Clients nicht mehr
-* Korrektur:    `checkAliveSSE()` arbeitet jetzt mit einem unter dem SSE-Kanal-Mux gezogenen Snapshot von Kanalstatus, Session-ID und Client-Status; stale Sessions werden nur nach Re-Check des aktuellen Zustands bereinigt
-* Korrektur:    Sensor-Adressscan im WebIf auf asynchronen Start/Status-Pfad umgestellt, der blockierende Legacy-Sync-Fallback wurde entfernt
-* Korrektur:    Sensor-Mutationen aktualisieren Runtime, SSE, Display und Kesselpfad konsistent; Sensorlöschungen ziehen alle betroffenen `senid`-Referenzen korrekt nach
-* Korrektur:    Config-Save liest Sensoren über konsistente Snapshots; ungültige Sensorzuweisungen aus Config/Profilen werden auf `-1` bereinigt statt still falsch weiterzulaufen
-* Optimiert:    aktiver Sensor-SSE-Pfad reduziert unnötige `String`-Allokationen und formatiert zyklische Werte über feste C-Buffer
-* Korrektur:    `chartdots.json` wird für `/getDots` nur noch kurz unter Chart-Mutex eingelesen und vor dem Senden wieder geschlossen; Chart-Readback und Cleanup arbeiten dadurch robuster
-* Korrektur:    Backup-Erzeugung schreibt `backup.json` inkrementell auf LittleFS statt das Gesamtdokument vollständig im RAM zu erstellen
-* Korrektur:    Restore liest `config[]` schlüsselbasiert statt positionsabhängig
-* Korrektur:    Restore schützt den JSON-Import mit klaren Größen-/Heap-Grenzen und bricht zu große `restore.json`-Dateien mit Diagnose sauber ab
-* Optimiert:    Restore stoppt vor dem JSON-Parse zusätzlich FreeRTOS Tasks und pausiert SSE. Bei Restore-Fehler werden sie wieder sauber gestartet
-* Korrektur:    Captive-Portal WLAN-Scan läuft jetzt asynchron mit Ergebnis-Cache; `/scan` blockiert den Request nicht mehr und serialisiert SSIDs/JSON robust statt per String-Verkettung
-* Korrektur:    SSE-Kanäle werden bei echten Disconnects sofort freigegeben; getrennte Clients blockieren keine Event-Kanäle mehr bis zum nächsten Alive-Check
-* Korrektur:    Dateibrowser/FS-Editor verwendet für `/list`, `/download`, `/edit` und Uploads nun eine einheitliche Pfadnormalisierung
-* Korrektur:    Rekursives Löschen im FS-Editor entfernt verschachtelte Verzeichnisse wieder zuverlässig und meldet Fehler sauber an das WebIf zurück
-* Korrektur:    der FS-Editor hat auch bei fehlerhaften Uploads über `/edit` und `/language` 200 OK an das WebIf zurückgeliefert
-* Korrektur:    Zugriffe auf `chartdots.json` sind jetzt serialisiert; `writeDotsAll()`, `removeDots()` und der Legacy-Dot-Pfad verwenden einen gemeinsamen Mutex und öffnen Dateien erst kurz vor dem eigentlichen Schreiben
-* Korrektur:    Dateischreibvorgänge für Konfigurationen, Profile, Maischeplan, Fermenter-, Import- und Logdateien prüfen jetzt vollständige JSON-Ausgabe; bei Fehlern werden defekte Dateien entfernt und Vorgänge sauber abgebrochen
-* Korrektur:    Backup-Erzeugung bricht bei unvollständigen oder fehlerhaften Einträgen jetzt konsequent mit Cleanup ab statt still unvollständige Backups zu erzeugen
-* Korrektur:    Dateihandling im Maischeplan schließt offene Dateien auch bei Formatkonvertierung und Fehlerpfaden zuverlässiger
-* Korrektur:    WLAN-Startlogik erkennt Fehler beim Zurücksetzen des BSSID-Locks und verhindert problematische Fallback-Verbindungen
-* Geändert:     Nextion auf Hardware-Serial überarbeitet. Deferred-Refresh Reste und Code Fragmente aus SoftSerial entfernt
-* Geändert:     Performance Steiergung für das Senden von Daten an das Display
-* Geändert:     Das Dateihandle für handleUploadLanguage hängt jetzt am Request (request->_tempFile). global/shared Objekt ersetzt
+* Optimiert:    Brewfather-Sortierung und Pagination überarbeitet
+* Optimiert:    WebIf-Initial- und Reload-Handling vereinheitlicht
+* Optimiert:    WebIf-Listen und Modalpfade kompakter und einheitlicher umgesetzt
+* Korrektur:    JSON-POST-Routen setzen ihre HTTP-Methoden wieder zuverlässig
+* Korrektur:    SSE-Kanalvergabe, Restore, Captive-Portal-Scan und Dateihandling robuster gemacht
+* Geändert:     Nextion auf Hardware-Serial überarbeitet und Display-Pfad beschleunigt
+
+Version 1.60.3 Hotfix 2026-03-04
+
 * Geändert:     Backup und Restore optimiert und korrigiert
 * Geändert:     globales File Objekt ersetzt (parallele Zugriffe)
+
+Version 1.60.2 Hotfix 2026-03-03
+
 * Update:       ArduinoJSON 7.4.3 Fix a buffer overrun in `as<T>()` (issue #2220)
 * Geändert:     MMum Rezept Import werden die Steps Ein- und Abmaischen bei validen Temperaturen immer erstellt
+
+Version 1.60.1 Hotfix 2026-03-02
+
 * Korrektur:    die Chart für Kessel Sud war an einem falschen visible flag gebunden
+
+Version 1.60.1 Hotfix 2026-02-28
+
 * Korrektur:    WebIf `apiPOST` zeigt bei HTTP-Fehlern zusätzlich den Response-Body an (bessere Diagnose)
 * Geändert:     Cache-Strategie WebServer präzisiert: `index/language` mit `no-store`, `brautomat.min.css/js` mit `no-cache,must-revalidate`, `bootstrap.*` mit `max-age=86400`
 * Geändert:     CORS auf den bisherigen kompatiblen Stand zurückgestellt (`Access-Control-Allow-Origin: *`, Standard-Allow-Headers/Methods, `Max-Age=600`)

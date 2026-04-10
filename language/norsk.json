@@ -145,7 +145,7 @@
   "MISC_TT_LANG": "Språkvalg",
   "RELOADCHART_TT": "Last diagram på nytt",
   "CLEARCHART_TT": "Slett diagram",
-  "DOWNCHART_TT": "Last ned diagram som JPEG",
+  "DOWNCHART_TT": "Last ned diagram som PNG",
   "COLLAPSECHART_TT": "Skjul diagram",
   "UP_TEXT1": "Firmware-oppdatering (release branch)",
   "UP_TEXT2": "Enheten starter automatisk flere ganger på nytt",
