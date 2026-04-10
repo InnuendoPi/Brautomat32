@@ -1,7 +1,7 @@
 ﻿# Changelog
 
-ESP32 Arduino 3.3.7 ESP-IDF v5.5.2\
-VSCode 1.110 pioarduino IDE 1.1.5\
+ESP32 Arduino 3.3.7 ESP-IDF v5.5.4\
+VSCode 1.115 pioarduino IDE 1.3.4\
 InnuAPID AutoTune PID lib 1.10.18\
 InnuTask lib 0.10.16\
 InnuNextion Display lib 0.9\
@@ -13,6 +13,32 @@ InnuFramework CSS/JS bootstrap 5.3.8
 * Breaking:     Finale Anpassung für WebUpdates von Version 1.59 oder älter
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
+
+Version 1.61.2
+
+* Neu:          Dashboard-Chart unterstützt lose, nicht kesselgebundene Sensoren als Zusatzkurven
+* Optimiert:    Runtime-Snapshot und Controller-Deck für Power, Play, Pause, Prev und Next zentralisiert
+* Geändert:     FSM-owned Runtime-Core ersetzt die alten produktiven Laufzeit-Globals
+* Optimiert:    Upload-/Import-Randpfade und Sonderbefehl-Dispatch außerhalb von `Import.cpp` entdoppelt
+* Optimiert:    Import bereinigt, Altkommentare reduziert und kleine Shared-Helper eingeführt
+* Korrektur:    Dashboard-Chart-Legende und Chart-Download korrigiert; PNG-Export nutzt jetzt weißen Hintergrund
+
+Version 1.61.1
+
+* Neu:          `http://brautomat.local/dashboard` stellt das Dashboard als reduzierte Full-Screen-Ansicht bereit, ohne restliches WebIf-Chrome
+* Korrektur:    Kochschritte werden intern jetzt über den Kesselparameter `thresTemp` erkannt statt nur über `kochenTemp`
+* Korrektur:    Das Dashboard vereinheitlicht die Temperaturdarstellung für HLT und Sud
+* Korrektur:    Bei neuem SSE-Kanal lädt das WebIf den Chart-Verlauf vollständig über `/getDots` neu
+
+Version 1.61 Release
+
+* Update:       ESP-IDF 5.5.4
+* Optimiert:    Brewfather-Sortierung und Pagination überarbeitet
+* Optimiert:    WebIf-Initial- und Reload-Handling vereinheitlicht
+* Optimiert:    WebIf-Listen und Modalpfade kompakter und einheitlicher umgesetzt
+* Korrektur:    JSON-POST-Routen setzen ihre HTTP-Methoden wieder zuverlässig
+* Korrektur:    SSE-Kanalvergabe, Restore, Captive-Portal-Scan und Dateihandling robuster gemacht
+* Geändert:     Nextion auf Hardware-Serial überarbeitet und Display-Pfad beschleunigt
 
 Version 1.60.3 Hotfix 2026-03-04
 

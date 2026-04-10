@@ -27,14 +27,9 @@ Falls kein COM-Port erscheint, installiere passende USB-Treiber:
 `Flashen.cmd` nutzt `esptool.exe`:
 <https://github.com/espressif/esptool>
 
-### Manuelles Flashen (nur wenn `Flashen.cmd` nicht funktioniert)
+### Manuelles Flashen (MS Windows, macOS, Linux)
 
-Dieser Abschnitt ist nur für Sonderfälle gedacht. Für die meisten Nutzer reicht
-unter Windows der Start von `Flashen.cmd`.
-
-> **Hinweis für Einsteiger:**
-> Die folgenden Befehle sind nur für manuelles Recovery oder Sonderfälle
-> gedacht. Für den normalen Einstieg sind sie nicht erforderlich.
+Wenn das Skript nicht nutzbar ist, kannst du manuell flashen.
 
 Schritt 1 - Flash löschen:
 

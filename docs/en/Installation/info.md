@@ -28,14 +28,9 @@ If no COM port appears, install USB drivers (Windows/macOS):
 
 The 64-bit Windows binary is included in the ZIP archive.
 
-### Manual flashing (only if `Flashen.cmd` does not work)
+### Manual flashing (Windows, macOS, Linux)
 
-This section is intended only for special cases. For most users on Windows,
-starting `Flashen.cmd` is sufficient.
-
-> **Note for beginners:**
-> The following commands are only needed for manual recovery or special cases.
-> They are not required for normal first-time setup.
+If the script cannot be used, flash manually.
 
 ESP32 step 1 - erase flash:
 

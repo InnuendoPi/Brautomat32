@@ -1,8 +1,7 @@
 # Grundeinrichtung
 
-Der Brautomat benötigt mindestens einen Temperatursensor sowie mindestens eine
-geeignete Heizquelle. Unterstützt werden je nach Setup aktuell die
-GGM-Modelle IDS1, IDS2 und IDS5 sowie relaisgesteuerte Heizquellen.
+Der Brautomat benötigt mindestens einen Temperatursensor sowie entweder ein
+Induktionskochfeld GGM IDS oder ein relaisgesteuertes Kochfeld.
 
 In dieser Grundeinrichtung werden zunächst nur die Pflichtschritte behandelt.
 Optionale und technische Details folgen in späteren Kapiteln.
