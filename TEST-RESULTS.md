@@ -3,13 +3,14 @@
 Current status for the public firmware complete suite:
 
 - Suite: `complete-suite`
-- Firmware version: `1.61.1`
-- Suite tests: `57`
-- Underlying checks: `1023`
-- Test date: `2026-03-30`
-- Test time: `08:18:14 UTC`
-- Test duration: `50m 01s`
-- Pass: `57`
+- Firmware version: `1.61.2`
+- Suite tests: `62`
+- Underlying checks: `1130`
+- Test date: `2026-04-09`
+- Test time: `16:17:06 UTC`
+- Test duration: `53m 56s`
+- Pass: `62`
+- Warn: `0`
 - Fail: `0`
 - Skip: `0`
 
@@ -19,6 +20,7 @@ Current status for the public firmware complete suite:
 - System update
 - Configuration and backup
 - Browser UI core
+- Runtime and controller API contract
 - Mash recipe import
 - Mash plan flow
 - Manual mode
@@ -29,7 +31,7 @@ Current status for the public firmware complete suite:
 
 ## Scope
 
-This file summarizes the latest completed public 57-test
+This file summarizes the latest completed public 62-test
 complete-suite run.
 It also shows the total number of checks executed inside it.
 
@@ -40,30 +42,8 @@ Not included in this count:
 - Enduser-specific config, backup, and recipe checks
 - Real hardware and kettle verification runs
 
-The latest official complete-suite run completed fully green.
-
-## Additional documented hardware runs for release
-
-These release-specific hardware runs were executed successfully and are
-documented separately.
-They support the release assessment and are not included in the public
-57-test complete-suite count above.
-
-| Run | Result | Notes |
-| --- | ------ | ----- |
-| PT1000 live readiness | PASS | Productive device with PT1000; expected sensor types `DS18B20` and `PT1000` present; live value finite |
-| Full real mash plan with PT1000 and IDS2 | PASS | Documented productive setup (`36 l` kettle, `28 l` water, `IDS2`, `PT1000`, `DS18B20`, `pump`, `agitator`); testing time `1 h 08 min`; clean finish to `IDLE` |
-
-Automated real-case mash plan `runner_plain_real`:
-
-| Step | Name | Target | Timer | Auto |
-| --- | --- | --- | --- | --- |
-| 1 | Agitator ON | `0 C` | `0 min` | `true` |
-| 2 | Test wait | `30 C` | `1 min` | `false` |
-| 3 | Combined rest | `67 C` | `10 min` | `true` |
-| 4 | Mash-out | `78 C` | `1 min` | `true` |
-| 5 | Boil | `100 C` | `1 min` | `true` |
-| 6 | Boil Hallertauer Tradition 5.6% 12.4 g | `100 C` | `1 min` | `true` |
+The latest official complete-suite run finished fully green for the
+published release assessment.
 
 ## Results
 
@@ -77,7 +57,7 @@ Automated real-case mash plan `runner_plain_real`:
 | 6 | LittleFS flash | PASS |
 | 7 | Backup restore after filesystem flash | PASS |
 | 8 | Firmware and web interface self-update | PASS |
-| 9 | Backup and restore baseline | PASS |
+| 9 | Baseline Testgeraet 2026-03-10 | PASS |
 | 10 | Web interface reload core | PASS |
 | 11 | Web interface dashboard core | PASS |
 | 12 | Web interface mash/fermenter view switch | PASS |
@@ -92,37 +72,42 @@ Automated real-case mash plan `runner_plain_real`:
 | 21 | Web interface system modal | PASS |
 | 22 | Web interface sensor modal | PASS |
 | 23 | Web interface actor modal | PASS |
-| 24 | Brautomat import | PASS |
-| 25 | kleinerBrauhelfer2 import | PASS |
-| 26 | MMUM import | PASS |
-| 27 | Brewfather import | PASS |
-| 28 | Mash start to running step | PASS |
-| 29 | Mash boil and hop path | PASS |
-| 30 | Pause and continue in running step | PASS |
-| 31 | Wait-user: back and continue | PASS |
-| 32 | Last step blocks next | PASS |
-| 33 | Resume into boil step | PASS |
-| 34 | Normal finish | PASS |
-| 35 | Finish with manual last step | PASS |
-| 36 | Manual heating mode | PASS |
-| 37 | Actor command sequence | PASS |
-| 38 | Invalid actor command to wait-user | PASS |
-| 39 | Special command: HLT / Nachguss | PASS |
-| 40 | Special command: Mash / IDS | PASS |
-| 41 | Special command: Sud / MLT | PASS |
-| 42 | Special command: Mash threshold output | PASS |
-| 43 | Special command: Mash profile | PASS |
-| 44 | Special command: Sud profile | PASS |
-| 45 | Special command: HLT profile | PASS |
-| 46 | Sensor error hook | PASS |
-| 47 | Wait-temp: sensor fault escalates | PASS |
-| 48 | Running step: sensor fault pauses timer | PASS |
-| 49 | Controlled stop in final boil timer step | PASS |
-| 50 | Reboot/resume in final boil timer step | PASS |
-| 51 | Fermenter cooling control | PASS |
-| 52 | Fermenter heating control | PASS |
-| 53 | Fermenter automatic step transition | PASS |
-| 54 | Fermenter ramp step transition | PASS |
-| 55 | Fermenter three-step sequence | PASS |
-| 56 | Fermenter reboot/resume in ramp step | PASS |
-| 57 | Fermenter reboot/resume in final step | PASS |
+| 24 | Testflow-Vertrag Schema 4 | PASS |
+| 25 | Controller API blockiert bei Power-Off | PASS |
+| 26 | Brautomat MueHell2025 | PASS |
+| 27 | KBH2 MueHell2025 | PASS |
+| 28 | MMUM Heicardo Hell I | PASS |
+| 29 | Brewfather Centennial Blonde | PASS |
+| 30 | Kurzer Mash-Replay-Fall auf runner_plain | PASS |
+| 31 | Kurzer runner_plain-Fall bis in den ersten Hopfenstep | PASS |
+| 32 | Pause und Resume im laufenden Schritt | PASS |
+| 33 | WAIT_USER über Next und zurück über Play | PASS |
+| 34 | WAIT_USER über Prev und zurück über Play | PASS |
+| 35 | WAIT_USER ueber Timeout eines kurzen Steps | PASS |
+| 36 | Next blockiert am letzten Schritt | PASS |
+| 37 | Längerer Replay-Fall bis in den Kochschritt | PASS |
+| 38 | Kurzes Endgame-Replay bis Planende | PASS |
+| 39 | Kurzes Endgame mit manuellem letztem Schritt | PASS |
+| 40 | Manueller Modus mit Heizfreigabe | PASS |
+| 41 | Actor Steps über WAIT_USER und Play | PASS |
+| 42 | Ungültiger Actor-Step führt nach WAIT_USER | PASS |
+| 43 | HLT-Kommandos über WAIT_USER und Play | PASS |
+| 44 | Maische-Kommandos über WAIT_USER und Play | PASS |
+| 45 | Sud-Kommandos über WAIT_USER und Play | PASS |
+| 46 | Maische-THRESOUT mit Restore-Guard | PASS |
+| 47 | Maische-PROFIL mit Restore-Guard | PASS |
+| 48 | Sud-PROFIL mit Restore-Guard | PASS |
+| 49 | HLT-PROFIL mit Restore-Guard | PASS |
+| 50 | Sensorfehler Hook Sensor 1 | PASS |
+| 51 | WAIT_TEMP Lang-Sensorfehler eskaliert nach WAIT_USER | PASS |
+| 52 | RUNNING_STEP mit längerem Sensorfehler am Maischesensor | PASS |
+| 53 | Geordneter Stop im finalen Koch-Zeitstep | PASS |
+| 54 | Harter Reboot im finalen Koch-Zeitstep | PASS |
+| 55 | Harter Reboot im nicht-finalen Koch-Zeitstep | PASS |
+| 56 | Fermenter-Regelung Cooling beobachten | PASS |
+| 57 | Fermenter-Regelung Heating beobachten | PASS |
+| 58 | Fermenter kurzer Autonext-Stepwechsel | PASS |
+| 59 | Fermenter kurzer Rampen-Autonext-Stepwechsel | PASS |
+| 60 | Fermenter kurzer Drei-Step-Autonext | PASS |
+| 61 | Fermenter Reboot-Resume im Rampenschritt | PASS |
+| 62 | Fermenter Reboot-Resume im finalen Step | PASS |
