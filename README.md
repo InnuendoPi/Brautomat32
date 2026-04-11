@@ -5,7 +5,7 @@
 ![Framework](https://img.shields.io/badge/framework-Arduino-green)
 ![Version](https://img.shields.io/github/v/release/InnuendoPi/Brautomat32)
 
-Brautomat32 is a powerful brewing and fermentation controller based on the ESP32.  
+Brautomat32 is a powerful brewing and fermentation controller based on the ESP32.
 Its focus is not simple heater switching, but precise and repeatable control of complete brewing and fermentation processes.
 
 Brautomat32 uses its own PID controller, **InnuAPID**, developed specifically for home brewing systems. Instead of crude on/off switching, it applies adaptive temperature control that makes mash, boil, and fermentation exceptionally precise, stable, and repeatable.
@@ -17,6 +17,8 @@ Operation happens directly in the browser and is designed for PC, tablet, and sm
 ## Firmware Test Status
 
 [![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.61.2%20%7C%2062%20tests%20%7C%2062%20pass%20%7C%200%20warn%20%7C%200%20fail%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
+
+Before every release, the firmware is tested automatically and in depth against real equipment. Build, flash, web interface, process flows, restore, and browser regressions are fixed parts of the release test workflows.
 
 ![WebInterface](docs/img/dashboard160.jpg)
 
@@ -31,7 +33,7 @@ Operation happens directly in the browser and is designed for PC, tablet, and sm
 - Firmware and web update
 - Multilingual user interface
 
-Brautomat32 is not designed as a simple temperature switch.  
+Brautomat32 is not designed as a simple temperature switch.
 The goal is a controller that runs processes cleanly, delivers repeatable results, and remains open to different hardware concepts.
 
 ## Hardware, Operating Modes, and Functions
@@ -68,7 +70,7 @@ Brautomat32 supports, among other things:
 
 The ZIP archive already includes [esptool](https://github.com/espressif/esptool).
 
-On Windows, only if needed:  
+On Windows, only if needed:
 **CP210x USB to UART Bridge Virtual COM Port (VCP)** - [Silicon Labs Download](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
 ## Web Interface

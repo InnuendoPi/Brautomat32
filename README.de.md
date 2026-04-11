@@ -5,7 +5,7 @@
 ![Framework](https://img.shields.io/badge/framework-Arduino-green)
 ![Version](https://img.shields.io/github/v/release/InnuendoPi/Brautomat32)
 
-Brautomat32 ist eine leistungsfähige Brau- und Gärsteuerung auf Basis des ESP32.  
+Brautomat32 ist eine leistungsfähige Brau- und Gärsteuerung auf Basis des ESP32.
 Im Mittelpunkt steht nicht einfach nur das Schalten von Heizquellen, sondern die präzise, reproduzierbare Führung kompletter Brau- und Fermentationsprozesse.
 
 Der Brautomat32 hat mit **InnuAPID** einen eigenen PID-Controller, speziell entwickelt für Heimbrausysteme. Statt grober Ein/Aus-Steuerung arbeitet hier eine adaptive Temperaturregelung, die Maischen, Kochen und Fermentieren außergewöhnlich präzise, ruhig und reproduzierbar macht.
@@ -17,6 +17,8 @@ Die Bedienung erfolgt direkt im Browser und ist für PC, Tablet und Smartphone a
 ## Firmware-Teststatus
 
 [![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.61.2%20%7C%2062%20Tests%20%7C%2062%20erfolgreich%20%7C%200%20Warn%20%7C%200%20fehlerhaft%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
+
+Vor jedem Release wird die Firmware automatisiert und mit hoher Detailtiefe gegen ein reales Equipment geprüft. Build, Flash, Webinterface, Prozessabläufe, Restore und Browser-Regressionen sind feste Bestandteile der Release-Test-Workflows.
 
 ![WebInterface](docs/img/dashboard160.jpg)
 
@@ -31,7 +33,7 @@ Die Bedienung erfolgt direkt im Browser und ist für PC, Tablet und Smartphone a
 - Firmware- und WebUpdate
 - Mehrsprachige Benutzeroberfläche
 
-Brautomat32 ist nicht als einfacher Temperatur-Schalter gedacht.  
+Brautomat32 ist nicht als einfacher Temperatur-Schalter gedacht.
 Das Ziel ist eine Steuerung, die Prozesse technisch sauber führt, reproduzierbare Ergebnisse ermöglicht und gleichzeitig offen für unterschiedliche Hardwarekonzepte bleibt.
 
 ## Hardware, Betriebsarten und Funktionen
@@ -68,7 +70,7 @@ Brautomat32 unterstützt unter anderem:
 
 Das ZIP-Archiv enthält bereits [esptool](https://github.com/espressif/esptool).
 
-Unter Windows nur bei Bedarf:  
+Unter Windows nur bei Bedarf:
 **CP210x USB to UART Bridge Virtual COM Port (VCP)** - [Silicon Labs Download](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
 ## Webinterface
