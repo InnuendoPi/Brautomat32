@@ -1,22 +1,22 @@
 # API Brautomat32
 
-These two Javascript functions make communication with the Brautomat32 easier.  
-They encapsulate `fetch()` calls, handle errors, JSON/text recognition, and optional user notifications (toast/alert).
+These two JavaScript functions make communication with the Brautomat32 easier.  
+They wrap `fetch()` calls, handle errors, JSON/text detection, and optional user notifications.
 
 ---
 
 ## apiGET(url, alarm, toast, log)
 
-* @param {string} url - Endpoint URL
-* @param {boolean} alarm - enable sendAlarm, default false
-* @param {boolean} toast - toast message on error, default false
-* @param {boolean} log - debug output to console in the browser, default false
-* @returns {Promise\<any\>} - response from server (JSON object or text)
+- `url`: endpoint URL
+- `alarm`: enable `sendAlarm`, default `false`
+- `toast`: toast notification on error, default `false`
+- `log`: debug output in the browser console, default `false`
+- return value: `Promise<any>`
 
-**Example:**  
+**Example**
 
 ```js
-const misc = await apiGET('/reqMisc', false, false, true);
+const misc = await apiGET("/reqMisc", false, false, true);
 console.log(misc);
 ```
 
@@ -24,27 +24,26 @@ console.log(misc);
 
 ## apiPOST(url, data, alarm, toast, log, postType, responseType)
 
-* @param {string} url - Endpoint URL
-* @param {Object} data - data to be sent (json or txt)
-* @param {boolean} alarm - enable sendAlarm, default false
-* @param {boolean} toast - toast message on error, default false
-* @param {boolean} log - debug output to console in the browser, default false
-* @param {"json"|"text"|"formdata"} postType - content-type for header, default json
-* @param {"json"|"text"} responseType - expected return value, default text
-* @returns {Promise\<any\>} - Response from server
+- `url`: endpoint URL
+- `data`: payload for `json`, `text` or `formdata`
+- `alarm`: enable `sendAlarm`, default `false`
+- `toast`: toast notification on error, default `false`
+- `log`: debug output in the browser console, default `false`
+- `postType`: `json`, `text` or `formdata`
+- `responseType`: `json` or `text`
+- return value: `Promise<any>`
 
-**Example:**  
+**Example**
 
 ```js
-await apiPOST('/setKettle', { temp: 65, pid: true }, true, false, true);
-console.log(misc);
+await apiPOST("/setKettle", { temp: 65, pid: true }, true, false, true);
 ```
 
 ---
 
 ## WebServer Handler Brautomat32
 
-Brautomat HTTP endpoints. The web server uses CORS and supports **HTTP GET**, **POST**, **PUT**, and **DELETE** requests.
+Brautomat HTTP endpoints. The web server supports GET, POST, PUT and DELETE.
 
 ---
 
@@ -52,9 +51,9 @@ Brautomat HTTP endpoints. The web server uses CORS and supports **HTTP GET**, **
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/` | GET | Loads the homepage |
-| `/index`, `/index.html` | GET | Alternative routes for the homepage |
-| `/dashboard`, `/dashboard/` | GET | Loads the reduced dashboard view as an info terminal |
+| `/` | GET | Load the main page |
+| `/index`, `/index.html` | GET | Alternative routes for the main page |
+| `/dashboard`, `/dashboard/` | GET | Load the reduced dashboard view |
 
 ---
 
@@ -62,23 +61,16 @@ Brautomat HTTP endpoints. The web server uses CORS and supports **HTTP GET**, **
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/reqSensors?id=${sensorid}` | GET | Returns a list of all sensors |
-| `/setSensor?id=${sensorid}` | POST | Adds a new sensor or modifies an existing one |
-| `/delSensor?id=${sensorid}` | POST | Deletes a sensor |
-| `/reqSearchSensorAdresses?id=${sensorid}` | GET | Searches available sensor addresses |
-| `/senkal` | POST | Performs sensor calibration |
+| `/reqSensors?id=${sensorid}` | GET | Return a list of all sensors |
+| `/setSensor?id=${sensorid}` | POST | Add or modify a sensor |
+| `/delSensor?id=${sensorid}` | POST | Delete a sensor |
+| `/reqSearchSensorAdresses?id=${sensorid}` | GET | Search available sensor addresses |
+| `/senkal` | POST | Run sensor calibration |
 
 | sensorid | Description |
 | ----------- | ---------- |
-| -1 | retrieves all sensors |
-| 0 - 2 | Sensor ID |
-
-**Example:**  
-
-```js
-const data = await apiGET(`/reqSensors?id=0`);
-console.log(data);
-```
+| -1 | retrieve all sensors |
+| 0 - 2 | sensor ID |
 
 ---
 
@@ -86,23 +78,16 @@ console.log(data);
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/reqActors?id=${actorid}` | GET | Returns a list of all actors |
-| `/setActor?id=${actorid}` | POST | Creates or modifies an actor |
-| `/delActor?id=${actorid}` | POST | Deletes an actor |
-| `/actorPower?id=${actorid}` | POST | Switches the power of an actuator |
-| `/actorPWM?id=${actorid}` | POST | Sets the PWM value of an actuator |
+| `/reqActors?id=${actorid}` | GET | Return a list of all actuators |
+| `/setActor?id=${actorid}` | POST | Create or modify an actuator |
+| `/delActor?id=${actorid}` | POST | Delete an actuator |
+| `/actorPower?id=${actorid}` | POST | Switch actuator power |
+| `/actorPWM?id=${actorid}` | POST | Set the PWM value of an actuator |
 
 | actorid | Description |
 | ----------- | ---------- |
-| -1 | retrieves all actors |
-| 0 - 9 | Actuator ID |
-
-**Example:**  
-
-```js
-const data = await apiGET(`/reqActors?id=0`);
-console.log(data);
-```
+| -1 | retrieve all actuators |
+| 0 - 9 | actuator ID |
 
 ---
 
@@ -110,25 +95,18 @@ console.log(data);
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/reqKettle?id=${kettleid}` | GET | Returns current kettle data |
-| `/reqKettlePID?id=${kettleid}` | GET | PID query parameters (`kl`,`kr`,`kp`,`ki`,`kd`,`sa`,`psa`,`newo`,`tun`,`vol`,`maxo`,...) |
+| `/reqKettle?id=${kettleid}` | GET | Return current kettle data |
+| `/reqKettlePID?id=${kettleid}` | GET | Query PID parameters |
 | `/setKettle?id=${kettleid}` | POST | Change kettle data |
-| `/setKettlePID?id=${kettleid}` | POST | PID parameters change or recalculate from `kl/kr` (`recalc`, `applyRecommended`) |
-| `/handlePower?id=${kettleid}` | POST | Enable/Disable Performance |
+| `/setKettlePID?id=${kettleid}` | POST | Change PID parameters or recalculate them |
+| `/handlePower?id=${kettleid}` | POST | Enable or disable power |
 
 | kettleid | Description |
 | ----------- | ---------- |
-| 0 | Mash kettle |
-| 1 | Brew kettle |
+| 0 | mash kettle |
+| 1 | brew kettle |
 | 2 | HLT |
-| 3 | Fermenter |
-
-**Example:**  
-
-```js
-const data = await apiGET(`/reqKettle?id=0`);
-console.log(data);
-```
+| 3 | fermenter |
 
 ---
 
@@ -136,24 +114,18 @@ console.log(data);
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/setProfile` | POST | Create or change a new profile |
-| `/changeProfile?id=${kettleid}&pname=${pname}` | POST | Switch active profile |
-| `/delProfile?pname=${pname}` | POST | Delete profile |
+| `/setProfile` | POST | Create or change a profile |
+| `/changeProfile?id=${kettleid}&pname=${pname}` | POST | Switch the active profile |
+| `/renameProfile` | POST | Safely rename a profile and update active references |
+| `/delProfile?pname=${pname}` | POST | Delete a profile |
 
 | kettleid | Description |
 | ----------- | ---------- |
-| 0 | Mash kettle |
-| 1 | Brew kettle |
+| 0 | mash kettle |
+| 1 | brew kettle |
 | 2 | HLT |
-| 3 | Fermenter |
-| pname | Profile name |
-
-**Example:**  
-
-```js
-const data = await apiGET(`/reqKettle?type=0`);
-console.log(data);
-```
+| 3 | fermenter |
+| pname | profile name |
 
 ---
 
@@ -161,32 +133,36 @@ console.log(data);
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/setSud` | POST | Configure existing brew |
-| `/setSudNew` | POST | Create new brew |
-| `/setSudRen` | POST | Rename brew |
-| `/setSudCopy` | POST | Copy brew |
-| `/setSudCha` | POST | Change brew |
-| `/delSud` | POST | Delete brew |
+| `/setSud` | POST | Configure an existing brew |
+| `/setSudNew` | POST | Create a new brew |
+| `/setSudRen` | POST | Rename a brew |
+| `/setSudCopy` | POST | Copy a brew |
+| `/setSudCha` | POST | Change the active brew |
+| `/delSud` | POST | Delete a brew |
 | `/reqSud` | GET | Get brew parameters |
-| `/reqSudname` | GET | Get current brew name |
+| `/reqSudname` | GET | Get the current brew name |
 | `/reqBrauStart` | GET | Start the brewing process |
 
-Note: Changes to recipes (import, change, rename, copy, delete) are only possible in the idle state.
+Note: Recipe changes are only possible while the system is idle.
 
 ---
 
-## Misc / General Settings
+## Misc / General settings
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
 | `/reboot` | POST | Restart the device |
-| `/reqMisc` | GET | General system information |
+| `/reqMisc` | GET | Get general system information |
 | `/reqVis` | GET | Get visualization data |
+| `/reqWifiCredentials` | GET | Get stored WiFi credentials |
+| `/reqFirmwareSlot` | GET | Get the active firmware partition and version data |
+| `/scanWifi` | GET | Start a WiFi scan or fetch scan results |
 | `/getLanguage` | GET | Get the currently selected language |
 | `/setMisc` | POST | Change general settings |
+| `/setWifiCredentials` | POST | Save WiFi credentials |
 | `/setMiscLang` | POST | Set language |
 | `/uploadLanguage` | POST | Upload a language file |
-| `/rezimp` | POST | Import recipe |
+| `/rezimp` | POST | Import a recipe |
 | `/upload` | POST | Upload a recipe file |
 | `/setMash` | POST | Set mash plan |
 | `/startHTTPUpdate` | POST | Start firmware update |
@@ -198,9 +174,9 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/Btn-Power` | GET | Trigger power button |
-| `/Btn-Pause` | GET | Trigger pause button |
-| `/Btn-Play` | GET | Trigger start button |
+| `/Btn-Power` | GET | Trigger the power button |
+| `/Btn-Pause` | GET | Trigger the pause button |
+| `/Btn-Play` | GET | Trigger the start button |
 | `/Btn-Next-Step` | GET | Next step |
 | `/Btn-Prev-Step` | GET | Previous step |
 | `/Btn-Edit` | POST | Activate edit mode |
@@ -208,14 +184,14 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 
 ---
 
-## Server Sent Events (SSE)
+## Server-Sent Events (SSE)
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/channel` | GET | Open SSE channel |
-| `/startSSE` | GET | Starts SSE connection |
-| `/checkAliveSSE` | GET | Checks active SSE connections |
-| `/reloadMashSSE` | GET | Reloads mash data |
+| `/channel` | GET | Open the SSE channel |
+| `/startSSE` | GET | Start the SSE connection |
+| `/checkAliveSSE` | GET | Check active SSE connections |
+| `/reloadMashSSE` | GET | Reload mash data |
 
 ---
 
@@ -224,7 +200,7 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
 | `/getDots` | GET | Get chart data |
-| `/removeDots` | POST | Clear chart data |
+| `/removeDots` | POST | Delete chart data |
 
 ---
 
@@ -232,7 +208,7 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/getbf` | GET | List of available BrewFather recipes |
+| `/getbf` | GET | List available BrewFather recipes |
 | `/bfRecipe` | POST | Get recipe details |
 | `/bfbatche` | POST | Legacy/frontend compatibility for batch recipe detail lookup |
 
@@ -242,8 +218,8 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/backup` | POST | Create system backup |
-| `/restore` | POST | Restore backup |
+| `/backup` | POST | Create a system backup |
+| `/restore` | POST | Restore a backup |
 | `/config.txt` | GET | Download the current text configuration |
 | `/download?file=...` | GET | Download any file from LittleFS |
 
@@ -254,17 +230,7 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
 | `/status` | GET | Get system status |
-| `/list` | GET | Show file list |
-
----
-
-## Static content (cache enabled)
-
-| Files | Description |
-| ---------- | --------------- |
-| `/Brautomat.min.css`, `/bootstrap.min.css`, `/bootstrap.min.js`, `/Brautomat.min.js`, `/Brautomat.ttf` | Web assets |
-| `/language/<name>.json` | Language files |
-| `/lang.js`, `/favicon.ico` | System files |
-| `/info.mp3`, `/success.mp3`, `/warning.mp3`, `/error.mp3` | Audio files for system messages |
+| `/list` | GET | Show the file list |
+| `/edit` | GET/PUT/POST/DELETE | Create, upload, fetch or delete files in LittleFS |
 
 ---
