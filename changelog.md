@@ -1,7 +1,7 @@
 ﻿# Changelog
 
-ESP32 Arduino 3.3.7 ESP-IDF v5.5.4\
-VSCode 1.115 pioarduino IDE 1.3.4\
+ESP32 Arduino 3.3.8 ESP-IDF v5.5.4\
+VSCode 1.115 pioarduino IDE 1.3.7\
 InnuAPID AutoTune PID lib 1.10.18\
 InnuTask lib 0.10.16\
 InnuNextion Display lib 0.9\
@@ -13,6 +13,16 @@ InnuFramework CSS/JS bootstrap 5.3.8
 * Breaking:     Finale Anpassung für WebUpdates von Version 1.59 oder älter
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
+
+Version 1.62    Update step ServiceTool
+
+* Neu:          Brautomat32 ServiceTool V 1.0
+* Geändert:     API Routen für ServiceTool erweitert
+* Geändert:     Vorbereitungen für Migration partion table flash
+* Korrektur:    Einschalten von Kesseln über `statePower` oder manuelles Kessel-Power-On wird mit Error-Toast `TOAST_IDSERR_PID` abgebrochen, wenn für einen aktivierten Kessel keine PID-Werte gesetzt sind
+* Korrektur:    WebIf Kessel-Modal für HLT/Sud aktualisiert Frontend-Zustand nach `setKettle` wieder korrekt
+* Update:       Arduino 3.3.8 ESP-IDF 5.5.4
+* Update:       pioarduino 1.3.7
 
 Version 1.61.2
 
