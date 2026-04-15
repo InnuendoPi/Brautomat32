@@ -16,7 +16,7 @@ Die Bedienung erfolgt direkt im Browser und ist für PC, Tablet und Smartphone a
 
 ## Firmware-Teststatus
 
-[![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.61.2%20%7C%2062%20Tests%20%7C%2062%20erfolgreich%20%7C%200%20Warn%20%7C%200%20fehlerhaft%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
+[![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.62%20%7C%2062%20Tests%20%7C%2062%20erfolgreich%20%7C%200%20Warn%20%7C%200%20fehlerhaft%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
 
 Vor jedem Release wird die Firmware automatisiert und mit hoher Detailtiefe gegen ein reales Equipment geprüft. Build, Flash, Webinterface, Prozessabläufe, Restore und Browser-Regressionen sind feste Bestandteile der Release-Test-Workflows.
 
