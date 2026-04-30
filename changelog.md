@@ -14,6 +14,13 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
+Version 1.62.1
+
+* Korrektur:    Fermenter-Konfiguration aktiviert beim Speichern keine Heiz-/Kühlregelung mehr ohne Power-Start
+* Korrektur:    Fermenter-Pinauswahl im WebIf ordnet Kühlen und Heizen wieder den korrekten GPIO-Listen zu
+* Korrektur:    Aktor-Modal zeigt beim Bearbeiten wieder den aktuell konfigurierten GPIO statt einer zwischengespeicherten Auswahl
+* Korrektur:    Fermenterpläne behalten Zieltemperaturen mit einer Nachkommastelle
+
 Version 1.62    Update step ServiceTool
 
 * Neu:          Brautomat32 ServiceTool V 1.0

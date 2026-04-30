@@ -3,15 +3,16 @@
 Current status for the public firmware complete suite:
 
 - Suite: `complete-suite`
-- Firmware version: `1.62.0`
+- Firmware version: `1.62.1`
 - Suite tests: `62`
 - Underlying checks: `1130`
-- Test date: `2026-04-15`
-- Test time: `06:03:52 UTC`
-- Test duration: `57m 3s`
-- Pass: `62`
+- Test date: `2026-04-30`
+- Test time: `13:39:52 UTC`
+- Test duration: `54m 46s`
+- Pass: `61`
 - Fail: `0`
 - Skip: `0`
+- Warn: `1`
 
 ## Coverage in this published run
 
@@ -41,6 +42,21 @@ Not included in this count:
 - Enduser-specific config, backup, and recipe checks
 - Real hardware and kettle verification runs
 
+## Notes
+
+### Warn
+
+The following tests completed with warnings:
+
+- `Web interface modal repeat stability`
+  Warning: 2196ms (warn 2000ms, fail 8000ms)
+
+### Follow-up
+
+The six mash cases that initially failed were repeated after restoring the
+required `Aufheizen` and `Maischen` profiles on the test device. All six
+follow-up runs passed.
+
 ## Results
 
 | # | Test | Result |
@@ -59,7 +75,7 @@ Not included in this count:
 | 12 | Web interface mash/fermenter view switch | PASS |
 | 13 | Web interface system save and reload | PASS |
 | 14 | Web interface SSE reconnect stability | PASS |
-| 15 | Web interface modal repeat stability | PASS |
+| 15 | Web interface modal repeat stability | WARN |
 | 16 | Web interface reload request and event budget | PASS |
 | 17 | Web interface induction modal | PASS |
 | 18 | Web interface HLT modal | PASS |
