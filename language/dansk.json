@@ -479,5 +479,15 @@
   "DASH_STATE_RUNNING_STEP": "TRIN LØB",
   "DASH_STATE_WAIT_TEMP": "VENTER PÅ TEMPERATUR",
   "DASH_STATE_PAUSED": "PAUSEDE",
-  "DASH_STATE_WAIT_USER": "VENTER PÅ BRUGER"
+  "DASH_STATE_WAIT_USER": "VENTER PÅ BRUGER",
+  "EDITFERM_TT": "Indstillinger for fermenteringsplan",
+  "CLEARFERM_TT": "slet gæringsplantabel",
+  "ADDFERM_TT": "Tilføj en ny linje til fermenteringsplanstabellen",
+  "IDS_HEADER_FERM": "Fermenteringsbeholder indstillinger",
+  "RELOADFERM_TT": "Genindlæs gæringsplantabel",
+  "TAB_FERM_TT_DEL": "Slet fermenteringstrin",
+  "SAVEFERM_TT": "Gem gæringsplanen",
+  "TAB_FERM_TT_DOWN": "Flyt fermenteringstrinnet ned",
+  "TAB_FERM_TT_EDIT": "Rediger fermenteringstrin",
+  "TAB_FERM_TT_UP": "Flyt fermenteringstrinnet op"
 }

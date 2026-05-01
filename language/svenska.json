@@ -479,5 +479,15 @@
   "DASH_STATE_WAIT_TEMP": "VÄNTA PÅ TEMPERATUR",
   "DASH_STATE_RUNNING_STEP": "STEG LÖPNING",
   "DASH_STATE_PAUSED": "PAUS",
-  "DASH_STATE_WAIT_USER": "VÄNTAR PÅ ANVÄNDARE"
+  "DASH_STATE_WAIT_USER": "VÄNTAR PÅ ANVÄNDARE",
+  "CLEARFERM_TT": "ta bort jäsplanstabell",
+  "ADDFERM_TT": "Lägg till en ny rad i jäsplanstabellen",
+  "EDITFERM_TT": "Inställningar för jäsningsplan",
+  "RELOADFERM_TT": "Ladda om jäsplanstabellen",
+  "IDS_HEADER_FERM": "Fermenteringsinställningar",
+  "SAVEFERM_TT": "Spara jäsningsplanen",
+  "TAB_FERM_TT_DEL": "Ta bort fermenteringssteg",
+  "TAB_FERM_TT_DOWN": "Flytta jäskärlet nedåt",
+  "TAB_FERM_TT_EDIT": "Redigera fermenteringssteg",
+  "TAB_FERM_TT_UP": "Flytta jäskärlet uppåt"
 }

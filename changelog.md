@@ -14,8 +14,13 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
-Version 1.62.1
+Version 1.62.2
 
+* Korrektur:    Fermenter WebIf und SSE zeigen Sperrzeiten nach Heizen/Kühlen als Pause statt weiter als aktive Regelung an
+* Korrektur:    Display Power Save wird als numerischer Wert gespeichert
+* Korrektur:    Fermenter WebIf verwendet eigene Tooltip-Texte für Planaktionen und Einstellungen
+* Update:       pioarduino 1.3.23
+* Update:       VSCode 1.118
 * Korrektur:    Fermenter-Konfiguration aktiviert beim Speichern keine Heiz-/Kühlregelung mehr ohne Power-Start
 * Korrektur:    Fermenter-Pinauswahl im WebIf ordnet Kühlen und Heizen wieder den korrekten GPIO-Listen zu
 * Korrektur:    Aktor-Modal zeigt beim Bearbeiten wieder den aktuell konfigurierten GPIO statt einer zwischengespeicherten Auswahl

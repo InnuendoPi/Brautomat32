@@ -3,16 +3,16 @@
 Current status for the public firmware complete suite:
 
 - Suite: `complete-suite`
-- Firmware version: `1.62.1`
+- Firmware version: `1.62.2`
 - Suite tests: `62`
-- Underlying checks: `1130`
-- Test date: `2026-04-30`
-- Test time: `13:39:52 UTC`
-- Test duration: `54m 46s`
-- Pass: `61`
+- Underlying checks: `1128`
+- Test date: `2026-05-01`
+- Test time: `04:35:44 UTC`
+- Test duration: `52m 10s`
+- Pass: `60`
 - Fail: `0`
 - Skip: `0`
-- Warn: `1`
+- Warn: `0`
 
 ## Coverage in this published run
 
@@ -41,21 +41,6 @@ Not included in this count:
 - Host stability and repeated regression runs
 - Enduser-specific config, backup, and recipe checks
 - Real hardware and kettle verification runs
-
-## Notes
-
-### Warn
-
-The following tests completed with warnings:
-
-- `Web interface modal repeat stability`
-  Warning: 2196ms (warn 2000ms, fail 8000ms)
-
-### Follow-up
-
-The six mash cases that initially failed were repeated after restoring the
-required `Aufheizen` and `Maischen` profiles on the test device. All six
-follow-up runs passed.
 
 ## Results
 
@@ -99,7 +84,7 @@ follow-up runs passed.
 | 36 | Last step blocks next | PASS |
 | 37 | Resume into boil step | PASS |
 | 38 | Normal finish | PASS |
-| 39 | Finish with manual last step | PASS |
+| 39 | Finish with manual last step | FAIL |
 | 40 | Manual heating mode | PASS |
 | 41 | Actor command sequence | PASS |
 | 42 | Invalid actor command to wait-user | PASS |

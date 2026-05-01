@@ -479,5 +479,15 @@
   "DASH_STATE_CURRENT_STEP": "HUIDIGE STAP",
   "DASH_STATE_PAUSED": "GESLOTEN",
   "DASH_STATE_WAIT_USER": "WACHTEN OP GEBRUIKER",
-  "DASH_STATE_WAIT_TEMP": "WACHTEN OP TEMPERATUUR"
+  "DASH_STATE_WAIT_TEMP": "WACHTEN OP TEMPERATUUR",
+  "EDITFERM_TT": "Instellingen vergisterplan",
+  "ADDFERM_TT": "Voeg een nieuwe regel toe aan de vergisterplantabel",
+  "CLEARFERM_TT": "verwijder de vergisterplantabel",
+  "IDS_HEADER_FERM": "Vergister instellingen",
+  "SAVEFERM_TT": "Vergisterplan opslaan",
+  "RELOADFERM_TT": "Laad de vergisterplantabel opnieuw",
+  "TAB_FERM_TT_DOWN": "Verplaats de vergistertrap naar beneden",
+  "TAB_FERM_TT_EDIT": "Vergisterstap bewerken",
+  "TAB_FERM_TT_DEL": "Vergisterstap verwijderen",
+  "TAB_FERM_TT_UP": "Verplaats de vergister naar boven"
 }

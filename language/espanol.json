@@ -479,5 +479,15 @@
   "DASH_STATE_PAUSED": "PAUSADO",
   "DASH_STATE_RUNNING_STEP": "PASO CORRIENDO",
   "DASH_STATE_WAIT_USER": "ESPERANDO AL USUARIO",
-  "DASH_STATE_WAIT_TEMP": "ESPERANDO LA TEMPERATURA"
+  "DASH_STATE_WAIT_TEMP": "ESPERANDO LA TEMPERATURA",
+  "EDITFERM_TT": "Configuración del plan de fermentación",
+  "ADDFERM_TT": "Agregar una nueva línea a la tabla del plan del fermentador.",
+  "CLEARFERM_TT": "eliminar tabla del plan del fermentador",
+  "IDS_HEADER_FERM": "Configuraciones del fermentador",
+  "SAVEFERM_TT": "Guardar plan de fermentador",
+  "RELOADFERM_TT": "Recargar tabla del plan del fermentador",
+  "TAB_FERM_TT_DOWN": "Mover el fermentador hacia abajo",
+  "TAB_FERM_TT_DEL": "Eliminar paso del fermentador",
+  "TAB_FERM_TT_EDIT": "Editar paso del fermentador",
+  "TAB_FERM_TT_UP": "Mueva el fermentador hacia arriba"
 }

@@ -479,5 +479,15 @@
   "DASH_STATE_PAUSED": "PAUSED",
   "DASH_STATE_WAIT_TEMP": "WAITING FOR TEMPERATURE",
   "DASH_STATE_RUNNING_STEP": "STEP RUNNING",
-  "DASH_STATE_WAIT_USER": "WAITING FOR USER"
+  "DASH_STATE_WAIT_USER": "WAITING FOR USER",
+  "CLEARFERM_TT": "delete fermenter plan table",
+  "EDITFERM_TT": "Fermenter plan settings",
+  "ADDFERM_TT": "Add a new line to the fermenter plan table",
+  "IDS_HEADER_FERM": "Fermenter settings",
+  "RELOADFERM_TT": "Reload fermenter plan table",
+  "SAVEFERM_TT": "Save fermenter plan",
+  "TAB_FERM_TT_DOWN": "Move fermenter step down",
+  "TAB_FERM_TT_DEL": "Delete fermenter step",
+  "TAB_FERM_TT_EDIT": "Edit fermenter step",
+  "TAB_FERM_TT_UP": "Move the fermenter step up"
 }

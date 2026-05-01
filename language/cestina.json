@@ -479,5 +479,15 @@
   "DASH_STATE_PAUSED": "PAUZOVÁNO",
   "DASH_STATE_WAIT_USER": "ČEKÁNÍ NA UŽIVATELE",
   "DASH_STATE_RUNNING_STEP": "KROK BĚH",
-  "DASH_STATE_WAIT_TEMP": "ČEKÁNÍ NA TEPLOTU"
+  "DASH_STATE_WAIT_TEMP": "ČEKÁNÍ NA TEPLOTU",
+  "CLEARFERM_TT": "smazat tabulku plánu fermentoru",
+  "ADDFERM_TT": "Přidejte nový řádek do tabulky plánu fermentoru",
+  "EDITFERM_TT": "Nastavení plánu fermentoru",
+  "RELOADFERM_TT": "Znovu načtěte tabulku plánu fermentoru",
+  "SAVEFERM_TT": "Uložit plán fermentoru",
+  "IDS_HEADER_FERM": "Nastavení fermentoru",
+  "TAB_FERM_TT_EDIT": "Upravit krok fermentoru",
+  "TAB_FERM_TT_DOWN": "Přesuňte krok fermentoru dolů",
+  "TAB_FERM_TT_DEL": "Smazat krok fermentoru",
+  "TAB_FERM_TT_UP": "Posuňte fermentor o stupeň nahoru"
 }
