@@ -14,8 +14,16 @@ InnuFramework CSS/JS bootstrap 5.3.8
                 die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
                 die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
-Version 1.62.2
+Version 1.62.3
 
+* Korrektur:    Display Power Save wird nach dem Speichern direkt an das Touchdisplay geschrieben und ein Full-Refresh ausgelöst
+* Korrektur:    Touchdisplay aktualisiert nach Sleep/Wake per Wake-Touch-Event die Seite vollständig
+* Korrektur:    Touchdisplay Kesselübersicht zeigt im Fermenter-Modus den Fermenter statt des Maischekessels in der ersten Zeile
+* Korrektur:    Einstellung `Nur Fehler` unterdrückt Info-/Success-/Warning-MP3s und Toasts im WebIf
+* Korrektur:    Fermenter-Invertierung für den Heiz-GPIO wird beim Speichern der Konfiguration korrekt persistiert
+* Korrektur:    Rezeptupload zeigt bei Importfehlern nur noch die fachliche Importmeldung statt zusätzlich eines generischen HTTP-Fehlers
+* Korrektur:    KBH2-Import meldet bei fehlendem Maischplan eine verständlichere Ursache
+* Geändert:     Dashboard-Chart verwendet im Fermenter-Modus eine kleinere Temperaturskala
 * Korrektur:    Fermenter WebIf und SSE zeigen Sperrzeiten nach Heizen/Kühlen als Pause statt weiter als aktive Regelung an
 * Korrektur:    Display Power Save wird als numerischer Wert gespeichert
 * Korrektur:    Fermenter WebIf verwendet eigene Tooltip-Texte für Planaktionen und Einstellungen
