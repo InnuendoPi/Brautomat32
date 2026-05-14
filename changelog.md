@@ -10,12 +10,9 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-* Breaking:     Finale Anpassung für WebUpdates von Version 1.59 oder älter
-                die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
-                die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
-
 Version 1.62.3
 
+* Geändert:     BrewFather Import Nachisomerisierung `opStandMinutes` erweitert
 * Korrektur:    Display Power Save wird nach dem Speichern direkt an das Touchdisplay geschrieben und ein Full-Refresh ausgelöst
 * Korrektur:    Touchdisplay aktualisiert nach Sleep/Wake per Wake-Touch-Event die Seite vollständig
 * Korrektur:    Touchdisplay Kesselübersicht zeigt im Fermenter-Modus den Fermenter statt des Maischekessels in der ersten Zeile
@@ -92,6 +89,10 @@ Version 1.60.1 Hotfix 2026-02-28
 * Korrektur:    Legacy-Kompatibilität ergänzt: `POST /bfbatche` wird auf den bestehenden Import-Handler gemappt
 * Korrektur:    Batch-Doppelklick im Brewfather-Tab läuft nicht mehr in `404 Not found`
 * Korrektur:    Backup-Schreiben stabilisiert (Datei-Iteration mit korrekten Pfaden und sauberem `file.close()/root.close()`)
+
+* Breaking:     Finale Anpassung für WebUpdates von Version 1.59 oder älter
+                die Konfigurationsdatei config.txt wird kopiert nach config.old.txt
+                die PID Parameter werden zurückgesetzt (0.0). AutoTune muss durchgeführt werden
 
 Version 1.60 Release
 
