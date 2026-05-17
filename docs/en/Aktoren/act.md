@@ -3,16 +3,20 @@
 ![Actuator settings](/docs/img/aktoren_einstellungen.jpg)
 
 Actuators such as agitators, pumps, or ring heaters are configured with a name and a GPIO output.
-If needed, an actuator can use PWM (pulse-width modulation). In Brautomat, PWM means timed on/off switching.
+If needed, an actuator can use PWM (pulse-width modulation). In Brautomat, PWM means either timed on/off switching or an analog PWM signal, depending on the selected PWM mode.
 
 Power is entered in percent:
 
 * 100% = always on
-* 50% = equal on/off cycle
+* 50% = equal on/off cycle in digital PWM mode
 
-The PWM cycle time is 500 ms. During operation, you can change power with the `+` and `-` buttons in the actuator table. These buttons are visible only when PWM is enabled for that actuator.
+Digital PWM is intended for relays and SSR outputs. It uses a fixed 5000 ms cycle and processes power in 5% steps. There is no separate configurable duty-cycle parameter for actuators.
 
-PWM control is suitable for relays and SSR outputs. It is not intended as direct speed control for agitator motors.
+Analog PWM uses a fixed 1000 Hz PWM signal. This mode is intended for suitable PWM inputs, not for switching relays.
+
+During operation, you can change power with the `+` and `-` buttons in the actuator table. These buttons are visible only when PWM is enabled for that actuator.
+
+Digital PWM control is suitable for relays and SSR outputs. It is not intended as direct speed control for agitator motors.
 
 ![Overview of actuators](/docs/img/aktoren.jpg)
 
