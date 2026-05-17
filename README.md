@@ -16,7 +16,7 @@ Operation happens directly in the browser and is designed for PC, tablet, and sm
 
 ## Firmware Test Status
 
-[![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.62.3%20%7C%2062%20tests%20%7C%2062%20pass%20%7C%200%20warn%20%7C%200%20fail%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
+[![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.62.5%20%7C%2064%20tests%20%7C%2062%20pass%20%7C%200%20warn%20%7C%200%20fail%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
 
 Before every release, the firmware is tested automatically and in depth against real equipment. Build, flash, web interface, process flows, restore, and browser regressions are fixed parts of the release test workflows.
 

@@ -10,8 +10,10 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.62.3
+Version 1.62.5
 
+* Korrektur:    Kessel-Sonderbefehle für SUD/MLT und HLT/NACHGUSS mit Dauer 0 setzen wieder die Zieltemperatur, starten den PID-Regler und springen direkt zum nächsten Maischeschritt
+* Korrektur:    Aktor-PWM korrigiert: digitale PWM taktet mit festem 5000-ms-Zyklus und 5-Prozent-Schritten; analoge PWM nutzt feste 1000 Hz und beeinflusst den Aktor-Task nicht.
 * Geändert:     BrewFather Import Nachisomerisierung `opStandMinutes` erweitert
 * Korrektur:    Display Power Save wird nach dem Speichern direkt an das Touchdisplay geschrieben und ein Full-Refresh ausgelöst
 * Korrektur:    Touchdisplay aktualisiert nach Sleep/Wake per Wake-Touch-Event die Seite vollständig
