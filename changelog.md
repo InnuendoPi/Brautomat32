@@ -10,8 +10,11 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.62.5
+Version 1.62.6
 
+* Korrektur:    Resume nach Reboot im Status `WAIT_USER` überschreibt den gespeicherten Kesselzustand nicht mehr.
+* Korrektur:    Dashboard-Chart blendet im Maischemodus keine Fermenterwerte mehr in Tooltip und Legende ein.
+* Geändert:     Dashboard-Chart trennt Ist- und Sollkurven optisch klarer: Sollkurven sind heller, dünner und gestrichelt
 * Korrektur:    Kessel-Sonderbefehle für SUD/MLT und HLT/NACHGUSS mit Dauer 0 setzen wieder die Zieltemperatur, starten den PID-Regler und springen direkt zum nächsten Maischeschritt
 * Korrektur:    Aktor-PWM korrigiert: digitale PWM taktet mit festem 5000-ms-Zyklus und 5-Prozent-Schritten; analoge PWM nutzt feste 1000 Hz und beeinflusst den Aktor-Task nicht.
 * Geändert:     BrewFather Import Nachisomerisierung `opStandMinutes` erweitert
