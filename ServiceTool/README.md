@@ -93,6 +93,70 @@ Runtime data location:
 
 These runtime folders are intentionally excluded from git.
 
+## Using the ServiceTool
+
+When the ServiceTool starts, it first checks the selected COM port and then the network connection to the Brautomat. The current connection state is shown directly in the status badge. The ServiceTool needs a few seconds at startup to detect the serial connection and WiFi availability.
+
+The following status states show the current connection progress and indicate which ServiceTool functions are already available.
+
+- `No device`: No Brautomat has been detected yet. Check the USB cable, the selected COM port, or the local network connection.
+
+![no device](img/no_device.jpg)
+
+- `Checking`: The ServiceTool is currently checking serial and network access. This status appears during startup and after manual device checks.
+
+![checking device](img/checking.jpg)
+
+- `Serial`: A Brautomat was found on the selected COM port. Basic serial communication is available, but network functions may still be checked afterwards. If no Brautomat firmware has been flashed yet, the status remains `Serial`.
+
+![serial device](img/serial.jpg)
+
+- `Online`: The Brautomat is reachable over the network API. This status can only be reached with Brautomat firmware `1.62` or newer. With `Online` status, all ServiceTool functions are available.
+
+![device online](img/online.jpg)
+
+### Firmware
+
+![Firmware](img/firmware.jpg)
+
+- Select the correct COM port before flashing.
+- Use `Latest Release` for normal updates.
+- Use `Latest Development` only for test devices or current development builds.
+- Keep `Flash erase` enabled only when a clean flash is really required.
+- Keep `Web files` enabled when firmware and WebUI should match.
+- After a serial-only device check, WiFi scan starts automatically.
+- WiFi credentials can be entered here and transferred directly to the Brautomat.
+
+### Management
+
+![Management](img/management.jpg)
+
+- Manage mash plans, fermenter plans, profiles, and configuration files.
+- Copy files between device and local inventory.
+- Rename and delete files directly in the table actions.
+- Device actions require an online connection.
+
+### Backup & Restore
+
+![Backup Restore](img/backup_restore.jpg)
+
+- Create a backup before firmware changes, erase flash, or filesystem updates.
+- Restore expects a valid Brautomat32 backup JSON.
+- Keep backups with clear names so the correct device state can be restored later.
+
+### Serial Monitor
+
+![Serial Monitor](img/serial_monitor.jpg)
+
+- Use the Serial Monitor for live device logs on the selected COM port.
+- Stop the log before using the same COM port for other exclusive serial actions if required.
+- Reboot sends a device restart command over the current serial connection.
+- `?hide_test=1&debug=1` opens the UI with hidden test tab and visible debug output.
+
+### Migration
+
+Coming soon: migration to version 1.70 based on ESP-IDF 6.
+
 ## End-User Requirements
 
 - network access for GitHub downloads when firmware packages or tools are fetched dynamically
