@@ -16,7 +16,7 @@ Operation happens directly in the browser and is designed for PC, tablet, and sm
 
 ## Firmware Test Status
 
-[![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.62.5%20%7C%2064%20tests%20%7C%2064%20pass%20%7C%200%20warn%20%7C%200%20fail%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
+[![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.63.0%20%7C%2064%20tests%20%7C%2064%20pass%20%7C%200%20warn%20%7C%200%20fail%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
 
 Before every release, the firmware is tested automatically and in depth against real equipment. Build, flash, web interface, process flows, restore, and browser regressions are fixed parts of the release test workflows.
 
@@ -63,6 +63,11 @@ Brautomat32 supports, among other things:
 | **Development** | [![Dev](https://img.shields.io/static/v1?label=Development%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip) |
 
 ## Installation
+
+Download [Brautomat ServiceTool](https://github.com/InnuendoPi/Brautomat32/tree/main/ServiceTool) for Windows, macOS or linux
+![Firmware](ServiceTool/img/firmware.jpg)
+
+Alternatively on Windows just run
 
 1. Download **Brautomat ESP32**
 2. Extract the ZIP archive

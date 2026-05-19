@@ -1,7 +1,7 @@
 ﻿# Changelog
 
 ESP32 Arduino 3.3.8 ESP-IDF v5.5.4\
-VSCode 1.115 pioarduino IDE 1.3.7\
+VSCode 1.120 pioarduino IDE 1.4.4\
 InnuAPID AutoTune PID lib 1.10.18\
 InnuTask lib 0.10.16\
 InnuNextion Display lib 0.9\
@@ -10,9 +10,12 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.62.6
+Version 1.63
 
+* Korrektur:    Der Chart-Readback begrenzt die maximale Zeilenlänge der `chartdots.json` und verwirft überlange Einträge statt ungebremst große Strings im Heap aufzubauen
 * Korrektur:    Resume nach Reboot im Status `WAIT_USER` überschreibt den gespeicherten Kesselzustand nicht mehr.
+* Korrektur:    Die `chartdots.json` wird nicht mehr als kompletter RAM-String verarbeitet. Der Chart-Readback liest jetzt zeilenweise und reduziert damit Heap-Reallocs und Watchdog-Risiko im AsyncTCP-Task
+* Geändert:     Dashboard-Chart zeigt im Live-Betrieb nur noch Linien ohne Punkte und Kreuze, damit lange Brautage lesbar bleiben
 * Korrektur:    Dashboard-Chart blendet im Maischemodus keine Fermenterwerte mehr in Tooltip und Legende ein.
 * Geändert:     Dashboard-Chart trennt Ist- und Sollkurven optisch klarer: Sollkurven sind heller, dünner und gestrichelt
 * Korrektur:    Kessel-Sonderbefehle für SUD/MLT und HLT/NACHGUSS mit Dauer 0 setzen wieder die Zieltemperatur, starten den PID-Regler und springen direkt zum nächsten Maischeschritt
