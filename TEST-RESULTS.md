@@ -3,12 +3,12 @@
 Current status for the latest complete suite reference run:
 
 - Suite: `complete-suite`
-- Firmware version: `1.63.0 Release`
+- Firmware version: `1.63.2 Develop`
 - Suite tests: `64`
-- Underlying checks: `1167`
-- Test date: `2026-05-19`
-- Test time: `04:39:14 UTC`
-- Test duration: `54m 49s`
+- Underlying checks: `1166 case checks`
+- Test date: `2026-06-05`
+- Test time: `07:51:44 UTC`
+- Test duration: `56m 42s`
 - Pass: `64`
 - Fail: `0`
 - Skip: `0`
@@ -42,16 +42,6 @@ Not included in this count:
 - Host stability and repeated regression runs
 - Enduser-specific config, backup, and recipe checks
 - Real hardware and kettle verification runs
-
-## Notes
-
-### Warn
-
-No warning tests in this run.
-
-### Fail
-
-No failing tests in this run.
 
 ## Results
 

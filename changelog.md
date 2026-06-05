@@ -1,16 +1,25 @@
 ﻿# Changelog
 
-ESP32 Arduino 3.3.8 ESP-IDF v5.5.4\
-VSCode 1.120 pioarduino IDE 1.4.4\
-InnuAPID AutoTune PID lib 1.10.18\
-InnuTask lib 0.10.16\
+ESP32 Arduino 3.3.9 ESP-IDF v5.5.4\
+VSCode 1.123 pioarduino IDE 1.4.4\
+InnuAPID AutoTune PID lib 1.10.19\
+InnuTask lib 1.10.19\
 InnuNextion Display lib 0.9\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.63
+Version 1.63.2
+
+* Update:       Arduino 3.3.9 ESP-IDF 5.5.4
+* Korrektur:    zusätzliche PT100/PT1000-Debugausgaben werden nur im Sensor Logging verbose mode ausgegeben
+* Optimiert:    Heap-Allokationen im Debugpfad durch `const char*` statt temporärer `String`-Objekte reduziert
+* Geändert:     PT100/PT1000-Faults `0x0C` und `0x1C` werden bei aktivem Heizen oder AutoTune EMV-toleranter behandelt
+* Optimiert:    Plausible transiente PT-Faultwerte laufen wieder vollständig durch Rohwert, EMA, Offset und Ausgabeformat
+* Geändert:     PT-Plausibilität nutzt bei EMV-Faults eine dynamische Grenze aus Steigrate und Messintervall
+
+Version 1.63.0
 
 * Korrektur:    Der Chart-Readback begrenzt die maximale Zeilenlänge der `chartdots.json` und verwirft überlange Einträge statt ungebremst große Strings im Heap aufzubauen
 * Korrektur:    Resume nach Reboot im Status `WAIT_USER` überschreibt den gespeicherten Kesselzustand nicht mehr.
