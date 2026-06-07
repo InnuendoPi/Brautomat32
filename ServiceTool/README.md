@@ -20,6 +20,10 @@ Brautomat32 ServiceTool is distributed as a complete desktop application.
 A bundled `esptool` copy is included with the packaged end-user builds.
 If no bundled copy is available in the current runtime environment, the tool downloads a matching `esptool` version automatically on first use.
 
+The ServiceTool checks the public `ServiceTool/version.json` manifest for updates at startup and when the update button is clicked.
+If a newer version is available, the matching ZIP package is downloaded, verified by SHA256, and the download folder is opened.
+The user then extracts the ZIP and replaces the old ServiceTool version manually.
+
 ## End-User Start
 
 ### Windows

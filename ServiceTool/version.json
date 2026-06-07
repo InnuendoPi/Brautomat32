@@ -1,0 +1,21 @@
+{
+  "tool": "Brautomat32 ServiceTool",
+  "version": "1.5.0",
+  "released_at": "2026-06-07",
+  "notes": "ServiceTool 1.5 release.",
+  "windows": {
+    "filename": "Brautomat32ServiceTool-win.zip",
+    "url": "https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/ServiceTool/Brautomat32ServiceTool-win.zip",
+    "sha256": "c25873fb7b10e5b7f538f64ce164208479c3d29d5727acc5a6b16f6aab114aad"
+  },
+  "linux": {
+    "filename": "Brautomat32ServiceTool-linux.zip",
+    "url": "https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/ServiceTool/Brautomat32ServiceTool-linux.zip",
+    "sha256": "48f2ff972cfd571c65f65a390aadceae531e0f018c27a557a47b950ecd0fcfe2"
+  },
+  "macos": {
+    "filename": "Brautomat32ServiceTool-macos.zip",
+    "url": "https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/ServiceTool/Brautomat32ServiceTool-macos.zip",
+    "sha256": "1ab83bdfc327e56bead4a58f196501f6cb0e6216587ceaec3af3b9a6bd0cf737"
+  }
+}
