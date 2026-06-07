@@ -10,8 +10,9 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.63.2
+Version 1.63.3
 
+* Geändert:     API Routen für ServiceTool erweitert
 * Update:       Arduino 3.3.9 ESP-IDF 5.5.4
 * Korrektur:    zusätzliche PT100/PT1000-Debugausgaben werden nur im Sensor Logging verbose mode ausgegeben
 * Optimiert:    Heap-Allokationen im Debugpfad durch `const char*` statt temporärer `String`-Objekte reduziert

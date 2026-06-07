@@ -3,10 +3,10 @@
 Current status for the latest complete suite reference run:
 
 - Suite: `complete-suite`
-- Firmware version: `1.63.2 Develop`
+- Firmware version: `1.63.3 Develop`
 - Suite tests: `64`
 - Underlying checks: `1166 case checks`
-- Test date: `2026-06-05`
+- Test date: `2026-07-05`
 - Test time: `07:51:44 UTC`
 - Test duration: `56m 42s`
 - Pass: `64`
