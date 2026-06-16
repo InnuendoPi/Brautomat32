@@ -12,6 +12,11 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 Version 1.63.3
 
+* Korrektur:    BrewFather Anzeige brewDate
+* Korrektur:    webhook manual_mode wurde bei Beenden nicht verlassen. Danach war AutoTune zwar vorbereitet, wurde aber blockiert (err 409)
+
+Version 1.63.3
+
 * Geändert:     API Routen für ServiceTool erweitert
 * Update:       Arduino 3.3.9 ESP-IDF 5.5.4
 * Korrektur:    zusätzliche PT100/PT1000-Debugausgaben werden nur im Sensor Logging verbose mode ausgegeben
