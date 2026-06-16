@@ -10,7 +10,7 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.63.3
+Version 1.63.5
 
 * Korrektur:    BrewFather Anzeige brewDate
 * Korrektur:    webhook manual_mode wurde bei Beenden nicht verlassen. Danach war AutoTune zwar vorbereitet, wurde aber blockiert (err 409)
