@@ -1,19 +1,24 @@
 ﻿# Changelog
 
 ESP32 Arduino 3.3.9 ESP-IDF v5.5.4\
-VSCode 1.123 pioarduino IDE 1.4.4\
+VSCode 1.125 pioarduino IDE 1.4.4\
 InnuAPID AutoTune PID lib 1.10.19\
 InnuTask lib 1.10.19\
 InnuNextion Display lib 0.9\
+InnuMax31865 Sensor lib 0.1\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.63.5
+Version 1.64.0
 
 * Korrektur:    BrewFather Anzeige brewDate
 * Korrektur:    webhook manual_mode wurde bei Beenden nicht verlassen. Danach war AutoTune zwar vorbereitet, wurde aber blockiert (err 409)
+* Neu:          Eigener `InnuMax31865` Treiber ersetzt die bisherige Adafruit-MAX31865-Anbindung - PT100x-Faults `0x0C` und `0x1C` verursacht durch Adafruit Treiber oder SPI Abstraktion
+* Optimiert:    PT100/PT1000 verwenden jetzt den ESP-IDF5 SPI-Master direkt statt der bisherigen Adafruit-Abstraktion
+* Optimiert:    `InnuMax31865` arbeitet FSM-orientiert und nicht-blockierend über Start/Poll/Consume statt eines synchronen Komplettzyklus
+* Optimiert:    PT100/PT1000-Messzyklen lesen Rohwert und Faults konsistent in einem gemeinsamen InnuMax-Pfad ein
 
 Version 1.63.3
 
