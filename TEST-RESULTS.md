@@ -3,7 +3,7 @@
 Current status for the latest complete suite reference run:
 
 - Suite: `complete-suite`
-- Firmware version: `1.64.0 Develop`
+- Firmware version: `1.64.1 Develop`
 - Suite tests: `58`
 - Underlying checks: `1112 case checks`
 - Test date: `2026-06-17`

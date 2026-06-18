@@ -5,13 +5,13 @@ VSCode 1.125 pioarduino IDE 1.4.4\
 InnuAPID AutoTune PID lib 1.10.19\
 InnuTask lib 1.10.19\
 InnuNextion Display lib 0.9\
-InnuMax31865 Sensor lib 0.1\
+InnuMax31865 Sensor lib 0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.64.0
+Version 1.64.1
 
 * Korrektur:    Import Filter kbh2 weitereZugaben Einheit kg wird als gr verwendet
 * Korrektur:    BrewFather Anzeige brewDate
