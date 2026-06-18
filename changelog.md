@@ -13,6 +13,7 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 Version 1.64.0
 
+* Korrektur:    Import Filter kbh2 weitereZugaben Einheit kg wird als gr verwendet
 * Korrektur:    BrewFather Anzeige brewDate
 * Korrektur:    webhook manual_mode wurde bei Beenden nicht verlassen. Danach war AutoTune zwar vorbereitet, wurde aber blockiert (err 409)
 * Neu:          Eigener `InnuMax31865` Treiber ersetzt die bisherige Adafruit-MAX31865-Anbindung - PT100x-Faults `0x0C` und `0x1C` verursacht durch Adafruit Treiber oder SPI Abstraktion
