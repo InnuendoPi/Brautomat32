@@ -11,6 +11,13 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.64.2
+
+* Korrektur:    Kessel-Abschaltpfade vereinheitlicht: Power-Off, Manual-Off, Maische-Stop und AutoTune-Stop setzen Leistung, Kesselzustand und PID-Modus eindeutig auf sicher aus
+* Korrektur:    Sensorfehlerpfad mit `errOut=0` schaltet den Kessel sicher aus und beendet den PID-Regelmodus
+* Korrektur:    AutoTune-Stop schaltet den betroffenen Kessel sicher aus und verlässt den AutoTune-Zustand ohne aktiven Heizpfad
+* Korrektur:    Sensorkalibrierung korrigiert und modernisiert
+
 Version 1.64.1
 
 * Korrektur:    Import Filter kbh2 weitereZugaben Einheit kg wird als gr verwendet
