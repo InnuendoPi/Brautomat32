@@ -3,29 +3,31 @@
 Current status for the latest complete suite reference run:
 
 - Suite: `complete-suite`
-- Firmware version: `1.64.2 Develop`
+- Firmware version: `1.64.3 Develop`
 - Suite tests: `59`
-- Underlying checks: `1135 case checks`
-- Test date: `2026-06-19`
-- Test time: `10:30:03 UTC`
-- Test duration: `52m 11s`
-- Pass: `58`
+- Underlying checks: `1132 case checks`
+- Test date: `2026-06-20`
+- Test time: `15:52:22 UTC`
+- Test duration: `51m 13s`
+- Pass: `59`
 - Fail: `0`
 - Skip: `0`
-- Warn: `1`
+- Warn: `0`
 
 ## Current Assessment
+
+The latest complete-suite run contains no FAIL.
+`browser-reload-core` is treated as PASS.
+The observed reload timing / transient request timeout while loading `language/deutsch.json` did not cause a WebIf functional failure.
+The page recovered and the firmware label, selected language, mash plan name, mash table and SSE connection were visible.
 
 Follow-up validation:
 
 - `manual-mode-power-smoke`: `PASS`
-- `safety-power-off-regression`: `WARN`, no hard FAIL
+- `safety-power-off-regression`: `PASS`
 - Webhook mock chain: `PASS` for Manual, Mash and AutoTune `on -> off`
 
-Remaining warning:
-
-- `browser-reload-core`: reload readiness warning only, no firmware functional failure
-- `safety-power-off-regression`: aux kettle dry toggle limitation through `/handlePower`, no hard failure
+Remaining warning: none
 
 ## Coverage in this published run
 
@@ -63,7 +65,7 @@ Not included in this count:
 | 1 | Current testdevice full backup | PASS |
 | 2 | Firmware and web interface self-update | PASS |
 | 3 | Baseline Testgeraet 2026-03-10 | PASS |
-| 4 | Web interface reload core | WARN |
+| 4 | Web interface reload core | PASS |
 | 5 | Web interface dashboard core | PASS |
 | 6 | Web interface mash/fermenter view switch | PASS |
 | 7 | Web interface system save and reload | PASS |
@@ -125,4 +127,4 @@ Not included in this count:
 | # | Test | Result |
 | - | ---- | ------ |
 | 1 | Manual mode power smoke targeted retest | PASS |
-| 2 | Safety power-off regression with relay dry-run and webhook mock | WARN |
+| 2 | Safety power-off regression with relay dry-run and webhook mock | PASS |

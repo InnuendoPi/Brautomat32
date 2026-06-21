@@ -11,12 +11,16 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.64.2
+Version 1.64.3
 
+* Korrektur:    Kessel-Power-API unterstützt explizites Ein/Aus statt reinem Toggle; WebIf und API können Kesselzustände eindeutig setzen
 * Korrektur:    Kessel-Abschaltpfade vereinheitlicht: Power-Off, Manual-Off, Maische-Stop und AutoTune-Stop setzen Leistung, Kesselzustand und PID-Modus eindeutig auf sicher aus
+* Korrektur:    Hardware-Ausgänge für Relais, Webhook und IDS werden bei Kessel-Off explizit auf aus gesetzt, damit Anzeige `0%` und reale Heizfreigabe konsistent bleiben
 * Korrektur:    Sensorfehlerpfad mit `errOut=0` schaltet den Kessel sicher aus und beendet den PID-Regelmodus
 * Korrektur:    AutoTune-Stop schaltet den betroffenen Kessel sicher aus und verlässt den AutoTune-Zustand ohne aktiven Heizpfad
 * Korrektur:    Sensorkalibrierung korrigiert und modernisiert
+* Korrektur:    Sensor-Task-Timing für analoge Sensoren und PT100x-Messzyklen korrigiert
+* Optimiert:    MAX31865-Diagnose und Logging kompakter
 
 Version 1.64.1
 
