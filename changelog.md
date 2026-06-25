@@ -16,6 +16,8 @@ Version 1.64.4
 * Korrektur:    Kessel starten ohne aktiven Resume-State sicher ausgeschaltet
 * Korrektur:    Webhook-Kessel erhalten beim Hard-Off immer ein explizites `off`
 * Korrektur:    einheitliche Schwellwerte für DS18B20/PT100/PT1000-Fehlerlogik
+* Korrektur:    SNTP-Start blockiert den Boot nicht dauerhaft bei unerreichbarem NTP-Server
+* Korrektur:    SNTP-Erfolg wird nur nach neuem Sync-Callback gewertet, eine vorhandene Systemzeit überspringt den Fallback nicht mehr
 
 Version 1.64.3
 
