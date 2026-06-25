@@ -11,6 +11,12 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.64.4
+
+* Korrektur:    Kessel starten ohne aktiven Resume-State sicher ausgeschaltet
+* Korrektur:    Webhook-Kessel erhalten beim Hard-Off immer ein explizites `off`
+* Korrektur:    einheitliche Schwellwerte für DS18B20/PT100/PT1000-Fehlerlogik
+
 Version 1.64.3
 
 * Korrektur:    Kessel-Power-API unterstützt explizites Ein/Aus statt reinem Toggle; WebIf und API können Kesselzustände eindeutig setzen
