@@ -18,6 +18,7 @@ Version 1.64.4
 * Korrektur:    einheitliche Schwellwerte für DS18B20/PT100/PT1000-Fehlerlogik
 * Korrektur:    SNTP-Start blockiert den Boot nicht dauerhaft bei unerreichbarem NTP-Server
 * Korrektur:    SNTP-Erfolg wird nur nach neuem Sync-Callback gewertet, eine vorhandene Systemzeit überspringt den Fallback nicht mehr
+* Korrektur:    Buttons im manuellen Modus werden im WebIf wieder zentriert angezeigt
 
 Version 1.64.3
 
