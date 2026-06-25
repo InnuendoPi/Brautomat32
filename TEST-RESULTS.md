@@ -3,12 +3,12 @@
 Current status for the latest complete suite reference run:
 
 - Suite: `complete-suite`
-- Firmware version: `1.64.3 Develop`
+- Firmware version: `1.64.4 Develop`
 - Suite tests: `59`
 - Underlying checks: `1132 case checks`
-- Test date: `2026-06-20`
-- Test time: `15:52:22 UTC`
-- Test duration: `51m 13s`
+- Test date: `2026-06-25`
+- Test time: `not recorded`
+- Test duration: `not recorded`
 - Pass: `59`
 - Fail: `0`
 - Skip: `0`
@@ -17,9 +17,7 @@ Current status for the latest complete suite reference run:
 ## Current Assessment
 
 The latest complete-suite run contains no FAIL.
-`browser-reload-core` is treated as PASS.
-The observed reload timing / transient request timeout while loading `language/deutsch.json` did not cause a WebIf functional failure.
-The page recovered and the firmware label, selected language, mash plan name, mash table and SSE connection were visible.
+All 59 tests completed with PASS.
 
 Follow-up validation:
 
