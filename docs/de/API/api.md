@@ -64,6 +64,7 @@ Brautomat HTTP-Endpunkte. Der WebServer nutzt CORS und unterstützt **HTTP GET**
 | ----------- | ---------- | -------------- |
 | `/reqSensors?id=${sensorid}` | GET | Gibt eine Liste aller Sensoren zurück |
 | `/setSensor?id=${sensorid}` | POST | Fügt einen neuen Sensor hinzu oder ändert einen bestehenden |
+| `/setSensorState?id=${sensorid}` | POST | Aktiviert oder deaktiviert einen Sensor |
 | `/delSensor?id=${sensorid}` | POST | Löscht einen Sensor |
 | `/reqSearchSensorAdresses?id=${sensorid}` | GET | Durchsucht verfügbare Sensor-Adressen |
 | `/senkal` | POST | Führt eine Sensorkalibrierung durch |
@@ -138,6 +139,7 @@ console.log(data);
 | ----------- | ---------- | -------------- |
 | `/setProfile` | POST | Neues Profil erstellen oder ändern |
 | `/changeProfile?id=${kettleid}&pname=${pname}` | POST | Aktives Profil wechseln |
+| `/renameProfile` | POST | Profil umbenennen |
 | `/delProfile?pname=${pname}` | POST | Profil löschen |
 
 | kettleid | Beschreibung |
@@ -182,8 +184,13 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 | `/reboot` | POST | Neustart des Geräts |
 | `/reqMisc` | GET | Allgemeine Systeminformationen |
 | `/reqVis` | GET | Visualisierungsdaten abrufen |
+| `/reqProcessStatus` | GET | Kompakter Prozessstatus für Dashboard und Import-/Export-Verfügbarkeit |
+| `/reqWifiCredentials` | GET | WLAN-Konfiguration abrufen |
+| `/reqFirmwareSlot` | GET | Aktiven Firmware-/Update-Slot abrufen |
+| `/scanWifi` | GET | WLAN-Netze scannen |
 | `/getLanguage` | GET | Aktuell gewählte Sprache abrufen |
 | `/setMisc` | POST | Allgemeine Einstellungen ändern |
+| `/setWifiCredentials` | POST | WLAN-Konfiguration ändern |
 | `/setMiscLang` | POST | Sprache einstellen |
 | `/uploadLanguage` | POST | Sprachdatei hochladen |
 | `/rezimp` | POST | Rezept importieren |
@@ -191,6 +198,34 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 | `/setMash` | POST | Maischplan setzen |
 | `/startHTTPUpdate` | POST | Firmware-Update starten |
 | `/setFerm` | POST | Gärparameter setzen |
+| `/eraseFlash` | GET | Flash-/Konfigurationsdaten löschen. Service-Funktion mit unmittelbarer Wirkung. |
+
+### `/reqProcessStatus`
+
+`GET /reqProcessStatus` liefert einen kleinen Prozessstatus für UI-Entscheidungen, z. B. ob Brewday Export/Import angeboten werden darf.
+
+Wenn kein aktiver oder persistierter Prozess vorhanden ist:
+
+```json
+{
+  "state": "idle"
+}
+```
+
+Bei aktivem oder wiederaufnehmbarem Prozess:
+
+| Feld | Typ | Beschreibung |
+| --- | --- | --- |
+| `state` | string | `active` oder `idle`. |
+| `mode` | string | `mash` oder `fermenter`. |
+| `name` | string | Aktueller Sud-/Planname. |
+| `step_index` | integer | Aktiver Schrittindex. |
+| `step` | string | Name des aktiven Schritts oder leerer String. |
+| `remaining_sec` | integer | Restzeit in Sekunden. |
+| `pause` | boolean | Prozess ist pausiert. |
+| `play` | boolean | Prozess läuft bzw. Startstatus aktiv. |
+| `runtime_power` | boolean | Runtime-Power ist aktuell aktiv. |
+| `persisted` | boolean | Wiederaufnahmedaten sind gespeichert. |
 
 ---
 
@@ -549,6 +584,8 @@ Die Pins werden serverseitig während des normalen Chart-Schreibens aus dem lauf
 | `/restore` | POST | Backup wiederherstellen |
 | `/config.txt` | GET | Aktuelle Text-Konfiguration herunterladen |
 | `/download?file=...` | GET | Beliebige Datei aus dem LittleFS herunterladen |
+| `/update` | GET | WebUpdate-Seite laden |
+| `/update` | POST | Firmware-/Datei-Upload über WebUpdate ausführen |
 
 ---
 
@@ -558,6 +595,26 @@ Die Pins werden serverseitig während des normalen Chart-Schreibens aus dem lauf
 | ----------- | ---------- | -------------- |
 | `/status` | GET | Systemstatus abrufen |
 | `/list` | GET | Dateiliste anzeigen |
+| `/edit`, `/edit.htm`, `/edit.html` | GET | LittleFS-Dateimanager laden |
+| `/edit` | POST | Datei in LittleFS hochladen |
+| `/edit` | PUT | Datei oder Verzeichnis in LittleFS anlegen |
+| `/edit` | DELETE | Datei oder Verzeichnis aus LittleFS löschen |
+
+---
+
+## Testflow / Development
+
+Diese Endpunkte sind nur in Builds mit `BRAUTOMAT_TESTFLOW_ENABLED` registriert und dienen Test-Runnern bzw. Debugging.
+
+| Endpoint | Methode | Beschreibung |
+| ----------- | ---------- | -------------- |
+| `/dev/snapshot` | GET | Debug-Testflow-Snapshot mit `meta.testflowSchema`. |
+| `/dev/mashplan-readback` | GET | Aktuellen Maischeplan für Test-Readback abrufen. |
+| `/dev/sensor-error` | GET | Sensorfehler für Testflow setzen. |
+| `/dev/sensor-override` | GET | Sensorwert für Testflow überschreiben. |
+| `/dev/webupdate-source` | GET | WebUpdate-Quelle für Testflow setzen/lesen. |
+| `/dev/testflow-reset` | GET | Testflow-Zustand zurücksetzen. |
+| `/setSenErr` | GET | Legacy-Alias für `/dev/sensor-error`. |
 
 ---
 

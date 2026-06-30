@@ -64,6 +64,7 @@ Brautomat HTTP endpoints. The web server uses CORS and supports **HTTP GET**, **
 | ----------- | ---------- | -------------- |
 | `/reqSensors?id=${sensorid}` | GET | Returns a list of all sensors |
 | `/setSensor?id=${sensorid}` | POST | Adds a new sensor or modifies an existing one |
+| `/setSensorState?id=${sensorid}` | POST | Enables or disables a sensor |
 | `/delSensor?id=${sensorid}` | POST | Deletes a sensor |
 | `/reqSearchSensorAdresses?id=${sensorid}` | GET | Searches available sensor addresses |
 | `/senkal` | POST | Performs sensor calibration |
@@ -138,6 +139,7 @@ console.log(data);
 | ----------- | ---------- | -------------- |
 | `/setProfile` | POST | Create or change a new profile |
 | `/changeProfile?id=${kettleid}&pname=${pname}` | POST | Switch active profile |
+| `/renameProfile` | POST | Rename profile |
 | `/delProfile?pname=${pname}` | POST | Delete profile |
 
 | kettleid | Description |
@@ -182,8 +184,13 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 | `/reboot` | POST | Restart the device |
 | `/reqMisc` | GET | General system information |
 | `/reqVis` | GET | Get visualization data |
+| `/reqProcessStatus` | GET | Compact process state for dashboard and import/export availability |
+| `/reqWifiCredentials` | GET | Get Wi-Fi configuration |
+| `/reqFirmwareSlot` | GET | Get active firmware/update slot |
+| `/scanWifi` | GET | Scan Wi-Fi networks |
 | `/getLanguage` | GET | Get the currently selected language |
 | `/setMisc` | POST | Change general settings |
+| `/setWifiCredentials` | POST | Change Wi-Fi configuration |
 | `/setMiscLang` | POST | Set language |
 | `/uploadLanguage` | POST | Upload a language file |
 | `/rezimp` | POST | Import recipe |
@@ -191,6 +198,34 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 | `/setMash` | POST | Set mash plan |
 | `/startHTTPUpdate` | POST | Start firmware update |
 | `/setFerm` | POST | Set fermentation parameters |
+| `/eraseFlash` | GET | Erase flash/configuration data. Service function with immediate effect. |
+
+### `/reqProcessStatus`
+
+`GET /reqProcessStatus` returns a small process state for UI decisions, for example whether brewday export/import may be offered.
+
+When there is no active or persisted process:
+
+```json
+{
+  "state": "idle"
+}
+```
+
+With an active or resumable process:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `state` | string | `active` or `idle`. |
+| `mode` | string | `mash` or `fermenter`. |
+| `name` | string | Current brew/plan name. |
+| `step_index` | integer | Active step index. |
+| `step` | string | Active step name or empty string. |
+| `remaining_sec` | integer | Remaining time in seconds. |
+| `pause` | boolean | Process is paused. |
+| `play` | boolean | Process is running or start state is active. |
+| `runtime_power` | boolean | Runtime power is currently active. |
+| `persisted` | boolean | Resume data is stored. |
 
 ---
 
@@ -549,6 +584,8 @@ Pins are recorded server-side while the normal chart writer runs, using the acti
 | `/restore` | POST | Restore backup |
 | `/config.txt` | GET | Download the current text configuration |
 | `/download?file=...` | GET | Download any file from LittleFS |
+| `/update` | GET | Load WebUpdate page |
+| `/update` | POST | Run firmware/file upload through WebUpdate |
 
 ---
 
@@ -558,6 +595,26 @@ Pins are recorded server-side while the normal chart writer runs, using the acti
 | ----------- | ---------- | -------------- |
 | `/status` | GET | Get system status |
 | `/list` | GET | Show file list |
+| `/edit`, `/edit.htm`, `/edit.html` | GET | Load LittleFS file manager |
+| `/edit` | POST | Upload file to LittleFS |
+| `/edit` | PUT | Create file or directory in LittleFS |
+| `/edit` | DELETE | Delete file or directory from LittleFS |
+
+---
+
+## Testflow / Development
+
+These endpoints are only registered in builds with `BRAUTOMAT_TESTFLOW_ENABLED` and are intended for test runners or debugging.
+
+| Endpoint | Method | Description |
+| ----------- | ---------- | -------------- |
+| `/dev/snapshot` | GET | Debug testflow snapshot with `meta.testflowSchema`. |
+| `/dev/mashplan-readback` | GET | Get current mash plan for test readback. |
+| `/dev/sensor-error` | GET | Set sensor error for testflow. |
+| `/dev/sensor-override` | GET | Override sensor value for testflow. |
+| `/dev/webupdate-source` | GET | Set/read WebUpdate source for testflow. |
+| `/dev/testflow-reset` | GET | Reset testflow state. |
+| `/setSenErr` | GET | Legacy alias for `/dev/sensor-error`. |
 
 ---
 
@@ -565,7 +622,7 @@ Pins are recorded server-side while the normal chart writer runs, using the acti
 
 | Files | Description |
 | ---------- | --------------- |
-| `/Brautomat.min.css`, `/bootstrap.min.css`, `/bootstrap.min.js`, `/Brautomat.min.js`, `/Brautomat.ttf` | Web assets |
+| `/brautomat.min.css`, `/bootstrap.min.css`, `/bootstrap.min.js`, `/brautomat.min.js`, `/brautomat.ttf` | Web assets |
 | `/language/<name>.json` | Language files |
 | `/lang.js`, `/favicon.ico` | System files |
 | `/info.mp3`, `/success.mp3`, `/warning.mp3`, `/error.mp3` | Audio files for system messages |
