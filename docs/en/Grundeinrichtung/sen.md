@@ -1,10 +1,10 @@
-# Temperature sensor setup
+# Set up temperature sensor
 
 ## Add new sensor
 
 In the _Sensors_ section, a new sensor can be added by clicking on the plus symbol.
 
-![Create sensors](/docs/img/Sensor-einrichten.jpg)
+![Create sensors](../.gitbook/assets/Sensor-einrichten.jpg)
 
 ## Set sensor address and name
 
@@ -15,11 +15,11 @@ If no sensor is displayed:
 * The detection of the sensors can be restarted using the reload button.
 * If no sensor is still detected, the cable connection must be checked.
 
-Each sensor needs a name. In this basic setup the sensor is called “Sensor IDS2”.  called.
+Each sensor needs a name. In this basic setup the sensor is called “Sensor IDS2”. called.
 
 _Note: Sensor names can contain a maximum of 20 characters. Allowed special characters are # and spaces. The input is automatically checked by the web interface._
 
-![Configure sensors](/docs/img/Sensor-einstellungen.jpg)
+![Configure sensors](../.gitbook/assets/Sensor-einstellungen.jpg)
 
 ## Sensor calibration (offset values)
 
@@ -31,7 +31,7 @@ For this basic configuration, both values ​​remain unchanged at 0.00.
 
 By clicking on _save_ the sensor is created and then displayed in Dashboard under _Sensors_.
 
-![Sensors Dashboard](/docs/img/Sensor-dashboard.jpg)
+![Sensors Dashboard](../.gitbook/assets/Sensor-dashboard.jpg)
 
 > **Note:**
 

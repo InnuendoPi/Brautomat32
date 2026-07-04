@@ -1,4 +1,4 @@
-# The InnuCase
+# InnuCase
 
 InnuCase is available in two sizes. Print files are in `Housing/InnuCase`.
 
@@ -19,10 +19,7 @@ Connections (depending on variant):
 * M12 front connectors for actuators
 * M12 bottom connectors for actuators and sensors
 
-![InnuCase #1](/docs/img/Case-1_Display_2PWM_Power.jpg)
-![InnuCase #1](/docs/img/Case-1_Display_2PWM.jpg)
-![InnuCase #1](/docs/img/Case-1_Display_1PWM_Power.jpg)
-![InnuCase #1](/docs/img/Case-1_Display_1PWM.jpg)
+![InnuCase #1](../../.gitbook/assets/Case-1_Display_2PWM_Power.jpg) ![InnuCase #1](../../.gitbook/assets/Case-1_Display_2PWM.jpg) ![InnuCase #1](../../.gitbook/assets/Case-1_Display_1PWM_Power.jpg) ![InnuCase #1](../../.gitbook/assets/Case-1_Display_1PWM.jpg)
 
 ### InnuCase #2 (compact)
 
@@ -32,7 +29,7 @@ Designed for compact setups (display + one sensor).
 
 * File: `InnuCase-2`
 
-![InnuCase #2](/docs/img/Case-2_Display.jpg)
+![InnuCase #2](../../.gitbook/assets/Case-2_Display.jpg)
 
 If no display is used, close the opening with a blind cover.
 
@@ -47,23 +44,19 @@ If no display is used, close the opening with a blind cover.
 * InnuCase #1 lid (`Deckel-1_Display_2PWM.jpg`)
 * InnuCase #2 lid (`Deckel-2_Display.jpg`)
 
-![InnuCase #1 lid](/docs/img/Deckel-1_Display_2PWM.jpg)
-![InnuCase #2 lid](/docs/img/Deckel-2_Display.jpg)
+![InnuCase #1 lid](../../.gitbook/assets/Deckel-1_Display_2PWM.jpg) ![InnuCase #2 lid](../../.gitbook/assets/Deckel-2_Display.jpg)
 
 ## Threaded inserts and mounting
 
-The housing includes pads for threaded inserts.
-Typical hole diameter in pads: 4.6 mm.
-Use a soldering iron to set inserts into the pads.
+The housing includes pads for threaded inserts. Typical hole diameter in pads: 4.6 mm. Use a soldering iron to set inserts into the pads.
 
-![Thread Inserts](/docs/img/Gewindeeinsätze.jpg)
+![Thread Inserts](../../.gitbook/assets/Gewindeeinsätze.jpg)
 
 ## Board carrier plate
 
 The board is mounted on a carrier plate behind the display using M3 spacers (for example 15 mm).
 
-![Board carrier](/docs/img/Platinenträger-1.jpg)
-![Board carrier MAX31865](/docs/img/Platinenträger-2.jpg)
+![Board carrier](../../.gitbook/assets/Platinenträger-1.jpg) ![Board carrier MAX31865](../../.gitbook/assets/Platinenträger-2.jpg)
 
 Carrier variants:
 
@@ -72,13 +65,10 @@ Carrier variants:
 
 ## Bracket and blind cover
 
-A rear bracket can be used for mounting.
-Blind covers are available for unused display openings.
+A rear bracket can be used for mounting. Blind covers are available for unused display openings.
 
-![Bracket](/docs/img/Halterung.jpg)
-![Blind cover](/docs/img/Blinddeckel.jpg)
+![Bracket](../../.gitbook/assets/Halterung.jpg) ![Blind cover](../../.gitbook/assets/Blinddeckel.jpg)
 
 ## Images
 
-![InnuCase](/docs/img/brautomat_01.jpg)
-![InnuCase](/docs/img/brautomat_02.jpg)
+![InnuCase](../../.gitbook/assets/brautomat_01.jpg) ![InnuCase](../../.gitbook/assets/brautomat_02.jpg)

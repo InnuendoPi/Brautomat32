@@ -1,9 +1,8 @@
 # Logging
 
-![media](/docs/img/logging.jpg)
+![media](../.gitbook/assets/logging.jpg)
 
-Logging is available in development builds.
-It helps with troubleshooting firmware issues and configuration errors.
+Logging is available in development builds. It helps with troubleshooting firmware issues and configuration errors.
 
 A serial monitor is required. The examples below use Microsoft Visual Studio Code with the Microsoft Serial Monitor extension.
 
@@ -12,7 +11,7 @@ Set serial monitor to:
 * baud rate `115200`
 * line ending `CRLF`
 
-![Microsoft Visual Studio Code](/docs/img/vscode.jpg)
+![Microsoft Visual Studio Code](../.gitbook/assets/vscode.jpg)
 
 ## Logging settings
 
@@ -106,8 +105,7 @@ This shows firmware version, mDNS host, IP, and filesystem mount status.
 
 ## Test sensor error
 
-You can trigger a test sensor error via URL.
-Sensors use IDs starting at `0`.
+You can trigger a test sensor error via URL. Sensors use IDs starting at `0`.
 
 ```json
 http://Brautomat.local/setSenErr?id=0
@@ -131,14 +129,12 @@ Download ZIP: [Microsoft VSCode](https://code.visualstudio.com/docs/?dv=winzip)
 2. Create a folder named `data` next to `Code.exe`.
 3. Start `Code.exe`.
 
-![Microsoft Visual Studio Code](/docs/img/vscode_4.jpg)
+![Microsoft Visual Studio Code](../.gitbook/assets/vscode_4.jpg)
 
 Install extension `Serial Monitor` by Microsoft.
 
-![Microsoft Visual Studio Code](/docs/img/vscode_1.jpg)
-![Microsoft Visual Studio Code](/docs/img/vscode_2.jpg)
+![Microsoft Visual Studio Code](../.gitbook/assets/vscode_1.jpg) ![Microsoft Visual Studio Code](../.gitbook/assets/vscode_2.jpg)
 
-Open output (`Ctrl+Shift+U`), select `Serial Monitor`, then choose COM port and `115200` baud.
-Start with `Start Monitoring`.
+Open output (`Ctrl+Shift+U`), select `Serial Monitor`, then choose COM port and `115200` baud. Start with `Start Monitoring`.
 
-![Microsoft Visual Studio Code](/docs/img/vscode_3.jpg)
+![Microsoft Visual Studio Code](../.gitbook/assets/vscode_3.jpg)
