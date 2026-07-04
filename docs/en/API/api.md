@@ -239,17 +239,17 @@ With an active or resumable process:
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/api/telemetry` | GET | Compact brewday time-series snapshot for Grafana, Highcharts, or external loggers. |
-| `/api/debug` | GET | Broad debug snapshot with runtime, controller, sensor, kettle, and actor state. Not intended for 30 s telemetry logging. |
-| `/api/brewday/export` | GET | Exports the complete current brewday as a `brautomat-brewday-v1` JSON stream with metadata, recipe/plan snapshot, chartdots, and brewday pins. |
-| `/api/brewday/import` | POST | Imports a `brautomat-brewday-v1` JSON as review data into `/brewday_review.json`. Import does not overwrite configuration, the current plan, chartdots, or influence a running process. |
-| `/api/brewday/pins` | GET | Returns the currently server-side recorded brewday pins from `/brewday_pins.ndjson` as a JSON array. The endpoint is read-only and is used by the dashboard to render pins for existing chartdots. |
+| `/telemetry` | GET | Compact brewday time-series snapshot for Grafana, Highcharts, or external loggers. |
+| `/debug` | GET | Broad debug snapshot with runtime, controller, sensor, kettle, and actor state. Not intended for 30 s telemetry logging. |
+| `/brewday/export` | GET | Exports the complete current brewday as a `brautomat-brewday-v1` JSON stream with metadata, recipe/plan snapshot, chartdots, and brewday pins. |
+| `/brewday/import` | POST | Imports a `brautomat-brewday-v1` JSON as review data into `/brewday_review.json`. Import does not overwrite configuration, the current plan, chartdots, or influence a running process. |
+| `/brewday/pins` | GET | Returns the currently server-side recorded brewday pins from `/brewday_pins.ndjson` as a JSON array. The endpoint is read-only and is used by the dashboard to render pins for existing chartdots. |
 
-`/api/telemetry` is intended for regular logging. Intended polling intervals are about 30 s during mash mode and 60-300 s during fermenter mode.
+`/telemetry` is intended for regular logging. Intended polling intervals are about 30 s during mash mode and 60-300 s during fermenter mode.
 
-### `/api/telemetry`
+### `/telemetry`
 
-`GET /api/telemetry` returns exactly one current measurement point for external charts or loggers. The endpoint is read-only and does not include static metadata, actor lists, sensor lists, or controller button logic.
+`GET /telemetry` returns exactly one current measurement point for external charts or loggers. The endpoint is read-only and does not include static metadata, actor lists, sensor lists, or controller button logic.
 
 | Field | Type | Description |
 | --- | --- | --- |
@@ -291,9 +291,9 @@ Example:
 }
 ```
 
-### `/api/debug`
+### `/debug`
 
-`GET /api/debug` returns a broad current device snapshot for debugging or external control UIs. The endpoint is read-only, but it is not intended as compact 30 s telemetry logging.
+`GET /debug` returns a broad current device snapshot for debugging or external control UIs. The endpoint is read-only, but it is not intended as compact 30 s telemetry logging.
 
 Time fields:
 
