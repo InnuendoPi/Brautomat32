@@ -62,23 +62,29 @@ Brautomat HTTP endpoints. The web server uses CORS and supports **HTTP GET**, **
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |
-| `/reqSensors?id=${sensorid}` | GET | Returns a list of all sensors |
-| `/setSensor?id=${sensorid}` | POST | Adds a new sensor or modifies an existing one |
-| `/setSensorState?id=${sensorid}` | POST | Enables or disables a sensor |
-| `/delSensor?id=${sensorid}` | POST | Deletes a sensor |
+| `/reqSensors?id=${sensorid}` | GET | Returns the configuration of one sensor or all sensors |
+| `/setSensor` | POST | Adds a new sensor or modifies an existing one. Expects JSON with `id` and sensor parameters |
+| `/setSensorState` | POST | Enables or disables a sensor. Expects JSON `{ "id": number, "state": boolean }` |
+| `/delSensor` | POST | Deletes a sensor. Expects JSON `{ "id": number }` |
 | `/reqSearchSensorAdresses?id=${sensorid}` | GET | Searches available sensor addresses |
-| `/senkal` | POST | Performs sensor calibration |
+| `/senkal` | POST | Performs sensor calibration. Expects JSON with `id` and calibration values |
 
-| sensorid | Description |
+Parameter `sensorid` for GET endpoints:
+
+| Value | Description |
 | ----------- | ---------- |
-| -1 | retrieves all sensors |
-| 0 - 2 | Sensor ID |
+| `-1` | retrieves all sensors |
+| `0` - `2` | Sensor ID |
+
+For POST endpoints, the sensor ID is sent in the JSON body as `id`. For `/setSensor`, `id=-1` can create a new sensor; for `/setSensorState`, `/delSensor`, and `/senkal`, `id` must reference an existing sensor ID.
 
 **Example:**  
 
 ```js
 const data = await apiGET(`/reqSensors?id=0`);
 console.log(data);
+
+await apiPOST(`/setSensorState`, { id: 0, state: true });
 ```
 
 ---
