@@ -1,8 +1,8 @@
-# Fermenter mode
+# Fermenter
 
 In fermenter mode, Brautomat32 processes the fermentation plan from top to bottom, similar to the mash plan. The control panel uses the same buttons.
 
-![Fermenter Dashboard](/docs/img/fermenter_dash.jpg)
+![Fermenter Dashboard](../.gitbook/assets/fermenter_dash.jpg)
 
 There is one important difference in step handling:
 
@@ -10,7 +10,7 @@ The first fermentation step starts immediately when the process starts. All foll
 
 For setup, you can configure one GPIO for cooling and one GPIO for heating. Either one can also be left unused.
 
-![Fermenter settings](/docs/img/fermenter_set.jpg)
+![Fermenter settings](../.gitbook/assets/fermenter_set.jpg)
 
 The fermenter has three states: cooling, heating, and idle. If the controller switches between heating and cooling, a pause is inserted. During this pause, the output state stays unchanged.
 

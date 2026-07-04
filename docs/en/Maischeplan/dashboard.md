@@ -1,6 +1,6 @@
 # The Dashboard
 
-![Dashboard](/docs/img/dashboard160.jpg)
+![Dashboard](../.gitbook/assets/dashboard160.jpg)
 
 Dashboard mode is optimized for brew day. Once kettles, actuators, and sensors are configured, it combines the most relevant controls and status information in one view.
 
@@ -8,7 +8,7 @@ Dashboard mode is optimized for brew day. Once kettles, actuators, and sensors a
 
 Enable Dashboard in system settings:
 
-![Dashboard](/docs/img/dashboard160-1.jpg)
+![Dashboard](../.gitbook/assets/dashboard160-1.jpg)
 
 Depending on your setup, you can choose which modules should appear in Dashboard.
 

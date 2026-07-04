@@ -1,4 +1,4 @@
-# The board for the project
+# The board
 
 The board for the project Brautomat makes construction and operation very easy. The GGM IDS, the sensors, the actuators and the display are connected to the screw terminal blocks of the Brautomat.
 
@@ -7,4 +7,4 @@ The board is a breakout board for the microcontrollers ESP8266 and ESP32. Sensor
 * GPIO D3 with a 4k7 resistor is intended for Dallas DS18B20 sensors.
 * GPIO D8 is connected to the connection for a piezo buzzer on the board
 
-![Board 2](/docs/img/Platine21.jpg)
+![Board 2](../.gitbook/assets/Platine21.jpg)

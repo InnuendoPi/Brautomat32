@@ -1,22 +1,22 @@
-# Einstellungen Maischeplan
+# Rezept
 
 Der Brautomat bietet eine einfache Verwaltung von Maischeplänen. Dabei kannst du Pläne importieren, exportieren, umbenennen, wechseln und löschen. Mit diesem Kapitel sind die Grundfunktionen vollständig beschrieben.
 
 ## Maischeplan
 
-In den Einstellungen kann der Name des Maischeplans festgelegt werden. Aus dem Maischeplannamen wird der Dateiname abgeleitet. Die Parameter *Gesamtkochzeit* und *Nachisomerisierungszeit* werden nur zur Information angezeigt und können nicht editiert werden. Diese Parameter werden beim Rezeptimport eingelesen. Wird ein Maischplan manuell erstellt, sind die Werte Kochdauer und Nachisomerisierung ohne Bedeutung, da der Brautomat keine Bittereinheiten berechnet.
+In den Einstellungen kann der Name des Maischeplans festgelegt werden. Aus dem Maischeplannamen wird der Dateiname abgeleitet. Die Parameter _Gesamtkochzeit_ und _Nachisomerisierungszeit_ werden nur zur Information angezeigt und können nicht editiert werden. Diese Parameter werden beim Rezeptimport eingelesen. Wird ein Maischplan manuell erstellt, sind die Werte Kochdauer und Nachisomerisierung ohne Bedeutung, da der Brautomat keine Bittereinheiten berechnet.
 
 ### Maischeplan erstellen
 
-Im Eingabefeld ist der Name des Maischeplans einzugeben. Mit *OK* wird ein neuer leerer Maischeplan angelegt.
+Im Eingabefeld ist der Name des Maischeplans einzugeben. Mit _OK_ wird ein neuer leerer Maischeplan angelegt.
 
 ### Maischeplan umbenennen
 
-Im Eingabefeld ist der neue Name für den Maischeplan einzugeben. Mit *OK* wird der Maischeplan unter dem neuen Namen gespeichert.
+Im Eingabefeld ist der neue Name für den Maischeplan einzugeben. Mit _OK_ wird der Maischeplan unter dem neuen Namen gespeichert.
 
 ### Maischeplan ändern
 
-Der Brautomat verwaltet Maischepläne im Flash-Speicher. Durch Auswahl von *Maischeplan wechseln* kann zwischen den vorhandenen Maischeplänen gewechselt werden.
+Der Brautomat verwaltet Maischepläne im Flash-Speicher. Durch Auswahl von _Maischeplan wechseln_ kann zwischen den vorhandenen Maischeplänen gewechselt werden.
 
 ### Maischeplan importieren
 
@@ -33,9 +33,9 @@ Rezepte aus MaischeMalzundMehr sollten ebenfalls zuerst in den kleinenBrauhelfer
 
 Rezepte und Sude können aus BrewFather per Datei-Import oder per API-Abruf importiert werden. Rastennamen dürfen in BrewFather sehr lang sein; der Brautomat kürzt sie auf maximal 50 Zeichen. Rastzeiten aus Fließkommazahlen oder Text werden beim Import in Ganzzahlen umgewandelt oder auf 0 gesetzt. Über die BrewFather-API werden maximal 300 Rezepte oder Sude geladen.
 
-*Wichtig (ab 1.60):* Rezept-Import, Umbenennen, Kopieren, Wechseln und Löschen sind nur im Idle-Zustand erlaubt. Während eines aktiven Brauvorgangs werden diese Aktionen blockiert.
+_Wichtig (ab 1.60):_ Rezept-Import, Umbenennen, Kopieren, Wechseln und Löschen sind nur im Idle-Zustand erlaubt. Während eines aktiven Brauvorgangs werden diese Aktionen blockiert.
 
-*Hinweis:* Die ESP-Mikrocontroller haben einen kleinen RAM-Speicher. Rezepte mit sehr langen Texten, Bildern oder anderen Anhängen können unter Umständen nicht importiert werden. Der Brautomat filtert Rezepte vor dem Import. Trotzdem kann es erforderlich sein, dass Bilder und sehr lange Beschreibungen vor dem Import entfernt werden müssen.
+_Hinweis:_ Die ESP-Mikrocontroller haben einen kleinen RAM-Speicher. Rezepte mit sehr langen Texten, Bildern oder anderen Anhängen können unter Umständen nicht importiert werden. Der Brautomat filtert Rezepte vor dem Import. Trotzdem kann es erforderlich sein, dass Bilder und sehr lange Beschreibungen vor dem Import entfernt werden müssen.
 
 Importierte Rezepte werden im Ordner `/Rezepte` gespeichert. Als Dateiname wird der Rezeptname verwendet. Die maximale Länge des Dateinamens im Arduino-Dateisystem beträgt 31 Zeichen. Leerzeichen und Umlaute werden beim Speichern ersetzt.
 
@@ -49,7 +49,7 @@ Der ausgewählte Maischeplan wird aus dem Flashspeicher entfernt.
 
 ## Voreinstellung Import
 
-![Voreinstellung Import](/docs/img/voreinstellung_import.jpg)
+![Voreinstellung Import](../.gitbook/assets/voreinstellung_import.jpg)
 
 Der Brautomat benötigt einen Schritt Einmaischen (optional) und einen Schritt Abmaischen. Insbesondere der Schritt Abmaischen dient bei deaktiviertem `autonext` als Trennschritt zwischen Maischen und Kochen. Beim Importieren kann der Brautomat fehlende Einmaisch- und Abmaischschritte einfügen. Zusätzlich können fehlende Temperaturen mit Vorgaben versehen werden.
 
@@ -57,22 +57,22 @@ Der Brautomat benötigt einen Schritt Einmaischen (optional) und einen Schritt A
 
 Bei Rezepten aus verschiedenen Quellen können unter anderem Temperaturangaben fehlen. Dies betrifft insbesondere die Temperaturen für Einmaischen, Abmaischen, Vorderwürze und Whirlpool-Hopfung. Die interne Programmlogik des Brautomaten benötigt immer eine Temperatur für die Verarbeitung, auch wenn einige Temperaturen aus Sicht des Brauers nicht notwendig sind. Fehlende Temperaturen werden mit Standardwerten vorbelegt.
 
-### Temperatur Einmaischen [°C]
+### Temperatur Einmaischen \[°C]
 
 Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für das Einmaischen. Dieser Parameter wird nur dann verwendet, wenn beim Rezeptimport keine Einmaisch-Temperatur angegeben ist.
 
-### Temperatur Abmaischen [°C]
+### Temperatur Abmaischen \[°C]
 
 Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für das Abmaischen. Dieser Parameter wird nur dann verwendet, wenn beim Rezeptimport keine Abmaisch-Temperatur angegeben ist.
 
-### Temperatur VWH [°C]
+### Temperatur VWH \[°C]
 
 Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Vorderwürzenhopfung. Häufig wird bei Rezepten keine Temperatur für die VWH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temperatur angegeben, wird diese beim Import verwendet.
 
-### Temperatur WPH [°C]
+### Temperatur WPH \[°C]
 
 Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Whirlpoolhopfung. Häufig wird bei Rezepten keine Temperatur für die WPH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temperatur angegeben, wird diese beim Import verwendet.
 
-### Temperatur Kochen [°C]
+### Temperatur Kochen \[°C]
 
 Dieser Parameter beschreibt die Standardtemperatur für Kochschritte beim Rezeptimport. Der Defaultwert ist 100°C. Ist im Rezept bereits eine Kochtemperatur angegeben, wird dieser Rezeptwert verwendet.

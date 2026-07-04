@@ -1,6 +1,6 @@
 # Aktoren
 
-![Einstellungen Aktor](/docs/img/aktoren_einstellungen.jpg)
+![Einstellungen Aktor](../.gitbook/assets/aktoren_einstellungen.jpg)
 
 Aktoren wie Rührwerk, Pumpen oder Ringheizelemente werden mit einem Namen und einem GPIO (Schalter) konfiguriert. Aktoren können PWM (Pulsweitenmodulation) verwenden. PWM im Brautomat bedeutet je nach PWM-Modus entweder getaktetes Ein-/Ausschalten oder ein analoges PWM-Signal.
 
@@ -10,19 +10,19 @@ Für analoges PWM wird ein festes PWM-Signal mit 1000 Hz verwendet. Dieser Modus
 
 Die Leistung kann während des Betriebs mit den beiden Schaltflächen in der Aktorentabelle geändert werden. Die Schaltflächen zum Ändern der Leistung sind für jeden Aktor sichtbar, wenn PWM für den Aktor aktiviert wurde. Digitale PWM ist für Relais oder SSRs geeignet. Sie ist nicht als direkte Motorsteuerung für Rührwerke gedacht.
 
-![Übersicht Aktoren](/docs/img/aktoren.jpg)
+![Übersicht Aktoren](../.gitbook/assets/aktoren.jpg)
 
 ## Webhook
 
 Der Parameter Aktor GPIO muss auf "-" eingestellt werden, damit die Webhook-Elemente im Webinterface angezeigt werden. Zusätzlich werden die Webhook-URL und das Schaltkommando benötigt:
 
-![webhook](/docs/img/aktoren_webhook1.jpg)
+![webhook](../.gitbook/assets/aktoren_webhook1.jpg)
 
 Beispiel Shelly 1PM:
 
-Shelly 1PM einschalten: <http://192.168.1.5/relay/0?turn=on>\
-Shelly 1PM ausschalten: <http://192.168.1.5/relay/0?turn=off>
+Shelly 1PM einschalten: [http://192.168.1.5/relay/0?turn=on](http://192.168.1.5/relay/0?turn=on)\
+Shelly 1PM ausschalten: [http://192.168.1.5/relay/0?turn=off](http://192.168.1.5/relay/0?turn=off)
 
-Die Webhook-URL für Shelly 1PM lautet: <http://192.168.1.5/relay/0?turn=> (ohne on und off). Der Parameter Webhook-Schalter muss auf "on/off" eingestellt werden.
+Die Webhook-URL für Shelly 1PM lautet: [http://192.168.1.5/relay/0?turn=](http://192.168.1.5/relay/0?turn=) (ohne on und off). Der Parameter Webhook-Schalter muss auf "on/off" eingestellt werden.
 
-URL Tasmota: <http://192.168.1.5/cm?cmnd=Power1%201>
+URL Tasmota: [http://192.168.1.5/cm?cmnd=Power1%201](http://192.168.1.5/cm?cmnd=Power1%201)

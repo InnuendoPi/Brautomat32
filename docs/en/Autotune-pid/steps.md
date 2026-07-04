@@ -2,20 +2,16 @@
 
 The practical AutoTune workflow:
 
-![AutoTune](/docs/img/IDS-AutoTune.jpg)
+![AutoTune](../.gitbook/assets/IDS-AutoTune.jpg)
 
-1. Fill the mash kettle with a typical brew-day amount of water.
-   a. Use your usual mash mass as reference (`strike water + grain bill`).
-   Example: 16 l strike water and 4 kg grain bill -> use about 20 l water for AutoTune.
-   b. Start temperature should be around 50°C (40°C to 55°C).
-   c. Turn on the agitator.
+1. Fill the mash kettle with a typical brew-day amount of water. a. Use your usual mash mass as reference (`strike water + grain bill`). Example: 16 l strike water and 4 kg grain bill -> use about 20 l water for AutoTune. b. Start temperature should be around 50°C (40°C to 55°C). c. Turn on the agitator.
 2. Enter this value in `Kettle volume in liters`.
 3. Enable `PID AutoTune`.
 4. Enable `AutoTune debug`.
 5. Save settings.
 6. Start AutoTune with the power button.
 
-![AutoTune2](/docs/img/IDS-AutoTune-start.jpg)
+![AutoTune2](../.gitbook/assets/IDS-AutoTune-start.jpg)
 
 AutoTune takes about 5 minutes and stops automatically. The detected system parameters are saved automatically.
 

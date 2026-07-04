@@ -1,10 +1,10 @@
-# Structure of the board version 2
+# Board structure version 2
 
 This short guide describes the structure of the board. Board assembly is straightforward. This short description is intended as an aid for the inexperienced hobbyist and is not aimed at electrical engineers. Information about soldering, suitable soldering irons and solder can be found on YouTube or similar channels.
 
 Board parts overview:
 
-![BOM](/docs/img/Aufbau1.jpg)
+![BOM](../.gitbook/assets/Aufbau1.jpg)
 
 Number 1: Resistor 4.7kOhm\
 Number 2: JST-HX socket (white) and 5-pin screw terminal block\
@@ -15,19 +15,19 @@ Number 4: Screw terminal blocks with a pitch of 2.54mm
 
 The JST-HX socket position is an alternative to the 5-pin screw terminal block. The original GGM IDS2 panel cable matches the JST-HX socket. If a replacement cable is used, wiring is usually easier with the 5-pin screw terminal block.
 
-| Number | Item name | Link to article |
-| ----------------------------------------------------- | ------------------------------ | --------------------------------- |
-| 3 | Screw terminal block 3-pin RM 2.54 | [amazon](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| 1 optional | Screw terminal block 3-pin RM 2.54 | - |
-| 1 | Screw terminal block 5-pin RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| 1 alternative to the screw terminal block 5-pin | JST-HX socket 90° RM 2.54 | (voelkner D17526) |
-| 2 | Screw terminal block 8-pin RM 2.54 | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| 2 | Screw terminal block 12-pin RM 2.54 | [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
-| 1 | Pin header RM 2.54 | [amazon](https://www.amazon.de/dp/B01MQ5HJYQ?ref_=pe_27091401_487187591_302_E_DDE_dt_1) |
-| 1 | Resistance 4.7kOhm | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H) |
-| 1 optional | Passive buzzer 12mm 3V | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1) |
-| 1 ESP32 | ESP32 D1 mini | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9&colid=I7GQB171JGLX&ref_=list_c_wl_lv_ov_lig_dp_it&th=1) |
-| 1 optional | Display Nextion 3.5" | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC&colid=I7GQB171JGLX&psc=1&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
+| Number                                          | Item name                           | Link to article                                                                                                                                |
+| ----------------------------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3                                               | Screw terminal block 3-pin RM 2.54  | [amazon](https://www.amazon.de/dp/B07PH5HWQL/?coliid=I1JP3GL9UZVHAK\&colid=I7GQB171JGLX\&psc=1\&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 1 optional                                      | Screw terminal block 3-pin RM 2.54  | -                                                                                                                                              |
+| 1                                               | Screw terminal block 5-pin RM 2.54  | [amazon](https://www.amazon.de/dp/B07PJ71VW8/?coliid=I3AGEWLU82MSU5\&colid=I7GQB171JGLX\&psc=1\&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 1 alternative to the screw terminal block 5-pin | JST-HX socket 90° RM 2.54           | (voelkner D17526)                                                                                                                              |
+| 2                                               | Screw terminal block 8-pin RM 2.54  | [amazon](https://www.amazon.de/dp/B07PJ7YK3G/?coliid=I2SR2XJ0B6HEW9\&colid=I7GQB171JGLX\&psc=1\&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 2                                               | Screw terminal block 12-pin RM 2.54 | [amazon](https://www.amazon.de/dp/B07NZ459BY/?coliid=I2HTZO5ENXO2Q6\&colid=I7GQB171JGLX\&psc=1\&ref_=cm_sw_r_cp_ud_lstpd_1MYFTEN8WCBBE7AD4J7T) |
+| 1                                               | Pin header RM 2.54                  | [amazon](https://www.amazon.de/dp/B01MQ5HJYQ?ref_=pe_27091401_487187591_302_E_DDE_dt_1)                                                        |
+| 1                                               | Resistance 4.7kOhm                  | [amazon](https://www.amazon.de/dp/B0CL6N7334/?coliid=IVHTTAGFDF3TX\&colid=I7GQB171JGLX\&psc=1\&ref_=cm_sw_r_cp_ud_lstpd_1ZKFZ0X0XNS2PX9FJN3H)  |
+| 1 optional                                      | Passive buzzer 12mm 3V              | [amazon](https://www.amazon.de/dp/B0179I6LIK/ref=pe_27091401_487027711_TE_SCE_dp_i1)                                                           |
+| 1 ESP32                                         | ESP32 D1 mini                       | [amazon](https://www.amazon.de/dp/B08BTRQNB3/?coliid=I3GILWFH2TDYH9\&colid=I7GQB171JGLX\&ref_=list_c_wl_lv_ov_lig_dp_it\&th=1)                 |
+| 1 optional                                      | Display Nextion 3.5"                | [amazon](https://www.amazon.de/dp/B09PL9CTZ7/?coliid=I14PAW5R7XN3MC\&colid=I7GQB171JGLX\&psc=1\&ref_=cm_sw_r_cp_ud_lstpd_15EQ8G7TVRFSGNWTHM5Y) |
 
 _Note: the links or item numbers listed are purely informative and not linked to affiliate/marketing programs._
 
@@ -57,21 +57,21 @@ Two notes on inserting the screw terminal blocks:
 The next steps show screw terminal installation and soldering.\
 In step 1, install the two 12-pin screw terminal blocks. The GPIOs D9 to D19 from ESP32 are connected to the 12 screw terminal blocks.
 
-![Screw terminal block](/docs/img/Aufbau2.jpg)
+![Screw terminal block](../.gitbook/assets/Aufbau2.jpg)
 
 Now turn the board over and fix each screw terminal block with a soldering point. Now check that the screw terminal blocks are correctly seated. All pins must be correctly inserted through the soldering points. All pins are then soldered.
 
 In step 2, install the two 8-pin screw terminal blocks. The GPIOs D0 to D8 from ESP32 are connected to the 8 screw terminal blocks.
 
-![Screw terminal blocks](/docs/img/Aufbau3.jpg)
+![Screw terminal blocks](../.gitbook/assets/Aufbau3.jpg)
 
 The board now looks like this in this status:
 
-![Screw terminal blocks](/docs/img/Aufbau4.jpg)
+![Screw terminal blocks](../.gitbook/assets/Aufbau4.jpg)
 
 In step 3, install and solder the three 3-pin screw terminal blocks.
 
-![Screw terminal block for sensors](/docs/img/Aufbau5.jpg)
+![Screw terminal block for sensors](../.gitbook/assets/Aufbau5.jpg)
 
 DS18B20 temperature sensors are connected to the three connections. There is no order or hierarchy for these three connections. If only analog PT100x sensors are used, the three screw terminal blocks can be omitted.
 
@@ -79,32 +79,32 @@ On board version 2.1, an optional additional 3-pin terminal can be installed at 
 
 In step 4, install and solder either the JST-HX socket (original cable) or the 5-pin screw terminal block (replacement cable), as described above.
 
-![JST-HX or screw terminal block](/docs/img/Aufbau6.jpg)
+![JST-HX or screw terminal block](../.gitbook/assets/Aufbau6.jpg)
 
 ## The piezo buzzer
 
 The piezo buzzer is optional. This step can be skipped if acoustic signals are not desired.\
 The piezo buzzer has a positive and a negative pin.
 
-![Buzzer Plus Minus](/docs/img/Aufbau8.jpg)
+![Buzzer Plus Minus](../.gitbook/assets/Aufbau8.jpg)
 
 The positive pole is inserted into the D8 marking and, accordingly, the negative pole into the GND marking.
 
-![Buzzer](/docs/img/Aufbau7.jpg)
+![Buzzer](../.gitbook/assets/Aufbau7.jpg)
 
 ## The 4.7kOhm resistor
 
 The 4.7kOhm resistor is required for Dallas DS18B20 sensors. If only analog PT100x sensors are used, the resistor can be omitted.
 
-![Resistance](/docs/img/Aufbau9.jpg)
+![Resistance](../.gitbook/assets/Aufbau9.jpg)
 
 Bend the resistor legs by 90° (for example around a screwdriver). Insert the resistor at the position marked `4k7`. Orientation does not matter. The basic color of resistors is often blue or sand-colored. The colored rings show the electrical resistance:
 
-4.7kOhm resistor with 4 rings: yellow - violet - red - [tolerance]
+4.7kOhm resistor with 4 rings: yellow - violet - red - \[tolerance]
 
-4.7kOhm resistor with 5 rings: yellow - violet - black - brown - [tolerance]
+4.7kOhm resistor with 5 rings: yellow - violet - black - brown - \[tolerance]
 
-![Resistance](/docs/img/Aufbau10.jpg)
+![Resistance](../.gitbook/assets/Aufbau10.jpg)
 
 On the back side, bend the resistor legs slightly outward and solder them. Trim excess leg length with side cutters.
 
@@ -112,20 +112,20 @@ On the back side, bend the resistor legs slightly outward and solder them. Trim 
 
 By mounting the base, the ESP microcontroller can be removed from the board at any time. Socketing is also useful when troubleshooting.
 
-![Socket](/docs/img/Aufbau14.jpg)
+![Socket](../.gitbook/assets/Aufbau14.jpg)
 
 The scope of delivery of the ESP microcontrollers includes adapter number 1. In addition, a pin header number 2 with a pitch of 2.54mm is required.
 
-![Parts List](/docs/img/Aufbau11.jpg)
+![Parts List](../.gitbook/assets/Aufbau11.jpg)
 
 Adapters and pin headers are required for socketing. The pin header is first plugged into the adapter, as shown in number 3. Adapters with pin strips are then inserted into the circuit board, two on the left and two on the right
 
 _Tip: the pin header is delivered as a 40 pin header. The full length of the pin header is inserted into the adapter. The overhang over the adapter is bent at the end._
 
-![Socket](/docs/img/Aufbau12.jpg)
+![Socket](../.gitbook/assets/Aufbau12.jpg)
 
 Now the ESP is put on and fixed with a soldering point on each side. Now the fit of the bases is checked. All soldering points are then soldered.
 
-![ESP32](/docs/img/Aufbau15.jpg)
+![ESP32](../.gitbook/assets/Aufbau15.jpg)
 
 Finally, check all solder joints carefully. When all soldering points are closed, the Brautomat is ready.

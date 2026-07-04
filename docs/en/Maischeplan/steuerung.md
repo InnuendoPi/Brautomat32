@@ -1,14 +1,12 @@
-# The controls
+# The Control
 
-The control panel is located directly below the mash plan.
-The mashing process is operated with five buttons: `Power`, `Play`, `Pause`, `Previous`, `Next`.
+The control panel is located directly below the mash plan. The mashing process is operated with five buttons: `Power`, `Play`, `Pause`, `Previous`, `Next`.
 
-![Control](/docs/img/Buttons.jpg)
+![Control](../.gitbook/assets/Buttons.jpg)
 
 ## Power button
 
-Starts or stops the mash process.
-If PID AutoTune is enabled for a kettle, the same button starts/stops AutoTune.
+Starts or stops the mash process. If PID AutoTune is enabled for a kettle, the same button starts/stops AutoTune.
 
 ## Play button
 
@@ -41,18 +39,16 @@ Pause time is added to total rest duration.
 
 ## Previous button
 
-Jumps to previous mash step.
-If process was stopped, the current rest timer is reset and starts again.
+Jumps to previous mash step. If process was stopped, the current rest timer is reset and starts again.
 
 ## Next button
 
-Jumps to next mash step.
-If current step is the last one, mash process ends.
+Jumps to next mash step. If current step is the last one, mash process ends.
 
 ## Collapse button
 
 Shows/hides the mash plan table.
 
-![mashplan](/docs/img/Maischeplan-anzeigen.jpg)
+![mashplan](../.gitbook/assets/Maischeplan-anzeigen.jpg)
 
 The collapse button remains available during brewing. Edit buttons are hidden once brewing starts.

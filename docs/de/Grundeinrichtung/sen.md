@@ -1,10 +1,10 @@
-# Einrichtung des Temperatursensors
+# Temperatursensor einrichten
 
 ## Neuen Sensor hinzufügen
 
 Im Abschnitt _Sensoren_ kann ein neuer Sensor durch Klicken auf das Plus-Symbol hinzugefügt werden.
 
-![Sensoren anlegen](/docs/img/Sensor-einrichten.jpg)
+![Sensoren anlegen](../.gitbook/assets/Sensor-einrichten.jpg)
 
 ## Sensoradresse und Name festlegen
 
@@ -15,11 +15,11 @@ Falls kein Sensor angezeigt wird:
 * Die Erkennung der Sensoren kann mit dem Reload-Button erneut gestartet werden.
 * Falls weiterhin kein Sensor erkannt wird, muss die Kabelverbindung überprüft werden.
 
-Jeder Sensor benötigt einen Namen. In dieser Grundeinrichtung wird der Sensor "Sensor IDS2".&#x20; genannt.
+Jeder Sensor benötigt einen Namen. In dieser Grundeinrichtung wird der Sensor "Sensor IDS2". genannt.
 
 _Hinweis: Sensornamen dürfen maximal 20 Zeichen enthalten. Erlaubte Sonderzeichen sind # und Leerzeichen. Die Eingabe wird vom Webinterface automatisch überprüft._
 
-![Sensoren konfigurieren](/docs/img/Sensor-einstellungen.jpg)
+![Sensoren konfigurieren](../.gitbook/assets/Sensor-einstellungen.jpg)
 
 ## Sensorkalibrierung (Offset-Werte)
 
@@ -31,7 +31,7 @@ Für diese Grundkonfiguration bleiben beide Werte unverändert bei 0.00.
 
 Durch Klicken auf _speichern_ wird der Sensor angelegt und anschließend im Dashboard unter _Sensoren_ angezeigt.
 
-![Sensoren Dashboard](/docs/img/Sensor-dashboard.jpg)
+![Sensoren Dashboard](../.gitbook/assets/Sensor-dashboard.jpg)
 
 > **Hinweis:**
 
