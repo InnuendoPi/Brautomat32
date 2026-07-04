@@ -20,7 +20,7 @@ Operation happens directly in the browser and is designed for PC, tablet, and sm
 
 Before every release, the firmware is tested automatically and in depth against real equipment. Build, flash, web interface, process flows, restore, and browser regressions are fixed parts of the release test workflows.
 
-![WebInterface](docs/img/dashboard160.jpg)
+![WebInterface](docs/img/dashboard165.jpg)
 
 ## System Profile and Process Control
 

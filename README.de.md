@@ -20,7 +20,7 @@ Die Bedienung erfolgt direkt im Browser und ist für PC, Tablet und Smartphone a
 
 Vor jedem Release wird die Firmware automatisiert und mit hoher Detailtiefe gegen ein reales Equipment geprüft. Build, Flash, Webinterface, Prozessabläufe, Restore und Browser-Regressionen sind feste Bestandteile der Release-Test-Workflows.
 
-![WebInterface](docs/img/dashboard160.jpg)
+![WebInterface](docs/img/dashboard165.jpg)
 
 ## Systemprofil und Prozessführung
 
