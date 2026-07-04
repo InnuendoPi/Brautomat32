@@ -1,15 +1,15 @@
-# AutoTune Prozess
+# AutoTune Prozess (Fortgeschrittene)
 
-> **Hinweis für den Einstieg:**  
-> Dieses Kapitel ist für fortgeschrittene Nutzer.  
-> Für den Start mit dem Brautomat kannst du es zunächst überspringen und später bei Bedarf lesen.  
+> **Hinweis für den Einstieg:**\
+> Dieses Kapitel ist für fortgeschrittene Nutzer.\
+> Für den Start mit dem Brautomat kannst du es zunächst überspringen und später bei Bedarf lesen.\
 > Einstieg zuerst: [AutoTune Schritt für Schritt](steps.md) und [Praxisleitfaden Brautag](praxisleitfaden-brautag.md).
 
 Der AutoTune-Prozess ermittelt geeignete Parameter für die Brauanlage, damit die Temperaturregelung im Maischprozess möglichst genau durchgeführt werden kann. Der Fokus liegt dabei auf den IST-Temperaturen und den dazugehörigen SOLL-Temperaturen. In der Praxis bedeutet dies, dass Über- und Unterschwingen minimiert werden sollen.
 
 Hinweis: Ein Überschwingen (Überschreiten der Solltemperatur) von 0,5°C ist normal. Je nach Isolierung des Kessels und zugeführter Induktionsenergie steigt die Temperatur auch nach Abschalten des Kochfeldes noch leicht an.
 
-![AutoTune4](/docs/img/IDS-AutoTune-Ziel.jpg)
+![AutoTune4](../.gitbook/assets/IDS-AutoTune-Ziel.jpg)
 
 Die folgende Beschreibung der PID-Werte dient lediglich als Hilfe bei der Verwendung der Firmware und kann übersprungen werden. Der AutoTune-Prozess wird ab "Der AutoTune-Prozess: Schritt für Schritt" beschrieben.\
 Der PID-Controller steuert die Leistung der Kochfelder. Es ist wichtig, geeignete P-, I- und D-Werte zu bestimmen. Die PID-Werte sind für jede Brauanlage und Umgebung individuell. AutoTune ist ein Verfahren, das bei der Ermittlung geeigneter Werte hilft. Die erforderliche Leistung der Kochfelder, um von der Ist-Temperatur zur Soll-Temperatur zu gelangen, wird aus der Summe der drei Werte berechnet: Benötigte Leistung = P + I + D\
@@ -33,5 +33,4 @@ Die PID-Berechnung erfolgt kontinuierlich. Das Intervall beschreibt den Zyklus. 
 
 ## Vertiefung (Fortgeschrittene)
 
-Weitere Details zur 1.60 PID-Engine, `Compute()`-Reihenfolge sowie L/R-basierter Ableitung:
-[PID-Engine Referenz 1.60 (Fortgeschrittene)](../Kessel/pid-engine-160-referenz.md)
+Weitere Details zur 1.60 PID-Engine, `Compute()`-Reihenfolge sowie L/R-basierter Ableitung: [PID-Engine Referenz 1.60 (Fortgeschrittene)](../Kessel/pid-engine-160-referenz.md)

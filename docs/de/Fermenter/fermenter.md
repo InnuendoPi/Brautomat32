@@ -1,8 +1,8 @@
-# Fermenter Modus
+# Fermenter
 
 Im Fermenter Modus arbeitet der Brautomat32 den Gärplan in gleicher Weise wie beim Maischeplan top down ab. Das Controller Deck hat die gleichen Funktionen.
 
-![Fermenter dashboard](/docs/img/fermenter_dash.jpg)
+![Fermenter dashboard](../.gitbook/assets/fermenter_dash.jpg)
 
 Die Verarbeitung der Steps hat einen wichtigen Untschied:
 
@@ -10,7 +10,7 @@ Der erste Schritt im Gärplan wird sofort mit dem Prozessstart gestartet. Alle f
 
 Zur Einrichtung kann ein GPIO für eine Kühlung und ein GPIO für eine Heizung eingerichtet werden. Entweder die Kühlung oder die Heizung ist optional.
 
-![Fermenter settings](/docs/img/fermenter_set.jpg)
+![Fermenter settings](../.gitbook/assets/fermenter_set.jpg)
 
 Der Fermenter hat drei verschiedene Stati: Kühlung, Heizung und Idle. Wenn sich der Status von Kühlung oder Heizung ändert, startet eine Pause. Während der Pause ändert sich der Status vom Fermenter nicht.
 

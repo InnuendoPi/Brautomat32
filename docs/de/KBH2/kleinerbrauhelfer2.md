@@ -6,11 +6,11 @@ Ab Version 2.5.0 hat das Programm [kleinerBrauhelfer2](https://kleiner-brauhelfe
 
 Im Tab Maischplan bietet der kbh2 vier verschiedene Arten Malze zur Maische hinzuzufügen: Einmaischen, Aufheizen, Zubrühen und Dekoktion. Alle vier Arten werden im Brautomat unterstützt. Der Typ Einmaischen wird automatisch mit deaktiviertem autonext eingefügt. Aufheizen und Zubrühen mit aktiviertem autonext. Die Dekoktion wird mit deaktivertem autonext übernommen.
 
-![Kochen](/docs/img/kbh2-maischplan.jpg)
+![Kochen](../.gitbook/assets/kbh2-maischplan.jpg)
 
- Der Brautomat benötigt einen Maischeschritt "Abmaischen", um das Ende vom Maischen und den Übergang zum Läutern zu erkennen. Es sollte in kbh2 Maischplan am Ende ein Schritt Abmaischen vom Typ "Aufheizen" mit 76°C oder höher und einer Dauer von 1 Minute angefügt werden. In dieser Kombination wird Abmaischen vom Brautomat erkannt und mit deaktiviertem autonext eingefügt.
+Der Brautomat benötigt einen Maischeschritt "Abmaischen", um das Ende vom Maischen und den Übergang zum Läutern zu erkennen. Es sollte in kbh2 Maischplan am Ende ein Schritt Abmaischen vom Typ "Aufheizen" mit 76°C oder höher und einer Dauer von 1 Minute angefügt werden. In dieser Kombination wird Abmaischen vom Brautomat erkannt und mit deaktiviertem autonext eingefügt.
 
-![Kochen](/docs/img/kbh2-maischplan2.jpg)
+![Kochen](../.gitbook/assets/kbh2-maischplan2.jpg)
 
 ### Beispiel 1: kbh2 Earl Scheidt Kochmaischverfahren
 
@@ -26,10 +26,9 @@ Dekoktionsverfahren unterstützt der Brautomat mit halber Automatik. Wenn bspw. 
 
 Aus dem kleinenBrauhelfer2 werden die 5 Hopfengabentypen Vorderwürze, Kochbeginn, Kochen, Kochende und Ausschlagen übernommen und in der benötigten Reihenfolge in den Maischeplan vom Brautomat aufgenommen.
 
-Eine Zeitangabe im kbh2 im Tab Kochen bedeutet "wie lange wird die Hopfengabe gekocht". Aus der Kochdauer ergeben sich u. a. Bittere und Aroma. Siehe hierzu auch die Formelsammlung im kbh2.
-Die kbh2 Zeitangabe "wie lange wird die Hopfengabe gekocht" wird beim Import in den Brautomat in eine Zeitangabe "zu welcher Zeit erfolgt die Hopfengabe" umgewandelt.
+Eine Zeitangabe im kbh2 im Tab Kochen bedeutet "wie lange wird die Hopfengabe gekocht". Aus der Kochdauer ergeben sich u. a. Bittere und Aroma. Siehe hierzu auch die Formelsammlung im kbh2. Die kbh2 Zeitangabe "wie lange wird die Hopfengabe gekocht" wird beim Import in den Brautomat in eine Zeitangabe "zu welcher Zeit erfolgt die Hopfengabe" umgewandelt.
 
-![Kochen](/docs/img/hopfen.jpg)
+![Kochen](../.gitbook/assets/hopfen.jpg)
 
 ### Ein klein wenig hin-und-her rechnen
 
@@ -41,7 +40,7 @@ Vorgegeben ist in diesem Beispiel eine gesamte Kochedauer von 80 Minuten und ein
 
 Die letzte Hopfengabe "Hallertauer Tradition 5.7% 2020" wird zum Ausschlagen gegeben. Beim Ausschlagen ist das Kochen beendet. Also zählt die Hopfengabe Ausschlagen nicht zur gesamten Kochdauer.
 
-![Kochen](/docs/img/hopfengaben.jpg)
+![Kochen](../.gitbook/assets/hopfengaben.jpg)
 
 In gleicher Weise verhält sich die Hopfengabe Ausschlagen. Es ist eine Nachisomerisierungszeit von 10 Minuten gegeben. Die Hopfengabe "Hallertauer Tradition 5.7% 2020" zum Ausschlagen mit einer Kochdauer von -5 Minuten ist Teil der Nachisomerisierung.
 
