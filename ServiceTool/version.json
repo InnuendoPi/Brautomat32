@@ -1,21 +1,21 @@
-{
-  "tool": "Brautomat32 ServiceTool",
-  "version": "1.6.0",
-  "released_at": "2026-06-25",
-  "notes": "ServiceTool 1.6 release.",
-  "windows": {
-    "filename": "Brautomat32ServiceTool-win.zip",
-    "url": "https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/ServiceTool/Brautomat32ServiceTool-win.zip",
-    "sha256": "76f60b0cbf0ea32a68faad0d32ce9f03524d31d54471b68a493df2882845dcb7"
-  },
-  "linux": {
-    "filename": "Brautomat32ServiceTool-linux.zip",
-    "url": "https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/ServiceTool/Brautomat32ServiceTool-linux.zip",
-    "sha256": "68949dcb0b6e4d84b9ddf2c8287e6e9b48ba792bf90e7e2202992c429c0a0d3f"
-  },
-  "macos": {
-    "filename": "Brautomat32ServiceTool-macos.zip",
-    "url": "https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/ServiceTool/Brautomat32ServiceTool-macos.zip",
-    "sha256": "11cc1d422fe087298964723cfe1aeb511d080d2624fc98a270845a916a054dbc"
-  }
+﻿{
+    "tool":  "Brautomat32 ServiceTool",
+    "version":  "1.7.0",
+    "released_at":  "2026-07-10",
+    "notes":  "ServiceTool 1.7 release: Telegraf telemetry forwarding and Esptool 5.3.1.",
+    "windows":  {
+                    "filename":  "Brautomat32ServiceTool-win.zip",
+                    "url":  "https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/ServiceTool/Brautomat32ServiceTool-win.zip",
+                    "sha256":  "d11d40707b91c0003dc6676444ded18839d70f8189974d98dd7f5d05f16bd0db"
+                },
+    "linux":  {
+                  "filename":  "Brautomat32ServiceTool-linux.zip",
+                  "url":  "https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/ServiceTool/Brautomat32ServiceTool-linux.zip",
+                  "sha256":  "68949dcb0b6e4d84b9ddf2c8287e6e9b48ba792bf90e7e2202992c429c0a0d3f"
+              },
+    "macos":  {
+                  "filename":  "Brautomat32ServiceTool-macos.zip",
+                  "url":  "https://raw.githubusercontent.com/InnuendoPi/Brautomat32/main/ServiceTool/Brautomat32ServiceTool-macos.zip",
+                  "sha256":  "11cc1d422fe087298964723cfe1aeb511d080d2624fc98a270845a916a054dbc"
+              }
 }

@@ -10,6 +10,7 @@ It provides:
 - WiFi provisioning
 - inventory management for recipes, fermenter plans, and profiles
 - serial monitor
+- Telegraf telemetry forwarding to CSV, InfluxDB v2, PostgreSQL, MariaDB/MySQL, and MQTT
 - migration workflow for partition/layout changes
 - optional local test-runner integration
 
@@ -156,6 +157,30 @@ The following status states show the current connection progress and indicate wh
 - Stop the log before using the same COM port for other exclusive serial actions if required.
 - Reboot sends a device restart command over the current serial connection.
 - `?hide_test=1&debug=1` opens the UI with hidden test tab and visible debug output.
+
+### Telegraf
+
+The Telegraf tab configures a separate Telegraf process. Telegraf reads the
+Brautomat endpoint `<device-url>/telemetry` and forwards the current metrics to
+each enabled destination. The ServiceTool only generates the temporary Telegraf
+configuration, starts/stops the process, and shows its output.
+
+Telegraf is not bundled with the ServiceTool. On the first Telegraf start, the
+ServiceTool downloads the matching Telegraf version for the current platform
+into its local `cache/tools` runtime directory. Internet access is required for
+this one-time download. The official download page is:
+
+<https://www.influxdata.com/downloads/>
+
+An existing `telegraf` (on Windows `telegraf.exe`) on `PATH`, a binary in a
+`telegraf/` directory next to the ServiceTool executable, or a full path set in
+the Telegraf tab takes precedence over the downloaded cache copy.
+The Telegraf configuration files, including any credentials, are generated in
+a protected temporary runtime directory and removed after the process stops.
+
+The ServiceTool does not save destination passwords by default. Enable the
+explicit checkbox in the Telegraf tab only when storing them in the local
+`config.json` is intended.
 
 ### Migration
 
