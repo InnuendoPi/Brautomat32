@@ -57,14 +57,15 @@ Brautomat32 supports, among other things:
 
 ## Download
 
-| Release Type | Download |
-| ------------ | -------- |
+| Release-Typ | Download |
+| ----------- | -------- |
 | **Release** | [![Stable](https://img.shields.io/static/v1?label=Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) |
 | **Development** | [![Dev](https://img.shields.io/static/v1?label=Development%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip) |
+| **ServiceTool** | [Aktuelles ServiceTool-Release](https://github.com/InnuendoPi/ServiceTool/releases/latest) |
 
 ## Installation
 
-Download [Brautomat ServiceTool](https://github.com/InnuendoPi/Brautomat32/tree/main/ServiceTool) for Windows, macOS or linux
+Download [Brautomat ServiceTool](https://github.com/InnuendoPi/ServiceTool/releases/latest) for Windows, macOS or linux
 ![Firmware](ServiceTool/img/firmware.jpg)
 
 Alternatively on Windows just run
