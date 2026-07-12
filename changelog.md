@@ -1,7 +1,7 @@
 ﻿# Changelog
 
 ESP32 Arduino 3.3.9 ESP-IDF v5.5.4\
-VSCode 1.127 pioarduino IDE 1.4.4\
+VSCode 1.128 pioarduino IDE 1.4.4\
 InnuAPID AutoTune PID lib 1.10.19\
 InnuTask lib 1.10.19\
 InnuNextion Display lib 0.9\
@@ -11,12 +11,19 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.65.0
+Version 1.65.1
 
 * Neu:          neues modernes Fullscreen Dashboard Desktop & Tablet
 * Neu:          neues Dashboard Smartphone
 * Neu:          Dashboard Export/Import für komplette Brautage im Power-Off-Zustand
 * Neu:          API Routen für Brautag-Export, Brautag-Import, kompakte Telemetry und Debug-Snapshot implementiert
+* Korrektur:    Fermenter-Pause/Resume greift nicht mehr außerhalb des PID-Arrays zu
+* Korrektur:    manueller Fermenter-Start wird nicht mehr fälschlich als erfolgreicher PID-Start akzeptiert
+* Korrektur:    Fermenter-Rezeptwerte werden beim Lesen und Schreiben plausibilisiert
+* Korrektur:    AutoTune-Konvergenzzustand wird zwischen Läufen vollständig zurückgesetzt
+* Korrektur:    Profilwechsel und PID-Konfiguration verwenden einen gemeinsamen Synchronisationspfad
+* Korrektur:    PID-Steigrate nutzt den tatsächlichen Zyklusabstand
+* Optimiert:    Runtime-/SSE-Serialisierung, Upload-State-Handling und interne Helper bereinigt
 * Geändert:     Breiter Runtime-Snapshot aus Telemetry in Debug-API verschoben; Telemetry liefert nur noch kompakte Chart-/Logging-Werte
 * Geändert:     Brautag-Export verwendet Dateinamen mit Brautomat32, Planname, Modus sowie lokalem Datum und lokaler Uhrzeit
 * Geändert:     `/edit` aus PROGMEM nach LittleFS verschoben und in WebUpdate aufgenommen
