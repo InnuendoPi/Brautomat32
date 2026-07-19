@@ -2,10 +2,10 @@
 
 Der Brautomat kann optional mit einem Touchdisplay betrieben werden. Unterstützt werden 3.5 Zoll Touchdisplay von Nextion
 
-| Nextion Display              | Firmware                                                                                                   |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| NX4832T035 (Basic Serie)     | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832T035.tft) |
-| NX4832K035 (Enhanced Serie)  | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832K035.tft) |
+| Nextion Display | Firmware |
+| --------------- | --------- |
+| NX4832T035 (Basic Serie) | [NX4832T035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832T035.tft) |
+| NX4832K035 (Enhanced Serie) | [NX4832K035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832K035.tft) |
 | NX4832F035 (Discovery Serie) | [NX4832F035](https://raw.githubusercontent.com/InnuendoPi/Brautomat/main/display/brautomat-NX4832F035.tft) |
 
 Das Display benötigt für den Betrieb mit dem Brautomat eine Firmware. In der Tabelle ist die zum Displaytyp passende Firmware verlinkt. Siehe auch Displaydatei flashen.
@@ -14,14 +14,14 @@ Das Display benötigt für den Betrieb mit dem Brautomat eine Firmware. In der T
 
 Das Display wird mit 4 Kabeln mit der Platine verbunden
 
-| Kabel   | Nextion Display | Anschlussklemme Platine |
-| ------- | --------------- | ----------------------- |
-| rot     | Strom +         | Vcc                     |
-| schwarz | Strom -         | GND                     |
-| blau    | TX              | SDL (D1)                |
-| gelb    | RX              | SDA (D2)                |
+| Kabel | Nextion Display | Anschlussklemme Platine |
+| ------------- | --------------- | ------------------------ |
+| rot | Strom + | Vcc |
+| schwarz | Strom - | GND |
+| blau | TX | SDL (D1) |
+| gelb | RX | SDA (D2) |
 
-![Anschluss](../.gitbook/assets/disp1.jpg)
+![Anschluss](/docs/img/disp1.jpg)
 
 ## Displaydatei flashen
 
@@ -29,9 +29,9 @@ Vor dem ersten Betrieb muss das Display vorbereitet werden. Hierzu wird die pass
 
 ## Ansicht MaischeSud
 
-![MaischeSud](../.gitbook/assets/brewpage-sm.jpg)
+![MaischeSud](/docs/img/brewpage-sm.jpg)
 
-Die Seite MaischeSud ist die bevorzugte Seite beim Brauen. Auf dem Dispaly werden die sekündlich die Informationen
+Die Seite MaischeSud ist die bevorzugte Seite beim Brauen. Auf dem Display werden sekündlich folgende Informationen
 
 * Ist-Temperatur
 * Ziel-Temperatur (Rast-Temperatur)
@@ -41,7 +41,7 @@ angezeigt. In der unteren Zeile wird zusätzlich die nächste Rast angezeigt. Di
 
 ## Ansicht Kesselübersicht
 
-![Kesselübersicht](../.gitbook/assets/kettlepage-sm.jpg)
+![Kesselübersicht](/docs/img/kettlepage-sm.jpg)
 
 Die Kesselübersicht zeigt den MaischeSud Kessel und falls vorhanden den Sud- und Nachguss-Kessel mit den Informationen Ist- und Ziel-Temperatur an.
 
@@ -49,6 +49,6 @@ _Hinweis: die Ansicht Kesselübersicht zeigt in der unteren Zeile die Adresse vo
 
 ## Ansicht Manuelle Steuerung
 
-![Manuelle Steueung](../.gitbook/assets/induction-mode-sm.jpg)
+![Manuelle Steuerung](/docs/img/induction-mode-sm.jpg)
 
 Die Seite manuelle Steuerung bietet die Möglichkeit, die GGM IDS manuell zu betreiben. Über die Buttons + und - können die Leistungsstufen hoch- bzw. heruntergeregelt werden.

@@ -1,28 +1,51 @@
 # Installation
 
-Um den Brautomat zu nutzen, musst du die Firmware flashen und den ESP32 mit deinem lokalen WLAN verbinden.
+Um den Brautomat zu nutzen, musst du die Firmware flashen und den ESP32 mit
+deinem lokalen WLAN verbinden.
 
-## Firmware flashen mit MS Windows
+## Empfohlener Weg: Brautomat32 ServiceTool
+
+Das [Brautomat32 ServiceTool](https://github.com/InnuendoPi/ServiceTool) ist
+die empfohlene Anwendung für Installation, Betrieb und Wartung des Brautomats.
+
+Es begleitet die erste Einrichtung und bündelt die wichtigsten Aufgaben:
+
+- Firmware installieren und aktualisieren
+- WLAN einrichten
+- Konfiguration sichern und wiederherstellen
+- Maischepläne, Gärpläne und Profile verwalten
+- serielle Protokolle anzeigen
+
+Für den normalen Betrieb verwende immer die aktuelle **Release-Version** des
+ServiceTools und der Brautomat-Firmware.
+
+> **Hinweis:** Der manuelle Weg über das ZIP-Archiv und `Flashen.cmd` bleibt
+> als technischer Fallback verfügbar, falls das ServiceTool nicht genutzt
+> werden kann.
+
+## Manueller Fallback: Firmware flashen mit Windows
 
 Brautomat32 läuft auf ESP32 und basiert auf ESP-IDF5.
 
-[![Stable](https://img.shields.io/static/v1?label=Download%20Release\&message=Brautomat32%20ESP32\&logo=arduino\&logoColor=white\&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) [![Dev](https://img.shields.io/static/v1?label=Download%20Develop\&message=Brautomat32%20ESP32\&logo=arduino\&logoColor=white\&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip)
+[![Stable](https://img.shields.io/static/v1?label=Download%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) [![Dev](https://img.shields.io/static/v1?label=Download%20Develop&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip)
 
-Einfachster Weg unter Windows:
+Wenn du das ServiceTool nicht verwendest:
 
 1. ZIP-Archiv entpacken.
 2. ESP32 per USB mit PC/Notebook verbinden.
 3. `Flashen.cmd` per Doppelklick starten.
 
-Windows legt beim Verbinden in der Regel automatisch einen seriellen COM-Port an.
+Windows legt beim Verbinden in der Regel automatisch einen seriellen COM-Port
+an.
 
-![Windows Gerätemanager](../.gitbook/assets/com.jpg)
+![Windows Gerätemanager](/docs/img/com.jpg)
 
 Falls kein COM-Port erscheint, installiere passende USB-Treiber:
 
-[![ESP32 Treiber](https://img.shields.io/static/v1?label=Treiber\&message=ESP32\&logo=arduino\&logoColor=white\&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+[![ESP32 Treiber](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-`Flashen.cmd` nutzt `esptool.exe`: [https://github.com/espressif/esptool](https://github.com/espressif/esptool)
+`Flashen.cmd` nutzt `esptool.exe`:
+<https://github.com/espressif/esptool>
 
 ### Manuelles Flashen (MS Windows, macOS, Linux)
 
@@ -46,62 +69,79 @@ Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 
 Unter macOS ist das Flashen in zwei Schritte aufgeteilt:
 
-1. Firmware mit pyflasher installieren (`firmware.bin`). Hinweis: Je nach Tool/Archiv kann die Datei auch als `brautomat.ino.bin` bezeichnet sein.
+1. Firmware mit pyflasher installieren (`firmware.bin`).
+   Hinweis: Je nach Tool/Archiv kann die Datei auch als
+   `brautomat.ino.bin` bezeichnet sein.
 2. Nach WLAN-Verbindung das Dateisystem installieren (`LittleFS.bin`).
 
-![macOS](../.gitbook/assets/flashen_macos.png)
+![macOS](/docs/img/flashen_macos.png)
 
-Update-Seite im Browser: [http://brautomat.local/update](http://brautomat.local/update)
+Update-Seite im Browser:
+<http://brautomat.local/update>
 
 ## WLAN-Konfiguration
 
-Nach dem Flashen startet Brautomat im Access-Point-Modus. Das offene WLAN `Brautomat32` wird sichtbar.
+Nach dem Flashen startet Brautomat im Access-Point-Modus.
+Das offene WLAN `Brautomat32` wird sichtbar.
 
 1. Mit `Brautomat32` verbinden.
 2. Falls das Portal nicht automatisch öffnet, `http://192.168.4.1` aufrufen.
 3. SSID und Passwort eintragen.
 4. Mit `Save` speichern.
 
-![WLAN Konfiguration](../.gitbook/assets/wlan1.jpg)
+![WLAN Konfiguration](/docs/img/wlan1.jpg)
 
-Danach startet Brautomat neu und ist im lokalen WLAN erreichbar unter: [http://brautomat.local](http://brautomat.local)
+Danach startet Brautomat neu und ist im lokalen WLAN erreichbar unter:
+<http://brautomat.local>
 
 Damit ist die Grundinstallation abgeschlossen.
 
-Vor dem ersten Heiztest: [Sicherheits-Check vor erstem Heiztest](sicherheitscheck-erster-heiztest.md)
+Vor dem ersten Heiztest:
+[Sicherheits-Check vor erstem Heiztest](sicherheitscheck-erster-heiztest.md)
 
-Anschließend mit der [Grundeinrichtung](../Grundeinrichtung/info.md) weitermachen.
+Anschließend mit der [Grundeinrichtung](../Grundeinrichtung/info.md)
+weitermachen.
 
-> **Hinweis:** Brautomat32 versucht bis zu 20 Sekunden, sich mit der gespeicherten WLAN- Konfiguration zu verbinden. Bei falschem Passwort oder zu schwachem Signal startet wieder der Access-Point-Modus.
+> **Hinweis:**
+> Brautomat32 versucht bis zu 20 Sekunden, sich mit der gespeicherten WLAN-
+> Konfiguration zu verbinden.
+> Bei falschem Passwort oder zu schwachem Signal startet wieder der
+> Access-Point-Modus.
 
 ## Updates
 
 Updates können im Menü `Update` eingespielt werden:
 
-* `WebUpdate`: aktuelle Version direkt aus GitHub laden
-* `DateiUpdate`: Firmwaredatei vom lokalen Rechner hochladen
+- `WebUpdate`: aktuelle Version direkt aus GitHub laden
+- `DateiUpdate`: Firmwaredatei vom lokalen Rechner hochladen
 
 USB-Kabel oder `Flashen.cmd` sind dafür nicht erforderlich.
 
-Der ESP32-Speicher ist in Firmware und Dateisystem getrennt. Bei einem Update wird die Firmware neu installiert. Im Dateisystem werden je nach Update einzelne Dateien ersetzt.
+Der ESP32-Speicher ist in Firmware und Dateisystem getrennt.
+Bei einem Update wird die Firmware neu installiert.
+Im Dateisystem werden je nach Update einzelne Dateien ersetzt.
 
 ### Wichtig bei Update von 1.59 (oder älter) auf 1.60
 
 Beim Umstieg gelten folgende Punkte:
 
-* `config.txt` wird als `config.old.txt` gesichert.
-* PID-Parameter werden auf `0.0` zurückgesetzt.
-* AutoTune muss einmal neu durchgeführt werden.
+- `config.txt` wird als `config.old.txt` gesichert.
+- PID-Parameter werden auf `0.0` zurückgesetzt.
+- AutoTune muss einmal neu durchgeführt werden.
 
 So wird eine saubere Regelung mit dem 1.60-Stand sichergestellt.
 
 ### WebUpdate
 
-![WebUpdate](../.gitbook/assets/webupdate.jpg)
+![WebUpdate](/docs/img/webupdate.jpg)
 
-WebUpdate startet Brautomat mehrfach neu. Zuerst wird die Firmware aktualisiert, danach weitere Komponenten. Der Ablauf wird in `webUpdateLog.txt` protokolliert.
+WebUpdate startet Brautomat mehrfach neu.
+Zuerst wird die Firmware aktualisiert, danach weitere Komponenten.
+Der Ablauf wird in `webUpdateLog.txt` protokolliert.
 
-Mit aktivierter Option `WebUpdate mit Testversion` wird die aktuelle Entwicklerversion installiert. Für den produktiven Betrieb sind Testversionen nicht empfohlen.
+Mit aktivierter Option `WebUpdate mit Testversion` wird die aktuelle
+Entwicklerversion installiert.
+Für den produktiven Betrieb sind Testversionen nicht empfohlen.
 
 ### DateiUpdate
 
@@ -113,8 +153,12 @@ Ablauf für Firmware-Update per Datei:
 4. `firmware.bin` auswählen.
 5. `Update Firmware` starten.
 
-![DateiUpdate](../.gitbook/assets/dateiupdate2.jpg)
+![DateiUpdate](/docs/img/dateiupdate2.jpg)
 
 Auch das Dateisystem kann aktualisiert werden.
 
-> **Hinweis:** `Update FileSystem` erstellt das Dateisystem neu und überschreibt Einstellungen, Profile und Rezepte. In den meisten Fällen: zuerst Firmware per Datei aktualisieren, danach WebUpdate ausführen.
+> **Hinweis:**
+> `Update FileSystem` erstellt das Dateisystem neu und überschreibt
+> Einstellungen, Profile und Rezepte.
+> In den meisten Fällen: zuerst Firmware per Datei aktualisieren, danach
+> WebUpdate ausführen.

@@ -6,17 +6,17 @@ Ab Version 2.5.0 hat das Programm [kleinerBrauhelfer2](https://kleiner-brauhelfe
 
 Im Tab Maischplan bietet der kbh2 vier verschiedene Arten Malze zur Maische hinzuzufügen: Einmaischen, Aufheizen, Zubrühen und Dekoktion. Alle vier Arten werden im Brautomat unterstützt. Der Typ Einmaischen wird automatisch mit deaktiviertem autonext eingefügt. Aufheizen und Zubrühen mit aktiviertem autonext. Die Dekoktion wird mit deaktivertem autonext übernommen.
 
-![Kochen](../.gitbook/assets/kbh2-maischplan.jpg)
+![Kochen](/docs/img/kbh2-maischplan.jpg)
 
-Der Brautomat benötigt einen Maischeschritt "Abmaischen", um das Ende vom Maischen und den Übergang zum Läutern zu erkennen. Es sollte in kbh2 Maischplan am Ende ein Schritt Abmaischen vom Typ "Aufheizen" mit 76°C oder höher und einer Dauer von 1 Minute angefügt werden. In dieser Kombination wird Abmaischen vom Brautomat erkannt und mit deaktiviertem autonext eingefügt.
+ Der Brautomat benötigt einen Maischeschritt "Abmaischen", um das Ende vom Maischen und den Übergang zum Läutern zu erkennen. Es sollte in kbh2 Maischplan am Ende ein Schritt Abmaischen vom Typ "Aufheizen" mit 76°C oder höher und einer Dauer von 1 Minute angefügt werden. In dieser Kombination wird Abmaischen vom Brautomat erkannt und mit deaktiviertem autonext eingefügt.
 
-![Kochen](../.gitbook/assets/kbh2-maischplan2.jpg)
+![Kochen](/docs/img/kbh2-maischplan2.jpg)
 
 ### Beispiel 1: kbh2 Earl Scheidt Kochmaischverfahren
 
 [Earl Scheid](http://hb-tauschboerse.bplaced.net/Neues_Maischverfahren.htm)
 
-Das Kochmaischverfahren von Earl Scheid ist sehr gut mit dem keinenBrauhelfer2 zu planen und mit dem Brautomat sehr einfach automatisiert durchzuführen. Zu beachten gilt, dass zwischen den zwei Teilmaischen ein Maischeschritt Zubrühen (Hauptguss und Malze Teil2) erforderlich ist. Je nach Volumen Malze 2 ist die empfohlene Vorgehensweise mit deaktiviertem autonext für den Schritt Zuberühen zu arbeiten, um ausreichend Zeit für das Einmaischen von Malze 2 zu haben, bevor die zweite Maltoserast beginnt. Alternativ kann als Zieltemperatur im Mischkreuz Hauptguss/Malze 1 zu Hauptguss/Malze 2 ca. 60°C mit direktem (autonext) Aufheizen auf 63°C gewählt werden.
+Das Kochmaischverfahren von Earl Scheidt ist sehr gut mit dem kleinenBrauhelfer2 zu planen und mit dem Brautomat einfach automatisiert durchzuführen. Zu beachten ist, dass zwischen den zwei Teilmaischen ein Maischeschritt „Zubrühen“ (Hauptguss und Malze Teil 2) erforderlich ist. Je nach Volumen von Malz 2 ist es empfehlenswert, für den Schritt „Zubrühen“ mit deaktiviertem Autonext zu arbeiten, damit ausreichend Zeit für das Einmaischen von Malz 2 bleibt, bevor die zweite Maltoserast beginnt. Alternativ kann als Zieltemperatur im Mischkreuz Hauptguss/Malz 1 zu Hauptguss/Malz 2 etwa 60 °C mit direktem Aufheizen auf 63 °C bei aktiviertem Autonext gewählt werden.
 
 ### Beispiel 2: kbh2 Dekoktion
 
@@ -26,9 +26,10 @@ Dekoktionsverfahren unterstützt der Brautomat mit halber Automatik. Wenn bspw. 
 
 Aus dem kleinenBrauhelfer2 werden die 5 Hopfengabentypen Vorderwürze, Kochbeginn, Kochen, Kochende und Ausschlagen übernommen und in der benötigten Reihenfolge in den Maischeplan vom Brautomat aufgenommen.
 
-Eine Zeitangabe im kbh2 im Tab Kochen bedeutet "wie lange wird die Hopfengabe gekocht". Aus der Kochdauer ergeben sich u. a. Bittere und Aroma. Siehe hierzu auch die Formelsammlung im kbh2. Die kbh2 Zeitangabe "wie lange wird die Hopfengabe gekocht" wird beim Import in den Brautomat in eine Zeitangabe "zu welcher Zeit erfolgt die Hopfengabe" umgewandelt.
+Eine Zeitangabe im kbh2 im Tab Kochen bedeutet "wie lange wird die Hopfengabe gekocht". Aus der Kochdauer ergeben sich u. a. Bittere und Aroma. Siehe hierzu auch die Formelsammlung im kbh2.
+Die kbh2 Zeitangabe "wie lange wird die Hopfengabe gekocht" wird beim Import in den Brautomat in eine Zeitangabe "zu welcher Zeit erfolgt die Hopfengabe" umgewandelt.
 
-![Kochen](../.gitbook/assets/hopfen.jpg)
+![Kochen](/docs/img/hopfen.jpg)
 
 ### Ein klein wenig hin-und-her rechnen
 
@@ -40,7 +41,7 @@ Vorgegeben ist in diesem Beispiel eine gesamte Kochedauer von 80 Minuten und ein
 
 Die letzte Hopfengabe "Hallertauer Tradition 5.7% 2020" wird zum Ausschlagen gegeben. Beim Ausschlagen ist das Kochen beendet. Also zählt die Hopfengabe Ausschlagen nicht zur gesamten Kochdauer.
 
-![Kochen](../.gitbook/assets/hopfengaben.jpg)
+![Kochen](/docs/img/hopfengaben.jpg)
 
 In gleicher Weise verhält sich die Hopfengabe Ausschlagen. Es ist eine Nachisomerisierungszeit von 10 Minuten gegeben. Die Hopfengabe "Hallertauer Tradition 5.7% 2020" zum Ausschlagen mit einer Kochdauer von -5 Minuten ist Teil der Nachisomerisierung.
 

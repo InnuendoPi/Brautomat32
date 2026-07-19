@@ -159,7 +159,7 @@ console.log(data);
 **Example:**  
 
 ```js
-const data = await apiGET(`/reqKettle?type=0`);
+const data = await apiGET(`/reqKettle?id=0`);
 console.log(data);
 ```
 

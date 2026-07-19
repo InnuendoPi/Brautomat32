@@ -1,6 +1,6 @@
 # Das Dashboard
 
-![Dashboard](../.gitbook/assets/dashboard160.jpg)
+![Dashboard](/docs/img/dashboard165.jpg)
 
 Das Dashboard wird beim Brauen eingesetzt. Sobald Kochfelder, Aktoren und Sensoren konfiguriert sind, vereint das Dashboard alle wichtigen Informationen an einer Stelle.
 
@@ -8,7 +8,7 @@ Das Dashboard wird beim Brauen eingesetzt. Sobald Kochfelder, Aktoren und Sensor
 
 In den Systemeinstellungen wird das Dashboard aktiviert:
 
-![Dashboard](../.gitbook/assets/dashboard160-1.jpg)
+![Dashboard](/docs/img/dashboard160-1.jpg)
 
 Je nach vorhandener Konfiguration, können im Dashboard Kessel, Aktoren und Sensoren im Dashboard angezeigt werden. Das Webinterface vom Brautomat kann durch die im Bild dargestellte Auswahl verkleinert werden:
 
