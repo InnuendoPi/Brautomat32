@@ -65,11 +65,11 @@ Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur
 
 Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für das Abmaischen. Dieser Parameter wird nur dann verwendet, wenn beim Rezeptimport keine Abmaisch-Temperatur angegeben ist.
 
-### Temperatur VWH \[°C]
+### Temperatur VWH (Vorderwürzehopfung) \[°C]
 
 Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Vorderwürzenhopfung. Häufig wird bei Rezepten keine Temperatur für die VWH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temperatur angegeben, wird diese beim Import verwendet.
 
-### Temperatur WPH \[°C]
+### Temperatur WPH (Whirlpoolhopfung) \[°C]
 
 Dieser Parameter ist für den Rezeptimport und beschreibt die Standardtemperatur für eine Whirlpoolhopfung. Häufig wird bei Rezepten keine Temperatur für die WPH angegeben. Eine Temperaturangabe ist beim Brautomat erforderlich. Ist im Rezept eine Temperatur angegeben, wird diese beim Import verwendet.
 

@@ -7,17 +7,48 @@ deinem lokalen WLAN verbinden.
 
 Das [Brautomat32 ServiceTool](https://github.com/InnuendoPi/ServiceTool) ist
 die empfohlene Anwendung für Installation, Betrieb und Wartung des Brautomats.
+Es bündelt Firmware- und Webdatei-Update, WLAN-Einrichtung, Backups,
+Planverwaltung und das serielle Protokoll.
 
-Es begleitet die erste Einrichtung und bündelt die wichtigsten Aufgaben:
+### ServiceTool herunterladen und starten
 
-- Firmware installieren und aktualisieren
-- WLAN einrichten
-- Konfiguration sichern und wiederherstellen
-- Maischepläne, Gärpläne und Profile verwalten
-- serielle Protokolle anzeigen
+1. Lade die passende aktuelle **Release-Version** von den
+   [ServiceTool-Releases](https://github.com/InnuendoPi/ServiceTool/releases)
+   herunter und entpacke sie in einen eigenen Ordner.
+2. Starte unter Windows `Brautomat32ServiceTool.exe`.
+   Unter Linux mache die AppImage-Datei ausführbar und starte sie; unter macOS
+   öffne `Brautomat32ServiceTool.app`.
+3. Warte nach dem Start einige Sekunden, bis das ServiceTool die Verbindung
+   über USB und im Netzwerk geprüft hat.
 
-Für den normalen Betrieb verwende immer die aktuelle **Release-Version** des
-ServiceTools und der Brautomat-Firmware.
+### Ersteinrichtung mit dem ServiceTool
+
+1. Verbinde den ESP32 per USB mit dem Computer und wähle im ServiceTool den
+   passenden COM-Port.
+2. Öffne den Bereich **Firmware**, wähle **Latest Release** und starte den
+   Flash-Vorgang. **Web files** bleiben aktiviert, damit Firmware und
+   Weboberfläche zusammenpassen.
+3. Lass **Flash erase** deaktiviert. Aktiviere es nur für einen ausdrücklich
+   gewünschten sauberen Neuaufbau, denn dabei gehen Daten auf dem Gerät
+   verloren.
+4. Trage nach dem Flashen im ServiceTool die WLAN-Zugangsdaten ein und
+   übertrage sie an den Brautomat. Warte, bis der Status **Online** zeigt.
+5. Lege im Bereich **Backup & Restore** ein benanntes Backup an, bevor du
+   später Firmware, Webdateien oder die Konfiguration änderst.
+6. Verwalte danach Maischepläne, Gärpläne und Profile im Bereich
+   **Management**. Das serielle Protokoll findest du im **Serial Monitor**.
+
+Die Statusanzeige hilft bei der Einordnung:
+
+- **No device**: USB-Kabel, COM-Port oder Netzwerkverbindung prüfen.
+- **Serial**: Das Gerät ist per USB erreichbar; Firmware kann geflasht
+  werden, Netzwerkfunktionen sind noch nicht verfügbar.
+- **Online**: Der Brautomat ist über die Netzwerk-API erreichbar; alle
+  ServiceTool-Funktionen stehen zur Verfügung.
+
+Nach dem ersten Flashen und der WLAN-Einrichtung folgt der
+[Sicherheits-Check vor erstem Heiztest](sicherheitscheck-erster-heiztest.md).
+Danach geht es mit der [Grundeinrichtung](../Grundeinrichtung/info.md) weiter.
 
 > **Hinweis:** Der manuelle Weg über das ZIP-Archiv und `Flashen.cmd` bleibt
 > als technischer Fallback verfügbar, falls das ServiceTool nicht genutzt

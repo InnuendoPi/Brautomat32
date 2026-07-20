@@ -4,6 +4,9 @@
 
 Actuators such as agitators, pumps, or ring heaters are configured with a name and a GPIO output. If needed, an actuator can use PWM (pulse-width modulation). In Brautomat, PWM means either timed on/off switching or an analog PWM signal, depending on the selected PWM mode.
 
+For relays, PWM means timed on/off switching to control power, not continuous
+speed control.
+
 Power is entered in percent:
 
 * 100% = always on

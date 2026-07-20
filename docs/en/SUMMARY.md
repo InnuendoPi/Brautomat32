@@ -6,6 +6,7 @@
 * [Basic Setup](Grundeinrichtung/info.md)
   * [Set up temperature sensor](Grundeinrichtung/sen.md)
   * [Set up mash kettle](Grundeinrichtung/ids.md)
+  * [Set up relay kettle](Grundeinrichtung/relay-kettle.md)
   * [IDS RMT send logic 1.60 (Power User)](Grundeinrichtung/ids-rmt-160.md)
 * [AutoTune PID](Autotune-pid/info.md)
   * [AutoTune step by step](Autotune-pid/steps.md)

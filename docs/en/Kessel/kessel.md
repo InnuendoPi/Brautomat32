@@ -6,6 +6,9 @@ Brautomat32 supports up to three kettles.
 * Kettle 2 (optional): `SUD` / `MLT`
 * Kettle 3 (optional): `HLT` / `NACHGUSS`
 
+HLT refers to the hot-liquor or sparge-water kettle. MLT/SUD refers to the
+boil kettle.
+
 Each kettle can be configured either as:
 
 * GGM induction hob

@@ -6,27 +6,55 @@ To use Brautomat, you need to flash the firmware once and connect the ESP to you
 
 The [Brautomat32 ServiceTool](https://github.com/InnuendoPi/ServiceTool) is
 the recommended application for installing, operating, and maintaining your
-Brautomat.
+Brautomat. It combines firmware and web-file updates, Wi-Fi setup, backups,
+plan management, and the serial log.
 
-It supports initial setup and brings the most important tasks together:
+### Download and start the ServiceTool
 
-- install and update firmware
-- configure Wi-Fi
-- back up and restore configuration
-- manage mash plans, fermentation plans, and profiles
-- view serial logs
+1. Download the appropriate current **release version** from the
+   [ServiceTool releases](https://github.com/InnuendoPi/ServiceTool/releases)
+   and extract it into its own folder.
+2. On Windows, start `Brautomat32ServiceTool.exe`. On Linux, make the AppImage
+   executable and start it; on macOS, open `Brautomat32ServiceTool.app`.
+3. After startup, wait a few seconds while the ServiceTool checks USB and
+   network connectivity.
 
-For normal operation, always use the current **release version** of the
-ServiceTool and the Brautomat firmware.
+### First setup with the ServiceTool
+
+1. Connect the ESP32 to the computer by USB and select the correct COM port
+   in the ServiceTool.
+2. Open **Firmware**, select **Latest Release**, and start flashing. Keep
+   **Web files** enabled so that firmware and web interface match.
+3. Keep **Flash erase** disabled. Enable it only for an explicitly intended
+   clean rebuild, because it removes data from the device.
+4. After flashing, enter the Wi-Fi credentials in the ServiceTool and send
+   them to the Brautomat. Wait until the status shows **Online**.
+5. In **Backup & Restore**, create a named backup before later changing
+   firmware, web files, or configuration.
+6. Then manage mash plans, fermentation plans, and profiles in
+   **Management**. The serial log is available in **Serial Monitor**.
+
+The status indicator provides orientation:
+
+- **No device**: Check USB cable, COM port, or network connection.
+- **Serial**: The device is reachable by USB; firmware can be flashed, but
+  network functions are not available yet.
+- **Online**: Brautomat is reachable through the network API; all ServiceTool
+  functions are available.
+
+After the first flash and Wi-Fi setup, continue with the
+[safety check before the first heat test](safety-check-first-heat-test.md).
+Then continue with [Basic Setup](../Grundeinrichtung/info.md).
 
 > **Note:** The manual ZIP archive and `Flashen.cmd` method remains available
 > as a technical fallback if the ServiceTool cannot be used.
 
 ## Manual fallback: flash firmware on Windows
 
-Brautomat32 runs on ESP32 and is based on the ESP-IDF5 framework.
+Brautomat32 runs on ESP32 and is based on ESP-IDF5.
 
-* [ESP32 IDF5](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Brautomat32.zip): Brautomat32.zip
+- [Download Release](https://github.com/InnuendoPi/Brautomat32/releases/latest)
+- [Download Development build](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip)
 
 If you are not using the ServiceTool:
 
@@ -38,8 +66,7 @@ Windows normally creates a COM port automatically when the ESP is connected.
 
 ![Windows Device Manager](/docs/img/com.jpg)
 
-In the screenshot, the ESP appears on COM7.
-If no COM port appears, install USB drivers (Windows/macOS):
+If no COM port appears, install the appropriate USB drivers:
 
 [![ESP32 Drivers](https://img.shields.io/static/v1?label=Treiber&message=ESP32&logo=arduino&logoColor=white&color=blue)](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
@@ -69,7 +96,8 @@ esptool.exe --chip ESP32 --baud 921600 --before default-reset --after hard-reset
 Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 
 On macOS, flashing is split into two steps.
-First flash firmware (`Brautomat.ino.bin`) with pyflasher.
+First flash firmware (`firmware.bin`) with pyflasher. Depending on the tool or
+archive, the file can also be named `brautomat.ino.bin`.
 
 ![macOS](/docs/img/flashen_macos.png)
 

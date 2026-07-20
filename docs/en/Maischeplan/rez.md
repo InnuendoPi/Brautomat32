@@ -65,11 +65,11 @@ This parameter is used during recipe import and describes the default mash-in te
 
 This parameter is used during recipe import and describes the default mash-out temperature. It is only used if the recipe import does not provide a mash-out temperature.
 
-### VWH temperature \[°C]
+### VWH (first wort hopping) temperature \[°C]
 
 This parameter is used during recipe import and describes the default temperature for front wort hopping. Recipes often do not provide a temperature for VWH. A temperature value is required by Brautomat. If the recipe already specifies a temperature, that recipe value is used.
 
-### WPH temperature \[°C]
+### WPH (whirlpool hopping) temperature \[°C]
 
 This parameter is used during recipe import and describes the default temperature for whirlpool hopping. Recipes often do not provide a temperature for WPH. A temperature value is required by Brautomat. If the recipe already specifies a temperature, that recipe value is used.
 

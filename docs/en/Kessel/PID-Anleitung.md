@@ -1,8 +1,13 @@
 # Easy guide to PID setup
 
+> **Safety note:** Before the first heating run, complete the
+> [safety check before the first heat test](../Installation/safety-check-first-heat-test.md).
+
 Note: This guide applies to PID setup from version 1.60.
 
 PID control keeps kettle temperature close to target without excessive overshoot or sluggish response.
+PID refers to this automatic temperature control; you do not need to know its
+control theory for the following steps.
 This guide shows a practical workflow to find working settings without deep control-theory knowledge.
 
 ## 1. Define your working mash volume

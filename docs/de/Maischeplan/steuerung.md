@@ -15,7 +15,12 @@ Der Play Button hat im Maischprozess zwei Funktionen:
 1. Die erste Funktion ist _Start des Rasttimers für die aktuelle Rast_. Der Play Button startet den Rasttimer unabhängig von der Ist-Temperatur.\
 Beispiel: Wenn im Schritt Kochen die Würze bereits kocht, die Ist-Temperatur mit 98,5 °C aber unter der Rasttemperatur mit 100 °C liegt, kann der Rasttimer mit Play dennoch gestartet werden.
 
-2. Die zweite Funktion des Play Buttons ist mit der Eigenschaft _autonext_ verknüpft: Fortsetzen des Maischvorgangs mit der nächsten Rast. Der Play-Button wird in dieser Funktion rot dargestellt. Die Funktion _Fortsetzen des Maischprozesses mit der nächsten Rast_ wird später in der Beschreibung _autonext_ im Maischplan erläutert.
+2. Die zweite Funktion des Play Buttons ist mit der Eigenschaft _autonext_
+   (automatischer Wechsel zum nächsten Schritt) verknüpft: Fortsetzen des
+   Maischvorgangs mit der nächsten Rast. Der Play-Button wird in dieser
+   Funktion rot dargestellt. Die Funktion _Fortsetzen des Maischprozesses mit
+   der nächsten Rast_ wird später in der Beschreibung _autonext_ im
+   Maischplan erläutert.
 
 ## Pause Button
 

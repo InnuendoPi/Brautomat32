@@ -8,6 +8,9 @@ Brautomat32 unterstützt bis zu drei Kessel:
 * Kessel 2 (optional): `SUD` oder `MLT`
 * Kessel 3 (optional): `HLT` oder `NACHGUSS`
 
+HLT bezeichnet den Heißwasser- beziehungsweise Nachgusskessel. MLT/SUD
+bezeichnet den Sudkessel.
+
 Jeder Kessel kann als GGM-Induktionskochfeld oder als Relais-Gerät (einschließlich Webhook-Anbindung) betrieben werden.
 
 ![Kessel Konfiguration](../.gitbook/assets/kessel_1.jpg)

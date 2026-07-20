@@ -6,6 +6,7 @@
 * [Grundeinrichtung](Grundeinrichtung/info.md)
   * [Temperatursensor einrichten](Grundeinrichtung/sen.md)
   * [MaischeSud einrichten](Grundeinrichtung/ids.md)
+  * [Relais-Kessel einrichten](Grundeinrichtung/relais-kessel.md)
   * [IDS RMT Sendelogik 1.60 (Fortgeschrittene)](Grundeinrichtung/ids-rmt-160.md)
 * [AutoTune PID](Autotune-pid/info.md)
   * [AutoTune Schritt für Schritt](Autotune-pid/steps.md)

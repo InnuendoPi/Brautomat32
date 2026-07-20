@@ -13,7 +13,8 @@ Starts or stops the mash process. If PID AutoTune is enabled for a kettle, the s
 Play has two functions:
 
 1. Start rest timer for current step, independent of actual temperature.
-2. Continue with next step when `autonext` is disabled (button shown in red).
+2. Continue with the next step when `autonext` (automatic switch to the next
+   step) is disabled. The button is shown in red.
 
 Example: In a boil step, actual temperature may stay below target (for example 98.5°C vs 100°C). `Play` lets you start timing manually when boiling is already sufficient.
 
