@@ -1,7 +1,7 @@
 ﻿# Changelog
 
-ESP32 Arduino 3.3.9 ESP-IDF v5.5.4\
-VSCode 1.128 pioarduino IDE 1.4.4\
+ESP32 Arduino 3.3.11 ESP-IDF v5.5.5\
+VSCode 1.130 pioarduino IDE 1.4.4\
 InnuAPID AutoTune PID lib 1.10.19\
 InnuTask lib 1.10.19\
 InnuNextion Display lib 0.9\
@@ -10,6 +10,13 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
+
+Version 1.65.2
+
+* Update:       Arduino v3.3.11 ESP-IDF v5.5.5
+* Update:       ESPAsyncWebServer 3.11.2
+* Update:       AsyncTCP 3.5.0
+* Update:       VSCode 1.130
 
 Version 1.65.1
 
