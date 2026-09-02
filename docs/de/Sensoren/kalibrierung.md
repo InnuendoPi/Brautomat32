@@ -4,7 +4,7 @@ Sensoren vom Typ Dallas DS18B20 weisen teilweise Abweichungen von der tatsächli
 
 Mit Hilfe einer 2-Punkt-Kalibrierung können Abweichungen korrigiert werden. Die Kalibrierung durch den Brautomat ist eine lineare Korrektur. Für die Kalibrierung der Sensoren ist ein geeichtes Thermometer erforderlich. Der Braukessel wird mit einer typischen Menge Wasser gefüllt und auf 40°C aufgeheizt. Die Differenz zwischen dem Sensorwert und dem geeichten Thermometer wird in den Parameter "Offset 1 \[40°C]" eingegeben. Dieser Vorgang wird bei 78°C wiederholt und die Differenz in den Parameter "Offset 2 \[78°C]" eingetragen. Zukünftig werden alle Messwerte des Sensors mit dieser Korrektur ausgegeben.
 
-Für die Kalibrierung wird der Temperatursensor in den Hochauflösungsmodus (12bit Auflösung bzw. 0,0625°C) versetzt. Eine Kalibrierung über das Webinterface besteht aus 60 Messwerten. Der Zeitbedarf für eine Kalibrierung beträgt fast genau 60 Sekunden. Das Ergebnis der Temperaturmessung ist der Mittelwert der 60 Messwerte. Ein Offset ist die Differenz zwischen der tatsächlichen Temperatur und dem Mittelwert.
+Für die Kalibrierung wird der Temperatursensor mit erhöhter Messgenauigkeit ausgewertet. Eine Kalibrierung über das Webinterface besteht aus einer automatischen Stichprobe von etwa 20 Messwerten mit Laufzeit von ungefähr 20 Sekunden. Währenddessen zeigt das Webinterface den Fortschritt und den laufenden Mittelwert an. Das Ergebnis der Temperaturmessung ist der Mittelwert dieser Messwerte. Ein Offset ist die Differenz zwischen der tatsächlichen Temperatur und dem Mittelwert.
 
 In vielen Fällen ist eine 1-Punkt-Kalibrierung im Eisbad ausreichend, da der Offset der Sensoren DS18B20 in der Regel konstant ist.
 
@@ -19,7 +19,7 @@ Offset #1 (unterer Wertebereich) ist die Differenz von 0.0°C (Eisbad) zum Mitte
 
 ## Verfahren Kalibrierung mit Fieberthermometer
 
-Ein Fieberthermometer ist ein gut geeignetes Referenzthermometer. Der obere Messbereich ist bei einem Fieberthermometer auf ca. 40°C begrenzt. Die Durchführung der Kalibrierung entspricht der Vorgehensweise bei Eisbad und Siedetemperatur. Einziger Unterschied: Wählt man z.B. 40°C als zweiten Kalibrierpunkt, so muss das Kochfeld abgeschaltet werden, sobald die Solltemperatur erreicht ist und für ca. 60 Sekunden konstant bleibt (keine Schwankungen). Erst dann darf die Kalibrierung, d.h. die Aufnahme von 60 Messproben gestartet werden.
+Ein Fieberthermometer ist ein gut geeignetes Referenzthermometer. Der obere Messbereich ist bei einem Fieberthermometer auf ca. 40°C begrenzt. Die Durchführung der Kalibrierung entspricht der Vorgehensweise bei Eisbad und Siedetemperatur. Einziger Unterschied: Wählt man z.B. 40°C als zweiten Kalibrierpunkt, so muss das Kochfeld abgeschaltet werden, sobald die Solltemperatur erreicht ist und für mindestens 20 Sekunden stabil bleibt (keine spürbaren Schwankungen). Erst dann darf die Kalibrierung gestartet werden.
 
 ## Logdatei Sensorkalibrierung
 

@@ -9,6 +9,8 @@
 
 Ein PID-Regler sorgt dafür, dass dein Braukessel die gewünschte Temperatur
 möglichst genau hält, ohne zu überhitzen oder zu träge zu reagieren.
+PID bezeichnet diese automatische Temperaturregelung; du musst ihre
+Regelungstheorie für die folgenden Schritte nicht kennen.
 Diese Anleitung zeigt dir Schritt für Schritt, wie du ohne Vorwissen
 funktionierende PID-Werte für dein System findest.
 

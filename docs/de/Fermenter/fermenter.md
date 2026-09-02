@@ -4,7 +4,7 @@ Im Fermenter Modus arbeitet der Brautomat32 den Gärplan in gleicher Weise wie b
 
 ![Fermenter dashboard](/docs/img/fermenter_dash.jpg)
 
-Die Verarbeitung der Steps hat einen wichtigen Untschied:
+Die Verarbeitung der Schritte hat einen wichtigen Unterschied:
 
 Der erste Schritt im Gärplan wird sofort mit dem Prozessstart gestartet. Alle folgenden Schritte im Gärplan werden sofort gestartet, unabhängig von der Ist-Temperatur.
 
@@ -23,11 +23,11 @@ Der Fermenter hat drei verschiedene Stati: Kühlung, Heizung und Idle. Wenn sich
 
 Ein Fermenter Schritt wird mit einer Start- und einer Endtemperatur angegeben. In der ersten Abbildung in diesem Abschnitt beträgt im ersten Fermenter Schritt die Temperatur jeweils 18°C. Das bedeutet natürlich, dass für die Dauer von 1 Tage die Gärtemperatur unverändert bleibt.
 
-Im zweiten Fermenter Schritt beträgt die Starttemperatur 18°C und die Endtemperatur 20°C. Die Dauer für diesen Fermenter Schritt ist mit 2 Tagen eingetragen. Es gibt nun zwei Möglichkeiten, um von der Start- auf die Endtemepratur zu kommen:
+Im zweiten Fermenter-Schritt beträgt die Starttemperatur 18 °C und die Endtemperatur 20 °C. Die Dauer für diesen Fermenter-Schritt ist mit 2 Tagen eingetragen. Es gibt nun zwei Möglichkeiten, um von der Start- auf die Endtemperatur zu kommen:
 
 Bei aktiviertem ramp steuert der Brautomat die Gärtemperatur über die angegebene Dauer für diesen Schritt linear. In diesem Fall wird in +0.1°C Schritten über 2 Tage hinweg die Temperatur von 18°C auf 20°C geführt.
 
-Bei deaktiviertem ramp wird die Endtemperatur mit dem Start vom Fermenter Schritt hergestellt, entweder mittels Kühlung oder Heizung. Sobald die Endtemepratur hergestellt ist, wird sie gehalten.
+Bei deaktiviertem Ramp wird die Endtemperatur mit dem Start des Fermenter-Schritts hergestellt, entweder mittels Kühlung oder Heizung. Sobald die Endtemperatur erreicht ist, wird sie gehalten.
 
 ## Relais Schaltzyklus
 

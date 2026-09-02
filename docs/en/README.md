@@ -6,12 +6,12 @@ Brautomat is a brewing controller for ESP32 D1 mini systems.
 It automates mash rests and timing, supports boil phases including hop additions,
 and can run infusion-style mash processes with minimal manual intervention.
 
-> **Note:**  
+> **Note:**
 > This guide is continuously improved. Many examples use GGM IDS.
 > Since version 1.48, relay-based setups are supported as well.
 > Only manual mode is exclusive to GGM IDS2.
 
-Guide status: release line `main` (version 1.60). Local development builds may differ.
+Guide status: release line `main` (version 1.65). Local development builds may differ.
 
 ## Recommended onboarding
 

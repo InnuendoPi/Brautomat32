@@ -1,6 +1,6 @@
 # Das Dashboard
 
-![Dashboard](/docs/img/dashboard160.jpg)
+![Dashboard](/docs/img/dashboard165.jpg)
 
 Das Dashboard wird beim Brauen eingesetzt. Sobald Kochfelder, Aktoren und Sensoren konfiguriert sind, vereint das Dashboard alle wichtigen Informationen an einer Stelle.
 

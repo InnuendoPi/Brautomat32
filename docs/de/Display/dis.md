@@ -31,7 +31,7 @@ Vor dem ersten Betrieb muss das Display vorbereitet werden. Hierzu wird die pass
 
 ![MaischeSud](/docs/img/brewpage-sm.jpg)
 
-Die Seite MaischeSud ist die bevorzugte Seite beim Brauen. Auf dem Dispaly werden die sekündlich die Informationen
+Die Seite MaischeSud ist die bevorzugte Seite beim Brauen. Auf dem Display werden sekündlich folgende Informationen
 
 * Ist-Temperatur
 * Ziel-Temperatur (Rast-Temperatur)
@@ -49,6 +49,6 @@ _Hinweis: die Ansicht Kesselübersicht zeigt in der unteren Zeile die Adresse vo
 
 ## Ansicht Manuelle Steuerung
 
-![Manuelle Steueung](/docs/img/induction-mode-sm.jpg)
+![Manuelle Steuerung](/docs/img/induction-mode-sm.jpg)
 
 Die Seite manuelle Steuerung bietet die Möglichkeit, die GGM IDS manuell zu betreiben. Über die Buttons + und - können die Leistungsstufen hoch- bzw. heruntergeregelt werden.

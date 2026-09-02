@@ -1,6 +1,6 @@
 # The Dashboard
 
-![Dashboard](/docs/img/dashboard160.jpg)
+![Dashboard](/docs/img/dashboard165.jpg)
 
 Dashboard mode is optimized for brew day. Once kettles, actuators, and sensors are configured, it combines the most relevant controls and status information in one view.
 

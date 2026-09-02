@@ -1,10 +1,10 @@
-# Set up the cooker
+# Set up mash kettle
 
 ## Create the mash kettle
 
 In the _Mash Plan_ section, create the mash kettle via the gear icon at the top right.
 
-![Create mash kettle](/docs/img/IDS-einrichten.jpg)
+![Create mash kettle](../.gitbook/assets/IDS-einrichten.jpg)
 
 ## Configure the cooker
 
@@ -12,9 +12,9 @@ First, configure the cooker itself. This example uses a GGM IDS induction cooker
 
 The first setting is the IDS type (`IDS1` or `IDS2`). Then configure these control pins:
 
-* PIN white [relay] - Default: D7
-* PIN yellow [Command] - Default: D6
-* PIN blue [Interrupt] - Default: - (unused)
+* PIN white \[relay] - Default: D7
+* PIN yellow \[Command] - Default: D6
+* PIN blue \[Interrupt] - Default: - (unused)
 
 GPIO D6 and D7 are preconfigured for the GGM IDS cable (JST-HX) and also match the screw terminal layout. The interrupt pin is usually left unused and is mainly needed for troubleshooting.
 
@@ -22,11 +22,11 @@ Next, assign a temperature sensor to the mash kettle. Choose it from the sensor 
 
 _Note_: _Each kettle needs a fixed temperature sensor. The actual temperature from this sensor is continuously compared with the target rest temperature during mashing._
 
-![Configure mash kettle](/docs/img/IDS-konfigurieren.jpg)
+![Configure mash kettle](../.gitbook/assets/IDS-konfigurieren.jpg)
 
 The parameters in the "Temperature control" tab are explained in detail in the parameter section. For this first setup, keep the default values.
 
-![Configure mash kettle](/docs/img/IDS-temperaturen.jpg)
+![Configure mash kettle](../.gitbook/assets/IDS-temperaturen.jpg)
 
 ## Set up PID control
 
@@ -36,5 +36,4 @@ The AutoTune PID chapter explains step by step how to determine suitable PID par
 
 ## Deep dive (Power User)
 
-Technical details about decoupled IDS send behavior from 1.60 onward:
-[IDS RMT send logic 1.60 (Power User)](ids-rmt-160.md)
+Technical details about decoupled IDS send behavior from 1.60 onward: [IDS RMT send logic 1.60 (Power User)](ids-rmt-160.md)

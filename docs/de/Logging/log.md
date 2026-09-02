@@ -1,12 +1,12 @@
 # Logging
 
-![media](/docs/img/logging.jpg)
+![media](../.gitbook/assets/logging.jpg)
 
 Das Logging ist nur in der Development Version verfügbar. Das integrierte Logging hilft bei der Fehlersuche, sowohl bei Fehlern in der Firmware Brautomat32 als auch bei Anwenderfehlern. Für die Ausgabe wird ein serieller Monitor benötigt. Im Folgenden wird Microsoft Visual Studio Code mit der Erweiterung Microsoft Serial Monitor gezeigt. Microsoft Visual Studio Code ist kostenfrei und als eigenständige Version verfügbar (keine Installation erforderlich).
 
 Der serielle Monitor muss zusätzlich zum COM-Port auf eine Baudrate von 115200 und CRLF eingestellt werden.
 
-![Microsoft Visual Studio Code](/docs/img/vscode.jpg)
+![Microsoft Visual Studio Code](../.gitbook/assets/vscode.jpg)
 
 ## Einstellungen Logging
 
@@ -116,16 +116,16 @@ Download Microsoft VSCode als ZIP Datei: [Microsoft VSCode](https://code.visuals
 
 Die ZIP Datei in ein beliebiges Verzeichnis entpacken. Im Dateiexplorer in das Verzeichnis wechseln und einen Ordner mit dem Namen data erstellen. Der Ordner data versetzt MS VScode in den portablen Modus und kann ohne Installation verwendet werden.
 
-![Microsoft Visual Studio Code](/docs/img/vscode_4.jpg)
+![Microsoft Visual Studio Code](../.gitbook/assets/vscode_4.jpg)
 
 Microsoft VSCode starten mit Doppelklick auf Code.exe.
 
-![Microsoft Visual Studio Code](/docs/img/vscode_1.jpg)
+![Microsoft Visual Studio Code](../.gitbook/assets/vscode_1.jpg)
 
 Für das Logging wird in VScode die Extension Serial Monitor benötigt. Auf der linken Seite den Button Extensions anklicken und im Suchfeld "serial monitor" eingeben.
 
-![Microsoft Visual Studio Code](/docs/img/vscode_2.jpg)
+![Microsoft Visual Studio Code](../.gitbook/assets/vscode_2.jpg)
 
 Die Extension Serial Monitor von Microsoft installieren. Der serielle Monitor ist in der Anzeige Output enthalten. Im Menü view den Punkt output anklicken oder mit der Tastenkombination Ctrl Shift U die Ausgabe öffnen. Die Anzeige Extensions kann durch einen Klick auf den Button Extension aus- und eingeblendet werden. Im Fenster Output nun den Tab Serial Monitor anklicken. Jetzt muss nur noch der COM Port ausgewählt werden und die Baud rate auf 115200 eingestellt werden. Das Logging wird mit dem Button Start Monitoring gestartet.
 
-![Microsoft Visual Studio Code](/docs/img/vscode_3.jpg)
+![Microsoft Visual Studio Code](../.gitbook/assets/vscode_3.jpg)

@@ -7,12 +7,12 @@ Er automatisiert Rasttemperaturen und Rastzeiten, unterstützt das Würzekochen
 inklusive Hopfengaben und kann den Maischprozess im Infusionsverfahren weitgehend
 automatisch fahren.
 
-> **Hinweis:**  
+> **Hinweis:**
 > Diese Anleitung wird laufend erweitert. Viele Beispiele zeigen GGM IDS.
 > Seit Version 1.48 sind auch Relais-Setups unterstützt.
 > Nur der manuelle Modus ist exklusiv für GGM IDS2.
 
-Stand der Anleitung: Release-Linie `main` (Version 1.60). Lokale
+Stand der Anleitung: Release-Linie `main` (Version 1.65). Lokale
 Entwicklungs-Builds können abweichen.
 
 ## Empfohlener Einstieg

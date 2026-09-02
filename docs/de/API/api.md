@@ -10,8 +10,8 @@ Sie kapseln `fetch()`-Aufrufe, behandeln Fehler, JSON/Text-Erkennung und optiona
 * @param {string} url - Endpoint-URL
 * @param {boolean} alarm - sendAlarm aktivieren, default false
 * @param {boolean} toast - toast nachricht bei fehler, default false
-* @param {boolean} log - debug ausgaben auf console im browser, default false
-* @returns {Promise\<any\>} - Antwort vom Server (JSON-Objekt oder Text)
+* @param {boolean} log - Debug-Ausgaben in der Browser-Konsole, Standard `true`
+* @returns {Promise\<any|null\>} - Antwort vom Server (JSON-Objekt oder Text), bei HTTP- oder Netzwerkfehler `null`
 
 **Beispiel:**  
 
@@ -22,29 +22,30 @@ console.log(misc);
 
 ---
 
-## apiPOST(url, data, alarm, toast, log, postType, responseType)
+## apiPOST(url, data, alarm, toast, log, postType)
 
 * @param {string} url - Endpoint-URL
-* @param {Object} data - Daten, die gesendet werden (json oder txt)
+* @param {Object|FormData|string|null} data - Zu sendende JSON-, Text- oder FormData-Daten
 * @param {boolean} alarm - sendAlarm aktivieren, default false
 * @param {boolean} toast - toast nachricht bei fehler, default false
-* @param {boolean} log - debug ausgaben auf console im browser, default false
-* @param {"json"|"text"|"formdata"} postType - content-type für header, default json
-* @param {"json"|"text"} responseType - erwarteter Rückgabewert, default text
-* @returns {Promise\<any\>} - Antwort vom Server
+* @param {boolean} log - Debug-Ausgaben in der Browser-Konsole, Standard `true`
+* @param {"json"|"text"|"formdata"} postType - Request-Format, Standard `json`
+* @returns {Promise\<any|null\>} - Antwort vom Server, bei HTTP- oder Netzwerkfehler `null`
 
 **Beispiel:**  
 
 ```js
-await apiPOST('/setKettle', { temp: 65, pid: true }, true, false, true);
-console.log(misc);
+const result = await apiPOST('/setKettle?id=0', { setp: 65 }, true, false, true);
+console.log(result);
 ```
+
+Beide Helper erkennen JSON-Antworten über den HTTP-Header `Content-Type`; ein separater `responseType`-Parameter existiert nicht. Sie setzen keinen allgemeinen Request-Timeout. Aufrufer müssen `null` als fehlgeschlagenen Request behandeln.
 
 ---
 
 ## WebServer Handler Brautomat32
 
-Brautomat HTTP-Endpunkte. Der WebServer nutzt CORS und unterstützt **HTTP GET**, **POST**, **PUT**, und **DELETE** Requests.
+Brautomat HTTP-Endpunkte. Der WebServer nutzt CORS. Welche Methode ein Endpunkt akzeptiert, ist jeweils in der Tabelle angegeben.
 
 ---
 
@@ -118,9 +119,8 @@ console.log(data);
 | Endpoint | Methode | Beschreibung |
 | ----------- | ---------- | -------------- |
 | `/reqKettle?id=${kettleid}` | GET | Gibt aktuelle Kesseldaten zurück |
-| `/reqKettlePID?id=${kettleid}` | GET | PID-Parameter abfragen (`kl`,`kr`,`kp`,`ki`,`kd`,`sa`,`psa`,`newo`,`tun`,`vol`,`maxo`,...) |
 | `/setKettle?id=${kettleid}` | POST | Kesseldaten ändern |
-| `/setKettlePID?id=${kettleid}` | POST | PID-Parameter ändern oder aus `kl/kr` neu berechnen (`recalc`, `applyRecommended`) |
+| `/setKettlePID?id=${kettleid}` | POST | PID-Parameter ändern oder aus `kl/kr` neu berechnen; nur IDs `0..2` |
 | `/handlePower?id=${kettleid}` | POST | Leistung aktivieren/deaktivieren. JSON: `{"setp":78,"state":true}` schaltet ein, `{"setp":0,"state":false}` schaltet aus. Ohne `state` bleibt der Aufruf kompatibel als Toggle. |
 
 | kettleid | Beschreibung |
@@ -129,6 +129,10 @@ console.log(data);
 | 1 | Sud Kessel |
 | 2 | HLT |
 | 3 | Fermenter |
+
+`/setKettlePID` akzeptiert ausschließlich Maische, Sud und HLT (`0..2`), da nur diese Kessel einen PID-Regler besitzen. Manuelle PID-Gains müssen endlich und mindestens `0` sein; ungültige Werte ergeben HTTP `400`.
+
+Bei `recalc=true` berechnet der Endpunkt Gains aus `kl` und `kr`. In Produkt-Builds muss dabei `applyRecommended` `true` sein: Die abgeleiteten Gains, Samplezeit, Leistungs-Samplezeit und Kochleistung werden zusammen übernommen. `dryRun=true` ist ausschließlich in Testflow-Builds verfügbar. Der Fermenter wird über den Fermenterplan geregelt; `/handlePower` kann ihn nicht einschalten.
 
 **Beispiel:**  
 
@@ -159,7 +163,7 @@ console.log(data);
 **Beispiel:**  
 
 ```js
-const data = await apiGET(`/reqKettle?type=0`);
+const data = await apiGET(`/reqKettle?id=0`);
 console.log(data);
 ```
 
@@ -187,7 +191,7 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 
 | Endpoint | Methode | Beschreibung |
 | ----------- | ---------- | -------------- |
-| `/reboot` | POST | Neustart des Geräts |
+| `/reboot` | POST | Plant den Neustart des Geräts und antwortet mit HTTP `202` |
 | `/reqMisc` | GET | Allgemeine Systeminformationen |
 | `/reqVis` | GET | Visualisierungsdaten abrufen |
 | `/reqProcessStatus` | GET | Kompakter Prozessstatus für Dashboard und Import-/Export-Verfügbarkeit |
@@ -205,6 +209,10 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 | `/startHTTPUpdate` | POST | Firmware-Update starten |
 | `/setFerm` | POST | Gärparameter setzen |
 | `/eraseFlash` | GET | Flash-/Konfigurationsdaten löschen. Service-Funktion mit unmittelbarer Wirkung. |
+
+### `/reboot`
+
+Der Endpunkt antwortet vor dem Neustart mit `202 Accepted` und dem Text `reboot scheduled`; der Neustart folgt kurz danach. Ein Client darf den anschließenden Verbindungsabbruch nicht als fehlgeschlagenen Neustart werten. Das WebIf verwendet dafür `requestDeviceReboot()` statt des generischen `apiPOST()`-Helpers.
 
 ### `/reqProcessStatus`
 
@@ -556,10 +564,14 @@ Die Pins werden serverseitig während des normalen Chart-Schreibens aus dem lauf
 
 | Endpoint | Methode | Beschreibung |
 | ----------- | ---------- | -------------- |
-| `/channel` | GET | SSE-Kanal öffnen |
-| `/startSSE` | GET | Startet SSE-Verbindung |
-| `/checkAliveSSE` | GET | Prüft aktive SSE-Verbindungen |
-| `/reloadMashSSE` | GET | Lädt Maischdaten neu |
+| `/channel` | GET | Reserviert einen freien SSE-Kanal und liefert dessen relative Event-URL |
+| `/startSSE` | GET | Legacy-Initialisierung; bestätigt nur den Aufruf und öffnet keinen Event-Kanal |
+| `/checkAliveSSE?session=${session}` | GET | Prüft eine aktive SSE-Sitzung |
+| `/reloadMashSSE` | GET | Lädt sichtbaren Maische- oder Fermenterplan neu und sendet dessen SSE-Update |
+
+`/channel` antwortet als JSON, zum Beispiel mit `{"ok":true,"status":"assigned","code":1,"channel":"/rest/events/0"}`. Die URL ist bewusst relativ und muss mit `EventSource` same-origin geöffnet werden. Wenn kein Kanal frei ist, liefert der Endpunkt `ok:false` und `status:"no-free-channel"`.
+
+`/checkAliveSSE` benötigt die Session-ID. Mögliche Statuswerte sind `active`, `server-restarted`, `stale-reset`, `state-changed`, `not-found` und `missing-session`. Bei einem Neustart oder einer verlorenen Sitzung muss der Client einen neuen Kanal anfordern.
 
 ---
 
@@ -615,6 +627,7 @@ Diese Endpunkte sind nur in Builds mit `BRAUTOMAT_TESTFLOW_ENABLED` registriert 
 | Endpoint | Methode | Beschreibung |
 | ----------- | ---------- | -------------- |
 | `/dev/snapshot` | GET | Debug-Testflow-Snapshot mit `meta.testflowSchema`. |
+| `/reqKettlePID?id=${kettleid}` | GET | PID-Parameter-Readback für Testflow und Debugging. |
 | `/dev/mashplan-readback` | GET | Aktuellen Maischeplan für Test-Readback abrufen. |
 | `/dev/sensor-error` | GET | Sensorfehler für Testflow setzen. |
 | `/dev/sensor-override` | GET | Sensorwert für Testflow überschreiben. |

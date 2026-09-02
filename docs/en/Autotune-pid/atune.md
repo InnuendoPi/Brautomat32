@@ -1,15 +1,15 @@
-# AutoTune process
+# AutoTune process (Power User)
 
-> **Note for onboarding:**  
-> This chapter is for advanced users.  
-> You can skip it during initial Brautomat setup and return later if needed.  
+> **Note for onboarding:**\
+> This chapter is for advanced users.\
+> You can skip it during initial Brautomat setup and return later if needed.\
 > Start first with [AutoTune step by step](steps.md) and [Brew-day quick guide](brew-day-quick-guide.md).
 
 AutoTune determines suitable control parameters for your specific brewing setup. The goal is stable temperature control with minimal overshoot and undershoot during mashing.
 
 Note: A small overshoot of about 0.5°C is normal. Depending on insulation and stored heat in the kettle, temperature may still rise slightly after heating is switched off.
 
-![AutoTune4](/docs/img/IDS-AutoTune-Ziel.jpg)
+![AutoTune4](../.gitbook/assets/IDS-AutoTune-Ziel.jpg)
 
 The next sections explain P, I, D, and interval behavior. If you only want practical setup, you can skip directly to the step-by-step chapter.
 
@@ -41,8 +41,7 @@ Too much I can cause overshoot.
 
 ## D value
 
-The D component damps rapid changes and reduces oscillation.
-Too much D makes control sluggish.
+The D component damps rapid changes and reduces oscillation. Too much D makes control sluggish.
 
 ## Interval (SampleTime)
 
@@ -55,5 +54,4 @@ Typical useful values are 2000 ms to 3000 ms. Allowed values are 1000 to 7000 ms
 
 ## Deep dive (Power User)
 
-Further details about 1.60 PID behavior, `Compute()` sequencing, and L/R-based derivation:
-[PID engine reference 1.60 (Power User)](../Kessel/pid-engine-160-reference.md)
+Further details about 1.60 PID behavior, `Compute()` sequencing, and L/R-based derivation: [PID engine reference 1.60 (Power User)](../Kessel/pid-engine-160-reference.md)

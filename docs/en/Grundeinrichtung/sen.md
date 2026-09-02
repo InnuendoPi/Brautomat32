@@ -15,9 +15,9 @@ If no sensor is displayed:
 * The detection of the sensors can be restarted using the reload button.
 * If no sensor is still detected, the cable connection must be checked.
 
-Each sensor needs a name. In this basic setup the sensor is called “Sensor IDS2”.  called.
+Each sensor needs a name. In this basic setup the sensor is called “Sensor IDS2”.
 
-_Note: Sensor names can contain a maximum of 20 characters. Allowed special characters are # and spaces. The input is automatically checked by the web interface._
+_Note: Sensor names can contain a maximum of 15 characters. Allowed special characters are # and spaces. The input is automatically checked by the web interface._
 
 ![Configure sensors](/docs/img/Sensor-einstellungen.jpg)
 

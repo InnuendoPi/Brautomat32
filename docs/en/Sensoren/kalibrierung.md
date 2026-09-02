@@ -16,8 +16,8 @@ Use a calibrated reference thermometer.
 
 Brautomat then applies this correction to future measurements.
 
-During calibration, the sensor runs at 12-bit resolution (0.0625°C).
-Each calibration run records 60 samples (about 60 seconds), and the average is used.
+During calibration, the sensor is evaluated with increased measurement precision.
+Each calibration run records an automatic sample set of about 20 values (roughly 20 seconds), and the web UI shows progress and the running average.
 
 In many setups, a 1-point calibration in an ice bath is already sufficient because DS18B20 offsets are often close to linear.
 
@@ -52,7 +52,7 @@ If using 40°C as upper calibration point:
 
 1. Heat to 40°C.
 2. Switch heating off.
-3. Wait until temperature is stable for about 60 seconds.
+3. Wait until temperature is stable for about 20 seconds.
 4. Start calibration sample run.
 
 ## Sensor calibration log file

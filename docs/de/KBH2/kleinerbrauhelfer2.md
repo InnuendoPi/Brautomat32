@@ -16,7 +16,7 @@ Im Tab Maischplan bietet der kbh2 vier verschiedene Arten Malze zur Maische hinz
 
 [Earl Scheid](http://hb-tauschboerse.bplaced.net/Neues_Maischverfahren.htm)
 
-Das Kochmaischverfahren von Earl Scheid ist sehr gut mit dem keinenBrauhelfer2 zu planen und mit dem Brautomat sehr einfach automatisiert durchzuführen. Zu beachten gilt, dass zwischen den zwei Teilmaischen ein Maischeschritt Zubrühen (Hauptguss und Malze Teil2) erforderlich ist. Je nach Volumen Malze 2 ist die empfohlene Vorgehensweise mit deaktiviertem autonext für den Schritt Zuberühen zu arbeiten, um ausreichend Zeit für das Einmaischen von Malze 2 zu haben, bevor die zweite Maltoserast beginnt. Alternativ kann als Zieltemperatur im Mischkreuz Hauptguss/Malze 1 zu Hauptguss/Malze 2 ca. 60°C mit direktem (autonext) Aufheizen auf 63°C gewählt werden.
+Das Kochmaischverfahren von Earl Scheidt ist sehr gut mit dem kleinenBrauhelfer2 zu planen und mit dem Brautomat einfach automatisiert durchzuführen. Zu beachten ist, dass zwischen den zwei Teilmaischen ein Maischeschritt „Zubrühen“ (Hauptguss und Malze Teil 2) erforderlich ist. Je nach Volumen von Malz 2 ist es empfehlenswert, für den Schritt „Zubrühen“ mit deaktiviertem Autonext zu arbeiten, damit ausreichend Zeit für das Einmaischen von Malz 2 bleibt, bevor die zweite Maltoserast beginnt. Alternativ kann als Zieltemperatur im Mischkreuz Hauptguss/Malz 1 zu Hauptguss/Malz 2 etwa 60 °C mit direktem Aufheizen auf 63 °C bei aktiviertem Autonext gewählt werden.
 
 ### Beispiel 2: kbh2 Dekoktion
 

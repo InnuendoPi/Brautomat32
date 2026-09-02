@@ -4,10 +4,14 @@ The indicators in [README.md](../../../readme.md) and
 [README.de.md](../../../readme.de.md) show the current state of the public
 firmware test suite.
 
-The currently published `complete-suite` includes:
+The latest published `complete-suite` run, on 12 July 2026 with firmware
+`1.65.0`, includes:
 
-- `57` suite tests
-- `1023` underlying checks
+- `74` suite tests
+- `1549` underlying checks
+
+All `74` tests passed; none failed or was skipped. The complete published run
+is listed in [TEST-RESULTS.md](../../../TEST-RESULTS.md).
 
 The indicator summarizes four values:
 
@@ -15,6 +19,10 @@ The indicator summarizes four values:
 - `pass`: number of successfully completed suite tests
 - `fail`: number of suite tests with a real failure
 - `skip`: number of intentionally skipped suite tests
+
+A plain transport, browser, or runner timeout is recorded as `skip` and is not
+treated as a firmware failure. Functional FSM, sensor, or actuator deadline
+violations remain real failures.
 
 A green indicator means that the current public firmware test suite completed
 without real failures. Yellow notes indicate borderline but not broken
@@ -33,10 +41,12 @@ The public firmware test suite covers the main core functions of the firmware:
 - firmware and web interface self-update
 - restoring a clean baseline state
 - browser UI core for reload, SSE reconnect, dashboard, and key dialogs
+- runtime and debug interfaces as well as PID boundaries
 - recipe import from multiple sources
 - mash plan flow from start to normal finish
 - manual heating mode
 - actuators, special commands, and profile changes
+- digital and analog actuator PWM behavior
 - sensor faults and safety reactions
 - stop, reboot, and resume
 - fermenter plan flow from entry up to reboot and resume cases
@@ -126,10 +136,19 @@ The public firmware test suite shows:
   checked.
 - mash and fermenter view switching is checked.
 
+### Runtime, debug, and PID calculation
+
+- The debug snapshot format and the telemetry and debug API are checked.
+- The controller API must not execute an action while the system is powered
+  off.
+- Boundaries for PID tune factor, heat-up window, threshold output, sample
+  times, and lambda derivation are checked.
+
 ### Recipe import
 
 - Native Brautomat recipes can be loaded.
 - Recipes from kleinerBrauhelfer2 can be imported.
+- Quantity units in a kleinerBrauhelfer2 recipe are checked as well.
 - Recipes from Maische Malz und Mehr can be imported.
 - Recipes from Brewfather can be imported.
 
@@ -140,6 +159,8 @@ The public firmware test suite shows:
 - Boil and hop steps are reached correctly.
 - The final step behaves correctly.
 - Replay into later steps works.
+- Previous and next actions, continuing after a timeout, and user steps are
+  checked.
 
 ### Manual mode
 
@@ -149,6 +170,7 @@ The public firmware test suite shows:
 ### Actuators, special commands, and profiles
 
 - Actuator step sequences are executed correctly.
+- Digital PWM switching and the analog PWM contract are checked.
 - Invalid actuator steps switch into a safe user-controlled state.
 - Public kettle special commands for mash, sud, and HLT are processed.
 - Output limits and profile changes inside steps are applied correctly.
@@ -156,13 +178,16 @@ The public firmware test suite shows:
 ### Sensor faults and safety behavior
 
 - Sensor faults are detected.
+- A sensor override while waiting for temperature is checked.
+- Powering off deactivates every kettle output.
 - Faults during heat-up escalate correctly.
 - Faults during a running step hold the process in a controlled way.
 
 ### Stop, reboot, and resume
 
 - A controlled stop during an active boil step is handled correctly.
-- After reboot, an active boil step resumes correctly.
+- Stop and resume are checked both in the final and in a non-final boil timer
+  step.
 
 ### Fermenter plan flow
 
@@ -177,60 +202,77 @@ The public firmware test suite shows:
 
 | # | Area | Description |
 | - | ---- | ----------- |
-| 1 | Release readiness | Web assets prepared for LittleFS |
-| 2 | Release readiness | Firmware build successful |
-| 3 | Release readiness | LittleFS build successful |
-| 4 | Release readiness | Release package assembled |
-| 5 | Release readiness | Firmware flash successful |
-| 6 | Release readiness | LittleFS flash successful |
-| 7 | Release readiness | Backup restore after LittleFS flash |
-| 8 | System update | Firmware and web interface self-update |
-| 9 | Backup & Restore | Defined baseline restored cleanly |
-| 10 | Browser UI core | Web interface reload core |
-| 11 | Browser UI core | Web interface dashboard core |
-| 12 | Browser UI core | Mash/fermenter view switch |
-| 13 | Browser UI core | System save and reload |
-| 14 | Browser UI core | SSE reconnect stability |
-| 15 | Browser UI core | Repeated modal opening |
-| 16 | Browser UI core | Reload request and event budget |
-| 17 | Browser UI core | Induction dialog |
-| 18 | Browser UI core | HLT dialog |
-| 19 | Browser UI core | Sud kettle dialog |
-| 20 | Browser UI core | Sud dialog |
-| 21 | Browser UI core | System dialog |
-| 22 | Browser UI core | Sensor dialog |
-| 23 | Browser UI core | Actor dialog |
-| 24 | Recipe import | Import a Brautomat recipe |
-| 25 | Recipe import | Import a kleinerBrauhelfer2 recipe |
-| 26 | Recipe import | Import an MMUM recipe |
-| 27 | Recipe import | Import a Brewfather recipe |
-| 28 | Mash plan flow | Mash plan from start to running step |
-| 29 | Mash plan flow | Mash plan through boil and hop path |
-| 30 | Mash plan flow | Pause and resume in a running step |
-| 31 | Mash plan flow | Wait-user step, previous step, and continue with Play |
-| 32 | Mash plan flow | Last step blocks `Next` correctly |
-| 33 | Mash plan flow | Direct entry into the boil step |
-| 34 | Mash plan flow | Process finishes correctly at plan end |
-| 35 | Mash plan flow | Process with a manual final step |
-| 36 | Manual mode | Manual heating mode |
-| 37 | Actuators | Actuator step sequence executes correctly |
-| 38 | Actuators | Invalid actuator step enters safe user mode |
-| 39 | Special command | HLT or sparge-water command |
-| 40 | Special command | Mash or IDS command |
-| 41 | Special command | Sud or MLT command |
-| 42 | Special command | Output limit for mash or IDS |
-| 43 | Special command | Profile change for mash or IDS |
-| 44 | Special command | Profile change for sud or MLT |
-| 45 | Special command | Profile change for HLT or sparge water |
-| 46 | Sensor fault | Sensor error hook |
-| 47 | Sensor fault | Sensor fault escalation during heat-up |
-| 48 | Sensor fault | Controlled hold on sensor fault in a running step |
-| 49 | Recovery | Controlled stop in the final boil timer step |
-| 50 | Recovery | Reboot and resume in the final boil timer step |
-| 51 | Fermenter plan flow | Cooling control in fermenter mode |
-| 52 | Fermenter plan flow | Heating control in fermenter mode |
-| 53 | Fermenter plan flow | Automatic step transition |
-| 54 | Fermenter plan flow | Ramp-step transition |
-| 55 | Fermenter plan flow | Three-step fermenter sequence |
-| 56 | Fermenter plan flow | Reboot and resume in a ramp step |
-| 57 | Fermenter plan flow | Reboot and resume in the final step |
+| 1 | Configuration and backup | Current testdevice full backup |
+| 2 | System update | Firmware and web interface self-update |
+| 3 | Configuration and backup | Restore known baseline test state |
+| 4 | Browser UI core | Web interface reload core |
+| 5 | Browser UI core | Web interface dashboard core |
+| 6 | Browser UI core | Web interface mash/fermenter view switch |
+| 7 | Browser UI core | Web interface system save and reload |
+| 8 | Browser UI core | Web interface SSE reconnect stability |
+| 9 | Browser UI core | Web interface modal repeat stability |
+| 10 | Browser UI core | Web interface reload request and event budget |
+| 11 | Browser UI core | Web interface induction modal |
+| 12 | Browser UI core | Web interface HLT modal |
+| 13 | Browser UI core | Web interface sud kettle modal |
+| 14 | Browser UI core | Web interface sud modal |
+| 15 | Browser UI core | Web interface system modal |
+| 16 | Browser UI core | Web interface sensor modal |
+| 17 | Browser UI core | Web interface actor modal |
+| 18 | Runtime and debug contract | Debug snapshot contract schema 4 |
+| 19 | Runtime and debug contract | Telemetry and debug API contract |
+| 20 | Runtime and debug contract | Controller API blocks actions while power is off |
+| 21 | PID calculation contract | PID tune-factor boundaries |
+| 22 | PID calculation contract | PID heat-up-window boundaries |
+| 23 | PID calculation contract | PID threshold-output boundaries |
+| 24 | PID calculation contract | PID IDS sample-time boundaries |
+| 25 | PID calculation contract | PID relay sample-time boundaries |
+| 26 | PID calculation contract | PID webhook sample-time boundaries |
+| 27 | PID calculation contract | PID lambda derivation boundaries |
+| 28 | Mash recipe import | Brautomat import |
+| 29 | Mash recipe import | kleinerBrauhelfer2 import |
+| 30 | Mash recipe import | kleinerBrauhelfer2 units |
+| 31 | Mash recipe import | MMUM import |
+| 32 | Mash recipe import | Brewfather import |
+| 33 | Mash plan flow | Mash start to running step |
+| 34 | Mash plan flow | Mash boil and hop path |
+| 35 | Mash plan flow | Pause and continue in running step |
+| 36 | Mash plan flow | Next advances a running step |
+| 37 | Mash plan flow | Previous is blocked at first step |
+| 38 | Mash plan flow | Previous restarts a running step |
+| 39 | Mash plan flow | Play after timeout and previous |
+| 40 | Mash plan flow | Wait-user: continue on next step |
+| 41 | Mash plan flow | Wait-user: back and continue |
+| 42 | Mash plan flow | Wait-user after timeout |
+| 43 | Mash plan flow | Last step blocks next |
+| 44 | Mash plan flow | Resume into boil step |
+| 45 | Mash plan flow | Normal finish |
+| 46 | Mash plan flow | Finish with manual last step |
+| 47 | Manual mode | Manual heating mode |
+| 48 | Actors and special commands | Actor command sequence |
+| 49 | Actors and special commands | Digital actor PWM switching |
+| 50 | Actors and special commands | Analog actor PWM contract |
+| 51 | Actors and special commands | Invalid actor command to wait-user |
+| 52 | Actors and special commands | Special command: HLT / Nachguss |
+| 53 | Actors and special commands | Special command: Mash / IDS |
+| 54 | Actors and special commands | Special command: Sud / MLT |
+| 55 | Actors and special commands | Special command: Mash threshold output |
+| 56 | Actors and special commands | Special command: Mash profile |
+| 57 | Actors and special commands | Special command: Sud profile |
+| 58 | Actors and special commands | Special command: HLT profile |
+| 59 | Sensor safety | Sensor error hook |
+| 60 | Sensor safety | Wait-temperature sensor override transition |
+| 61 | Sensor safety | Power-off deactivates every kettle output path |
+| 62 | Sensor safety | Wait-temp: sensor fault escalates |
+| 63 | Sensor safety | Running step: sensor fault pauses timer |
+| 64 | Recovery and resume | Controlled stop in final boil timer step |
+| 65 | Recovery and resume | Controlled stop in a non-final timer step |
+| 66 | Recovery and resume | Reboot/resume in final boil timer step |
+| 67 | Recovery and resume | Reboot/resume in non-final boil timer step |
+| 68 | Fermenter plan flow | Fermenter cooling control |
+| 69 | Fermenter plan flow | Fermenter heating control |
+| 70 | Fermenter plan flow | Fermenter automatic step transition |
+| 71 | Fermenter plan flow | Fermenter ramp step transition |
+| 72 | Fermenter plan flow | Fermenter three-step sequence |
+| 73 | Fermenter plan flow | Fermenter reboot/resume in ramp step |
+| 74 | Fermenter plan flow | Fermenter reboot/resume in final step |

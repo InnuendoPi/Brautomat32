@@ -17,7 +17,7 @@ Falls kein Sensor angezeigt wird:
 
 Jeder Sensor benötigt einen Namen. In dieser Grundeinrichtung wird der Sensor "Sensor IDS2".&#x20; genannt.
 
-_Hinweis: Sensornamen dürfen maximal 20 Zeichen enthalten. Erlaubte Sonderzeichen sind # und Leerzeichen. Die Eingabe wird vom Webinterface automatisch überprüft._
+_Hinweis: Sensornamen dürfen maximal 15 Zeichen enthalten. Erlaubte Sonderzeichen sind # und Leerzeichen. Die Eingabe wird vom Webinterface automatisch überprüft._
 
 ![Sensoren konfigurieren](/docs/img/Sensor-einstellungen.jpg)
 

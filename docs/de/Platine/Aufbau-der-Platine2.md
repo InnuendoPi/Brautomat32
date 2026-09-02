@@ -13,7 +13,7 @@ Nummer 4: Schraubklemmblöcke mit dem Rastermaß 2.54mm
 
 ## Teileliste für die Platine Version 2
 
-Die Position JST-HX Buchse ist eine Alternative zum 5 Pol Schraubklemmblock. Das Kabel vom Bedienteil der GGM IDS2 hat den passenden Stecker für eine JST-HX Buchse. Wird statt dem Orignalkabel ein Ersatzkabel eingesetzt, ist die Verbindung mit einem 5er Schraubklemmblockj einfacher.
+Die JST-HX-Buchse ist eine Alternative zum 5-poligen Schraubklemmblock. Das Kabel vom Bedienteil der GGM IDS2 hat den passenden Stecker für eine JST-HX-Buchse. Wird statt des Originalkabels ein Ersatzkabel eingesetzt, ist die Verbindung mit einem 5er-Schraubklemmblock einfacher.
 
 | Anzahl | Artikelname | Link zum Artikel |
 | ----------------------------------------------------- | ------------------------------ | --------------------------------- |
@@ -118,13 +118,13 @@ Zum Lieferumfang der ESP Mikrocontroller gehören die Adapter Nummer 1. Zusätzl
 
 ![Teileliste](/docs/img/Aufbau11.jpg)
 
-Adapter und Stiftleisten werden für das Aufsockeln benötigt. Die Stiftleiste wird zunächst in den Adapter eingesteckt, wie in Nummer 3 dargestellt. Anschließend werden Adpapter mit Stiftleiste in die Platine eingesetzt, jeweils zwei Stück links und 2 Stück rechts
+Adapter und Stiftleisten werden für das Aufsockeln benötigt. Die Stiftleiste wird zunächst in den Adapter eingesteckt, wie in Nummer 3 dargestellt. Anschließend werden Adapter mit Stiftleiste in die Platine eingesetzt, jeweils zwei Stück links und zwei Stück rechts.
 
 _Tipp: die Stiftleiste wird als 40 Pin Leiste geliefert. Die Stiftleiste wird in voller Länge in die Adapter gesteckt. Der Überhang über den Adapter wird am Ende abgeknickt._
 
 ![Sockel](/docs/img/Aufbau12.jpg)
 
-Nun wird der ESP aufgelegt und mit einem Lötpunkt auf jeder Seite fixiert. Jetzt wird der Sitz der Sockel kontrolliert. Anschließend werden ale Lötpunkt verlötet.
+Nun wird der ESP aufgelegt und mit einem Lötpunkt auf jeder Seite fixiert. Jetzt wird der Sitz der Sockel kontrolliert. Anschließend werden alle Lötpunkte verlötet.
 
 ![ESP32](/docs/img/Aufbau15.jpg)
 
