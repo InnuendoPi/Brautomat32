@@ -11,6 +11,25 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.65.3
+
+* Korrektur:    Kessel-Pinwechsel und Profile werden sicher angewendet
+* Korrektur:    Fermenter-Heizung und -Kühlung werden getrennt angesteuert und können nicht gleichzeitig aktiv sein
+* Korrektur:    AutoTune und Fermenter schalten bei fehlenden oder fehlerhaften Temperaturwerten sicher ab
+* Korrektur:    AutoTune speichert neue Reglerwerte nur nach erfolgreichem Abschluss
+* Korrektur:    Nach einem Sensorfehler wird nur eine zuvor aktive Kesselregelung wieder aufgenommen
+* Korrektur:    Neustarts schließen Webanfragen zuverlässig ab und schalten Ausgänge vorher sicher aus
+* Korrektur:    Abgebrochene Datei-, Sprach-, Restore- und Rezeptuploads werden zuverlässig bereinigt
+* Korrektur:    Prozessstarts und Brautag-Importe werden bei fehlenden Ressourcen sicher abgebrochen
+* Korrektur:    Live-Datenverbindungen und automatische Dashboard-Neuverbindungen stabilisiert
+* Korrektur:    Einmalige Statusmeldungen gehen beim Aufbau der Live-Verbindung nicht mehr verloren
+* Korrektur:    Live-Anzeigen im Dashboard werden ohne unnötige Mehrfachaktualisierungen aufgebaut
+* Korrektur:    Kurzzeitige Namensauflösungsfehler trennen keine laufende Live-Verbindung mehr
+* Korrektur:    Fermenter-Stopp erzeugt keine irreführende PID-Fehlermeldung mehr
+* Korrektur:    Neustart aus dem Webinterface zeigt bei erwartbarem Verbindungsabbruch keinen Fehlerdialog mehr
+* Update:       ESPAsyncWebServer 3.12.0
+* Update:       VSCode 1.135
+
 Version 1.65.2
 
 * Update:       Arduino v3.3.11 ESP-IDF v5.5.5

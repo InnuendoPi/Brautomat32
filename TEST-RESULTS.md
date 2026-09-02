@@ -3,12 +3,12 @@
 Current status for the public firmware complete suite:
 
 - Suite: `complete-suite`
-- Firmware version: `1.65.0`
+- Firmware version: `1.65.3 Develop`
 - Suite tests: `74`
-- Underlying checks: `1549`
-- Test date: `2026-07-12`
-- Test time: `07:03:28 UTC`
-- Test duration: `53m 59s`
+- Underlying checks: `1556`
+- Test date: `2026-08-31`
+- Test time: `17:05:36 UTC`
+- Test duration: `46m 34s`
 - Pass: `74`
 - Fail: `0`
 - Skip: `0`
@@ -31,7 +31,7 @@ Current status for the public firmware complete suite:
 ## Scope
 
 This file summarizes the latest completed public 74-test
-complete-suite run.
+complete-suite validation.
 It also shows the total number of checks executed inside it.
 
 Not included in this count:
