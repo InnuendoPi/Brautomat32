@@ -1,19 +1,24 @@
 # Firmware Test Results
 
-Current status for the public firmware complete suite:
+Latest completed firmware complete-suite result:
 
 - Suite: `complete-suite`
-- Firmware version: `1.65.3 Develop`
+- Firmware version: `1.65.4 Develop`
 - Suite tests: `74`
 - Underlying checks: `1556`
-- Test date: `2026-08-31`
-- Test time: `17:05:36 UTC`
-- Test duration: `46m 34s`
+- Test date: `2026-09-07`
+- Test time: `09:28:40 UTC`
+- Test duration: `48m 38s`
 - Pass: `74`
+- Warn: `0`
 - Fail: `0`
 - Skip: `0`
 
-## Coverage in this published run
+Restore and cleanup passed; the final snapshot shows IDLE with power off.
+The separate cold-browser stress recovery remains outside this suite result.
+No physical kettle, actuator or MAX31865 verification is claimed.
+
+## Coverage in this run
 
 - Configuration and backup
 - System update
@@ -30,7 +35,7 @@ Current status for the public firmware complete suite:
 
 ## Scope
 
-This file summarizes the latest completed public 74-test
+This file summarizes the latest completed 74-test
 complete-suite validation.
 It also shows the total number of checks executed inside it.
 

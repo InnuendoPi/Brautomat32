@@ -1,7 +1,7 @@
 ﻿# Changelog
 
 ESP32 Arduino 3.3.11 ESP-IDF v5.5.5\
-VSCode 1.130 pioarduino IDE 1.4.4\
+VSCode 1.135 pioarduino IDE 1.4.4\
 InnuAPID AutoTune PID lib 1.10.19\
 InnuTask lib 1.10.19\
 InnuNextion Display lib 0.9\
@@ -10,6 +10,58 @@ InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
+
+Version 1.65.5
+
+* Gitbook:      Deutsche und englische GitBook-Anleitungen zu AutoTune-Einrichtung, Browser-Verbindung, passenden Webdateien, Fermenteranzeigen und Kalibrierungsprotokoll aktualisiert; Testsuite-Ergebnis und Nachweisgrenzen berichtigt
+* Korrektur:    HTTP-/SSE-Speicherschutz berücksichtigt den für malloc/new nutzbaren RAM; unvollständige JSON-Dokumente werden abgewiesen, bei akutem Speichermangel wird die HTTP-Verbindung ohne weitere Antwortallokation geschlossen
+* Korrektur:    Fermenterpläne erhalten ihre Minuten im Editor, beim Anlegen neuer Schritte und im Dashboard; alte Tage-/Stunden-Anfragen ohne Minutenfeld werden vor dem Schreiben abgewiesen
+* Korrektur:    Gespeicherte Fermenterpläne werden an offene Browser verteilt; offene Entwürfe bleiben erhalten und veraltete Planstände werden beim Speichern abgewiesen
+* Korrektur:    Gültige Fermenterwerte von -1 °C bleiben im Livechart und in neuen Chartdateien sichtbar; ungültige Werte und explizites null werden nicht als Temperatur dargestellt
+* Korrektur:    Bei belegten SSE-Kanälen verbindet sich der Browser nach Freigabe automatisch; wiederholte Versuche erzeugen keine weiteren Meldungen derselben Belegung
+* Korrektur:    Fehlgeschlagene MP3-/Gzip-Dateiantworten führen zu HTTP 503 statt einem Nullzeigerzugriff; unterbrochene oder fehlgeschlagene Audiowiedergabe wird im Browser abgefangen
+* Korrektur:    Plan-APIs weisen Änderungen im laufenden Betrieb und an der falschen Planart ab; ein Wechsel zwischen Maische- und Fermenteransicht erfordert auch in Pause einen gestoppten Prozess und verändert bei Ablehnung keine Einstellungen
+* Korrektur:    Beim Umordnen eines pausierten Maischeplans bleiben aktiver Schritt und Restzeit erhalten; fehlende oder mehrdeutige aktive Schrittnamen werden vor dem Schreiben abgewiesen
+* Korrektur:    Der Planeditor erhält Eingaben bei fehlgeschlagener Speicherung; die gewählte Planansicht wird erst nach bestätigtem Speichern übernommen
+* Korrektur:    Fermenterpläne behalten beim Umbenennen und Kopieren konsistente Namen, Dateipfade und Konfigurationszeiger und bleiben erneut auswählbar
+* Korrektur:    Schrittnamen mit HTML-Zeichen werden im Maische- und Fermenterplan als Text angezeigt und beim Editieren unverändert übernommen
+* Optimierung:  Brewfather-Sudliste verwendet für die Datumsanzeige die bereits eingebundene Ganzzahl-Scan-Funktion; 10.064 Bytes weniger Firmware-Flash im geprüften ESP32_IDF5-Build bei unverändertem Datumsverhalten
+* Korrektur:    Nextion-Minus bleibt bei fehlender Sliderantwort und einer Leistung unter 5 % auf 0 % begrenzt; unvollständige Zahlen- und Ereignistelegramme werden verworfen, eigene gültige Kurztelegramme bleiben unterstützt
+* Korrektur:    Nextion zeigt gültige Fermenter-Sollwerte von 0 °C und unter 0 °C an
+* Korrektur:    Beim Umordnen eines pausierten Fermenterplans bleiben aktiver Schritt und Restzeit erhalten; fehlende oder mehrdeutige aktive Schrittnamen werden vor dem Speichern abgewiesen
+* Korrektur:    Nach manuellem Fermenter-Schrittwechsel startet einmaliges Play den Schritt ohne Maische-Temperaturgate und erhält die bestehende Charthistorie
+* Korrektur:    Geplante Braustarts verwenden wieder die Controllerfreigaben; zukünftige Termine bleiben nach Neustart erhalten, abgelaufene Termine werden nicht unbegrenzt nachgeholt
+* Korrektur:    Kesselsollwerte behalten ihre Nachkommastellen beim Speichern, Konfigurationsabruf und Neustart
+* Korrektur:    Konfigurationsspeicherung ersetzt die vorhandene Datei per LittleFS-Rename ohne vorheriges Löschen der gültigen Konfiguration
+* Korrektur:    IDS-Konfigurationsänderungen geben den RMT-Kanal und seinen Initialisierungscache gemeinsam frei und setzen den Relaiszustand zurück. Telegramme, Signalpegel, Pulszeiten, Sendeaufruf und Sendetakt-Parameter bleiben unverändert
+* Korrektur:    Webhook-Zielwechsel schalten das bisherige Ziel ab; ausstehende AUS-Aufträge bleiben auch nach Umkonfiguration erhalten und werden bei Transport- oder HTTP-Fehlern wiederholt
+* Korrektur:    Volle Webhook-Auftragsspeicher verwerfen keine fremden AUS-Aufträge; Neustarts warten auf die HTTP-Bestätigung der Abschaltung und sperren währenddessen weitere EIN-Aufträge
+* Korrektur:    Beim Aktorlöschen bleiben Laufzustand und GPIO-Reservierung nachrückender Aktoren erhalten; GPIO-Konflikte mit Kesseln, Sensoren und Systemfunktionen werden bei Konfiguration und Profilübernahme abgewiesen
+* Korrektur:    Digitale Aktor-PWM behält ihre 5-Sekunden-Periode auch bei verspäteten Task-Aufrufen und verarbeitet alle 5-Prozent-Stufen; analoge PWM verwendet die tatsächlich angeforderte Planleistung
+* Korrektur:    GPIO-Relais-Kessel werden beim Deaktivieren sowie vor Pin-, Gerätetyp- oder Polaritätswechsel mit der bisherigen Konfiguration abgeschaltet; alte Pins bleiben nicht aktiv zurück
+* Korrektur:    Relais-Hardwarewechsel über Einstellungen oder Profile stoppen die Regelung; reine PID- und Namensänderungen bei unveränderter Hardware unterbrechen sie nicht
+* Korrektur:    Kesselprofile übernehmen die Invertierung einheitlich aus gespeicherten 0/1-Werten und JSON-Bools
+* Korrektur:    Ein dauerhaft nicht fertiger DS18B20-Bus verhindert nicht mehr die PT-Auswertung und Sensorfehlerbehandlung; eine erneute Adresssuche aktualisiert die Geräteanzahl
+* Korrektur:    Sensoren ohne gültige PT-Zuordnung melden einen Fehler; PT-Dauerfehler werden durch einen überlaufenden Fehlerzähler nicht mehr als behoben gemeldet
+* Korrektur:    Sensorwechsel verwerfen alte Mess- und Filterzustände; beim Löschen bleibt die Auflösung nachrückender DS18B20-Sensoren erhalten
+* Korrektur:    Kalibrierung läuft im Hintergrund mit 20 unterschiedlichen gültigen Messungen; deaktivierte, fehlerhafte und simulierte Sensoren sowie parallele Kalibrierungen werden abgewiesen
+* Korrektur:    Sensorfehler und Konfigurationsänderungen brechen eine laufende Kalibrierung ohne Übernahme neuer Offsets ab; das Webinterface bleibt während der Messung bedienbar
+* Korrektur:    Sensorlisten unterscheiden deaktivierte Sensoren und sämtliche PT-Fehlercodes; Kalibrierungsfortschritt überschreibt nicht mehr die aktive Anzeige im Webinterface
+* Korrektur:    SPI-Fehler bleiben innerhalb eines MAX31865-Messzyklus erhalten; eine Neuinitialisierung verwirft den vorherigen Messzyklus
+
+Version 1.65.4
+
+* Korrektur:    Die Enzymlimiter-Option bleibt nach Neustart erhalten; bestehende Konfigurationen mit 0/1 und Backups mit Bool-Werten werden korrekt geladen
+* Korrektur:    Abgelaufene Rasttimer werden bei voller Ereignisqueue erneut zugestellt; alte Timerereignisse beenden nach Schrittwechsel oder Pause/Fortsetzen keine andere Rast
+* Korrektur:    Per Next ausgewählte Aktorbefehle werden mit Play ausgeführt; bereits ausgeführte Sofortbefehle einschließlich SUD/HLT lassen sich mit Play bestätigen
+* Korrektur:    Lange Rastzeiten bleiben über die 32-Bit-Zeitgrenze hinweg gültig, auch beim Fortsetzen im Maisch- und Fermenterprozess
+* Korrektur:    Der optionale Enzymlimiter übernimmt das gespeicherte Autotune-R auch nach Neustart
+* Korrektur:    Das konfigurierte Enzymfenster bleibt nach Abschluss oder Abbruch von AutoTune ohne erneutes Laden des Plans verfügbar
+* Korrektur:    Ein erreichtes Kochtemperatur-Gate gilt nur für denselben Kessel und startet keinen kalten anderen Kessel vorzeitig
+* Korrektur:    Ausgeschaltete Kessel bleiben auch bei Sensorfehlern ausgeschaltet; die konfigurierte Fehlerleistung gilt nur für aktive Regelung
+* Korrektur:    Gespeicherte Pausen lassen sich nach Neustart fortsetzen und behalten ihre Restzeit
+* Korrektur:    Pause und Fortsetzen nach einem Wiederanlauf verlängern die Rastzeit nicht unbeabsichtigt
+* Korrektur:    Pause und Fortsetzen heben einen Sensorfehler-Hold des Rasttimers nicht auf
 
 Version 1.65.3
 
