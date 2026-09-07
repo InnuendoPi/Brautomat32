@@ -38,13 +38,23 @@ This is useful if you need to adjust mash steps while heating.
 
 Pause time is added to total rest duration.
 
+After a reboot, a saved pause can be released again. Its remaining time is preserved during the interruption. Pausing and resuming a restored running rest also adds no remaining time unless the planned rest duration is changed.
+
+A rest timer held by a sensor fault remains stopped independently of the user pause. Releasing the pause does not acknowledge this sensor hold or restart the timer.
+
+When editing during pause, retain the active step with its unique, unchanged name. Reordering preserves that step as the active rest and keeps its remaining time. Switching to the fermenter view requires stopping the process first. If saving is rejected, the updated plan editor retains your input.
+
 ## Previous button
 
 Jumps to previous mash step. If process was stopped, the current rest timer is reset and starts again.
 
 ## Next button
 
-Jumps to next mash step. If current step is the last one, mash process ends.
+Jumps to the next mash step. Next is disabled on the last step.
+
+A pure actor command selected with Next is executed by Play. With Autonext disabled, another Play click confirms the executed command. Already executed SUD/HLT commands with a target temperature and zero duration are also confirmed with Play.
+
+Once the boiling temperature gate is reached, it remains valid for subsequent boiling steps in the same kettle. When switching to another kettle, that kettle must reach its own target temperature.
 
 ## Collapse button
 
@@ -53,3 +63,7 @@ Shows/hides the mash plan table.
 ![mashplan](../.gitbook/assets/Maischeplan-anzeigen.jpg)
 
 The collapse button remains available during brewing. Edit buttons are hidden once brewing starts.
+
+## Scheduled brewing start
+
+A future start time survives a reboot. The schedule issues one start request using the same checks as Power. A mash view and plan must be selected; another active operating mode or a selected AutoTune configuration prevents the scheduled start. A schedule missed by at least one minute is discarded. A rejected schedule is not retried automatically later.

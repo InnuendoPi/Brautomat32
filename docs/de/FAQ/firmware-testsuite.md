@@ -4,42 +4,37 @@ Die Anzeigen in [README.de.md](../../../readme.de.md) und
 [README.md](../../../readme.md) zeigen den aktuellen Stand der öffentlichen
 Firmware-Testsuite.
 
-Der zuletzt veröffentlichte Lauf der `complete-suite` vom 12. Juli 2026
-(Firmware `1.65.0`) umfasst:
+Der zuletzt dokumentierte Lauf der `complete-suite` vom 7. September 2026
+(Firmwarekennung `1.65.4 Develop`) umfasst:
 
 - `74` Suite-Tests
-- `1549` zugrunde liegende Einzelprüfungen
+- `1556` zugrunde liegende Einzelprüfungen
 
-Alle `74` Tests waren erfolgreich; es gab weder Fehler noch übersprungene
-Tests. Die vollständigen Ergebnisse des veröffentlichten Laufs stehen in
+Alle `74` Tests waren erfolgreich; es gab keine Warnungen, Fehler oder
+übersprungenen Tests. Die vollständigen Ergebnisse dieses Laufs stehen in
 [TEST-RESULTS.md](../../../TEST-RESULTS.md).
 
-Die Anzeige fasst vier Werte zusammen:
+Der Report unterscheidet:
 
 - `Tests`: Anzahl der enthaltenen Suite-Tests
 - `erfolgreich`: Anzahl erfolgreich abgeschlossener Suite-Tests
 - `fehlerhaft`: Anzahl Suite-Tests mit echtem Fehler
-- `skip`: Anzahl bewusst ausgelassener Suite-Tests
+- `warn`: Anzahl der Tests mit Warnungen
+- `skip`: Anzahl ausgelassener Suite-Tests
 
-Ein reiner Transport-, Browser- oder Runner-Timeout wird als `skip` erfasst
-und nicht als Firmwarefehler gewertet. Fachliche Fristverletzungen der FSM,
-Sensorik oder Aktorik bleiben dagegen echte Fehler.
+Ein Timeout allein beweist keinen Firmwarefehler. Er ist aber auch kein
+bestandener Test. Maßgeblich sind die Einzelergebnisse und die dokumentierte
+Einordnung des jeweiligen Laufs; Timeouts werden nicht pauschal ausgeblendet.
 
-Eine grüne Anzeige bedeutet: Die aktuelle öffentliche Firmware-Testsuite ist
-ohne echte Fehler durchgelaufen. Gelbe Hinweise stehen für grenzwertige, aber
-nicht defekte Ergebnisse.
+Die 74 bestandenen Tests belegen die geprüften Abläufe. Sie ersetzen keine
+physische Heiz-, Aktor- oder MAX31865-Prüfung und keinen Langzeittest.
+Zusätzliche Grenzlastprüfungen werden getrennt bewertet.
 
 ## Was wird geprüft?
 
 Die öffentliche Firmware-Testsuite deckt die wichtigsten Kernfunktionen der
 Firmware ab:
 
-- Release-Readiness vor einer Veröffentlichung
-- Web-Dateien für LittleFS
-- Firmware-Build und LittleFS-Build
-- Paketierung der freizugebenden Artefakte
-- Flash von Firmware und LittleFS
-- Backup und Restore nach dem LittleFS-Flash
 - Firmware- und Weboberflächen-Selbstupdate
 - Wiederherstellung eines sauberen Ausgangszustands
 - Browser-UI-Core für Reload, SSE-Reconnect, Dashboard und wichtige Dialoge
@@ -114,7 +109,10 @@ Die öffentliche Firmware-Testsuite zeigt:
 
 ## Testbereiche
 
-### Release-Readiness
+### Separate Release-Vorbereitung
+
+Diese Schritte gehören zur Auslieferungsvorbereitung. Sie sind nicht durch die
+74 Testergebnisse allein als vollständig ausgeführt nachgewiesen:
 
 - Web-Dateien werden minifiziert, komprimiert und für LittleFS vorbereitet.
 - Firmware und LittleFS lassen sich sauber bauen.

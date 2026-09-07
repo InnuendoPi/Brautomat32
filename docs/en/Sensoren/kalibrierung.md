@@ -16,8 +16,7 @@ Use a calibrated reference thermometer.
 
 Brautomat then applies this correction to future measurements.
 
-During calibration, the sensor is evaluated with increased measurement precision.
-Each calibration run records an automatic sample set of about 20 values (roughly 20 seconds), and the web UI shows progress and the running average.
+Each calibration run collects 20 distinct valid measurements before offset correction. This takes roughly 20 seconds at the usual measurement interval and longer at slower intervals. Measurement resolution and filtering remain unchanged. The web UI stays responsive and reports progress and the running average. Disabled or faulty sensors are rejected. A sensor fault or a change to the sensor configuration cancels the run without applying new offsets. Only one calibration can run at a time.
 
 In many setups, a 1-point calibration in an ice bath is already sufficient because DS18B20 offsets are often close to linear.
 
@@ -57,25 +56,7 @@ If using 40°C as upper calibration point:
 
 ## Sensor calibration log file
 
-A log file is written for each calibration. Example:
-
-```text
-13:22:37 Sensor calibration started
-*** Sensor Name: Sensor IDS2
-*** Model: DS18B20
-*** Address: 2827c59d0d0000b1
-*** Resolution: 12bit
-*** Timeout: 750ms
-------------------------------------------------------
-ID Target Actual Diff Offset
-#01 24.6000 24.0000 -0.6000 0.6000
-
- - Sensor values 2 to 59 accordingly
-
-#60 24.6000 25.1875 0.5875 -0.6083
-------------------------------------------------------
-Temperature of offset #1: 24.6000
-Average after 60 measurements: 25.2083
-Offset #1: -0.6083
-=========================================
-```
+A log file is written for each calibration. It contains the individual readings
+and a final record with completion status, sample count, average, spread and
+drift. A successful run uses 20 distinct valid readings. An aborted run does not
+apply new offsets. The offset is the reference temperature minus the average.

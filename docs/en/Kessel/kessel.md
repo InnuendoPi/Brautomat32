@@ -21,6 +21,12 @@ All kettle parameters are described in:
 * [Basic setup](../Grundeinrichtung/info.md)
 * [Kettle parameters](../Parameter/parameter-kessel.md)
 
+For a kettle connected through a relay GPIO, changing the pin, device type,
+or inversion stops temperature control and switches off the previous output
+before applying the change. This also applies when loading a profile.
+Restart temperature control afterwards if needed. Changes to PID values or
+the name alone do not stop control when the hardware configuration stays the same.
+
 ## Kettle Control Commands
 
 A control command is detected by a colon in the step name:
@@ -111,6 +117,11 @@ Practical principle in multi-kettle setups:
 * run NACHGUSS on kettle 2/3
 
 ## Webhook
+
+Changing the webhook URL or switching command stops regulation and switches
+off the previous target first. This also applies when loading a profile.
+See [Actuators: Webhook](../Aktoren/act.md#webhook) for OFF retries, a full
+request store and waiting for acknowledgement before reboot.
 
 To use webhook controls:
 

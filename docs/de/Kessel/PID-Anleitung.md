@@ -23,9 +23,10 @@ Verwende nicht das maximale Kesselvolumen.
 
 ## 2. AutoTune: lass den Brautomat arbeiten
 
-Der AutoTune-Modus liefert in ca. 5 Minuten gute Startwerte.
-Neben `P`, `I` und `D` werden auch `SampleTime` und `PowerSampleTime`
-ermittelt.
+AutoTune ist ein Konfigurationsschritt bei der Einrichtung. Es ermittelt die
+Totzeit `L` und die Steigrate `R`; daraus werden Startwerte für die Regelung
+und die Zeitparameter abgeleitet. Die gespeicherten Werte stehen anschließend
+für den normalen Betrieb zur Verfügung. Die Dauer hängt vom Aufheizverlauf ab.
 
 Wenn du diese Zeiten später anpasst, achte darauf:
 `PowerSampleTime` sollte ein Vielfaches von `SampleTime` sein.
@@ -93,6 +94,10 @@ Wenn du kein Rührwerk hast, rühre während des Tests regelmäßig um.
 ---
 
 ## Praxishilfe Brautag
+
+Der optionale Enzymlimiter verwendet die gespeicherte Steigrate R aus der Autotune-Einrichtung auch nach einem Neustart. Er greift nur bei aktivierter Option innerhalb des konfigurierten Temperaturfensters; während Autotune bleibt er deaktiviert.
+
+Nach Abschluss oder Abbruch von Autotune bleibt das konfigurierte Fenster verfügbar. Der nächste PID-Start verwendet wieder die eingestellte Limiter-Option; ein erneutes Laden des Plans ist dafür nicht erforderlich.
 
 Für konkrete Entscheidungen während des Brauens nutze den
 [Praxisleitfaden Brautag](../Autotune-pid/praxisleitfaden-brautag.md).

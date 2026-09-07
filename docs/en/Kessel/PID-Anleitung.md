@@ -17,8 +17,10 @@ Do not use full maximum kettle volume if you normally brew smaller batches.
 
 ## 2. Run AutoTune first
 
-AutoTune provides strong starting values in about 5 minutes.
-It also determines `SampleTime` and `PowerSampleTime`.
+AutoTune is a configuration step during setup. It measures dead time `L` and
+heating rate `R`, from which initial controller settings and timing parameters
+are derived. The saved values are then available for normal operation. The
+duration depends on the heating response.
 
 Keep this rule:
 
@@ -69,5 +71,9 @@ If your setup behaves as PI control, keep `Kd = 0`.
 Repeat tests after each relevant change. If no agitator is present, stir occasionally during tests.
 
 ## Brew-day decision aid
+
+The optional enzyme limiter uses the rise rate R saved during Autotune setup, including after a reboot. It acts only when enabled and within the configured temperature window; it remains disabled during Autotune.
+
+After Autotune completes or is aborted, the configured window remains available. The next PID start applies the configured limiter option again; reloading the plan is not required.
 
 For concrete brew-day decisions, use the [Brew-day quick guide](../Autotune-pid/brew-day-quick-guide.md).

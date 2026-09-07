@@ -152,6 +152,12 @@ Der ESP32-Speicher ist in Firmware und Dateisystem getrennt.
 Bei einem Update wird die Firmware neu installiert.
 Im Dateisystem werden je nach Update einzelne Dateien ersetzt.
 
+Firmware und Weboberfläche müssen zum selben Versionsstand gehören. Nach einem
+Update die geöffneten Brautomat-Seiten neu laden. Zeigt der Browser weiterhin
+die alte Oberfläche, einmal ohne Browsercache neu laden. Falls beim
+Fermenterplan das Minutenfeld fehlt oder das Speichern wegen einer veralteten
+Oberfläche abgewiesen wird, die passenden Webdateien des Updates prüfen.
+
 ### Wichtig bei Update von 1.59 (oder älter) auf 1.60
 
 Beim Umstieg gelten folgende Punkte:

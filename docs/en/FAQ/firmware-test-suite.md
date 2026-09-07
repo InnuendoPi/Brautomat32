@@ -4,40 +4,35 @@ The indicators in [README.md](../../../readme.md) and
 [README.de.md](../../../readme.de.md) show the current state of the public
 firmware test suite.
 
-The latest published `complete-suite` run, on 12 July 2026 with firmware
-`1.65.0`, includes:
+The latest documented `complete-suite` run, on 7 September 2026 with firmware
+identifier `1.65.4 Develop`, includes:
 
 - `74` suite tests
-- `1549` underlying checks
+- `1556` underlying checks
 
-All `74` tests passed; none failed or was skipped. The complete published run
+All `74` tests passed, with no warnings, failures or skipped tests. The complete run
 is listed in [TEST-RESULTS.md](../../../TEST-RESULTS.md).
 
-The indicator summarizes four values:
+The report distinguishes:
 
 - `tests`: number of included suite tests
 - `pass`: number of successfully completed suite tests
 - `fail`: number of suite tests with a real failure
-- `skip`: number of intentionally skipped suite tests
+- `warn`: number of tests with warnings
+- `skip`: number of skipped suite tests
 
-A plain transport, browser, or runner timeout is recorded as `skip` and is not
-treated as a firmware failure. Functional FSM, sensor, or actuator deadline
-violations remain real failures.
+A timeout alone does not prove a firmware defect, but it is not a passed test
+either. Use the individual results and the documented assessment for that run;
+timeouts are not automatically disregarded.
 
-A green indicator means that the current public firmware test suite completed
-without real failures. Yellow notes indicate borderline but not broken
-results.
+The 74 passed tests demonstrate the tested flows. They do not replace physical
+heating, actuator or MAX31865 verification, or long-term testing. Additional
+stress tests are assessed separately.
 
 ## What is tested?
 
 The public firmware test suite covers the main core functions of the firmware:
 
-- release readiness before a publication
-- web assets prepared for LittleFS
-- firmware build and LittleFS build
-- packaging of the release artifacts
-- firmware flash and LittleFS flash
-- backup and restore after LittleFS flash
 - firmware and web interface self-update
 - restoring a clean baseline state
 - browser UI core for reload, SSE reconnect, dashboard, and key dialogs
@@ -107,7 +102,10 @@ The public firmware test suite shows:
 
 ## Test areas
 
-### Release readiness
+### Separate release preparation
+
+These steps belong to release preparation. The 74 test results alone do not
+prove that all of them have been performed:
 
 - Web files are minified, compressed, and prepared for LittleFS.
 - Firmware and LittleFS can be built cleanly.

@@ -4,7 +4,7 @@ Sensoren vom Typ Dallas DS18B20 weisen teilweise Abweichungen von der tatsächli
 
 Mit Hilfe einer 2-Punkt-Kalibrierung können Abweichungen korrigiert werden. Die Kalibrierung durch den Brautomat ist eine lineare Korrektur. Für die Kalibrierung der Sensoren ist ein geeichtes Thermometer erforderlich. Der Braukessel wird mit einer typischen Menge Wasser gefüllt und auf 40°C aufgeheizt. Die Differenz zwischen dem Sensorwert und dem geeichten Thermometer wird in den Parameter "Offset 1 \[40°C]" eingegeben. Dieser Vorgang wird bei 78°C wiederholt und die Differenz in den Parameter "Offset 2 \[78°C]" eingetragen. Zukünftig werden alle Messwerte des Sensors mit dieser Korrektur ausgegeben.
 
-Für die Kalibrierung wird der Temperatursensor mit erhöhter Messgenauigkeit ausgewertet. Eine Kalibrierung über das Webinterface besteht aus einer automatischen Stichprobe von etwa 20 Messwerten mit Laufzeit von ungefähr 20 Sekunden. Währenddessen zeigt das Webinterface den Fortschritt und den laufenden Mittelwert an. Das Ergebnis der Temperaturmessung ist der Mittelwert dieser Messwerte. Ein Offset ist die Differenz zwischen der tatsächlichen Temperatur und dem Mittelwert.
+Eine Kalibrierung über das Webinterface erfasst 20 unterschiedliche gültige Messwerte vor der Offset-Korrektur. Beim üblichen Messtakt dauert das ungefähr 20 Sekunden; bei langsameren Sensorintervallen entsprechend länger. Die Messauflösung und Filterung bleiben unverändert. Währenddessen bleibt das Webinterface bedienbar und zeigt den Fortschritt und den laufenden Mittelwert an. Deaktivierte oder fehlerhafte Sensoren werden abgewiesen. Bei Sensorfehlern oder einer Änderung der Sensorkonfiguration bricht der Lauf ohne Übernahme neuer Offsets ab. Es kann nur eine Kalibrierung gleichzeitig laufen. Ein Offset ist die Differenz zwischen der tatsächlichen Temperatur und dem ermittelten Mittelwert.
 
 In vielen Fällen ist eine 1-Punkt-Kalibrierung im Eisbad ausreichend, da der Offset der Sensoren DS18B20 in der Regel konstant ist.
 
@@ -23,25 +23,9 @@ Ein Fieberthermometer ist ein gut geeignetes Referenzthermometer. Der obere Mess
 
 ## Logdatei Sensorkalibrierung
 
-Bei jeder Kalibrierung wird ein Logfile geschrieben. Beispiel:
-
-```text
-13:22:37 Sensor Kalibrierung gestartet
-*** Sensor Name: Sensor IDS2
-*** Modell: DS18B20
-*** Adresse: 2827c59d0d0000b1
-*** Resolution: 12bit
-*** Timeout: 750ms
------------------------------------------
-ID Soll Ist Diff Offset
-#01 24.6000 24.0000 -0.6000 0.6000
-
- - Sensorwerte 2 bis 59 sinngemäß
-
-#60 24.6000 25.1875 0.5875 -0.6083
------------------------------------------
-Temperatur von Offset #1: 24.6000
-Mittelwert nach 60 Messungen: 25.2083
-Offset #1: -0.6083
-=========================================
-```
+Bei jeder Kalibrierung wird ein Logfile geschrieben. Es enthält die einzelnen
+Messungen und am Ende den Abschlussstatus, die Anzahl der erfassten Messwerte,
+den Mittelwert sowie Angaben zur Streuung und Drift. Ein erfolgreicher Lauf
+verwendet 20 unterschiedliche gültige Messwerte. Bei einem Abbruch werden keine
+neuen Offsets übernommen. Der Offset ergibt sich aus Referenztemperatur minus
+Mittelwert.

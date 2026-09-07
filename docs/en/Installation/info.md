@@ -147,6 +147,12 @@ The ESP memory is split into firmware and filesystem.
 During normal operation, settings/recipes live in the filesystem.
 During updates, firmware is replaced and filesystem files can be updated.
 
+Firmware and web interface must belong to the same version. Reload open
+Brautomat pages after an update. If the browser still shows the old interface,
+reload once without the browser cache. If the fermentation plan has no minutes
+field or saving is rejected because the interface is outdated, check that the
+matching web files from the update are installed.
+
 ### Important when upgrading from 1.59 (or older) to 1.60
 
 * `config.txt` is saved as `config.old.txt`

@@ -11,11 +11,27 @@ Für Relais und SSRs wird die digitale PWM verwendet. Die Leistung wird in Proze
 
 Für analoges PWM wird ein festes PWM-Signal mit 1000 Hz verwendet. Dieser Modus ist für geeignete PWM-Eingänge gedacht, nicht für das Takten von Relais.
 
+Numerische Aktorbefehle im Maischeplan geben die aktuelle PWM-Leistung vor.
+Der konfigurierte PWM-Wert bleibt der Einschaltwert für die manuelle Bedienung.
+Beim Löschen eines Aktors behalten nachrückende Aktoren ihren Laufzustand.
+Bereits durch Kessel, Sensoren oder Systemfunktionen belegte GPIOs können
+nicht zusätzlich einem Aktor zugewiesen werden.
+
 Die Leistung kann während des Betriebs mit den beiden Schaltflächen in der Aktorentabelle geändert werden. Die Schaltflächen zum Ändern der Leistung sind für jeden Aktor sichtbar, wenn PWM für den Aktor aktiviert wurde. Digitale PWM ist für Relais oder SSRs geeignet. Sie ist nicht als direkte Motorsteuerung für Rührwerke gedacht.
 
 ![Übersicht Aktoren](../.gitbook/assets/aktoren.jpg)
 
 ## Webhook
+
+Beim Bearbeiten oder Löschen wird das bisherige Webhook-Ziel abgeschaltet.
+AUS-Aufträge werden bei Verbindungsfehlern und HTTP-Fehlerstatus wiederholt.
+Solange AUS nicht mit HTTP 2xx bestätigt ist, wird für dasselbe Ziel kein
+neuer EIN-Auftrag angenommen. Fehlgeschlagene EIN-Aufträge werden nicht
+automatisch wiederholt. Eine HTTP-Bestätigung ist kein physischer Schalt-Rückkanal.
+Ein Neustart wartet auf die Bestätigung ausstehender AUS-Aufträge und kann
+deshalb bei einem dauerhaft unerreichbaren Webhook-Ziel ausstehen bleiben.
+Ist der Auftragsspeicher voll, wird eine Zieländerung abgewiesen, anstatt
+den AUS-Auftrag des bisherigen Ziels zu verlieren.
 
 Der Parameter Aktor GPIO muss auf "-" eingestellt werden, damit die Webhook-Elemente im Webinterface angezeigt werden. Zusätzlich werden die Webhook-URL und das Schaltkommando benötigt:
 

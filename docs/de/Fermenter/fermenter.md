@@ -8,6 +8,10 @@ Die Verarbeitung der Schritte hat einen wichtigen Unterschied:
 
 Der erste Schritt im Gärplan wird sofort mit dem Prozessstart gestartet. Alle folgenden Schritte im Gärplan werden sofort gestartet, unabhängig von der Ist-Temperatur.
 
+Nach einem manuellen Schrittwechsel mit Next startet einmaliges Play den gewählten Schritt. Zum Bearbeiten eines laufenden Gärplans zuerst pausieren. Beim Umordnen bleiben der aktive Schritt und seine Restzeit erhalten. Sein Name muss vorher und nachher eindeutig sein; Löschen oder Umbenennen dieses Schritts während des Laufs wird abgewiesen.
+
+Die Schrittdauer lässt sich in Tagen, Stunden und Minuten eingeben. Speichert ein anderer Browser einen geänderten Plan, bleibt ein offener Entwurf erhalten. Ein veralteter Entwurf wird beim Speichern abgewiesen; mit Neuladen den aktuellen Plan übernehmen und die gewünschten Änderungen erneut eintragen.
+
 Zur Einrichtung kann ein GPIO für eine Kühlung und ein GPIO für eine Heizung eingerichtet werden. Entweder die Kühlung oder die Heizung ist optional.
 
 ![Fermenter settings](/docs/img/fermenter_set.jpg)
@@ -36,3 +40,15 @@ Der Relais Schaltzyklus bestimmt, wie lange einer der Stati Kühlung, Heizung od
 ## Display
 
 Im Fermenter Modus ist die Ansicht MaischeSud (Seite 2) auszuwählen. Die Kesselübersicht und die Ansicht manuelle Steuerung sind nicht für den Fermenter Modus verwendbar.
+
+## Temperaturanzeige und Verbindung
+
+Gültige Ist- und Solltemperaturen von 0 °C und unter 0 °C werden angezeigt;
+auch -1 °C ist ein gültiger Messwert. Ungültige Werte erscheinen im Chart als
+Lücke. Ältere gespeicherte Chartverläufe können -1 °C noch als Lücke darstellen.
+Das Nextion zeigt gültige Sollwerte von 0 °C und darunter ebenfalls an.
+
+Zum Wechsel zwischen Maische- und Fermenteransicht den Prozess mit Power stoppen;
+eine Pause allein genügt nicht. Ein Browser ohne offene Änderungen übernimmt
+neu gespeicherte Fermenterpläne automatisch. Vor dem Neuladen eines veralteten
+Entwurfs die gewünschten Änderungen notieren, da Neuladen den Entwurf verwirft.

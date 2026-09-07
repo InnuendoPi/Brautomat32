@@ -17,6 +17,12 @@ Jeder Kessel kann als GGM-Induktionskochfeld oder als Relais-Gerät (einschließ
 
 Die Parameter sind in [Grundeinrichtung](../Grundeinrichtung/info.md) und [Parameter Kessel](../Parameter/parameter-kessel.md) beschrieben.
 
+Bei einem über GPIO angeschlossenen Relais-Kessel wird die Regelung vor
+einem Wechsel von Pin, Gerätetyp oder Invertierung gestoppt und der bisherige
+Ausgang ausgeschaltet. Das gilt auch beim Übernehmen eines Profils.
+Nach der Änderung muss die Regelung bei Bedarf erneut gestartet werden.
+Reine PID- oder Namensänderungen bei unveränderter Hardware stoppen sie nicht.
+
 ## Grundprinzip im Maischeplan
 
 Ohne expliziten Steuerbefehl läuft ein Maischeschritt immer auf Kessel 1 (`MAISCHE`/`IDS`).
@@ -115,6 +121,11 @@ Möglicher Ablauf:
 4. Restmaische zurückführen (`autonext` aus).
 
 ## Webhook
+
+Ein Wechsel der Webhook-URL oder des Schaltmodus stoppt die Regelung und
+schaltet zuerst das bisherige Ziel ab. Das gilt auch für Profilübernahmen.
+Die Regeln für AUS-Wiederholung, volle Auftragsspeicher und das Warten vor
+einem Neustart sind unter [Aktoren: Webhook](../Aktoren/act.md#webhook) beschrieben.
 
 Für Webhook-Steuerung:
 

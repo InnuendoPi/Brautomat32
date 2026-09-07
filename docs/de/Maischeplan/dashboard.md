@@ -37,3 +37,14 @@ Diese Ansicht ist als reduziertes Info-Terminal gedacht:
 * es wird nur das Dashboard angezeigt
 * die übrigen Menüs und Bedienbereiche des Webinterfaces bleiben ausgeblendet
 * die Ansicht eignet sich für ein separates Display mit Webbrowser, das nur den aktuellen Braustatus zeigen soll
+
+## Verbindung zum Brautomat
+
+Die Liveanzeige verwendet eine dauerhafte Verbindung zum Brautomat. Sind alle
+sechs verfügbaren Verbindungen belegt, wartet ein weiterer Browser und versucht
+es automatisch erneut. Nicht benötigte Brautomat-Tabs schließen, damit wieder
+eine Verbindung frei wird.
+
+Wenn die Oberfläche nach einem Verbindungsabbruch unvollständig geladen ist,
+die Erreichbarkeit des Geräts prüfen und die Seite erneut laden. Vorher offene
+Planeingaben sichern; nicht gespeicherte Eingaben gehen beim Neuladen verloren.

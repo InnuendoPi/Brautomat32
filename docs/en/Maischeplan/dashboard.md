@@ -37,3 +37,13 @@ This view is intended as a reduced info terminal:
 * only the dashboard is shown
 * the remaining menus and control areas of the web interface stay hidden
 * this is useful for a separate display with a web browser that should only show the current brewing status
+
+## Connection to Brautomat
+
+Live updates use a persistent connection to Brautomat. When all six available
+connections are occupied, another browser waits and retries automatically.
+Close unused Brautomat tabs to free a connection.
+
+If the interface loads incompletely after a connection interruption, check that
+the device is reachable and reload the page. Preserve any unsaved plan edits
+first; reloading discards unsaved input.
