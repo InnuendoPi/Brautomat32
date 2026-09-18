@@ -609,6 +609,7 @@
 "MULTI_DEVICE_ONLINE": "Verbunden",
 "MULTI_DEVICE_OFFLINE": "Offline",
 "DASH_FORECAST_ASSUMPTION": "Schätzung ab jetzt, ohne zusätzliche manuelle Wartezeit",
+"MULTI_FERM_SINGLE_ONLY": "Fermenterplan nur in SingleDevice möglich. Für MultiDevice bitte Maischeplan auswählen.",
 "MULTI_FORGET": "Ausgefallenen Worker entfernen",
 "MULTI_FORGET_CONFIRM": "Worker dauerhaft entfernen? Nur bestätigen, wenn das Gerät und seine angeschlossenen Lasten sicher außer Betrieb sind. Der Master gibt seine offenen Aufträge auf. Das ist keine Ausschaltbestätigung. Ein laufender oder pausierter Plan muss zuerst beendet werden.",
 "MULTI_FORGET_DONE": "Worker am Master entfernt. Sein Ausgangszustand ist weiterhin unbekannt. Zur erneuten Verwendung das alte Gerät bewusst neu zuordnen.",
