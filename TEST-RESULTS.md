@@ -1,24 +1,20 @@
 # Firmware Test Results
 
-Latest completed firmware complete-suite result:
+Current status for the public firmware complete suite:
 
 - Suite: `complete-suite`
-- Firmware version: `1.65.4 Develop`
+- Firmware version: `1.67.3`
 - Suite tests: `74`
-- Underlying checks: `1556`
-- Test date: `2026-09-07`
-- Test time: `09:28:40 UTC`
-- Test duration: `48m 38s`
-- Pass: `74`
-- Warn: `0`
+- Underlying checks: `1562`
+- Test date: `2026-09-18`
+- Test time: `13:14:54 UTC`
+- Test duration: `49m 26s`
+- Pass: `72`
 - Fail: `0`
 - Skip: `0`
+- Warn: `2`
 
-Restore and cleanup passed; the final snapshot shows IDLE with power off.
-The separate cold-browser stress recovery remains outside this suite result.
-No physical kettle, actuator or MAX31865 verification is claimed.
-
-## Coverage in this run
+## Coverage in this published run
 
 - Configuration and backup
 - System update
@@ -35,8 +31,8 @@ No physical kettle, actuator or MAX31865 verification is claimed.
 
 ## Scope
 
-This file summarizes the latest completed 74-test
-complete-suite validation.
+This file summarizes the latest completed public 74-test
+complete-suite run.
 It also shows the total number of checks executed inside it.
 
 Not included in this count:
@@ -46,6 +42,17 @@ Not included in this count:
 - Enduser-specific config, backup, and recipe checks
 - Real hardware and kettle verification runs
 
+## Notes
+
+### Warn
+
+The following tests completed with warnings:
+
+- `Web interface reload core`
+  Warning: 8324ms (warn 6000ms, fail 30000ms); GET http://brautomat.local/reqKettle?id=0 :: net::ERR_ABORTED | GET http://brautomat.local/reqKettle?id=1 :: net::ERR_ABORTED | GET http://brautomat.local/reqKettle?id=0 :: net::ERR_ABORTED | GET http://brautomat.local/reqKettle?id=1 :: net::ERR_ABORTED
+- `Web interface reload request and event budget`
+  Warning: GET http://brautomat.local/reqKettle?id=0 :: net::ERR_ABORTED | GET http://brautomat.local/reqKettle?id=1 :: net::ERR_ABORTED
+
 ## Results
 
 | # | Test | Result |
@@ -53,13 +60,13 @@ Not included in this count:
 | 1 | Current testdevice full backup | PASS |
 | 2 | Firmware and web interface self-update | PASS |
 | 3 | Restore known baseline test state | PASS |
-| 4 | Web interface reload core | PASS |
+| 4 | Web interface reload core | WARN |
 | 5 | Web interface dashboard core | PASS |
 | 6 | Web interface mash/fermenter view switch | PASS |
 | 7 | Web interface system save and reload | PASS |
 | 8 | Web interface SSE reconnect stability | PASS |
 | 9 | Web interface modal repeat stability | PASS |
-| 10 | Web interface reload request and event budget | PASS |
+| 10 | Web interface reload request and event budget | WARN |
 | 11 | Web interface induction modal | PASS |
 | 12 | Web interface HLT modal | PASS |
 | 13 | Web interface sud kettle modal | PASS |
