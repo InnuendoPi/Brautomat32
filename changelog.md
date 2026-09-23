@@ -1,7 +1,7 @@
 ﻿# Changelog
 
 ESP32 Arduino 3.3.12 ESP-IDF v5.5.5\
-VSCode 1.135 pioarduino IDE 1.4.4\
+VSCode 1.139 pioarduino IDE 1.4.4\
 InnuAPID AutoTune PID lib 1.10.19\
 InnuTask lib 1.10.19\
 InnuNextion Display lib 0.9\
@@ -14,7 +14,6 @@ InnuFramework CSS/JS bootstrap 5.3.8
 Version 1.66.0
 
 * Korrektur:    Sprachwechsel prüft und lädt die Sprachdatei vor dem Speichern; Ladefehler werden angezeigt, Portugiesisch korrekt zugeordnet und weitere Meldungen übersetzt. Dateimanager verwendet einheitlich englische Schaltflächen.
-
 * Korrektur:    WebUpdate und automatisches Nachladen von Sprachdateien sperren Version 1.67 und neuer wegen des geänderten Partitionslayouts; bei ungeklärter Zielversion wird abgebrochen, Firmware und Webdateien stammen aus demselben geprüften Stand
 * Korrektur:    Webdateien, Editor und große JSON-Antworten verwenden einen begrenzten HTTP-Sender; Teilübertragungen werden fortgesetzt und Wartezeit auf den Sendeplatz zählt nicht als Übertragungsstillstand
 * Korrektur:    SSE-Aufbau wird vor Taskstart synchronisiert; Dokumente werden vor dem Transport freigegeben und zurückgestellte Zustandsmeldungen aus dem aktuellen Zustand nachgeholt
