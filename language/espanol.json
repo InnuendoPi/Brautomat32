@@ -507,5 +507,8 @@
     "MASH_MODE": "Modo de preparación de puré",
     "TOAST_ACTERR_ID": "ID del actuador no válido",
     "TOAST_ACTERR_GPIO": "GPIO del actuador o URL del webhook no válido",
-    "TOAST_IDSERR_PID": "Configuración PID de caldera no válida"
+    "TOAST_IDSERR_PID": "Configuración PID de caldera no válida",
+    "LANG_CHANGE_FAILED": "No se pudo activar el idioma",
+    "INVALID_JSON": "JSON no válido",
+    "NO_FILE_SELECTED": "Ningún archivo seleccionado"
 }

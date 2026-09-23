@@ -37,3 +37,14 @@ This view is intended as a reduced info terminal:
 * only the dashboard is shown
 * the remaining menus and control areas of the web interface stay hidden
 * this is useful for a separate display with a web browser that should only show the current brewing status
+
+## Temperature rate and time forecast
+
+The temperature rate requires one minute of valid measurements. Gaps or sensor
+errors invalidate its basis; switched-off kettles show no rate. Boil and HLT
+temperatures refresh even at constant power.
+
+Estimated step times use the current clock, temperature, remaining timer time
+and available heating parameters. Additional manual waiting time is not included.
+Without a usable basis or with stale process data, the display shows `~--:--`.
+Live data accounts for profile changes; fermenter time displays remain unchanged.

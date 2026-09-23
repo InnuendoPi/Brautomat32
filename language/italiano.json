@@ -507,5 +507,8 @@
     "MASH_MODE": "Modalità di preparazione del mosto",
     "TOAST_ACTERR_ID": "ID attuatore non valido",
     "TOAST_ACTERR_GPIO": "GPIO dell'attuatore o URL webhook non validi",
-    "TOAST_IDSERR_PID": "Configurazione PID caldaia non valida"
+    "TOAST_IDSERR_PID": "Configurazione PID caldaia non valida",
+    "LANG_CHANGE_FAILED": "Impossibile attivare la lingua",
+    "INVALID_JSON": "JSON non valido",
+    "NO_FILE_SELECTED": "Nessun file selezionato"
 }

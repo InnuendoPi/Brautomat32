@@ -164,6 +164,15 @@ So wird eine saubere Regelung mit dem 1.60-Stand sichergestellt.
 
 ### WebUpdate
 
+Version 1.66 sperrt Webupdates auf 1.67 und neuer, weil diese ein anderes
+Partitionslayout verwenden. Das gilt auch für Webdateien und automatisch
+nachgeladene Sprachdateien sowie für Testversionen. Eine ServiceApp wird von
+dieser Firmwaregeneration nicht heruntergeladen oder installiert.
+Kann die Zielversion nicht geprüft werden, wird das Update abgebrochen.
+Firmware und zugehörige Dateien werden aus demselben geprüften Stand geladen.
+Der Wechsel auf 1.67 und neuer benötigt eine gesonderte Layoutmigration;
+ein DateiUpdate ersetzt diese Migration nicht.
+
 ![WebUpdate](/docs/img/webupdate.jpg)
 
 WebUpdate startet Brautomat mehrfach neu.

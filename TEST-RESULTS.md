@@ -3,16 +3,16 @@
 Current status for the public firmware complete suite:
 
 - Suite: `complete-suite`
-- Firmware version: `1.67.3`
+- Firmware version: `1.66.0`
 - Suite tests: `74`
 - Underlying checks: `1562`
-- Test date: `2026-09-18`
-- Test time: `13:14:54 UTC`
-- Test duration: `49m 26s`
-- Pass: `72`
+- Test date: `2026-09-23`
+- Test time: `08:27:50 UTC`
+- Test duration: `52m 31s`
+- Pass: `74`
 - Fail: `0`
 - Skip: `0`
-- Warn: `2`
+- Warn: `0`
 
 ## Coverage in this published run
 
@@ -31,9 +31,9 @@ Current status for the public firmware complete suite:
 
 ## Scope
 
-This file summarizes the latest completed public 74-test
-complete-suite run.
-It also shows the total number of checks executed inside it.
+This file consolidates the complete-suite run with the successful targeted
+retests of the two failed cases. Browser findings were accepted for publication.
+The date, duration and underlying check count refer to the original suite run.
 
 Not included in this count:
 
@@ -42,17 +42,6 @@ Not included in this count:
 - Enduser-specific config, backup, and recipe checks
 - Real hardware and kettle verification runs
 
-## Notes
-
-### Warn
-
-The following tests completed with warnings:
-
-- `Web interface reload core`
-  Warning: 8324ms (warn 6000ms, fail 30000ms); GET http://brautomat.local/reqKettle?id=0 :: net::ERR_ABORTED | GET http://brautomat.local/reqKettle?id=1 :: net::ERR_ABORTED | GET http://brautomat.local/reqKettle?id=0 :: net::ERR_ABORTED | GET http://brautomat.local/reqKettle?id=1 :: net::ERR_ABORTED
-- `Web interface reload request and event budget`
-  Warning: GET http://brautomat.local/reqKettle?id=0 :: net::ERR_ABORTED | GET http://brautomat.local/reqKettle?id=1 :: net::ERR_ABORTED
-
 ## Results
 
 | # | Test | Result |
@@ -60,13 +49,13 @@ The following tests completed with warnings:
 | 1 | Current testdevice full backup | PASS |
 | 2 | Firmware and web interface self-update | PASS |
 | 3 | Restore known baseline test state | PASS |
-| 4 | Web interface reload core | WARN |
+| 4 | Web interface reload core | PASS |
 | 5 | Web interface dashboard core | PASS |
 | 6 | Web interface mash/fermenter view switch | PASS |
 | 7 | Web interface system save and reload | PASS |
 | 8 | Web interface SSE reconnect stability | PASS |
 | 9 | Web interface modal repeat stability | PASS |
-| 10 | Web interface reload request and event budget | WARN |
+| 10 | Web interface reload request and event budget | PASS |
 | 11 | Web interface induction modal | PASS |
 | 12 | Web interface HLT modal | PASS |
 | 13 | Web interface sud kettle modal | PASS |

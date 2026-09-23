@@ -210,6 +210,27 @@ Note: Changes to recipes (import, change, rename, copy, delete) are only possibl
 | `/setFerm` | POST | Set fermentation parameters |
 | `/eraseFlash` | GET | Erase flash/configuration data. Service function with immediate effect. |
 
+### Wi-Fi credentials and offline startup
+
+`POST /setWifiCredentials` accepts `ssid`, `pass`, and optional `reboot`
+(default: `true`). With `reboot: false`, credentials are only stored;
+the current connection remains unchanged. The new settings take effect on reboot.
+The SSID must contain 1–32 bytes; leading and trailing spaces are preserved.
+An empty password selects an open network; otherwise use 8–63 bytes or a
+64-digit hexadecimal key. Invalid input returns HTTP `400`; storage failures
+return HTTP `500`.
+
+`GET /scanWifi` returns up to 16 networks sorted by signal strength. Scans wait
+while connection establishment or IP assignment is in progress. `202` means
+pending/running; previously cached results may still be included.
+
+If startup cannot connect using saved credentials, the station keeps retrying.
+The additional `Brautomat32` access point provides credential correction at
+`http://192.168.4.1`. It shuts down after the station connects and no AP clients
+remain. A saved process stays paused offline with outputs off. A later IP address
+or NTP synchronization does not resume the process; timers and kettles require
+explicit user operation.
+
 ### `/reboot`
 
 The endpoint responds with `202 Accepted` and `reboot scheduled` before restarting shortly afterwards. A client must not treat the expected subsequent disconnect as a failed restart. The WebIf therefore uses `requestDeviceReboot()` rather than the generic `apiPOST()` helper.
@@ -252,6 +273,13 @@ With an active or resumable process:
 | `/brewday/export` | GET | Exports the complete current brewday as a `brautomat-brewday-v1` JSON stream with metadata, recipe/plan snapshot, chartdots, and brewday pins. |
 | `/brewday/import` | POST | Imports a `brautomat-brewday-v1` JSON as review data into `/brewday_review.json`. Import does not overwrite configuration, the current plan, chartdots, or influence a running process. |
 | `/brewday/pins` | GET | Returns the currently server-side recorded brewday pins from `/brewday_pins.ndjson` as a JSON array. The endpoint is read-only and is used by the dashboard to render pins for existing chartdots. |
+
+Brewday import validates the complete JSON including UTF-8, the format marker
+and the `chartdots` array. A concurrent import is rejected with HTTP `409`.
+Invalid content or a failed save leaves the previous review intact.
+
+When the chart lock is busy, `/brewday/export`, `/brewday/pins`, `/getDots`
+and an otherwise permitted `/removeDots` request return HTTP `503` immediately.
 
 `/telemetry` is intended for regular logging. Intended polling intervals are about 30 s during mash mode and 60-300 s during fermenter mode.
 
@@ -560,7 +588,17 @@ Pins are recorded server-side while the normal chart writer runs, using the acti
 
 ---
 
+Web assets, the editor, and large JSON replies use a shared sender with bounded
+buffering. Partially accepted TCP data resumes on ACK/poll. Waiting responses do
+not keep a file open; waiting for the transfer slot does not count as a stalled
+transfer of their own.
+
 ## Server Sent Events (SSE)
+
+Initial state is sent progressively after the SSE client is registered. Deferred
+state notifications are coalesced and rebuilt from current state. Toasts and
+calibration events are not replayed by this mechanism. Chart data is persisted
+before handing its document to SSE.
 
 | Endpoint | Method | Description |
 | ----------- | ---------- | -------------- |

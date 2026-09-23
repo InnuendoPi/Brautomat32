@@ -507,5 +507,8 @@
     "MASH_MODE": "Režim mash brew",
     "TOAST_ACTERR_ID": "ID ovladače je neplatné",
     "TOAST_ACTERR_GPIO": "Adresa URL ovladače GPIO nebo webhooku je neplatná",
-    "TOAST_IDSERR_PID": "Neplatná konfigurace PID kotle"
+    "TOAST_IDSERR_PID": "Neplatná konfigurace PID kotle",
+    "LANG_CHANGE_FAILED": "Jazyk se nepodařilo aktivovat",
+    "INVALID_JSON": "Neplatný JSON",
+    "NO_FILE_SELECTED": "Není vybrán žádný soubor"
 }

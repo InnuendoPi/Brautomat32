@@ -157,6 +157,15 @@ This ensures temperature control behaves correctly on 1.60.
 
 ### WebUpdate
 
+Version 1.66 blocks web updates to 1.67 and newer because they use a different
+partition layout. This also applies to web assets, automatically downloaded
+language files, and development builds. This firmware generation does not
+download or install a ServiceApp.
+If the target version cannot be verified, the update is cancelled.
+Firmware and associated files are downloaded from the same verified revision.
+Moving to 1.67 or newer requires a separate layout migration;
+a FileUpdate does not replace that migration.
+
 ![WebUpdate](/docs/img/webupdate.jpg)
 
 WebUpdate restarts Brautomat multiple times.

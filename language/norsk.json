@@ -507,5 +507,8 @@
     "MASH_MODE": "Meske-modus",
     "TOAST_ACTERR_ID": "invalid actor ID",
     "TOAST_ACTERR_GPIO": "invalid actor GPIO or webhook URL",
-    "TOAST_IDSERR_PID": "invalid kettle PID configuration"
+    "TOAST_IDSERR_PID": "invalid kettle PID configuration",
+    "LANG_CHANGE_FAILED": "Kunne ikke aktivere språket",
+    "INVALID_JSON": "Ugyldig JSON",
+    "NO_FILE_SELECTED": "Ingen fil valgt"
 }

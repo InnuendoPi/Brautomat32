@@ -53,3 +53,14 @@ Shows/hides the mash plan table.
 ![mashplan](../.gitbook/assets/Maischeplan-anzeigen.jpg)
 
 The collapse button remains available during brewing. Edit buttons are hidden once brewing starts.
+
+## Immediate commands and restart recovery
+
+When a timed step without AutoNext finishes, the next step is selected.
+If it is an immediate command, Play executes it. Play acknowledges an immediate
+command without AutoNext only after that command has executed.
+
+Restart recovery does not automatically execute immediate or kettle commands.
+Saved pauses and remaining time are retained. Immediate commands have no
+persistent execution record: explicitly pressing Play may repeat a command
+that already executed before the restart.

@@ -210,6 +210,27 @@ Hinweis: Änderungen an Rezepten (Import, Wechsel, Umbenennen, Kopieren, Lösche
 | `/setFerm` | POST | Gärparameter setzen |
 | `/eraseFlash` | GET | Flash-/Konfigurationsdaten löschen. Service-Funktion mit unmittelbarer Wirkung. |
 
+### WLAN-Zugangsdaten und Offline-Start
+
+`POST /setWifiCredentials` akzeptiert `ssid`, `pass` und optional `reboot`
+(Standard: `true`). Mit `reboot: false` werden die Daten nur gespeichert;
+die laufende Verbindung bleibt bestehen. Die neue Konfiguration gilt ab Neustart.
+Die SSID muss 1–32 Bytes lang sein; führende und abschließende Leerzeichen bleiben
+erhalten. Ein leeres Passwort steht für ein offenes WLAN; sonst sind 8–63 Bytes
+oder ein 64-stelliger hexadezimaler Schlüssel zulässig. Ungültige Eingaben ergeben
+HTTP `400`, Speicherfehler HTTP `500`.
+
+`GET /scanWifi` liefert höchstens 16 Netze nach Signalstärke. Ein Scan wartet,
+während ein Verbindungsversuch oder die IP-Zuweisung läuft. `202` bedeutet
+angefordert/laufend; vorhandene Ergebnisse können dabei aus dem Cache stammen.
+
+Scheitert beim Start die Verbindung mit gespeicherten Zugangsdaten, versucht die
+Station weiter zu verbinden. Der zusätzliche AP `Brautomat32` bietet unter
+`http://192.168.4.1` die Zugangsdatenkorrektur an. Er wird nach erfolgreicher
+Verbindung und ohne angemeldete AP-Clients abgeschaltet. Ein gespeicherter Prozess
+bleibt offline pausiert, seine Ausgänge bleiben aus. Spätere IP/NTP bewirkt keine
+Prozessfortsetzung; Timer und Kessel müssen ausdrücklich bedient werden.
+
 ### `/reboot`
 
 Der Endpunkt antwortet vor dem Neustart mit `202 Accepted` und dem Text `reboot scheduled`; der Neustart folgt kurz danach. Ein Client darf den anschließenden Verbindungsabbruch nicht als fehlgeschlagenen Neustart werten. Das WebIf verwendet dafür `requestDeviceReboot()` statt des generischen `apiPOST()`-Helpers.
@@ -252,6 +273,14 @@ Bei aktivem oder wiederaufnehmbarem Prozess:
 | `/brewday/export` | GET | Exportiert den kompletten aktuellen Brautag als `brautomat-brewday-v1` JSON-Stream mit Metadaten, Rezept-/Plan-Snapshot, Chartdots und Brewday-Pins. |
 | `/brewday/import` | POST | Importiert ein `brautomat-brewday-v1` JSON als Review-Datensatz nach `/brewday_review.json`. Der Import überschreibt keine Konfiguration, keinen aktuellen Plan, keine Chartdots und beeinflusst keinen laufenden Prozess. |
 | `/brewday/pins` | GET | Liefert die aktuell serverseitig aufgezeichneten Brewday-Pins aus `/brewday_pins.ndjson` als JSON-Array. Der Endpoint ist read-only und wird vom Dashboard zur Anzeige der Pins zu vorhandenen Chartdots genutzt. |
+
+Der Brautag-Import prüft das vollständige JSON einschließlich UTF-8,
+Formatkennung und `chartdots`-Array. Während eines Imports wird ein zweiter
+Import mit HTTP `409` abgewiesen. Bei ungültigem Inhalt oder fehlgeschlagenem
+Speichern bleibt die bisherige Review erhalten.
+
+Bei belegter Chart-Sperre antworten `/brewday/export`, `/brewday/pins`,
+`/getDots` und ein zulässiger `/removeDots`-Aufruf sofort mit HTTP `503`.
 
 `/telemetry` ist für regelmäßiges Logging vorgesehen. Für Polling sind ca. 30 s im Maischebetrieb und 60-300 s im Fermenterbetrieb vorgesehen.
 
@@ -560,7 +589,17 @@ Die Pins werden serverseitig während des normalen Chart-Schreibens aus dem lauf
 
 ---
 
+Webdateien, Editor und große JSON-Antworten werden über einen gemeinsamen,
+speicherbegrenzten Sender übertragen. Teilweise angenommene TCP-Daten werden bei
+ACK/Poll fortgesetzt. Wartende Antworten halten noch keine Datei geöffnet; die
+Wartezeit auf den Sendeplatz zählt nicht als eigener Übertragungsstillstand.
+
 ## Server-Sent Events (SSE)
+
+Der Initialzustand wird nach Registrierung des SSE-Clients schrittweise gesendet.
+Zurückgestellte Zustandsmeldungen werden zusammengefasst und aus dem aktuellen
+Zustand neu erzeugt. Toasts und Kalibrierungsereignisse werden nicht durch diesen
+Mechanismus wiederholt. Chartdaten werden vor der SSE-Übergabe gespeichert.
 
 | Endpoint | Methode | Beschreibung |
 | ----------- | ---------- | -------------- |

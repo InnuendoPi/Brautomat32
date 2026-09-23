@@ -507,5 +507,8 @@
     "MASH_MODE": "Mash bryggläge",
     "TOAST_ACTERR_ID": "Ställdons-ID ogiltigt",
     "TOAST_ACTERR_GPIO": "Ställdonets GPIO eller webhook URL ogiltig",
-    "TOAST_IDSERR_PID": "Ogiltig PID-konfiguration för pannan"
+    "TOAST_IDSERR_PID": "Ogiltig PID-konfiguration för pannan",
+    "LANG_CHANGE_FAILED": "Det gick inte att aktivera språket",
+    "INVALID_JSON": "Ogiltig JSON",
+    "NO_FILE_SELECTED": "Ingen fil vald"
 }

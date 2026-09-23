@@ -1,6 +1,6 @@
 ﻿# Changelog
 
-ESP32 Arduino 3.3.11 ESP-IDF v5.5.5\
+ESP32 Arduino 3.3.12 ESP-IDF v5.5.5\
 VSCode 1.135 pioarduino IDE 1.4.4\
 InnuAPID AutoTune PID lib 1.10.19\
 InnuTask lib 1.10.19\
@@ -11,8 +11,28 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.65.5
+Version 1.66.0
 
+* Korrektur:    Sprachwechsel prüft und lädt die Sprachdatei vor dem Speichern; Ladefehler werden angezeigt, Portugiesisch korrekt zugeordnet und weitere Meldungen übersetzt. Dateimanager verwendet einheitlich englische Schaltflächen.
+
+* Korrektur:    WebUpdate und automatisches Nachladen von Sprachdateien sperren Version 1.67 und neuer wegen des geänderten Partitionslayouts; bei ungeklärter Zielversion wird abgebrochen, Firmware und Webdateien stammen aus demselben geprüften Stand
+* Korrektur:    Webdateien, Editor und große JSON-Antworten verwenden einen begrenzten HTTP-Sender; Teilübertragungen werden fortgesetzt und Wartezeit auf den Sendeplatz zählt nicht als Übertragungsstillstand
+* Korrektur:    SSE-Aufbau wird vor Taskstart synchronisiert; Dokumente werden vor dem Transport freigegeben und zurückgestellte Zustandsmeldungen aus dem aktuellen Zustand nachgeholt
+* Optimierung:  Webhook-Speicher und Task entstehen erst beim ersten gültigen Auftrag; ausstehende AUS-Aufträge bleiben auch nach Umkonfiguration erhalten
+* Korrektur:    WLAN-Verbindungsversuche, IP-Warten und Scans werden koordiniert; SSE-Bereinigung läuft außerhalb des WLAN-Callbacks
+* Korrektur:    Geprüfte WLAN-Zugangsdaten werden separat in NVS gespeichert, ohne die laufende Verbindung zu ändern; bisherige Daten, offene Netze und SSIDs mit Leerzeichen werden unterstützt
+* Korrektur:    Offline-Start initialisiert lokale Tasks und rekonstruiert gespeicherte Prozesse pausiert mit ausgeschalteten Ausgängen; Recovery-AP, späterer SNTP-Start und mDNS-Wiederholung unterstützen die Wiederverbindung
+* Korrektur:    Nach Ablauf einer Rast ohne AutoNext führt Play den folgenden Sofortbefehl aus, statt ihn zu überspringen
+* Korrektur:    Gültiges Next/Prev entfernt den Sensor-Hold des verlassenen Schritts; abgewiesene Navigation erhält den Schutz
+* Korrektur:    Wiederanlauf führt Sofort- und Kesselbefehle nicht automatisch aus; gespeicherte Pause und Restzeit bleiben erhalten
+* Korrektur:    Brautag-Import weist parallele Uploads ab und validiert vollständiges JSON, UTF-8 und Chartstruktur; fehlgeschlagene Importe erhalten die bisherige Review
+* Korrektur:    Chart-Sperre unterstützt die asynchrone Antwortlebensdauer; belegte HTTP-Lese-/Löschzugriffe werden ohne Warten abgewiesen, der Chart-Cache bleibt dabei erhalten
+* Korrektur:    KBH2-Import verändert die globalen Ein-/Abmaischoptionen nicht mehr
+* Korrektur:    Backup-Downloads übergeben den gewünschten Dateinamen URL-kodiert an den Server
+* Korrektur:    Konfigurationsaufträge protokollieren keinen zusätzlichen, unbedingten Speichererfolg
+* Korrektur:    Sud-/HLT-Temperaturen werden auch bei konstanter Heizleistung regelmäßig aktualisiert
+* Korrektur:    Lokale Steigrate und Planprognose berücksichtigen echte Messhistorie, Messlücken, aktuelle Profilparameter und Timerrestzeit; veraltete SSE-Daten und verspätete HTTP-Antworten verfälschen die Prognose nicht mehr
+* Optimierung:  Dashboard begrenzt parallele Leseanfragen und Editor liest nacheinander; Bedienbefehle bleiben unabhängig
 * Gitbook:      Deutsche und englische GitBook-Anleitungen zu AutoTune-Einrichtung, Browser-Verbindung, passenden Webdateien, Fermenteranzeigen und Kalibrierungsprotokoll aktualisiert; Testsuite-Ergebnis und Nachweisgrenzen berichtigt
 * Korrektur:    HTTP-/SSE-Speicherschutz berücksichtigt den für malloc/new nutzbaren RAM; unvollständige JSON-Dokumente werden abgewiesen, bei akutem Speichermangel wird die HTTP-Verbindung ohne weitere Antwortallokation geschlossen
 * Korrektur:    Fermenterpläne erhalten ihre Minuten im Editor, beim Anlegen neuer Schritte und im Dashboard; alte Tage-/Stunden-Anfragen ohne Minutenfeld werden vor dem Schreiben abgewiesen

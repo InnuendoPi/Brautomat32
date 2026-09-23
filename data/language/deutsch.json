@@ -507,5 +507,8 @@
     "MASH_MODE": "MaischSud Modus",
     "TOAST_ACTERR_ID": "Aktor ID ungültig",
     "TOAST_ACTERR_GPIO": "Aktor GPIO oder webhook URL ungültig",
-    "TOAST_IDSERR_PID": "Kessel PID Konfiguration ungültig"
+    "TOAST_IDSERR_PID": "Kessel PID Konfiguration ungültig",
+    "LANG_CHANGE_FAILED": "Sprache konnte nicht aktiviert werden",
+    "INVALID_JSON": "Ungültiges JSON",
+    "NO_FILE_SELECTED": "Keine Datei ausgewählt"
 }

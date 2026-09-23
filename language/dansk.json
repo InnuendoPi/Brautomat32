@@ -507,5 +507,8 @@
     "MASH_MODE": "Mash bryg tilstand",
     "TOAST_ACTERR_ID": "Aktuator-id ugyldig",
     "TOAST_ACTERR_GPIO": "Aktuator GPIO eller webhook URL ugyldig",
-    "TOAST_IDSERR_PID": "Kedel PID-konfiguration ugyldig"
+    "TOAST_IDSERR_PID": "Kedel PID-konfiguration ugyldig",
+    "LANG_CHANGE_FAILED": "Sproget kunne ikke aktiveres",
+    "INVALID_JSON": "Ugyldig JSON",
+    "NO_FILE_SELECTED": "Ingen fil valgt"
 }

@@ -37,3 +37,15 @@ Diese Ansicht ist als reduziertes Info-Terminal gedacht:
 * es wird nur das Dashboard angezeigt
 * die übrigen Menüs und Bedienbereiche des Webinterfaces bleiben ausgeblendet
 * die Ansicht eignet sich für ein separates Display mit Webbrowser, das nur den aktuellen Braustatus zeigen soll
+
+## Steigrate und Zeitprognose
+
+Die Steigrate benötigt eine Minute gültiger Messungen. Messlücken oder
+Sensorfehler verwerfen die Grundlage; ausgeschaltete Kessel zeigen keine
+Steigrate. Sud und HLT aktualisieren ihre Temperatur auch bei konstanter Leistung.
+
+Geschätzte Schrittzeiten beziehen sich auf die aktuelle Uhrzeit, Temperatur,
+Timerrestzeit und verfügbaren Aufheizparameter. Zusätzliche manuelle Wartezeit
+ist nicht enthalten. Ohne belastbare Grundlage oder bei veralteten Prozessdaten
+erscheint `~--:--`. Profilwechsel werden über Live-Daten berücksichtigt;
+Fermenter-Zeitangaben bleiben unverändert.

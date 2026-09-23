@@ -507,5 +507,8 @@
     "MASH_MODE": "Mash-brouwmodus",
     "TOAST_ACTERR_ID": "Actuator-ID ongeldig",
     "TOAST_ACTERR_GPIO": "Actuator GPIO of webhook-URL ongeldig",
-    "TOAST_IDSERR_PID": "Ketel-PID-configuratie ongeldig"
+    "TOAST_IDSERR_PID": "Ketel-PID-configuratie ongeldig",
+    "LANG_CHANGE_FAILED": "Taal kon niet worden geactiveerd",
+    "INVALID_JSON": "Ongeldige JSON",
+    "NO_FILE_SELECTED": "Geen bestand geselecteerd"
 }

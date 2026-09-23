@@ -507,5 +507,8 @@
     "MASH_MODE": "Tryb parzenia zacieru",
     "TOAST_ACTERR_ID": "Identyfikator siłownika jest nieprawidłowy",
     "TOAST_ACTERR_GPIO": "Nieprawidłowy adres URL GPIO siłownika lub webhooka",
-    "TOAST_IDSERR_PID": "Nieprawidłowa konfiguracja PID kotła"
+    "TOAST_IDSERR_PID": "Nieprawidłowa konfiguracja PID kotła",
+    "LANG_CHANGE_FAILED": "Nie udało się aktywować języka",
+    "INVALID_JSON": "Nieprawidłowy JSON",
+    "NO_FILE_SELECTED": "Nie wybrano pliku"
 }

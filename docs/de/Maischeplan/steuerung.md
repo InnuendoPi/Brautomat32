@@ -49,3 +49,14 @@ Der Collapse Button klappt die Tabelle Maischeplan ein oder aus.
 ![Maischeplan](/docs/img/Maischeplan-anzeigen.jpg)
 
 Der Collapse Button bleibt auch nach dem Braustart sichtbar. Alle Buttons zur Bearbeitung des Maischeplans werden nach Braustart ausgeblendet.
+
+## Sofortbefehle und Wiederanlauf
+
+Nach Ende einer Rast ohne AutoNext wird der folgende Schritt ausgewählt.
+Ist dieser ein Sofortbefehl, führt Play ihn aus. Erst ein bereits ausgeführter
+Sofortbefehl ohne AutoNext wird mit Play quittiert.
+
+Beim Wiederanlauf werden Sofort- und Kesselbefehle nicht automatisch ausgeführt.
+Eine gespeicherte Pause und die Restzeit bleiben erhalten. Es gibt keinen
+dauerhaften Ausführungsnachweis für Sofortbefehle: Ein ausdrückliches Play kann
+einen vor dem Neustart bereits ausgeführten Befehl wiederholen.

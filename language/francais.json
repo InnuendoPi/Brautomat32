@@ -507,5 +507,8 @@
     "MASH_MODE": "Mode brassage",
     "TOAST_ACTERR_ID": "ID de l'actionneur invalide",
     "TOAST_ACTERR_GPIO": "GPIO de l'actionneur ou URL du webhook invalide",
-    "TOAST_IDSERR_PID": "Configuration PID de la chaudière invalide"
+    "TOAST_IDSERR_PID": "Configuration PID de la chaudière invalide",
+    "LANG_CHANGE_FAILED": "Impossible d’activer la langue",
+    "INVALID_JSON": "JSON non valide",
+    "NO_FILE_SELECTED": "Aucun fichier sélectionné"
 }
