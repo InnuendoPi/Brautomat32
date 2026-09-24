@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Klar – start med ⏻",
+  "AUTOTUNE_START": "Start AutoTune",
+  "AUTOTUNE_CANCEL": "Avbryt AutoTune",
     "OK": "OK",
     "SYSTEM": "System",
     "EXPLORER": "Utforsker",
@@ -615,5 +618,8 @@
     "MULTI_FORGET_STOP": "Avslutt meskeplanen fullstendig først.",
     "MULTI_FORGET_ONLINE": "Workeren kan nås igjen. Bruk den vanlige funksjonen «Opphev tilknytning».",
     "MULTI_FORGET_ERROR": "Fjerning ikke bekreftet. Kontroller status på nytt; ved lagringsfeil forblir betjeningen sperret.",
-    "MULTI_FORGET_PENDING": "Fjerningen lagres. Betjeningen er midlertidig sperret."
+    "MULTI_FORGET_PENDING": "Fjerningen lagres. Betjeningen er midlertidig sperret.",
+    "LANG_CHANGE_FAILED": "Kunne ikke aktivere språket",
+    "INVALID_JSON": "Ugyldig JSON",
+    "NO_FILE_SELECTED": "Ingen fil valgt"
 }

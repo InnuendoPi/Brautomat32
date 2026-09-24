@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Gereed – starten met ⏻",
+  "AUTOTUNE_START": "AutoTune starten",
+  "AUTOTUNE_CANCEL": "AutoTune annuleren",
     "OK": "OK",
     "SYSTEM": "systeem",
     "EXPLORER": "Ontdekkingsreiziger",
@@ -615,5 +618,8 @@
     "MULTI_FORGET_STOP": "Beëindig eerst het maischschema volledig.",
     "MULTI_FORGET_ONLINE": "De Worker is weer bereikbaar. Gebruik de normale functie Toewijzing opheffen.",
     "MULTI_FORGET_ERROR": "Verwijdering niet bevestigd. Controleer de status opnieuw; bij een opslagfout blijft de bediening geblokkeerd.",
-    "MULTI_FORGET_PENDING": "Verwijdering wordt opgeslagen. Bediening tijdelijk geblokkeerd."
+    "MULTI_FORGET_PENDING": "Verwijdering wordt opgeslagen. Bediening tijdelijk geblokkeerd.",
+    "LANG_CHANGE_FAILED": "Taal kon niet worden geactiveerd",
+    "INVALID_JSON": "Ongeldige JSON",
+    "NO_FILE_SELECTED": "Geen bestand geselecteerd"
 }

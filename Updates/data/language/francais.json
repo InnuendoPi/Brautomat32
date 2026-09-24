@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Prêt – démarrer avec ⏻",
+  "AUTOTUNE_START": "Démarrer AutoTune",
+  "AUTOTUNE_CANCEL": "Annuler AutoTune",
     "OK": "D'ACCORD",
     "SYSTEM": "système",
     "EXPLORER": "Explorateur",
@@ -615,5 +618,8 @@
     "MULTI_FORGET_STOP": "Terminez d’abord complètement le programme d’empâtage.",
     "MULTI_FORGET_ONLINE": "Le Worker est de nouveau joignable. Utilisez la fonction habituelle « Supprimer l’association ».",
     "MULTI_FORGET_ERROR": "Retrait non confirmé. Vérifiez à nouveau l’état ; en cas d’erreur d’enregistrement, le contrôle reste bloqué.",
-    "MULTI_FORGET_PENDING": "Enregistrement du retrait en cours. Contrôle temporairement bloqué."
+    "MULTI_FORGET_PENDING": "Enregistrement du retrait en cours. Contrôle temporairement bloqué.",
+    "LANG_CHANGE_FAILED": "Impossible d’activer la langue",
+    "INVALID_JSON": "JSON non valide",
+    "NO_FILE_SELECTED": "Aucun fichier sélectionné"
 }

@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Klar – starta med ⏻",
+  "AUTOTUNE_START": "Starta AutoTune",
+  "AUTOTUNE_CANCEL": "Avbryt AutoTune",
     "OK": "OK",
     "SYSTEM": "system",
     "EXPLORER": "Utforskare",
@@ -615,5 +618,8 @@
     "MULTI_FORGET_STOP": "Avsluta mäskningsschemat helt först.",
     "MULTI_FORGET_ONLINE": "Workern kan nås igen. Använd den vanliga funktionen ”Ta bort koppling”.",
     "MULTI_FORGET_ERROR": "Borttagning inte bekräftad. Kontrollera status igen; vid lagringsfel förblir styrningen spärrad.",
-    "MULTI_FORGET_PENDING": "Borttagningen sparas. Styrningen är tillfälligt spärrad."
+    "MULTI_FORGET_PENDING": "Borttagningen sparas. Styrningen är tillfälligt spärrad.",
+    "LANG_CHANGE_FAILED": "Det gick inte att aktivera språket",
+    "INVALID_JSON": "Ogiltig JSON",
+    "NO_FILE_SELECTED": "Ingen fil vald"
 }

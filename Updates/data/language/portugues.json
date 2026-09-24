@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Pronto – iniciar com ⏻",
+  "AUTOTUNE_START": "Iniciar AutoTune",
+  "AUTOTUNE_CANCEL": "Cancelar AutoTune",
     "OK": "OK",
     "SYSTEM": "sistema",
     "EXPLORER": "Explorador",
@@ -615,5 +618,8 @@
     "MULTI_FORGET_STOP": "Termine primeiro o plano de mosturação por completo.",
     "MULTI_FORGET_ONLINE": "O Worker voltou a estar acessível. Utilize a função normal Remover atribuição.",
     "MULTI_FORGET_ERROR": "Remoção não confirmada. Verifique novamente o estado; em caso de erro ao guardar, o controlo permanece bloqueado.",
-    "MULTI_FORGET_PENDING": "A guardar a remoção. Controlo temporariamente bloqueado."
+    "MULTI_FORGET_PENDING": "A guardar a remoção. Controlo temporariamente bloqueado.",
+    "LANG_CHANGE_FAILED": "Não foi possível ativar o idioma",
+    "INVALID_JSON": "JSON inválido",
+    "NO_FILE_SELECTED": "Nenhum ficheiro selecionado"
 }

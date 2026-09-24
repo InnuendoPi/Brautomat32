@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Pronto – avviare con ⏻",
+  "AUTOTUNE_START": "Avvia AutoTune",
+  "AUTOTUNE_CANCEL": "Annulla AutoTune",
     "OK": "OK",
     "SYSTEM": "sistema",
     "EXPLORER": "Esploratore",
@@ -615,5 +618,8 @@
     "MULTI_FORGET_STOP": "Terminare prima completamente il programma di ammostamento.",
     "MULTI_FORGET_ONLINE": "Il Worker è nuovamente raggiungibile. Utilizzare la normale funzione «Rimuovi associazione».",
     "MULTI_FORGET_ERROR": "Rimozione non confermata. Verificare nuovamente lo stato; in caso di errore di salvataggio il controllo rimane bloccato.",
-    "MULTI_FORGET_PENDING": "Salvataggio della rimozione in corso. Controllo temporaneamente bloccato."
+    "MULTI_FORGET_PENDING": "Salvataggio della rimozione in corso. Controllo temporaneamente bloccato.",
+    "LANG_CHANGE_FAILED": "Impossibile attivare la lingua",
+    "INVALID_JSON": "JSON non valido",
+    "NO_FILE_SELECTED": "Nessun file selezionato"
 }

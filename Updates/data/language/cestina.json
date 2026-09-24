@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Připraveno – spusťte pomocí ⏻",
+  "AUTOTUNE_START": "Spustit AutoTune",
+  "AUTOTUNE_CANCEL": "Zrušit AutoTune",
     "OK": "OK",
     "SYSTEM": "systém",
     "EXPLORER": "Badatel",
@@ -615,5 +618,8 @@
     "MULTI_FORGET_STOP": "Nejprve zcela ukončete rmutovací plán.",
     "MULTI_FORGET_ONLINE": "Worker je opět dostupný. Použijte běžnou funkci Zrušit přiřazení.",
     "MULTI_FORGET_ERROR": "Odebrání nebylo potvrzeno. Znovu zkontrolujte stav; při chybě ukládání zůstává ovládání zablokováno.",
-    "MULTI_FORGET_PENDING": "Ukládá se odebrání. Ovládání je dočasně zablokováno."
+    "MULTI_FORGET_PENDING": "Ukládá se odebrání. Ovládání je dočasně zablokováno.",
+    "LANG_CHANGE_FAILED": "Jazyk se nepodařilo aktivovat",
+    "INVALID_JSON": "Neplatný JSON",
+    "NO_FILE_SELECTED": "Není vybrán žádný soubor"
 }

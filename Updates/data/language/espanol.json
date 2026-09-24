@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Listo – iniciar con ⏻",
+  "AUTOTUNE_START": "Iniciar AutoTune",
+  "AUTOTUNE_CANCEL": "Cancelar AutoTune",
     "OK": "DE ACUERDO",
     "SYSTEM": "sistema",
     "EXPLORER": "Explorador",
@@ -615,5 +618,8 @@
     "MULTI_FORGET_STOP": "Primero finalice completamente el programa de maceración.",
     "MULTI_FORGET_ONLINE": "El Worker vuelve a estar accesible. Utilice la función normal «Desvincular».",
     "MULTI_FORGET_ERROR": "Eliminación no confirmada. Vuelva a comprobar el estado; si se produce un error al guardar, el control permanece bloqueado.",
-    "MULTI_FORGET_PENDING": "Guardando la eliminación. Control bloqueado temporalmente."
+    "MULTI_FORGET_PENDING": "Guardando la eliminación. Control bloqueado temporalmente.",
+    "LANG_CHANGE_FAILED": "No se pudo activar el idioma",
+    "INVALID_JSON": "JSON no válido",
+    "NO_FILE_SELECTED": "Ningún archivo seleccionado"
 }

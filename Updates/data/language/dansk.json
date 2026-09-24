@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Klar – start med ⏻",
+  "AUTOTUNE_START": "Start AutoTune",
+  "AUTOTUNE_CANCEL": "Annuller AutoTune",
     "OK": "OK",
     "SYSTEM": "system",
     "EXPLORER": "Explorer",
@@ -615,5 +618,8 @@
     "MULTI_FORGET_STOP": "Afslut først mæskeplanen helt.",
     "MULTI_FORGET_ONLINE": "Workeren kan nås igen. Brug den normale funktion »Ophæv tilknytning«.",
     "MULTI_FORGET_ERROR": "Fjernelse ikke bekræftet. Kontrollér status igen; ved lagringsfejl forbliver betjeningen spærret.",
-    "MULTI_FORGET_PENDING": "Fjernelsen gemmes. Betjeningen er midlertidigt spærret."
+    "MULTI_FORGET_PENDING": "Fjernelsen gemmes. Betjeningen er midlertidigt spærret.",
+    "LANG_CHANGE_FAILED": "Sproget kunne ikke aktiveres",
+    "INVALID_JSON": "Ugyldig JSON",
+    "NO_FILE_SELECTED": "Ingen fil valgt"
 }

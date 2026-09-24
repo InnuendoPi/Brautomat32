@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Ready – start with ⏻",
+  "AUTOTUNE_START": "Start AutoTune",
+  "AUTOTUNE_CANCEL": "Cancel AutoTune",
     "MULTI_ACTOR_CHANGED": "Actuator has changed. Check its current state.",
     "MULTI_ACTOR_BUSY": "Actuator is busy. Check its current state.",
     "MULTI_ACTOR_UNCONFIRMED": "Switching not confirmed. Check actuator state.",
@@ -615,5 +618,8 @@
     "MULTI_PLAN_NEXT": "Next",
     "POWER_PID_MISSING": "PID configuration is missing for an enabled kettle. Check the kettle settings.",
     "MULTI_STOP_UNCONFIRMED": "Switch-off not confirmed. The plan remains locked. Check the affected devices and try switching off again.",
-    "POWER_REQUEST_UNCONFIRMED": "Control command not confirmed. Check the device status."
+    "POWER_REQUEST_UNCONFIRMED": "Control command not confirmed. Check the device status.",
+    "LANG_CHANGE_FAILED": "Could not activate language",
+    "INVALID_JSON": "Invalid JSON",
+    "NO_FILE_SELECTED": "No file selected"
 }

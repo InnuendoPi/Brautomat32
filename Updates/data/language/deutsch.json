@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Bereit – mit ⏻ starten",
+  "AUTOTUNE_START": "AutoTune starten",
+  "AUTOTUNE_CANCEL": "AutoTune abbrechen",
   "MULTI_LOCAL_LABEL": "Lokal",
   "POWER_MASTER_CONTROLLED": "Dieses Gerät wird vom Master gesteuert. Für eigene Eingriffe zuerst lokal übernehmen.",
   "POWER_CONTROLLER_UNAVAILABLE": "Die Brausteuerung ist nicht verfügbar. Gerätestatus prüfen.",
@@ -616,5 +619,8 @@
 "MULTI_FORGET_STOP": "Maischeplan zuerst vollständig beenden.",
 "MULTI_FORGET_ONLINE": "Worker ist wieder erreichbar. Bitte die normale Funktion Zuordnung lösen verwenden.",
 "MULTI_FORGET_ERROR": "Entfernen nicht bestätigt. Status erneut prüfen; bei Speicherfehler bleibt die Bedienung gesperrt.",
-"MULTI_FORGET_PENDING": "Entfernung wird gespeichert. Bedienung vorübergehend gesperrt."
+"MULTI_FORGET_PENDING": "Entfernung wird gespeichert. Bedienung vorübergehend gesperrt.",
+    "LANG_CHANGE_FAILED": "Sprache konnte nicht aktiviert werden",
+    "INVALID_JSON": "Ungültiges JSON",
+    "NO_FILE_SELECTED": "Keine Datei ausgewählt"
 }
