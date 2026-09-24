@@ -14,10 +14,8 @@ InnuFramework CSS/JS bootstrap 5.3.8
 Version 1.66.1
 
 * Korrektur:    DS18B20-Adressauswahl mit sensorbezogenen Cache überschreiben keinen anderen Sensordialog
-* Korrektur:    Sensorsperre zwischen einzelnen Messungen freigeben und wartenden
-  Steuerungstasks Rechenzeit geben, damit AutoTune nicht auf die gesamte Sensorreihe warten muss.
-* Korrektur:    neuer Button AutoTune starten im Kesseldialog übernimmt Volumen, Noiseband und
-  Log-Einstellung und öffnet das Dashboard im Modus AutoTune
+* Korrektur:    Sensorsperre zwischen einzelnen Messungen freigeben und wartenden. Steuerungstasks Rechenzeit geben, damit AutoTune nicht auf die gesamte Sensorreihe warten muss.
+* Korrektur:    neuer Button AutoTune starten im Kesseldialog übernimmt Volumen, Noiseband und Log-Einstellung und öffnet das Dashboard im Modus AutoTune
 * Korrektur:    Sprachwechsel prüft und lädt die Sprachdatei vor dem Speichern; Ladefehler werden angezeigt, Portugiesisch korrekt zugeordnet und weitere Meldungen übersetzt. Dateimanager verwendet einheitlich englische Schaltflächen.
 * Korrektur:    WebUpdate und automatisches Nachladen von Sprachdateien sperren Version 1.67 und neuer wegen des geänderten Partitionslayouts; bei ungeklärter Zielversion wird abgebrochen, Firmware und Webdateien stammen aus demselben geprüften Stand
 * Korrektur:    Webdateien, Editor und große JSON-Antworten verwenden einen begrenzten HTTP-Sender; Teilübertragungen werden fortgesetzt und Wartezeit auf den Sendeplatz zählt nicht als Übertragungsstillstand
