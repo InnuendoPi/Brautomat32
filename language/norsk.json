@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Klar – start med ⏻",
+  "AUTOTUNE_START": "Start AutoTune",
+  "AUTOTUNE_CANCEL": "Avbryt AutoTune",
     "OK": "OK",
     "SYSTEM": "System",
     "EXPLORER": "Utforsker",

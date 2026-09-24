@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Pronto – iniciar com ⏻",
+  "AUTOTUNE_START": "Iniciar AutoTune",
+  "AUTOTUNE_CANCEL": "Cancelar AutoTune",
     "OK": "OK",
     "SYSTEM": "sistema",
     "EXPLORER": "Explorador",

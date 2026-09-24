@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Připraveno – spusťte pomocí ⏻",
+  "AUTOTUNE_START": "Spustit AutoTune",
+  "AUTOTUNE_CANCEL": "Zrušit AutoTune",
     "OK": "OK",
     "SYSTEM": "systém",
     "EXPLORER": "Badatel",

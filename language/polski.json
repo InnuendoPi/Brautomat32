@@ -1,4 +1,7 @@
 {
+  "AUTOTUNE_READY": "Gotowe – uruchom przyciskiem ⏻",
+  "AUTOTUNE_START": "Uruchom AutoTune",
+  "AUTOTUNE_CANCEL": "Anuluj AutoTune",
     "OK": "OK",
     "SYSTEM": "system",
     "EXPLORER": "Odkrywca",
