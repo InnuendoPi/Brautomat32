@@ -1,6 +1,6 @@
 {
-  "version": "1.70.0",
-  "release_date": "2026-09-24",
+  "version": "1.70.1",
+  "release_date": "2026-09-25",
   "type": "Development",
   "notes": "MultiDevice, ServiceApp and new partition layout. Migration from 1.66.x or earlier requires ServiceTool."
 }
