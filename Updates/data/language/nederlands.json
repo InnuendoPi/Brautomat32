@@ -1,4 +1,22 @@
 {
+  "TOAST_AT_TIMEOUT": "AutoTune: tijdslimiet bereikt",
+  "TOAST_AT_SAMPLES": "AutoTune: te weinig metingen",
+  "TOAST_AT_RISE": "AutoTune: temperatuurstijging te klein",
+  "TOAST_AT_MODEL": "AutoTune: ongeldige L/R-waarden",
+  "TOAST_AT_FAILED": "AutoTune mislukt",
+  "TOAST_AT_SENSOR": "AutoTune: sensor niet beschikbaar",
+  "TOAST_AT_DISABLED": "AutoTune: ketel uitgeschakeld",
+  "TOAST_AT_BUSY": "Schakelen geblokkeerd – AutoTune actief",
+  "TOAST_STEP_KETTLE": "Stap geblokkeerd – ketel ontbreekt of is uitgeschakeld",
+
+  "TOAST_PID_ZERO": "PID-waarden ontbreken – Kp, Ki en Kd zijn 0",
+  "TOAST_PID_NEG_KP": "Ongeldige PID – Kp is negatief",
+  "TOAST_PID_NUM_KP": "Ongeldige PID – Kp is geen geldig getal",
+  "TOAST_PID_NEG_KI": "Ongeldige PID – Ki is negatief",
+  "TOAST_PID_NUM_KI": "Ongeldige PID – Ki is geen geldig getal",
+  "TOAST_PID_NEG_KD": "Ongeldige PID – Kd is negatief",
+  "TOAST_PID_NUM_KD": "Ongeldige PID – Kd is geen geldig getal",
+
   "AUTOTUNE_READY": "Gereed – starten met ⏻",
   "AUTOTUNE_START": "AutoTune starten",
   "AUTOTUNE_CANCEL": "AutoTune annuleren",

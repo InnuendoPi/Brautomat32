@@ -1,7 +1,7 @@
 ﻿# Changelog
 
 ESP32 Arduino 3.3.12 ESP-IDF v5.5.5\
-VSCode 1.139 pioarduino IDE 1.4.4\
+VSCode 1.140 pioarduino IDE 1.4.4\
 InnuAPID AutoTune PID lib 1.10.19\
 InnuTask lib 1.10.19\
 InnuNextion Display lib 0.9\
@@ -11,8 +11,44 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
+Version 1.66.2
+
+* WebIf: Gemeinsame Dashboarddarstellung abgeglichen: Steigrate neben der
+  Leistung, dezente zweite Temperaturzeile und einheitliche Schrittbutton-Icons.
+  Systemeinstellungen lassen sich erst nach erfolgreichem Laden speichern;
+  ungültige Antworten werden abgefangen.
+* Korrektur: Enzymlimiter ohne festen Tune-Faktor-Leistungsdeckel. Die Steigrate
+  wird über 20 Sekunden ausgewertet: über 1,2 K/min Freigabe reduzieren, unter
+  0,9 K/min wieder erhöhen, dazwischen halten. Änderung je Messfenster höchstens
+  fünf Prozentpunkte des Ausgangsbereichs; PID und Sollwertannäherung bleiben
+  maßgeblich.
+* Korrektur: Enzymlimiter nur bei Ist- und Solltemperatur im Enzymbereich aktiv.
+  Ein Kochziel außerhalb hebt die Enzymbegrenzung auch nach dem Abkühlen während
+  der Läuterruhe auf.
+* Korrektur: Nach Pause und Rückkehr über Braustart bleiben Konfigurationstabellen
+  beim Fortsetzen ausgeblendet. Wiederholte Pause-Statusmeldungen und verzögerte
+  Aufklappereignisse ändern die gewählte Dashboardansicht nicht mehr.
+* Korrektur: Der laufende Dashboard-Rasttimer verwendet die aktuelle FSM-Restzeit;
+  die Display-Restzeit wird auch ohne eintreffende FSM-Ereignisse aktualisiert.
+* Korrektur:    Recovery-AP verwendet das vorhandene Bootstrap-Captive-Portal
+  mit WLAN-Auswahl und Speichern. Kein blockierender Vorscan im AP-Modus;
+  WLAN-Verbindungsversuche pausieren bei AP-Clients und einer 30-Sekunden-
+  Schonfrist. Captive-Prüfanfragen werden auf die Einrichtung weitergeleitet.
+* Korrektur:    Große JSON-Antworten verwenden kleine Speicherblöcke statt eines
+  zusammenhängenden Textpuffers. Vollständigkeitsprüfung, begrenzter TCP-Versand
+  und Speicherschutz bleiben erhalten.
+* Korrektur:    Numerische Sud-/HLT-Schritte übernehmen die Leistungsgrenze auch als Folgeschritt.
+* Verhalten:    0 °C / 0 min ändert nur die Leistungsgrenze; mit Solltemperatur
+  und 0 min läuft der Kessel weiter. Eine zeitlich begrenzte Rast schaltet
+  den Kessel nach Ablauf aus, unabhängig von AutoNext. Maische (ID 0) bleibt unverändert.
+* Korrektur:    PID-Fehler nennen den konfigurierten Kesselnamen und die Ursache
+* Korrektur:    AutoTune-Abbrüche nennen Kessel und Ursache: Sensor nicht verfügbar
+* Korrektur:    Blockierte Rezeptschritte nennen Schritt und betroffenen Kessel
+
 Version 1.66.1
 
+* Erweiterung:  `SUDTHRESOUT`, `HLTTHRESOUT` und `<Kesselname>THRESOUT` setzen
+  die feste Kochleistung des jeweiligen Kessels; bisherige Maische-Aliase bleiben erhalten.
 * Korrektur:    DS18B20-Adressauswahl mit sensorbezogenen Cache überschreiben keinen anderen Sensordialog
 * Korrektur:    Sensorsperre zwischen einzelnen Messungen freigeben und wartenden. Steuerungstasks Rechenzeit geben, damit AutoTune nicht auf die gesamte Sensorreihe warten muss.
 * Korrektur:    neuer Button AutoTune starten im Kesseldialog übernimmt Volumen, Noiseband und Log-Einstellung und öffnet das Dashboard im Modus AutoTune

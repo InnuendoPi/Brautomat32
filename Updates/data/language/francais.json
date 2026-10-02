@@ -1,4 +1,22 @@
 {
+  "TOAST_AT_TIMEOUT": "AutoTune : délai dépassé",
+  "TOAST_AT_SAMPLES": "AutoTune : trop peu de mesures",
+  "TOAST_AT_RISE": "AutoTune : hausse de température insuffisante",
+  "TOAST_AT_MODEL": "AutoTune : valeurs L/R invalides",
+  "TOAST_AT_FAILED": "Échec AutoTune",
+  "TOAST_AT_SENSOR": "AutoTune : sonde indisponible",
+  "TOAST_AT_DISABLED": "AutoTune : cuve désactivée",
+  "TOAST_AT_BUSY": "Commande bloquée – AutoTune actif",
+  "TOAST_STEP_KETTLE": "Étape bloquée – cuve absente ou désactivée",
+
+  "TOAST_PID_ZERO": "Valeurs PID absentes – Kp, Ki et Kd sont à 0",
+  "TOAST_PID_NEG_KP": "PID invalide – Kp est négatif",
+  "TOAST_PID_NUM_KP": "PID invalide – Kp n’est pas un nombre valide",
+  "TOAST_PID_NEG_KI": "PID invalide – Ki est négatif",
+  "TOAST_PID_NUM_KI": "PID invalide – Ki n’est pas un nombre valide",
+  "TOAST_PID_NEG_KD": "PID invalide – Kd est négatif",
+  "TOAST_PID_NUM_KD": "PID invalide – Kd n’est pas un nombre valide",
+
   "AUTOTUNE_READY": "Prêt – démarrer avec ⏻",
   "AUTOTUNE_START": "Démarrer AutoTune",
   "AUTOTUNE_CANCEL": "Annuler AutoTune",

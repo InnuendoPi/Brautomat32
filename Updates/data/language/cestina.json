@@ -1,4 +1,22 @@
 {
+  "TOAST_AT_TIMEOUT": "AutoTune: časový limit vypršel",
+  "TOAST_AT_SAMPLES": "AutoTune: málo měření",
+  "TOAST_AT_RISE": "AutoTune: příliš malý nárůst teploty",
+  "TOAST_AT_MODEL": "AutoTune: neplatné hodnoty L/R",
+  "TOAST_AT_FAILED": "AutoTune selhalo",
+  "TOAST_AT_SENSOR": "AutoTune: čidlo nedostupné",
+  "TOAST_AT_DISABLED": "AutoTune: kotel deaktivován",
+  "TOAST_AT_BUSY": "Přepínání blokováno – AutoTune aktivní",
+  "TOAST_STEP_KETTLE": "Krok blokován – kotel chybí nebo je deaktivován",
+
+  "TOAST_PID_ZERO": "Chybí hodnoty PID – Kp, Ki a Kd jsou 0",
+  "TOAST_PID_NEG_KP": "Neplatné PID – Kp je záporné",
+  "TOAST_PID_NUM_KP": "Neplatné PID – Kp není platné číslo",
+  "TOAST_PID_NEG_KI": "Neplatné PID – Ki je záporné",
+  "TOAST_PID_NUM_KI": "Neplatné PID – Ki není platné číslo",
+  "TOAST_PID_NEG_KD": "Neplatné PID – Kd je záporné",
+  "TOAST_PID_NUM_KD": "Neplatné PID – Kd není platné číslo",
+
   "AUTOTUNE_READY": "Připraveno – spusťte pomocí ⏻",
   "AUTOTUNE_START": "Spustit AutoTune",
   "AUTOTUNE_CANCEL": "Zrušit AutoTune",

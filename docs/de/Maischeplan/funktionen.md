@@ -140,7 +140,7 @@ Der Maischeplan im Bild schaltet an drei Stellen Aktoren. Gleich zu Beginn wird 
 
 Der Steuerbefehl für einen Aktor kann mit einer Leistung angegeben werden, z.B. PUMPE:60. Der Aktor Pumpe wird dann mit 60% Leistung eingeschaltet. Dies setzt voraus, dass dieser Aktor für PWM aktiviert wurde. Die Rast-Temperatur und die Rastdauer müssen bei Steuerbefehlen auf 0 gesetzt werden.
 
-Der Steuerbefehl IDS:50 setzt die maximale Ausgangsleistung des Kochfeldes auf 50%. Ebenso kann mit HLT:75 der Nachguss auf 75% Leistung eingeschaltet werden.
+Der Steuerbefehl IDS:50 setzt die maximale Ausgangsleistung des Kochfeldes auf 50%. HLT:75 begrenzt die maximale Leistung des Nachgusses; die Temperatur- und Zeitangaben bestimmen das Schaltverhalten (siehe unten).
 
 ![IDS Steuerbefehl](../.gitbook/assets/sonderfunktion_sud1.jpg)
 
@@ -166,16 +166,40 @@ Beispiele:
 * SUD:Dickmaische kochen
 * SUD:60
 
+### Numerische Sud- und HLT-Befehle
+
+Die folgenden Fälle gelten für `SUD`, `HLT` und deren konfigurierte Kesselnamen.
+Die Sonderbehandlung von Maische (Kessel ID 0) bleibt unverändert.
+
+| Befehl | Temperatur | Dauer | Wirkung |
+| --- | --- | --- | --- |
+| `SUD:75` | 0 °C | 0 min | Nur maximale Leistung auf 75 % setzen; Sollwert und Ein-/Aus-Zustand erhalten. |
+| `SUD:75` | 78 °C | 0 min | PID einschalten, auf 78 °C regeln, maximal 75 %; ohne eigene Abschaltzeit. |
+| `SUD:75` | 78 °C | 10 min | PID einschalten, maximal 75 %; Rast ab Temperaturfreigabe zählen und danach ausschalten. |
+
+Für `HLT:75` gilt dasselbe. Bei 0 min geht der Plan mit AutoNext sofort weiter;
+ohne AutoNext wartet er auf Play. Bei einer Rastdauer größer 0 schaltet der
+Kessel nach Ablauf auch ohne AutoNext aus. Ein nachfolgender Auftrag kann ihn
+wieder einschalten. Planende und globaler STOP behalten ihre Abschaltfunktion.
+`SUD:0` und `HLT:0` bleiben Ausschaltbefehle.
+
 ### Sonderbefehl Leistung ab Übergang (ab 1.60)
 
 Zusätzlich zur allgemeinen Leistungsbegrenzung (`IDS:75`) kann im Maischeplan auch die Leistung ab Übergang zum Kochen direkt gesetzt werden:
 
 * `IDSTHRESOUT:80`
 * `MAISCHETHRESOUT:80`
+* `SUDTHRESOUT:80`
+* `HLTTHRESOUT:80`
+* `NachgusskocherTHRESOUT:80`
+
+`<Kesselname>THRESOUT` verwendet den konfigurierten Namen des Zielkessels.
+Die Rollenbefehle unterstützen zusätzlich die Aliase `IDS`, `MLT` und `NACHGUSS`
+vor `THRESOUT`. `0` wird wie bisher auf 1 % begrenzt; es ist kein Ausschaltbefehl.
 
 Der Wert gilt in Prozent (0 bis 100) und steuert die feste Kochleistung ab dem eingestellten Übergang zum Kochen. Das ist besonders hilfreich, wenn beim Aufheizen 100% Leistung gewünscht sind, beim wallenden Kochen aber z. B. nur 70 bis 85% sinnvoll sind.
 
-_Hinweis: Mit den Steuerbefehlen können die Kessel Maische, Sud und HLT gleichzeitig betrieben werden. Es kann jedoch nur ein Rasttimer aktiv sein. Der Rasttimer ist immer mit dem ersten Kochfeld "Maische" verknüpft._
+_Hinweis: Mit den Steuerbefehlen können die Kessel Maische, Sud und HLT gleichzeitig betrieben werden. Es kann jedoch nur ein Rasttimer aktiv sein. Der Rasttimer gehört zum aktuellen Rezeptschritt und kann auch Sud oder HLT zugeordnet sein._
 
 ### Beispiel Steuerbefehl IDS
 

@@ -1,4 +1,22 @@
 {
+  "TOAST_AT_TIMEOUT": "AutoTune: time limit reached",
+  "TOAST_AT_SAMPLES": "AutoTune: too few readings",
+  "TOAST_AT_RISE": "AutoTune: temperature rise too small",
+  "TOAST_AT_MODEL": "AutoTune: invalid L/R values",
+  "TOAST_AT_FAILED": "AutoTune failed",
+  "TOAST_AT_SENSOR": "AutoTune: sensor unavailable",
+  "TOAST_AT_DISABLED": "AutoTune: kettle disabled",
+  "TOAST_AT_BUSY": "Switching blocked – AutoTune active",
+  "TOAST_STEP_KETTLE": "Recipe step blocked – kettle missing or disabled",
+
+  "TOAST_PID_ZERO": "PID values missing – Kp, Ki and Kd are 0",
+  "TOAST_PID_NEG_KP": "Invalid PID values – Kp is negative",
+  "TOAST_PID_NUM_KP": "Invalid PID values – Kp is not a valid number",
+  "TOAST_PID_NEG_KI": "Invalid PID values – Ki is negative",
+  "TOAST_PID_NUM_KI": "Invalid PID values – Ki is not a valid number",
+  "TOAST_PID_NEG_KD": "Invalid PID values – Kd is negative",
+  "TOAST_PID_NUM_KD": "Invalid PID values – Kd is not a valid number",
+
   "AUTOTUNE_READY": "Ready – start with ⏻",
   "AUTOTUNE_START": "Start AutoTune",
   "AUTOTUNE_CANCEL": "Cancel AutoTune",

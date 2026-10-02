@@ -1,4 +1,22 @@
 {
+  "TOAST_AT_TIMEOUT": "AutoTune: przekroczono czas",
+  "TOAST_AT_SAMPLES": "AutoTune: za mało pomiarów",
+  "TOAST_AT_RISE": "AutoTune: zbyt mały wzrost temperatury",
+  "TOAST_AT_MODEL": "AutoTune: nieprawidłowe wartości L/R",
+  "TOAST_AT_FAILED": "AutoTune nie powiodło się",
+  "TOAST_AT_SENSOR": "AutoTune: czujnik niedostępny",
+  "TOAST_AT_DISABLED": "AutoTune: kocioł wyłączony",
+  "TOAST_AT_BUSY": "Przełączanie zablokowane – AutoTune aktywne",
+  "TOAST_STEP_KETTLE": "Krok zablokowany – brak kotła lub kocioł wyłączony",
+
+  "TOAST_PID_ZERO": "Brak wartości PID – Kp, Ki i Kd wynoszą 0",
+  "TOAST_PID_NEG_KP": "Nieprawidłowy PID – Kp jest ujemne",
+  "TOAST_PID_NUM_KP": "Nieprawidłowy PID – Kp nie jest poprawną liczbą",
+  "TOAST_PID_NEG_KI": "Nieprawidłowy PID – Ki jest ujemne",
+  "TOAST_PID_NUM_KI": "Nieprawidłowy PID – Ki nie jest poprawną liczbą",
+  "TOAST_PID_NEG_KD": "Nieprawidłowy PID – Kd jest ujemne",
+  "TOAST_PID_NUM_KD": "Nieprawidłowy PID – Kd nie jest poprawną liczbą",
+
   "AUTOTUNE_READY": "Gotowe – uruchom przyciskiem ⏻",
   "AUTOTUNE_START": "Uruchom AutoTune",
   "AUTOTUNE_CANCEL": "Anuluj AutoTune",

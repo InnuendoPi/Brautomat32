@@ -45,6 +45,13 @@ From version 1.60, power at boil transition can also be set with special command
 
 * `IDSTHRESOUT:80`
 * `MAISCHETHRESOUT:80`
+* `SUDTHRESOUT:80`
+* `HLTTHRESOUT:80`
+* `NachgusskocherTHRESOUT:80`
+
+`<kettle name>THRESOUT` uses the configured target kettle name. Role commands
+also accept `IDS`, `MLT` and `NACHGUSS` before `THRESOUT`. As before, `0` is
+limited to 1%; it is not an off command.
 
 ## Option 1: Manual Kettle Control
 

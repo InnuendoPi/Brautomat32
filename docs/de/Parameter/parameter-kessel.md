@@ -24,6 +24,13 @@ Ab Version 1.60 kann diese Leistung zusätzlich direkt im Maischeplan per Sonder
 
 * `IDSTHRESOUT:80`
 * `MAISCHETHRESOUT:80`
+* `SUDTHRESOUT:80`
+* `HLTTHRESOUT:80`
+* `NachgusskocherTHRESOUT:80`
+
+`<Kesselname>THRESOUT` verwendet den konfigurierten Namen des Zielkessels.
+Die Rollenbefehle unterstützen zusätzlich die Aliase `IDS`, `MLT` und `NACHGUSS`
+vor `THRESOUT`. `0` wird wie bisher auf 1 % begrenzt; es ist kein Ausschaltbefehl.
 
 ### Deaktiviere PID zum Kochen [on/off]
 

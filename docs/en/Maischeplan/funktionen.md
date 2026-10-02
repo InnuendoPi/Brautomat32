@@ -156,12 +156,35 @@ Examples:
 
 For actuator command steps, set temperature and duration to `0`.
 
+## Numeric Sud and HLT commands
+
+These cases apply to `SUD`, `HLT` and their configured kettle names.
+Maische (kettle ID 0) retains its existing special handling.
+
+| Command | Temperature | Duration | Effect |
+| --- | --- | --- | --- |
+| `SUD:75` | 0 °C | 0 min | Set the output limit to 75%; preserve target and on/off state. |
+| `SUD:75` | 78 °C | 0 min | Enable PID at 78 °C, limited to 75%, without a shutoff timer. |
+| `SUD:75` | 78 °C | 10 min | Enable PID, limited to 75%; start the rest after the temperature gate and switch off when it ends. |
+
+The same applies to `HLT:75`. With zero duration, AutoNext advances immediately;
+otherwise the plan waits for Play. Timed rests switch off even without AutoNext.
+A subsequent command may switch the kettle on again. End of plan and global
+STOP retain their shutdown behavior. `SUD:0` and `HLT:0` remain OFF commands.
+
 ## Special Command: Boil Transition Power (1.60+)
 
 In addition to `IDS:75`, you can set boil transition power directly:
 
 * `IDSTHRESOUT:80`
 * `MAISCHETHRESOUT:80`
+* `SUDTHRESOUT:80`
+* `HLTTHRESOUT:80`
+* `NachgusskocherTHRESOUT:80`
+
+`<kettle name>THRESOUT` uses the configured target kettle name. Role commands
+also accept `IDS`, `MLT` and `NACHGUSS` before `THRESOUT`. As before, `0` is
+limited to 1%; it is not an off command.
 
 This defines fixed boil power (0..100%) after the configured boil transition temperature.
 

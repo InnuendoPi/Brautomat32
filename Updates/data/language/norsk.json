@@ -1,4 +1,22 @@
 {
+  "TOAST_AT_TIMEOUT": "AutoTune: tidsgrense nådd",
+  "TOAST_AT_SAMPLES": "AutoTune: for få målinger",
+  "TOAST_AT_RISE": "AutoTune: temperaturøkning for liten",
+  "TOAST_AT_MODEL": "AutoTune: ugyldige L/R-verdier",
+  "TOAST_AT_FAILED": "AutoTune mislyktes",
+  "TOAST_AT_SENSOR": "AutoTune: sensor utilgjengelig",
+  "TOAST_AT_DISABLED": "AutoTune: kjele deaktivert",
+  "TOAST_AT_BUSY": "Bytte blokkert – AutoTune aktiv",
+  "TOAST_STEP_KETTLE": "Trinn blokkert – kjele mangler eller er deaktivert",
+
+  "TOAST_PID_ZERO": "PID-verdier mangler – Kp, Ki og Kd er 0",
+  "TOAST_PID_NEG_KP": "Ugyldig PID – Kp er negativ",
+  "TOAST_PID_NUM_KP": "Ugyldig PID – Kp er ikke et gyldig tall",
+  "TOAST_PID_NEG_KI": "Ugyldig PID – Ki er negativ",
+  "TOAST_PID_NUM_KI": "Ugyldig PID – Ki er ikke et gyldig tall",
+  "TOAST_PID_NEG_KD": "Ugyldig PID – Kd er negativ",
+  "TOAST_PID_NUM_KD": "Ugyldig PID – Kd er ikke et gyldig tall",
+
   "AUTOTUNE_READY": "Klar – start med ⏻",
   "AUTOTUNE_START": "Start AutoTune",
   "AUTOTUNE_CANCEL": "Avbryt AutoTune",

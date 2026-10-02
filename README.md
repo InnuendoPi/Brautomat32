@@ -1,5 +1,7 @@
 # Brautomat32
 
+![Brautomat32 The Brewing System](docs/img/banner.png)
+
 [![de](https://img.shields.io/badge/Deutsch-de-red.svg)](https://github.com/InnuendoPi/Brautomat32/blob/main/README.de.md)
 ![PlatformIO](https://img.shields.io/badge/platform-ESP32-blue)
 ![Framework](https://img.shields.io/badge/framework-Arduino-green)
