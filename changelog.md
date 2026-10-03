@@ -1,4 +1,4 @@
-﻿# Changelog
+# Changelog
 
 ESP32 Arduino 3.3.12 ESP-IDF v5.5.5\
 VSCode 1.140 pioarduino IDE 1.4.4\
@@ -13,6 +13,12 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 Version 1.66.2
 
+* Korrektur: Neustart hält Hintergrundtasks zwischen Arbeitsdurchläufen an,
+  damit gehaltene Sperren das Abschalten nicht blockieren. Ausstehende
+  Webhook-AUS-Aufträge müssen weiterhin bestätigt werden.
+* Korrektur: Manuelles Heizen verarbeitet Kesselereignisse und aktualisiert
+  das Relais-/Webhook-Intervall. Neue manuelle Leistungsaufträge können nach
+  früheren HTTP-Fehlern erneut schalten; AUS-Aufträge behalten Vorrang.
 * WebIf: Gemeinsame Dashboarddarstellung abgeglichen: Steigrate neben der
   Leistung, dezente zweite Temperaturzeile und einheitliche Schrittbutton-Icons.
   Systemeinstellungen lassen sich erst nach erfolgreichem Laden speichern;
