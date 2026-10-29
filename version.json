@@ -1,6 +1,6 @@
 {
-  "version": "1.66.1",
+  "version": "1.66.4",
   "release_date": "2026-10-29",
-  "type": "Release",
-  "notes": "Brautomat32 FSM, InnuMax31865, ServiceTool"
+  "type": "Development",
+  "notes": "Brautomat32 FSM, InnuMax31865, Dashboard"
 }
