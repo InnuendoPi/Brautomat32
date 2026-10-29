@@ -11,8 +11,10 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.66.2
+Version 1.66.3
 
+* Korrektur: Sud und Nachguss bleiben bei manuell gesteuertem Hauptkessel
+  temperaturgeregelt. Der manuelle Modus überspringt ihre PID-Berechnung nicht mehr.
 * Korrektur: Neustart hält Hintergrundtasks zwischen Arbeitsdurchläufen an,
   damit gehaltene Sperren das Abschalten nicht blockieren. Ausstehende
   Webhook-AUS-Aufträge müssen weiterhin bestätigt werden.
