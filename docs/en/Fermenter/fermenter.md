@@ -48,6 +48,11 @@ also a valid reading. Invalid values appear as gaps in the chart. Older saved
 chart histories may still show -1 °C as a gap. Nextion also displays valid target
 temperatures of 0 °C and below.
 
+Fermentation plans require SingleDevice mode. On a Master or Worker, also
+select SingleDevice; select a mash plan before enabling MultiDevice. Invalid
+combinations are rejected when saving. Existing device assignments are not
+changed automatically.
+
 Stop the process with Power before switching between mash and fermenter views;
 pausing alone is insufficient. A browser without unsaved edits automatically
 loads newly saved fermentation plans. Note any desired changes before reloading

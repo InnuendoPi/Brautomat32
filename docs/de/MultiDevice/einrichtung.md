@@ -3,9 +3,13 @@
 ## Vorbereiten
 
 Verwende auf allen beteiligten Brautomaten zueinander passende Firmware- und
-Webdateistände. Für Geräte mit altem Partitionslayout ist zunächst die
-Umstellung mit dem zur Beta passenden ServiceTool erforderlich; siehe
-[Installation](../Installation/info.md). Richte jedes Gerät zunächst einzeln ein.
+Webdateistände der Generation **1.70**. **Ein WebUpdate von 1.66.x oder älter
+auf 1.70 ist nicht möglich.** Das neue Partitionslayout mit ServiceApp erfordert
+eine einmalige Umstellung per USB mit dem ServiceTool. Sichere vorher die
+Einstellungen, Rezepte und Profile jedes Geräts. Verwende ein vollständiges,
+zusammengehöriges 1.70-Paket; eine einzelne `firmware.bin` genügt nicht.
+Weitere Hinweise zum ServiceTool stehen unter [Installation](../Installation/info.md).
+Richte jedes Gerät zunächst einzeln ein.
 
 Alle Geräte müssen sich im selben lokalen Netzwerk erreichen können. Ein
 Gastnetz oder eine WLAN-Einstellung, die Geräte voneinander isoliert, kann die
@@ -31,7 +35,7 @@ Prüfe dort Sensorwerte, GPIO-Zuordnung und die erforderlichen PID-Einstellungen
 Die angezeigte **Geräte-ID (ESP32)** identifiziert die Hardware. Der Gerätename
 hilft dir beim Wiedererkennen, ersetzt aber diese Kennung nicht.
 
-![MultiDevice-Einstellungen eines zugeordneten Workers](../../multidevice/worker-setup-de.png)
+![MultiDevice-Einstellungen eines zugeordneten Workers](../../img/worker-setup-de.png)
 
 *Worker-Rolle, Gerätename und ESP32-Kennung am Worker. Dieses Gerät ist bereits einem Master zugeordnet.*
 
@@ -54,7 +58,7 @@ zugeordnet sein.
 Ein Gerät mit dem Namen `sudpfanne` kann beispielsweise Worker2 sein. Die
 Platznummer ist auch für Maischeplanbefehle und die Kesselpriorität maßgeblich.
 
-![Master mit verbundenem Worker1 und zwei freien Worker-Plätzen](../../multidevice/master-setup-de.png)
+![Master mit verbundenem Worker1 und zwei freien Worker-Plätzen](../../img/master-setup-de.png)
 
 *Einrichtung am Master: Worker1 ist aktiviert und verbunden; Worker2 und Worker3 bleiben frei.*
 

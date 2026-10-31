@@ -13,7 +13,7 @@ Core topics of the current generation:
 - adaptive PID control with `L/R`-based AutoTune
 - FSM-based process orchestration for mash, autotune, manual, and fermenter operation
 - runtime snapshot and controller-deck model for WebIf, SSE, display, and testflow
-- dashboard and chart improvements, including additional loose sensor curves
+- dashboard and chart improvements, including clearer controller visibility and additional sensor curves
 - safer backup/restore, upload, import, and file-handling paths
 - decoupled IDS RMT sending and broader hardware support beyond IDS-only systems
 

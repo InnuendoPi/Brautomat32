@@ -2,7 +2,7 @@
 
 Mit MultiDevice verteilst du deine Brauanlage auf mehrere Brautomaten und
 bedienst sie über das gemeinsame Webinterface eines Masters. Die Funktion
-ist ab **1.67 Beta** verfügbar. Ein einzelner Brautomat bleibt weiterhin als
+wird mit **Version 1.70** bereitgestellt. Ein einzelner Brautomat bleibt weiterhin als
 SingleDevice nutzbar.
 
 ## Master und Worker
@@ -24,10 +24,9 @@ Kurze Sensor- und Steuerleitungen am jeweiligen Standort vereinfachen die
 Verkabelung. Weitere Brautomaten schaffen zusätzliche Anschlüsse.
 
 Jeder Worker kann ein eigenes Nextion-HMI-Display haben. Die Rückgabe der
-Bedienung an den Master erfolgt über das Webinterface; dafür ist keine neue
-Display-Schaltfläche vorgesehen.
+Bedienung an den Master erfolgt über das Webinterface.
 
-![Gemeinsames Dashboard mit lokalen Geräten und Worker1](../../multidevice/dashboard-de.png)
+![Gemeinsames Dashboard mit lokalen Geräten und Worker1](../../img/dashboard-de.png)
 
 *Beispiel mit einem verbundenen Worker: Sudpfanne, Pumpe1 und senSudpfanne sind am Worker angeschlossen.*
 
@@ -38,8 +37,12 @@ ausgewählten Kessel über den Maischeplan. Die lokale Temperaturregelung eines
 Worker-Kessels läuft auf diesem Worker. Sein Sensor muss ebenfalls dort
 angeschlossen sein.
 
-Der **manuelle Modus** und der **Fermentermodus** bleiben lokal. Der Worker
-führt keinen zweiten unabhängigen Maischeplan neben dem Master aus.
+Der **manuelle Modus** bleibt lokal. **Fermenterpläne sind nur in SingleDevice
+zulässig.** Das gilt für Master und Worker: Zum Fermenterplan SingleDevice
+auswählen; vor dem Aktivieren von MultiDevice einen Maischeplan auswählen.
+Ungültige Kombinationen werden beim Speichern abgelehnt, bestehende
+Zuordnungen werden nicht automatisch geändert. Der Worker führt keinen
+zweiten unabhängigen Maischeplan neben dem Master aus.
 
 ## Weiterführende Seiten
 

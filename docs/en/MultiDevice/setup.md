@@ -2,9 +2,12 @@
 
 ## Preparation
 
-Use compatible firmware and web files on all participating Brautomat units.
-Devices with the old partition layout must first be migrated using the
-ServiceTool version intended for this beta; see [Installation](../Installation/info.md).
+Use compatible **1.70-generation** firmware and web files on all participating
+Brautomat units. **A web update from 1.66.x or earlier to 1.70 is not possible.**
+The new partition layout with ServiceApp requires a one-time migration over USB
+using ServiceTool. Back up each device’s settings, recipes and profiles first.
+Use a complete, matching 1.70 package; a single `firmware.bin` is not sufficient.
+See [Installation](../Installation/info.md) for more information about ServiceTool.
 Set up each device individually first.
 
 All devices must be able to reach each other on the same local network.
@@ -29,7 +32,7 @@ GPIO assignments and the required PID settings locally.
 The displayed **device ID (ESP32)** identifies the hardware. The device name
 helps you recognise it, but does not replace this identifier.
 
-![MultiDevice settings on an assigned Worker](../../multidevice/worker-setup-en.png)
+![MultiDevice settings on an assigned Worker](../../img/worker-setup-en.png)
 
 *Worker role, device name and ESP32 identifier on the Worker. This unit is already assigned to a Master.*
 
@@ -51,7 +54,7 @@ to only one Master.
 A device named `boil-kettle` could be Worker2. The slot number also determines
 how mash plan commands address it and its kettle selection priority.
 
-![Master with Worker1 connected and two free Worker slots](../../multidevice/master-setup-en.png)
+![Master with Worker1 connected and two free Worker slots](../../img/master-setup-en.png)
 
 *Master setup: Worker1 is enabled and connected; Worker2 and Worker3 remain unused.*
 

@@ -15,7 +15,7 @@ Workers confirm switching commands. If a message reports an unconfirmed kettle
 command, first check the displayed state and the actual device. An error
 message alone does not prove that its outputs are off.
 
-![Dashboard with kettles, actuators and sensors](../../multidevice/dashboard-en.png)
+![Dashboard with kettles, actuators and sensors](../../img/dashboard-en.png)
 
 *Green Worker dots indicate an established connection. Brewing is stopped in this screenshot.*
 
@@ -48,7 +48,7 @@ for further examples.
 pause behaviour. Kettles may continue regulating during a pause; check their
 individual states.
 
-![Timeline with a Worker command](../../multidevice/timeline-en.png)
+![Timeline with a Worker command](../../img/timeline-en.png)
 
 *The “Pumpe1:ON” command carries a Worker1 badge. Times are estimates before brewing starts.*
 
@@ -63,13 +63,19 @@ Wait and special-command steps do not display invented temperature readings.
 The next step or plan end appears below the current step. The Worker remains
 in its table view; this card is not a second editable recipe list.
 
-![Worker view with plan overview and local kettle](../../multidevice/worker-en.png)
+![Worker view with plan overview and local kettle](../../img/worker-en.png)
 
 *The Master plan card appears above local equipment. A stopped plan does not yet show step values.*
 
 ## Take local control and return it
 
-Under Master control, local switching, target-temperature and power controls on the Worker are locked. **Take control** enables them. Taking local control alone does not pause the Master plan. A completed actor switching command does not require its switch state to remain unchanged indefinitely. Sud/HLT background commands also allow subsequent local operation. If the active plan step requires a particular kettle state, changing that state remains a process conflict. New Master commands are still rejected during local control; existing protection functions remain effective.
+Under Master control, local switching, target-temperature and power controls on the
+Worker are locked. **Take control** enables them. Taking local control alone does not
+pause the Master plan. A completed actuator switching command does not require its
+switch state to remain unchanged indefinitely. Sud/HLT background commands also allow
+subsequent local operation. If the active plan step requires a particular kettle state,
+changing that state remains a process conflict. New Master commands are still rejected
+during local control; existing protection functions remain effective.
 
 1. On the Worker, open the process card or **System settings → MultiDevice**.
 2. Select **Take control** and confirm local takeover. Master commands are
@@ -84,13 +90,13 @@ Under Master control, local switching, target-temperature and power controls on 
    Master to resume. The plan step's target temperature applies again.
    Returning control alone does not resume the plan; Play is disabled during pause.
 
-![Entry point for local Worker control](../../multidevice/worker-control-en.png)
+![Entry point for local Worker control](../../img/worker-control-en.png)
 
 *“Take control” starts the confirmed local takeover. This screenshot shows the initial state under Master control.*
 
 On a Worker's Nextion mash/brew page, Power can request local takeover:
 Play confirms, Pause cancels. Returning control is available only through the
-web interface. The Nextion HMI firmware remains unchanged.
+web interface.
 
 For problems, see [Connections and troubleshooting](troubleshooting.md).
 
@@ -101,4 +107,6 @@ the Worker's kettle-0 configuration section is hidden and locked. Pause the
 plan on the Master before changing this kettle. When paused or stopped, the
 section is visible and editable without an additional local takeover.
 “Take control” does not bypass the pause requirement. Edit the mash plan itself
-on the Master in editor mode. A stale Master status does not unlock kettle editing.
+on the Master in editor mode. Without a current Master status, local control authority and the local operating
+state determine whether editing is allowed. A connection loss alone does not
+unlock editing; local setup remains possible before the first connection.

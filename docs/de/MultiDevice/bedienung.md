@@ -15,7 +15,7 @@ Schaltaufträge werden vom Worker bestätigt. Bei einer Meldung wie
 **„Kesselauftrag nicht bestätigt“** prüfst du zuerst den angezeigten Zustand
 und das betroffene Gerät; eine Fehlermeldung allein beweist keinen AUS-Zustand.
 
-![Dashboard mit Kesseln, Aktoren und Sensoren](../../multidevice/dashboard-de.png)
+![Dashboard mit Kesseln, Aktoren und Sensoren](../../img/dashboard-de.png)
 
 *Die grünen Worker-Punkte zeigen eine bestehende Verbindung. In dieser Aufnahme ist der Braubetrieb gestoppt.*
 
@@ -50,7 +50,7 @@ fortdauernden Kesselaufträge ausgeschaltet. Weitere Beispiele stehen unter
 bleibt auch in MultiDevice maßgeblich. Bei einer Pause können Kessel weiter
 regeln; prüfe die jeweiligen Zustände.
 
-![Zeitstrahl mit Worker-Auftrag](../../multidevice/timeline-de.png)
+![Zeitstrahl mit Worker-Auftrag](../../img/timeline-de.png)
 
 *Der Auftrag „Pumpe1:ON“ trägt ein Worker1-Badge. Die Zeiten sind Vorschauwerte vor dem Braustart.*
 
@@ -66,13 +66,19 @@ Warte- und Sonderbefehle zeigen keine erfundenen Temperaturwerte. Unter
 Der Worker bleibt in seiner Tabellenansicht; die Karte ist keine zweite
 editierbare Rezeptliste.
 
-![Worker-Ansicht mit Planübersicht und lokalem Kessel](../../multidevice/worker-de.png)
+![Worker-Ansicht mit Planübersicht und lokalem Kessel](../../img/worker-de.png)
 
 *Die Master-Planansicht steht oberhalb der lokalen Geräte. Bei gestopptem Plan stehen dort noch keine Schrittwerte.*
 
 ## Lokal übernehmen und zurückgeben
 
-Unter Master-Steuerung sind die lokalen Schalt-, Sollwert- und Leistungsregler am Worker gesperrt. **Steuerung übernehmen** gibt sie frei. Die Übernahme allein pausiert den Master-Plan nicht. Ein abgeschlossener Aktor-Schaltauftrag verlangt keinen dauerhaft unveränderten Schaltzustand. Auch Sud/HLT-Hintergrundaufträge erlauben spätere lokale Bedienung. Benötigt der laufende Planschritt dagegen einen bestimmten Kesselzustand, bleibt eine Abweichung davon ein Prozesskonflikt. Neue Master-Aufträge werden während lokaler Bedienung weiterhin abgewiesen; bestehende Schutzfunktionen bleiben wirksam.
+Unter Master-Steuerung sind die lokalen Schalt-, Sollwert- und Leistungsregler am Worker
+gesperrt. **Steuerung übernehmen** gibt sie frei. Die Übernahme allein pausiert den
+Master-Plan nicht. Ein abgeschlossener Aktor-Schaltauftrag verlangt keinen dauerhaft
+unveränderten Schaltzustand. Auch Sud/HLT-Hintergrundaufträge erlauben spätere lokale
+Bedienung. Benötigt der laufende Planschritt dagegen einen bestimmten Kesselzustand,
+bleibt eine Abweichung davon ein Prozesskonflikt. Neue Master-Aufträge werden während
+lokaler Bedienung weiterhin abgewiesen; bestehende Schutzfunktionen bleiben wirksam.
 
 1. Öffne am Worker die Prozesskarte oder **System Einstellungen → MultiDevice**.
 2. Wähle **Steuerung übernehmen** und bestätige die lokale Übernahme. Master-Aufträge
@@ -87,13 +93,13 @@ Unter Master-Steuerung sind die lokalen Schalt-, Sollwert- und Leistungsregler a
    zum Fortsetzen. Dabei gilt wieder der Sollwert des Planschritts. Die Rückgabe
    allein setzt den Plan nicht fort; Play ist während der Pause gesperrt.
 
-![Einstieg in die lokale Bedienung am Worker](../../multidevice/worker-control-de.png)
+![Einstieg in die lokale Bedienung am Worker](../../img/worker-control-de.png)
 
 *„Steuerung übernehmen“ startet die bestätigte lokale Übernahme. Die Aufnahme zeigt den Ausgangszustand unter Master-Steuerung.*
 
 Am Worker-Nextion kann Power auf der MaischeSud-/Brauseite die lokale Übernahme
 anfordern: Play bestätigt, Pause bricht ab. Die Rückgabe erfolgt ausschließlich
-über das Webinterface. Die Nextion-HMI-Firmware bleibt unverändert.
+über das Webinterface.
 
 Bei Problemen weiter zu [Verbindung und Störungen](stoerungen.md).
 
@@ -105,4 +111,6 @@ gesperrt. Pausiere den Plan am Master, bevor du den Kessel änderst. In Pause
 und bei gestopptem Plan ist der Abschnitt sichtbar und ohne zusätzliche lokale
 Übernahme bearbeitbar. „Steuerung übernehmen“ umgeht die Pausepflicht nicht.
 Der Maischeplan selbst wird weiterhin am Master im Editormodus geändert.
-Ein nicht aktueller Master-Status gibt die Kesselbearbeitung nicht frei.
+Bei fehlendem aktuellem Master-Status gelten die lokale Bedienhoheit und der
+lokale Betriebszustand. Ein Verbindungsabbruch allein gibt die Bearbeitung
+nicht frei; vor der ersten Verbindung bleibt die lokale Einrichtung möglich.

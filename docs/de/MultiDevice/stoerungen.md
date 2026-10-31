@@ -27,11 +27,12 @@ Prüfe die Meldungen und den Planstatus am Master. Ein anderer Worker übernimmt
 den betroffenen Kessel nicht automatisch. Eine wiederhergestellte Verbindung
 ist keine Aufforderung zum automatischen Fortsetzen eines pausierten Plans.
 
-Für vom Master-Plan fernfreigegebene Worker-Kessel gilt in dieser Beta eine
-vorläufige Frist von **zehn Sekunden ohne erneuerte Fernfreigabe**; danach wird
+Für vom Master-Plan fernfreigegebene Worker-Kessel gilt eine Frist von
+**zehn Sekunden ohne erneuerte Fernfreigabe**; danach wird
 die zugehörige Regelung gestoppt. Das ist keine allgemeine Zusage, dass sämtliche
 Aktoren und Ausgänge nach zehn Sekunden aus sind. Eine ausdrücklich bestätigte
 lokale Übernahme beendet diese Fernüberwachung und lässt lokale Bedienung zu.
+Ein Verbindungsabbruch allein gibt die lokale Bedienung nicht frei.
 
 Wenn du vor Ort weiterarbeiten musst und den Worker bedienen kannst, verwende
 [Steuerung übernehmen](bedienung.md#lokal-übernehmen-und-zurückgeben). Ist auch sein
@@ -65,6 +66,6 @@ Aufträge dieses Workers auf. Das alte Gerät wird bei seiner Rückkehr nicht
 automatisch wieder aufgenommen und muss vor erneuter Verwendung bewusst
 zugeordnet werden.
 
-![Worker-Zuordnung in den Master-Einstellungen](../../multidevice/master-setup-de.png)
+![Worker-Zuordnung in den Master-Einstellungen](../../img/master-setup-de.png)
 
 *Bei einem erreichbaren Worker steht „Zuordnung lösen“ zur Verfügung. Die Aufnahme zeigt einen verbundenen Worker; das Entfernen eines ausgefallenen Geräts ist oben gesondert beschrieben.*

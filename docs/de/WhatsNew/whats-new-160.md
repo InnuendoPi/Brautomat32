@@ -13,7 +13,7 @@ Kernpunkte der aktuellen Generation:
 - adaptive PID-Regelung mit `L/R`-basierter AutoTune
 - FSM-basierte Ablaufsteuerung für Maischen, AutoTune, manuelle Modi und Fermenter
 - Runtime-Snapshot und Controller-Deck für WebIf, SSE, Display und Testflow
-- Dashboard- und Chart-Verbesserungen, einschließlich zusätzlicher loser Sensorkurven
+- Dashboard- und Chart-Verbesserungen, einschließlich klarerer Controller-Sicht und zusätzlicher Sensorkurven
 - robustere Backup-/Restore-, Upload-, Import- und Dateipfade
 - entkoppelter IDS-RMT-Sendepfad und breitere Hardwareunterstützung jenseits reiner IDS-Setups
 
@@ -26,7 +26,7 @@ Kernpunkte der aktuellen Generation:
 
 ## Vergleich zu Firmwareständen vor 1.60
 
-Die Umstellung ist strukturell, nicht nur parametisch:
+Die Umstellung ist strukturell, nicht nur parametrisch:
 
 1. von `Ku/Pu`-Schwingungslogik zu `L/R`-Modell
 2. von tickergeprägter Ausführung zu FSM-/Task-Orchestrierung

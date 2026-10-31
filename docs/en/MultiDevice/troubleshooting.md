@@ -27,11 +27,11 @@ automatically take over the affected kettle. Reconnecting does not mean a
 paused plan should resume automatically.
 
 For Worker kettles operating under a Master plan's remote authorisation,
-this beta uses a provisional **ten-second period without renewed authorisation**;
+there is a **ten-second period without renewed authorisation**;
 the corresponding temperature control is then stopped. This is not a general
 guarantee that all actuators and outputs switch off after ten seconds.
 Explicitly confirmed local takeover ends that remote supervision and permits
-local operation.
+local operation. A connection loss alone does not enable local control.
 
 If you need to continue locally and can operate the Worker, use
 [Take control](operation.md#take-local-control-and-return-it). If its web
@@ -63,6 +63,6 @@ then select, enable and save a different device.
 Worker's outstanding commands. The old device is not automatically added back
 if it returns; explicitly assign it before using it again.
 
-![Worker assignment in the Master settings](../../multidevice/master-setup-en.png)
+![Worker assignment in the Master settings](../../img/master-setup-en.png)
 
 *“Release assignment” is available for a reachable Worker. This screenshot shows a connected Worker; removing a failed unit is described separately above.*

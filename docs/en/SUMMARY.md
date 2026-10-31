@@ -46,6 +46,7 @@
 * [Hardware](Hardware/hw.md)
 * [KleinerBrauhelfer2](KBH2/kleinerbrauhelfer2.md)
 * [MQTTDevice](MQTTDevice/mqtt.md)
+* [What's New 1.70.x](WhatsNew/whats-new-170.md)
 * [What's New 1.60.x](WhatsNew/whats-new-160.md)
 * [Translate the Brautomat](FAQ/sprache.md)
 * [Firmware Test Suite](FAQ/firmware-test-suite.md)
