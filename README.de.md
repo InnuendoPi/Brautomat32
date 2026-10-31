@@ -18,7 +18,7 @@ Die Bedienung erfolgt direkt im Browser und ist für PC, Tablet und Smartphone a
 
 ## Firmware-Teststatus
 
-[![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.66.2%20%7C%2074%20Tests%20%7C%2074%20erfolgreich%20%7C%200%20fehlerhaft%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
+[![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.66.3%20%7C%2074%20Tests%20%7C%2074%20erfolgreich%20%7C%200%20fehlerhaft%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
 
 Vor jedem Release wird die Firmware automatisiert und mit hoher Detailtiefe gegen ein reales Equipment geprüft. Build, Flash, Webinterface, Prozessabläufe, Restore und Browser-Regressionen sind feste Bestandteile der Release-Test-Workflows.
 
@@ -63,7 +63,13 @@ Brautomat32 unterstützt unter anderem:
 | ----------- | -------- |
 | **Release** | [![Stable](https://img.shields.io/static/v1?label=Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) |
 | **Development** | [![Dev](https://img.shields.io/static/v1?label=Development%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip) |
+| **MultiDevice** | [![Neu – V 1.70 MultiDevice Support](https://img.shields.io/static/v1?label=Neu&message=V%201.70%20MultiDevice%20Support&logo=arduino&logoColor=white&color=orange)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF5dev/Brautomat32.zip) |
 | **ServiceTool** | [Aktuelles ServiceTool-Release](https://github.com/InnuendoPi/ServiceTool/releases/latest) |
+
+**Wechsel von 1.66.x auf 1.70:** Ein WebUpdate ist wegen des neuen
+Partitionslayouts nicht möglich. Die einmalige Umstellung erfolgt per USB mit
+dem [ServiceTool](https://github.com/InnuendoPi/ServiceTool/releases/latest).
+Siehe [Neuerungen und Migrationsanleitung für 1.70](whats_new_170.de.md).
 
 ## Installation
 
@@ -118,7 +124,3 @@ Brautomat bietet drei Display-Ansichten:
 ![Manuell](docs/img/induction-mode-sm.jpg)
 
 _Hinweis: Display-Unterstützung ist optional. Unterstützt werden Nextion ITEAD HMI 3,5" (Basic/Enhanced/Discovery-Serie)._
-
-## Hinweis zu Version 1.60+
-
-Nach einem Update von Version 1.59 oder älter muss **AutoTune** einmal neu durchgeführt werden.

@@ -18,7 +18,7 @@ Operation happens directly in the browser and is designed for PC, tablet, and sm
 
 ## Firmware Test Status
 
-[![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.66.2%20%7C%2074%20tests%20%7C%2074%20pass%20%7C%200%20fail%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
+[![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.66.3%20%7C%2074%20tests%20%7C%2074%20pass%20%7C%200%20fail%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
 
 Before every release, the firmware is tested automatically and in depth against real equipment. Build, flash, web interface, process flows, restore, and browser regressions are fixed parts of the release test workflows.
 
@@ -63,7 +63,13 @@ Brautomat32 supports, among other things:
 | ----------- | -------- |
 | **Release** | [![Stable](https://img.shields.io/static/v1?label=Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) |
 | **Development** | [![Dev](https://img.shields.io/static/v1?label=Development%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip) |
+| **MultiDevice** | [![New – V 1.70 MultiDevice Support](https://img.shields.io/static/v1?label=New&message=V%201.70%20MultiDevice%20Support&logo=arduino&logoColor=white&color=orange)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF5dev/Brautomat32.zip) |
 | **ServiceTool** | [Aktuelles ServiceTool-Release](https://github.com/InnuendoPi/ServiceTool/releases/latest) |
+
+**Moving from 1.66.x to 1.70:** A web update is not possible because of the new
+partition layout. The one-time migration requires USB and
+[ServiceTool](https://github.com/InnuendoPi/ServiceTool/releases/latest).
+See [what’s new and the migration guide for 1.70](whats_new_170.md).
 
 ## Installation
 
@@ -118,7 +124,3 @@ Brautomat offers three display views:
 ![Manual](docs/img/induction-mode-sm.jpg)
 
 _Note: Display support is optional. Supported devices are Nextion ITEAD HMI 3.5" (Basic/Enhanced/Discovery series)._
-
-## Note for Version 1.60+
-
-After updating from version 1.59 or older, **AutoTune** must be run once again.

@@ -1,14 +1,14 @@
-# Migration auf 1.67 Beta
+# Migration auf 1.70
 
 Diese Kurzanleitung beschreibt die **einmalige Umstellung vom bisherigen
 Partitionslayout auf das neue Layout mit ServiceApp**. Danach sind normale
 WebUpdates wieder möglich. Bereits umgestellte Geräte benötigen keine erneute
 Layoutmigration.
 
-> Benötigt werden das **ServiceTool in der Version 1.7.6 oder neuer**
-> und das vollständige zugehörige Beta-Paket. Ein älteres ServiceTool, das nur
-> 1.70.x als Migrationsziel akzeptiert, ist dafür nicht geeignet. Die Umstellung
-> ist kein normales WebUpdate; eine einzelne `firmware.bin` reicht nicht aus.
+> **Ein WebUpdate von 1.66.x oder älter auf 1.70 ist nicht möglich.**
+> Verwendet das [aktuelle ServiceTool](https://github.com/InnuendoPi/ServiceTool/releases/latest)
+> mit Unterstützung für die Migration auf 1.70 und das vollständige 1.70-Paket.
+> Die Umstellung erfolgt per USB; eine einzelne `firmware.bin` reicht nicht aus.
 
 ## 1. Gerät verbinden
 
@@ -17,7 +17,8 @@ anschließen. ServiceTool öffnen, den richtigen Port und die Geräteadresse
 auswählen. Der bisherige Brautomat muss auch über WLAN erreichbar sein.
 Warten, bis das ServiceTool das richtige Gerät als **Online** erkennt.
 
-![ServiceTool starten](docs/img/migration-167-start.png)
+![ServiceTool mit verbundenem Brautomat](docs/img/migration-167-start.png)
+
 *Bild 1: ServiceTool mit markiertem Port, Geräteadresse und Online-Status.*
 
 ## 2. Daten sichern
@@ -27,12 +28,24 @@ aufbewahren. Prüfen, dass Einstellungen, eigene Rezepte und Profile gesichert
 sind; zusätzlich benötigte eigene Dateien separat sichern. Die Sicherung bis
 zum erfolgreichen Abschluss behalten.
 
-![ServiceTool starten](docs/img/migration-167-backup.png)
+![Datensicherung in Backup & Restore](docs/img/migration-167-backup.png)
+
 *Bild 2: Backup & Restore – Sicherung erstellen und erfolgreiches Ergebnis.*
 
-## 3. Migration starten
+## 3. Paket auswählen
 
-Zum Bereich **Migration** wechseln. Gerät und Zielversion prüfen und
+Zum Bereich **Migration** wechseln und das vollständige 1.70-Paket auswählen.
+Für ein lokal gespeichertes Paket die ZIP-Datei zuerst entpacken und den Ordner
+über **Open directory** auswählen. Das Paket enthält die Partitionstabelle,
+Hauptfirmware, ServiceApp, LittleFS und die passenden Webdateien.
+Den richtigen COM-Port auswählen und Gerät sowie Zielversion prüfen.
+
+![Paketauswahl und COM-Port im Bereich Migration](docs/img/migration-167-migration.png)
+
+*Bild 3: Migration mit lokalem Paketordner, COM-Port und Startschaltfläche.*
+
+## 4. Migration starten
+
 **Migration starten** wählen. Den vollständigen Ablauf einschließlich Sicherung,
 Flashen, Neustart und Wiederherstellung abwarten.
 
@@ -40,12 +53,9 @@ Flashen, Neustart und Wiederherstellung abwarten.
 ServiceTool nicht schließen.** Erst fortfahren, wenn der Ablauf erfolgreich
 abgeschlossen ist und der Brautomat wieder erreichbar ist.
 
-![ServiceTool starten](docs/img/migration-167-migration.png)
-*Bild 4: Migration – Startschaltfläche und anschließend erfolgreiche Abschlussmeldung.*
-
 ## 5. Ergebnis prüfen
 
-- Webinterface des Brautomaten neu laden und **Version 1.67** prüfen.
+- Webinterface des Brautomaten neu laden und **Version 1.70.x entsprechend dem gewählten Paket** prüfen.
 - WLAN, Sensorwerte, Kesselzuordnungen, Aktoren, Profile und eigene Rezepte prüfen.
 - Fehlende Daten über den vorgesehenen Restore-Ablauf aus der Sicherung übernehmen.
 - Vor dem nächsten Brautag die Funktionen der eigenen Anlage kontrollieren.

@@ -1,12 +1,11 @@
-# Was ist neu: Brautomat32 1.67.0 Beta
+# Was ist neu: Brautomat32 1.70
 
-Mit **1.67.0** startet die erste Beta mit **MultiDevice, neuem Partitionslayout
-und ServiceApp**. Ihr könnt eure Brauanlage auf mehrere Brautomaten verteilen
+**1.70** bringt **MultiDevice, ein neues Partitionslayout und ServiceApp**. Ihr könnt eure Brauanlage auf mehrere Brautomaten verteilen
 und gemeinsam bedienen. Gleichzeitig erhält die Hauptfirmware mehr Platz und
 einen eigenen Wartungsbereich für Updates und Wiederherstellung.
 
-Die Datei heißt bereits `whats_new_170.de.md`; die hier beschriebene Version ist
-**1.67.0 Beta**, nicht 1.70 und keine Umstellung auf ESP-IDF 6.
+Version 1.70 wird derzeit als **Development-Version** bereitgestellt.
+[Download des vollständigen 1.70-Pakets](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF5dev/Brautomat32.zip).
 
 ## MultiDevice: eine Anlage, mehrere Brautomaten
 
@@ -89,10 +88,14 @@ der Hauptfirmware nutzt nach der Umstellung die ServiceApp.
 
 ### Einmalige Umstellung über das ServiceTool
 
-**Der Wechsel vom bisherigen Partitionslayout ist kein normales WebUpdate.**
-Eine einzelne `firmware.bin` genügt dafür nicht. Verwendet das zur Beta passende
-ServiceTool und das vollständige, zusammengehörige Beta-Paket einschließlich
-Partitionstabelle, Hauptfirmware, ServiceApp und Webdateien.
+[Zur bebilderten Migrationsanleitung für 1.70](migration_170.de.md).
+
+**Ein WebUpdate von 1.66.x oder älter auf 1.70 ist nicht möglich.**
+Das neue Partitionslayout erfordert eine einmalige Umstellung per USB mit dem
+[ServiceTool](https://github.com/InnuendoPi/ServiceTool/releases/latest).
+Eine einzelne `firmware.bin` genügt dafür nicht. Verwendet das vollständige,
+zusammengehörige 1.70-Paket einschließlich Partitionstabelle, Hauptfirmware,
+ServiceApp, LittleFS und Webdateien.
 
 1. Den Braubetrieb beenden und den Brautomat per USB mit dem Computer verbinden.
    Im ServiceTool den richtigen Port und das richtige Gerät auswählen. Für die
@@ -100,7 +103,7 @@ Partitionstabelle, Hauptfirmware, ServiceApp und Webdateien.
 2. Eine Sicherung erstellen und auf dem Computer aufbewahren. Einstellungen,
    Rezepte und Profile müssen auch dann verfügbar bleiben, wenn die Umstellung
    unterbrochen wird.
-3. Den Migrationsablauf der passenden ServiceTool-Version mit dem Beta-Paket
+3. Den Migrationsablauf der passenden ServiceTool-Version mit dem 1.70-Paket
    verwenden. Dabei werden das neue Layout und die zugehörigen Images eingerichtet.
    USB-Verbindung und Stromversorgung währenddessen bestehen lassen.
 4. Nach der Umstellung die Übernahme der WLAN-Daten und die Wiederherstellung
@@ -110,10 +113,9 @@ Partitionstabelle, Hauptfirmware, ServiceApp und Webdateien.
    prüfen. Anschließend bei Bedarf Master und Worker einrichten. Jedes beteiligte
    Gerät benötigt einen zueinander passenden Firmware- und Webdateistand.
 
-**Voraussetzung für diese Beta:** Das verwendete ServiceTool muss die Migration
-auf **1.67.0 mit ServiceApp** ausdrücklich unterstützen. Ältere Tool-Versionen,
-die ausschließlich 1.70.x als Migrationsziel erwarten, sind hierfür nicht geeignet.
-Der Dateiname dieser Neuigkeiten ist keine Freigabe für ein anderes Updatepaket.
+**Voraussetzung:** Das verwendete ServiceTool muss die Migration von 1.66.x
+auf **1.70 mit ServiceApp** unterstützen. Die Umstellung ist auch erforderlich,
+wenn ihr den Brautomat weiterhin als SingleDevice verwendet.
 
 ## Optionaler IDS-Rückkanal
 
@@ -130,7 +132,7 @@ Das Verhalten wird anhand der Rückmeldungen aus der Praxis weiter bewertet.
 
 *„PIN blau [Interrupt]“ steht auf „–“: Der optionale Rückkanal ist deaktiviert.*
 
-## Stand der Beta
+## Entwicklungsstand
 
 Automatisierte Prüfungen und erste Gerätetests begleiten die Entwicklung.
 Die Erprobung an realen Brauanlagen, mit mehreren Workern und unterschiedlichen

@@ -1,12 +1,11 @@
-# What's new: Brautomat32 1.67.0 Beta
+# What's new: Brautomat32 1.70
 
-**1.67.0** is the first beta with **MultiDevice, a new partition layout and
-ServiceApp**. You can distribute your brewery across several Brautomat units
+**1.70** introduces **MultiDevice, a new partition layout and ServiceApp**. You can distribute your brewery across several Brautomat units
 and operate them together. The main firmware also gains more space and a
 dedicated maintenance area for updates and recovery.
 
-This file is already named `whats_new_170.md`; the version described here is
-**1.67.0 Beta**, not 1.70 and not a migration to ESP-IDF 6.
+Version 1.70 is currently available as a **Development version**.
+[Download the complete 1.70 package](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF5dev/Brautomat32.zip).
 
 ## MultiDevice: one brewery, several Brautomat units
 
@@ -89,17 +88,21 @@ main firmware's normal web update uses ServiceApp.
 
 ### One-time migration using ServiceTool
 
-**Changing from the previous partition layout is not a normal web update.**
-A single `firmware.bin` is not sufficient. Use the ServiceTool version intended
-for this beta and its complete, matching beta package, including the partition
-table, main firmware, ServiceApp and web files.
+[Read the illustrated migration guide for 1.70](migration_170.md).
+
+**A web update from 1.66.x or earlier to 1.70 is not possible.**
+The new partition layout requires a one-time migration over USB using
+[ServiceTool](https://github.com/InnuendoPi/ServiceTool/releases/latest).
+A single `firmware.bin` is not sufficient. Use the complete, matching 1.70
+package, including the partition table, main firmware, ServiceApp, LittleFS
+and web files.
 
 1. Stop brewing and connect the Brautomat to your computer by USB. Select the
    correct port and device in ServiceTool. The existing web interface must be
    reachable to transfer your current data.
 2. Create a backup and keep it on your computer. Settings, recipes and profiles
    must remain available even if migration is interrupted.
-3. Use the migration workflow in the matching ServiceTool version with the beta
+3. Use the migration workflow in the matching ServiceTool version with the 1.70
    package. It installs the new layout and the associated images. Keep USB and
    power connected throughout the operation.
 4. After migration, check that Wi-Fi credentials and your saved settings have
@@ -109,10 +112,9 @@ table, main firmware, ServiceApp and web files.
    the mash plan. Then configure Master and Workers if required. All units
    taking part need compatible firmware and web files.
 
-**Requirement for this beta:** ServiceTool must explicitly support migration
-to **1.67.0 with ServiceApp**. Older tool versions that only accept 1.70.x as
-the migration target are not suitable. The name of this news file does not
-authorize the use of a different update package.
+**Requirement:** ServiceTool must support migration from 1.66.x to
+**1.70 with ServiceApp**. Migration is also required if you continue using
+the Brautomat as a SingleDevice.
 
 ## Optional IDS feedback channel
 
@@ -128,7 +130,7 @@ real installations will guide further evaluation of this behaviour.
 
 *The blue-wire interrupt pin is set to “–”: the optional feedback channel is disabled.*
 
-## Beta status
+## Development status
 
 Development is supported by automated checks and initial device tests.
 Trials on real breweries, with several Workers and different Wi-Fi setups,
