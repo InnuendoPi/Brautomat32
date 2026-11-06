@@ -163,6 +163,11 @@
     "MISC_TAB5": "Informações do sistema",
     "MISC_TAB6": "Registro",
     "MISC_BUZZER": "Ativar campainha piezo",
+    "MISC_BUZZER_REMINDER": "Lembrete",
+    "MISC_BUZZER_REPEAT_OFF": "Desativado",
+    "MISC_BUZZER_REPEAT_15": "A cada 15 segundos",
+    "MISC_BUZZER_REPEAT_30": "A cada 30 segundos",
+    "MISC_BUZZER_REPEAT_60": "A cada 60 segundos",
     "MISC_LANG": "Seleção de idioma",
     "MISC_TOAST_EN": "Brindes e alarmes MP3",
     "MISC_TOAST_LIST": [

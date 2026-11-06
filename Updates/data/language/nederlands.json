@@ -163,6 +163,11 @@
     "MISC_TAB5": "SysInfo",
     "MISC_TAB6": "Loggen",
     "MISC_BUZZER": "Activeer de piëzozoemer",
+    "MISC_BUZZER_REMINDER": "Herinnering",
+    "MISC_BUZZER_REPEAT_OFF": "Uit",
+    "MISC_BUZZER_REPEAT_15": "Elke 15 seconden",
+    "MISC_BUZZER_REPEAT_30": "Elke 30 seconden",
+    "MISC_BUZZER_REPEAT_60": "Elke 60 seconden",
     "MISC_LANG": "Taalkeuze",
     "MISC_TOAST_EN": "Toast en MP3-alarmen",
     "MISC_TOAST_LIST": [

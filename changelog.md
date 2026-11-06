@@ -11,7 +11,13 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.66.3
+Version 1.66.5
+
+* Profilwechsel: Die GPIO-Auswahl im Maische-/Fermenterformular zeigt die
+  aktuell geladenen Pins statt einer alten Browserauswahl. Nachguss-Profile
+  werden beim Speichern korrekt Kessel ID 2 zugeordnet.
+
+Version 1.66.4
 
 * Korrektur: Sud und Nachguss bleiben bei manuell gesteuertem Hauptkessel
   temperaturgeregelt. Der manuelle Modus überspringt ihre PID-Berechnung nicht mehr.

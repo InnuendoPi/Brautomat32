@@ -163,6 +163,11 @@
     "MISC_TAB5": "Información del sistema",
     "MISC_TAB6": "Explotación florestal",
     "MISC_BUZZER": "Activar el zumbador piezoeléctrico",
+    "MISC_BUZZER_REMINDER": "Recordatorio",
+    "MISC_BUZZER_REPEAT_OFF": "Desactivado",
+    "MISC_BUZZER_REPEAT_15": "Cada 15 segundos",
+    "MISC_BUZZER_REPEAT_30": "Cada 30 segundos",
+    "MISC_BUZZER_REPEAT_60": "Cada 60 segundos",
     "MISC_LANG": "Selección de idioma",
     "MISC_TOAST_EN": "Brindis y alarmas MP3",
     "MISC_TOAST_LIST": [

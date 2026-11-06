@@ -163,6 +163,11 @@
     "MISC_TAB5": "SysInfo",
     "MISC_TAB6": "Logning",
     "MISC_BUZZER": "Aktiver piezo-brummer",
+    "MISC_BUZZER_REMINDER": "Påmindelse",
+    "MISC_BUZZER_REPEAT_OFF": "Fra",
+    "MISC_BUZZER_REPEAT_15": "Hvert 15. sekund",
+    "MISC_BUZZER_REPEAT_30": "Hvert 30. sekund",
+    "MISC_BUZZER_REPEAT_60": "Hvert 60. sekund",
     "MISC_LANG": "Valg af sprog",
     "MISC_TOAST_EN": "Toasts og MP3-alarmer",
     "MISC_TOAST_LIST": [

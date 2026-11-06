@@ -163,6 +163,11 @@
     "MISC_TAB5": "InfoSys",
     "MISC_TAB6": "Enregistrement",
     "MISC_BUZZER": "Activer le buzzer piézo",
+    "MISC_BUZZER_REMINDER": "Rappel",
+    "MISC_BUZZER_REPEAT_OFF": "Désactivé",
+    "MISC_BUZZER_REPEAT_15": "Toutes les 15 secondes",
+    "MISC_BUZZER_REPEAT_30": "Toutes les 30 secondes",
+    "MISC_BUZZER_REPEAT_60": "Toutes les 60 secondes",
     "MISC_LANG": "Sélection de la langue",
     "MISC_TOAST_EN": "Toasts et alarmes MP3",
     "MISC_TOAST_LIST": [

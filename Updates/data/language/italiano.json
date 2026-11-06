@@ -163,6 +163,11 @@
     "MISC_TAB5": "SysInfo",
     "MISC_TAB6": "Registrazione",
     "MISC_BUZZER": "Attiva il cicalino piezoelettrico",
+    "MISC_BUZZER_REMINDER": "Promemoria",
+    "MISC_BUZZER_REPEAT_OFF": "Disattivato",
+    "MISC_BUZZER_REPEAT_15": "Ogni 15 secondi",
+    "MISC_BUZZER_REPEAT_30": "Ogni 30 secondi",
+    "MISC_BUZZER_REPEAT_60": "Ogni 60 secondi",
     "MISC_LANG": "Selezione della lingua",
     "MISC_TOAST_EN": "Toast e allarmi MP3",
     "MISC_TOAST_LIST": [
