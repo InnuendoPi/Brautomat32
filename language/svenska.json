@@ -176,6 +176,11 @@
     "MISC_TAB5": "SysInfo",
     "MISC_TAB6": "Skogsavverkning",
     "MISC_BUZZER": "Aktivera piezo summer",
+    "MISC_BUZZER_REMINDER": "Påminnelse",
+    "MISC_BUZZER_REPEAT_OFF": "Av",
+    "MISC_BUZZER_REPEAT_15": "Var 15:e sekund",
+    "MISC_BUZZER_REPEAT_30": "Var 30:e sekund",
+    "MISC_BUZZER_REPEAT_60": "Var 60:e sekund",
     "MISC_LANG": "Språkval",
     "MISC_TOAST_EN": "Rostat bröd och MP3-larm",
     "MISC_TOAST_LIST": [

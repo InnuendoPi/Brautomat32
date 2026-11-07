@@ -176,6 +176,11 @@
     "MISC_TAB5": "SysInfo",
     "MISC_TAB6": "Logging",
     "MISC_BUZZER": "Enabled Piezo-Buzzer [D8]",
+    "MISC_BUZZER_REMINDER": "Reminder",
+    "MISC_BUZZER_REPEAT_OFF": "Off",
+    "MISC_BUZZER_REPEAT_15": "Every 15 seconds",
+    "MISC_BUZZER_REPEAT_30": "Every 30 seconds",
+    "MISC_BUZZER_REPEAT_60": "Every 60 seconds",
     "MISC_LANG": "Select language",
     "MISC_TOAST_EN": "Enabled toasts and mp3 alerts",
     "MISC_TOAST_LIST": [

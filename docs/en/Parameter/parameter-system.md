@@ -6,6 +6,12 @@
 
 Enables the piezo buzzer output. Default buzzer pin is `D8` (board layout 2.1). The buzzer can be used for brew-day signal tones.
 
+The **Reminder** setting below the buzzer offers **Off** (default) or a signal
+every **15, 30 or 60 seconds** while waiting for confirmation with AutoNext
+disabled. Continuing, changing steps or stopping ends the reminder. Pausing
+suspends it; the interval starts again after resuming. The selection is disabled
+when the buzzer is off. Browser/MP3 alerts are not repeated.
+
 ### Enable toasts and MP3 alarms
 
 Toasts are small notification boxes shown in the lower right corner of the web UI.

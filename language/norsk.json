@@ -176,6 +176,11 @@
     "MISC_TAB5": "SysInfo",
     "MISC_TAB6": "Logging",
     "MISC_BUZZER": "Aktiver piezo-buzzer",
+    "MISC_BUZZER_REMINDER": "Påminnelse",
+    "MISC_BUZZER_REPEAT_OFF": "Av",
+    "MISC_BUZZER_REPEAT_15": "Hvert 15. sekund",
+    "MISC_BUZZER_REPEAT_30": "Hvert 30. sekund",
+    "MISC_BUZZER_REPEAT_60": "Hvert 60. sekund",
     "MISC_LANG": "Språkvalg",
     "MISC_TOAST_EN": "Aktiverte varsler og mp3-alarmer",
     "MISC_TOAST_LIST": [

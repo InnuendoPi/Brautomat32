@@ -176,6 +176,11 @@
     "MISC_TAB5": "SysInfo",
     "MISC_TAB6": "Logování",
     "MISC_BUZZER": "Aktivujte piezo bzučák",
+    "MISC_BUZZER_REMINDER": "Připomenutí",
+    "MISC_BUZZER_REPEAT_OFF": "Vypnuto",
+    "MISC_BUZZER_REPEAT_15": "Každých 15 sekund",
+    "MISC_BUZZER_REPEAT_30": "Každých 30 sekund",
+    "MISC_BUZZER_REPEAT_60": "Každých 60 sekund",
     "MISC_LANG": "Výběr jazyka",
     "MISC_TOAST_EN": "Tousty a MP3 budíky",
     "MISC_TOAST_LIST": [

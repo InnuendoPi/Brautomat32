@@ -13,9 +13,9 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 Version 1.66.5
 
-* Profilwechsel: Die GPIO-Auswahl im Maische-/Fermenterformular zeigt die
-  aktuell geladenen Pins statt einer alten Browserauswahl. Nachguss-Profile
-  werden beim Speichern korrekt Kessel ID 2 zugeordnet.
+* Erinnerung Buzzer wahlweise alle 15, 30 oder 60 Sekunden beim Warten auf Bestätigung wegen deaktiviertem AutoNext
+* Sonderbefehle ON/OFF werden vor der Kesselauswertung normalisiert
+* Die GPIO-Einstellungen im Maische-/Fermenterformular zeigen bei einem Profilwechsel die aktuell geladenen Pins statt einer alten Browserauswahl
 
 Version 1.66.4
 

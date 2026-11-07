@@ -6,6 +6,13 @@
 
 Mit diesem Parameter kann ein Piezo-Buzzer aktiviert werden. Standardmäßig ist der Buzzer an GPIO D8 angeschlossen. Dies entspricht dem Layout der Platine 2.1. Buzzer Alarme unterstützen den Maischprozess durch Signaltöne.
 
+Unter dem Buzzer lässt sich eine **Erinnerung** einstellen: **Aus** (Standard)
+oder alle **15, 30 oder 60 Sekunden**. Die Wiederholung läuft beim Warten auf
+Bestätigung wegen deaktiviertem AutoNext. Fortsetzen, Schrittwechsel und Stop
+beenden sie. Während einer Pause setzt sie aus; danach beginnt das Intervall neu.
+Bei deaktiviertem Buzzer ist die Auswahl ausgegraut. Browser-/MP3-Alarme werden
+nicht wiederholt.
+
 ### Toasts und mp3 Alarme aktivieren
 
 Toasts sind kleine Push-Nachrichten. Sie erscheinen als Kachel unten rechts im Browser. Mit Ausnahme von Fehlermeldungen werden Toasts nach einigen Sekunden automatisch ausgeblendet. Es gibt Toast-Nachrichten über den Maischprozess, Toast-Nachrichten vom System und textlose mp3-Alarme. Die Eigenschaft Toasts hat 3 Optionen: Aus, Ein und Fehler. Die Option "Aus" schaltet die Alarmmeldungen aus. Die Option "Ein" sendet alle Toast-Nachrichten und mp3-Alarme. Die Option "nur Fehler" sendet nur Toastmeldungen bei Systemfehlern, aber keine Meldungen über den Maischprozess.

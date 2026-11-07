@@ -176,6 +176,11 @@
     "MISC_TAB5": "Informacje o systemie",
     "MISC_TAB6": "Wycięcie lasu",
     "MISC_BUZZER": "Aktywuj brzęczyk piezoelektryczny",
+    "MISC_BUZZER_REMINDER": "Przypomnienie",
+    "MISC_BUZZER_REPEAT_OFF": "Wyłączone",
+    "MISC_BUZZER_REPEAT_15": "Co 15 sekund",
+    "MISC_BUZZER_REPEAT_30": "Co 30 sekund",
+    "MISC_BUZZER_REPEAT_60": "Co 60 sekund",
     "MISC_LANG": "Wybór języka",
     "MISC_TOAST_EN": "Tosty i alarmy MP3",
     "MISC_TOAST_LIST": [
