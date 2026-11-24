@@ -1,7 +1,7 @@
 # Changelog
 
-ESP32 Arduino 3.3.12 ESP-IDF v5.5.5\
-VSCode 1.140 pioarduino IDE 1.4.4\
+ESP32 Arduino 3.3.16 ESP-IDF v5.5.6\
+VSCode 1.147 pioarduino IDE 1.4.8\
 InnuAPID AutoTune PID lib 1.10.19\
 InnuTask lib 1.10.19\
 InnuNextion Display lib 0.9\
@@ -11,8 +11,12 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 ## Änderungen
 
-Version 1.66.5
+Version 1.66.6
 
+* Update:       Arduino v3.3.13 ESP-IDF v5.5.6
+* Update:       ESPAsyncWebServer 3.12.1
+* Update:       AsyncTCP 3.6.1
+* Update:       VSCode 1.147
 * Erinnerung Buzzer wahlweise alle 15, 30 oder 60 Sekunden beim Warten auf Bestätigung wegen deaktiviertem AutoNext
 * Sonderbefehle ON/OFF werden vor der Kesselauswertung normalisiert
 * Die GPIO-Einstellungen im Maische-/Fermenterformular zeigen bei einem Profilwechsel die aktuell geladenen Pins statt einer alten Browserauswahl
