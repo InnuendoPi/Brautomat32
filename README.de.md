@@ -61,16 +61,15 @@ Brautomat32 unterstützt unter anderem:
 
 | Release-Typ | Download |
 | ----------- | -------- |
-| **Release** | [![Stable](https://img.shields.io/static/v1?label=Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) |
-| **1.7 Development (IDF6)** | [Brautomat32.zip](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF6dev/Brautomat32.zip) |
-| **1.66 Development (IDF5)** | [Brautomat32dev.zip](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip) |
+| **1.7 Release (IDF6)** | [Brautomat32.zip](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/Updates/ESP32-IDF6/Brautomat32.zip) |
+| **1.66.6 Release (IDF5)** | [Brautomat32.zip](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/main/build/ESP32-IDF5/Brautomat32.zip) |
 | **ServiceTool** | [Aktuelles ServiceTool-Release](https://github.com/InnuendoPi/ServiceTool/releases/latest) |
 
 ### Umstieg von 1.66.x auf 1.7
 
 Mit [ServiceTool ab 2.1.0](https://github.com/InnuendoPi/ServiceTool/releases/latest) per USB migrieren.
-Unter **Service → Migration** das Paket **IDF6 Development** manuell auswählen.
-Siehe [Anleitung zur Migration](https://github.com/InnuendoPi/Brautomat32/blob/gitbook/docs/de/Installation/info.md#auf-171-development-migrieren).
+Unter **Service → Migration** das Paket **IDF6 Release** auswählen.
+Siehe [Anleitung zur Migration](https://github.com/InnuendoPi/ServiceTool/blob/v2.1.0/MIGRATION.md).
 
 ## Installation
 
