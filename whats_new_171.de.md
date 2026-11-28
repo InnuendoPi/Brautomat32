@@ -97,9 +97,8 @@ der Hauptfirmware nutzt nach der Umstellung die ServiceApp.
 
 ### Einmalige Umstellung über das ServiceTool
 
-Der Wechsel von 1.66.x oder der 1.70-IDF5-Beta auf 1.71 erfordert eine
-neue Partitionstabelle. Die Umstellung erfolgt auch bei einem einzelnen
-Brautomat per USB mit dem [ServiceTool ab 2.1.0](https://github.com/InnuendoPi/ServiceTool/releases/latest).
+Der Umstieg von 1.66.x auf 1.7 erfordert eine neue Partitionstabelle.
+Die Umstellung erfolgt auch bei einem einzelnen Brautomat per USB mit dem [ServiceTool ab 2.1.0](https://github.com/InnuendoPi/ServiceTool/releases/latest).
 
 1. Brau- und Gärprozesse beenden. Den Brautomat per USB verbinden und
    prüfen, ob er über seine Geräte-URL erreichbar ist.

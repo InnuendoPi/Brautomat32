@@ -97,8 +97,8 @@ main firmware's normal web update uses ServiceApp.
 
 ### One-time migration using ServiceTool
 
-Moving from 1.66.x or the 1.70 IDF5 beta to 1.71 requires a new partition
-table. Use [ServiceTool 2.1.0 or later](https://github.com/InnuendoPi/ServiceTool/releases/latest)
+Moving from 1.66.x to 1.7 requires a new partition table.
+Use [ServiceTool 2.1.0 or later](https://github.com/InnuendoPi/ServiceTool/releases/latest)
 to migrate over USB, including for a single Brautomat.
 
 1. Finish brewing and fermentation processes. Connect Brautomat via USB

@@ -13,7 +13,7 @@ InnuFramework CSS/JS bootstrap 5.3.8
 
 * Update auf ESP-IDF 6.1.1 und Arduino 4.0.0.
 * Unterstützung für MultiDevice.
-* Für den Layoutwechsel von 1.66.x oder der 1.70-IDF5-Beta auf IDF6
+* Für den Umstieg von 1.66.x auf 1.7 mit neuem IDF6-Layout
   das [ServiceTool ab Version 2.1.0](https://github.com/InnuendoPi/ServiceTool/releases/latest)
   für Backup, USB-Installation und Restore verwenden.
 * IDF6 verwendet eigene Updatekanäle für Release und Development.
