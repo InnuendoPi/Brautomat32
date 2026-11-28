@@ -18,7 +18,7 @@ Operation happens directly in the browser and is designed for PC, tablet, and sm
 
 ## Firmware Test Status
 
-[![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.66.3%20%7C%2074%20tests%20%7C%2074%20pass%20%7C%200%20fail%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
+[![complete suite](https://img.shields.io/static/v1?label=complete%20suite&message=V%201.71.0%20%7C%2074%20tests%20%7C%2074%20pass%20%7C%200%20fail%20%7C%200%20skip&color=brightgreen)](TEST-RESULTS.md)
 
 Before every release, the firmware is tested automatically and in depth against real equipment. Build, flash, web interface, process flows, restore, and browser regressions are fixed parts of the release test workflows.
 
@@ -59,22 +59,21 @@ Brautomat32 supports, among other things:
 
 ## Download
 
-| Release-Typ | Download |
+| Release type | Download |
 | ----------- | -------- |
 | **Release** | [![Stable](https://img.shields.io/static/v1?label=Stable%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) |
-| **Development** | [![Dev](https://img.shields.io/static/v1?label=Development%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip) |
-| **MultiDevice** | [![New – V 1.70 MultiDevice Support](https://img.shields.io/static/v1?label=New&message=V%201.70%20MultiDevice%20Support&logo=arduino&logoColor=white&color=orange)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF5dev/Brautomat32.zip) |
-| **ServiceTool** | [Aktuelles ServiceTool-Release](https://github.com/InnuendoPi/ServiceTool/releases/latest) |
+| **1.71 Development (IDF6)** | [Brautomat32.zip](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF6dev/Brautomat32.zip) |
+| **1.66 Development (IDF5)** | [Brautomat32dev.zip](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip) |
+| **ServiceTool** | [Latest ServiceTool release](https://github.com/InnuendoPi/ServiceTool/releases/latest) |
 
-**Moving from 1.66.x to 1.70:** A web update is not possible because of the new
-partition layout. The one-time migration requires USB and
-[ServiceTool](https://github.com/InnuendoPi/ServiceTool/releases/latest).
-See [what’s new and the migration guide for 1.70](whats_new_170.md).
+**Moving to 1.71 Development:** Use [ServiceTool 2.1.0 or later](https://github.com/InnuendoPi/ServiceTool/releases/latest)
+to migrate from 1.66.x or the 1.70 IDF5 beta over USB. Select the IDF6
+Development package under **Service → Migration**.
+See the [migration guide](https://github.com/InnuendoPi/Brautomat32/blob/gitbook/docs/en/Installation/info.md#migrate-to-171-development).
 
 ## Installation
 
 Download [Brautomat ServiceTool](https://github.com/InnuendoPi/ServiceTool/releases/latest) for Windows, macOS or linux
-![Firmware](ServiceTool/img/firmware.jpg)
 
 Alternatively on Windows just run
 

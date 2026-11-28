@@ -1,11 +1,20 @@
-# Was ist neu: Brautomat32 1.70
+﻿# Was ist neu in Brautomat32 1.71.0?
 
-**1.70** bringt **MultiDevice, ein neues Partitionslayout und ServiceApp**. Ihr könnt eure Brauanlage auf mehrere Brautomaten verteilen
-und gemeinsam bedienen. Gleichzeitig erhält die Hauptfirmware mehr Platz und
-einen eigenen Wartungsbereich für Updates und Wiederherstellung.
+**1.71.0 Development** bringt MultiDevice, ServiceApp und den Wechsel auf
+ESP-IDF 6.1.1 mit Arduino 4.0.0. MultiDevice bleibt optional.
 
-Version 1.70 wird derzeit als **Development-Version** bereitgestellt.
-[Download des vollständigen 1.70-Pakets](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF5dev/Brautomat32.zip).
+[IDF6-Development-Paket herunterladen](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF6dev/Brautomat32.zip)
+
+## Weitere Änderungen seit 1.66.6
+
+- Maische- und Gärpläne können Leerzeichen und Umlaute im Dateinamen enthalten.
+  Für neue Namen gilt die Grenze von 50 Zeichen einschließlich `.json`.
+- Der Recovery-AP enthält eine eigene Seite zur WLAN-Einrichtung.
+- In der Piezo-GPIO-Auswahl steht `-` für deaktiviert.
+- Webhook-Basis-URLs erlauben bis zu 127 ASCII-Zeichen. `true/false` steht
+  zusätzlich für Geräte wie Shelly Gen2 und Gen3 zur Verfügung.
+- IDF6 verwendet getrennte Updatekanäle für Release und Development.
+  Zusatzsprachen werden bei Bedarf separat geladen.
 
 ## MultiDevice: eine Anlage, mehrere Brautomaten
 
@@ -75,7 +84,7 @@ Manueller Modus und Fermentermodus bleiben lokal.
 
 *Der Zeitstrahl zeigt den Auftrag „Pumpe1:ON“ mit Worker1-Badge. Der Maischeplan ist noch nicht gestartet; die Zeiten sind Vorschauwerte.*
 
-## Neues Partitionslayout und ServiceApp
+## Partitionslayout und ServiceApp
 
 Der Flash-Speicher wird neu aufgeteilt: Die Hauptfirmware erhält einen größeren
 Bereich, daneben liegt die separate **ServiceApp**. Sie übernimmt Wartungsaufgaben
@@ -88,34 +97,21 @@ der Hauptfirmware nutzt nach der Umstellung die ServiceApp.
 
 ### Einmalige Umstellung über das ServiceTool
 
-[Zur bebilderten Migrationsanleitung für 1.70](migration_170.de.md).
+Der Wechsel von 1.66.x oder der 1.70-IDF5-Beta auf 1.71 erfordert eine
+neue Partitionstabelle. Die Umstellung erfolgt auch bei einem einzelnen
+Brautomat per USB mit dem [ServiceTool ab 2.1.0](https://github.com/InnuendoPi/ServiceTool/releases/latest).
 
-**Ein WebUpdate von 1.66.x oder älter auf 1.70 ist nicht möglich.**
-Das neue Partitionslayout erfordert eine einmalige Umstellung per USB mit dem
-[ServiceTool](https://github.com/InnuendoPi/ServiceTool/releases/latest).
-Eine einzelne `firmware.bin` genügt dafür nicht. Verwendet das vollständige,
-zusammengehörige 1.70-Paket einschließlich Partitionstabelle, Hauptfirmware,
-ServiceApp, LittleFS und Webdateien.
+1. Brau- und Gärprozesse beenden. Den Brautomat per USB verbinden und
+   prüfen, ob er über seine Geräte-URL erreichbar ist.
+2. In **Service → Migration** das Paket **IDF6 Development** manuell
+   auswählen. Den USB-Port und die angezeigte Zielversion 1.71.0 prüfen.
+3. **Migration starten** wählen. Das ServiceTool sichert die Daten,
+   schreibt Partitionstabelle, Hauptfirmware und ServiceApp per USB und
+   spielt die Sicherung zurück. USB und Strom bis zum Abschluss verbunden lassen.
+4. Vor dem nächsten Brauen Einstellungen, Pläne und Gerätezuordnungen prüfen.
 
-1. Den Braubetrieb beenden und den Brautomat per USB mit dem Computer verbinden.
-   Im ServiceTool den richtigen Port und das richtige Gerät auswählen. Für die
-   Übernahme bestehender Daten muss das bisherige Webinterface erreichbar sein.
-2. Eine Sicherung erstellen und auf dem Computer aufbewahren. Einstellungen,
-   Rezepte und Profile müssen auch dann verfügbar bleiben, wenn die Umstellung
-   unterbrochen wird.
-3. Den Migrationsablauf der passenden ServiceTool-Version mit dem 1.70-Paket
-   verwenden. Dabei werden das neue Layout und die zugehörigen Images eingerichtet.
-   USB-Verbindung und Stromversorgung währenddessen bestehen lassen.
-4. Nach der Umstellung die Übernahme der WLAN-Daten und die Wiederherstellung
-   der gesicherten Einstellungen prüfen; nötigenfalls die Sicherung über den
-   vorgesehenen Restore-Ablauf einspielen.
-5. Vor dem ersten Brauen Sensorzuordnung, Kessel, Aktoren, Profile und Maischeplan
-   prüfen. Anschließend bei Bedarf Master und Worker einrichten. Jedes beteiligte
-   Gerät benötigt einen zueinander passenden Firmware- und Webdateistand.
-
-**Voraussetzung:** Das verwendete ServiceTool muss die Migration von 1.66.x
-auf **1.70 mit ServiceApp** unterstützen. Die Umstellung ist auch erforderlich,
-wenn ihr den Brautomat weiterhin als SingleDevice verwendet.
+Nach der Umstellung können weitere Updates innerhalb des IDF6-Development-Kanals
+per WebUpdate eingespielt werden.
 
 ## Optionaler IDS-Rückkanal
 

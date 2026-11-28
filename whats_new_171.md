@@ -1,11 +1,20 @@
-# What's new: Brautomat32 1.70
+﻿# What's new in Brautomat32 1.71.0?
 
-**1.70** introduces **MultiDevice, a new partition layout and ServiceApp**. You can distribute your brewery across several Brautomat units
-and operate them together. The main firmware also gains more space and a
-dedicated maintenance area for updates and recovery.
+**1.71.0 Development** brings MultiDevice, ServiceApp and the move to
+ESP-IDF 6.1.1 with Arduino 4.0.0. MultiDevice remains optional.
 
-Version 1.70 is currently available as a **Development version**.
-[Download the complete 1.70 package](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF5dev/Brautomat32.zip).
+[Download the IDF6 Development package](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF6dev/Brautomat32.zip)
+
+## Other changes since 1.66.6
+
+- Mash and fermentation plan filenames can contain spaces and accented
+  characters. New filenames are limited to 50 characters including `.json`.
+- The recovery access point provides its own Wi-Fi setup page.
+- In the piezo GPIO selector, `-` disables the buzzer.
+- Webhook base URLs can contain up to 127 ASCII characters. The added
+  `true/false` option supports devices such as Shelly Gen2 and Gen3.
+- IDF6 uses separate Release and Development update channels.
+  Additional languages are downloaded on demand.
 
 ## MultiDevice: one brewery, several Brautomat units
 
@@ -75,7 +84,7 @@ then resumed explicitly. Manual mode and fermenter mode remain local.
 
 *The “Pumpe1:ON” command shows its Worker assignment. Times are estimates before brewing starts.*
 
-## New partition layout and ServiceApp
+## Partition layout and ServiceApp
 
 Flash memory is divided differently: the main firmware gets a larger area,
 with a separate **ServiceApp** alongside it. ServiceApp handles maintenance
@@ -88,33 +97,21 @@ main firmware's normal web update uses ServiceApp.
 
 ### One-time migration using ServiceTool
 
-[Read the illustrated migration guide for 1.70](migration_170.md).
+Moving from 1.66.x or the 1.70 IDF5 beta to 1.71 requires a new partition
+table. Use [ServiceTool 2.1.0 or later](https://github.com/InnuendoPi/ServiceTool/releases/latest)
+to migrate over USB, including for a single Brautomat.
 
-**A web update from 1.66.x or earlier to 1.70 is not possible.**
-The new partition layout requires a one-time migration over USB using
-[ServiceTool](https://github.com/InnuendoPi/ServiceTool/releases/latest).
-A single `firmware.bin` is not sufficient. Use the complete, matching 1.70
-package, including the partition table, main firmware, ServiceApp, LittleFS
-and web files.
+1. Finish brewing and fermentation processes. Connect Brautomat via USB
+   and make sure it is reachable at its device URL.
+2. In **Service → Migration**, manually select **IDF6 Development**.
+   Check the USB port and verify that the target version is 1.71.0.
+3. Select **Start migration**. ServiceTool backs up the data, writes the
+   partition table, main firmware and ServiceApp via USB, and restores
+   the backup. Keep USB and power connected until the migration finishes.
+4. Check your settings, plans and equipment assignments before brewing again.
 
-1. Stop brewing and connect the Brautomat to your computer by USB. Select the
-   correct port and device in ServiceTool. The existing web interface must be
-   reachable to transfer your current data.
-2. Create a backup and keep it on your computer. Settings, recipes and profiles
-   must remain available even if migration is interrupted.
-3. Use the migration workflow in the matching ServiceTool version with the 1.70
-   package. It installs the new layout and the associated images. Keep USB and
-   power connected throughout the operation.
-4. After migration, check that Wi-Fi credentials and your saved settings have
-   been restored. If necessary, use the provided restore workflow to apply
-   your backup.
-5. Before brewing, check sensor assignments, kettles, actuators, profiles and
-   the mash plan. Then configure Master and Workers if required. All units
-   taking part need compatible firmware and web files.
-
-**Requirement:** ServiceTool must support migration from 1.66.x to
-**1.70 with ServiceApp**. Migration is also required if you continue using
-the Brautomat as a SingleDevice.
+After migration, use WebUpdate for subsequent updates within the IDF6
+Development channel.
 
 ## Optional IDS feedback channel
 

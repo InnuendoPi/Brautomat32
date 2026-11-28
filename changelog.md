@@ -1,6 +1,34 @@
 # Changelog
 
-ESP32 Arduino 3.3.16 ESP-IDF v5.5.6\
+ESP32 Arduino 4.0.0 ESP-IDF v6.1.1\
+VSCode 1.147 pioarduino IDE 1.4.8\
+InnuAPID AutoTune PID lib 1.11.0\
+InnuTask lib 1.11.0\
+InnuNextion Display lib 1.0\
+InnuMax31865 Sensor lib 0.2\
+InnuLog Debug lib serial monitor\
+InnuFramework CSS/JS bootstrap 5.3.8
+
+## Version 1.71.0
+
+* Update auf ESP-IDF 6.1.1 und Arduino 4.0.0.
+* Unterstützung für MultiDevice.
+* Für den Layoutwechsel von 1.66.x oder der 1.70-IDF5-Beta auf IDF6
+  das [ServiceTool ab Version 2.1.0](https://github.com/InnuendoPi/ServiceTool/releases/latest)
+  für Backup, USB-Installation und Restore verwenden.
+* IDF6 verwendet eigene Updatekanäle für Release und Development.
+  Zusatzsprachen verwenden einen eigenen Downloadpfad.
+* Der Recovery-AP stellt eine eingebettete WLAN-Einrichtungsseite bereit.
+* Dateinamen für Maische- und Gärpläne behalten Leerzeichen und Umlaute.
+  Neue Dateinamen sind einschließlich `.json` auf 50 Zeichen begrenzt.
+* Die Piezo-GPIO-Auswahl zeigt den gespeicherten Wert. `-` steht für
+  deaktiviert.
+* Webhook-Basis-URLs erlauben 127 ASCII-Zeichen. `true/false` ergänzt
+  die vorhandenen Schaltwerte, etwa für Shelly Gen2 und Gen3.
+
+## Änderungen bis 1.66.6
+
+ESP32 Arduino 3.3.13 ESP-IDF v5.5.6\
 VSCode 1.147 pioarduino IDE 1.4.8\
 InnuAPID AutoTune PID lib 1.10.19\
 InnuTask lib 1.10.19\
@@ -9,14 +37,13 @@ InnuMax31865 Sensor lib 0.2\
 InnuLog Debug lib serial monitor\
 InnuFramework CSS/JS bootstrap 5.3.8
 
-## Änderungen
-
-Version 1.66.6
+### Version 1.66.6
 
 * Update:       Arduino v3.3.13 ESP-IDF v5.5.6
 * Update:       ESPAsyncWebServer 3.12.1
 * Update:       AsyncTCP 3.6.1
 * Update:       VSCode 1.147
+* Die Piezo-GPIO-Auswahl zeigt beim Öffnen den gespeicherten Wert.
 * Erinnerung Buzzer wahlweise alle 15, 30 oder 60 Sekunden beim Warten auf Bestätigung wegen deaktiviertem AutoNext
 * Sonderbefehle ON/OFF werden vor der Kesselauswertung normalisiert
 * Die GPIO-Einstellungen im Maische-/Fermenterformular zeigen bei einem Profilwechsel die aktuell geladenen Pins statt einer alten Browserauswahl
