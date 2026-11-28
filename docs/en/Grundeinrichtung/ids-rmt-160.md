@@ -49,4 +49,3 @@ This improves `L` measurement quality.
 
 - [Set up the cooker](ids.md)
 - [Troubleshooting](../FAQ/troubleshooting.md)
-- [What's New 1.60.x](../WhatsNew/whats-new-160.md)

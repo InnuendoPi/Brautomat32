@@ -1,8 +1,9 @@
 # MultiDevice
 
 MultiDevice lets you distribute your brewery across several Brautomat units
-and operate them through a Master's shared web interface. It is provided
-with **version 1.70**. A single Brautomat can still be used in SingleDevice mode.
+and operate them through a Master's shared web interface. MultiDevice is
+available in **1.71 Development**. A single Brautomat can still be used in
+SingleDevice mode.
 
 ## Master and Workers
 

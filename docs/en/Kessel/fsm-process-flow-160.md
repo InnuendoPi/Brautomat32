@@ -87,4 +87,3 @@ Pause/resume, timeout handling, step changes, and UI timing all use the same tim
 ## See also
 
 - [PID engine reference 1.60 (Power User)](pid-engine-160-reference.md)
-- [What's New 1.60.x](../WhatsNew/whats-new-160.md)

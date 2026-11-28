@@ -94,4 +94,3 @@ In practice, tuning factor is usually the first and most effective fine-tuning l
 - [AutoTune process (Power User)](../Autotune-pid/atune.md)
 - [Brew-day quick guide](../Autotune-pid/brew-day-quick-guide.md)
 - [FSM process flow 1.60 (Power User)](fsm-process-flow-160.md)
-- [What's New 1.60.x](../WhatsNew/whats-new-160.md)

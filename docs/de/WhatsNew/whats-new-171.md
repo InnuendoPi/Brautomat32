@@ -1,12 +1,7 @@
-# Was ist neu 1.70.x
+# Was ist neu in 1.71.0?
 
-**1.70** bringt **MultiDevice, ein neues Partitionslayout und ServiceApp**. Ihr könnt
-eure Brauanlage auf mehrere Brautomaten verteilen
-und gemeinsam bedienen. Gleichzeitig erhält die Hauptfirmware mehr Platz und
-einen eigenen Wartungsbereich für Updates und Wiederherstellung.
-
-Version 1.70 wird derzeit als **Development-Version** bereitgestellt.
-[Download des vollständigen 1.70-Pakets](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF5dev/Brautomat32.zip).
+**1.71.0 Development** stellt Brautomat32 auf ESP-IDF 6.1.1 und
+Arduino 4.0.0 um.
 
 ## MultiDevice: eine Anlage, mehrere Brautomaten
 
@@ -80,7 +75,7 @@ Weitere Details findest du unter [MultiDevice](../MultiDevice/info.md),
 
 *Der Zeitstrahl zeigt den Auftrag „Pumpe1:ON“ mit Worker1-Badge. Der Maischeplan ist noch nicht gestartet; die Zeiten sind Vorschauwerte.*
 
-## Neues Partitionslayout und ServiceApp
+## Partitionslayout und ServiceApp
 
 Der Flash-Speicher wird neu aufgeteilt: Die Hauptfirmware erhält einen größeren
 Bereich, daneben liegt die separate **ServiceApp**. Sie übernimmt Wartungsaufgaben
@@ -91,37 +86,23 @@ ServiceApp und ServiceTool sind zwei verschiedene Dinge: Die **ServiceApp läuft
 auf dem Brautomat**, das **ServiceTool auf eurem Computer**. Das normale WebUpdate
 der Hauptfirmware nutzt nach der Umstellung die ServiceApp.
 
-### Einmalige Umstellung über das ServiceTool
+## Auf 1.71 wechseln
 
-Hinweise zur Installation des ServiceTools stehen im Kapitel
-[Installation](../Installation/info.md). Die Umstellung ist im Folgenden beschrieben.
+Von 1.66.x auf 1.71 erfolgt der Layoutwechsel per USB mit
+ServiceTool ab 2.1.0. Die Anleitung beschreibt die manuelle Auswahl von
+**IDF6 Development** und den Ablauf mit Sicherung und Wiederherstellung.
 
-**Ein WebUpdate von 1.66.x oder älter auf 1.70 ist nicht möglich.**
-Das neue Partitionslayout erfordert eine einmalige Umstellung per USB mit dem
-[ServiceTool](https://github.com/InnuendoPi/ServiceTool/releases/latest).
-Eine einzelne `firmware.bin` genügt dafür nicht. Verwendet das vollständige,
-zusammengehörige 1.70-Paket einschließlich Partitionstabelle, Hauptfirmware,
-ServiceApp, LittleFS und Webdateien.
+[Migration zu 1.71 Development](../Installation/info.md#auf-171-development-migrieren)
 
-1. Den Braubetrieb beenden und den Brautomat per USB mit dem Computer verbinden.
-   Im ServiceTool den richtigen Port und das richtige Gerät auswählen. Für die
-   Übernahme bestehender Daten muss das bisherige Webinterface erreichbar sein.
-2. Eine Sicherung erstellen und auf dem Computer aufbewahren. Einstellungen,
-   Rezepte und Profile müssen auch dann verfügbar bleiben, wenn die Umstellung
-   unterbrochen wird.
-3. Den Migrationsablauf der passenden ServiceTool-Version mit dem 1.70-Paket
-   verwenden. Dabei werden das neue Layout und die zugehörigen Images eingerichtet.
-   USB-Verbindung und Stromversorgung währenddessen bestehen lassen.
-4. Nach der Umstellung die Übernahme der WLAN-Daten und die Wiederherstellung
-   der gesicherten Einstellungen prüfen; nötigenfalls die Sicherung über den
-   vorgesehenen Restore-Ablauf einspielen.
-5. Vor dem ersten Brauen Sensorzuordnung, Kessel, Aktoren, Profile und Maischeplan
-   prüfen. Anschließend bei Bedarf Master und Worker einrichten. Jedes beteiligte
-   Gerät benötigt einen zueinander passenden Firmware- und Webdateistand.
+## Weitere Änderungen seit 1.66.6
 
-**Voraussetzung:** Das verwendete ServiceTool muss die Migration von 1.66.x
-auf **1.70 mit ServiceApp** unterstützen. Die Umstellung ist auch erforderlich,
-wenn ihr den Brautomat weiterhin als SingleDevice verwendet.
+- **Maische- und Gärpläne** behalten Leerzeichen und Umlaute im Dateinamen.
+  Neue Namen dürfen einschließlich `.json` bis zu 50 Zeichen lang sein.
+- Der Recovery-Access-Point bietet eine Seite zur WLAN-Einrichtung.
+  Zusatzsprachen werden bei Bedarf separat geladen.
+- Die Piezo-GPIO-Auswahl zeigt den gespeicherten Wert. `-` deaktiviert den Buzzer.
+- Webhook-Basis-URLs dürfen bis zu 127 ASCII-Zeichen enthalten.
+  `true/false` steht zusätzlich für Geräte wie Shelly Gen2 und Gen3 zur Verfügung.
 
 ## Optionaler IDS-Rückkanal
 

@@ -132,6 +132,11 @@ Möglicher Ablauf:
 
 ## Webhook
 
+Für Kessel ist die direkte Ansteuerung vorzuziehen. **Entscheidend ist
+die Dauer des einzelnen Heizimpulses.** Bei langen Impulsen eines trägen
+Nachgusskessels fallen einige Sekunden WLAN-Verzögerung weniger ins Gewicht.
+Bei kurzen Impulsen kann dieselbe Verzögerung die Heizdauer erheblich verändern.
+
 Ein Wechsel der Webhook-URL oder des Schaltmodus stoppt die Regelung und
 schaltet zuerst das bisherige Ziel ab. Das gilt auch für Profilübernahmen.
 Die Regeln für AUS-Wiederholung, volle Auftragsspeicher und das Warten vor
@@ -144,17 +149,5 @@ Für Webhook-Steuerung:
 
 ![webhook](../.gitbook/assets/kessel_webhook1.jpg)
 
-Beispiel Shelly 1PM:
-
-* Ein: [http://192.168.1.5/relay/0?turn=on](http://192.168.1.5/relay/0?turn=on)
-* Aus: [http://192.168.1.5/relay/0?turn=off](http://192.168.1.5/relay/0?turn=off)
-
-Webhook-Basis-URL:
-
-[http://192.168.1.5/relay/0?turn=](http://192.168.1.5/relay/0?turn=)
-
-Schaltmodus im Webinterface: `on/off`
-
-Tasmota-Beispiel:
-
-[http://192.168.x.x/cm?cmnd=Power1%201](http://192.168.x.x/cm?cmnd=Power1%201)
+Basis-URLs und Schaltwerte für Shelly und Tasmota stehen unter
+[Aktoren: Webhook](../Aktoren/act.md#webhook).

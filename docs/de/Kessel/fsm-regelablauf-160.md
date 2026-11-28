@@ -87,4 +87,3 @@ Pause/Fortsetzen, Timeout, Stepwechsel und UI-Zeitbezug greifen auf dieselbe Zei
 ## Siehe auch
 
 - [PID-Engine Referenz 1.60 (Fortgeschrittene)](pid-engine-160-referenz.md)
-- [Was ist neu 1.60.x](../WhatsNew/whats-new-160.md)

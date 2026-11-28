@@ -128,6 +128,11 @@ Practical principle in multi-kettle setups:
 
 ## Webhook
 
+Prefer direct control for kettles. **The duration of each heating pulse
+matters.** On a slow-responding sparge-water kettle, a few seconds of
+Wi-Fi delay matter less during long pulses. The same delay can substantially
+change the heating time of a short pulse.
+
 Changing the webhook URL or switching command stops regulation and switches
 off the previous target first. This also applies when loading a profile.
 See [Actuators: Webhook](../Aktoren/act.md#webhook) for OFF retries, a full
@@ -140,17 +145,5 @@ To use webhook controls:
 
 ![webhook](../.gitbook/assets/kessel_webhook1.jpg)
 
-Example Shelly 1PM:
-
-* ON: [http://192.168.1.5/relay/0?turn=on](http://192.168.1.5/relay/0?turn=on)
-* OFF: [http://192.168.1.5/relay/0?turn=off](http://192.168.1.5/relay/0?turn=off)
-
-Webhook base URL:
-
-[http://192.168.1.5/relay/0?turn=](http://192.168.1.5/relay/0?turn=)
-
-Set webhook switch parameter to `on/off`.
-
-Tasmota example:
-
-[http://192.168.x.x/cm?cmnd=Power1%201](http://192.168.x.x/cm?cmnd=Power1%201)
+For Shelly and Tasmota base URLs and switching values, see
+[Actuators: Webhook](../Aktoren/act.md#webhook).

@@ -2,8 +2,8 @@
 
 Mit MultiDevice verteilst du deine Brauanlage auf mehrere Brautomaten und
 bedienst sie über das gemeinsame Webinterface eines Masters. Die Funktion
-wird mit **Version 1.70** bereitgestellt. Ein einzelner Brautomat bleibt weiterhin als
-SingleDevice nutzbar.
+ist in **1.71 Development** verfügbar. Ein einzelner Brautomat bleibt
+als SingleDevice nutzbar.
 
 ## Master und Worker
 

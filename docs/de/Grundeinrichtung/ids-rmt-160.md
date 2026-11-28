@@ -49,4 +49,3 @@ Dadurch wird die `L`-Messung robuster.
 
 - [Kochfeld einrichten](ids.md)
 - [Fehlerbehebung](../FAQ/troubleshooting.md)
-- [Was ist neu 1.60.x](../WhatsNew/whats-new-160.md)

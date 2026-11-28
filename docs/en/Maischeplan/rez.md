@@ -37,7 +37,9 @@ _Important (from 1.60):_ Recipe import, renaming, copying, changing and deleting
 
 _Note:_ ESP microcontrollers have limited RAM. Recipes with very long text, images or other attachments may fail to import. The Brautomat filters recipes before import. Even so, it may still be necessary to remove images and very long descriptions before importing.
 
-Imported recipes are saved in the `/Rezepte` folder. The recipe name is used as the file name. The maximum file name length in the Arduino file system is 31 characters. Spaces and umlauts are replaced when saving.
+Imported recipes are stored in `/Rezepte`. Starting with 1.71, new file
+names can contain up to 50 characters including `.json`. Spaces within
+the name and umlauts are preserved. Invalid filenames are rejected.
 
 ### Export mash plan
 

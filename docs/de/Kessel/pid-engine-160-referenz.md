@@ -8,7 +8,7 @@
 ## Zweck
 
 Diese Referenz beschreibt die neue PID-Engine ab 1.60 aus Sicht des Laufzeitverhaltens.
-Fokus sind die Abschnitte aus `whats_new_160.de.md` zu `Compute()`, L/R-AutoTune und Tuning Factor.
+Die Referenz erläutert `Compute()`, L/R-AutoTune und den Tuning Factor.
 
 ## Grundidee der Engine
 
@@ -96,4 +96,3 @@ Dadurch ist er in der Praxis häufig die wirksamste erste Stellgroesse vor manue
 - [AutoTune Prozess (Fortgeschrittene)](../Autotune-pid/atune.md)
 - [Praxisleitfaden Brautag](../Autotune-pid/praxisleitfaden-brautag.md)
 - [FSM Regelablauf 1.60 (Fortgeschrittene)](fsm-regelablauf-160.md)
-- [Was ist neu 1.60.x](../WhatsNew/whats-new-160.md)

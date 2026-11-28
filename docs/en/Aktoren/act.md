@@ -44,11 +44,12 @@ Set the actuator GPIO parameter to `-` to show webhook fields in the web interfa
 
 ![webhook](../.gitbook/assets/aktoren_webhook1.jpg)
 
-Example: Shelly 1PM
+Starting with 1.71, base URLs can contain up to 127 ASCII characters.
+Brautomat appends the selected switching value.
 
-Turn on Shelly 1PM: [http://192.168.1.5/relay/0?turn=on](http://192.168.1.5/relay/0?turn=on)\
-Turn off Shelly 1PM: [http://192.168.1.5/relay/0?turn=off](http://192.168.1.5/relay/0?turn=off)
-
-Webhook base URL for Shelly 1PM: [http://192.168.1.5/relay/0?turn=](http://192.168.1.5/relay/0?turn=) (without `on` and `off`). The webhook switch parameter should be set to `on/off`.
-
-Tasmota example URL: [http://192.168.1.5/cm?cmnd=Power1%201](http://192.168.1.5/cm?cmnd=Power1%201)
+| Device | Base URL | Switching values |
+| --- | --- | --- |
+| Shelly Gen1 | `http://192.168.1.5/relay/0?turn=` | `on/off` |
+| Shelly Gen2 | `http://192.168.1.5/rpc/Switch.Set?id=0&on=` | `true/false` |
+| Shelly Gen3 | `http://192.168.1.5/rpc/Switch.Set?id=0&on=` | `true/false` |
+| Tasmota | `http://192.168.1.5/cm?cmnd=Power1%20` | `1/0` |

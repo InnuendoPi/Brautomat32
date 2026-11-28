@@ -2,12 +2,8 @@
 
 ## Preparation
 
-Use compatible **1.70-generation** firmware and web files on all participating
-Brautomat units. **A web update from 1.66.x or earlier to 1.70 is not possible.**
-The new partition layout with ServiceApp requires a one-time migration over USB
-using ServiceTool. Back up each device’s settings, recipes and profiles first.
-Use a complete, matching 1.70 package; a single `firmware.bin` is not sufficient.
-See [Installation](../Installation/info.md) for more information about ServiceTool.
+Use compatible 1.71 firmware and web files on all participating Brautomat
+units. For USB migration, see [Installation](../Installation/info.md#migrate-to-171-development).
 Set up each device individually first.
 
 All devices must be able to reach each other on the same local network.

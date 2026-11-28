@@ -37,11 +37,12 @@ Der Parameter Aktor GPIO muss auf "-" eingestellt werden, damit die Webhook-Elem
 
 ![webhook](../.gitbook/assets/aktoren_webhook1.jpg)
 
-Beispiel Shelly 1PM:
+Ab 1.71 darf die Basis-URL bis zu 127 ASCII-Zeichen lang sein.
+Der Brautomat hängt den gewählten Schaltwert automatisch an.
 
-Shelly 1PM einschalten: [http://192.168.1.5/relay/0?turn=on](http://192.168.1.5/relay/0?turn=on)\
-Shelly 1PM ausschalten: [http://192.168.1.5/relay/0?turn=off](http://192.168.1.5/relay/0?turn=off)
-
-Die Webhook-URL für Shelly 1PM lautet: [http://192.168.1.5/relay/0?turn=](http://192.168.1.5/relay/0?turn=) (ohne on und off). Der Parameter Webhook-Schalter muss auf "on/off" eingestellt werden.
-
-URL Tasmota: [http://192.168.1.5/cm?cmnd=Power1%201](http://192.168.1.5/cm?cmnd=Power1%201)
+| Gerät | Basis-URL | Schaltwerte |
+| --- | --- | --- |
+| Shelly Gen1 | `http://192.168.1.5/relay/0?turn=` | `on/off` |
+| Shelly Gen2 | `http://192.168.1.5/rpc/Switch.Set?id=0&on=` | `true/false` |
+| Shelly Gen3 | `http://192.168.1.5/rpc/Switch.Set?id=0&on=` | `true/false` |
+| Tasmota | `http://192.168.1.5/cm?cmnd=Power1%20` | `1/0` |

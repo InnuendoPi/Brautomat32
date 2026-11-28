@@ -2,13 +2,9 @@
 
 ## Vorbereiten
 
-Verwende auf allen beteiligten Brautomaten zueinander passende Firmware- und
-Webdateistände der Generation **1.70**. **Ein WebUpdate von 1.66.x oder älter
-auf 1.70 ist nicht möglich.** Das neue Partitionslayout mit ServiceApp erfordert
-eine einmalige Umstellung per USB mit dem ServiceTool. Sichere vorher die
-Einstellungen, Rezepte und Profile jedes Geräts. Verwende ein vollständiges,
-zusammengehöriges 1.70-Paket; eine einzelne `firmware.bin` genügt nicht.
-Weitere Hinweise zum ServiceTool stehen unter [Installation](../Installation/info.md).
+Verwende auf allen beteiligten Brautomaten zueinander passende Firmware-
+und Webdateistände von 1.71. Informationen zur USB-Migration stehen unter
+[Installation](../Installation/info.md#auf-171-development-migrieren).
 Richte jedes Gerät zunächst einzeln ein.
 
 Alle Geräte müssen sich im selben lokalen Netzwerk erreichen können. Ein

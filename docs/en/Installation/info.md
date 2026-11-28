@@ -21,26 +21,11 @@ plan management, and the serial log.
 
 ### First setup with the ServiceTool
 
-1. Connect the ESP32 to the computer by USB and select the correct COM port
-   in the ServiceTool.
-2. Open **Firmware**, select **Latest Release**, and start flashing. Keep
-   **Web files** enabled so that firmware and web interface match.
-3. Keep **Flash erase** disabled. Enable it only for an explicitly intended
-   clean rebuild, because it removes data from the device.
-4. After flashing, enter the Wi-Fi credentials in the ServiceTool and send
-   them to the Brautomat. Wait until the status shows **Online**.
-5. In **Backup & Restore**, create a named backup before later changing
-   firmware, web files, or configuration.
-6. Then manage mash plans, fermentation plans, and profiles in
-   **Management**. The serial log is available in **Serial Monitor**.
-
-The status indicator provides orientation:
-
-- **No device**: Check USB cable, COM port, or network connection.
-- **Serial**: The device is reachable by USB; firmware can be flashed, but
-  network functions are not available yet.
-- **Online**: Brautomat is reachable through the network API; all ServiceTool
-  functions are available.
+1. Connect a single Brautomat to the computer by USB.
+2. Open **Assistants → Set up Brautomat** and follow the firmware and Wi-Fi
+   steps. A complete reset removes existing data. Back up first if you
+   need to keep it.
+3. Wait until the Brautomat is reachable over Wi-Fi.
 
 After the first flash and Wi-Fi setup, continue with the
 [safety check before the first heat test](safety-check-first-heat-test.md).
@@ -49,14 +34,27 @@ Then continue with [Basic Setup](../Grundeinrichtung/info.md).
 > **Note:** The manual ZIP archive and `Flashen.cmd` method remains available
 > as a technical fallback if the ServiceTool cannot be used.
 
+## Migrate to 1.71 Development
+
+To move from 1.66.x to 1.71, use ServiceTool 2.1.0 or later to migrate
+to the new IDF6 flash layout over USB.
+
+1. Stop any brewing or fermentation process. Connect Brautomat by USB
+   and check that it is also reachable over Wi-Fi.
+2. Open **Service → Migration** and manually select **IDF6 Development**.
+   Check the serial port and the displayed target version.
+3. Select **Start migration**. ServiceTool backs up the data, writes the
+   new flash layout with the main firmware and ServiceApp, and restores
+   the backup. Keep USB and power connected until migration finishes.
+
 ## Manual fallback: flash firmware on Windows
 
-Brautomat32 runs on ESP32 and is based on ESP-IDF5.
-
 - [Download Release](https://github.com/InnuendoPi/Brautomat32/releases/latest)
-- [Download Development build](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip)
+- [1.71 Development (IDF6)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF6dev/Brautomat32.zip)
 
-If you are not using the ServiceTool:
+For a fresh installation, use the `Flashen.cmd` included in the
+selected package. It overwrites LittleFS. To keep existing data, follow
+the [migration guide](#migrate-to-171-development).
 
 1. Unpack the ZIP archive.
 2. Connect ESP32 to your PC via USB.
@@ -77,7 +75,9 @@ The 64-bit Windows binary is included in the ZIP archive.
 
 ### Manual flashing (Windows, macOS, Linux)
 
-If the script cannot be used, flash manually.
+The commands below apply to 1.66.x. Version 1.71 also requires flashing
+ServiceApp. For 1.71, use the included `Flashen.cmd` on Windows or use
+ServiceTool.
 
 ESP32 step 1 - erase flash:
 
@@ -95,7 +95,9 @@ esptool.exe --chip ESP32 --baud 921600 --before default-reset --after hard-reset
 
 Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 
-On macOS, flashing is split into two steps.
+These steps apply to 1.66.x. For 1.71 on macOS, use ServiceTool.
+
+Flashing 1.66.x takes two steps.
 First flash firmware (`firmware.bin`) with pyflasher. Depending on the tool or
 archive, the file can also be named `brautomat.ino.bin`.
 
@@ -138,10 +140,12 @@ Use the `Update` menu for firmware updates.
 
 Available paths:
 
-* `WebUpdate`: download and install directly from GitHub
-* `FileUpdate`: upload update files from your local machine
+- `WebUpdate`: download and install directly from GitHub
+- `FileUpdate`: upload a firmware file on 1.66.x
 
-A USB cable is not required for these update paths.
+Updates within a compatible firmware generation can run without USB.
+For the move to the IDF6 layout, follow the
+[migration guide](#migrate-to-171-development).
 
 The ESP memory is split into firmware and filesystem.
 During normal operation, settings/recipes live in the filesystem.
@@ -155,9 +159,9 @@ matching web files from the update are installed.
 
 ### Important when upgrading from 1.59 (or older) to 1.60
 
-* `config.txt` is saved as `config.old.txt`
-* PID parameters are reset to `0.0`
-* Run AutoTune once after update
+- `config.txt` is saved as `config.old.txt`
+- PID parameters are reset to `0.0`
+- Run AutoTune once after update
 
 This ensures temperature control behaves correctly on 1.60.
 
@@ -169,12 +173,10 @@ WebUpdate restarts Brautomat multiple times.
 First firmware is updated, then framework/filesystem-related components.
 Progress is written to `webUpdateLog.txt`.
 
-If `WebUpdate with trial version` is enabled, the current development build is installed.
-Use this only if you explicitly want to test new features.
+WebUpdate uses the matching IDF6 channel. Switching between Release and
+Development may require USB installation with ServiceTool.
 
-Note: this guide follows the release state on `main`. Local development branch behavior may differ.
-
-### FileUpdate
+### FileUpdate on 1.66.x
 
 Firmware FileUpdate workflow:
 

@@ -37,7 +37,10 @@ _Wichtig (ab 1.60):_ Rezept-Import, Umbenennen, Kopieren, Wechseln und Löschen 
 
 _Hinweis:_ Die ESP-Mikrocontroller haben einen kleinen RAM-Speicher. Rezepte mit sehr langen Texten, Bildern oder anderen Anhängen können unter Umständen nicht importiert werden. Der Brautomat filtert Rezepte vor dem Import. Trotzdem kann es erforderlich sein, dass Bilder und sehr lange Beschreibungen vor dem Import entfernt werden müssen.
 
-Importierte Rezepte werden im Ordner `/Rezepte` gespeichert. Als Dateiname wird der Rezeptname verwendet. Die maximale Länge des Dateinamens im Arduino-Dateisystem beträgt 31 Zeichen. Leerzeichen und Umlaute werden beim Speichern ersetzt.
+Importierte Rezepte werden im Ordner `/Rezepte` gespeichert. Ab 1.71 sind
+neue Dateinamen einschließlich `.json` auf 50 Zeichen begrenzt.
+Leerzeichen innerhalb des Namens und Umlaute bleiben erhalten.
+Ungültige Dateinamen werden abgelehnt.
 
 ### Maischeplan exportieren
 

@@ -23,28 +23,11 @@ Planverwaltung und das serielle Protokoll.
 
 ### Ersteinrichtung mit dem ServiceTool
 
-1. Verbinde den ESP32 per USB mit dem Computer und wähle im ServiceTool den
-   passenden COM-Port.
-2. Öffne den Bereich **Firmware**, wähle **Latest Release** und starte den
-   Flash-Vorgang. **Web files** bleiben aktiviert, damit Firmware und
-   Weboberfläche zusammenpassen.
-3. Lass **Flash erase** deaktiviert. Aktiviere es nur für einen ausdrücklich
-   gewünschten sauberen Neuaufbau, denn dabei gehen Daten auf dem Gerät
-   verloren.
-4. Trage nach dem Flashen im ServiceTool die WLAN-Zugangsdaten ein und
-   übertrage sie an den Brautomat. Warte, bis der Status **Online** zeigt.
-5. Lege im Bereich **Backup & Restore** ein benanntes Backup an, bevor du
-   später Firmware, Webdateien oder die Konfiguration änderst.
-6. Verwalte danach Maischepläne, Gärpläne und Profile im Bereich
-   **Management**. Das serielle Protokoll findest du im **Serial Monitor**.
-
-Die Statusanzeige hilft bei der Einordnung:
-
-- **No device**: USB-Kabel, COM-Port oder Netzwerkverbindung prüfen.
-- **Serial**: Das Gerät ist per USB erreichbar; Firmware kann geflasht
-  werden, Netzwerkfunktionen sind noch nicht verfügbar.
-- **Online**: Der Brautomat ist über die Netzwerk-API erreichbar; alle
-  ServiceTool-Funktionen stehen zur Verfügung.
+1. Verbinde genau einen Brautomat per USB mit dem Computer.
+2. Öffne **Assistenten → Brautomat einrichten** und folge den Schritten
+   für Firmware und WLAN. Beim kompletten Neueinrichten gehen vorhandene
+   Daten verloren. Erstelle bei Bedarf vorher ein Backup.
+3. Warte, bis der Brautomat im WLAN erreichbar ist.
 
 Nach dem ersten Flashen und der WLAN-Einrichtung folgt der
 [Sicherheits-Check vor erstem Heiztest](sicherheitscheck-erster-heiztest.md).
@@ -54,13 +37,27 @@ Danach geht es mit der [Grundeinrichtung](../Grundeinrichtung/info.md) weiter.
 > als technischer Fallback verfügbar, falls das ServiceTool nicht genutzt
 > werden kann.
 
+## Auf 1.71 Development migrieren
+
+Für den Wechsel von 1.66.x auf 1.71 ist eine USB-Migration auf das
+neue IDF6-Layout erforderlich. Verwende ServiceTool ab Version 2.1.0.
+
+1. Beende laufende Brau- und Gärprozesse. Verbinde den Brautomat per USB
+   und prüfe, ob er auch im WLAN erreichbar ist.
+2. Öffne **Service → Migration** und wähle manuell **IDF6 Development**.
+   Prüfe den COM-Port und die angezeigte Zielversion.
+3. Wähle **Migration starten**. Das ServiceTool sichert die Daten,
+   schreibt das neue Flash-Layout samt Hauptfirmware und ServiceApp und
+   spielt die Sicherung zurück. Lass USB und Strom bis zum Abschluss verbunden.
+
 ## Manueller Fallback: Firmware flashen mit Windows
 
-Brautomat32 läuft auf ESP32 und basiert auf ESP-IDF5.
+- [Stabile Version](https://github.com/InnuendoPi/Brautomat32/releases/latest)
+- [1.71 Development (IDF6)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/Updates/ESP32-IDF6dev/Brautomat32.zip)
 
-[![Stable](https://img.shields.io/static/v1?label=Download%20Release&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=darkgreen)](https://github.com/InnuendoPi/Brautomat32/releases/latest) [![Dev](https://img.shields.io/static/v1?label=Download%20Develop&message=Brautomat32%20ESP32&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/Brautomat32/raw/refs/heads/development/build/ESP32-IDF5dev/Brautomat32dev.zip)
-
-Wenn du das ServiceTool nicht verwendest:
+Verwende für eine Neuinstallation das `Flashen.cmd` aus dem gewählten
+Paket. Das Skript überschreibt auch LittleFS. Wenn du vorhandene Daten
+übernehmen willst, folge der [Migrationsanleitung](#auf-171-development-migrieren).
 
 1. ZIP-Archiv entpacken.
 2. ESP32 per USB mit PC/Notebook verbinden.
@@ -80,7 +77,9 @@ Falls kein COM-Port erscheint, installiere passende USB-Treiber:
 
 ### Manuelles Flashen (MS Windows, macOS, Linux)
 
-Wenn das Skript nicht nutzbar ist, kannst du manuell flashen.
+Die folgenden Befehle gelten für 1.66.x. Bei 1.71 muss zusätzlich die
+ServiceApp geschrieben werden. Verwende für 1.71 das mitgelieferte
+`Flashen.cmd` unter Windows oder das ServiceTool.
 
 Schritt 1 - Flash löschen:
 
@@ -98,7 +97,10 @@ esptool.exe --chip esp32 --baud 921600 --before default-reset --after hard-reset
 
 Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 
-Unter macOS ist das Flashen in zwei Schritte aufgeteilt:
+Diese Schritte gelten für 1.66.x. Verwende für 1.71 unter macOS das
+ServiceTool.
+
+Für 1.66.x erfolgt das Flashen in zwei Schritten.
 
 1. Firmware mit pyflasher installieren (`firmware.bin`).
    Hinweis: Je nach Tool/Archiv kann die Datei auch als
@@ -144,9 +146,11 @@ weitermachen.
 Updates können im Menü `Update` eingespielt werden:
 
 - `WebUpdate`: aktuelle Version direkt aus GitHub laden
-- `DateiUpdate`: Firmwaredatei vom lokalen Rechner hochladen
+- `DateiUpdate`: Bei 1.66.x eine Firmwaredatei vom lokalen Rechner hochladen
 
-USB-Kabel oder `Flashen.cmd` sind dafür nicht erforderlich.
+Für Updates innerhalb einer kompatiblen Firmwaregeneration ist kein
+USB-Kabel erforderlich. Für den Wechsel auf das IDF6-Layout gilt die
+[Migrationsanleitung](#auf-171-development-migrieren).
 
 Der ESP32-Speicher ist in Firmware und Dateisystem getrennt.
 Bei einem Update wird die Firmware neu installiert.
@@ -176,11 +180,10 @@ WebUpdate startet Brautomat mehrfach neu.
 Zuerst wird die Firmware aktualisiert, danach weitere Komponenten.
 Der Ablauf wird in `webUpdateLog.txt` protokolliert.
 
-Mit aktivierter Option `WebUpdate mit Testversion` wird die aktuelle
-Entwicklerversion installiert.
-Für den produktiven Betrieb sind Testversionen nicht empfohlen.
+WebUpdate bleibt beim passenden IDF6-Kanal. Ein Wechsel zwischen Release
+und Development kann eine USB-Installation mit dem ServiceTool erfordern.
 
-### DateiUpdate
+### DateiUpdate bei 1.66.x
 
 Ablauf für Firmware-Update per Datei:
 
