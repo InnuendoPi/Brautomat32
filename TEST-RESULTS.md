@@ -7,11 +7,11 @@ Current status for the public firmware complete suite:
 - Suite tests: `79`
 - Underlying checks: `1492`
 - Test date: `2026-11-28`
-- Test time: `12:15:55 UTC`
-- Test duration: `1h 3m 57s`
-- Pass: `74`
+- Test time: `05:11:37 UTC`
+- Test duration: `38m 47s`
+- Pass: `76`
 - Fail: `0`
-- Skip: `5`
+- Skip: `3`
 
 ## Coverage in this published run
 
